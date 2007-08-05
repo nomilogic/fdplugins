@@ -1,0 +1,15 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+fdplugins is a project containing a collection of various [http://www.flashdevelop.org FlashDevelop] plugins.
+
+
+= Details =
+
+No details yet
+
+= Source Code =
+Get the source:<br>
+http://fdplugins.googlecode.com/svn/trunk/
+
