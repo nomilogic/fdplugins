@@ -138,4 +138,12 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent>cd "$(ProjectDir)"
+copy "$(TargetDir)\$(TargetFileName)" _tmp_\Plugins
+cd _tmp_
+7z a -tzip -r "$(ProjectDir)\$(ProjectName).zip" *.*
+cd ..
+cd $(ProjectDir)</PostBuildEvent>
+  </PropertyGroup>
 </Project>
