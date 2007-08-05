@@ -8,12 +8,12 @@ using System.Runtime.InteropServices;
 // change them to the information which is associated with the assembly
 // you compile.
 
-[assembly: AssemblyTitle("SourceControl")]
-[assembly: AssemblyDescription("SourceControl for FlashDevelop 3")]
+[assembly: AssemblyTitle("SourceOptions")]
+[assembly: AssemblyDescription("SourceOptions for FlashDevelop 3")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("sephiroth.it")]
-[assembly: AssemblyProduct("SourceControl")]
-[assembly: AssemblyCopyright("sephiroth.it 2007")]
+[assembly: AssemblyProduct("SourceOption")]
+[assembly: AssemblyCopyright("Alessandro Crugnola 2007")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
