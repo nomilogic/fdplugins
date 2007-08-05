@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Text;
 using System.Drawing;
 using System.Windows.Forms;
@@ -21,6 +22,7 @@ namespace ASClassWizard.Wizards
             // Set owner draw mode
             this.DrawMode = DrawMode.OwnerDrawFixed;
         }
+
         protected override void OnDrawItem( System.Windows.Forms.DrawItemEventArgs e )
         {
             e.DrawBackground();
@@ -59,10 +61,12 @@ namespace ASClassWizard.Wizards
             base.OnDrawItem(e);
         }
 
+    
     public class GListBoxItem
     {
         private string _myText;
         private int _myImageIndex;
+
         // properties 
         public string Text
         {
@@ -74,6 +78,7 @@ namespace ASClassWizard.Wizards
             get { return _myImageIndex; }
             set { _myImageIndex = value; }
         }
+        
         //constructor
         public GListBoxItem(string text, int index)
         {
@@ -86,6 +91,8 @@ namespace ASClassWizard.Wizards
         {
             return _myText;
         }
+
+
     }//End of GListBoxItem class
     }//End of GListBox class
 }

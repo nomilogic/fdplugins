@@ -19,6 +19,7 @@ namespace ASClassWizard.Wizards
     {
 
         private MemberList all;
+        private List<GListBox.GListBoxItem> dataProvider;
         private FlagType invalidFlag;
         private FlagType validFlag;
 
@@ -26,6 +27,12 @@ namespace ASClassWizard.Wizards
         {
             get { return this.all; }
             set { this.all = value; }
+        }
+
+        public List<GListBox.GListBoxItem> DataProvider
+        {
+            get { return this.dataProvider; }
+            set { this.dataProvider = value; }
         }
 
         public FlagType ExcludeFlag
@@ -47,6 +54,7 @@ namespace ASClassWizard.Wizards
 
         public ClassBrowser()
         {
+            this.DataProvider = new List<GListBox.GListBoxItem>();
             InitializeComponent();
             InitializeLocalization();
             this.listView1.ImageList =  ASCompletion.Context.ASContext.Panel.TreeIcons;
@@ -81,6 +89,7 @@ namespace ASClassWizard.Wizards
 
                 node = new ASClassWizard.Wizards.GListBox.GListBoxItem(item.Name, (item.Flags & FlagType.Interface) > 0 ? 6 : 8);
                 this.listView1.Items.Add(node);
+                this.DataProvider.Add(node);
             }
             if (this.listView1.Items.Count > 0)
             {
@@ -89,6 +98,39 @@ namespace ASClassWizard.Wizards
             this.listView1.EndUpdate();
         }
 
+        /// <summary>
+        /// Filder the list
+        /// </summary>
+        private void textBox1_TextChanged( Object sender, EventArgs e)
+        {
+            string text = this.textBox1.Text;
+
+            this.listView1.BeginUpdate();
+            this.listView1.Items.Clear();
+
+            List<GListBox.GListBoxItem> result = this.DataProvider.FindAll( FindAllItems );
+            this.listView1.Items.AddRange(result.ToArray());
+
+            this.listView1.EndUpdate();
+        }
+
+
+        /// <summary>
+        /// Filder the results
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        private bool FindAllItems( GListBox.GListBoxItem item )
+        {
+            return item.Text.ToLower().IndexOf(this.textBox1.Text.ToLower()) > -1;
+        }
+
+
+        /// <summary>
+        /// Select None button click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             this.listView1.SelectedItem = null;
@@ -96,6 +138,12 @@ namespace ASClassWizard.Wizards
             this.Close();
         }
 
+
+        /// <summary>
+        /// Ok button click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
