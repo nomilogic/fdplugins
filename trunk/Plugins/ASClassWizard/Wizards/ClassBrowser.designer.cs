@@ -37,13 +37,14 @@ namespace ASClassWizard.Wizards
             this.button2 = new System.Windows.Forms.Button();
             this.listView1 = new ASClassWizard.Wizards.GListBox();
             this.classBrowserBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.classBrowserBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(196, 229);
+            this.button1.Location = new System.Drawing.Point(219, 270);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -54,7 +55,7 @@ namespace ASClassWizard.Wizards
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(115, 229);
+            this.button2.Location = new System.Drawing.Point(138, 270);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 2;
@@ -70,17 +71,28 @@ namespace ASClassWizard.Wizards
             this.listView1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.listView1.FormattingEnabled = true;
             this.listView1.ImageList = null;
-            this.listView1.Location = new System.Drawing.Point(12, 12);
+            this.listView1.Location = new System.Drawing.Point(12, 38);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(259, 212);
-            this.listView1.DoubleClick +=new System.EventHandler(listView1_DoubleClick);
+            this.listView1.Size = new System.Drawing.Size(282, 225);
             this.listView1.TabIndex = 3;
+            this.listView1.DoubleClick += new System.EventHandler(this.listView1_DoubleClick);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(12, 12);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(282, 20);
+            this.textBox1.TextChanged += new System.EventHandler(textBox1_TextChanged);
+            this.textBox1.TabIndex = 4;
             // 
             // ClassBrowser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 264);
+            this.ClientSize = new System.Drawing.Size(307, 305);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -89,6 +101,7 @@ namespace ASClassWizard.Wizards
             this.Load += new System.EventHandler(this.ClassBrowser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.classBrowserBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -98,5 +111,6 @@ namespace ASClassWizard.Wizards
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.BindingSource classBrowserBindingSource;
         private GListBox listView1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

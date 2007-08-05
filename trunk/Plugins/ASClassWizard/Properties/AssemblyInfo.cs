@@ -1,5 +1,6 @@
 using System.Reflection;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 
 // Information about this assembly is defined by the following
 // attributes.
@@ -12,7 +13,7 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("sephiroth.it")]
 [assembly: AssemblyProduct("ASClassWizard")]
-[assembly: AssemblyCopyright("sephiroth.it 2007")]
+[assembly: AssemblyCopyright("Alessandro Crugnola 2007")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -30,3 +31,4 @@ using System.Runtime.CompilerServices;
 // This is not required, if you don't want signing let these attributes like they're.
 [assembly: AssemblyDelaySign(false)]
 [assembly: AssemblyKeyFile("")]
+[assembly: GuidAttribute("a2c159c1-7d21-4483-aeb1-38d9fdc4c7f3")]

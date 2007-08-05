@@ -453,7 +453,7 @@ namespace ASClassWizard.Wizards
             // errorIcon
             // 
             this.errorIcon.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.errorIcon.Image = ((System.Drawing.Image)(resources.GetObject("errorIcon.Image")));
+            this.errorIcon.Image = new System.Drawing.Bitmap(16, 16);
             this.errorIcon.Location = new System.Drawing.Point(3, 3);
             this.errorIcon.Name = "errorIcon";
             this.errorIcon.Size = new System.Drawing.Size(16, 16);
