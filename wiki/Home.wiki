@@ -10,6 +10,5 @@ fdplugins is a project containing a collection of various [http://www.flashdevel
 No details yet
 
 = Source Code =
-Get the source:<br>
+Get the source:
 http://fdplugins.googlecode.com/svn/trunk/
-
