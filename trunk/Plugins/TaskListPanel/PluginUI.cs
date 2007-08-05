@@ -97,7 +97,7 @@ namespace TaskListPanel
             }
 
             this.parseTimer = new Timer();
-            this.parseTimer.Interval = 1500;
+            this.parseTimer.Interval = 2000;
             this.parseTimer.Tick += delegate { this.parseNextFile(); };
             this.parseTimer.Tag   = null;
             this.parseTimer.Enabled = false;
@@ -182,6 +182,15 @@ namespace TaskListPanel
             return files;
         }
 
+
+        private List<string> GetFiles( string[] paths )
+        {
+            List<string> files = new List<string>();
+            foreach (string path in paths)
+                files.AddRange(GetFiles( project.GetAbsolutePath(path) ));
+            return files;
+        }
+
         /// <summary>
         /// When a new project is opened recreate the ui
         /// </summary>
@@ -218,7 +227,7 @@ namespace TaskListPanel
 
                 System.Collections.Hashtable table = new Hashtable();
                 table["status"] = 0;
-                table["files"]  = GetFiles(project.Directory);
+                table["files"]  = GetFiles( project.Classpaths.ToArray() );
 
                 this.parseTimer.Tag = table;
                 this.parseTimer.Interval = 2000;
@@ -249,7 +258,7 @@ namespace TaskListPanel
                 if (status == 0)
                 {
                     table["status"] = 1;
-                    this.parseTimer.Interval = 100;
+                    this.parseTimer.Interval = 80;
                 }
                 else if (status == 1)
                 {
