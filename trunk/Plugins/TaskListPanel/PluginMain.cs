@@ -148,7 +148,7 @@ namespace TaskListPanel
             String dataPath = Path.Combine(PathHelper.DataDir, "TaskListPanel");
             if (!Directory.Exists(dataPath)) Directory.CreateDirectory(dataPath);
             this.settingFilename = Path.Combine(dataPath, "Settings.fdb");
-            this.pluginImage = PluginBase.MainForm.FindImage("100");
+            this.pluginImage = PluginBase.MainForm.FindImage("75");
         }
 
         /// <summary>
