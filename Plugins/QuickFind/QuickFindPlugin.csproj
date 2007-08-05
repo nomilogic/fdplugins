@@ -88,4 +88,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Icons\close_up.png" />
   </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent>cd "$(ProjectDir)"
+mkdir _tmp_
+mkdir _tmp_\Plugins
+copy "$(TargetDir)\$(TargetFileName)" _tmp_\Plugins
+cd _tmp_
+7z a -tzip -r "$(ProjectDir)\$(ProjectName).zip" *.*
+cd ..
+rmdir /S /Q _tmp_
+cd $(ProjectDir)</PostBuildEvent>
+  </PropertyGroup>
 </Project>
