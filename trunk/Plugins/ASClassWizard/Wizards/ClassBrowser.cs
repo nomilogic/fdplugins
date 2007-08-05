@@ -1,0 +1,111 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using System.Reflection;
+
+using ASCompletion.Model;
+
+using ASClassWizard.Wizards;
+using ASClassWizard.Resources;
+
+
+namespace ASClassWizard.Wizards
+{
+    public partial class ClassBrowser : Form
+    {
+
+        private MemberList all;
+        private FlagType invalidFlag;
+        private FlagType validFlag;
+
+        public MemberList ClassList
+        {
+            get { return this.all; }
+            set { this.all = value; }
+        }
+
+        public FlagType ExcludeFlag
+        {
+            get { return this.invalidFlag; }
+            set { this.invalidFlag = value; }
+        }
+
+        public FlagType IncludeFlag
+        {
+            get { return this.validFlag; }
+            set { this.validFlag = value; }
+        }
+
+        public string SelectedClass
+        {
+            get { return this.listView1.SelectedItem != null ? this.listView1.SelectedItem.ToString() : null; }
+        }
+
+        public ClassBrowser()
+        {
+            InitializeComponent();
+            InitializeLocalization();
+            this.listView1.ImageList =  ASCompletion.Context.ASContext.Panel.TreeIcons;
+            CenterToParent();
+        }
+
+        private void InitializeLocalization()
+        {
+            this.button1.Text = LocaleHelper.GetString("Wizard.Button.SelectNone");
+            this.button2.Text = LocaleHelper.GetString("Wizard.Button.Ok");
+            this.Text = LocaleHelper.GetString("Wizard.Label.OpenType");
+        }
+
+        private void ClassBrowser_Load(object sender, EventArgs e)
+        {
+            ASClassWizard.Wizards.GListBox.GListBoxItem node;
+
+            this.listView1.BeginUpdate();
+            this.listView1.Items.Clear();
+            foreach(MemberModel item in this.ClassList)
+            {
+                if(ExcludeFlag > 0) if ((item.Flags & ExcludeFlag) > 0) continue;
+                if (IncludeFlag > 0)
+                {
+                    if (!((item.Flags & IncludeFlag) > 0))
+                    {
+                        continue;
+                    }
+                }
+
+                if (this.listView1.Items.Count > 0 && item.Name == this.listView1.Items[this.listView1.Items.Count - 1].ToString()) continue;
+
+                node = new ASClassWizard.Wizards.GListBox.GListBoxItem(item.Name, (item.Flags & FlagType.Interface) > 0 ? 6 : 8);
+                this.listView1.Items.Add(node);
+            }
+            if (this.listView1.Items.Count > 0)
+            {
+                this.listView1.SelectedIndex = 0;
+            }
+            this.listView1.EndUpdate();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.listView1.SelectedItem = null;
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void listView1_DoubleClick( object sender, EventArgs e )
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+    }
+}
