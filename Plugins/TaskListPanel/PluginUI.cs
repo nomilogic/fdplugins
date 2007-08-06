@@ -317,7 +317,10 @@ namespace TaskListPanel
             {
                 foreach (ITabbedDocument doc in PluginBase.MainForm.Documents)
                 {
-                    doc.SciControl.DwellStart += new DwellStartHandler(SciControl_DwellStart); ;
+                    if(doc.IsEditable)
+                    {
+                        doc.SciControl.DwellStart += new DwellStartHandler(SciControl_DwellStart); ;
+                    }
                 }
                 EventManager.AddEventHandler(this, EventType.FileSwitch | EventType.FileOpen | EventType.FileClose);
             }
@@ -544,11 +547,18 @@ namespace TaskListPanel
                 currentFileName = path;
                 currentPos = (int)((Hashtable)firstSelected.Tag)["Position"];
 
-                if (PluginBase.MainForm.CurrentDocument.FileName.ToUpper() == path.ToUpper())
+                if (PluginBase.MainForm.CurrentDocument.IsEditable)
                 {
-                    MoveToPosition(PluginBase.MainForm.CurrentDocument.SciControl, currentPos);
-                    currentFileName = null;
-                    currentPos = -1;
+                    if (PluginBase.MainForm.CurrentDocument.FileName.ToUpper() == path.ToUpper())
+                    {
+                        MoveToPosition(PluginBase.MainForm.CurrentDocument.SciControl, currentPos);
+                        currentFileName = null;
+                        currentPos = -1;
+                    }
+                    else
+                    {
+                        PluginBase.MainForm.OpenEditableDocument(path, false);
+                    }
                 }
                 else
                 {
@@ -565,12 +575,15 @@ namespace TaskListPanel
             switch(e.Type)
             {
                 case EventType.FileOpen:
-                    PluginBase.MainForm.CurrentDocument.SciControl.DwellStart += new DwellStartHandler(SciControl_DwellStart);
-                    if(currentFileName != null && currentPos > -1)
+                    if (PluginBase.MainForm.CurrentDocument.IsEditable)
                     {
-                        if(currentFileName.ToUpper() == PluginBase.MainForm.CurrentDocument.FileName.ToUpper())
+                        PluginBase.MainForm.CurrentDocument.SciControl.DwellStart += new DwellStartHandler(SciControl_DwellStart);
+                        if (currentFileName != null && currentPos > -1)
                         {
-                            MoveToPosition(PluginBase.MainForm.CurrentDocument.SciControl, currentPos);
+                            if (currentFileName.ToUpper() == PluginBase.MainForm.CurrentDocument.FileName.ToUpper())
+                            {
+                                MoveToPosition(PluginBase.MainForm.CurrentDocument.SciControl, currentPos);
+                            }
                         }
                     }
                     currentFileName = null;
@@ -578,11 +591,14 @@ namespace TaskListPanel
                     break;
 
                 case EventType.FileSwitch:
-                    if(currentFileName != null && currentPos > -1)
+                    if (PluginBase.MainForm.CurrentDocument.IsEditable)
                     {
-                        if(currentFileName.ToUpper() == PluginBase.MainForm.CurrentDocument.FileName.ToUpper())
+                        if (currentFileName != null && currentPos > -1)
                         {
-                            MoveToPosition(PluginBase.MainForm.CurrentDocument.SciControl, currentPos);
+                            if (currentFileName.ToUpper() == PluginBase.MainForm.CurrentDocument.FileName.ToUpper())
+                            {
+                                MoveToPosition(PluginBase.MainForm.CurrentDocument.SciControl, currentPos);
+                            }
                         }
                     }
                     currentFileName = null;
@@ -590,7 +606,10 @@ namespace TaskListPanel
                     break;
 
                 case EventType.FileClose:
-                    PluginBase.MainForm.CurrentDocument.SciControl.DwellStart -= new DwellStartHandler(SciControl_DwellStart);
+                    if(PluginBase.MainForm.CurrentDocument.IsEditable)
+                    {
+                        PluginBase.MainForm.CurrentDocument.SciControl.DwellStart -= new DwellStartHandler(SciControl_DwellStart);
+                    }
                     break;
             }
         }
