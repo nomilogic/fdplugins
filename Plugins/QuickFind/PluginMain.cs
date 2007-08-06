@@ -15,6 +15,7 @@ using PluginCore.FRService;
 using System.Collections.Generic;
 using System.Collections;
 using System.Media;
+using System.Diagnostics;
 
 namespace QuickFindPlugin
 {
@@ -278,7 +279,8 @@ namespace QuickFindPlugin
             if(MainForm.CurrentDocument.IsEditable)
                 MainForm.CurrentDocument.SciControl.Focus();
 
-            this.HidePluginPanel();
+            // Should the quick find panel hide itself?
+            //this.HidePluginPanel();
         }
 
         /// <summary>
@@ -519,8 +521,19 @@ namespace QuickFindPlugin
         {
             ToolStripMenuItem sMenu = (ToolStripMenuItem)PluginBase.MainForm.FindMenuItem("SearchMenu");
             sMenu.DropDownItems.Add(new ToolStripSeparator());
-            sMenu.DropDownItems.Add(new ToolStripMenuItem(LocaleHelper.GetString("Menu.Label"), null, new EventHandler(this.ShowPluginPanel), this.settingObject.Shortcut));
-            PluginBase.MainForm.IgnoredKeys.Add(this.settingObject.Shortcut);
+
+            // try with the user defined shortcut combination
+            try
+            {
+                sMenu.DropDownItems.Add(new ToolStripMenuItem(LocaleHelper.GetString("Menu.Label"), null, new EventHandler(this.ShowPluginPanel), this.settingObject.Shortcut));
+                PluginBase.MainForm.IgnoredKeys.Add(this.settingObject.Shortcut);
+            }
+            catch
+            {
+                sMenu.DropDownItems.Add(new ToolStripMenuItem(LocaleHelper.GetString("Menu.Label"), null, new EventHandler(this.ShowPluginPanel), QuickFindPlugin.Settings.DEFAULT_SHORTCUT));
+                PluginBase.MainForm.IgnoredKeys.Add( QuickFindPlugin.Settings.DEFAULT_SHORTCUT );
+                this.settingObject.Shortcut = QuickFindPlugin.Settings.DEFAULT_SHORTCUT;
+            }
         }
 
         private void CreateElements()
