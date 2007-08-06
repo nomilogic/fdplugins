@@ -176,8 +176,15 @@ namespace QuickFindPlugin
             }
         }
 
+        /// <summary>
+        /// Highlight all results
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void hilightAllButton_Click( Object sender, EventArgs e )
         {
+            if(!MainForm.CurrentDocument.IsEditable) return;
+
             if (this.hilightAllButton.Checked)
             {
                 if (this.textBox1 != null)
@@ -262,6 +269,23 @@ namespace QuickFindPlugin
             this.FindNext(text, this.hilightAllButton.Checked);
         }
 
+        /// <summary>
+        /// Escape key has been pressed into the toolstriptextbox
+        /// then assign the current focus to the current scintilla control
+        /// </summary>
+        private void textBox1_OnKeyEscape()
+        {
+            if(MainForm.CurrentDocument.IsEditable)
+                MainForm.CurrentDocument.SciControl.Focus();
+
+            this.HidePluginPanel();
+        }
+
+        /// <summary>
+        /// Pressed key on the main textbox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textBox1_KeyPress( Object sender, KeyPressEventArgs e )
         {
             if (e.KeyChar == (char)Keys.Return && this.textBox1.Text != "")
@@ -279,7 +303,7 @@ namespace QuickFindPlugin
         {
             this.textBox1.BackColor = SystemColors.Window;
 
-            if (text == "") return;
+            if (text == "" || !MainForm.CurrentDocument.IsEditable) return;
 
             ScintillaControl sci = PluginBase.MainForm.CurrentDocument.SciControl;
             List<SearchMatch> matches = this.GetResults(sci, text);
@@ -321,7 +345,7 @@ namespace QuickFindPlugin
         {
             this.textBox1.BackColor = SystemColors.Window;
 
-            if (text == "") return;
+            if (text == "" || !MainForm.CurrentDocument.IsEditable) return;
 
             ScintillaControl sci = PluginBase.MainForm.CurrentDocument.SciControl;
             List<SearchMatch> matches = this.GetResults(sci, text);
@@ -438,7 +462,15 @@ namespace QuickFindPlugin
             }
             */
 
-            if(MainForm.Controls.Contains(this.strip))
+            this.HidePluginPanel();
+        }
+
+        /// <summary>
+        /// Hide the panel and remove the controls from the main status strip container
+        /// </summary>
+        public void HidePluginPanel()
+        {
+            if (MainForm.Controls.Contains(this.strip))
                 MainForm.Controls.Remove(this.strip);
         }
 
@@ -504,10 +536,11 @@ namespace QuickFindPlugin
             this.closeButton.Text = "Close";
             this.closeButton.Click += new EventHandler(ClosePanel);
 
-            this.textBox1 = new ToolStripTextBox();
+            this.textBox1 = new myTextBox();
             this.textBox1.Size = new Size(200, -1);
             this.textBox1.Font = new Font("Tahoma", 8.25F, FontStyle.Regular);
             this.textBox1.TextChanged += new EventHandler(textBox1_TextChanged);
+            this.textBox1.OnKeyEscape += new KeyEscapeEvent(textBox1_OnKeyEscape);
 
             this.findNextButton = new ToolStripButton(LocaleHelper.GetString("FindNext.Label"));
             this.findNextButton.Name = "findNextButton";
@@ -578,7 +611,7 @@ namespace QuickFindPlugin
         }
 
         private ToolStripButton closeButton;
-        private ToolStripTextBox textBox1;
+        private myTextBox textBox1;
         private ToolStripButton findNextButton;
         private ToolStripButton findPrevButton;
         private ToolStripButton hilightAllButton;
@@ -589,5 +622,33 @@ namespace QuickFindPlugin
 		#endregion
 
 	}
+
+
+    public delegate void KeyEscapeEvent();
+
+    public class myTextBox : ToolStripTextBox
+    {
+        public event KeyEscapeEvent OnKeyEscape;
+
+        public myTextBox()
+            : base()
+        {
+        }
+
+        protected override bool ProcessCmdKey( ref Message m, Keys keyData )
+        {
+            if (keyData == Keys.Escape)
+            {
+                OnPressEscapeKey();
+            }
+            return false;
+        }
+
+        protected void OnPressEscapeKey()
+        {
+            if (OnKeyEscape != null)
+                OnKeyEscape();
+        }
+    }
 	
 }
