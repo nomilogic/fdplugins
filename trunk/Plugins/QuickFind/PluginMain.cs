@@ -3,19 +3,21 @@ using System.IO;
 using System.Drawing;
 using System.Windows.Forms;
 using System.ComponentModel;
+using System.Collections.Generic;
+using System.Collections;
+using System.Media;
+using System.Diagnostics;
+using System.Reflection;
 using QuickFindPlugin.Resources;
 using PluginCore.Localization;
 using PluginCore.Utilities;
 using PluginCore.Managers;
 using PluginCore.Helpers;
-using PluginCore;
-using System.Reflection;
-using ScintillaNet;
 using PluginCore.FRService;
-using System.Collections.Generic;
-using System.Collections;
-using System.Media;
-using System.Diagnostics;
+using PluginCore;
+using ScintillaNet;
+using FlashDevelop.Utilities;
+using FlashDevelop.Helpers;
 
 namespace QuickFindPlugin
 {
@@ -30,7 +32,10 @@ namespace QuickFindPlugin
         private Settings settingObject;
         private Timer highlightTimer;
 
-        public static IMainForm MainForm { get { return PluginBase.MainForm; } }
+        private IMainForm MainForm
+        {
+            get { return PluginBase.MainForm; }
+        }
 
 	    #region Required Properties
 
@@ -267,7 +272,7 @@ namespace QuickFindPlugin
         private void textBox1_TextChanged( Object sender, EventArgs e )
         {
             String text = this.textBox1.Text;
-            this.FindNext(text, this.hilightAllButton.Checked);
+            this.FindCorrect( text, this.hilightAllButton.Checked);
         }
 
         /// <summary>
@@ -298,6 +303,25 @@ namespace QuickFindPlugin
         }
 
         /// <summary>
+        /// Finds the correct match based on the current position
+        /// </summary>
+        public void FindCorrect( String text, Boolean refreshHighlights )
+        {
+            if (text == "") return;
+            this.textBox1.BackColor = SystemColors.Window;
+            ScintillaControl sci = MainForm.CurrentDocument.SciControl;
+            List<SearchMatch> matches = this.GetResults(sci, text);
+            if (matches != null && matches.Count != 0)
+            {
+                SearchMatch match = GetNextDocumentMatch(sci, matches, true, true);
+                if (match != null) SelectMatch(sci, match);
+                if (refreshHighlights) this.AddHighlights(sci, matches);
+            }
+            else this.textBox1.BackColor = Color.Salmon;
+        }
+
+
+        /// <summary>
         /// Find next match
         /// </summary>
         /// <param name="text"></param>
@@ -311,7 +335,7 @@ namespace QuickFindPlugin
             List<SearchMatch> matches = this.GetResults(sci, text);
             if (matches != null && matches.Count != 0)
             {
-                SearchMatch match = GetNextDocumentMatch(sci, matches, true);
+                SearchMatch match = GetNextDocumentMatch(sci, matches, true, false);
                 if (match != null)
                 {
                     SelectMatch(sci, match);
@@ -353,7 +377,7 @@ namespace QuickFindPlugin
             List<SearchMatch> matches = this.GetResults(sci, text);
             if (matches != null && matches.Count != 0)
             {
-                SearchMatch match = GetNextDocumentMatch(sci, matches, false);
+                SearchMatch match = GetNextDocumentMatch(sci, matches, false, false);
                 if (match != null)
                 {
                     SelectMatch(sci, match);
@@ -402,10 +426,11 @@ namespace QuickFindPlugin
             sci.SetSel(start, end);
         }
 
-        public static SearchMatch GetNextDocumentMatch( ScintillaControl sci, List<SearchMatch> matches, Boolean forward )
+        public static SearchMatch GetNextDocumentMatch( ScintillaControl sci, List<SearchMatch> matches, Boolean forward, Boolean fixedPosition )
         {
             SearchMatch nearestMatch = matches[0];
             Int32 currentPosition = sci.MBSafeCharPosition(sci.CurrentPos); // byte to wchar position
+            if (fixedPosition) currentPosition -= sci.MBSafeTextLength(sci.SelText);
             for (Int32 i = 0; i < matches.Count; i++)
             {
                 if (forward)
@@ -442,7 +467,6 @@ namespace QuickFindPlugin
             return nearestMatch;
         }
 
-
         /// <summary>
         /// Remove the status strip elements
         /// </summary>
@@ -450,20 +474,6 @@ namespace QuickFindPlugin
         /// <param name="e"></param>
         private void ClosePanel( Object sender, EventArgs e )
         {
-            /*
-            if (this.closeButton != null)
-            {
-                MainForm.StatusStrip.Items.Remove(this.findLabel);
-                MainForm.StatusStrip.Items.Remove(this.closeButton);
-                MainForm.StatusStrip.Items.Remove(this.textBox1);
-                MainForm.StatusStrip.Items.Remove(this.separator1);
-                MainForm.StatusStrip.Items.Remove(this.findNextButton);
-                MainForm.StatusStrip.Items.Remove(this.findPrevButton);
-                MainForm.StatusStrip.Items.Remove(this.hilightAllButton);
-                MainForm.StatusStrip.Items.Remove(this.separator2);
-            }
-            */
-
             this.HidePluginPanel();
         }
 
@@ -473,7 +483,10 @@ namespace QuickFindPlugin
         public void HidePluginPanel()
         {
             if (MainForm.Controls.Contains(this.strip))
+            {
+                this.RemoveHighlights();
                 MainForm.Controls.Remove(this.strip);
+            }
         }
 
         /// <summary>
@@ -481,27 +494,6 @@ namespace QuickFindPlugin
         /// </summary>
         public void ShowPluginPanel( object sender, EventArgs e)
         {
-            /*
-            if (this.closeButton != null)
-            {
-                if (MainForm.StatusStrip.Items.Count > 0)
-                {
-                    if (MainForm.StatusStrip.Items.IndexOf(this.closeButton) == -1)
-                    {
-                        MainForm.StatusStrip.Items.Insert(0, this.closeButton);
-                        MainForm.StatusStrip.Items.Insert(1, this.findLabel);
-                        MainForm.StatusStrip.Items.Insert(2, this.textBox1);
-                        MainForm.StatusStrip.Items.Insert(3, this.separator1);
-                        MainForm.StatusStrip.Items.Insert(4, this.findNextButton);
-                        MainForm.StatusStrip.Items.Insert(5, this.findPrevButton);
-                        MainForm.StatusStrip.Items.Insert(6, this.hilightAllButton);
-                        MainForm.StatusStrip.Items.Insert(7, this.separator2);
-                    }
-                }
-                this.textBox1.Focus();
-                this.textBox1.SelectAll();
-            }*/
-
             if (!MainForm.Controls.Contains(this.strip))
             {
                 int index = MainForm.Controls.GetChildIndex(MainForm.StatusStrip, false);
@@ -579,14 +571,14 @@ namespace QuickFindPlugin
             this.strip = new StatusStrip();
             this.strip.Stretch = true;
             this.strip.SizingGrip = false;
-            this.strip.RenderMode = ToolStripRenderMode.Professional;
-            //this.strip.Visible = false;
+            this.strip.Renderer = new QuickFindRenderer();
+            this.strip.CanOverflow = false;
+            this.strip.Padding = new Padding(3, 4, 0, 3);
 
             this.strip.Items.AddRange( new ToolStripItem[]{
                 this.closeButton,
                 this.findLabel,
                 this.textBox1,
-                new ToolStripSeparator(),
                 this.findNextButton,
                 this.findPrevButton,
                 this.hilightAllButton,
@@ -636,6 +628,132 @@ namespace QuickFindPlugin
 
 	}
 
+    #region QuickFind Renderer
+
+    public class QuickFindRenderer : ToolStripRenderer
+    {
+        private ToolStripRenderer renderer;
+
+        public QuickFindRenderer()
+        {
+            UiRenderMode renderMode = PluginBase.MainForm.Settings.RenderMode;
+            if (renderMode == UiRenderMode.System) this.renderer = new ToolStripSystemRenderer();
+            else this.renderer = new ToolStripProfessionalRenderer();
+        }
+
+        protected override void OnRenderToolStripBorder( ToolStripRenderEventArgs e )
+        {
+            Rectangle r = e.AffectedBounds;
+            e.Graphics.DrawLine(SystemPens.ControlLightLight, r.Left, r.Top + 1, r.Right, r.Top + 1);
+            e.Graphics.DrawLine(SystemPens.ControlLightLight, r.Left, r.Bottom, r.Right, r.Bottom);
+            e.Graphics.DrawLine(SystemPens.GrayText, r.Left, r.Bottom - 1, r.Right, r.Bottom - 1);
+            e.Graphics.DrawLine(SystemPens.GrayText, r.Right - 1, r.Top, r.Right - 1, r.Bottom);
+            e.Graphics.DrawLine(SystemPens.GrayText, r.Left, r.Top, r.Left, r.Bottom);
+            e.Graphics.DrawLine(SystemPens.GrayText, r.Left, r.Top, r.Right, r.Top);
+        }
+
+        #region Reuse Some Renderer Stuff
+
+        protected override void OnRenderGrip( ToolStripGripRenderEventArgs e )
+        {
+            this.renderer.DrawGrip(e);
+        }
+
+        protected override void OnRenderSeparator( ToolStripSeparatorRenderEventArgs e )
+        {
+            this.renderer.DrawSeparator(e);
+        }
+
+        protected override void OnRenderButtonBackground( ToolStripItemRenderEventArgs e )
+        {
+            this.renderer.DrawButtonBackground(e);
+        }
+
+        protected override void OnRenderToolStripBackground( ToolStripRenderEventArgs e )
+        {
+            this.renderer.DrawToolStripBackground(e);
+        }
+
+        protected override void OnRenderDropDownButtonBackground( ToolStripItemRenderEventArgs e )
+        {
+            this.renderer.DrawDropDownButtonBackground(e);
+        }
+
+        protected override void OnRenderItemBackground( ToolStripItemRenderEventArgs e )
+        {
+            this.renderer.DrawItemBackground(e);
+        }
+
+        protected override void OnRenderItemCheck( ToolStripItemImageRenderEventArgs e )
+        {
+            this.renderer.DrawItemCheck(e);
+        }
+
+        protected override void OnRenderItemText( ToolStripItemTextRenderEventArgs e )
+        {
+            this.renderer.DrawItemText(e);
+        }
+
+        protected override void OnRenderItemImage( ToolStripItemImageRenderEventArgs e )
+        {
+            this.renderer.DrawItemImage(e);
+        }
+
+        protected override void OnRenderArrow( ToolStripArrowRenderEventArgs e )
+        {
+            this.renderer.DrawArrow(e);
+        }
+
+        protected override void OnRenderImageMargin( ToolStripRenderEventArgs e )
+        {
+            this.renderer.DrawImageMargin(e);
+        }
+
+        protected override void OnRenderLabelBackground( ToolStripItemRenderEventArgs e )
+        {
+            this.renderer.DrawLabelBackground(e);
+        }
+
+        protected override void OnRenderMenuItemBackground( ToolStripItemRenderEventArgs e )
+        {
+            this.renderer.DrawMenuItemBackground(e);
+        }
+
+        protected override void OnRenderOverflowButtonBackground( ToolStripItemRenderEventArgs e )
+        {
+            this.renderer.DrawOverflowButtonBackground(e);
+        }
+
+        protected override void OnRenderSplitButtonBackground( ToolStripItemRenderEventArgs e )
+        {
+            this.renderer.DrawSplitButton(e);
+        }
+
+        protected override void OnRenderStatusStripSizingGrip( ToolStripRenderEventArgs e )
+        {
+            this.renderer.DrawStatusStripSizingGrip(e);
+        }
+
+        protected override void OnRenderToolStripContentPanelBackground( ToolStripContentPanelRenderEventArgs e )
+        {
+            this.renderer.DrawToolStripContentPanelBackground(e);
+        }
+
+        protected override void OnRenderToolStripPanelBackground( ToolStripPanelRenderEventArgs e )
+        {
+            this.renderer.DrawToolStripPanelBackground(e);
+        }
+
+        protected override void OnRenderToolStripStatusLabelBackground( ToolStripItemRenderEventArgs e )
+        {
+            this.renderer.DrawToolStripStatusLabelBackground(e);
+        }
+
+        #endregion
+
+    }
+
+    #endregion
 
     public delegate void KeyEscapeEvent();
 
