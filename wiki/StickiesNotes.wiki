@@ -9,6 +9,10 @@ Stickies Plugin will be installed as submenu of the "view" FlashDevelop main men
 "Remove All" will delete all the currently shown notes.
 
 
+= Preview = 
+
+http://code.google.com/p/fdplugins/wiki/images/sticky_preview.png
+
 = Details =
 
 The sticky engine is part of the http://code.google.com/p/stickies-windows/ project.
