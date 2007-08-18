@@ -11,11 +11,16 @@ Stickies Plugin will be installed as submenu of the "view" FlashDevelop main men
 
 = Preview = 
 
-[http://code.google.com/p/fdplugins/wiki/images/sticky_preview.png]
+http://fdplugins.googlecode.com/svn/trunk/images/sticky_preview.png
 
 = Details =
 
 The sticky engine is part of the http://code.google.com/p/stickies-windows/ project.
+
+
+
+
+
 
 
 
