@@ -1,0 +1,21 @@
+#summary Description of Task List Plugin.
+
+= Introduction =
+
+Task List plugin will add a new panel to FlashDevelop allowing you to see all the tasks defined in your project files
+
+= Preview = 
+
+http://fdplugins.googlecode.com/svn/trunk/images/tasklist_preview.png
+
+
+= Details =
+
+Preferences allow you to define more words to check apart the builtin ones TODO and BUG and associate for every word an icon.
+
+The preferences dialog:
+http://fdplugins.googlecode.com/svn/trunk/images/tasklist_preferences.png
+
+
+
+
