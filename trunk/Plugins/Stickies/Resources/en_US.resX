@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Label.AddNewNote" xml:space="preserve">
+    <value>&amp;Add New Note</value>
+  </data>
+  <data name="Label.RemoveAll" xml:space="preserve">
+    <value>&amp;Remove All</value>
+  </data>
+  <data name="Label.ViewMenuItem" xml:space="preserve">
+    <value>&amp;Stickies</value>
+  </data>
+  <data name="Messages.NoteArchive" xml:space="preserve">
+    <value>&amp;Archive</value>
+    <comment>"Archive" menu item</comment>
+  </data>
+  <data name="Messages.NoteBold" xml:space="preserve">
+    <value>&amp;Bold</value>
+    <comment>"Bold" menu item</comment>
+  </data>
+  <data name="Messages.NoteDelete" xml:space="preserve">
+    <value>&amp;Delete</value>
+    <comment>Note Delete context menu item</comment>
+  </data>
+  <data name="Messages.NoteItalic" xml:space="preserve">
+    <value>&amp;Italic</value>
+    <comment>"Italic" menu item</comment>
+  </data>
+  <data name="Messages.NoteNewStickyNote" xml:space="preserve">
+    <value>&lt;New Sticky Note&gt;</value>
+    <comment>Title of the window for a NoteForm with no content. This is displayed to the end user when they are Alt-Tabbing through windows.</comment>
+  </data>
+  <data name="Messages.NotePreferences" xml:space="preserve">
+    <value>Note &amp;Settings</value>
+    <comment>Note Preferences context menu item</comment>
+  </data>
+  <data name="Messages.NoteSettingsTitle" xml:space="preserve">
+    <value>Note Settings</value>
+  </data>
+  <data name="Messages.NoteStrikethrough" xml:space="preserve">
+    <value>&amp;Strikethrough</value>
+    <comment>"Strikethrough" menu item</comment>
+  </data>
+  <data name="Messages.NoteUnderline" xml:space="preserve">
+    <value>&amp;Underline</value>
+    <comment>"Underline" menu item</comment>
+  </data>
+  <data name="Messages.PreferencesAppearanceTab" xml:space="preserve">
+    <value>Note Appearance</value>
+    <comment>Title of the Note Appearance tab in the Preferences form.</comment>
+  </data>
+  <data name="Messages.PreferencesCancel" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Cancel button in the Preferences form.</comment>
+  </data>
+  <data name="Messages.PreferencesNoteAlwaysOnTop" xml:space="preserve">
+    <value>Remain on top of other windows</value>
+    <comment>Next to the "Always on top" checkbox</comment>
+  </data>
+  <data name="Messages.PreferencesNoteBackgroundColor" xml:space="preserve">
+    <value>Background color</value>
+    <comment>Next to the Note background color chooser in the Note preferences</comment>
+  </data>
+  <data name="Messages.PreferencesNoteBorderColor" xml:space="preserve">
+    <value>Border color</value>
+    <comment>Next to the Note border color chooser in the Note preferences</comment>
+  </data>
+  <data name="Messages.PreferencesNoteChange" xml:space="preserve">
+    <value>Change</value>
+    <comment>The text on the "Change" button in the Note preferences</comment>
+  </data>
+  <data name="Messages.PreferencesNoteFont" xml:space="preserve">
+    <value>Font</value>
+    <comment>Next to the Note font chooser in the Note preferences</comment>
+  </data>
+  <data name="Messages.PreferencesNoteInvisible" xml:space="preserve">
+    <value>Invisible (100%)</value>
+    <comment>At the invisible (100%) end of the transparency bar in the Note preferences</comment>
+  </data>
+  <data name="Messages.PreferencesNoteOpaque" xml:space="preserve">
+    <value>Opaque (0%)</value>
+    <comment>At the opaque (0%) end of the transparency bar in the Note preferences</comment>
+  </data>
+  <data name="Messages.PreferencesNoteText" xml:space="preserve">
+    <value>Set your font and color preferences using the buttons to the right.</value>
+    <comment>Displayed in the note in the Preferences form.</comment>
+  </data>
+  <data name="Messages.PreferencesNoteTransparency" xml:space="preserve">
+    <value>Transparency: {0}%</value>
+    <comment>Next to the transparency bar in the Note preferences</comment>
+  </data>
+  <data name="Messages.PreferencesSave" xml:space="preserve">
+    <value>Save Changes</value>
+    <comment>Save button in the Preferences form.</comment>
+  </data>
+  <data name="Messages.PreferencesTitle" xml:space="preserve">
+    <value>{0} Preferences</value>
+    <comment>Title of the Preferences form. The placeholder is replaced with the product name.</comment>
+  </data>
+  <data name="Messages.SynchronizationProgress" xml:space="preserve">
+    <value>Synchronizing notes...</value>
+    <comment>Progress message when we are synchronizing notes</comment>
+  </data>
+  <data name="Messages.SynchronizationTestSuccess" xml:space="preserve">
+    <value>Settings are correct!</value>
+    <comment>Success message if synchronization test completes successfully.</comment>
+  </data>
+</root>
