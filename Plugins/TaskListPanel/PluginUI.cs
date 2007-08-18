@@ -219,7 +219,7 @@ namespace TaskListPanel
             currentFileName = null;
             currentPos = -1;
 
-            if (is_enabled)
+            if (is_enabled && this.Project != null)
             {
                 RefreshEnabled = false;
                 if (this.parseTimer.Enabled)
