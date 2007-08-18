@@ -8,7 +8,18 @@ fdplugins is a project containing a collection of various [http://www.flashdevel
 
 = Details =
 
-No details yet
+This is the complete list of available plugins you can find here:
+
+ * QuickFind
+ * TaskList
+ * BookmarkPanel
+ * AsClassWizard
+ * FlashApi
+ * SourceOptions
+ * StickiesNotes 
+ 
+Please use the plugin specific wiki page to report issues or comments, or use the [Issues http://code.google.com/p/fdplugins/issues/list] page to report bugs.
+ 
 
 = Source Code =
 Get the source:
