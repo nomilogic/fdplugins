@@ -65,7 +65,6 @@ namespace BookmarkPanel
             ITabbedDocument document = (ITabbedDocument)sender.Parent;
             List<int> markers = GetMarkers(sender);
             ListViewGroup group = FindGroup(document);
-
             if (group != null)
             {
                 if (true)
@@ -77,9 +76,10 @@ namespace BookmarkPanel
                     foreach (int marker in markers)
                     {
                          item = new ListViewItem(new string[]{ 
-                            marker.ToString(), sender.GetLine(marker).TrimStart() },
+                            (marker+1).ToString(), sender.GetLine(marker).TrimStart() },
                             -1);
                         item.Group = group;
+                        item.Tag = marker;
                         item.Name = (string)((Hashtable)group.Tag)["FileName"];
                         items[index] = item;
                         index++;
@@ -113,7 +113,7 @@ namespace BookmarkPanel
 
             while (true)
             {
-                if (sci.MarkerNext(line, sci.GetMarginMaskN(0)) == -1) break;
+                if ((sci.MarkerNext(line, sci.GetMarginMaskN(0)) == -1) || (line > sci.LineCount)) break;
                 line = sci.MarkerNext(line, sci.GetMarginMaskN(0));
                 markerLines.Add(line);
                 maxLine = Math.Max(maxLine, line);
@@ -122,7 +122,6 @@ namespace BookmarkPanel
 
             return markerLines;
         }
-
 
         /// <summary>
         /// Remove from the ListView all the items contained in a ListViewGroup
@@ -136,6 +135,25 @@ namespace BookmarkPanel
             foreach (ListViewItem item in items) item.Remove();
         }
 
+        /// <summary>
+        /// Double click on an item in the list view
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void listView1_DoubleClick(Object sender, EventArgs e)
+        {
+            if (this.listView1.SelectedItems.Count > 0)
+            {
+                ListViewItem item = this.listView1.SelectedItems[0];
+                Debug.WriteLine(item.Group);
+                String filename = (String)((Hashtable)item.Group.Tag)["FileName"];
+                int line = (int)item.Tag;
+                if (PluginMain.ActivateDocument(filename))
+                {
+                    PluginMain.MainForm.CurrentDocument.SciControl.GotoLine(line);
+                }
+            }
+        }
 
         #endregion
 
@@ -225,7 +243,6 @@ namespace BookmarkPanel
 
         #endregion
 
-
         #region Windows Forms Designer Generated Code
 
         /// <summary>
@@ -252,7 +269,6 @@ namespace BookmarkPanel
             this.columnLine,
             this.columnText});
             this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(3, 3);
@@ -263,6 +279,7 @@ namespace BookmarkPanel
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.DoubleClick += new EventHandler(listView1_DoubleClick);
             // 
             // columnLine
             // 

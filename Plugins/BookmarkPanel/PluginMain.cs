@@ -32,6 +32,19 @@ namespace BookmarkPanel
             get { return PluginBase.MainForm; }
         }
 
+        public static Boolean ActivateDocument(String filename)
+        {
+            foreach(ITabbedDocument doc in MainForm.Documents)
+            {
+                if(doc.IsEditable && doc.FileName.ToUpper() == filename.ToUpper())
+                {
+                    doc.Activate();
+                    return true;
+                }
+            }
+            return false;
+        }
+
 	    #region Required Properties
 
         /// <summary>
@@ -127,6 +140,7 @@ namespace BookmarkPanel
                     break;
 
                 case EventType.FileSwitch:
+                    Debug.WriteLine("file switch");
                     break;
 
                 case EventType.FileEmpty:
