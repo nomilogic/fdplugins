@@ -15,6 +15,8 @@ Preferences allow you to define more words to check apart the builtin ones TODO 
 In order to define the correct image see the file Images.png into the Settings folder of your FlashDevelop installation directory, and look for the appropriate icon number.
 You can define also the file extension to check during project parsing (.as, .txt, et..)
 
+Click on "Refresh" icon on the top-right of the TaskList panel to parse again all project files.
+
 The preferences dialog:
 
 http://fdplugins.googlecode.com/svn/trunk/images/tasklist_preferences.png
