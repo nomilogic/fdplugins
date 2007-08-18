@@ -1,0 +1,13 @@
+#summary Description of FlashAPI Plugin.
+
+= Introduction =
+
+
+= Preview = 
+
+http://fdplugins.googlecode.com/svn/trunk/images/flashapi_preview.png
+
+
+= Details = 
+
+http://fdplugins.googlecode.com/svn/trunk/images/flashapi_preferences.png
