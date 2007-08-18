@@ -12,9 +12,9 @@ http://fdplugins.googlecode.com/svn/trunk/images/flashapi_preview.png
 = Details = 
 
 In the plugin settings add all the actionspanel xml files you want. the xml files come with Flash IDE installation, for example:
-{{
+{{{
 C:\Program Files\Adobe\Adobe Flash CS3\en\First Run\ActionsPanel\ActionScript_3\ActionsPanel_3.xml
-}}
+}}}
 
 
 Plugin preferences:
