@@ -22,5 +22,6 @@ The preferences dialog:
 http://fdplugins.googlecode.com/svn/trunk/images/tasklist_preferences.png
 
 
+= Changes =
 
-
+ * Fixed the error when trying to refresh the task list with no project opened
