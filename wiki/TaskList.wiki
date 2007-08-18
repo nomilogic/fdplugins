@@ -12,8 +12,11 @@ http://fdplugins.googlecode.com/svn/trunk/images/tasklist_preview.png
 = Details =
 
 Preferences allow you to define more words to check apart the builtin ones TODO and BUG and associate for every word an icon.
+In order to define the correct image see the file Images.png into the Settings folder of your FlashDevelop installation directory, and look for the appropriate icon number.
+You can define also the file extension to check during project parsing (.as, .txt, et..)
 
 The preferences dialog:
+
 http://fdplugins.googlecode.com/svn/trunk/images/tasklist_preferences.png
 
 
