@@ -18,7 +18,7 @@ This is the complete list of available plugins you can find here:
  * SourceOptions
  * StickiesNotes 
  
-Please use the plugin specific wiki page to report issues or comments, or use the [Issues http://code.google.com/p/fdplugins/issues/list] page to report bugs.
+Please use the plugin specific wiki page to report issues or comments.
  
 
 = Source Code =
