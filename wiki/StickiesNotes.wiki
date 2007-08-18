@@ -11,7 +11,7 @@ Stickies Plugin will be installed as submenu of the "view" FlashDevelop main men
 
 = Preview = 
 
-http://code.google.com/p/fdplugins/wiki/images/sticky_preview.png
+[http://code.google.com/p/fdplugins/wiki/images/sticky_preview.png]
 
 = Details =
 
