@@ -140,7 +140,6 @@ namespace BookmarkPanel
                     break;
 
                 case EventType.FileSwitch:
-                    Debug.WriteLine("file switch");
                     break;
 
                 case EventType.FileEmpty:

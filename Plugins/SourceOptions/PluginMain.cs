@@ -35,6 +35,7 @@ namespace SourceOptions
         ToolStripMenuItem getterMenu;
         ToolStripMenuItem accessorMenu;
         ToolStripSeparator separator;
+        ToolStripMenuItem copyMenu;
 
         public static IMainForm MainForm { get { return PluginBase.MainForm; } }
 
@@ -228,6 +229,16 @@ namespace SourceOptions
             }
         }
 
+
+        private void CopyFileName(Object sender, EventArgs e)
+        {
+            if (MainForm.CurrentDocument.IsEditable && !MainForm.CurrentDocument.IsUntitled)
+            {
+                String filename = MainForm.CurrentDocument.FileName;
+                Clipboard.SetText(filename, TextDataFormat.UnicodeText);
+            }
+        }
+
         /// <summary>
         /// Create Getter/Setter methods from a class variable
         /// </summary>
@@ -376,11 +387,13 @@ namespace SourceOptions
         private void CreateContextMenu()
         {
             sourceMenu = new ToolStripMenuItem(LocaleHelper.GetString("Menu.Source"));
+            copyMenu = new ToolStripMenuItem(LocaleHelper.GetString("Menu.CopyFileName"), null, new EventHandler(this.CopyFileName));
             organizeImportsMenu = new ToolStripMenuItem(LocaleHelper.GetString("Menu.OrganizeImports"), null, new EventHandler(this.OrganizeImports));
             getterMenu = new ToolStripMenuItem(LocaleHelper.GetString("Menu.Getter"), null, new EventHandler(this.AddGetterSetterMethods));
             accessorMenu = new ToolStripMenuItem(LocaleHelper.GetString("Menu.Accessor"), null, new EventHandler(this.AddAccessorMethods));
             separator = new ToolStripSeparator();
 
+            sourceMenu.DropDownItems.Add( copyMenu );
             sourceMenu.DropDownItems.Add( organizeImportsMenu );
             sourceMenu.DropDownItems.Add( new ToolStripSeparator() );
             sourceMenu.DropDownItems.Add( getterMenu );
