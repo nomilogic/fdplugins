@@ -1,4 +1,4 @@
-// $ANTLR 3.0 C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g 2007-08-21 15:30:13
+// $ANTLR 3.0 C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g 2007-08-21 22:59:28
 namespace
 CodeReformatter.Generators.Core
 {
@@ -17,116 +17,120 @@ CodeReformatter.Generators.Core
 
     public class ASLexer : Lexer
     {
-        public const int INTERNAL = 97;
+        public const int INTERNAL = 99;
         public const int BLOCK = 19;
-        public const int BOR_ASSIGN = 112;
-        public const int STRING_LITERAL = 62;
-        public const int GT = 126;
-        public const int HEX_DIGIT = 159;
-        public const int GET = 64;
-        public const int UNDEFINED = 147;
-        public const int SL_ASSIGN = 107;
+        public const int BOR_ASSIGN = 114;
+        public const int STRING_LITERAL = 64;
+        public const int GT = 128;
+        public const int HEX_DIGIT = 163;
+        public const int GET = 66;
+        public const int UNDEFINED = 149;
+        public const int SL_ASSIGN = 109;
         public const int PRE_DEC = 36;
-        public const int LOR_ASSIGN = 114;
-        public const int SR = 133;
-        public const int IMPLEMENTS = 60;
-        public const int GE = 128;
-        public const int LBRACK = 98;
-        public const int OCTAL_LITERAL = 153;
-        public const int SL = 132;
+        public const int LOR_ASSIGN = 116;
+        public const int SR = 135;
+        public const int IMPLEMENTS = 62;
+        public const int GE = 130;
+        public const int LBRACK = 100;
+        public const int OCTAL_LITERAL = 155;
+        public const int SL = 134;
         public const int PROPERTY_OR_IDENTIFIER = 27;
-        public const int UNICODE_ESC = 168;
-        public const int EXTENDS = 58;
+        public const int SINGLELINE_COMMENT = 50;
+        public const int UNICODE_ESC = 170;
+        public const int EXTENDS = 60;
         public const int NAMESPACE_DEF = 12;
         public const int FOR_IN = 46;
-        public const int NOT_EQUAL = 123;
-        public const int MOD_ASSIGN = 104;
-        public const int LCURLY = 52;
+        public const int NOT_EQUAL = 125;
+        public const int MOD_ASSIGN = 106;
+        public const int LCURLY = 54;
         public const int UNARY_MINUS = 32;
-        public const int LNOT = 143;
+        public const int LNOT = 145;
         public const int ACCESSOR_ROLE = 13;
-        public const int E4X_ATTRI = 146;
-        public const int DEFAULT = 82;
-        public const int STATIC = 100;
-        public const int ML_COMMENT = 165;
-        public const int OCTAL_ESC = 169;
-        public const int STRICT_NOT_EQUAL = 122;
-        public const int Tokens = 183;
-        public const int OCT_DIGIT = 166;
+        public const int E4X_ATTRI = 148;
+        public const int MULTILINE_COMMENT = 51;
+        public const int DEFAULT = 84;
+        public const int STATIC = 102;
+        public const int ML_COMMENT = 159;
+        public const int OCTAL_ESC = 171;
+        public const int STRICT_NOT_EQUAL = 124;
+        public const int Tokens = 185;
+        public const int OCT_DIGIT = 168;
         public const int ANNOTATIONS = 8;
-        public const int E4X_DESC = 145;
+        public const int E4X_DESC = 147;
         public const int POST_DEC = 34;
-        public const int MOD = 138;
-        public const int DECIMAL_LITERAL = 152;
+        public const int MOD = 140;
+        public const int DECIMAL_LITERAL = 154;
         public const int INTERFACE_DEF = 15;
         public const int MODIFIERS = 11;
         public const int TYPE_SPEC = 18;
-        public const int DIV = 137;
+        public const int DIV = 139;
         public const int UNARY_PLUS = 31;
-        public const int EACH = 84;
+        public const int EACH = 86;
         public const int DEFAULT_XML_NAMESPACE = 49;
-        public const int LAND_ASSIGN = 113;
+        public const int LAND_ASSIGN = 115;
         public const int CONDITION = 21;
-        public const int ASSIGN = 70;
-        public const int NULL = 150;
-        public const int PRIVATE = 95;
-        public const int DO = 87;
+        public const int ASSIGN = 72;
+        public const int NULL = 152;
+        public const int PRIVATE = 97;
+        public const int DO = 89;
         public const int EOF = -1;
-        public const int MINUS = 136;
+        public const int MINUS = 138;
         public const int SWITCH_STATEMENT_LIST = 47;
         public const int PARAM = 17;
         public const int TYPE_BLOCK = 5;
-        public const int VIRTUAL_PLACEHOLDER = 50;
+        public const int VIRTUAL_PLACEHOLDER = 52;
         public const int VAR_INIT = 25;
-        public const int INSTANCEOF = 131;
-        public const int FUNCTION = 63;
+        public const int INSTANCEOF = 133;
+        public const int FUNCTION = 65;
         public const int PROPERTY_ACCESS = 28;
         public const int TYPE_NAME = 29;
-        public const int INC = 139;
-        public const int RETURN = 76;
-        public const int ELSE = 75;
-        public const int EQUAL = 124;
-        public const int BXOR_ASSIGN = 111;
-        public const int BSR_ASSIGN = 109;
-        public const int CTRLCHAR_ESC = 167;
-        public const int TRUE = 148;
-        public const int DBL_COLON = 92;
+        public const int INC = 141;
+        public const int RETURN = 78;
+        public const int ELSE = 77;
+        public const int EQUAL = 126;
+        public const int BXOR_ASSIGN = 113;
+        public const int BSR_ASSIGN = 111;
+        public const int CTRLCHAR_ESC = 169;
+        public const int TRUE = 150;
+        public const int DBL_COLON = 94;
         public const int IDENTIFIER = 48;
-        public const int SEMI = 54;
-        public const int STRICT_EQUAL = 121;
-        public const int PLUS_ASSIGN = 105;
-        public const int BSR = 134;
+        public const int SEMI = 56;
+        public const int STRICT_EQUAL = 123;
+        public const int PLUS_ASSIGN = 107;
+        public const int BSR = 136;
         public const int OBJECT_FIELD = 40;
         public const int ELEMENT = 38;
-        public const int NEW = 155;
-        public const int DIV_ASSIGN = 103;
-        public const int DELETE = 141;
-        public const int NL = 162;
-        public const int IDENT = 93;
-        public const int BAND_ASSIGN = 110;
-        public const int AS = 130;
-        public const int CASE = 80;
+        public const int NEW = 157;
+        public const int DIV_ASSIGN = 105;
+        public const int DELETE = 143;
+        public const int NL = 166;
+        public const int IDENT = 95;
+        public const int BAND_ASSIGN = 112;
+        public const int AS = 132;
+        public const int CASE = 82;
         public const int OBJECT_LITERAL = 39;
-        public const int RBRACK = 99;
-        public const int LPAREN = 71;
-        public const int PLUS = 135;
-        public const int CLASS = 56;
+        public const int RBRACK = 101;
+        public const int LPAREN = 73;
+        public const int PLUS = 137;
+        public const int CLASS = 58;
         public const int FUNC_DEF = 41;
         public const int ARRAY_ACC = 30;
-        public const int BREAK = 78;
-        public const int WHILE = 86;
-        public const int CONST = 69;
-        public const int RCURLY = 53;
-        public const int INTERFACE = 57;
+        public const int BREAK = 80;
+        public const int WHILE = 88;
+        public const int CONST = 71;
+        public const int RCURLY = 55;
+        public const int INTERFACE = 59;
+        public const int T184 = 184;
+        public const int T183 = 183;
         public const int T182 = 182;
         public const int T181 = 181;
         public const int PARAMS = 16;
         public const int T180 = 180;
         public const int FOR_INIT = 42;
-        public const int DEC = 140;
-        public const int COMMA = 59;
+        public const int DEC = 142;
+        public const int COMMA = 61;
         public const int COMPILATION_UNIT = 4;
-        public const int LT = 125;
+        public const int LT = 127;
         public const int FOR_ITERATOR = 44;
         public const int T179 = 179;
         public const int ARGUMENTS = 22;
@@ -135,69 +139,67 @@ CodeReformatter.Generators.Core
         public const int T176 = 176;
         public const int T175 = 175;
         public const int T174 = 174;
-        public const int LE = 127;
+        public const int LE = 129;
         public const int T173 = 173;
         public const int FOR_CONDITION = 43;
         public const int T172 = 172;
-        public const int T171 = 171;
-        public const int T170 = 170;
         public const int CLASS_DEF = 14;
-        public const int MINUS_ASSIGN = 106;
+        public const int MINUS_ASSIGN = 108;
         public const int ENCPS_EXPR = 24;
-        public const int LOR = 116;
-        public const int WITH = 88;
-        public const int REST = 73;
-        public const int INCLUDE_DIRECTIVE = 61;
-        public const int BAND = 120;
-        public const int STAR_ASSIGN = 102;
-        public const int EXPONENT = 160;
-        public const int SL_COMMENT = 164;
-        public const int VAR = 68;
-        public const int WS = 161;
-        public const int PACKAGE = 51;
-        public const int STAR = 90;
-        public const int FOR = 83;
-        public const int FALSE = 149;
-        public const int IMPORT = 55;
-        public const int UNICODE_IDENTIFIER_PART = 157;
-        public const int DOT = 91;
-        public const int XML = 89;
+        public const int LOR = 118;
+        public const int WITH = 90;
+        public const int REST = 75;
+        public const int INCLUDE_DIRECTIVE = 63;
+        public const int BAND = 122;
+        public const int STAR_ASSIGN = 104;
+        public const int EXPONENT = 164;
+        public const int SL_COMMENT = 158;
+        public const int VAR = 70;
+        public const int WS = 165;
+        public const int PACKAGE = 53;
+        public const int STAR = 92;
+        public const int FOR = 85;
+        public const int FALSE = 151;
+        public const int IMPORT = 57;
+        public const int UNICODE_IDENTIFIER_PART = 161;
+        public const int DOT = 93;
+        public const int XML = 91;
         public const int ANNOTATION = 9;
-        public const int QUESTION = 115;
+        public const int QUESTION = 117;
         public const int EXPR_STMNT = 23;
         public const int PRE_INC = 35;
-        public const int BOR = 118;
-        public const int NAMESPACE = 66;
-        public const int BOM = 163;
-        public const int SWITCH = 79;
-        public const int CONTINUE = 77;
+        public const int BOR = 120;
+        public const int NAMESPACE = 68;
+        public const int BOM = 167;
+        public const int SWITCH = 81;
+        public const int CONTINUE = 79;
         public const int ARRAY_LITERAL = 37;
-        public const int USE = 67;
-        public const int SR_ASSIGN = 108;
+        public const int USE = 69;
+        public const int SR_ASSIGN = 110;
         public const int ANNOTATION_PARAMS = 10;
-        public const int HEX_LITERAL = 151;
-        public const int IS = 129;
+        public const int HEX_LITERAL = 153;
+        public const int IS = 131;
         public const int METHOD_CALL = 26;
-        public const int LAND = 117;
+        public const int LAND = 119;
         public const int FOR_EACH = 45;
-        public const int IN = 85;
-        public const int DYNAMIC = 101;
+        public const int IN = 87;
+        public const int DYNAMIC = 103;
         public const int METHOD_DEF = 6;
-        public const int BXOR = 119;
+        public const int BXOR = 121;
         public const int VAR_DEF = 7;
         public const int ELIST = 20;
-        public const int IF = 74;
-        public const int TYPEOF = 142;
-        public const int FLOAT_LITERAL = 154;
-        public const int COLON = 81;
-        public const int PUBLIC = 94;
-        public const int SET = 65;
+        public const int IF = 76;
+        public const int TYPEOF = 144;
+        public const int FLOAT_LITERAL = 156;
+        public const int COLON = 83;
+        public const int PUBLIC = 96;
+        public const int SET = 67;
         public const int POST_INC = 33;
-        public const int UNICODE_IDENTIFIER_START = 156;
-        public const int BNOT = 144;
-        public const int ESC = 158;
-        public const int RPAREN = 72;
-        public const int PROTECTED = 96;
+        public const int UNICODE_IDENTIFIER_START = 160;
+        public const int BNOT = 146;
+        public const int ESC = 162;
+        public const int RPAREN = 74;
+        public const int PROTECTED = 98;
 
         public ASLexer()
         {
@@ -214,60 +216,16 @@ CodeReformatter.Generators.Core
             get { return "C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g"; }
         }
 
-        // $ANTLR start T170 
-        public void mT170() // throws RecognitionException [2]
-        {
-            try
-            {
-                int _type = T170;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:15:8: ( 'include' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:15:8: 'include'
-                {
-                    Match("include");
-
-
-                }
-
-                this.type = _type;
-            }
-            finally
-            {
-            }
-        }
-        // $ANTLR end T170
-
-        // $ANTLR start T171 
-        public void mT171() // throws RecognitionException [2]
-        {
-            try
-            {
-                int _type = T171;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:16:8: ( 'throw' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:16:8: 'throw'
-                {
-                    Match("throw");
-
-
-                }
-
-                this.type = _type;
-            }
-            finally
-            {
-            }
-        }
-        // $ANTLR end T171
-
         // $ANTLR start T172 
         public void mT172() // throws RecognitionException [2]
         {
             try
             {
                 int _type = T172;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:17:8: ( 'try' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:17:8: 'try'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:14:8: ( 'include' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:14:8: 'include'
                 {
-                    Match("try");
+                    Match("include");
 
 
                 }
@@ -286,10 +244,10 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = T173;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:18:8: ( 'catch' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:18:8: 'catch'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:15:8: ( 'throw' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:15:8: 'throw'
                 {
-                    Match("catch");
+                    Match("throw");
 
 
                 }
@@ -308,10 +266,10 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = T174;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:19:8: ( 'finally' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:19:8: 'finally'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:16:8: ( 'try' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:16:8: 'try'
                 {
-                    Match("finally");
+                    Match("try");
 
 
                 }
@@ -330,10 +288,10 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = T175;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:20:8: ( 'void' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:20:8: 'void'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:17:8: ( 'catch' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:17:8: 'catch'
                 {
-                    Match("void");
+                    Match("catch");
 
 
                 }
@@ -352,10 +310,10 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = T176;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:21:8: ( 'final' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:21:8: 'final'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:18:8: ( 'finally' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:18:8: 'finally'
                 {
-                    Match("final");
+                    Match("finally");
 
 
                 }
@@ -374,10 +332,10 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = T177;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:22:8: ( 'enumerable' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:22:8: 'enumerable'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:19:8: ( 'void' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:19:8: 'void'
                 {
-                    Match("enumerable");
+                    Match("void");
 
 
                 }
@@ -396,10 +354,10 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = T178;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:23:8: ( 'explicit' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:23:8: 'explicit'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:20:8: ( 'final' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:20:8: 'final'
                 {
-                    Match("explicit");
+                    Match("final");
 
 
                 }
@@ -418,10 +376,10 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = T179;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:24:8: ( 'override' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:24:8: 'override'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:21:8: ( 'enumerable' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:21:8: 'enumerable'
                 {
-                    Match("override");
+                    Match("enumerable");
 
 
                 }
@@ -440,10 +398,10 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = T180;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:25:8: ( 'intrinsic' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:25:8: 'intrinsic'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:22:8: ( 'explicit' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:22:8: 'explicit'
                 {
-                    Match("intrinsic");
+                    Match("explicit");
 
 
                 }
@@ -462,10 +420,10 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = T181;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:26:8: ( 'or' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:26:8: 'or'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:23:8: ( 'override' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:23:8: 'override'
                 {
-                    Match("or");
+                    Match("override");
 
 
                 }
@@ -484,8 +442,52 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = T182;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:27:8: ( 'and' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:27:8: 'and'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:24:8: ( 'intrinsic' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:24:8: 'intrinsic'
+                {
+                    Match("intrinsic");
+
+
+                }
+
+                this.type = _type;
+            }
+            finally
+            {
+            }
+        }
+        // $ANTLR end T182
+
+        // $ANTLR start T183 
+        public void mT183() // throws RecognitionException [2]
+        {
+            try
+            {
+                int _type = T183;
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:25:8: ( 'or' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:25:8: 'or'
+                {
+                    Match("or");
+
+
+                }
+
+                this.type = _type;
+            }
+            finally
+            {
+            }
+        }
+        // $ANTLR end T183
+
+        // $ANTLR start T184 
+        public void mT184() // throws RecognitionException [2]
+        {
+            try
+            {
+                int _type = T184;
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:26:8: ( 'and' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:26:8: 'and'
                 {
                     Match("and");
 
@@ -498,7 +500,7 @@ CodeReformatter.Generators.Core
             {
             }
         }
-        // $ANTLR end T182
+        // $ANTLR end T184
 
         // $ANTLR start PACKAGE 
         public void mPACKAGE() // throws RecognitionException [2]
@@ -3653,7 +3655,7 @@ CodeReformatter.Generators.Core
 
                     }
 
-                    channel = HIDDEN;
+
 
                 }
 
@@ -3723,7 +3725,7 @@ CodeReformatter.Generators.Core
 
                     Match("*/");
 
-                    channel = HIDDEN;
+
 
                 }
 
@@ -4163,99 +4165,99 @@ CodeReformatter.Generators.Core
 
         override public void mTokens() // throws RecognitionException 
         {
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:10: ( T170 | T171 | T172 | T173 | T174 | T175 | T176 | T177 | T178 | T179 | T180 | T181 | T182 | PACKAGE | PUBLIC | PRIVATE | PROTECTED | INTERNAL | FUNCTION | EXTENDS | IMPLEMENTS | VAR | STATIC | IF | IMPORT | FOR | EACH | IN | WHILE | DO | SWITCH | CASE | DEFAULT | ELSE | CONST | CLASS | INTERFACE | TRUE | FALSE | DYNAMIC | USE | XML | NAMESPACE | IS | AS | GET | SET | WITH | RETURN | CONTINUE | BREAK | NULL | UNDEFINED | NEW | INSTANCEOF | DELETE | TYPEOF | QUESTION | LPAREN | RPAREN | LBRACK | RBRACK | LCURLY | RCURLY | COLON | DBL_COLON | COMMA | ASSIGN | EQUAL | STRICT_EQUAL | LNOT | BNOT | NOT_EQUAL | STRICT_NOT_EQUAL | DIV | DIV_ASSIGN | PLUS | PLUS_ASSIGN | INC | MINUS | MINUS_ASSIGN | DEC | STAR | STAR_ASSIGN | MOD | MOD_ASSIGN | SR | SR_ASSIGN | BSR | BSR_ASSIGN | GE | GT | SL | SL_ASSIGN | LE | LT | BXOR | BXOR_ASSIGN | BOR | BOR_ASSIGN | LOR | BAND | BAND_ASSIGN | LAND | LAND_ASSIGN | LOR_ASSIGN | E4X_ATTRI | SEMI | DOT | E4X_DESC | REST | IDENT | STRING_LITERAL | HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | FLOAT_LITERAL | WS | NL | BOM | INCLUDE_DIRECTIVE | SL_COMMENT | ML_COMMENT )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:10: ( T172 | T173 | T174 | T175 | T176 | T177 | T178 | T179 | T180 | T181 | T182 | T183 | T184 | PACKAGE | PUBLIC | PRIVATE | PROTECTED | INTERNAL | FUNCTION | EXTENDS | IMPLEMENTS | VAR | STATIC | IF | IMPORT | FOR | EACH | IN | WHILE | DO | SWITCH | CASE | DEFAULT | ELSE | CONST | CLASS | INTERFACE | TRUE | FALSE | DYNAMIC | USE | XML | NAMESPACE | IS | AS | GET | SET | WITH | RETURN | CONTINUE | BREAK | NULL | UNDEFINED | NEW | INSTANCEOF | DELETE | TYPEOF | QUESTION | LPAREN | RPAREN | LBRACK | RBRACK | LCURLY | RCURLY | COLON | DBL_COLON | COMMA | ASSIGN | EQUAL | STRICT_EQUAL | LNOT | BNOT | NOT_EQUAL | STRICT_NOT_EQUAL | DIV | DIV_ASSIGN | PLUS | PLUS_ASSIGN | INC | MINUS | MINUS_ASSIGN | DEC | STAR | STAR_ASSIGN | MOD | MOD_ASSIGN | SR | SR_ASSIGN | BSR | BSR_ASSIGN | GE | GT | SL | SL_ASSIGN | LE | LT | BXOR | BXOR_ASSIGN | BOR | BOR_ASSIGN | LOR | BAND | BAND_ASSIGN | LAND | LAND_ASSIGN | LOR_ASSIGN | E4X_ATTRI | SEMI | DOT | E4X_DESC | REST | IDENT | STRING_LITERAL | HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | FLOAT_LITERAL | WS | NL | BOM | INCLUDE_DIRECTIVE | SL_COMMENT | ML_COMMENT )
             int alt26 = 123;
             alt26 = dfa26.Predict(input);
             switch (alt26)
             {
                 case 1:
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:10: T170
-                    {
-                        mT170();
-
-                    }
-                    break;
-                case 2:
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:15: T171
-                    {
-                        mT171();
-
-                    }
-                    break;
-                case 3:
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:20: T172
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:10: T172
                     {
                         mT172();
 
                     }
                     break;
-                case 4:
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:25: T173
+                case 2:
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:15: T173
                     {
                         mT173();
 
                     }
                     break;
-                case 5:
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:30: T174
+                case 3:
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:20: T174
                     {
                         mT174();
 
                     }
                     break;
-                case 6:
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:35: T175
+                case 4:
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:25: T175
                     {
                         mT175();
 
                     }
                     break;
-                case 7:
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:40: T176
+                case 5:
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:30: T176
                     {
                         mT176();
 
                     }
                     break;
-                case 8:
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:45: T177
+                case 6:
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:35: T177
                     {
                         mT177();
 
                     }
                     break;
-                case 9:
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:50: T178
+                case 7:
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:40: T178
                     {
                         mT178();
 
                     }
                     break;
-                case 10:
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:55: T179
+                case 8:
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:45: T179
                     {
                         mT179();
 
                     }
                     break;
-                case 11:
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:60: T180
+                case 9:
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:50: T180
                     {
                         mT180();
 
                     }
                     break;
-                case 12:
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:65: T181
+                case 10:
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:55: T181
                     {
                         mT181();
 
                     }
                     break;
-                case 13:
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:70: T182
+                case 11:
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:60: T182
                     {
                         mT182();
+
+                    }
+                    break;
+                case 12:
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:65: T183
+                    {
+                        mT183();
+
+                    }
+                    break;
+                case 13:
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:70: T184
+                    {
+                        mT184();
 
                     }
                     break;
@@ -10419,7 +10421,7 @@ CodeReformatter.Generators.Core
 
             override public string Description
             {
-                get { return "1:1: Tokens : ( T170 | T171 | T172 | T173 | T174 | T175 | T176 | T177 | T178 | T179 | T180 | T181 | T182 | PACKAGE | PUBLIC | PRIVATE | PROTECTED | INTERNAL | FUNCTION | EXTENDS | IMPLEMENTS | VAR | STATIC | IF | IMPORT | FOR | EACH | IN | WHILE | DO | SWITCH | CASE | DEFAULT | ELSE | CONST | CLASS | INTERFACE | TRUE | FALSE | DYNAMIC | USE | XML | NAMESPACE | IS | AS | GET | SET | WITH | RETURN | CONTINUE | BREAK | NULL | UNDEFINED | NEW | INSTANCEOF | DELETE | TYPEOF | QUESTION | LPAREN | RPAREN | LBRACK | RBRACK | LCURLY | RCURLY | COLON | DBL_COLON | COMMA | ASSIGN | EQUAL | STRICT_EQUAL | LNOT | BNOT | NOT_EQUAL | STRICT_NOT_EQUAL | DIV | DIV_ASSIGN | PLUS | PLUS_ASSIGN | INC | MINUS | MINUS_ASSIGN | DEC | STAR | STAR_ASSIGN | MOD | MOD_ASSIGN | SR | SR_ASSIGN | BSR | BSR_ASSIGN | GE | GT | SL | SL_ASSIGN | LE | LT | BXOR | BXOR_ASSIGN | BOR | BOR_ASSIGN | LOR | BAND | BAND_ASSIGN | LAND | LAND_ASSIGN | LOR_ASSIGN | E4X_ATTRI | SEMI | DOT | E4X_DESC | REST | IDENT | STRING_LITERAL | HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | FLOAT_LITERAL | WS | NL | BOM | INCLUDE_DIRECTIVE | SL_COMMENT | ML_COMMENT );"; }
+                get { return "1:1: Tokens : ( T172 | T173 | T174 | T175 | T176 | T177 | T178 | T179 | T180 | T181 | T182 | T183 | T184 | PACKAGE | PUBLIC | PRIVATE | PROTECTED | INTERNAL | FUNCTION | EXTENDS | IMPLEMENTS | VAR | STATIC | IF | IMPORT | FOR | EACH | IN | WHILE | DO | SWITCH | CASE | DEFAULT | ELSE | CONST | CLASS | INTERFACE | TRUE | FALSE | DYNAMIC | USE | XML | NAMESPACE | IS | AS | GET | SET | WITH | RETURN | CONTINUE | BREAK | NULL | UNDEFINED | NEW | INSTANCEOF | DELETE | TYPEOF | QUESTION | LPAREN | RPAREN | LBRACK | RBRACK | LCURLY | RCURLY | COLON | DBL_COLON | COMMA | ASSIGN | EQUAL | STRICT_EQUAL | LNOT | BNOT | NOT_EQUAL | STRICT_NOT_EQUAL | DIV | DIV_ASSIGN | PLUS | PLUS_ASSIGN | INC | MINUS | MINUS_ASSIGN | DEC | STAR | STAR_ASSIGN | MOD | MOD_ASSIGN | SR | SR_ASSIGN | BSR | BSR_ASSIGN | GE | GT | SL | SL_ASSIGN | LE | LT | BXOR | BXOR_ASSIGN | BOR | BOR_ASSIGN | LOR | BAND | BAND_ASSIGN | LAND | LAND_ASSIGN | LOR_ASSIGN | E4X_ATTRI | SEMI | DOT | E4X_DESC | REST | IDENT | STRING_LITERAL | HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | FLOAT_LITERAL | WS | NL | BOM | INCLUDE_DIRECTIVE | SL_COMMENT | ML_COMMENT );"; }
             }
 
         }

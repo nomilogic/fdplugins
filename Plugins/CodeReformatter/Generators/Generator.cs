@@ -8,6 +8,7 @@ using System.IO;
 
 using CodeReformatter;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
 
 namespace CodeReformatter.Generators
 {
@@ -116,6 +117,15 @@ namespace CodeReformatter.Generators
         {
             switch (node.Type)
             {
+
+                case ASLexer.SINGLELINE_COMMENT:
+                    CurrentBuffer.Append(node.GetChild(0).Text.TrimEnd());
+                    break;
+
+                case ASLexer.MULTILINE_COMMENT:
+                    parseMultilineComment(node, endWithNewLine);
+                    break;
+
                 case ASLexer.COMPILATION_UNIT:
                     parseCompilationUnit(node);
                     break;
@@ -406,6 +416,25 @@ namespace CodeReformatter.Generators
         }
 
         /// <summary>
+        /// Insert a reformatted multiline comment
+        /// </summary>
+        /// <param name="node"></param>
+        protected static void parseMultilineComment(CommonTree node, Boolean addNewLine)
+        {
+            String comment = node.GetChild(0).Text;
+            Regex reg = new Regex("[\n\r]+", RegexOptions.Multiline);
+            string[] comments = reg.Split(comment);
+            int i = 0;
+            foreach (string line in comments)
+            {
+                CurrentBuffer.Append(NEWLINE + TAB+ (i > 0 ? " " : "") + line.TrimStart());
+                i++;
+            }
+
+            if (addNewLine) CurrentBuffer.Append(NEWLINE + TAB);
+        }
+
+        /// <summary>
         /// It can be either a simple identifier or a property
         /// </summary>
         /// <param name="node"></param>
@@ -435,8 +464,7 @@ namespace CodeReformatter.Generators
 
         protected static void parsePackage(CommonTree node)
         {
-            CurrentBuffer.Append(node.Text);
-
+            CurrentBuffer.Append(NEWLINE + TAB + node.Text);
             if (node.ChildCount > 0)
             {
                 if (node.GetChild(0).Type == ASLexer.IDENTIFIER)
@@ -527,12 +555,7 @@ namespace CodeReformatter.Generators
             {
                 CurrentBuffer.Append(NEWLINE + TAB);
                 ReformatNode(node.GetChild(i));
-
-                if (node.GetChild(i).Type != ASLexer.IF
-                    && node.GetChild(i).Type != ASLexer.FOR
-                    && node.GetChild(i).Type != ASLexer.FOR_IN
-                    && node.GetChild(i).Type != ASLexer.WHILE && node.GetChild(i).Type != ASLexer.FOR_EACH)
-                    CurrentBuffer.Append(";");
+                AppendSemiColon(node.GetChild(i));
             }
 
             CurrentTab--;
@@ -549,13 +572,7 @@ namespace CodeReformatter.Generators
 
             CurrentBuffer.Append(NEWLINE + TAB);
             ReformatNode(node);
-            if (node.Type != ASLexer.IF
-                                && node.Type != ASLexer.FOR
-                                && node.Type != ASLexer.FOR_IN
-                                && node.Type != ASLexer.WHILE
-                                && node.Type != ASLexer.FOR_EACH)
-                CurrentBuffer.Append(";");
-
+            AppendSemiColon(node);
             CurrentTab--;
             CurrentBuffer.Append(NEWLINE + TAB + "}");
         }
@@ -785,7 +802,7 @@ namespace CodeReformatter.Generators
         /// <param name="tree"></param>
         protected static void parseClass(CommonTree tree)
         {
-            String st = "";
+            String st = NEWLINE + TAB;
             if (tree.GetChild(1).ChildCount > 0)
             {
                 st = fromModifiers(tree.GetChild(1)) + " ";
@@ -823,17 +840,28 @@ namespace CodeReformatter.Generators
             {
                 CurrentBuffer.Append(NEWLINE + TAB);
                 ReformatNode(tree.GetChild(i));
-                if (tree.GetChild(i).Type != ASLexer.IF
-                    && tree.GetChild(i).Type != ASLexer.FOR
-                    && tree.GetChild(i).Type != ASLexer.FOR_IN
-                    && tree.GetChild(i).Type != ASLexer.WHILE
-                    && tree.GetChild(i).Type != ASLexer.FOR_EACH
-                    && tree.GetChild(i).Type != ASLexer.METHOD_DEF)
-                    CurrentBuffer.Append(";");
+                AppendSemiColon(tree.GetChild(i));
             }
 
             CurrentTab--;
             CurrentBuffer.Append(NEWLINE + TAB + "}");
+        }
+
+        /// <summary>
+        /// Append the SEMI ";" at the end of a line
+        /// </summary>
+        /// <param name="node"></param>
+        protected static void AppendSemiColon(ITree node)
+        {
+            if (node.Type != ASLexer.IF
+                && node.Type != ASLexer.SINGLELINE_COMMENT
+                && node.Type != ASLexer.MULTILINE_COMMENT
+                && node.Type != ASLexer.FOR
+                && node.Type != ASLexer.FOR_IN
+                && node.Type != ASLexer.WHILE
+                && node.Type != ASLexer.FOR_EACH
+                && node.Type != ASLexer.METHOD_DEF)
+                CurrentBuffer.Append(";");
         }
 
         /// <summary>
