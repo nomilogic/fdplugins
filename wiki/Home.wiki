@@ -17,6 +17,7 @@ This is the complete list of available plugins you can find here:
  * FlashApi
  * SourceOptions
  * StickiesNotes 
+ * CodeReformatter
  
 Please use the plugin specific wiki page to report issues or comments.
  
