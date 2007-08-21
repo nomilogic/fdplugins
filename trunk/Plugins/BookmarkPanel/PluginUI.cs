@@ -89,12 +89,9 @@ namespace BookmarkPanel
                     this.listView1.Items.AddRange(items);
                     ((Hashtable)group.Tag)["Markers"] = markers;
                     this.listView1.EndUpdate();
-
-                    Debug.WriteLine(group.Items.Count);
                 }
                 else
                 {
-                    Debug.WriteLine("No need to update");
                 }
             }
             
@@ -145,7 +142,6 @@ namespace BookmarkPanel
             if (this.listView1.SelectedItems.Count > 0)
             {
                 ListViewItem item = this.listView1.SelectedItems[0];
-                Debug.WriteLine(item.Group);
                 String filename = (String)((Hashtable)item.Group.Tag)["FileName"];
                 int line = (int)item.Tag;
                 if (PluginMain.ActivateDocument(filename))
@@ -165,7 +161,6 @@ namespace BookmarkPanel
         /// <param name="doc"></param>
         public void CreateDocument( ITabbedDocument doc )
         {
-            Debug.WriteLine("CreateDocument: " + doc);
             ListViewGroup group = new ListViewGroup();
             Hashtable table = new Hashtable();
             table["FileName"] = doc.FileName;

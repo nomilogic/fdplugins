@@ -126,6 +126,9 @@
   <data name="Menu.Accessor" xml:space="preserve">
     <value>Create accessor methods</value>
   </data>
+  <data name="Menu.CopyFileName" xml:space="preserve">
+    <value>Copy File Path/Name</value>
+  </data>
   <data name="Menu.Getter" xml:space="preserve">
     <value>Create getter/setter methods</value>
   </data>
