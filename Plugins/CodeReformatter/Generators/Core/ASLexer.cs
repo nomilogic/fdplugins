@@ -1,4 +1,4 @@
-// $ANTLR 3.0 C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g 2007-08-21 22:59:28
+// $ANTLR 3.0 C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g 2007-08-22 17:16:30
 namespace
 CodeReformatter.Generators.Core
 {
@@ -17,109 +17,115 @@ CodeReformatter.Generators.Core
 
     public class ASLexer : Lexer
     {
-        public const int INTERNAL = 99;
+        public const int INTERNAL = 102;
         public const int BLOCK = 19;
-        public const int BOR_ASSIGN = 114;
-        public const int STRING_LITERAL = 64;
-        public const int GT = 128;
-        public const int HEX_DIGIT = 163;
-        public const int GET = 66;
-        public const int UNDEFINED = 149;
-        public const int SL_ASSIGN = 109;
+        public const int BOR_ASSIGN = 117;
+        public const int STRING_LITERAL = 67;
+        public const int GT = 131;
+        public const int HEX_DIGIT = 166;
+        public const int GET = 69;
+        public const int UNDEFINED = 152;
+        public const int SL_ASSIGN = 112;
         public const int PRE_DEC = 36;
-        public const int LOR_ASSIGN = 116;
-        public const int SR = 135;
-        public const int IMPLEMENTS = 62;
-        public const int GE = 130;
-        public const int LBRACK = 100;
-        public const int OCTAL_LITERAL = 155;
-        public const int SL = 134;
+        public const int LOR_ASSIGN = 119;
+        public const int SR = 138;
+        public const int IMPLEMENTS = 65;
+        public const int GE = 133;
+        public const int LBRACK = 103;
+        public const int OCTAL_LITERAL = 158;
+        public const int SL = 137;
         public const int PROPERTY_OR_IDENTIFIER = 27;
         public const int SINGLELINE_COMMENT = 50;
-        public const int UNICODE_ESC = 170;
-        public const int EXTENDS = 60;
+        public const int UNICODE_ESC = 173;
+        public const int EXTENDS = 63;
         public const int NAMESPACE_DEF = 12;
         public const int FOR_IN = 46;
-        public const int NOT_EQUAL = 125;
-        public const int MOD_ASSIGN = 106;
-        public const int LCURLY = 54;
+        public const int NOT_EQUAL = 128;
+        public const int MOD_ASSIGN = 109;
+        public const int LCURLY = 57;
         public const int UNARY_MINUS = 32;
-        public const int LNOT = 145;
+        public const int LNOT = 148;
+        public const int ANNOTATION_ASSIGN = 55;
         public const int ACCESSOR_ROLE = 13;
-        public const int E4X_ATTRI = 148;
+        public const int E4X_ATTRI = 151;
         public const int MULTILINE_COMMENT = 51;
-        public const int DEFAULT = 84;
-        public const int STATIC = 102;
-        public const int ML_COMMENT = 159;
-        public const int OCTAL_ESC = 171;
-        public const int STRICT_NOT_EQUAL = 124;
-        public const int Tokens = 185;
-        public const int OCT_DIGIT = 168;
+        public const int DEFAULT = 87;
+        public const int STATIC = 105;
+        public const int ML_COMMENT = 162;
+        public const int OCTAL_ESC = 174;
+        public const int STRICT_NOT_EQUAL = 127;
+        public const int Tokens = 188;
+        public const int OCT_DIGIT = 171;
         public const int ANNOTATIONS = 8;
-        public const int E4X_DESC = 147;
+        public const int E4X_DESC = 150;
         public const int POST_DEC = 34;
-        public const int MOD = 140;
-        public const int DECIMAL_LITERAL = 154;
+        public const int MOD = 143;
+        public const int DECIMAL_LITERAL = 157;
         public const int INTERFACE_DEF = 15;
         public const int MODIFIERS = 11;
         public const int TYPE_SPEC = 18;
-        public const int DIV = 139;
+        public const int DIV = 142;
         public const int UNARY_PLUS = 31;
-        public const int EACH = 86;
+        public const int EACH = 89;
         public const int DEFAULT_XML_NAMESPACE = 49;
-        public const int LAND_ASSIGN = 115;
+        public const int LAND_ASSIGN = 118;
         public const int CONDITION = 21;
-        public const int ASSIGN = 72;
-        public const int NULL = 152;
-        public const int PRIVATE = 97;
-        public const int DO = 89;
+        public const int ASSIGN = 75;
+        public const int NULL = 155;
+        public const int PRIVATE = 100;
+        public const int DO = 92;
         public const int EOF = -1;
-        public const int MINUS = 138;
+        public const int MINUS = 141;
         public const int SWITCH_STATEMENT_LIST = 47;
         public const int PARAM = 17;
         public const int TYPE_BLOCK = 5;
-        public const int VIRTUAL_PLACEHOLDER = 52;
+        public const int VIRTUAL_PLACEHOLDER = 54;
         public const int VAR_INIT = 25;
-        public const int INSTANCEOF = 133;
-        public const int FUNCTION = 65;
+        public const int INSTANCEOF = 136;
+        public const int FUNCTION = 68;
         public const int PROPERTY_ACCESS = 28;
         public const int TYPE_NAME = 29;
-        public const int INC = 141;
-        public const int RETURN = 78;
-        public const int ELSE = 77;
-        public const int EQUAL = 126;
-        public const int BXOR_ASSIGN = 113;
-        public const int BSR_ASSIGN = 111;
-        public const int CTRLCHAR_ESC = 169;
-        public const int TRUE = 150;
-        public const int DBL_COLON = 94;
+        public const int INC = 144;
+        public const int RETURN = 81;
+        public const int ELSE = 80;
+        public const int EQUAL = 129;
+        public const int BXOR_ASSIGN = 116;
+        public const int BSR_ASSIGN = 114;
+        public const int CTRLCHAR_ESC = 172;
+        public const int TRUE = 153;
+        public const int DBL_COLON = 97;
         public const int IDENTIFIER = 48;
-        public const int SEMI = 56;
-        public const int STRICT_EQUAL = 123;
-        public const int PLUS_ASSIGN = 107;
-        public const int BSR = 136;
+        public const int COMMENT_ENTRY = 53;
+        public const int COMMENT_LIST = 52;
+        public const int SEMI = 59;
+        public const int STRICT_EQUAL = 126;
+        public const int PLUS_ASSIGN = 110;
+        public const int BSR = 139;
         public const int OBJECT_FIELD = 40;
         public const int ELEMENT = 38;
-        public const int NEW = 157;
-        public const int DIV_ASSIGN = 105;
-        public const int DELETE = 143;
-        public const int NL = 166;
-        public const int IDENT = 95;
-        public const int BAND_ASSIGN = 112;
-        public const int AS = 132;
-        public const int CASE = 82;
+        public const int NEW = 160;
+        public const int DIV_ASSIGN = 108;
+        public const int DELETE = 146;
+        public const int NL = 169;
+        public const int IDENT = 98;
+        public const int BAND_ASSIGN = 115;
+        public const int AS = 135;
+        public const int CASE = 85;
         public const int OBJECT_LITERAL = 39;
-        public const int RBRACK = 101;
-        public const int LPAREN = 73;
-        public const int PLUS = 137;
-        public const int CLASS = 58;
+        public const int RBRACK = 104;
+        public const int LPAREN = 76;
+        public const int PLUS = 140;
+        public const int CLASS = 61;
         public const int FUNC_DEF = 41;
         public const int ARRAY_ACC = 30;
-        public const int BREAK = 80;
-        public const int WHILE = 88;
-        public const int CONST = 71;
-        public const int RCURLY = 55;
-        public const int INTERFACE = 59;
+        public const int BREAK = 83;
+        public const int WHILE = 91;
+        public const int CONST = 74;
+        public const int T187 = 187;
+        public const int T186 = 186;
+        public const int RCURLY = 58;
+        public const int T185 = 185;
+        public const int INTERFACE = 62;
         public const int T184 = 184;
         public const int T183 = 183;
         public const int T182 = 182;
@@ -127,10 +133,10 @@ CodeReformatter.Generators.Core
         public const int PARAMS = 16;
         public const int T180 = 180;
         public const int FOR_INIT = 42;
-        public const int DEC = 142;
-        public const int COMMA = 61;
+        public const int DEC = 145;
+        public const int COMMA = 64;
         public const int COMPILATION_UNIT = 4;
-        public const int LT = 127;
+        public const int LT = 130;
         public const int FOR_ITERATOR = 44;
         public const int T179 = 179;
         public const int ARGUMENTS = 22;
@@ -138,68 +144,65 @@ CodeReformatter.Generators.Core
         public const int T177 = 177;
         public const int T176 = 176;
         public const int T175 = 175;
-        public const int T174 = 174;
-        public const int LE = 129;
-        public const int T173 = 173;
+        public const int LE = 132;
         public const int FOR_CONDITION = 43;
-        public const int T172 = 172;
         public const int CLASS_DEF = 14;
-        public const int MINUS_ASSIGN = 108;
+        public const int MINUS_ASSIGN = 111;
         public const int ENCPS_EXPR = 24;
-        public const int LOR = 118;
-        public const int WITH = 90;
-        public const int REST = 75;
-        public const int INCLUDE_DIRECTIVE = 63;
-        public const int BAND = 122;
-        public const int STAR_ASSIGN = 104;
-        public const int EXPONENT = 164;
-        public const int SL_COMMENT = 158;
-        public const int VAR = 70;
-        public const int WS = 165;
-        public const int PACKAGE = 53;
-        public const int STAR = 92;
-        public const int FOR = 85;
-        public const int FALSE = 151;
-        public const int IMPORT = 57;
-        public const int UNICODE_IDENTIFIER_PART = 161;
-        public const int DOT = 93;
-        public const int XML = 91;
+        public const int LOR = 121;
+        public const int WITH = 93;
+        public const int REST = 78;
+        public const int INCLUDE_DIRECTIVE = 66;
+        public const int BAND = 125;
+        public const int STAR_ASSIGN = 107;
+        public const int EXPONENT = 167;
+        public const int SL_COMMENT = 161;
+        public const int VAR = 73;
+        public const int WS = 168;
+        public const int PACKAGE = 56;
+        public const int STAR = 95;
+        public const int FOR = 88;
+        public const int FALSE = 154;
+        public const int IMPORT = 60;
+        public const int UNICODE_IDENTIFIER_PART = 164;
+        public const int XML = 94;
+        public const int DOT = 96;
         public const int ANNOTATION = 9;
-        public const int QUESTION = 117;
+        public const int QUESTION = 120;
         public const int EXPR_STMNT = 23;
         public const int PRE_INC = 35;
-        public const int BOR = 120;
-        public const int NAMESPACE = 68;
-        public const int BOM = 167;
-        public const int SWITCH = 81;
-        public const int CONTINUE = 79;
+        public const int BOR = 123;
+        public const int NAMESPACE = 71;
+        public const int BOM = 170;
+        public const int SWITCH = 84;
+        public const int CONTINUE = 82;
         public const int ARRAY_LITERAL = 37;
-        public const int USE = 69;
-        public const int SR_ASSIGN = 110;
+        public const int USE = 72;
+        public const int SR_ASSIGN = 113;
         public const int ANNOTATION_PARAMS = 10;
-        public const int HEX_LITERAL = 153;
-        public const int IS = 131;
+        public const int HEX_LITERAL = 156;
+        public const int IS = 134;
         public const int METHOD_CALL = 26;
-        public const int LAND = 119;
+        public const int LAND = 122;
         public const int FOR_EACH = 45;
-        public const int IN = 87;
-        public const int DYNAMIC = 103;
+        public const int IN = 90;
+        public const int DYNAMIC = 106;
         public const int METHOD_DEF = 6;
-        public const int BXOR = 121;
+        public const int BXOR = 124;
         public const int VAR_DEF = 7;
         public const int ELIST = 20;
-        public const int IF = 76;
-        public const int TYPEOF = 144;
-        public const int FLOAT_LITERAL = 156;
-        public const int COLON = 83;
-        public const int PUBLIC = 96;
-        public const int SET = 67;
+        public const int IF = 79;
+        public const int TYPEOF = 147;
+        public const int FLOAT_LITERAL = 159;
+        public const int COLON = 86;
+        public const int PUBLIC = 99;
+        public const int SET = 70;
         public const int POST_INC = 33;
-        public const int UNICODE_IDENTIFIER_START = 160;
-        public const int BNOT = 146;
-        public const int ESC = 162;
-        public const int RPAREN = 74;
-        public const int PROTECTED = 98;
+        public const int UNICODE_IDENTIFIER_START = 163;
+        public const int BNOT = 149;
+        public const int ESC = 165;
+        public const int RPAREN = 77;
+        public const int PROTECTED = 101;
 
         public ASLexer()
         {
@@ -216,82 +219,16 @@ CodeReformatter.Generators.Core
             get { return "C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g"; }
         }
 
-        // $ANTLR start T172 
-        public void mT172() // throws RecognitionException [2]
-        {
-            try
-            {
-                int _type = T172;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:14:8: ( 'include' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:14:8: 'include'
-                {
-                    Match("include");
-
-
-                }
-
-                this.type = _type;
-            }
-            finally
-            {
-            }
-        }
-        // $ANTLR end T172
-
-        // $ANTLR start T173 
-        public void mT173() // throws RecognitionException [2]
-        {
-            try
-            {
-                int _type = T173;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:15:8: ( 'throw' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:15:8: 'throw'
-                {
-                    Match("throw");
-
-
-                }
-
-                this.type = _type;
-            }
-            finally
-            {
-            }
-        }
-        // $ANTLR end T173
-
-        // $ANTLR start T174 
-        public void mT174() // throws RecognitionException [2]
-        {
-            try
-            {
-                int _type = T174;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:16:8: ( 'try' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:16:8: 'try'
-                {
-                    Match("try");
-
-
-                }
-
-                this.type = _type;
-            }
-            finally
-            {
-            }
-        }
-        // $ANTLR end T174
-
         // $ANTLR start T175 
         public void mT175() // throws RecognitionException [2]
         {
             try
             {
                 int _type = T175;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:17:8: ( 'catch' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:17:8: 'catch'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:14:8: ( 'include' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:14:8: 'include'
                 {
-                    Match("catch");
+                    Match("include");
 
 
                 }
@@ -310,10 +247,10 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = T176;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:18:8: ( 'finally' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:18:8: 'finally'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:15:8: ( 'throw' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:15:8: 'throw'
                 {
-                    Match("finally");
+                    Match("throw");
 
 
                 }
@@ -332,10 +269,10 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = T177;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:19:8: ( 'void' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:19:8: 'void'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:16:8: ( 'try' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:16:8: 'try'
                 {
-                    Match("void");
+                    Match("try");
 
 
                 }
@@ -354,10 +291,10 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = T178;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:20:8: ( 'final' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:20:8: 'final'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:17:8: ( 'catch' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:17:8: 'catch'
                 {
-                    Match("final");
+                    Match("catch");
 
 
                 }
@@ -376,10 +313,10 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = T179;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:21:8: ( 'enumerable' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:21:8: 'enumerable'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:18:8: ( 'finally' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:18:8: 'finally'
                 {
-                    Match("enumerable");
+                    Match("finally");
 
 
                 }
@@ -398,10 +335,10 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = T180;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:22:8: ( 'explicit' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:22:8: 'explicit'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:19:8: ( 'void' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:19:8: 'void'
                 {
-                    Match("explicit");
+                    Match("void");
 
 
                 }
@@ -420,10 +357,10 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = T181;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:23:8: ( 'override' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:23:8: 'override'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:20:8: ( 'final' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:20:8: 'final'
                 {
-                    Match("override");
+                    Match("final");
 
 
                 }
@@ -442,10 +379,10 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = T182;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:24:8: ( 'intrinsic' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:24:8: 'intrinsic'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:21:8: ( 'enumerable' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:21:8: 'enumerable'
                 {
-                    Match("intrinsic");
+                    Match("enumerable");
 
 
                 }
@@ -464,10 +401,10 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = T183;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:25:8: ( 'or' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:25:8: 'or'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:22:8: ( 'explicit' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:22:8: 'explicit'
                 {
-                    Match("or");
+                    Match("explicit");
 
 
                 }
@@ -486,6 +423,72 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = T184;
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:23:8: ( 'override' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:23:8: 'override'
+                {
+                    Match("override");
+
+
+                }
+
+                this.type = _type;
+            }
+            finally
+            {
+            }
+        }
+        // $ANTLR end T184
+
+        // $ANTLR start T185 
+        public void mT185() // throws RecognitionException [2]
+        {
+            try
+            {
+                int _type = T185;
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:24:8: ( 'intrinsic' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:24:8: 'intrinsic'
+                {
+                    Match("intrinsic");
+
+
+                }
+
+                this.type = _type;
+            }
+            finally
+            {
+            }
+        }
+        // $ANTLR end T185
+
+        // $ANTLR start T186 
+        public void mT186() // throws RecognitionException [2]
+        {
+            try
+            {
+                int _type = T186;
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:25:8: ( 'or' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:25:8: 'or'
+                {
+                    Match("or");
+
+
+                }
+
+                this.type = _type;
+            }
+            finally
+            {
+            }
+        }
+        // $ANTLR end T186
+
+        // $ANTLR start T187 
+        public void mT187() // throws RecognitionException [2]
+        {
+            try
+            {
+                int _type = T187;
                 // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:26:8: ( 'and' )
                 // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:26:8: 'and'
                 {
@@ -500,7 +503,7 @@ CodeReformatter.Generators.Core
             {
             }
         }
-        // $ANTLR end T184
+        // $ANTLR end T187
 
         // $ANTLR start PACKAGE 
         public void mPACKAGE() // throws RecognitionException [2]
@@ -508,8 +511,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = PACKAGE;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1063:12: ( 'package' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1063:12: 'package'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1083:12: ( 'package' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1083:12: 'package'
                 {
                     Match("package");
 
@@ -530,8 +533,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = PUBLIC;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1064:11: ( 'public' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1064:11: 'public'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1084:11: ( 'public' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1084:11: 'public'
                 {
                     Match("public");
 
@@ -552,8 +555,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = PRIVATE;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1065:12: ( 'private' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1065:12: 'private'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1085:12: ( 'private' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1085:12: 'private'
                 {
                     Match("private");
 
@@ -574,8 +577,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = PROTECTED;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1066:13: ( 'protected' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1066:13: 'protected'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1086:13: ( 'protected' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1086:13: 'protected'
                 {
                     Match("protected");
 
@@ -596,8 +599,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = INTERNAL;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1067:12: ( 'internal' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1067:12: 'internal'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1087:12: ( 'internal' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1087:12: 'internal'
                 {
                     Match("internal");
 
@@ -618,8 +621,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = FUNCTION;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1068:12: ( 'function' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1068:12: 'function'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1088:12: ( 'function' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1088:12: 'function'
                 {
                     Match("function");
 
@@ -640,8 +643,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = EXTENDS;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1069:12: ( 'extends' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1069:12: 'extends'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1089:12: ( 'extends' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1089:12: 'extends'
                 {
                     Match("extends");
 
@@ -662,8 +665,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = IMPLEMENTS;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1070:14: ( 'implements' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1070:14: 'implements'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1090:14: ( 'implements' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1090:14: 'implements'
                 {
                     Match("implements");
 
@@ -684,8 +687,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = VAR;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1071:8: ( 'var' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1071:8: 'var'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1091:8: ( 'var' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1091:8: 'var'
                 {
                     Match("var");
 
@@ -706,8 +709,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = STATIC;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1072:11: ( 'static' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1072:11: 'static'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1092:11: ( 'static' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1092:11: 'static'
                 {
                     Match("static");
 
@@ -728,8 +731,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = IF;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1073:7: ( 'if' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1073:7: 'if'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1093:7: ( 'if' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1093:7: 'if'
                 {
                     Match("if");
 
@@ -750,8 +753,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = IMPORT;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1074:11: ( 'import' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1074:11: 'import'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1094:11: ( 'import' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1094:11: 'import'
                 {
                     Match("import");
 
@@ -772,8 +775,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = FOR;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1075:8: ( 'for' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1075:8: 'for'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1095:8: ( 'for' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1095:8: 'for'
                 {
                     Match("for");
 
@@ -794,8 +797,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = EACH;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1076:9: ( 'each' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1076:9: 'each'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1096:9: ( 'each' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1096:9: 'each'
                 {
                     Match("each");
 
@@ -816,8 +819,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = IN;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1077:7: ( 'in' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1077:7: 'in'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1097:7: ( 'in' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1097:7: 'in'
                 {
                     Match("in");
 
@@ -838,8 +841,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = WHILE;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1078:10: ( 'while' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1078:10: 'while'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1098:10: ( 'while' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1098:10: 'while'
                 {
                     Match("while");
 
@@ -860,8 +863,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = DO;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1079:7: ( 'do' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1079:7: 'do'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1099:7: ( 'do' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1099:7: 'do'
                 {
                     Match("do");
 
@@ -882,8 +885,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = SWITCH;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1080:11: ( 'switch' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1080:11: 'switch'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1100:11: ( 'switch' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1100:11: 'switch'
                 {
                     Match("switch");
 
@@ -904,8 +907,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = CASE;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1081:9: ( 'case' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1081:9: 'case'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1101:9: ( 'case' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1101:9: 'case'
                 {
                     Match("case");
 
@@ -926,8 +929,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = DEFAULT;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1082:12: ( 'default' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1082:12: 'default'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1102:12: ( 'default' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1102:12: 'default'
                 {
                     Match("default");
 
@@ -948,8 +951,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = ELSE;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1083:9: ( 'else' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1083:9: 'else'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1103:9: ( 'else' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1103:9: 'else'
                 {
                     Match("else");
 
@@ -970,8 +973,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = CONST;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1084:10: ( 'const' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1084:10: 'const'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1104:10: ( 'const' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1104:10: 'const'
                 {
                     Match("const");
 
@@ -992,8 +995,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = CLASS;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1085:10: ( 'class' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1085:10: 'class'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1105:10: ( 'class' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1105:10: 'class'
                 {
                     Match("class");
 
@@ -1014,8 +1017,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = INTERFACE;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1086:13: ( 'interface' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1086:13: 'interface'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1106:13: ( 'interface' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1106:13: 'interface'
                 {
                     Match("interface");
 
@@ -1036,8 +1039,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = TRUE;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1087:9: ( 'true' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1087:9: 'true'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1107:9: ( 'true' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1107:9: 'true'
                 {
                     Match("true");
 
@@ -1058,8 +1061,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = FALSE;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1088:10: ( 'false' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1088:10: 'false'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1108:10: ( 'false' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1108:10: 'false'
                 {
                     Match("false");
 
@@ -1080,8 +1083,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = DYNAMIC;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1089:12: ( 'dynamic' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1089:12: 'dynamic'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1109:12: ( 'dynamic' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1109:12: 'dynamic'
                 {
                     Match("dynamic");
 
@@ -1102,8 +1105,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = USE;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1090:8: ( 'use' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1090:8: 'use'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1110:8: ( 'use' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1110:8: 'use'
                 {
                     Match("use");
 
@@ -1124,8 +1127,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = XML;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1091:8: ( 'xml' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1091:8: 'xml'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1111:8: ( 'xml' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1111:8: 'xml'
                 {
                     Match("xml");
 
@@ -1146,8 +1149,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = NAMESPACE;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1092:13: ( 'namespace' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1092:13: 'namespace'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1112:13: ( 'namespace' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1112:13: 'namespace'
                 {
                     Match("namespace");
 
@@ -1168,8 +1171,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = IS;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1093:7: ( 'is' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1093:7: 'is'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1113:7: ( 'is' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1113:7: 'is'
                 {
                     Match("is");
 
@@ -1190,8 +1193,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = AS;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1094:7: ( 'as' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1094:7: 'as'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1114:7: ( 'as' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1114:7: 'as'
                 {
                     Match("as");
 
@@ -1212,8 +1215,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = GET;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1095:8: ( 'get' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1095:8: 'get'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1115:8: ( 'get' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1115:8: 'get'
                 {
                     Match("get");
 
@@ -1234,8 +1237,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = SET;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1096:8: ( 'set' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1096:8: 'set'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1116:8: ( 'set' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1116:8: 'set'
                 {
                     Match("set");
 
@@ -1256,8 +1259,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = WITH;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1097:9: ( 'with' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1097:9: 'with'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1117:9: ( 'with' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1117:9: 'with'
                 {
                     Match("with");
 
@@ -1278,8 +1281,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = RETURN;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1098:11: ( 'return' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1098:11: 'return'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1118:11: ( 'return' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1118:11: 'return'
                 {
                     Match("return");
 
@@ -1300,8 +1303,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = CONTINUE;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1099:12: ( 'continue' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1099:12: 'continue'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1119:12: ( 'continue' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1119:12: 'continue'
                 {
                     Match("continue");
 
@@ -1322,8 +1325,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = BREAK;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1100:10: ( 'break' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1100:10: 'break'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1120:10: ( 'break' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1120:10: 'break'
                 {
                     Match("break");
 
@@ -1344,8 +1347,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = NULL;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1101:9: ( 'null' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1101:9: 'null'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1121:9: ( 'null' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1121:9: 'null'
                 {
                     Match("null");
 
@@ -1366,8 +1369,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = UNDEFINED;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1102:17: ( 'undefined' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1102:17: 'undefined'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1122:17: ( 'undefined' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1122:17: 'undefined'
                 {
                     Match("undefined");
 
@@ -1388,8 +1391,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = NEW;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1103:8: ( 'new' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1103:8: 'new'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1123:8: ( 'new' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1123:8: 'new'
                 {
                     Match("new");
 
@@ -1410,8 +1413,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = INSTANCEOF;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1104:14: ( 'instanceof' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1104:14: 'instanceof'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1124:14: ( 'instanceof' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1124:14: 'instanceof'
                 {
                     Match("instanceof");
 
@@ -1432,8 +1435,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = DELETE;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1105:10: ( 'delete' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1105:10: 'delete'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1125:10: ( 'delete' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1125:10: 'delete'
                 {
                     Match("delete");
 
@@ -1454,8 +1457,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = TYPEOF;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1106:10: ( 'typeof' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1106:10: 'typeof'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1126:10: ( 'typeof' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1126:10: 'typeof'
                 {
                     Match("typeof");
 
@@ -1476,8 +1479,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = QUESTION;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1109:13: ( '?' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1109:13: '?'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1129:13: ( '?' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1129:13: '?'
                 {
                     Match('?');
 
@@ -1497,8 +1500,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = LPAREN;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1110:12: ( '(' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1110:12: '('
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1130:12: ( '(' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1130:12: '('
                 {
                     Match('(');
 
@@ -1518,8 +1521,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = RPAREN;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1111:12: ( ')' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1111:12: ')'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1131:12: ( ')' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1131:12: ')'
                 {
                     Match(')');
 
@@ -1539,8 +1542,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = LBRACK;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1112:12: ( '[' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1112:12: '['
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1132:12: ( '[' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1132:12: '['
                 {
                     Match('[');
 
@@ -1560,8 +1563,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = RBRACK;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1113:12: ( ']' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1113:12: ']'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1133:12: ( ']' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1133:12: ']'
                 {
                     Match(']');
 
@@ -1581,8 +1584,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = LCURLY;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1114:12: ( '{' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1114:12: '{'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1134:12: ( '{' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1134:12: '{'
                 {
                     Match('{');
 
@@ -1602,8 +1605,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = RCURLY;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1115:12: ( '}' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1115:12: '}'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1135:12: ( '}' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1135:12: '}'
                 {
                     Match('}');
 
@@ -1623,8 +1626,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = COLON;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1116:11: ( ':' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1116:11: ':'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1136:11: ( ':' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1136:11: ':'
                 {
                     Match(':');
 
@@ -1644,8 +1647,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = DBL_COLON;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1117:14: ( '::' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1117:14: '::'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1137:14: ( '::' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1137:14: '::'
                 {
                     Match("::");
 
@@ -1666,8 +1669,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = COMMA;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1118:11: ( ',' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1118:11: ','
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1138:11: ( ',' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1138:11: ','
                 {
                     Match(',');
 
@@ -1687,8 +1690,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = ASSIGN;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1119:12: ( '=' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1119:12: '='
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1139:12: ( '=' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1139:12: '='
                 {
                     Match('=');
 
@@ -1708,8 +1711,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = EQUAL;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1120:11: ( '==' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1120:11: '=='
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1140:11: ( '==' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1140:11: '=='
                 {
                     Match("==");
 
@@ -1730,8 +1733,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = STRICT_EQUAL;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1121:17: ( '===' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1121:17: '==='
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1141:17: ( '===' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1141:17: '==='
                 {
                     Match("===");
 
@@ -1752,8 +1755,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = LNOT;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1122:10: ( '!' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1122:10: '!'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1142:10: ( '!' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1142:10: '!'
                 {
                     Match('!');
 
@@ -1773,8 +1776,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = BNOT;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1123:10: ( '~' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1123:10: '~'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1143:10: ( '~' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1143:10: '~'
                 {
                     Match('~');
 
@@ -1794,8 +1797,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = NOT_EQUAL;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1124:14: ( '!=' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1124:14: '!='
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1144:14: ( '!=' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1144:14: '!='
                 {
                     Match("!=");
 
@@ -1816,8 +1819,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = STRICT_NOT_EQUAL;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1125:20: ( '!==' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1125:20: '!=='
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1145:20: ( '!==' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1145:20: '!=='
                 {
                     Match("!==");
 
@@ -1838,8 +1841,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = DIV;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1126:9: ( '/' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1126:9: '/'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1146:9: ( '/' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1146:9: '/'
                 {
                     Match('/');
 
@@ -1859,8 +1862,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = DIV_ASSIGN;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1127:15: ( '/=' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1127:15: '/='
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1147:15: ( '/=' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1147:15: '/='
                 {
                     Match("/=");
 
@@ -1881,8 +1884,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = PLUS;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1128:10: ( '+' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1128:10: '+'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1148:10: ( '+' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1148:10: '+'
                 {
                     Match('+');
 
@@ -1902,8 +1905,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = PLUS_ASSIGN;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1129:16: ( '+=' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1129:16: '+='
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1149:16: ( '+=' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1149:16: '+='
                 {
                     Match("+=");
 
@@ -1924,8 +1927,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = INC;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1130:9: ( '++' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1130:9: '++'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1150:9: ( '++' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1150:9: '++'
                 {
                     Match("++");
 
@@ -1946,8 +1949,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = MINUS;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1131:11: ( '-' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1131:11: '-'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1151:11: ( '-' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1151:11: '-'
                 {
                     Match('-');
 
@@ -1967,8 +1970,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = MINUS_ASSIGN;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1132:17: ( '-=' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1132:17: '-='
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1152:17: ( '-=' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1152:17: '-='
                 {
                     Match("-=");
 
@@ -1989,8 +1992,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = DEC;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1133:9: ( '--' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1133:9: '--'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1153:9: ( '--' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1153:9: '--'
                 {
                     Match("--");
 
@@ -2011,8 +2014,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = STAR;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1134:10: ( '*' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1134:10: '*'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1154:10: ( '*' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1154:10: '*'
                 {
                     Match('*');
 
@@ -2032,8 +2035,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = STAR_ASSIGN;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1135:16: ( '*=' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1135:16: '*='
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1155:16: ( '*=' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1155:16: '*='
                 {
                     Match("*=");
 
@@ -2054,8 +2057,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = MOD;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1136:9: ( '%' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1136:9: '%'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1156:9: ( '%' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1156:9: '%'
                 {
                     Match('%');
 
@@ -2075,8 +2078,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = MOD_ASSIGN;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1137:15: ( '%=' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1137:15: '%='
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1157:15: ( '%=' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1157:15: '%='
                 {
                     Match("%=");
 
@@ -2097,8 +2100,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = SR;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1138:8: ( '>>' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1138:8: '>>'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1158:8: ( '>>' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1158:8: '>>'
                 {
                     Match(">>");
 
@@ -2119,8 +2122,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = SR_ASSIGN;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1139:14: ( '>>=' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1139:14: '>>='
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1159:14: ( '>>=' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1159:14: '>>='
                 {
                     Match(">>=");
 
@@ -2141,8 +2144,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = BSR;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1140:9: ( '>>>' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1140:9: '>>>'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1160:9: ( '>>>' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1160:9: '>>>'
                 {
                     Match(">>>");
 
@@ -2163,8 +2166,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = BSR_ASSIGN;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1141:15: ( '>>>=' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1141:15: '>>>='
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1161:15: ( '>>>=' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1161:15: '>>>='
                 {
                     Match(">>>=");
 
@@ -2185,8 +2188,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = GE;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1142:8: ( '>=' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1142:8: '>='
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1162:8: ( '>=' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1162:8: '>='
                 {
                     Match(">=");
 
@@ -2207,8 +2210,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = GT;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1143:8: ( '>' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1143:8: '>'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1163:8: ( '>' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1163:8: '>'
                 {
                     Match('>');
 
@@ -2228,8 +2231,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = SL;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1144:8: ( '<<' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1144:8: '<<'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1164:8: ( '<<' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1164:8: '<<'
                 {
                     Match("<<");
 
@@ -2250,8 +2253,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = SL_ASSIGN;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1145:14: ( '<<=' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1145:14: '<<='
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1165:14: ( '<<=' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1165:14: '<<='
                 {
                     Match("<<=");
 
@@ -2272,8 +2275,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = LE;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1146:8: ( '<=' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1146:8: '<='
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1166:8: ( '<=' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1166:8: '<='
                 {
                     Match("<=");
 
@@ -2294,8 +2297,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = LT;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1147:8: ( '<' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1147:8: '<'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1167:8: ( '<' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1167:8: '<'
                 {
                     Match('<');
 
@@ -2315,8 +2318,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = BXOR;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1148:10: ( '^' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1148:10: '^'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1168:10: ( '^' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1168:10: '^'
                 {
                     Match('^');
 
@@ -2336,8 +2339,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = BXOR_ASSIGN;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1149:16: ( '^=' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1149:16: '^='
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1169:16: ( '^=' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1169:16: '^='
                 {
                     Match("^=");
 
@@ -2358,8 +2361,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = BOR;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1150:9: ( '|' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1150:9: '|'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1170:9: ( '|' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1170:9: '|'
                 {
                     Match('|');
 
@@ -2379,8 +2382,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = BOR_ASSIGN;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1151:15: ( '|=' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1151:15: '|='
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1171:15: ( '|=' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1171:15: '|='
                 {
                     Match("|=");
 
@@ -2401,8 +2404,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = LOR;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1152:9: ( '||' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1152:9: '||'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1172:9: ( '||' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1172:9: '||'
                 {
                     Match("||");
 
@@ -2423,8 +2426,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = BAND;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1153:10: ( '&' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1153:10: '&'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1173:10: ( '&' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1173:10: '&'
                 {
                     Match('&');
 
@@ -2444,8 +2447,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = BAND_ASSIGN;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1154:16: ( '&=' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1154:16: '&='
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1174:16: ( '&=' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1174:16: '&='
                 {
                     Match("&=");
 
@@ -2466,8 +2469,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = LAND;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1155:10: ( '&&' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1155:10: '&&'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1175:10: ( '&&' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1175:10: '&&'
                 {
                     Match("&&");
 
@@ -2488,8 +2491,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = LAND_ASSIGN;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1156:16: ( '&&=' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1156:16: '&&='
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1176:16: ( '&&=' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1176:16: '&&='
                 {
                     Match("&&=");
 
@@ -2510,8 +2513,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = LOR_ASSIGN;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1157:15: ( '||=' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1157:15: '||='
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1177:15: ( '||=' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1177:15: '||='
                 {
                     Match("||=");
 
@@ -2532,8 +2535,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = E4X_ATTRI;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1158:14: ( '@' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1158:14: '@'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1178:14: ( '@' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1178:14: '@'
                 {
                     Match('@');
 
@@ -2553,8 +2556,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = SEMI;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1159:10: ( ';' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1159:10: ';'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1179:10: ( ';' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1179:10: ';'
                 {
                     Match(';');
 
@@ -2574,8 +2577,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = DOT;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1162:8: ( '.' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1162:8: '.'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1182:8: ( '.' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1182:8: '.'
                 {
                     Match('.');
 
@@ -2595,8 +2598,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = E4X_DESC;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1163:12: ( '..' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1163:12: '..'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1183:12: ( '..' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1183:12: '..'
                 {
                     Match("..");
 
@@ -2617,8 +2620,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = REST;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1164:9: ( '...' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1164:9: '...'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1184:9: ( '...' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1184:9: '...'
                 {
                     Match("...");
 
@@ -2639,8 +2642,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = IDENT;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1167:4: ( ( 'A' .. 'Z' | 'a' .. 'z' | '_' | '$' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '$' )* )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1167:4: ( 'A' .. 'Z' | 'a' .. 'z' | '_' | '$' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '$' )*
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1187:4: ( ( 'A' .. 'Z' | 'a' .. 'z' | '_' | '$' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '$' )* )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1187:4: ( 'A' .. 'Z' | 'a' .. 'z' | '_' | '$' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '$' )*
                 {
                     if (input.LA(1) == '$' || (input.LA(1) >= 'A' && input.LA(1) <= 'Z') || input.LA(1) == '_' || (input.LA(1) >= 'a' && input.LA(1) <= 'z'))
                     {
@@ -2654,7 +2657,7 @@ CodeReformatter.Generators.Core
                         Recover(mse); throw mse;
                     }
 
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1167:38: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '$' )*
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1187:38: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '$' )*
                     do
                     {
                         int alt1 = 2;
@@ -2711,7 +2714,7 @@ CodeReformatter.Generators.Core
         {
             try
             {
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1175:4: ( '\\u0041' .. '\\u005a' | '\\u005f' | '\\u0061' .. '\\u007a' | '\\u00aa' | '\\u00b5' | '\\u00ba' | '\\u00c0' .. '\\u00d6' | '\\u00d8' .. '\\u00f6' | '\\u00f8' .. '\\u02c1' | '\\u02c6' .. '\\u02d1' | '\\u02e0' .. '\\u02e4' | '\\u02ee' | '\\u037a' .. '\\u037d' | '\\u0386' | '\\u0388' .. '\\u038a' | '\\u038c' | '\\u038e' .. '\\u03a1' | '\\u03a3' .. '\\u03ce' | '\\u03d0' .. '\\u03f5' | '\\u03f7' .. '\\u0481' | '\\u048a' .. '\\u0513' | '\\u0531' .. '\\u0556' | '\\u0559' | '\\u0561' .. '\\u0587' | '\\u05d0' .. '\\u05ea' | '\\u05f0' .. '\\u05f2' | '\\u0621' .. '\\u063a' | '\\u0640' .. '\\u064a' | '\\u066e' .. '\\u066f' | '\\u0671' .. '\\u06d3' | '\\u06d5' | '\\u06e5' .. '\\u06e6' | '\\u06ee' .. '\\u06ef' | '\\u06fa' .. '\\u06fc' | '\\u06ff' | '\\u0710' | '\\u0712' .. '\\u072f' | '\\u074d' .. '\\u076d' | '\\u0780' .. '\\u07a5' | '\\u07b1' | '\\u07ca' .. '\\u07ea' | '\\u07f4' .. '\\u07f5' | '\\u07fa' | '\\u0904' .. '\\u0939' | '\\u093d' | '\\u0950' | '\\u0958' .. '\\u0961' | '\\u097b' .. '\\u097f' | '\\u0985' .. '\\u098c' | '\\u098f' .. '\\u0990' | '\\u0993' .. '\\u09a8' | '\\u09aa' .. '\\u09b0' | '\\u09b2' | '\\u09b6' .. '\\u09b9' | '\\u09bd' | '\\u09ce' | '\\u09dc' .. '\\u09dd' | '\\u09df' .. '\\u09e1' | '\\u09f0' .. '\\u09f1' | '\\u0a05' .. '\\u0a0a' | '\\u0a0f' .. '\\u0a10' | '\\u0a13' .. '\\u0a28' | '\\u0a2a' .. '\\u0a30' | '\\u0a32' .. '\\u0a33' | '\\u0a35' .. '\\u0a36' | '\\u0a38' .. '\\u0a39' | '\\u0a59' .. '\\u0a5c' | '\\u0a5e' | '\\u0a72' .. '\\u0a74' | '\\u0a85' .. '\\u0a8d' | '\\u0a8f' .. '\\u0a91' | '\\u0a93' .. '\\u0aa8' | '\\u0aaa' .. '\\u0ab0' | '\\u0ab2' .. '\\u0ab3' | '\\u0ab5' .. '\\u0ab9' | '\\u0abd' | '\\u0ad0' | '\\u0ae0' .. '\\u0ae1' | '\\u0b05' .. '\\u0b0c' | '\\u0b0f' .. '\\u0b10' | '\\u0b13' .. '\\u0b28' | '\\u0b2a' .. '\\u0b30' | '\\u0b32' .. '\\u0b33' | '\\u0b35' .. '\\u0b39' | '\\u0b3d' | '\\u0b5c' .. '\\u0b5d' | '\\u0b5f' .. '\\u0b61' | '\\u0b71' | '\\u0b83' | '\\u0b85' .. '\\u0b8a' | '\\u0b8e' .. '\\u0b90' | '\\u0b92' .. '\\u0b95' | '\\u0b99' .. '\\u0b9a' | '\\u0b9c' | '\\u0b9e' .. '\\u0b9f' | '\\u0ba3' .. '\\u0ba4' | '\\u0ba8' .. '\\u0baa' | '\\u0bae' .. '\\u0bb9' | '\\u0c05' .. '\\u0c0c' | '\\u0c0e' .. '\\u0c10' | '\\u0c12' .. '\\u0c28' | '\\u0c2a' .. '\\u0c33' | '\\u0c35' .. '\\u0c39' | '\\u0c60' .. '\\u0c61' | '\\u0c85' .. '\\u0c8c' | '\\u0c8e' .. '\\u0c90' | '\\u0c92' .. '\\u0ca8' | '\\u0caa' .. '\\u0cb3' | '\\u0cb5' .. '\\u0cb9' | '\\u0cbd' | '\\u0cde' | '\\u0ce0' .. '\\u0ce1' | '\\u0d05' .. '\\u0d0c' | '\\u0d0e' .. '\\u0d10' | '\\u0d12' .. '\\u0d28' | '\\u0d2a' .. '\\u0d39' | '\\u0d60' .. '\\u0d61' | '\\u0d85' .. '\\u0d96' | '\\u0d9a' .. '\\u0db1' | '\\u0db3' .. '\\u0dbb' | '\\u0dbd' | '\\u0dc0' .. '\\u0dc6' | '\\u0e01' .. '\\u0e30' | '\\u0e32' .. '\\u0e33' | '\\u0e40' .. '\\u0e46' | '\\u0e81' .. '\\u0e82' | '\\u0e84' | '\\u0e87' .. '\\u0e88' | '\\u0e8a' | '\\u0e8d' | '\\u0e94' .. '\\u0e97' | '\\u0e99' .. '\\u0e9f' | '\\u0ea1' .. '\\u0ea3' | '\\u0ea5' | '\\u0ea7' | '\\u0eaa' .. '\\u0eab' | '\\u0ead' .. '\\u0eb0' | '\\u0eb2' .. '\\u0eb3' | '\\u0ebd' | '\\u0ec0' .. '\\u0ec4' | '\\u0ec6' | '\\u0edc' .. '\\u0edd' | '\\u0f00' | '\\u0f40' .. '\\u0f47' | '\\u0f49' .. '\\u0f6a' | '\\u0f88' .. '\\u0f8b' | '\\u1000' .. '\\u1021' | '\\u1023' .. '\\u1027' | '\\u1029' .. '\\u102a' | '\\u1050' .. '\\u1055' | '\\u10a0' .. '\\u10c5' | '\\u10d0' .. '\\u10fa' | '\\u10fc' | '\\u1100' .. '\\u1159' | '\\u115f' .. '\\u11a2' | '\\u11a8' .. '\\u11f9' | '\\u1200' .. '\\u1248' | '\\u124a' .. '\\u124d' | '\\u1250' .. '\\u1256' | '\\u1258' | '\\u125a' .. '\\u125d' | '\\u1260' .. '\\u1288' | '\\u128a' .. '\\u128d' | '\\u1290' .. '\\u12b0' | '\\u12b2' .. '\\u12b5' | '\\u12b8' .. '\\u12be' | '\\u12c0' | '\\u12c2' .. '\\u12c5' | '\\u12c8' .. '\\u12d6' | '\\u12d8' .. '\\u1310' | '\\u1312' .. '\\u1315' | '\\u1318' .. '\\u135a' | '\\u1380' .. '\\u138f' | '\\u13a0' .. '\\u13f4' | '\\u1401' .. '\\u166c' | '\\u166f' .. '\\u1676' | '\\u1681' .. '\\u169a' | '\\u16a0' .. '\\u16ea' | '\\u16ee' .. '\\u16f0' | '\\u1700' .. '\\u170c' | '\\u170e' .. '\\u1711' | '\\u1720' .. '\\u1731' | '\\u1740' .. '\\u1751' | '\\u1760' .. '\\u176c' | '\\u176e' .. '\\u1770' | '\\u1780' .. '\\u17b3' | '\\u17d7' | '\\u17dc' | '\\u1820' .. '\\u1877' | '\\u1880' .. '\\u18a8' | '\\u1900' .. '\\u191c' | '\\u1950' .. '\\u196d' | '\\u1970' .. '\\u1974' | '\\u1980' .. '\\u19a9' | '\\u19c1' .. '\\u19c7' | '\\u1a00' .. '\\u1a16' | '\\u1b05' .. '\\u1b33' | '\\u1b45' .. '\\u1b4b' | '\\u1d00' .. '\\u1dbf' | '\\u1e00' .. '\\u1e9b' | '\\u1ea0' .. '\\u1ef9' | '\\u1f00' .. '\\u1f15' | '\\u1f18' .. '\\u1f1d' | '\\u1f20' .. '\\u1f45' | '\\u1f48' .. '\\u1f4d' | '\\u1f50' .. '\\u1f57' | '\\u1f59' | '\\u1f5b' | '\\u1f5d' | '\\u1f5f' .. '\\u1f7d' | '\\u1f80' .. '\\u1fb4' | '\\u1fb6' .. '\\u1fbc' | '\\u1fbe' | '\\u1fc2' .. '\\u1fc4' | '\\u1fc6' .. '\\u1fcc' | '\\u1fd0' .. '\\u1fd3' | '\\u1fd6' .. '\\u1fdb' | '\\u1fe0' .. '\\u1fec' | '\\u1ff2' .. '\\u1ff4' | '\\u1ff6' .. '\\u1ffc' | '\\u2071' | '\\u207f' | '\\u2090' .. '\\u2094' | '\\u2102' | '\\u2107' | '\\u210a' .. '\\u2113' | '\\u2115' | '\\u2119' .. '\\u211d' | '\\u2124' | '\\u2126' | '\\u2128' | '\\u212a' .. '\\u212d' | '\\u212f' .. '\\u2139' | '\\u213c' .. '\\u213f' | '\\u2145' .. '\\u2149' | '\\u214e' | '\\u2160' .. '\\u2184' | '\\u2c00' .. '\\u2c2e' | '\\u2c30' .. '\\u2c5e' | '\\u2c60' .. '\\u2c6c' | '\\u2c74' .. '\\u2c77' | '\\u2c80' .. '\\u2ce4' | '\\u2d00' .. '\\u2d25' | '\\u2d30' .. '\\u2d65' | '\\u2d6f' | '\\u2d80' .. '\\u2d96' | '\\u2da0' .. '\\u2da6' | '\\u2da8' .. '\\u2dae' | '\\u2db0' .. '\\u2db6' | '\\u2db8' .. '\\u2dbe' | '\\u2dc0' .. '\\u2dc6' | '\\u2dc8' .. '\\u2dce' | '\\u2dd0' .. '\\u2dd6' | '\\u2dd8' .. '\\u2dde' | '\\u3005' .. '\\u3007' | '\\u3021' .. '\\u3029' | '\\u3031' .. '\\u3035' | '\\u3038' .. '\\u303c' | '\\u3041' .. '\\u3096' | '\\u309d' .. '\\u309f' | '\\u30a1' .. '\\u30fa' | '\\u30fc' .. '\\u30ff' | '\\u3105' .. '\\u312c' | '\\u3131' .. '\\u318e' | '\\u31a0' .. '\\u31b7' | '\\u31f0' .. '\\u31ff' | '\\u3400' .. '\\u4db5' | '\\u4e00' .. '\\u9fbb' | '\\ua000' .. '\\ua48c' | '\\ua717' .. '\\ua71a' | '\\ua800' .. '\\ua801' | '\\ua803' .. '\\ua805' | '\\ua807' .. '\\ua80a' | '\\ua80c' .. '\\ua822' | '\\ua840' .. '\\ua873' | '\\uac00' .. '\\ud7a3' | '\\uf900' .. '\\ufa2d' | '\\ufa30' .. '\\ufa6a' | '\\ufa70' .. '\\ufad9' | '\\ufb00' .. '\\ufb06' | '\\ufb13' .. '\\ufb17' | '\\ufb1d' | '\\ufb1f' .. '\\ufb28' | '\\ufb2a' .. '\\ufb36' | '\\ufb38' .. '\\ufb3c' | '\\ufb3e' | '\\ufb40' .. '\\ufb41' | '\\ufb43' .. '\\ufb44' | '\\ufb46' .. '\\ufbb1' | '\\ufbd3' .. '\\ufd3d' | '\\ufd50' .. '\\ufd8f' | '\\ufd92' .. '\\ufdc7' | '\\ufdf0' .. '\\ufdfb' | '\\ufe70' .. '\\ufe74' | '\\ufe76' .. '\\ufefc' | '\\uff21' .. '\\uff3a' | '\\uff41' .. '\\uff5a' | '\\uff66' .. '\\uffbe' | '\\uffc2' .. '\\uffc7' | '\\uffca' .. '\\uffcf' | '\\uffd2' .. '\\uffd7' | '\\uffda' .. '\\uffdc' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1195:4: ( '\\u0041' .. '\\u005a' | '\\u005f' | '\\u0061' .. '\\u007a' | '\\u00aa' | '\\u00b5' | '\\u00ba' | '\\u00c0' .. '\\u00d6' | '\\u00d8' .. '\\u00f6' | '\\u00f8' .. '\\u02c1' | '\\u02c6' .. '\\u02d1' | '\\u02e0' .. '\\u02e4' | '\\u02ee' | '\\u037a' .. '\\u037d' | '\\u0386' | '\\u0388' .. '\\u038a' | '\\u038c' | '\\u038e' .. '\\u03a1' | '\\u03a3' .. '\\u03ce' | '\\u03d0' .. '\\u03f5' | '\\u03f7' .. '\\u0481' | '\\u048a' .. '\\u0513' | '\\u0531' .. '\\u0556' | '\\u0559' | '\\u0561' .. '\\u0587' | '\\u05d0' .. '\\u05ea' | '\\u05f0' .. '\\u05f2' | '\\u0621' .. '\\u063a' | '\\u0640' .. '\\u064a' | '\\u066e' .. '\\u066f' | '\\u0671' .. '\\u06d3' | '\\u06d5' | '\\u06e5' .. '\\u06e6' | '\\u06ee' .. '\\u06ef' | '\\u06fa' .. '\\u06fc' | '\\u06ff' | '\\u0710' | '\\u0712' .. '\\u072f' | '\\u074d' .. '\\u076d' | '\\u0780' .. '\\u07a5' | '\\u07b1' | '\\u07ca' .. '\\u07ea' | '\\u07f4' .. '\\u07f5' | '\\u07fa' | '\\u0904' .. '\\u0939' | '\\u093d' | '\\u0950' | '\\u0958' .. '\\u0961' | '\\u097b' .. '\\u097f' | '\\u0985' .. '\\u098c' | '\\u098f' .. '\\u0990' | '\\u0993' .. '\\u09a8' | '\\u09aa' .. '\\u09b0' | '\\u09b2' | '\\u09b6' .. '\\u09b9' | '\\u09bd' | '\\u09ce' | '\\u09dc' .. '\\u09dd' | '\\u09df' .. '\\u09e1' | '\\u09f0' .. '\\u09f1' | '\\u0a05' .. '\\u0a0a' | '\\u0a0f' .. '\\u0a10' | '\\u0a13' .. '\\u0a28' | '\\u0a2a' .. '\\u0a30' | '\\u0a32' .. '\\u0a33' | '\\u0a35' .. '\\u0a36' | '\\u0a38' .. '\\u0a39' | '\\u0a59' .. '\\u0a5c' | '\\u0a5e' | '\\u0a72' .. '\\u0a74' | '\\u0a85' .. '\\u0a8d' | '\\u0a8f' .. '\\u0a91' | '\\u0a93' .. '\\u0aa8' | '\\u0aaa' .. '\\u0ab0' | '\\u0ab2' .. '\\u0ab3' | '\\u0ab5' .. '\\u0ab9' | '\\u0abd' | '\\u0ad0' | '\\u0ae0' .. '\\u0ae1' | '\\u0b05' .. '\\u0b0c' | '\\u0b0f' .. '\\u0b10' | '\\u0b13' .. '\\u0b28' | '\\u0b2a' .. '\\u0b30' | '\\u0b32' .. '\\u0b33' | '\\u0b35' .. '\\u0b39' | '\\u0b3d' | '\\u0b5c' .. '\\u0b5d' | '\\u0b5f' .. '\\u0b61' | '\\u0b71' | '\\u0b83' | '\\u0b85' .. '\\u0b8a' | '\\u0b8e' .. '\\u0b90' | '\\u0b92' .. '\\u0b95' | '\\u0b99' .. '\\u0b9a' | '\\u0b9c' | '\\u0b9e' .. '\\u0b9f' | '\\u0ba3' .. '\\u0ba4' | '\\u0ba8' .. '\\u0baa' | '\\u0bae' .. '\\u0bb9' | '\\u0c05' .. '\\u0c0c' | '\\u0c0e' .. '\\u0c10' | '\\u0c12' .. '\\u0c28' | '\\u0c2a' .. '\\u0c33' | '\\u0c35' .. '\\u0c39' | '\\u0c60' .. '\\u0c61' | '\\u0c85' .. '\\u0c8c' | '\\u0c8e' .. '\\u0c90' | '\\u0c92' .. '\\u0ca8' | '\\u0caa' .. '\\u0cb3' | '\\u0cb5' .. '\\u0cb9' | '\\u0cbd' | '\\u0cde' | '\\u0ce0' .. '\\u0ce1' | '\\u0d05' .. '\\u0d0c' | '\\u0d0e' .. '\\u0d10' | '\\u0d12' .. '\\u0d28' | '\\u0d2a' .. '\\u0d39' | '\\u0d60' .. '\\u0d61' | '\\u0d85' .. '\\u0d96' | '\\u0d9a' .. '\\u0db1' | '\\u0db3' .. '\\u0dbb' | '\\u0dbd' | '\\u0dc0' .. '\\u0dc6' | '\\u0e01' .. '\\u0e30' | '\\u0e32' .. '\\u0e33' | '\\u0e40' .. '\\u0e46' | '\\u0e81' .. '\\u0e82' | '\\u0e84' | '\\u0e87' .. '\\u0e88' | '\\u0e8a' | '\\u0e8d' | '\\u0e94' .. '\\u0e97' | '\\u0e99' .. '\\u0e9f' | '\\u0ea1' .. '\\u0ea3' | '\\u0ea5' | '\\u0ea7' | '\\u0eaa' .. '\\u0eab' | '\\u0ead' .. '\\u0eb0' | '\\u0eb2' .. '\\u0eb3' | '\\u0ebd' | '\\u0ec0' .. '\\u0ec4' | '\\u0ec6' | '\\u0edc' .. '\\u0edd' | '\\u0f00' | '\\u0f40' .. '\\u0f47' | '\\u0f49' .. '\\u0f6a' | '\\u0f88' .. '\\u0f8b' | '\\u1000' .. '\\u1021' | '\\u1023' .. '\\u1027' | '\\u1029' .. '\\u102a' | '\\u1050' .. '\\u1055' | '\\u10a0' .. '\\u10c5' | '\\u10d0' .. '\\u10fa' | '\\u10fc' | '\\u1100' .. '\\u1159' | '\\u115f' .. '\\u11a2' | '\\u11a8' .. '\\u11f9' | '\\u1200' .. '\\u1248' | '\\u124a' .. '\\u124d' | '\\u1250' .. '\\u1256' | '\\u1258' | '\\u125a' .. '\\u125d' | '\\u1260' .. '\\u1288' | '\\u128a' .. '\\u128d' | '\\u1290' .. '\\u12b0' | '\\u12b2' .. '\\u12b5' | '\\u12b8' .. '\\u12be' | '\\u12c0' | '\\u12c2' .. '\\u12c5' | '\\u12c8' .. '\\u12d6' | '\\u12d8' .. '\\u1310' | '\\u1312' .. '\\u1315' | '\\u1318' .. '\\u135a' | '\\u1380' .. '\\u138f' | '\\u13a0' .. '\\u13f4' | '\\u1401' .. '\\u166c' | '\\u166f' .. '\\u1676' | '\\u1681' .. '\\u169a' | '\\u16a0' .. '\\u16ea' | '\\u16ee' .. '\\u16f0' | '\\u1700' .. '\\u170c' | '\\u170e' .. '\\u1711' | '\\u1720' .. '\\u1731' | '\\u1740' .. '\\u1751' | '\\u1760' .. '\\u176c' | '\\u176e' .. '\\u1770' | '\\u1780' .. '\\u17b3' | '\\u17d7' | '\\u17dc' | '\\u1820' .. '\\u1877' | '\\u1880' .. '\\u18a8' | '\\u1900' .. '\\u191c' | '\\u1950' .. '\\u196d' | '\\u1970' .. '\\u1974' | '\\u1980' .. '\\u19a9' | '\\u19c1' .. '\\u19c7' | '\\u1a00' .. '\\u1a16' | '\\u1b05' .. '\\u1b33' | '\\u1b45' .. '\\u1b4b' | '\\u1d00' .. '\\u1dbf' | '\\u1e00' .. '\\u1e9b' | '\\u1ea0' .. '\\u1ef9' | '\\u1f00' .. '\\u1f15' | '\\u1f18' .. '\\u1f1d' | '\\u1f20' .. '\\u1f45' | '\\u1f48' .. '\\u1f4d' | '\\u1f50' .. '\\u1f57' | '\\u1f59' | '\\u1f5b' | '\\u1f5d' | '\\u1f5f' .. '\\u1f7d' | '\\u1f80' .. '\\u1fb4' | '\\u1fb6' .. '\\u1fbc' | '\\u1fbe' | '\\u1fc2' .. '\\u1fc4' | '\\u1fc6' .. '\\u1fcc' | '\\u1fd0' .. '\\u1fd3' | '\\u1fd6' .. '\\u1fdb' | '\\u1fe0' .. '\\u1fec' | '\\u1ff2' .. '\\u1ff4' | '\\u1ff6' .. '\\u1ffc' | '\\u2071' | '\\u207f' | '\\u2090' .. '\\u2094' | '\\u2102' | '\\u2107' | '\\u210a' .. '\\u2113' | '\\u2115' | '\\u2119' .. '\\u211d' | '\\u2124' | '\\u2126' | '\\u2128' | '\\u212a' .. '\\u212d' | '\\u212f' .. '\\u2139' | '\\u213c' .. '\\u213f' | '\\u2145' .. '\\u2149' | '\\u214e' | '\\u2160' .. '\\u2184' | '\\u2c00' .. '\\u2c2e' | '\\u2c30' .. '\\u2c5e' | '\\u2c60' .. '\\u2c6c' | '\\u2c74' .. '\\u2c77' | '\\u2c80' .. '\\u2ce4' | '\\u2d00' .. '\\u2d25' | '\\u2d30' .. '\\u2d65' | '\\u2d6f' | '\\u2d80' .. '\\u2d96' | '\\u2da0' .. '\\u2da6' | '\\u2da8' .. '\\u2dae' | '\\u2db0' .. '\\u2db6' | '\\u2db8' .. '\\u2dbe' | '\\u2dc0' .. '\\u2dc6' | '\\u2dc8' .. '\\u2dce' | '\\u2dd0' .. '\\u2dd6' | '\\u2dd8' .. '\\u2dde' | '\\u3005' .. '\\u3007' | '\\u3021' .. '\\u3029' | '\\u3031' .. '\\u3035' | '\\u3038' .. '\\u303c' | '\\u3041' .. '\\u3096' | '\\u309d' .. '\\u309f' | '\\u30a1' .. '\\u30fa' | '\\u30fc' .. '\\u30ff' | '\\u3105' .. '\\u312c' | '\\u3131' .. '\\u318e' | '\\u31a0' .. '\\u31b7' | '\\u31f0' .. '\\u31ff' | '\\u3400' .. '\\u4db5' | '\\u4e00' .. '\\u9fbb' | '\\ua000' .. '\\ua48c' | '\\ua717' .. '\\ua71a' | '\\ua800' .. '\\ua801' | '\\ua803' .. '\\ua805' | '\\ua807' .. '\\ua80a' | '\\ua80c' .. '\\ua822' | '\\ua840' .. '\\ua873' | '\\uac00' .. '\\ud7a3' | '\\uf900' .. '\\ufa2d' | '\\ufa30' .. '\\ufa6a' | '\\ufa70' .. '\\ufad9' | '\\ufb00' .. '\\ufb06' | '\\ufb13' .. '\\ufb17' | '\\ufb1d' | '\\ufb1f' .. '\\ufb28' | '\\ufb2a' .. '\\ufb36' | '\\ufb38' .. '\\ufb3c' | '\\ufb3e' | '\\ufb40' .. '\\ufb41' | '\\ufb43' .. '\\ufb44' | '\\ufb46' .. '\\ufbb1' | '\\ufbd3' .. '\\ufd3d' | '\\ufd50' .. '\\ufd8f' | '\\ufd92' .. '\\ufdc7' | '\\ufdf0' .. '\\ufdfb' | '\\ufe70' .. '\\ufe74' | '\\ufe76' .. '\\ufefc' | '\\uff21' .. '\\uff3a' | '\\uff41' .. '\\uff5a' | '\\uff66' .. '\\uffbe' | '\\uffc2' .. '\\uffc7' | '\\uffca' .. '\\uffcf' | '\\uffd2' .. '\\uffd7' | '\\uffda' .. '\\uffdc' )
                 // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:
                 {
                     if ((input.LA(1) >= 'A' && input.LA(1) <= 'Z') || input.LA(1) == '_' || (input.LA(1) >= 'a' && input.LA(1) <= 'z') || input.LA(1) == '\u00AA' || input.LA(1) == '\u00B5' || input.LA(1) == '\u00BA' || (input.LA(1) >= '\u00C0' && input.LA(1) <= '\u00D6') || (input.LA(1) >= '\u00D8' && input.LA(1) <= '\u00F6') || (input.LA(1) >= '\u00F8' && input.LA(1) <= '\u02C1') || (input.LA(1) >= '\u02C6' && input.LA(1) <= '\u02D1') || (input.LA(1) >= '\u02E0' && input.LA(1) <= '\u02E4') || input.LA(1) == '\u02EE' || (input.LA(1) >= '\u037A' && input.LA(1) <= '\u037D') || input.LA(1) == '\u0386' || (input.LA(1) >= '\u0388' && input.LA(1) <= '\u038A') || input.LA(1) == '\u038C' || (input.LA(1) >= '\u038E' && input.LA(1) <= '\u03A1') || (input.LA(1) >= '\u03A3' && input.LA(1) <= '\u03CE') || (input.LA(1) >= '\u03D0' && input.LA(1) <= '\u03F5') || (input.LA(1) >= '\u03F7' && input.LA(1) <= '\u0481') || (input.LA(1) >= '\u048A' && input.LA(1) <= '\u0513') || (input.LA(1) >= '\u0531' && input.LA(1) <= '\u0556') || input.LA(1) == '\u0559' || (input.LA(1) >= '\u0561' && input.LA(1) <= '\u0587') || (input.LA(1) >= '\u05D0' && input.LA(1) <= '\u05EA') || (input.LA(1) >= '\u05F0' && input.LA(1) <= '\u05F2') || (input.LA(1) >= '\u0621' && input.LA(1) <= '\u063A') || (input.LA(1) >= '\u0640' && input.LA(1) <= '\u064A') || (input.LA(1) >= '\u066E' && input.LA(1) <= '\u066F') || (input.LA(1) >= '\u0671' && input.LA(1) <= '\u06D3') || input.LA(1) == '\u06D5' || (input.LA(1) >= '\u06E5' && input.LA(1) <= '\u06E6') || (input.LA(1) >= '\u06EE' && input.LA(1) <= '\u06EF') || (input.LA(1) >= '\u06FA' && input.LA(1) <= '\u06FC') || input.LA(1) == '\u06FF' || input.LA(1) == '\u0710' || (input.LA(1) >= '\u0712' && input.LA(1) <= '\u072F') || (input.LA(1) >= '\u074D' && input.LA(1) <= '\u076D') || (input.LA(1) >= '\u0780' && input.LA(1) <= '\u07A5') || input.LA(1) == '\u07B1' || (input.LA(1) >= '\u07CA' && input.LA(1) <= '\u07EA') || (input.LA(1) >= '\u07F4' && input.LA(1) <= '\u07F5') || input.LA(1) == '\u07FA' || (input.LA(1) >= '\u0904' && input.LA(1) <= '\u0939') || input.LA(1) == '\u093D' || input.LA(1) == '\u0950' || (input.LA(1) >= '\u0958' && input.LA(1) <= '\u0961') || (input.LA(1) >= '\u097B' && input.LA(1) <= '\u097F') || (input.LA(1) >= '\u0985' && input.LA(1) <= '\u098C') || (input.LA(1) >= '\u098F' && input.LA(1) <= '\u0990') || (input.LA(1) >= '\u0993' && input.LA(1) <= '\u09A8') || (input.LA(1) >= '\u09AA' && input.LA(1) <= '\u09B0') || input.LA(1) == '\u09B2' || (input.LA(1) >= '\u09B6' && input.LA(1) <= '\u09B9') || input.LA(1) == '\u09BD' || input.LA(1) == '\u09CE' || (input.LA(1) >= '\u09DC' && input.LA(1) <= '\u09DD') || (input.LA(1) >= '\u09DF' && input.LA(1) <= '\u09E1') || (input.LA(1) >= '\u09F0' && input.LA(1) <= '\u09F1') || (input.LA(1) >= '\u0A05' && input.LA(1) <= '\u0A0A') || (input.LA(1) >= '\u0A0F' && input.LA(1) <= '\u0A10') || (input.LA(1) >= '\u0A13' && input.LA(1) <= '\u0A28') || (input.LA(1) >= '\u0A2A' && input.LA(1) <= '\u0A30') || (input.LA(1) >= '\u0A32' && input.LA(1) <= '\u0A33') || (input.LA(1) >= '\u0A35' && input.LA(1) <= '\u0A36') || (input.LA(1) >= '\u0A38' && input.LA(1) <= '\u0A39') || (input.LA(1) >= '\u0A59' && input.LA(1) <= '\u0A5C') || input.LA(1) == '\u0A5E' || (input.LA(1) >= '\u0A72' && input.LA(1) <= '\u0A74') || (input.LA(1) >= '\u0A85' && input.LA(1) <= '\u0A8D') || (input.LA(1) >= '\u0A8F' && input.LA(1) <= '\u0A91') || (input.LA(1) >= '\u0A93' && input.LA(1) <= '\u0AA8') || (input.LA(1) >= '\u0AAA' && input.LA(1) <= '\u0AB0') || (input.LA(1) >= '\u0AB2' && input.LA(1) <= '\u0AB3') || (input.LA(1) >= '\u0AB5' && input.LA(1) <= '\u0AB9') || input.LA(1) == '\u0ABD' || input.LA(1) == '\u0AD0' || (input.LA(1) >= '\u0AE0' && input.LA(1) <= '\u0AE1') || (input.LA(1) >= '\u0B05' && input.LA(1) <= '\u0B0C') || (input.LA(1) >= '\u0B0F' && input.LA(1) <= '\u0B10') || (input.LA(1) >= '\u0B13' && input.LA(1) <= '\u0B28') || (input.LA(1) >= '\u0B2A' && input.LA(1) <= '\u0B30') || (input.LA(1) >= '\u0B32' && input.LA(1) <= '\u0B33') || (input.LA(1) >= '\u0B35' && input.LA(1) <= '\u0B39') || input.LA(1) == '\u0B3D' || (input.LA(1) >= '\u0B5C' && input.LA(1) <= '\u0B5D') || (input.LA(1) >= '\u0B5F' && input.LA(1) <= '\u0B61') || input.LA(1) == '\u0B71' || input.LA(1) == '\u0B83' || (input.LA(1) >= '\u0B85' && input.LA(1) <= '\u0B8A') || (input.LA(1) >= '\u0B8E' && input.LA(1) <= '\u0B90') || (input.LA(1) >= '\u0B92' && input.LA(1) <= '\u0B95') || (input.LA(1) >= '\u0B99' && input.LA(1) <= '\u0B9A') || input.LA(1) == '\u0B9C' || (input.LA(1) >= '\u0B9E' && input.LA(1) <= '\u0B9F') || (input.LA(1) >= '\u0BA3' && input.LA(1) <= '\u0BA4') || (input.LA(1) >= '\u0BA8' && input.LA(1) <= '\u0BAA') || (input.LA(1) >= '\u0BAE' && input.LA(1) <= '\u0BB9') || (input.LA(1) >= '\u0C05' && input.LA(1) <= '\u0C0C') || (input.LA(1) >= '\u0C0E' && input.LA(1) <= '\u0C10') || (input.LA(1) >= '\u0C12' && input.LA(1) <= '\u0C28') || (input.LA(1) >= '\u0C2A' && input.LA(1) <= '\u0C33') || (input.LA(1) >= '\u0C35' && input.LA(1) <= '\u0C39') || (input.LA(1) >= '\u0C60' && input.LA(1) <= '\u0C61') || (input.LA(1) >= '\u0C85' && input.LA(1) <= '\u0C8C') || (input.LA(1) >= '\u0C8E' && input.LA(1) <= '\u0C90') || (input.LA(1) >= '\u0C92' && input.LA(1) <= '\u0CA8') || (input.LA(1) >= '\u0CAA' && input.LA(1) <= '\u0CB3') || (input.LA(1) >= '\u0CB5' && input.LA(1) <= '\u0CB9') || input.LA(1) == '\u0CBD' || input.LA(1) == '\u0CDE' || (input.LA(1) >= '\u0CE0' && input.LA(1) <= '\u0CE1') || (input.LA(1) >= '\u0D05' && input.LA(1) <= '\u0D0C') || (input.LA(1) >= '\u0D0E' && input.LA(1) <= '\u0D10') || (input.LA(1) >= '\u0D12' && input.LA(1) <= '\u0D28') || (input.LA(1) >= '\u0D2A' && input.LA(1) <= '\u0D39') || (input.LA(1) >= '\u0D60' && input.LA(1) <= '\u0D61') || (input.LA(1) >= '\u0D85' && input.LA(1) <= '\u0D96') || (input.LA(1) >= '\u0D9A' && input.LA(1) <= '\u0DB1') || (input.LA(1) >= '\u0DB3' && input.LA(1) <= '\u0DBB') || input.LA(1) == '\u0DBD' || (input.LA(1) >= '\u0DC0' && input.LA(1) <= '\u0DC6') || (input.LA(1) >= '\u0E01' && input.LA(1) <= '\u0E30') || (input.LA(1) >= '\u0E32' && input.LA(1) <= '\u0E33') || (input.LA(1) >= '\u0E40' && input.LA(1) <= '\u0E46') || (input.LA(1) >= '\u0E81' && input.LA(1) <= '\u0E82') || input.LA(1) == '\u0E84' || (input.LA(1) >= '\u0E87' && input.LA(1) <= '\u0E88') || input.LA(1) == '\u0E8A' || input.LA(1) == '\u0E8D' || (input.LA(1) >= '\u0E94' && input.LA(1) <= '\u0E97') || (input.LA(1) >= '\u0E99' && input.LA(1) <= '\u0E9F') || (input.LA(1) >= '\u0EA1' && input.LA(1) <= '\u0EA3') || input.LA(1) == '\u0EA5' || input.LA(1) == '\u0EA7' || (input.LA(1) >= '\u0EAA' && input.LA(1) <= '\u0EAB') || (input.LA(1) >= '\u0EAD' && input.LA(1) <= '\u0EB0') || (input.LA(1) >= '\u0EB2' && input.LA(1) <= '\u0EB3') || input.LA(1) == '\u0EBD' || (input.LA(1) >= '\u0EC0' && input.LA(1) <= '\u0EC4') || input.LA(1) == '\u0EC6' || (input.LA(1) >= '\u0EDC' && input.LA(1) <= '\u0EDD') || input.LA(1) == '\u0F00' || (input.LA(1) >= '\u0F40' && input.LA(1) <= '\u0F47') || (input.LA(1) >= '\u0F49' && input.LA(1) <= '\u0F6A') || (input.LA(1) >= '\u0F88' && input.LA(1) <= '\u0F8B') || (input.LA(1) >= '\u1000' && input.LA(1) <= '\u1021') || (input.LA(1) >= '\u1023' && input.LA(1) <= '\u1027') || (input.LA(1) >= '\u1029' && input.LA(1) <= '\u102A') || (input.LA(1) >= '\u1050' && input.LA(1) <= '\u1055') || (input.LA(1) >= '\u10A0' && input.LA(1) <= '\u10C5') || (input.LA(1) >= '\u10D0' && input.LA(1) <= '\u10FA') || input.LA(1) == '\u10FC' || (input.LA(1) >= '\u1100' && input.LA(1) <= '\u1159') || (input.LA(1) >= '\u115F' && input.LA(1) <= '\u11A2') || (input.LA(1) >= '\u11A8' && input.LA(1) <= '\u11F9') || (input.LA(1) >= '\u1200' && input.LA(1) <= '\u1248') || (input.LA(1) >= '\u124A' && input.LA(1) <= '\u124D') || (input.LA(1) >= '\u1250' && input.LA(1) <= '\u1256') || input.LA(1) == '\u1258' || (input.LA(1) >= '\u125A' && input.LA(1) <= '\u125D') || (input.LA(1) >= '\u1260' && input.LA(1) <= '\u1288') || (input.LA(1) >= '\u128A' && input.LA(1) <= '\u128D') || (input.LA(1) >= '\u1290' && input.LA(1) <= '\u12B0') || (input.LA(1) >= '\u12B2' && input.LA(1) <= '\u12B5') || (input.LA(1) >= '\u12B8' && input.LA(1) <= '\u12BE') || input.LA(1) == '\u12C0' || (input.LA(1) >= '\u12C2' && input.LA(1) <= '\u12C5') || (input.LA(1) >= '\u12C8' && input.LA(1) <= '\u12D6') || (input.LA(1) >= '\u12D8' && input.LA(1) <= '\u1310') || (input.LA(1) >= '\u1312' && input.LA(1) <= '\u1315') || (input.LA(1) >= '\u1318' && input.LA(1) <= '\u135A') || (input.LA(1) >= '\u1380' && input.LA(1) <= '\u138F') || (input.LA(1) >= '\u13A0' && input.LA(1) <= '\u13F4') || (input.LA(1) >= '\u1401' && input.LA(1) <= '\u166C') || (input.LA(1) >= '\u166F' && input.LA(1) <= '\u1676') || (input.LA(1) >= '\u1681' && input.LA(1) <= '\u169A') || (input.LA(1) >= '\u16A0' && input.LA(1) <= '\u16EA') || (input.LA(1) >= '\u16EE' && input.LA(1) <= '\u16F0') || (input.LA(1) >= '\u1700' && input.LA(1) <= '\u170C') || (input.LA(1) >= '\u170E' && input.LA(1) <= '\u1711') || (input.LA(1) >= '\u1720' && input.LA(1) <= '\u1731') || (input.LA(1) >= '\u1740' && input.LA(1) <= '\u1751') || (input.LA(1) >= '\u1760' && input.LA(1) <= '\u176C') || (input.LA(1) >= '\u176E' && input.LA(1) <= '\u1770') || (input.LA(1) >= '\u1780' && input.LA(1) <= '\u17B3') || input.LA(1) == '\u17D7' || input.LA(1) == '\u17DC' || (input.LA(1) >= '\u1820' && input.LA(1) <= '\u1877') || (input.LA(1) >= '\u1880' && input.LA(1) <= '\u18A8') || (input.LA(1) >= '\u1900' && input.LA(1) <= '\u191C') || (input.LA(1) >= '\u1950' && input.LA(1) <= '\u196D') || (input.LA(1) >= '\u1970' && input.LA(1) <= '\u1974') || (input.LA(1) >= '\u1980' && input.LA(1) <= '\u19A9') || (input.LA(1) >= '\u19C1' && input.LA(1) <= '\u19C7') || (input.LA(1) >= '\u1A00' && input.LA(1) <= '\u1A16') || (input.LA(1) >= '\u1B05' && input.LA(1) <= '\u1B33') || (input.LA(1) >= '\u1B45' && input.LA(1) <= '\u1B4B') || (input.LA(1) >= '\u1D00' && input.LA(1) <= '\u1DBF') || (input.LA(1) >= '\u1E00' && input.LA(1) <= '\u1E9B') || (input.LA(1) >= '\u1EA0' && input.LA(1) <= '\u1EF9') || (input.LA(1) >= '\u1F00' && input.LA(1) <= '\u1F15') || (input.LA(1) >= '\u1F18' && input.LA(1) <= '\u1F1D') || (input.LA(1) >= '\u1F20' && input.LA(1) <= '\u1F45') || (input.LA(1) >= '\u1F48' && input.LA(1) <= '\u1F4D') || (input.LA(1) >= '\u1F50' && input.LA(1) <= '\u1F57') || input.LA(1) == '\u1F59' || input.LA(1) == '\u1F5B' || input.LA(1) == '\u1F5D' || (input.LA(1) >= '\u1F5F' && input.LA(1) <= '\u1F7D') || (input.LA(1) >= '\u1F80' && input.LA(1) <= '\u1FB4') || (input.LA(1) >= '\u1FB6' && input.LA(1) <= '\u1FBC') || input.LA(1) == '\u1FBE' || (input.LA(1) >= '\u1FC2' && input.LA(1) <= '\u1FC4') || (input.LA(1) >= '\u1FC6' && input.LA(1) <= '\u1FCC') || (input.LA(1) >= '\u1FD0' && input.LA(1) <= '\u1FD3') || (input.LA(1) >= '\u1FD6' && input.LA(1) <= '\u1FDB') || (input.LA(1) >= '\u1FE0' && input.LA(1) <= '\u1FEC') || (input.LA(1) >= '\u1FF2' && input.LA(1) <= '\u1FF4') || (input.LA(1) >= '\u1FF6' && input.LA(1) <= '\u1FFC') || input.LA(1) == '\u2071' || input.LA(1) == '\u207F' || (input.LA(1) >= '\u2090' && input.LA(1) <= '\u2094') || input.LA(1) == '\u2102' || input.LA(1) == '\u2107' || (input.LA(1) >= '\u210A' && input.LA(1) <= '\u2113') || input.LA(1) == '\u2115' || (input.LA(1) >= '\u2119' && input.LA(1) <= '\u211D') || input.LA(1) == '\u2124' || input.LA(1) == '\u2126' || input.LA(1) == '\u2128' || (input.LA(1) >= '\u212A' && input.LA(1) <= '\u212D') || (input.LA(1) >= '\u212F' && input.LA(1) <= '\u2139') || (input.LA(1) >= '\u213C' && input.LA(1) <= '\u213F') || (input.LA(1) >= '\u2145' && input.LA(1) <= '\u2149') || input.LA(1) == '\u214E' || (input.LA(1) >= '\u2160' && input.LA(1) <= '\u2184') || (input.LA(1) >= '\u2C00' && input.LA(1) <= '\u2C2E') || (input.LA(1) >= '\u2C30' && input.LA(1) <= '\u2C5E') || (input.LA(1) >= '\u2C60' && input.LA(1) <= '\u2C6C') || (input.LA(1) >= '\u2C74' && input.LA(1) <= '\u2C77') || (input.LA(1) >= '\u2C80' && input.LA(1) <= '\u2CE4') || (input.LA(1) >= '\u2D00' && input.LA(1) <= '\u2D25') || (input.LA(1) >= '\u2D30' && input.LA(1) <= '\u2D65') || input.LA(1) == '\u2D6F' || (input.LA(1) >= '\u2D80' && input.LA(1) <= '\u2D96') || (input.LA(1) >= '\u2DA0' && input.LA(1) <= '\u2DA6') || (input.LA(1) >= '\u2DA8' && input.LA(1) <= '\u2DAE') || (input.LA(1) >= '\u2DB0' && input.LA(1) <= '\u2DB6') || (input.LA(1) >= '\u2DB8' && input.LA(1) <= '\u2DBE') || (input.LA(1) >= '\u2DC0' && input.LA(1) <= '\u2DC6') || (input.LA(1) >= '\u2DC8' && input.LA(1) <= '\u2DCE') || (input.LA(1) >= '\u2DD0' && input.LA(1) <= '\u2DD6') || (input.LA(1) >= '\u2DD8' && input.LA(1) <= '\u2DDE') || (input.LA(1) >= '\u3005' && input.LA(1) <= '\u3007') || (input.LA(1) >= '\u3021' && input.LA(1) <= '\u3029') || (input.LA(1) >= '\u3031' && input.LA(1) <= '\u3035') || (input.LA(1) >= '\u3038' && input.LA(1) <= '\u303C') || (input.LA(1) >= '\u3041' && input.LA(1) <= '\u3096') || (input.LA(1) >= '\u309D' && input.LA(1) <= '\u309F') || (input.LA(1) >= '\u30A1' && input.LA(1) <= '\u30FA') || (input.LA(1) >= '\u30FC' && input.LA(1) <= '\u30FF') || (input.LA(1) >= '\u3105' && input.LA(1) <= '\u312C') || (input.LA(1) >= '\u3131' && input.LA(1) <= '\u318E') || (input.LA(1) >= '\u31A0' && input.LA(1) <= '\u31B7') || (input.LA(1) >= '\u31F0' && input.LA(1) <= '\u31FF') || (input.LA(1) >= '\u3400' && input.LA(1) <= '\u4DB5') || (input.LA(1) >= '\u4E00' && input.LA(1) <= '\u9FBB') || (input.LA(1) >= '\uA000' && input.LA(1) <= '\uA48C') || (input.LA(1) >= '\uA717' && input.LA(1) <= '\uA71A') || (input.LA(1) >= '\uA800' && input.LA(1) <= '\uA801') || (input.LA(1) >= '\uA803' && input.LA(1) <= '\uA805') || (input.LA(1) >= '\uA807' && input.LA(1) <= '\uA80A') || (input.LA(1) >= '\uA80C' && input.LA(1) <= '\uA822') || (input.LA(1) >= '\uA840' && input.LA(1) <= '\uA873') || (input.LA(1) >= '\uAC00' && input.LA(1) <= '\uD7A3') || (input.LA(1) >= '\uF900' && input.LA(1) <= '\uFA2D') || (input.LA(1) >= '\uFA30' && input.LA(1) <= '\uFA6A') || (input.LA(1) >= '\uFA70' && input.LA(1) <= '\uFAD9') || (input.LA(1) >= '\uFB00' && input.LA(1) <= '\uFB06') || (input.LA(1) >= '\uFB13' && input.LA(1) <= '\uFB17') || input.LA(1) == '\uFB1D' || (input.LA(1) >= '\uFB1F' && input.LA(1) <= '\uFB28') || (input.LA(1) >= '\uFB2A' && input.LA(1) <= '\uFB36') || (input.LA(1) >= '\uFB38' && input.LA(1) <= '\uFB3C') || input.LA(1) == '\uFB3E' || (input.LA(1) >= '\uFB40' && input.LA(1) <= '\uFB41') || (input.LA(1) >= '\uFB43' && input.LA(1) <= '\uFB44') || (input.LA(1) >= '\uFB46' && input.LA(1) <= '\uFBB1') || (input.LA(1) >= '\uFBD3' && input.LA(1) <= '\uFD3D') || (input.LA(1) >= '\uFD50' && input.LA(1) <= '\uFD8F') || (input.LA(1) >= '\uFD92' && input.LA(1) <= '\uFDC7') || (input.LA(1) >= '\uFDF0' && input.LA(1) <= '\uFDFB') || (input.LA(1) >= '\uFE70' && input.LA(1) <= '\uFE74') || (input.LA(1) >= '\uFE76' && input.LA(1) <= '\uFEFC') || (input.LA(1) >= '\uFF21' && input.LA(1) <= '\uFF3A') || (input.LA(1) >= '\uFF41' && input.LA(1) <= '\uFF5A') || (input.LA(1) >= '\uFF66' && input.LA(1) <= '\uFFBE') || (input.LA(1) >= '\uFFC2' && input.LA(1) <= '\uFFC7') || (input.LA(1) >= '\uFFCA' && input.LA(1) <= '\uFFCF') || (input.LA(1) >= '\uFFD2' && input.LA(1) <= '\uFFD7') || (input.LA(1) >= '\uFFDA' && input.LA(1) <= '\uFFDC'))
@@ -2741,7 +2744,7 @@ CodeReformatter.Generators.Core
         {
             try
             {
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1272:4: ( '\\u0000' .. '\\u0008' | '\\u000e' .. '\\u001b' | '\\u0030' .. '\\u0039' | '\\u0041' .. '\\u005a' | '\\u005f' | '\\u0061' .. '\\u007a' | '\\u007f' .. '\\u009f' | '\\u00aa' | '\\u00ad' | '\\u00b5' | '\\u00ba' | '\\u00c0' .. '\\u00d6' | '\\u00d8' .. '\\u00f6' | '\\u00f8' .. '\\u02c1' | '\\u02c6' .. '\\u02d1' | '\\u02e0' .. '\\u02e4' | '\\u02ee' | '\\u0300' .. '\\u036f' | '\\u037a' .. '\\u037d' | '\\u0386' | '\\u0388' .. '\\u038a' | '\\u038c' | '\\u038e' .. '\\u03a1' | '\\u03a3' .. '\\u03ce' | '\\u03d0' .. '\\u03f5' | '\\u03f7' .. '\\u0481' | '\\u0483' .. '\\u0486' | '\\u048a' .. '\\u0513' | '\\u0531' .. '\\u0556' | '\\u0559' | '\\u0561' .. '\\u0587' | '\\u0591' .. '\\u05bd' | '\\u05bf' | '\\u05c1' .. '\\u05c2' | '\\u05c4' .. '\\u05c5' | '\\u05c7' | '\\u05d0' .. '\\u05ea' | '\\u05f0' .. '\\u05f2' | '\\u0600' .. '\\u0603' | '\\u0610' .. '\\u0615' | '\\u0621' .. '\\u063a' | '\\u0640' .. '\\u065e' | '\\u0660' .. '\\u0669' | '\\u066e' .. '\\u06d3' | '\\u06d5' .. '\\u06dd' | '\\u06df' .. '\\u06e8' | '\\u06ea' .. '\\u06fc' | '\\u06ff' | '\\u070f' .. '\\u074a' | '\\u074d' .. '\\u076d' | '\\u0780' .. '\\u07b1' | '\\u07c0' .. '\\u07f5' | '\\u07fa' | '\\u0901' .. '\\u0939' | '\\u093c' .. '\\u094d' | '\\u0950' .. '\\u0954' | '\\u0958' .. '\\u0963' | '\\u0966' .. '\\u096f' | '\\u097b' .. '\\u097f' | '\\u0981' .. '\\u0983' | '\\u0985' .. '\\u098c' | '\\u098f' .. '\\u0990' | '\\u0993' .. '\\u09a8' | '\\u09aa' .. '\\u09b0' | '\\u09b2' | '\\u09b6' .. '\\u09b9' | '\\u09bc' .. '\\u09c4' | '\\u09c7' .. '\\u09c8' | '\\u09cb' .. '\\u09ce' | '\\u09d7' | '\\u09dc' .. '\\u09dd' | '\\u09df' .. '\\u09e3' | '\\u09e6' .. '\\u09f1' | '\\u0a01' .. '\\u0a03' | '\\u0a05' .. '\\u0a0a' | '\\u0a0f' .. '\\u0a10' | '\\u0a13' .. '\\u0a28' | '\\u0a2a' .. '\\u0a30' | '\\u0a32' .. '\\u0a33' | '\\u0a35' .. '\\u0a36' | '\\u0a38' .. '\\u0a39' | '\\u0a3c' | '\\u0a3e' .. '\\u0a42' | '\\u0a47' .. '\\u0a48' | '\\u0a4b' .. '\\u0a4d' | '\\u0a59' .. '\\u0a5c' | '\\u0a5e' | '\\u0a66' .. '\\u0a74' | '\\u0a81' .. '\\u0a83' | '\\u0a85' .. '\\u0a8d' | '\\u0a8f' .. '\\u0a91' | '\\u0a93' .. '\\u0aa8' | '\\u0aaa' .. '\\u0ab0' | '\\u0ab2' .. '\\u0ab3' | '\\u0ab5' .. '\\u0ab9' | '\\u0abc' .. '\\u0ac5' | '\\u0ac7' .. '\\u0ac9' | '\\u0acb' .. '\\u0acd' | '\\u0ad0' | '\\u0ae0' .. '\\u0ae3' | '\\u0ae6' .. '\\u0aef' | '\\u0b01' .. '\\u0b03' | '\\u0b05' .. '\\u0b0c' | '\\u0b0f' .. '\\u0b10' | '\\u0b13' .. '\\u0b28' | '\\u0b2a' .. '\\u0b30' | '\\u0b32' .. '\\u0b33' | '\\u0b35' .. '\\u0b39' | '\\u0b3c' .. '\\u0b43' | '\\u0b47' .. '\\u0b48' | '\\u0b4b' .. '\\u0b4d' | '\\u0b56' .. '\\u0b57' | '\\u0b5c' .. '\\u0b5d' | '\\u0b5f' .. '\\u0b61' | '\\u0b66' .. '\\u0b6f' | '\\u0b71' | '\\u0b82' .. '\\u0b83' | '\\u0b85' .. '\\u0b8a' | '\\u0b8e' .. '\\u0b90' | '\\u0b92' .. '\\u0b95' | '\\u0b99' .. '\\u0b9a' | '\\u0b9c' | '\\u0b9e' .. '\\u0b9f' | '\\u0ba3' .. '\\u0ba4' | '\\u0ba8' .. '\\u0baa' | '\\u0bae' .. '\\u0bb9' | '\\u0bbe' .. '\\u0bc2' | '\\u0bc6' .. '\\u0bc8' | '\\u0bca' .. '\\u0bcd' | '\\u0bd7' | '\\u0be6' .. '\\u0bef' | '\\u0c01' .. '\\u0c03' | '\\u0c05' .. '\\u0c0c' | '\\u0c0e' .. '\\u0c10' | '\\u0c12' .. '\\u0c28' | '\\u0c2a' .. '\\u0c33' | '\\u0c35' .. '\\u0c39' | '\\u0c3e' .. '\\u0c44' | '\\u0c46' .. '\\u0c48' | '\\u0c4a' .. '\\u0c4d' | '\\u0c55' .. '\\u0c56' | '\\u0c60' .. '\\u0c61' | '\\u0c66' .. '\\u0c6f' | '\\u0c82' .. '\\u0c83' | '\\u0c85' .. '\\u0c8c' | '\\u0c8e' .. '\\u0c90' | '\\u0c92' .. '\\u0ca8' | '\\u0caa' .. '\\u0cb3' | '\\u0cb5' .. '\\u0cb9' | '\\u0cbc' .. '\\u0cc4' | '\\u0cc6' .. '\\u0cc8' | '\\u0cca' .. '\\u0ccd' | '\\u0cd5' .. '\\u0cd6' | '\\u0cde' | '\\u0ce0' .. '\\u0ce3' | '\\u0ce6' .. '\\u0cef' | '\\u0d02' .. '\\u0d03' | '\\u0d05' .. '\\u0d0c' | '\\u0d0e' .. '\\u0d10' | '\\u0d12' .. '\\u0d28' | '\\u0d2a' .. '\\u0d39' | '\\u0d3e' .. '\\u0d43' | '\\u0d46' .. '\\u0d48' | '\\u0d4a' .. '\\u0d4d' | '\\u0d57' | '\\u0d60' .. '\\u0d61' | '\\u0d66' .. '\\u0d6f' | '\\u0d82' .. '\\u0d83' | '\\u0d85' .. '\\u0d96' | '\\u0d9a' .. '\\u0db1' | '\\u0db3' .. '\\u0dbb' | '\\u0dbd' | '\\u0dc0' .. '\\u0dc6' | '\\u0dca' | '\\u0dcf' .. '\\u0dd4' | '\\u0dd6' | '\\u0dd8' .. '\\u0ddf' | '\\u0df2' .. '\\u0df3' | '\\u0e01' .. '\\u0e3a' | '\\u0e40' .. '\\u0e4e' | '\\u0e50' .. '\\u0e59' | '\\u0e81' .. '\\u0e82' | '\\u0e84' | '\\u0e87' .. '\\u0e88' | '\\u0e8a' | '\\u0e8d' | '\\u0e94' .. '\\u0e97' | '\\u0e99' .. '\\u0e9f' | '\\u0ea1' .. '\\u0ea3' | '\\u0ea5' | '\\u0ea7' | '\\u0eaa' .. '\\u0eab' | '\\u0ead' .. '\\u0eb9' | '\\u0ebb' .. '\\u0ebd' | '\\u0ec0' .. '\\u0ec4' | '\\u0ec6' | '\\u0ec8' .. '\\u0ecd' | '\\u0ed0' .. '\\u0ed9' | '\\u0edc' .. '\\u0edd' | '\\u0f00' | '\\u0f18' .. '\\u0f19' | '\\u0f20' .. '\\u0f29' | '\\u0f35' | '\\u0f37' | '\\u0f39' | '\\u0f3e' .. '\\u0f47' | '\\u0f49' .. '\\u0f6a' | '\\u0f71' .. '\\u0f84' | '\\u0f86' .. '\\u0f8b' | '\\u0f90' .. '\\u0f97' | '\\u0f99' .. '\\u0fbc' | '\\u0fc6' | '\\u1000' .. '\\u1021' | '\\u1023' .. '\\u1027' | '\\u1029' .. '\\u102a' | '\\u102c' .. '\\u1032' | '\\u1036' .. '\\u1039' | '\\u1040' .. '\\u1049' | '\\u1050' .. '\\u1059' | '\\u10a0' .. '\\u10c5' | '\\u10d0' .. '\\u10fa' | '\\u10fc' | '\\u1100' .. '\\u1159' | '\\u115f' .. '\\u11a2' | '\\u11a8' .. '\\u11f9' | '\\u1200' .. '\\u1248' | '\\u124a' .. '\\u124d' | '\\u1250' .. '\\u1256' | '\\u1258' | '\\u125a' .. '\\u125d' | '\\u1260' .. '\\u1288' | '\\u128a' .. '\\u128d' | '\\u1290' .. '\\u12b0' | '\\u12b2' .. '\\u12b5' | '\\u12b8' .. '\\u12be' | '\\u12c0' | '\\u12c2' .. '\\u12c5' | '\\u12c8' .. '\\u12d6' | '\\u12d8' .. '\\u1310' | '\\u1312' .. '\\u1315' | '\\u1318' .. '\\u135a' | '\\u135f' | '\\u1380' .. '\\u138f' | '\\u13a0' .. '\\u13f4' | '\\u1401' .. '\\u166c' | '\\u166f' .. '\\u1676' | '\\u1681' .. '\\u169a' | '\\u16a0' .. '\\u16ea' | '\\u16ee' .. '\\u16f0' | '\\u1700' .. '\\u170c' | '\\u170e' .. '\\u1714' | '\\u1720' .. '\\u1734' | '\\u1740' .. '\\u1753' | '\\u1760' .. '\\u176c' | '\\u176e' .. '\\u1770' | '\\u1772' .. '\\u1773' | '\\u1780' .. '\\u17d3' | '\\u17d7' | '\\u17dc' .. '\\u17dd' | '\\u17e0' .. '\\u17e9' | '\\u180b' .. '\\u180d' | '\\u1810' .. '\\u1819' | '\\u1820' .. '\\u1877' | '\\u1880' .. '\\u18a9' | '\\u1900' .. '\\u191c' | '\\u1920' .. '\\u192b' | '\\u1930' .. '\\u193b' | '\\u1946' .. '\\u196d' | '\\u1970' .. '\\u1974' | '\\u1980' .. '\\u19a9' | '\\u19b0' .. '\\u19c9' | '\\u19d0' .. '\\u19d9' | '\\u1a00' .. '\\u1a1b' | '\\u1b00' .. '\\u1b4b' | '\\u1b50' .. '\\u1b59' | '\\u1b6b' .. '\\u1b73' | '\\u1d00' .. '\\u1dca' | '\\u1dfe' .. '\\u1e9b' | '\\u1ea0' .. '\\u1ef9' | '\\u1f00' .. '\\u1f15' | '\\u1f18' .. '\\u1f1d' | '\\u1f20' .. '\\u1f45' | '\\u1f48' .. '\\u1f4d' | '\\u1f50' .. '\\u1f57' | '\\u1f59' | '\\u1f5b' | '\\u1f5d' | '\\u1f5f' .. '\\u1f7d' | '\\u1f80' .. '\\u1fb4' | '\\u1fb6' .. '\\u1fbc' | '\\u1fbe' | '\\u1fc2' .. '\\u1fc4' | '\\u1fc6' .. '\\u1fcc' | '\\u1fd0' .. '\\u1fd3' | '\\u1fd6' .. '\\u1fdb' | '\\u1fe0' .. '\\u1fec' | '\\u1ff2' .. '\\u1ff4' | '\\u1ff6' .. '\\u1ffc' | '\\u200b' .. '\\u200f' | '\\u202a' .. '\\u202e' | '\\u203f' .. '\\u2040' | '\\u2054' | '\\u2060' .. '\\u2063' | '\\u206a' .. '\\u206f' | '\\u2071' | '\\u207f' | '\\u2090' .. '\\u2094' | '\\u20d0' .. '\\u20dc' | '\\u20e1' | '\\u20e5' .. '\\u20ef' | '\\u2102' | '\\u2107' | '\\u210a' .. '\\u2113' | '\\u2115' | '\\u2119' .. '\\u211d' | '\\u2124' | '\\u2126' | '\\u2128' | '\\u212a' .. '\\u212d' | '\\u212f' .. '\\u2139' | '\\u213c' .. '\\u213f' | '\\u2145' .. '\\u2149' | '\\u214e' | '\\u2160' .. '\\u2184' | '\\u2c00' .. '\\u2c2e' | '\\u2c30' .. '\\u2c5e' | '\\u2c60' .. '\\u2c6c' | '\\u2c74' .. '\\u2c77' | '\\u2c80' .. '\\u2ce4' | '\\u2d00' .. '\\u2d25' | '\\u2d30' .. '\\u2d65' | '\\u2d6f' | '\\u2d80' .. '\\u2d96' | '\\u2da0' .. '\\u2da6' | '\\u2da8' .. '\\u2dae' | '\\u2db0' .. '\\u2db6' | '\\u2db8' .. '\\u2dbe' | '\\u2dc0' .. '\\u2dc6' | '\\u2dc8' .. '\\u2dce' | '\\u2dd0' .. '\\u2dd6' | '\\u2dd8' .. '\\u2dde' | '\\u3005' .. '\\u3007' | '\\u3021' .. '\\u302f' | '\\u3031' .. '\\u3035' | '\\u3038' .. '\\u303c' | '\\u3041' .. '\\u3096' | '\\u3099' .. '\\u309a' | '\\u309d' .. '\\u309f' | '\\u30a1' .. '\\u30fa' | '\\u30fc' .. '\\u30ff' | '\\u3105' .. '\\u312c' | '\\u3131' .. '\\u318e' | '\\u31a0' .. '\\u31b7' | '\\u31f0' .. '\\u31ff' | '\\u3400' .. '\\u4db5' | '\\u4e00' .. '\\u9fbb' | '\\ua000' .. '\\ua48c' | '\\ua717' .. '\\ua71a' | '\\ua800' .. '\\ua827' | '\\ua840' .. '\\ua873' | '\\uac00' .. '\\ud7a3' | '\\uf900' .. '\\ufa2d' | '\\ufa30' .. '\\ufa6a' | '\\ufa70' .. '\\ufad9' | '\\ufb00' .. '\\ufb06' | '\\ufb13' .. '\\ufb17' | '\\ufb1d' .. '\\ufb28' | '\\ufb2a' .. '\\ufb36' | '\\ufb38' .. '\\ufb3c' | '\\ufb3e' | '\\ufb40' .. '\\ufb41' | '\\ufb43' .. '\\ufb44' | '\\ufb46' .. '\\ufbb1' | '\\ufbd3' .. '\\ufd3d' | '\\ufd50' .. '\\ufd8f' | '\\ufd92' .. '\\ufdc7' | '\\ufdf0' .. '\\ufdfb' | '\\ufe00' .. '\\ufe0f' | '\\ufe20' .. '\\ufe23' | '\\ufe33' .. '\\ufe34' | '\\ufe4d' .. '\\ufe4f' | '\\ufe70' .. '\\ufe74' | '\\ufe76' .. '\\ufefc' | '\\ufeff' | '\\uff10' .. '\\uff19' | '\\uff21' .. '\\uff3a' | '\\uff3f' | '\\uff41' .. '\\uff5a' | '\\uff66' .. '\\uffbe' | '\\uffc2' .. '\\uffc7' | '\\uffca' .. '\\uffcf' | '\\uffd2' .. '\\uffd7' | '\\uffda' .. '\\uffdc' | '\\ufff9' .. '\\ufffb' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1292:4: ( '\\u0000' .. '\\u0008' | '\\u000e' .. '\\u001b' | '\\u0030' .. '\\u0039' | '\\u0041' .. '\\u005a' | '\\u005f' | '\\u0061' .. '\\u007a' | '\\u007f' .. '\\u009f' | '\\u00aa' | '\\u00ad' | '\\u00b5' | '\\u00ba' | '\\u00c0' .. '\\u00d6' | '\\u00d8' .. '\\u00f6' | '\\u00f8' .. '\\u02c1' | '\\u02c6' .. '\\u02d1' | '\\u02e0' .. '\\u02e4' | '\\u02ee' | '\\u0300' .. '\\u036f' | '\\u037a' .. '\\u037d' | '\\u0386' | '\\u0388' .. '\\u038a' | '\\u038c' | '\\u038e' .. '\\u03a1' | '\\u03a3' .. '\\u03ce' | '\\u03d0' .. '\\u03f5' | '\\u03f7' .. '\\u0481' | '\\u0483' .. '\\u0486' | '\\u048a' .. '\\u0513' | '\\u0531' .. '\\u0556' | '\\u0559' | '\\u0561' .. '\\u0587' | '\\u0591' .. '\\u05bd' | '\\u05bf' | '\\u05c1' .. '\\u05c2' | '\\u05c4' .. '\\u05c5' | '\\u05c7' | '\\u05d0' .. '\\u05ea' | '\\u05f0' .. '\\u05f2' | '\\u0600' .. '\\u0603' | '\\u0610' .. '\\u0615' | '\\u0621' .. '\\u063a' | '\\u0640' .. '\\u065e' | '\\u0660' .. '\\u0669' | '\\u066e' .. '\\u06d3' | '\\u06d5' .. '\\u06dd' | '\\u06df' .. '\\u06e8' | '\\u06ea' .. '\\u06fc' | '\\u06ff' | '\\u070f' .. '\\u074a' | '\\u074d' .. '\\u076d' | '\\u0780' .. '\\u07b1' | '\\u07c0' .. '\\u07f5' | '\\u07fa' | '\\u0901' .. '\\u0939' | '\\u093c' .. '\\u094d' | '\\u0950' .. '\\u0954' | '\\u0958' .. '\\u0963' | '\\u0966' .. '\\u096f' | '\\u097b' .. '\\u097f' | '\\u0981' .. '\\u0983' | '\\u0985' .. '\\u098c' | '\\u098f' .. '\\u0990' | '\\u0993' .. '\\u09a8' | '\\u09aa' .. '\\u09b0' | '\\u09b2' | '\\u09b6' .. '\\u09b9' | '\\u09bc' .. '\\u09c4' | '\\u09c7' .. '\\u09c8' | '\\u09cb' .. '\\u09ce' | '\\u09d7' | '\\u09dc' .. '\\u09dd' | '\\u09df' .. '\\u09e3' | '\\u09e6' .. '\\u09f1' | '\\u0a01' .. '\\u0a03' | '\\u0a05' .. '\\u0a0a' | '\\u0a0f' .. '\\u0a10' | '\\u0a13' .. '\\u0a28' | '\\u0a2a' .. '\\u0a30' | '\\u0a32' .. '\\u0a33' | '\\u0a35' .. '\\u0a36' | '\\u0a38' .. '\\u0a39' | '\\u0a3c' | '\\u0a3e' .. '\\u0a42' | '\\u0a47' .. '\\u0a48' | '\\u0a4b' .. '\\u0a4d' | '\\u0a59' .. '\\u0a5c' | '\\u0a5e' | '\\u0a66' .. '\\u0a74' | '\\u0a81' .. '\\u0a83' | '\\u0a85' .. '\\u0a8d' | '\\u0a8f' .. '\\u0a91' | '\\u0a93' .. '\\u0aa8' | '\\u0aaa' .. '\\u0ab0' | '\\u0ab2' .. '\\u0ab3' | '\\u0ab5' .. '\\u0ab9' | '\\u0abc' .. '\\u0ac5' | '\\u0ac7' .. '\\u0ac9' | '\\u0acb' .. '\\u0acd' | '\\u0ad0' | '\\u0ae0' .. '\\u0ae3' | '\\u0ae6' .. '\\u0aef' | '\\u0b01' .. '\\u0b03' | '\\u0b05' .. '\\u0b0c' | '\\u0b0f' .. '\\u0b10' | '\\u0b13' .. '\\u0b28' | '\\u0b2a' .. '\\u0b30' | '\\u0b32' .. '\\u0b33' | '\\u0b35' .. '\\u0b39' | '\\u0b3c' .. '\\u0b43' | '\\u0b47' .. '\\u0b48' | '\\u0b4b' .. '\\u0b4d' | '\\u0b56' .. '\\u0b57' | '\\u0b5c' .. '\\u0b5d' | '\\u0b5f' .. '\\u0b61' | '\\u0b66' .. '\\u0b6f' | '\\u0b71' | '\\u0b82' .. '\\u0b83' | '\\u0b85' .. '\\u0b8a' | '\\u0b8e' .. '\\u0b90' | '\\u0b92' .. '\\u0b95' | '\\u0b99' .. '\\u0b9a' | '\\u0b9c' | '\\u0b9e' .. '\\u0b9f' | '\\u0ba3' .. '\\u0ba4' | '\\u0ba8' .. '\\u0baa' | '\\u0bae' .. '\\u0bb9' | '\\u0bbe' .. '\\u0bc2' | '\\u0bc6' .. '\\u0bc8' | '\\u0bca' .. '\\u0bcd' | '\\u0bd7' | '\\u0be6' .. '\\u0bef' | '\\u0c01' .. '\\u0c03' | '\\u0c05' .. '\\u0c0c' | '\\u0c0e' .. '\\u0c10' | '\\u0c12' .. '\\u0c28' | '\\u0c2a' .. '\\u0c33' | '\\u0c35' .. '\\u0c39' | '\\u0c3e' .. '\\u0c44' | '\\u0c46' .. '\\u0c48' | '\\u0c4a' .. '\\u0c4d' | '\\u0c55' .. '\\u0c56' | '\\u0c60' .. '\\u0c61' | '\\u0c66' .. '\\u0c6f' | '\\u0c82' .. '\\u0c83' | '\\u0c85' .. '\\u0c8c' | '\\u0c8e' .. '\\u0c90' | '\\u0c92' .. '\\u0ca8' | '\\u0caa' .. '\\u0cb3' | '\\u0cb5' .. '\\u0cb9' | '\\u0cbc' .. '\\u0cc4' | '\\u0cc6' .. '\\u0cc8' | '\\u0cca' .. '\\u0ccd' | '\\u0cd5' .. '\\u0cd6' | '\\u0cde' | '\\u0ce0' .. '\\u0ce3' | '\\u0ce6' .. '\\u0cef' | '\\u0d02' .. '\\u0d03' | '\\u0d05' .. '\\u0d0c' | '\\u0d0e' .. '\\u0d10' | '\\u0d12' .. '\\u0d28' | '\\u0d2a' .. '\\u0d39' | '\\u0d3e' .. '\\u0d43' | '\\u0d46' .. '\\u0d48' | '\\u0d4a' .. '\\u0d4d' | '\\u0d57' | '\\u0d60' .. '\\u0d61' | '\\u0d66' .. '\\u0d6f' | '\\u0d82' .. '\\u0d83' | '\\u0d85' .. '\\u0d96' | '\\u0d9a' .. '\\u0db1' | '\\u0db3' .. '\\u0dbb' | '\\u0dbd' | '\\u0dc0' .. '\\u0dc6' | '\\u0dca' | '\\u0dcf' .. '\\u0dd4' | '\\u0dd6' | '\\u0dd8' .. '\\u0ddf' | '\\u0df2' .. '\\u0df3' | '\\u0e01' .. '\\u0e3a' | '\\u0e40' .. '\\u0e4e' | '\\u0e50' .. '\\u0e59' | '\\u0e81' .. '\\u0e82' | '\\u0e84' | '\\u0e87' .. '\\u0e88' | '\\u0e8a' | '\\u0e8d' | '\\u0e94' .. '\\u0e97' | '\\u0e99' .. '\\u0e9f' | '\\u0ea1' .. '\\u0ea3' | '\\u0ea5' | '\\u0ea7' | '\\u0eaa' .. '\\u0eab' | '\\u0ead' .. '\\u0eb9' | '\\u0ebb' .. '\\u0ebd' | '\\u0ec0' .. '\\u0ec4' | '\\u0ec6' | '\\u0ec8' .. '\\u0ecd' | '\\u0ed0' .. '\\u0ed9' | '\\u0edc' .. '\\u0edd' | '\\u0f00' | '\\u0f18' .. '\\u0f19' | '\\u0f20' .. '\\u0f29' | '\\u0f35' | '\\u0f37' | '\\u0f39' | '\\u0f3e' .. '\\u0f47' | '\\u0f49' .. '\\u0f6a' | '\\u0f71' .. '\\u0f84' | '\\u0f86' .. '\\u0f8b' | '\\u0f90' .. '\\u0f97' | '\\u0f99' .. '\\u0fbc' | '\\u0fc6' | '\\u1000' .. '\\u1021' | '\\u1023' .. '\\u1027' | '\\u1029' .. '\\u102a' | '\\u102c' .. '\\u1032' | '\\u1036' .. '\\u1039' | '\\u1040' .. '\\u1049' | '\\u1050' .. '\\u1059' | '\\u10a0' .. '\\u10c5' | '\\u10d0' .. '\\u10fa' | '\\u10fc' | '\\u1100' .. '\\u1159' | '\\u115f' .. '\\u11a2' | '\\u11a8' .. '\\u11f9' | '\\u1200' .. '\\u1248' | '\\u124a' .. '\\u124d' | '\\u1250' .. '\\u1256' | '\\u1258' | '\\u125a' .. '\\u125d' | '\\u1260' .. '\\u1288' | '\\u128a' .. '\\u128d' | '\\u1290' .. '\\u12b0' | '\\u12b2' .. '\\u12b5' | '\\u12b8' .. '\\u12be' | '\\u12c0' | '\\u12c2' .. '\\u12c5' | '\\u12c8' .. '\\u12d6' | '\\u12d8' .. '\\u1310' | '\\u1312' .. '\\u1315' | '\\u1318' .. '\\u135a' | '\\u135f' | '\\u1380' .. '\\u138f' | '\\u13a0' .. '\\u13f4' | '\\u1401' .. '\\u166c' | '\\u166f' .. '\\u1676' | '\\u1681' .. '\\u169a' | '\\u16a0' .. '\\u16ea' | '\\u16ee' .. '\\u16f0' | '\\u1700' .. '\\u170c' | '\\u170e' .. '\\u1714' | '\\u1720' .. '\\u1734' | '\\u1740' .. '\\u1753' | '\\u1760' .. '\\u176c' | '\\u176e' .. '\\u1770' | '\\u1772' .. '\\u1773' | '\\u1780' .. '\\u17d3' | '\\u17d7' | '\\u17dc' .. '\\u17dd' | '\\u17e0' .. '\\u17e9' | '\\u180b' .. '\\u180d' | '\\u1810' .. '\\u1819' | '\\u1820' .. '\\u1877' | '\\u1880' .. '\\u18a9' | '\\u1900' .. '\\u191c' | '\\u1920' .. '\\u192b' | '\\u1930' .. '\\u193b' | '\\u1946' .. '\\u196d' | '\\u1970' .. '\\u1974' | '\\u1980' .. '\\u19a9' | '\\u19b0' .. '\\u19c9' | '\\u19d0' .. '\\u19d9' | '\\u1a00' .. '\\u1a1b' | '\\u1b00' .. '\\u1b4b' | '\\u1b50' .. '\\u1b59' | '\\u1b6b' .. '\\u1b73' | '\\u1d00' .. '\\u1dca' | '\\u1dfe' .. '\\u1e9b' | '\\u1ea0' .. '\\u1ef9' | '\\u1f00' .. '\\u1f15' | '\\u1f18' .. '\\u1f1d' | '\\u1f20' .. '\\u1f45' | '\\u1f48' .. '\\u1f4d' | '\\u1f50' .. '\\u1f57' | '\\u1f59' | '\\u1f5b' | '\\u1f5d' | '\\u1f5f' .. '\\u1f7d' | '\\u1f80' .. '\\u1fb4' | '\\u1fb6' .. '\\u1fbc' | '\\u1fbe' | '\\u1fc2' .. '\\u1fc4' | '\\u1fc6' .. '\\u1fcc' | '\\u1fd0' .. '\\u1fd3' | '\\u1fd6' .. '\\u1fdb' | '\\u1fe0' .. '\\u1fec' | '\\u1ff2' .. '\\u1ff4' | '\\u1ff6' .. '\\u1ffc' | '\\u200b' .. '\\u200f' | '\\u202a' .. '\\u202e' | '\\u203f' .. '\\u2040' | '\\u2054' | '\\u2060' .. '\\u2063' | '\\u206a' .. '\\u206f' | '\\u2071' | '\\u207f' | '\\u2090' .. '\\u2094' | '\\u20d0' .. '\\u20dc' | '\\u20e1' | '\\u20e5' .. '\\u20ef' | '\\u2102' | '\\u2107' | '\\u210a' .. '\\u2113' | '\\u2115' | '\\u2119' .. '\\u211d' | '\\u2124' | '\\u2126' | '\\u2128' | '\\u212a' .. '\\u212d' | '\\u212f' .. '\\u2139' | '\\u213c' .. '\\u213f' | '\\u2145' .. '\\u2149' | '\\u214e' | '\\u2160' .. '\\u2184' | '\\u2c00' .. '\\u2c2e' | '\\u2c30' .. '\\u2c5e' | '\\u2c60' .. '\\u2c6c' | '\\u2c74' .. '\\u2c77' | '\\u2c80' .. '\\u2ce4' | '\\u2d00' .. '\\u2d25' | '\\u2d30' .. '\\u2d65' | '\\u2d6f' | '\\u2d80' .. '\\u2d96' | '\\u2da0' .. '\\u2da6' | '\\u2da8' .. '\\u2dae' | '\\u2db0' .. '\\u2db6' | '\\u2db8' .. '\\u2dbe' | '\\u2dc0' .. '\\u2dc6' | '\\u2dc8' .. '\\u2dce' | '\\u2dd0' .. '\\u2dd6' | '\\u2dd8' .. '\\u2dde' | '\\u3005' .. '\\u3007' | '\\u3021' .. '\\u302f' | '\\u3031' .. '\\u3035' | '\\u3038' .. '\\u303c' | '\\u3041' .. '\\u3096' | '\\u3099' .. '\\u309a' | '\\u309d' .. '\\u309f' | '\\u30a1' .. '\\u30fa' | '\\u30fc' .. '\\u30ff' | '\\u3105' .. '\\u312c' | '\\u3131' .. '\\u318e' | '\\u31a0' .. '\\u31b7' | '\\u31f0' .. '\\u31ff' | '\\u3400' .. '\\u4db5' | '\\u4e00' .. '\\u9fbb' | '\\ua000' .. '\\ua48c' | '\\ua717' .. '\\ua71a' | '\\ua800' .. '\\ua827' | '\\ua840' .. '\\ua873' | '\\uac00' .. '\\ud7a3' | '\\uf900' .. '\\ufa2d' | '\\ufa30' .. '\\ufa6a' | '\\ufa70' .. '\\ufad9' | '\\ufb00' .. '\\ufb06' | '\\ufb13' .. '\\ufb17' | '\\ufb1d' .. '\\ufb28' | '\\ufb2a' .. '\\ufb36' | '\\ufb38' .. '\\ufb3c' | '\\ufb3e' | '\\ufb40' .. '\\ufb41' | '\\ufb43' .. '\\ufb44' | '\\ufb46' .. '\\ufbb1' | '\\ufbd3' .. '\\ufd3d' | '\\ufd50' .. '\\ufd8f' | '\\ufd92' .. '\\ufdc7' | '\\ufdf0' .. '\\ufdfb' | '\\ufe00' .. '\\ufe0f' | '\\ufe20' .. '\\ufe23' | '\\ufe33' .. '\\ufe34' | '\\ufe4d' .. '\\ufe4f' | '\\ufe70' .. '\\ufe74' | '\\ufe76' .. '\\ufefc' | '\\ufeff' | '\\uff10' .. '\\uff19' | '\\uff21' .. '\\uff3a' | '\\uff3f' | '\\uff41' .. '\\uff5a' | '\\uff66' .. '\\uffbe' | '\\uffc2' .. '\\uffc7' | '\\uffca' .. '\\uffcf' | '\\uffd2' .. '\\uffd7' | '\\uffda' .. '\\uffdc' | '\\ufff9' .. '\\ufffb' )
                 // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:
                 {
                     if ((input.LA(1) >= '\u0000' && input.LA(1) <= '\b') || (input.LA(1) >= '\u000E' && input.LA(1) <= '\u001B') || (input.LA(1) >= '0' && input.LA(1) <= '9') || (input.LA(1) >= 'A' && input.LA(1) <= 'Z') || input.LA(1) == '_' || (input.LA(1) >= 'a' && input.LA(1) <= 'z') || (input.LA(1) >= '\u007F' && input.LA(1) <= '\u009F') || input.LA(1) == '\u00AA' || input.LA(1) == '\u00AD' || input.LA(1) == '\u00B5' || input.LA(1) == '\u00BA' || (input.LA(1) >= '\u00C0' && input.LA(1) <= '\u00D6') || (input.LA(1) >= '\u00D8' && input.LA(1) <= '\u00F6') || (input.LA(1) >= '\u00F8' && input.LA(1) <= '\u02C1') || (input.LA(1) >= '\u02C6' && input.LA(1) <= '\u02D1') || (input.LA(1) >= '\u02E0' && input.LA(1) <= '\u02E4') || input.LA(1) == '\u02EE' || (input.LA(1) >= '\u0300' && input.LA(1) <= '\u036F') || (input.LA(1) >= '\u037A' && input.LA(1) <= '\u037D') || input.LA(1) == '\u0386' || (input.LA(1) >= '\u0388' && input.LA(1) <= '\u038A') || input.LA(1) == '\u038C' || (input.LA(1) >= '\u038E' && input.LA(1) <= '\u03A1') || (input.LA(1) >= '\u03A3' && input.LA(1) <= '\u03CE') || (input.LA(1) >= '\u03D0' && input.LA(1) <= '\u03F5') || (input.LA(1) >= '\u03F7' && input.LA(1) <= '\u0481') || (input.LA(1) >= '\u0483' && input.LA(1) <= '\u0486') || (input.LA(1) >= '\u048A' && input.LA(1) <= '\u0513') || (input.LA(1) >= '\u0531' && input.LA(1) <= '\u0556') || input.LA(1) == '\u0559' || (input.LA(1) >= '\u0561' && input.LA(1) <= '\u0587') || (input.LA(1) >= '\u0591' && input.LA(1) <= '\u05BD') || input.LA(1) == '\u05BF' || (input.LA(1) >= '\u05C1' && input.LA(1) <= '\u05C2') || (input.LA(1) >= '\u05C4' && input.LA(1) <= '\u05C5') || input.LA(1) == '\u05C7' || (input.LA(1) >= '\u05D0' && input.LA(1) <= '\u05EA') || (input.LA(1) >= '\u05F0' && input.LA(1) <= '\u05F2') || (input.LA(1) >= '\u0600' && input.LA(1) <= '\u0603') || (input.LA(1) >= '\u0610' && input.LA(1) <= '\u0615') || (input.LA(1) >= '\u0621' && input.LA(1) <= '\u063A') || (input.LA(1) >= '\u0640' && input.LA(1) <= '\u065E') || (input.LA(1) >= '\u0660' && input.LA(1) <= '\u0669') || (input.LA(1) >= '\u066E' && input.LA(1) <= '\u06D3') || (input.LA(1) >= '\u06D5' && input.LA(1) <= '\u06DD') || (input.LA(1) >= '\u06DF' && input.LA(1) <= '\u06E8') || (input.LA(1) >= '\u06EA' && input.LA(1) <= '\u06FC') || input.LA(1) == '\u06FF' || (input.LA(1) >= '\u070F' && input.LA(1) <= '\u074A') || (input.LA(1) >= '\u074D' && input.LA(1) <= '\u076D') || (input.LA(1) >= '\u0780' && input.LA(1) <= '\u07B1') || (input.LA(1) >= '\u07C0' && input.LA(1) <= '\u07F5') || input.LA(1) == '\u07FA' || (input.LA(1) >= '\u0901' && input.LA(1) <= '\u0939') || (input.LA(1) >= '\u093C' && input.LA(1) <= '\u094D') || (input.LA(1) >= '\u0950' && input.LA(1) <= '\u0954') || (input.LA(1) >= '\u0958' && input.LA(1) <= '\u0963') || (input.LA(1) >= '\u0966' && input.LA(1) <= '\u096F') || (input.LA(1) >= '\u097B' && input.LA(1) <= '\u097F') || (input.LA(1) >= '\u0981' && input.LA(1) <= '\u0983') || (input.LA(1) >= '\u0985' && input.LA(1) <= '\u098C') || (input.LA(1) >= '\u098F' && input.LA(1) <= '\u0990') || (input.LA(1) >= '\u0993' && input.LA(1) <= '\u09A8') || (input.LA(1) >= '\u09AA' && input.LA(1) <= '\u09B0') || input.LA(1) == '\u09B2' || (input.LA(1) >= '\u09B6' && input.LA(1) <= '\u09B9') || (input.LA(1) >= '\u09BC' && input.LA(1) <= '\u09C4') || (input.LA(1) >= '\u09C7' && input.LA(1) <= '\u09C8') || (input.LA(1) >= '\u09CB' && input.LA(1) <= '\u09CE') || input.LA(1) == '\u09D7' || (input.LA(1) >= '\u09DC' && input.LA(1) <= '\u09DD') || (input.LA(1) >= '\u09DF' && input.LA(1) <= '\u09E3') || (input.LA(1) >= '\u09E6' && input.LA(1) <= '\u09F1') || (input.LA(1) >= '\u0A01' && input.LA(1) <= '\u0A03') || (input.LA(1) >= '\u0A05' && input.LA(1) <= '\u0A0A') || (input.LA(1) >= '\u0A0F' && input.LA(1) <= '\u0A10') || (input.LA(1) >= '\u0A13' && input.LA(1) <= '\u0A28') || (input.LA(1) >= '\u0A2A' && input.LA(1) <= '\u0A30') || (input.LA(1) >= '\u0A32' && input.LA(1) <= '\u0A33') || (input.LA(1) >= '\u0A35' && input.LA(1) <= '\u0A36') || (input.LA(1) >= '\u0A38' && input.LA(1) <= '\u0A39') || input.LA(1) == '\u0A3C' || (input.LA(1) >= '\u0A3E' && input.LA(1) <= '\u0A42') || (input.LA(1) >= '\u0A47' && input.LA(1) <= '\u0A48') || (input.LA(1) >= '\u0A4B' && input.LA(1) <= '\u0A4D') || (input.LA(1) >= '\u0A59' && input.LA(1) <= '\u0A5C') || input.LA(1) == '\u0A5E' || (input.LA(1) >= '\u0A66' && input.LA(1) <= '\u0A74') || (input.LA(1) >= '\u0A81' && input.LA(1) <= '\u0A83') || (input.LA(1) >= '\u0A85' && input.LA(1) <= '\u0A8D') || (input.LA(1) >= '\u0A8F' && input.LA(1) <= '\u0A91') || (input.LA(1) >= '\u0A93' && input.LA(1) <= '\u0AA8') || (input.LA(1) >= '\u0AAA' && input.LA(1) <= '\u0AB0') || (input.LA(1) >= '\u0AB2' && input.LA(1) <= '\u0AB3') || (input.LA(1) >= '\u0AB5' && input.LA(1) <= '\u0AB9') || (input.LA(1) >= '\u0ABC' && input.LA(1) <= '\u0AC5') || (input.LA(1) >= '\u0AC7' && input.LA(1) <= '\u0AC9') || (input.LA(1) >= '\u0ACB' && input.LA(1) <= '\u0ACD') || input.LA(1) == '\u0AD0' || (input.LA(1) >= '\u0AE0' && input.LA(1) <= '\u0AE3') || (input.LA(1) >= '\u0AE6' && input.LA(1) <= '\u0AEF') || (input.LA(1) >= '\u0B01' && input.LA(1) <= '\u0B03') || (input.LA(1) >= '\u0B05' && input.LA(1) <= '\u0B0C') || (input.LA(1) >= '\u0B0F' && input.LA(1) <= '\u0B10') || (input.LA(1) >= '\u0B13' && input.LA(1) <= '\u0B28') || (input.LA(1) >= '\u0B2A' && input.LA(1) <= '\u0B30') || (input.LA(1) >= '\u0B32' && input.LA(1) <= '\u0B33') || (input.LA(1) >= '\u0B35' && input.LA(1) <= '\u0B39') || (input.LA(1) >= '\u0B3C' && input.LA(1) <= '\u0B43') || (input.LA(1) >= '\u0B47' && input.LA(1) <= '\u0B48') || (input.LA(1) >= '\u0B4B' && input.LA(1) <= '\u0B4D') || (input.LA(1) >= '\u0B56' && input.LA(1) <= '\u0B57') || (input.LA(1) >= '\u0B5C' && input.LA(1) <= '\u0B5D') || (input.LA(1) >= '\u0B5F' && input.LA(1) <= '\u0B61') || (input.LA(1) >= '\u0B66' && input.LA(1) <= '\u0B6F') || input.LA(1) == '\u0B71' || (input.LA(1) >= '\u0B82' && input.LA(1) <= '\u0B83') || (input.LA(1) >= '\u0B85' && input.LA(1) <= '\u0B8A') || (input.LA(1) >= '\u0B8E' && input.LA(1) <= '\u0B90') || (input.LA(1) >= '\u0B92' && input.LA(1) <= '\u0B95') || (input.LA(1) >= '\u0B99' && input.LA(1) <= '\u0B9A') || input.LA(1) == '\u0B9C' || (input.LA(1) >= '\u0B9E' && input.LA(1) <= '\u0B9F') || (input.LA(1) >= '\u0BA3' && input.LA(1) <= '\u0BA4') || (input.LA(1) >= '\u0BA8' && input.LA(1) <= '\u0BAA') || (input.LA(1) >= '\u0BAE' && input.LA(1) <= '\u0BB9') || (input.LA(1) >= '\u0BBE' && input.LA(1) <= '\u0BC2') || (input.LA(1) >= '\u0BC6' && input.LA(1) <= '\u0BC8') || (input.LA(1) >= '\u0BCA' && input.LA(1) <= '\u0BCD') || input.LA(1) == '\u0BD7' || (input.LA(1) >= '\u0BE6' && input.LA(1) <= '\u0BEF') || (input.LA(1) >= '\u0C01' && input.LA(1) <= '\u0C03') || (input.LA(1) >= '\u0C05' && input.LA(1) <= '\u0C0C') || (input.LA(1) >= '\u0C0E' && input.LA(1) <= '\u0C10') || (input.LA(1) >= '\u0C12' && input.LA(1) <= '\u0C28') || (input.LA(1) >= '\u0C2A' && input.LA(1) <= '\u0C33') || (input.LA(1) >= '\u0C35' && input.LA(1) <= '\u0C39') || (input.LA(1) >= '\u0C3E' && input.LA(1) <= '\u0C44') || (input.LA(1) >= '\u0C46' && input.LA(1) <= '\u0C48') || (input.LA(1) >= '\u0C4A' && input.LA(1) <= '\u0C4D') || (input.LA(1) >= '\u0C55' && input.LA(1) <= '\u0C56') || (input.LA(1) >= '\u0C60' && input.LA(1) <= '\u0C61') || (input.LA(1) >= '\u0C66' && input.LA(1) <= '\u0C6F') || (input.LA(1) >= '\u0C82' && input.LA(1) <= '\u0C83') || (input.LA(1) >= '\u0C85' && input.LA(1) <= '\u0C8C') || (input.LA(1) >= '\u0C8E' && input.LA(1) <= '\u0C90') || (input.LA(1) >= '\u0C92' && input.LA(1) <= '\u0CA8') || (input.LA(1) >= '\u0CAA' && input.LA(1) <= '\u0CB3') || (input.LA(1) >= '\u0CB5' && input.LA(1) <= '\u0CB9') || (input.LA(1) >= '\u0CBC' && input.LA(1) <= '\u0CC4') || (input.LA(1) >= '\u0CC6' && input.LA(1) <= '\u0CC8') || (input.LA(1) >= '\u0CCA' && input.LA(1) <= '\u0CCD') || (input.LA(1) >= '\u0CD5' && input.LA(1) <= '\u0CD6') || input.LA(1) == '\u0CDE' || (input.LA(1) >= '\u0CE0' && input.LA(1) <= '\u0CE3') || (input.LA(1) >= '\u0CE6' && input.LA(1) <= '\u0CEF') || (input.LA(1) >= '\u0D02' && input.LA(1) <= '\u0D03') || (input.LA(1) >= '\u0D05' && input.LA(1) <= '\u0D0C') || (input.LA(1) >= '\u0D0E' && input.LA(1) <= '\u0D10') || (input.LA(1) >= '\u0D12' && input.LA(1) <= '\u0D28') || (input.LA(1) >= '\u0D2A' && input.LA(1) <= '\u0D39') || (input.LA(1) >= '\u0D3E' && input.LA(1) <= '\u0D43') || (input.LA(1) >= '\u0D46' && input.LA(1) <= '\u0D48') || (input.LA(1) >= '\u0D4A' && input.LA(1) <= '\u0D4D') || input.LA(1) == '\u0D57' || (input.LA(1) >= '\u0D60' && input.LA(1) <= '\u0D61') || (input.LA(1) >= '\u0D66' && input.LA(1) <= '\u0D6F') || (input.LA(1) >= '\u0D82' && input.LA(1) <= '\u0D83') || (input.LA(1) >= '\u0D85' && input.LA(1) <= '\u0D96') || (input.LA(1) >= '\u0D9A' && input.LA(1) <= '\u0DB1') || (input.LA(1) >= '\u0DB3' && input.LA(1) <= '\u0DBB') || input.LA(1) == '\u0DBD' || (input.LA(1) >= '\u0DC0' && input.LA(1) <= '\u0DC6') || input.LA(1) == '\u0DCA' || (input.LA(1) >= '\u0DCF' && input.LA(1) <= '\u0DD4') || input.LA(1) == '\u0DD6' || (input.LA(1) >= '\u0DD8' && input.LA(1) <= '\u0DDF') || (input.LA(1) >= '\u0DF2' && input.LA(1) <= '\u0DF3') || (input.LA(1) >= '\u0E01' && input.LA(1) <= '\u0E3A') || (input.LA(1) >= '\u0E40' && input.LA(1) <= '\u0E4E') || (input.LA(1) >= '\u0E50' && input.LA(1) <= '\u0E59') || (input.LA(1) >= '\u0E81' && input.LA(1) <= '\u0E82') || input.LA(1) == '\u0E84' || (input.LA(1) >= '\u0E87' && input.LA(1) <= '\u0E88') || input.LA(1) == '\u0E8A' || input.LA(1) == '\u0E8D' || (input.LA(1) >= '\u0E94' && input.LA(1) <= '\u0E97') || (input.LA(1) >= '\u0E99' && input.LA(1) <= '\u0E9F') || (input.LA(1) >= '\u0EA1' && input.LA(1) <= '\u0EA3') || input.LA(1) == '\u0EA5' || input.LA(1) == '\u0EA7' || (input.LA(1) >= '\u0EAA' && input.LA(1) <= '\u0EAB') || (input.LA(1) >= '\u0EAD' && input.LA(1) <= '\u0EB9') || (input.LA(1) >= '\u0EBB' && input.LA(1) <= '\u0EBD') || (input.LA(1) >= '\u0EC0' && input.LA(1) <= '\u0EC4') || input.LA(1) == '\u0EC6' || (input.LA(1) >= '\u0EC8' && input.LA(1) <= '\u0ECD') || (input.LA(1) >= '\u0ED0' && input.LA(1) <= '\u0ED9') || (input.LA(1) >= '\u0EDC' && input.LA(1) <= '\u0EDD') || input.LA(1) == '\u0F00' || (input.LA(1) >= '\u0F18' && input.LA(1) <= '\u0F19') || (input.LA(1) >= '\u0F20' && input.LA(1) <= '\u0F29') || input.LA(1) == '\u0F35' || input.LA(1) == '\u0F37' || input.LA(1) == '\u0F39' || (input.LA(1) >= '\u0F3E' && input.LA(1) <= '\u0F47') || (input.LA(1) >= '\u0F49' && input.LA(1) <= '\u0F6A') || (input.LA(1) >= '\u0F71' && input.LA(1) <= '\u0F84') || (input.LA(1) >= '\u0F86' && input.LA(1) <= '\u0F8B') || (input.LA(1) >= '\u0F90' && input.LA(1) <= '\u0F97') || (input.LA(1) >= '\u0F99' && input.LA(1) <= '\u0FBC') || input.LA(1) == '\u0FC6' || (input.LA(1) >= '\u1000' && input.LA(1) <= '\u1021') || (input.LA(1) >= '\u1023' && input.LA(1) <= '\u1027') || (input.LA(1) >= '\u1029' && input.LA(1) <= '\u102A') || (input.LA(1) >= '\u102C' && input.LA(1) <= '\u1032') || (input.LA(1) >= '\u1036' && input.LA(1) <= '\u1039') || (input.LA(1) >= '\u1040' && input.LA(1) <= '\u1049') || (input.LA(1) >= '\u1050' && input.LA(1) <= '\u1059') || (input.LA(1) >= '\u10A0' && input.LA(1) <= '\u10C5') || (input.LA(1) >= '\u10D0' && input.LA(1) <= '\u10FA') || input.LA(1) == '\u10FC' || (input.LA(1) >= '\u1100' && input.LA(1) <= '\u1159') || (input.LA(1) >= '\u115F' && input.LA(1) <= '\u11A2') || (input.LA(1) >= '\u11A8' && input.LA(1) <= '\u11F9') || (input.LA(1) >= '\u1200' && input.LA(1) <= '\u1248') || (input.LA(1) >= '\u124A' && input.LA(1) <= '\u124D') || (input.LA(1) >= '\u1250' && input.LA(1) <= '\u1256') || input.LA(1) == '\u1258' || (input.LA(1) >= '\u125A' && input.LA(1) <= '\u125D') || (input.LA(1) >= '\u1260' && input.LA(1) <= '\u1288') || (input.LA(1) >= '\u128A' && input.LA(1) <= '\u128D') || (input.LA(1) >= '\u1290' && input.LA(1) <= '\u12B0') || (input.LA(1) >= '\u12B2' && input.LA(1) <= '\u12B5') || (input.LA(1) >= '\u12B8' && input.LA(1) <= '\u12BE') || input.LA(1) == '\u12C0' || (input.LA(1) >= '\u12C2' && input.LA(1) <= '\u12C5') || (input.LA(1) >= '\u12C8' && input.LA(1) <= '\u12D6') || (input.LA(1) >= '\u12D8' && input.LA(1) <= '\u1310') || (input.LA(1) >= '\u1312' && input.LA(1) <= '\u1315') || (input.LA(1) >= '\u1318' && input.LA(1) <= '\u135A') || input.LA(1) == '\u135F' || (input.LA(1) >= '\u1380' && input.LA(1) <= '\u138F') || (input.LA(1) >= '\u13A0' && input.LA(1) <= '\u13F4') || (input.LA(1) >= '\u1401' && input.LA(1) <= '\u166C') || (input.LA(1) >= '\u166F' && input.LA(1) <= '\u1676') || (input.LA(1) >= '\u1681' && input.LA(1) <= '\u169A') || (input.LA(1) >= '\u16A0' && input.LA(1) <= '\u16EA') || (input.LA(1) >= '\u16EE' && input.LA(1) <= '\u16F0') || (input.LA(1) >= '\u1700' && input.LA(1) <= '\u170C') || (input.LA(1) >= '\u170E' && input.LA(1) <= '\u1714') || (input.LA(1) >= '\u1720' && input.LA(1) <= '\u1734') || (input.LA(1) >= '\u1740' && input.LA(1) <= '\u1753') || (input.LA(1) >= '\u1760' && input.LA(1) <= '\u176C') || (input.LA(1) >= '\u176E' && input.LA(1) <= '\u1770') || (input.LA(1) >= '\u1772' && input.LA(1) <= '\u1773') || (input.LA(1) >= '\u1780' && input.LA(1) <= '\u17D3') || input.LA(1) == '\u17D7' || (input.LA(1) >= '\u17DC' && input.LA(1) <= '\u17DD') || (input.LA(1) >= '\u17E0' && input.LA(1) <= '\u17E9') || (input.LA(1) >= '\u180B' && input.LA(1) <= '\u180D') || (input.LA(1) >= '\u1810' && input.LA(1) <= '\u1819') || (input.LA(1) >= '\u1820' && input.LA(1) <= '\u1877') || (input.LA(1) >= '\u1880' && input.LA(1) <= '\u18A9') || (input.LA(1) >= '\u1900' && input.LA(1) <= '\u191C') || (input.LA(1) >= '\u1920' && input.LA(1) <= '\u192B') || (input.LA(1) >= '\u1930' && input.LA(1) <= '\u193B') || (input.LA(1) >= '\u1946' && input.LA(1) <= '\u196D') || (input.LA(1) >= '\u1970' && input.LA(1) <= '\u1974') || (input.LA(1) >= '\u1980' && input.LA(1) <= '\u19A9') || (input.LA(1) >= '\u19B0' && input.LA(1) <= '\u19C9') || (input.LA(1) >= '\u19D0' && input.LA(1) <= '\u19D9') || (input.LA(1) >= '\u1A00' && input.LA(1) <= '\u1A1B') || (input.LA(1) >= '\u1B00' && input.LA(1) <= '\u1B4B') || (input.LA(1) >= '\u1B50' && input.LA(1) <= '\u1B59') || (input.LA(1) >= '\u1B6B' && input.LA(1) <= '\u1B73') || (input.LA(1) >= '\u1D00' && input.LA(1) <= '\u1DCA') || (input.LA(1) >= '\u1DFE' && input.LA(1) <= '\u1E9B') || (input.LA(1) >= '\u1EA0' && input.LA(1) <= '\u1EF9') || (input.LA(1) >= '\u1F00' && input.LA(1) <= '\u1F15') || (input.LA(1) >= '\u1F18' && input.LA(1) <= '\u1F1D') || (input.LA(1) >= '\u1F20' && input.LA(1) <= '\u1F45') || (input.LA(1) >= '\u1F48' && input.LA(1) <= '\u1F4D') || (input.LA(1) >= '\u1F50' && input.LA(1) <= '\u1F57') || input.LA(1) == '\u1F59' || input.LA(1) == '\u1F5B' || input.LA(1) == '\u1F5D' || (input.LA(1) >= '\u1F5F' && input.LA(1) <= '\u1F7D') || (input.LA(1) >= '\u1F80' && input.LA(1) <= '\u1FB4') || (input.LA(1) >= '\u1FB6' && input.LA(1) <= '\u1FBC') || input.LA(1) == '\u1FBE' || (input.LA(1) >= '\u1FC2' && input.LA(1) <= '\u1FC4') || (input.LA(1) >= '\u1FC6' && input.LA(1) <= '\u1FCC') || (input.LA(1) >= '\u1FD0' && input.LA(1) <= '\u1FD3') || (input.LA(1) >= '\u1FD6' && input.LA(1) <= '\u1FDB') || (input.LA(1) >= '\u1FE0' && input.LA(1) <= '\u1FEC') || (input.LA(1) >= '\u1FF2' && input.LA(1) <= '\u1FF4') || (input.LA(1) >= '\u1FF6' && input.LA(1) <= '\u1FFC') || (input.LA(1) >= '\u200B' && input.LA(1) <= '\u200F') || (input.LA(1) >= '\u202A' && input.LA(1) <= '\u202E') || (input.LA(1) >= '\u203F' && input.LA(1) <= '\u2040') || input.LA(1) == '\u2054' || (input.LA(1) >= '\u2060' && input.LA(1) <= '\u2063') || (input.LA(1) >= '\u206A' && input.LA(1) <= '\u206F') || input.LA(1) == '\u2071' || input.LA(1) == '\u207F' || (input.LA(1) >= '\u2090' && input.LA(1) <= '\u2094') || (input.LA(1) >= '\u20D0' && input.LA(1) <= '\u20DC') || input.LA(1) == '\u20E1' || (input.LA(1) >= '\u20E5' && input.LA(1) <= '\u20EF') || input.LA(1) == '\u2102' || input.LA(1) == '\u2107' || (input.LA(1) >= '\u210A' && input.LA(1) <= '\u2113') || input.LA(1) == '\u2115' || (input.LA(1) >= '\u2119' && input.LA(1) <= '\u211D') || input.LA(1) == '\u2124' || input.LA(1) == '\u2126' || input.LA(1) == '\u2128' || (input.LA(1) >= '\u212A' && input.LA(1) <= '\u212D') || (input.LA(1) >= '\u212F' && input.LA(1) <= '\u2139') || (input.LA(1) >= '\u213C' && input.LA(1) <= '\u213F') || (input.LA(1) >= '\u2145' && input.LA(1) <= '\u2149') || input.LA(1) == '\u214E' || (input.LA(1) >= '\u2160' && input.LA(1) <= '\u2184') || (input.LA(1) >= '\u2C00' && input.LA(1) <= '\u2C2E') || (input.LA(1) >= '\u2C30' && input.LA(1) <= '\u2C5E') || (input.LA(1) >= '\u2C60' && input.LA(1) <= '\u2C6C') || (input.LA(1) >= '\u2C74' && input.LA(1) <= '\u2C77') || (input.LA(1) >= '\u2C80' && input.LA(1) <= '\u2CE4') || (input.LA(1) >= '\u2D00' && input.LA(1) <= '\u2D25') || (input.LA(1) >= '\u2D30' && input.LA(1) <= '\u2D65') || input.LA(1) == '\u2D6F' || (input.LA(1) >= '\u2D80' && input.LA(1) <= '\u2D96') || (input.LA(1) >= '\u2DA0' && input.LA(1) <= '\u2DA6') || (input.LA(1) >= '\u2DA8' && input.LA(1) <= '\u2DAE') || (input.LA(1) >= '\u2DB0' && input.LA(1) <= '\u2DB6') || (input.LA(1) >= '\u2DB8' && input.LA(1) <= '\u2DBE') || (input.LA(1) >= '\u2DC0' && input.LA(1) <= '\u2DC6') || (input.LA(1) >= '\u2DC8' && input.LA(1) <= '\u2DCE') || (input.LA(1) >= '\u2DD0' && input.LA(1) <= '\u2DD6') || (input.LA(1) >= '\u2DD8' && input.LA(1) <= '\u2DDE') || (input.LA(1) >= '\u3005' && input.LA(1) <= '\u3007') || (input.LA(1) >= '\u3021' && input.LA(1) <= '\u302F') || (input.LA(1) >= '\u3031' && input.LA(1) <= '\u3035') || (input.LA(1) >= '\u3038' && input.LA(1) <= '\u303C') || (input.LA(1) >= '\u3041' && input.LA(1) <= '\u3096') || (input.LA(1) >= '\u3099' && input.LA(1) <= '\u309A') || (input.LA(1) >= '\u309D' && input.LA(1) <= '\u309F') || (input.LA(1) >= '\u30A1' && input.LA(1) <= '\u30FA') || (input.LA(1) >= '\u30FC' && input.LA(1) <= '\u30FF') || (input.LA(1) >= '\u3105' && input.LA(1) <= '\u312C') || (input.LA(1) >= '\u3131' && input.LA(1) <= '\u318E') || (input.LA(1) >= '\u31A0' && input.LA(1) <= '\u31B7') || (input.LA(1) >= '\u31F0' && input.LA(1) <= '\u31FF') || (input.LA(1) >= '\u3400' && input.LA(1) <= '\u4DB5') || (input.LA(1) >= '\u4E00' && input.LA(1) <= '\u9FBB') || (input.LA(1) >= '\uA000' && input.LA(1) <= '\uA48C') || (input.LA(1) >= '\uA717' && input.LA(1) <= '\uA71A') || (input.LA(1) >= '\uA800' && input.LA(1) <= '\uA827') || (input.LA(1) >= '\uA840' && input.LA(1) <= '\uA873') || (input.LA(1) >= '\uAC00' && input.LA(1) <= '\uD7A3') || (input.LA(1) >= '\uF900' && input.LA(1) <= '\uFA2D') || (input.LA(1) >= '\uFA30' && input.LA(1) <= '\uFA6A') || (input.LA(1) >= '\uFA70' && input.LA(1) <= '\uFAD9') || (input.LA(1) >= '\uFB00' && input.LA(1) <= '\uFB06') || (input.LA(1) >= '\uFB13' && input.LA(1) <= '\uFB17') || (input.LA(1) >= '\uFB1D' && input.LA(1) <= '\uFB28') || (input.LA(1) >= '\uFB2A' && input.LA(1) <= '\uFB36') || (input.LA(1) >= '\uFB38' && input.LA(1) <= '\uFB3C') || input.LA(1) == '\uFB3E' || (input.LA(1) >= '\uFB40' && input.LA(1) <= '\uFB41') || (input.LA(1) >= '\uFB43' && input.LA(1) <= '\uFB44') || (input.LA(1) >= '\uFB46' && input.LA(1) <= '\uFBB1') || (input.LA(1) >= '\uFBD3' && input.LA(1) <= '\uFD3D') || (input.LA(1) >= '\uFD50' && input.LA(1) <= '\uFD8F') || (input.LA(1) >= '\uFD92' && input.LA(1) <= '\uFDC7') || (input.LA(1) >= '\uFDF0' && input.LA(1) <= '\uFDFB') || (input.LA(1) >= '\uFE00' && input.LA(1) <= '\uFE0F') || (input.LA(1) >= '\uFE20' && input.LA(1) <= '\uFE23') || (input.LA(1) >= '\uFE33' && input.LA(1) <= '\uFE34') || (input.LA(1) >= '\uFE4D' && input.LA(1) <= '\uFE4F') || (input.LA(1) >= '\uFE70' && input.LA(1) <= '\uFE74') || (input.LA(1) >= '\uFE76' && input.LA(1) <= '\uFEFC') || input.LA(1) == '\uFEFF' || (input.LA(1) >= '\uFF10' && input.LA(1) <= '\uFF19') || (input.LA(1) >= '\uFF21' && input.LA(1) <= '\uFF3A') || input.LA(1) == '\uFF3F' || (input.LA(1) >= '\uFF41' && input.LA(1) <= '\uFF5A') || (input.LA(1) >= '\uFF66' && input.LA(1) <= '\uFFBE') || (input.LA(1) >= '\uFFC2' && input.LA(1) <= '\uFFC7') || (input.LA(1) >= '\uFFCA' && input.LA(1) <= '\uFFCF') || (input.LA(1) >= '\uFFD2' && input.LA(1) <= '\uFFD7') || (input.LA(1) >= '\uFFDA' && input.LA(1) <= '\uFFDC') || (input.LA(1) >= '\uFFF9' && input.LA(1) <= '\uFFFB'))
@@ -2772,7 +2775,7 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = STRING_LITERAL;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1403:4: ( '\"' ( ESC | ~ ( '\"' | '\\\\' | '\\n' | '\\r' ) )* '\"' | '\\'' ( ESC | ~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) )* '\\'' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1423:4: ( '\"' ( ESC | ~ ( '\"' | '\\\\' | '\\n' | '\\r' ) )* '\"' | '\\'' ( ESC | ~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) )* '\\'' )
                 int alt4 = 2;
                 int LA4_0 = input.LA(1);
 
@@ -2787,17 +2790,17 @@ CodeReformatter.Generators.Core
                 else
                 {
                     NoViableAltException nvae_d4s0 =
-                        new NoViableAltException("1402:1: STRING_LITERAL : ( '\"' ( ESC | ~ ( '\"' | '\\\\' | '\\n' | '\\r' ) )* '\"' | '\\'' ( ESC | ~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) )* '\\'' );", 4, 0, input);
+                        new NoViableAltException("1422:1: STRING_LITERAL : ( '\"' ( ESC | ~ ( '\"' | '\\\\' | '\\n' | '\\r' ) )* '\"' | '\\'' ( ESC | ~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) )* '\\'' );", 4, 0, input);
 
                     throw nvae_d4s0;
                 }
                 switch (alt4)
                 {
                     case 1:
-                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1403:4: '\"' ( ESC | ~ ( '\"' | '\\\\' | '\\n' | '\\r' ) )* '\"'
+                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1423:4: '\"' ( ESC | ~ ( '\"' | '\\\\' | '\\n' | '\\r' ) )* '\"'
                         {
                             Match('\"');
-                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1403:8: ( ESC | ~ ( '\"' | '\\\\' | '\\n' | '\\r' ) )*
+                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1423:8: ( ESC | ~ ( '\"' | '\\\\' | '\\n' | '\\r' ) )*
                             do
                             {
                                 int alt2 = 3;
@@ -2816,14 +2819,14 @@ CodeReformatter.Generators.Core
                                 switch (alt2)
                                 {
                                     case 1:
-                                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1403:9: ESC
+                                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1423:9: ESC
                                         {
                                             mESC();
 
                                         }
                                         break;
                                     case 2:
-                                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1403:13: ~ ( '\"' | '\\\\' | '\\n' | '\\r' )
+                                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1423:13: ~ ( '\"' | '\\\\' | '\\n' | '\\r' )
                                         {
                                             if ((input.LA(1) >= '\u0000' && input.LA(1) <= '\t') || (input.LA(1) >= '\u000B' && input.LA(1) <= '\f') || (input.LA(1) >= '\u000E' && input.LA(1) <= '!') || (input.LA(1) >= '#' && input.LA(1) <= '[') || (input.LA(1) >= ']' && input.LA(1) <= '\uFFFE'))
                                             {
@@ -2854,10 +2857,10 @@ CodeReformatter.Generators.Core
                         }
                         break;
                     case 2:
-                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1404:4: '\\'' ( ESC | ~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) )* '\\''
+                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1424:4: '\\'' ( ESC | ~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) )* '\\''
                         {
                             Match('\'');
-                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1404:9: ( ESC | ~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) )*
+                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1424:9: ( ESC | ~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) )*
                             do
                             {
                                 int alt3 = 3;
@@ -2876,14 +2879,14 @@ CodeReformatter.Generators.Core
                                 switch (alt3)
                                 {
                                     case 1:
-                                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1404:10: ESC
+                                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1424:10: ESC
                                         {
                                             mESC();
 
                                         }
                                         break;
                                     case 2:
-                                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1404:14: ~ ( '\\'' | '\\\\' | '\\n' | '\\r' )
+                                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1424:14: ~ ( '\\'' | '\\\\' | '\\n' | '\\r' )
                                         {
                                             if ((input.LA(1) >= '\u0000' && input.LA(1) <= '\t') || (input.LA(1) >= '\u000B' && input.LA(1) <= '\f') || (input.LA(1) >= '\u000E' && input.LA(1) <= '&') || (input.LA(1) >= '(' && input.LA(1) <= '[') || (input.LA(1) >= ']' && input.LA(1) <= '\uFFFE'))
                                             {
@@ -2929,8 +2932,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = HEX_LITERAL;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1407:15: ( '0' ( 'x' | 'X' ) ( HEX_DIGIT )+ )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1407:15: '0' ( 'x' | 'X' ) ( HEX_DIGIT )+
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1427:15: ( '0' ( 'x' | 'X' ) ( HEX_DIGIT )+ )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1427:15: '0' ( 'x' | 'X' ) ( HEX_DIGIT )+
                 {
                     Match('0');
                     if (input.LA(1) == 'X' || input.LA(1) == 'x')
@@ -2945,7 +2948,7 @@ CodeReformatter.Generators.Core
                         Recover(mse); throw mse;
                     }
 
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1407:29: ( HEX_DIGIT )+
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1427:29: ( HEX_DIGIT )+
                     int cnt5 = 0;
                     do
                     {
@@ -2961,7 +2964,7 @@ CodeReformatter.Generators.Core
                         switch (alt5)
                         {
                             case 1:
-                                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1407:29: HEX_DIGIT
+                                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1427:29: HEX_DIGIT
                                 {
                                     mHEX_DIGIT();
 
@@ -2997,10 +3000,10 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = DECIMAL_LITERAL;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1409:19: ( ( '0' | '1' .. '9' ( '0' .. '9' )* ) )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1409:19: ( '0' | '1' .. '9' ( '0' .. '9' )* )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1429:19: ( ( '0' | '1' .. '9' ( '0' .. '9' )* ) )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1429:19: ( '0' | '1' .. '9' ( '0' .. '9' )* )
                 {
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1409:19: ( '0' | '1' .. '9' ( '0' .. '9' )* )
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1429:19: ( '0' | '1' .. '9' ( '0' .. '9' )* )
                     int alt7 = 2;
                     int LA7_0 = input.LA(1);
 
@@ -3015,24 +3018,24 @@ CodeReformatter.Generators.Core
                     else
                     {
                         NoViableAltException nvae_d7s0 =
-                            new NoViableAltException("1409:19: ( '0' | '1' .. '9' ( '0' .. '9' )* )", 7, 0, input);
+                            new NoViableAltException("1429:19: ( '0' | '1' .. '9' ( '0' .. '9' )* )", 7, 0, input);
 
                         throw nvae_d7s0;
                     }
                     switch (alt7)
                     {
                         case 1:
-                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1409:20: '0'
+                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1429:20: '0'
                             {
                                 Match('0');
 
                             }
                             break;
                         case 2:
-                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1409:26: '1' .. '9' ( '0' .. '9' )*
+                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1429:26: '1' .. '9' ( '0' .. '9' )*
                             {
                                 MatchRange('1', '9');
-                                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1409:35: ( '0' .. '9' )*
+                                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1429:35: ( '0' .. '9' )*
                                 do
                                 {
                                     int alt6 = 2;
@@ -3047,7 +3050,7 @@ CodeReformatter.Generators.Core
                                     switch (alt6)
                                     {
                                         case 1:
-                                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1409:35: '0' .. '9'
+                                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1429:35: '0' .. '9'
                                             {
                                                 MatchRange('0', '9');
 
@@ -3085,11 +3088,11 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = OCTAL_LITERAL;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1411:17: ( '0' ( '0' .. '7' )+ )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1411:17: '0' ( '0' .. '7' )+
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1431:17: ( '0' ( '0' .. '7' )+ )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1431:17: '0' ( '0' .. '7' )+
                 {
                     Match('0');
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1411:21: ( '0' .. '7' )+
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1431:21: ( '0' .. '7' )+
                     int cnt8 = 0;
                     do
                     {
@@ -3105,7 +3108,7 @@ CodeReformatter.Generators.Core
                         switch (alt8)
                         {
                             case 1:
-                                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1411:22: '0' .. '7'
+                                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1431:22: '0' .. '7'
                                 {
                                     MatchRange('0', '7');
 
@@ -3141,7 +3144,7 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = FLOAT_LITERAL;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1414:9: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1434:9: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? )
                 int alt14 = 2;
                 int LA14_0 = input.LA(1);
 
@@ -3156,16 +3159,16 @@ CodeReformatter.Generators.Core
                 else
                 {
                     NoViableAltException nvae_d14s0 =
-                        new NoViableAltException("1413:1: FLOAT_LITERAL : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? );", 14, 0, input);
+                        new NoViableAltException("1433:1: FLOAT_LITERAL : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? );", 14, 0, input);
 
                     throw nvae_d14s0;
                 }
                 switch (alt14)
                 {
                     case 1:
-                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1414:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
+                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1434:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
                         {
-                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1414:9: ( '0' .. '9' )+
+                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1434:9: ( '0' .. '9' )+
                             int cnt9 = 0;
                             do
                             {
@@ -3181,7 +3184,7 @@ CodeReformatter.Generators.Core
                                 switch (alt9)
                                 {
                                     case 1:
-                                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1414:10: '0' .. '9'
+                                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1434:10: '0' .. '9'
                                         {
                                             MatchRange('0', '9');
 
@@ -3201,7 +3204,7 @@ CodeReformatter.Generators.Core
                             ;	// Stops C# compiler whinging that label 'loop9' has no statements
 
                             Match('.');
-                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1414:25: ( '0' .. '9' )*
+                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1434:25: ( '0' .. '9' )*
                             do
                             {
                                 int alt10 = 2;
@@ -3216,7 +3219,7 @@ CodeReformatter.Generators.Core
                                 switch (alt10)
                                 {
                                     case 1:
-                                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1414:26: '0' .. '9'
+                                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1434:26: '0' .. '9'
                                         {
                                             MatchRange('0', '9');
 
@@ -3231,7 +3234,7 @@ CodeReformatter.Generators.Core
                         loop10:
                             ;	// Stops C# compiler whinging that label 'loop10' has no statements
 
-                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1414:37: ( EXPONENT )?
+                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1434:37: ( EXPONENT )?
                             int alt11 = 2;
                             int LA11_0 = input.LA(1);
 
@@ -3242,7 +3245,7 @@ CodeReformatter.Generators.Core
                             switch (alt11)
                             {
                                 case 1:
-                                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1414:37: EXPONENT
+                                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1434:37: EXPONENT
                                     {
                                         mEXPONENT();
 
@@ -3255,10 +3258,10 @@ CodeReformatter.Generators.Core
                         }
                         break;
                     case 2:
-                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1415:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
+                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1435:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
                         {
                             Match('.');
-                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1415:13: ( '0' .. '9' )+
+                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1435:13: ( '0' .. '9' )+
                             int cnt12 = 0;
                             do
                             {
@@ -3274,7 +3277,7 @@ CodeReformatter.Generators.Core
                                 switch (alt12)
                                 {
                                     case 1:
-                                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1415:14: '0' .. '9'
+                                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1435:14: '0' .. '9'
                                         {
                                             MatchRange('0', '9');
 
@@ -3293,7 +3296,7 @@ CodeReformatter.Generators.Core
                         loop12:
                             ;	// Stops C# compiler whinging that label 'loop12' has no statements
 
-                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1415:25: ( EXPONENT )?
+                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1435:25: ( EXPONENT )?
                             int alt13 = 2;
                             int LA13_0 = input.LA(1);
 
@@ -3304,7 +3307,7 @@ CodeReformatter.Generators.Core
                             switch (alt13)
                             {
                                 case 1:
-                                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1415:25: EXPONENT
+                                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1435:25: EXPONENT
                                     {
                                         mEXPONENT();
 
@@ -3332,10 +3335,10 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = WS;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1420:6: ( ( ' ' | '\\t' | '\\f' )+ )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1420:6: ( ' ' | '\\t' | '\\f' )+
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1440:6: ( ( ' ' | '\\t' | '\\f' )+ )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1440:6: ( ' ' | '\\t' | '\\f' )+
                 {
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1420:6: ( ' ' | '\\t' | '\\f' )+
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1440:6: ( ' ' | '\\t' | '\\f' )+
                     int cnt15 = 0;
                     do
                     {
@@ -3399,10 +3402,10 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = NL;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1428:4: ( ( '\\r' '\\n' | '\\r' | '\\n' ) )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1428:4: ( '\\r' '\\n' | '\\r' | '\\n' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1448:4: ( ( '\\r' '\\n' | '\\r' | '\\n' ) )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1448:4: ( '\\r' '\\n' | '\\r' | '\\n' )
                 {
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1428:4: ( '\\r' '\\n' | '\\r' | '\\n' )
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1448:4: ( '\\r' '\\n' | '\\r' | '\\n' )
                     int alt16 = 3;
                     int LA16_0 = input.LA(1);
 
@@ -3426,14 +3429,14 @@ CodeReformatter.Generators.Core
                     else
                     {
                         NoViableAltException nvae_d16s0 =
-                            new NoViableAltException("1428:4: ( '\\r' '\\n' | '\\r' | '\\n' )", 16, 0, input);
+                            new NoViableAltException("1448:4: ( '\\r' '\\n' | '\\r' | '\\n' )", 16, 0, input);
 
                         throw nvae_d16s0;
                     }
                     switch (alt16)
                     {
                         case 1:
-                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1429:4: '\\r' '\\n'
+                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1449:4: '\\r' '\\n'
                             {
                                 Match('\r');
                                 Match('\n');
@@ -3441,14 +3444,14 @@ CodeReformatter.Generators.Core
                             }
                             break;
                         case 2:
-                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1430:5: '\\r'
+                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1450:5: '\\r'
                             {
                                 Match('\r');
 
                             }
                             break;
                         case 3:
-                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1431:5: '\\n'
+                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1451:5: '\\n'
                             {
                                 Match('\n');
 
@@ -3475,10 +3478,10 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = BOM;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1437:7: ( ( '\\u00EF' '\\u00BB' '\\u00BF' | '\\uFEFF' ) )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1437:7: ( '\\u00EF' '\\u00BB' '\\u00BF' | '\\uFEFF' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1457:7: ( ( '\\u00EF' '\\u00BB' '\\u00BF' | '\\uFEFF' ) )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1457:7: ( '\\u00EF' '\\u00BB' '\\u00BF' | '\\uFEFF' )
                 {
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1437:7: ( '\\u00EF' '\\u00BB' '\\u00BF' | '\\uFEFF' )
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1457:7: ( '\\u00EF' '\\u00BB' '\\u00BF' | '\\uFEFF' )
                     int alt17 = 2;
                     int LA17_0 = input.LA(1);
 
@@ -3493,14 +3496,14 @@ CodeReformatter.Generators.Core
                     else
                     {
                         NoViableAltException nvae_d17s0 =
-                            new NoViableAltException("1437:7: ( '\\u00EF' '\\u00BB' '\\u00BF' | '\\uFEFF' )", 17, 0, input);
+                            new NoViableAltException("1457:7: ( '\\u00EF' '\\u00BB' '\\u00BF' | '\\uFEFF' )", 17, 0, input);
 
                         throw nvae_d17s0;
                     }
                     switch (alt17)
                     {
                         case 1:
-                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1437:9: '\\u00EF' '\\u00BB' '\\u00BF'
+                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1457:9: '\\u00EF' '\\u00BB' '\\u00BF'
                             {
                                 Match('\u00EF');
                                 Match('\u00BB');
@@ -3509,7 +3512,7 @@ CodeReformatter.Generators.Core
                             }
                             break;
                         case 2:
-                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1438:5: '\\uFEFF'
+                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1458:5: '\\uFEFF'
                             {
                                 Match('\uFEFF');
 
@@ -3536,8 +3539,8 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = INCLUDE_DIRECTIVE;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1444:4: ( '#include' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1444:4: '#include'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1464:4: ( '#include' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1464:4: '#include'
                 {
                     Match("#include");
 
@@ -3558,12 +3561,12 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = SL_COMMENT;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1449:4: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\n' | '\\r' ( '\\n' )? )? )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1449:4: '//' (~ ( '\\n' | '\\r' ) )* ( '\\n' | '\\r' ( '\\n' )? )?
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1469:4: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\n' | '\\r' ( '\\n' )? )? )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1469:4: '//' (~ ( '\\n' | '\\r' ) )* ( '\\n' | '\\r' ( '\\n' )? )?
                 {
                     Match("//");
 
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1449:9: (~ ( '\\n' | '\\r' ) )*
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1469:9: (~ ( '\\n' | '\\r' ) )*
                     do
                     {
                         int alt18 = 2;
@@ -3578,7 +3581,7 @@ CodeReformatter.Generators.Core
                         switch (alt18)
                         {
                             case 1:
-                                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1449:10: ~ ( '\\n' | '\\r' )
+                                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1469:10: ~ ( '\\n' | '\\r' )
                                 {
                                     if ((input.LA(1) >= '\u0000' && input.LA(1) <= '\t') || (input.LA(1) >= '\u000B' && input.LA(1) <= '\f') || (input.LA(1) >= '\u000E' && input.LA(1) <= '\uFFFE'))
                                     {
@@ -3604,7 +3607,7 @@ CodeReformatter.Generators.Core
                 loop18:
                     ;	// Stops C# compiler whinging that label 'loop18' has no statements
 
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1449:25: ( '\\n' | '\\r' ( '\\n' )? )?
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1469:25: ( '\\n' | '\\r' ( '\\n' )? )?
                     int alt20 = 3;
                     int LA20_0 = input.LA(1);
 
@@ -3619,17 +3622,17 @@ CodeReformatter.Generators.Core
                     switch (alt20)
                     {
                         case 1:
-                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1449:26: '\\n'
+                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1469:26: '\\n'
                             {
                                 Match('\n');
 
                             }
                             break;
                         case 2:
-                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1449:31: '\\r' ( '\\n' )?
+                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1469:31: '\\r' ( '\\n' )?
                             {
                                 Match('\r');
-                                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1449:35: ( '\\n' )?
+                                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1469:35: ( '\\n' )?
                                 int alt19 = 2;
                                 int LA19_0 = input.LA(1);
 
@@ -3640,7 +3643,7 @@ CodeReformatter.Generators.Core
                                 switch (alt19)
                                 {
                                     case 1:
-                                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1449:36: '\\n'
+                                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1469:36: '\\n'
                                         {
                                             Match('\n');
 
@@ -3673,12 +3676,12 @@ CodeReformatter.Generators.Core
             try
             {
                 int _type = ML_COMMENT;
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1454:4: ( '/*' ( options {greedy=false; } : . )* '*/' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1454:4: '/*' ( options {greedy=false; } : . )* '*/'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1474:4: ( '/*' ( options {greedy=false; } : . )* '*/' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1474:4: '/*' ( options {greedy=false; } : . )* '*/'
                 {
                     Match("/*");
 
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1454:9: ( options {greedy=false; } : . )*
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1474:9: ( options {greedy=false; } : . )*
                     do
                     {
                         int alt21 = 2;
@@ -3708,7 +3711,7 @@ CodeReformatter.Generators.Core
                         switch (alt21)
                         {
                             case 1:
-                                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1454:37: .
+                                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1474:37: .
                                 {
                                     MatchAny();
 
@@ -3742,8 +3745,8 @@ CodeReformatter.Generators.Core
         {
             try
             {
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1459:4: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1459:4: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1479:4: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1479:4: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
                 {
                     if (input.LA(1) == 'E' || input.LA(1) == 'e')
                     {
@@ -3757,7 +3760,7 @@ CodeReformatter.Generators.Core
                         Recover(mse); throw mse;
                     }
 
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1459:14: ( '+' | '-' )?
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1479:14: ( '+' | '-' )?
                     int alt22 = 2;
                     int LA22_0 = input.LA(1);
 
@@ -3788,7 +3791,7 @@ CodeReformatter.Generators.Core
 
                     }
 
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1459:25: ( '0' .. '9' )+
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1479:25: ( '0' .. '9' )+
                     int cnt23 = 0;
                     do
                     {
@@ -3804,7 +3807,7 @@ CodeReformatter.Generators.Core
                         switch (alt23)
                         {
                             case 1:
-                                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1459:26: '0' .. '9'
+                                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1479:26: '0' .. '9'
                                 {
                                     MatchRange('0', '9');
 
@@ -3838,8 +3841,8 @@ CodeReformatter.Generators.Core
         {
             try
             {
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1462:4: ( ( '0' .. '9' | 'A' .. 'F' | 'a' .. 'f' ) )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1462:4: ( '0' .. '9' | 'A' .. 'F' | 'a' .. 'f' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1482:4: ( ( '0' .. '9' | 'A' .. 'F' | 'a' .. 'f' ) )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1482:4: ( '0' .. '9' | 'A' .. 'F' | 'a' .. 'f' )
                 {
                     if ((input.LA(1) >= '0' && input.LA(1) <= '9') || (input.LA(1) >= 'A' && input.LA(1) <= 'F') || (input.LA(1) >= 'a' && input.LA(1) <= 'f'))
                     {
@@ -3868,8 +3871,8 @@ CodeReformatter.Generators.Core
         {
             try
             {
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1466:4: ( '0' .. '7' )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1466:4: '0' .. '7'
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1486:4: ( '0' .. '7' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1486:4: '0' .. '7'
                 {
                     MatchRange('0', '7');
 
@@ -3887,7 +3890,7 @@ CodeReformatter.Generators.Core
         {
             try
             {
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1470:6: ( CTRLCHAR_ESC | UNICODE_ESC | OCTAL_ESC )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1490:6: ( CTRLCHAR_ESC | UNICODE_ESC | OCTAL_ESC )
                 int alt24 = 3;
                 int LA24_0 = input.LA(1);
 
@@ -3926,7 +3929,7 @@ CodeReformatter.Generators.Core
                             break;
                         default:
                             NoViableAltException nvae_d24s1 =
-                                new NoViableAltException("1469:10: fragment ESC : ( CTRLCHAR_ESC | UNICODE_ESC | OCTAL_ESC );", 24, 1, input);
+                                new NoViableAltException("1489:10: fragment ESC : ( CTRLCHAR_ESC | UNICODE_ESC | OCTAL_ESC );", 24, 1, input);
 
                             throw nvae_d24s1;
                     }
@@ -3935,28 +3938,28 @@ CodeReformatter.Generators.Core
                 else
                 {
                     NoViableAltException nvae_d24s0 =
-                        new NoViableAltException("1469:10: fragment ESC : ( CTRLCHAR_ESC | UNICODE_ESC | OCTAL_ESC );", 24, 0, input);
+                        new NoViableAltException("1489:10: fragment ESC : ( CTRLCHAR_ESC | UNICODE_ESC | OCTAL_ESC );", 24, 0, input);
 
                     throw nvae_d24s0;
                 }
                 switch (alt24)
                 {
                     case 1:
-                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1470:6: CTRLCHAR_ESC
+                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1490:6: CTRLCHAR_ESC
                         {
                             mCTRLCHAR_ESC();
 
                         }
                         break;
                     case 2:
-                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1471:6: UNICODE_ESC
+                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1491:6: UNICODE_ESC
                         {
                             mUNICODE_ESC();
 
                         }
                         break;
                     case 3:
-                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1472:6: OCTAL_ESC
+                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1492:6: OCTAL_ESC
                         {
                             mOCTAL_ESC();
 
@@ -3976,8 +3979,8 @@ CodeReformatter.Generators.Core
         {
             try
             {
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1476:4: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1476:4: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1496:4: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1496:4: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
                 {
                     Match('\\');
                     if (input.LA(1) == '\"' || input.LA(1) == '\'' || input.LA(1) == '\\' || input.LA(1) == 'b' || input.LA(1) == 'f' || input.LA(1) == 'n' || input.LA(1) == 'r' || input.LA(1) == 't')
@@ -4007,7 +4010,7 @@ CodeReformatter.Generators.Core
         {
             try
             {
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1480:6: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1500:6: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
                 int alt25 = 3;
                 int LA25_0 = input.LA(1);
 
@@ -4053,7 +4056,7 @@ CodeReformatter.Generators.Core
                     else
                     {
                         NoViableAltException nvae_d25s1 =
-                            new NoViableAltException("1479:10: fragment OCTAL_ESC : ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) );", 25, 1, input);
+                            new NoViableAltException("1499:10: fragment OCTAL_ESC : ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) );", 25, 1, input);
 
                         throw nvae_d25s1;
                     }
@@ -4061,32 +4064,32 @@ CodeReformatter.Generators.Core
                 else
                 {
                     NoViableAltException nvae_d25s0 =
-                        new NoViableAltException("1479:10: fragment OCTAL_ESC : ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) );", 25, 0, input);
+                        new NoViableAltException("1499:10: fragment OCTAL_ESC : ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) );", 25, 0, input);
 
                     throw nvae_d25s0;
                 }
                 switch (alt25)
                 {
                     case 1:
-                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1480:6: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
+                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1500:6: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
                         {
                             Match('\\');
-                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1480:11: ( '0' .. '3' )
-                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1480:12: '0' .. '3'
+                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1500:11: ( '0' .. '3' )
+                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1500:12: '0' .. '3'
                             {
                                 MatchRange('0', '3');
 
                             }
 
-                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1480:22: ( '0' .. '7' )
-                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1480:23: '0' .. '7'
+                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1500:22: ( '0' .. '7' )
+                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1500:23: '0' .. '7'
                             {
                                 MatchRange('0', '7');
 
                             }
 
-                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1480:33: ( '0' .. '7' )
-                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1480:34: '0' .. '7'
+                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1500:33: ( '0' .. '7' )
+                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1500:34: '0' .. '7'
                             {
                                 MatchRange('0', '7');
 
@@ -4096,18 +4099,18 @@ CodeReformatter.Generators.Core
                         }
                         break;
                     case 2:
-                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1481:6: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
+                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1501:6: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
                         {
                             Match('\\');
-                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1481:11: ( '0' .. '7' )
-                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1481:12: '0' .. '7'
+                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1501:11: ( '0' .. '7' )
+                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1501:12: '0' .. '7'
                             {
                                 MatchRange('0', '7');
 
                             }
 
-                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1481:22: ( '0' .. '7' )
-                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1481:23: '0' .. '7'
+                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1501:22: ( '0' .. '7' )
+                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1501:23: '0' .. '7'
                             {
                                 MatchRange('0', '7');
 
@@ -4117,11 +4120,11 @@ CodeReformatter.Generators.Core
                         }
                         break;
                     case 3:
-                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1482:6: '\\\\' ( '0' .. '7' )
+                        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1502:6: '\\\\' ( '0' .. '7' )
                         {
                             Match('\\');
-                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1482:11: ( '0' .. '7' )
-                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1482:12: '0' .. '7'
+                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1502:11: ( '0' .. '7' )
+                            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1502:12: '0' .. '7'
                             {
                                 MatchRange('0', '7');
 
@@ -4144,8 +4147,8 @@ CodeReformatter.Generators.Core
         {
             try
             {
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1486:6: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1486:6: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1506:6: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1506:6: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
                 {
                     Match('\\');
                     Match('u');
@@ -4165,99 +4168,99 @@ CodeReformatter.Generators.Core
 
         override public void mTokens() // throws RecognitionException 
         {
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:10: ( T172 | T173 | T174 | T175 | T176 | T177 | T178 | T179 | T180 | T181 | T182 | T183 | T184 | PACKAGE | PUBLIC | PRIVATE | PROTECTED | INTERNAL | FUNCTION | EXTENDS | IMPLEMENTS | VAR | STATIC | IF | IMPORT | FOR | EACH | IN | WHILE | DO | SWITCH | CASE | DEFAULT | ELSE | CONST | CLASS | INTERFACE | TRUE | FALSE | DYNAMIC | USE | XML | NAMESPACE | IS | AS | GET | SET | WITH | RETURN | CONTINUE | BREAK | NULL | UNDEFINED | NEW | INSTANCEOF | DELETE | TYPEOF | QUESTION | LPAREN | RPAREN | LBRACK | RBRACK | LCURLY | RCURLY | COLON | DBL_COLON | COMMA | ASSIGN | EQUAL | STRICT_EQUAL | LNOT | BNOT | NOT_EQUAL | STRICT_NOT_EQUAL | DIV | DIV_ASSIGN | PLUS | PLUS_ASSIGN | INC | MINUS | MINUS_ASSIGN | DEC | STAR | STAR_ASSIGN | MOD | MOD_ASSIGN | SR | SR_ASSIGN | BSR | BSR_ASSIGN | GE | GT | SL | SL_ASSIGN | LE | LT | BXOR | BXOR_ASSIGN | BOR | BOR_ASSIGN | LOR | BAND | BAND_ASSIGN | LAND | LAND_ASSIGN | LOR_ASSIGN | E4X_ATTRI | SEMI | DOT | E4X_DESC | REST | IDENT | STRING_LITERAL | HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | FLOAT_LITERAL | WS | NL | BOM | INCLUDE_DIRECTIVE | SL_COMMENT | ML_COMMENT )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:10: ( T175 | T176 | T177 | T178 | T179 | T180 | T181 | T182 | T183 | T184 | T185 | T186 | T187 | PACKAGE | PUBLIC | PRIVATE | PROTECTED | INTERNAL | FUNCTION | EXTENDS | IMPLEMENTS | VAR | STATIC | IF | IMPORT | FOR | EACH | IN | WHILE | DO | SWITCH | CASE | DEFAULT | ELSE | CONST | CLASS | INTERFACE | TRUE | FALSE | DYNAMIC | USE | XML | NAMESPACE | IS | AS | GET | SET | WITH | RETURN | CONTINUE | BREAK | NULL | UNDEFINED | NEW | INSTANCEOF | DELETE | TYPEOF | QUESTION | LPAREN | RPAREN | LBRACK | RBRACK | LCURLY | RCURLY | COLON | DBL_COLON | COMMA | ASSIGN | EQUAL | STRICT_EQUAL | LNOT | BNOT | NOT_EQUAL | STRICT_NOT_EQUAL | DIV | DIV_ASSIGN | PLUS | PLUS_ASSIGN | INC | MINUS | MINUS_ASSIGN | DEC | STAR | STAR_ASSIGN | MOD | MOD_ASSIGN | SR | SR_ASSIGN | BSR | BSR_ASSIGN | GE | GT | SL | SL_ASSIGN | LE | LT | BXOR | BXOR_ASSIGN | BOR | BOR_ASSIGN | LOR | BAND | BAND_ASSIGN | LAND | LAND_ASSIGN | LOR_ASSIGN | E4X_ATTRI | SEMI | DOT | E4X_DESC | REST | IDENT | STRING_LITERAL | HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | FLOAT_LITERAL | WS | NL | BOM | INCLUDE_DIRECTIVE | SL_COMMENT | ML_COMMENT )
             int alt26 = 123;
             alt26 = dfa26.Predict(input);
             switch (alt26)
             {
                 case 1:
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:10: T172
-                    {
-                        mT172();
-
-                    }
-                    break;
-                case 2:
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:15: T173
-                    {
-                        mT173();
-
-                    }
-                    break;
-                case 3:
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:20: T174
-                    {
-                        mT174();
-
-                    }
-                    break;
-                case 4:
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:25: T175
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:10: T175
                     {
                         mT175();
 
                     }
                     break;
-                case 5:
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:30: T176
+                case 2:
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:15: T176
                     {
                         mT176();
 
                     }
                     break;
-                case 6:
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:35: T177
+                case 3:
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:20: T177
                     {
                         mT177();
 
                     }
                     break;
-                case 7:
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:40: T178
+                case 4:
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:25: T178
                     {
                         mT178();
 
                     }
                     break;
-                case 8:
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:45: T179
+                case 5:
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:30: T179
                     {
                         mT179();
 
                     }
                     break;
-                case 9:
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:50: T180
+                case 6:
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:35: T180
                     {
                         mT180();
 
                     }
                     break;
-                case 10:
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:55: T181
+                case 7:
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:40: T181
                     {
                         mT181();
 
                     }
                     break;
-                case 11:
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:60: T182
+                case 8:
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:45: T182
                     {
                         mT182();
 
                     }
                     break;
-                case 12:
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:65: T183
+                case 9:
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:50: T183
                     {
                         mT183();
 
                     }
                     break;
-                case 13:
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:70: T184
+                case 10:
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:55: T184
                     {
                         mT184();
+
+                    }
+                    break;
+                case 11:
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:60: T185
+                    {
+                        mT185();
+
+                    }
+                    break;
+                case 12:
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:65: T186
+                    {
+                        mT186();
+
+                    }
+                    break;
+                case 13:
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:70: T187
+                    {
+                        mT187();
 
                     }
                     break;
@@ -10421,12 +10424,9 @@ CodeReformatter.Generators.Core
 
             override public string Description
             {
-                get { return "1:1: Tokens : ( T172 | T173 | T174 | T175 | T176 | T177 | T178 | T179 | T180 | T181 | T182 | T183 | T184 | PACKAGE | PUBLIC | PRIVATE | PROTECTED | INTERNAL | FUNCTION | EXTENDS | IMPLEMENTS | VAR | STATIC | IF | IMPORT | FOR | EACH | IN | WHILE | DO | SWITCH | CASE | DEFAULT | ELSE | CONST | CLASS | INTERFACE | TRUE | FALSE | DYNAMIC | USE | XML | NAMESPACE | IS | AS | GET | SET | WITH | RETURN | CONTINUE | BREAK | NULL | UNDEFINED | NEW | INSTANCEOF | DELETE | TYPEOF | QUESTION | LPAREN | RPAREN | LBRACK | RBRACK | LCURLY | RCURLY | COLON | DBL_COLON | COMMA | ASSIGN | EQUAL | STRICT_EQUAL | LNOT | BNOT | NOT_EQUAL | STRICT_NOT_EQUAL | DIV | DIV_ASSIGN | PLUS | PLUS_ASSIGN | INC | MINUS | MINUS_ASSIGN | DEC | STAR | STAR_ASSIGN | MOD | MOD_ASSIGN | SR | SR_ASSIGN | BSR | BSR_ASSIGN | GE | GT | SL | SL_ASSIGN | LE | LT | BXOR | BXOR_ASSIGN | BOR | BOR_ASSIGN | LOR | BAND | BAND_ASSIGN | LAND | LAND_ASSIGN | LOR_ASSIGN | E4X_ATTRI | SEMI | DOT | E4X_DESC | REST | IDENT | STRING_LITERAL | HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | FLOAT_LITERAL | WS | NL | BOM | INCLUDE_DIRECTIVE | SL_COMMENT | ML_COMMENT );"; }
+                get { return "1:1: Tokens : ( T175 | T176 | T177 | T178 | T179 | T180 | T181 | T182 | T183 | T184 | T185 | T186 | T187 | PACKAGE | PUBLIC | PRIVATE | PROTECTED | INTERNAL | FUNCTION | EXTENDS | IMPLEMENTS | VAR | STATIC | IF | IMPORT | FOR | EACH | IN | WHILE | DO | SWITCH | CASE | DEFAULT | ELSE | CONST | CLASS | INTERFACE | TRUE | FALSE | DYNAMIC | USE | XML | NAMESPACE | IS | AS | GET | SET | WITH | RETURN | CONTINUE | BREAK | NULL | UNDEFINED | NEW | INSTANCEOF | DELETE | TYPEOF | QUESTION | LPAREN | RPAREN | LBRACK | RBRACK | LCURLY | RCURLY | COLON | DBL_COLON | COMMA | ASSIGN | EQUAL | STRICT_EQUAL | LNOT | BNOT | NOT_EQUAL | STRICT_NOT_EQUAL | DIV | DIV_ASSIGN | PLUS | PLUS_ASSIGN | INC | MINUS | MINUS_ASSIGN | DEC | STAR | STAR_ASSIGN | MOD | MOD_ASSIGN | SR | SR_ASSIGN | BSR | BSR_ASSIGN | GE | GT | SL | SL_ASSIGN | LE | LT | BXOR | BXOR_ASSIGN | BOR | BOR_ASSIGN | LOR | BAND | BAND_ASSIGN | LAND | LAND_ASSIGN | LOR_ASSIGN | E4X_ATTRI | SEMI | DOT | E4X_DESC | REST | IDENT | STRING_LITERAL | HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | FLOAT_LITERAL | WS | NL | BOM | INCLUDE_DIRECTIVE | SL_COMMENT | ML_COMMENT );"; }
             }
 
         }
-
-
-
     }
 }
