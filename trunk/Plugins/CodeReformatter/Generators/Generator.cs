@@ -82,19 +82,17 @@ namespace CodeReformatter.Generators
         }
 
 
-        # region Private Static Methods
-
         private static void ReformatCode(ITree tree, Boolean endWithNewLine)
         {
             ReformatCode((CommonTree)tree, endWithNewLine);
         }
 
-        public static void ReformatCode(ITree tree)
+        private static void ReformatCode(ITree tree)
         {
             ReformatCode((CommonTree)tree, false);
         }
 
-        public static void ReformatCode(CommonTree tree, Boolean endWithNewLine)
+        private static void ReformatCode(CommonTree tree, Boolean endWithNewLine)
         {
             for (int i = 0; i < tree.ChildCount; i++)
             {
@@ -103,12 +101,12 @@ namespace CodeReformatter.Generators
             }
         }
 
-        public static void ReformatNode(ITree node, Boolean endWithNewLine)
+        private static void ReformatNode(ITree node, Boolean endWithNewLine)
         {
             ReformatNode((CommonTree)node, endWithNewLine);
         }
 
-        public static void ReformatNode(ITree node)
+        private static void ReformatNode(ITree node)
         {
             ReformatNode((CommonTree)node, false);
         }
@@ -117,6 +115,10 @@ namespace CodeReformatter.Generators
         {
             switch (node.Type)
             {
+                case ASLexer.DOT:
+                    CurrentBuffer.Append(fromDot(node));
+                    break;
+
                 case ASLexer.INTERFACE_DEF:
                     parseInterface(node);
                     break;
@@ -396,19 +398,7 @@ namespace CodeReformatter.Generators
                     break;
 
                 case ASLexer.ELSE:
-                    if (settingObject.NEWLINE_BEFORE_ELSE)
-                        CurrentBuffer.Append(NEWLINE + TAB + "else ");
-                    else
-                        CurrentBuffer.Append(" else ");
-
-                    if (node.GetChild(0).Type == ASLexer.BLOCK || node.GetChild(0).Type == ASLexer.IF)
-                    {
-                        ReformatNode(node.GetChild(0), settingObject.NEWLINE_AFTER_CONDITION);
-                    }
-                    else
-                    {
-                        AddBlock(node.GetChild(0), settingObject.NEWLINE_AFTER_CONDITION);
-                    }
+                    parseElseCondition(node);
                     break;
 
                 case ASLexer.CONDITION:
@@ -488,6 +478,33 @@ namespace CodeReformatter.Generators
                 default:
                     Debug.WriteLine("ReformatCode: " + node.Type + ", " + node.Text + " - " + node.ToStringTree());
                     break;
+            }
+        }
+
+        protected static void parseElseCondition(CommonTree node)
+        {
+            CommonTree nextNode;
+            if (settingObject.NEWLINE_BEFORE_ELSE)
+                CurrentBuffer.Append(NEWLINE + TAB + "else ");
+            else
+                CurrentBuffer.Append(" else ");
+
+            nextNode = (CommonTree)node.DeleteChild(0);
+
+            if (nextNode.Type == ASLexer.COMMENT_LIST)
+            {
+                CurrentBuffer.Append(NEWLINE + TAB);
+                ReformatCode(nextNode, false);
+                nextNode = (CommonTree)node.DeleteChild(0);
+            }
+
+            if (nextNode.Type == ASLexer.BLOCK || nextNode.Type == ASLexer.IF)
+            {
+                ReformatNode(nextNode, settingObject.NEWLINE_AFTER_CONDITION);
+            }
+            else
+            {
+                AddBlock(nextNode, settingObject.NEWLINE_AFTER_CONDITION);
             }
         }
 
@@ -909,7 +926,17 @@ namespace CodeReformatter.Generators
             }
 
             if (node.ChildCount > 0)
+            {
+                nextNode = (CommonTree)node.DeleteChild(0);
+                if (nextNode.Type == ASLexer.COMMENT_LIST)
+                {
+                    CurrentBuffer.Append(NEWLINE + TAB);
+                    ReformatCode(nextNode, false);
+                }
+
+                if(node.ChildCount > 0)
                ReformatNode(node.GetChild(0));
+        }
         }
 
         protected static void parseVariableDeclaration(CommonTree node)
@@ -1162,8 +1189,25 @@ namespace CodeReformatter.Generators
             return String.Join(", ", st);
         }
 
-        #endregion
 
-
+        /// <summary>
+        /// Reformat a DOT identifier
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        protected static String fromDot(CommonTree node)
+        {
+            String text = "";
+            if (node.GetChild(0).ChildCount > 0)
+            {
+                text += fromDot((CommonTree)node.GetChild(0));
+                text += node.GetChild(0).Text + node.GetChild(1).Text;
+            }
+            else
+            {
+                text = node.GetChild(0).Text + node.Text + node.GetChild(1).Text + text;
+            }
+            return text;
+        }
     }
 }
