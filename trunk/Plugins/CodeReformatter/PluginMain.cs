@@ -113,12 +113,6 @@ namespace CodeReformatter
 		/// </summary>
 		public void HandleEvent(Object sender, NotifyEvent e, HandlingPriority prority)
 		{
-            switch (e.Type)
-            {
-                case EventType.FileSwitch:
-                    ReformatMenuItem.Enabled = MainForm.CurrentDocument.IsEditable && ASContext.Context is AS2Context.Context;
-                    break;
-            }
 		}
 		
 		#endregion
@@ -140,7 +134,6 @@ namespace CodeReformatter
         /// </summary> 
         public void AddEventHandlers()
         {
-            EventManager.AddEventHandler(this, EventType.FileSwitch);
         }
 
         /// <summary>
@@ -192,6 +185,21 @@ namespace CodeReformatter
             ToolStripMenuItem editMenu = (ToolStripMenuItem)PluginBase.MainForm.FindMenuItem("EditMenu");
             editMenu.DropDownItems.Add(new ToolStripSeparator());
             editMenu.DropDownItems.Add(ReformatMenuItem);
+            editMenu.DropDownOpening += new EventHandler(editMenu_DropDownOpening);
+        }
+
+        void editMenu_DropDownOpening(object sender, EventArgs e)
+        {
+            IASContext context   = ASContext.Context.CurrentModel.Context;
+
+            if (context != null && (context.GetType().ToString().Equals("AS2Context.Context") || context.GetType().ToString().Equals("AS3Context.Context")))
+            {
+                ReformatMenuItem.Enabled = true;
+            }
+            else
+            {
+                ReformatMenuItem.Enabled = false;
+            }
         }
 
         /// <summary>
