@@ -71,7 +71,8 @@
   <ItemGroup>
     <Compile Include="Generators\Core\ASLexer.cs" />
     <Compile Include="Generators\Core\ASParser.cs" />
-    <Compile Include="Generators\Generator.cs" />
+    <Compile Include="Generators\AS2Generator.cs" />
+    <Compile Include="Generators\IGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PluginMain.cs" />
     <Compile Include="Resources\LocaleHelper.cs" />
