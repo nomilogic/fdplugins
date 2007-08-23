@@ -16,6 +16,8 @@ using System.Diagnostics;
 using CodeReformatter.Generators;
 using CodeReformatter.Resources;
 using System.Windows.Forms;
+using PluginCore.Controls;
+using Antlr.Runtime;
 
 
 namespace CodeReformatter
@@ -163,8 +165,6 @@ namespace CodeReformatter
                 Object obj = ObjectSerializer.Deserialize(this.settingFilename, this.settingObject);
                 this.settingObject = (Settings)obj;
             }
-
-            Generator.SettingObject = this.settingObject;
         }
 
         /// <summary>
@@ -210,34 +210,57 @@ namespace CodeReformatter
         private void Reformat(Object sender, EventArgs e)
         {
             ITabbedDocument doc = MainForm.CurrentDocument;
-            if (doc.IsEditable && ASContext.Context is AS2Context.Context)
+            IGenerator generator = null;
+
+            if (doc.IsEditable)
             {
-                String source = doc.SciControl.Text;
-                if (MainForm.Settings.UseTabs)
+                if (ASContext.Context.CurrentModel.Context.GetType().ToString().Equals("AS2Context.Context"))
                 {
-                    Generator.TAB_STRING = "\t";
+                    generator = new AS2Generator();
                 }
-                else
+
+                if (generator != null)
                 {
-                    String tab = " ";
-                    for (int i = 0; i < doc.SciControl.TabWidth; i++)
+                    MainForm.CallCommand("PluginCommand", "ResultsPanel.ClearResults");
+                    String source = doc.SciControl.Text;
+                    generator.NewLine = ASComplete.GetNewLineMarker(doc.SciControl.EOLMode);
+                    generator.SettingObject = settingObject;
+                    
+                    if (MainForm.Settings.UseTabs)
                     {
-                        tab += " ";
+                        generator.TabString = "\t";
                     }
-                    Generator.TAB_STRING = tab;
+                    else
+                    {
+                        String tab = " ";
+                        for (int i = 0; i < doc.SciControl.TabWidth; i++)
+                        {
+                            tab += " ";
+                        }
+                        generator.TabString = tab;
+                    }
+
+                    try
+                    {
+                        doc.SciControl.Text = generator.GenerateCode(source).ToString();
+                    }
+                    catch (Antlr.Runtime.RecognitionException error)
+                    {
+                        MessageBar.ShowWarning(error.Line + ": " + error.Message);
+
+                        TraceItem item = new TraceItem(doc.FileName + ":" + error.Line + ": characters " + error.CharPositionInLine + "-" + (error.CharPositionInLine + ((CommonToken)error.Token).Text.Length) + " : " + error.Message.TrimStart(), -3);
+                        TraceManager.Add(item);
+                        TraceManager.Add(error.StackTrace);
+
+                        MainForm.CallCommand("PluginCommand", "ResultsPanel.ShowResults");
+                    }
+                    catch (Exception error)
+                    {
+                        TraceManager.Add(error.StackTrace);
+                        MessageBar.ShowWarning(error.Message);
+                        MainForm.CallCommand("PluginCommand", "ResultsPanel.ShowResults");
+                    }
                 }
-                Generator.NEWLINE = ASComplete.GetNewLineMarker(doc.SciControl.EOLMode);
-                try
-                {
-                    doc.SciControl.Text = Generator.GenerateCode(source).ToString();
-                }
-                catch (Exception error)
-                {
-                    PluginCore.Managers.ErrorManager.ShowError(error);
-                }
-            }
-            else
-            {
             }
         }
 

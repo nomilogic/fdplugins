@@ -12,68 +12,68 @@ using System.Text.RegularExpressions;
 
 namespace CodeReformatter.Generators
 {
-    class Generator
+    class AS2Generator : IGenerator
     {
-        #region Properties
-
-        static public int currentTab = 0;
-        static public StringBuilder CurrentBuffer;
-        static protected String TAB = "";
-        static protected Settings settingObject;
+        private Settings settingObject;
+        private int currentTab;
+        private StringBuilder CurrentBuffer;
+        private String tabString;
+        private String NEWLINE = "\n";
+        private String TAB = "";
 
         /// <summary>
         /// Get the current Tab String
         /// </summary>
-        public static int CurrentTab
+        public int CurrentTab
         {
-            get { return currentTab; }
+            get { return this.currentTab; }
             set
             {
-                currentTab = value;
-                if (currentTab < 0) currentTab = 0;
+                this.currentTab = value;
+                if (this.currentTab < 0) this.currentTab = 0;
                 TAB = "";
                 for (int i = 0; i < currentTab; i++)
                 {
-                    TAB += TAB_STRING;
+                    TAB += TabString;
                 }
             }
         }
 
-        #endregion
-
-        #region Options
-
-        public static String NEWLINE    = "\n";
-        public static String TAB_STRING = "\t";
-
-        public static Settings SettingObject
+        public Settings SettingObject
         {
-            set
-            {
-                settingObject = value;
-            }
+            set { this.settingObject = value; }
+            get { return this.settingObject; }
         }
 
-        #endregion
+        public String TabString
+        {
+            get { return this.tabString; }
+            set { this.tabString = value; }
+        }
+
+        public String NewLine
+        {
+            get { return this.NEWLINE; }
+            set { this.NEWLINE = value; }
+        }
 
         /// <summary>
         /// Parse the input string code using the antlr generated parser
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        public static StringBuilder GenerateCode(String source)
+        public StringBuilder GenerateCode(String source)
         {
             ASParser parser;
 
             CurrentBuffer = new StringBuilder();
-
             ANTLRStringStream input = new ANTLRStringStream(source);
             ASLexer lexer = new ASLexer(input);
             CommonTokenStream tokens = new CommonTokenStream(lexer);
             parser = new ASParser(tokens);
             parser.SetInput(lexer, input);
 
-            ASParser.compilationUnit_return result = parser.compilationUnit();
+            ParserRuleReturnScope result = parser.as2Program();
 
             CommonTree tree = (CommonTree)result.Tree;
             CurrentBuffer = new StringBuilder();
@@ -82,17 +82,17 @@ namespace CodeReformatter.Generators
         }
 
 
-        private static void ReformatCode(ITree tree, Boolean endWithNewLine)
+        private void ReformatCode(ITree tree, Boolean endWithNewLine)
         {
             ReformatCode((CommonTree)tree, endWithNewLine);
         }
 
-        private static void ReformatCode(ITree tree)
+        private void ReformatCode(ITree tree)
         {
             ReformatCode((CommonTree)tree, false);
         }
 
-        private static void ReformatCode(CommonTree tree, Boolean endWithNewLine)
+        private void ReformatCode(CommonTree tree, Boolean endWithNewLine)
         {
             for (int i = 0; i < tree.ChildCount; i++)
             {
@@ -101,17 +101,17 @@ namespace CodeReformatter.Generators
             }
         }
 
-        private static void ReformatNode(ITree node, Boolean endWithNewLine)
+        private void ReformatNode(ITree node, Boolean endWithNewLine)
         {
             ReformatNode((CommonTree)node, endWithNewLine);
         }
 
-        private static void ReformatNode(ITree node)
+        private void ReformatNode(ITree node)
         {
             ReformatNode((CommonTree)node, false);
         }
 
-        protected static void ReformatNode(CommonTree node, Boolean endWithNewLine)
+        protected void ReformatNode(CommonTree node, Boolean endWithNewLine)
         {
             switch (node.Type)
             {
@@ -481,7 +481,7 @@ namespace CodeReformatter.Generators
             }
         }
 
-        protected static void parseElseCondition(CommonTree node)
+        protected void parseElseCondition(CommonTree node)
         {
             CommonTree nextNode;
             if (settingObject.NEWLINE_BEFORE_ELSE)
@@ -508,7 +508,7 @@ namespace CodeReformatter.Generators
             }
         }
 
-        protected static void parseInterface(CommonTree node)
+        protected void parseInterface(CommonTree node)
         {
             String st = NEWLINE + TAB;
             if (node.GetChild(0).ChildCount > 0)
@@ -535,7 +535,7 @@ namespace CodeReformatter.Generators
                 parseTypeBlock((CommonTree)node.GetChild(node.ChildCount - 1), true);
         }
 
-        protected static void parseDoWhile(CommonTree node)
+        protected void parseDoWhile(CommonTree node)
         {
             CommonTree nextNode = null;
             ITree commentNode   = null;
@@ -572,7 +572,7 @@ namespace CodeReformatter.Generators
             CurrentBuffer.Append(")");
         }
 
-        protected static void parseInlineFunction(CommonTree node)
+        protected void parseInlineFunction(CommonTree node)
         {
             CommonTree blockNode = null;
             CurrentBuffer.Append("function");
@@ -599,7 +599,7 @@ namespace CodeReformatter.Generators
         }
 
 
-        protected static void parseAnnotations(CommonTree node)
+        protected void parseAnnotations(CommonTree node)
         {
             CommonTree aParams;
             for (int i = 0; i < node.ChildCount; i++)
@@ -624,7 +624,7 @@ namespace CodeReformatter.Generators
             }
         }
 
-        protected static void parseSwitchStatementList(CommonTree node)
+        protected void parseSwitchStatementList(CommonTree node)
         {
             CurrentTab++;
             for (int i = 0; i < node.ChildCount; i++)
@@ -636,7 +636,7 @@ namespace CodeReformatter.Generators
             CurrentTab--;
         }
 
-        protected static void parseMultilineComment(CommonTree node, Boolean addNewLine)
+        protected void parseMultilineComment(CommonTree node, Boolean addNewLine)
         {
             String comment = node.GetChild(0).Text;
             Regex reg = new Regex("[\n\r]+", RegexOptions.Multiline);
@@ -655,7 +655,7 @@ namespace CodeReformatter.Generators
         /// It can be either a simple identifier or a property
         /// </summary>
         /// <param name="node"></param>
-        protected static void parsePropertyOrIdentifier(CommonTree node)
+        protected void parsePropertyOrIdentifier(CommonTree node)
         {
             if (node.GetChild(0).Type == ASLexer.IDENT)
             {
@@ -671,7 +671,7 @@ namespace CodeReformatter.Generators
         /// Main unit
         /// </summary>
         /// <param name="node"></param>
-        protected static void parseCompilationUnit(CommonTree node)
+        protected void parseCompilationUnit(CommonTree node)
         {
             for (int i = 0; i < node.ChildCount; i++)
             {
@@ -679,7 +679,7 @@ namespace CodeReformatter.Generators
             }
         }
 
-        protected static void parsePackage(CommonTree node)
+        protected void parsePackage(CommonTree node)
         {
             CurrentBuffer.Append(NEWLINE + TAB + node.Text);
             if (node.ChildCount > 0)
@@ -702,7 +702,7 @@ namespace CodeReformatter.Generators
             }
         }
 
-        protected static void parseElement(CommonTree node)
+        protected void parseElement(CommonTree node)
         {
             ReformatCode(node);
         }
@@ -711,7 +711,7 @@ namespace CodeReformatter.Generators
         /// [] Array initializer
         /// </summary>
         /// <param name="node"></param>
-        protected static void parseArrayLiteral(CommonTree node)
+        protected void parseArrayLiteral(CommonTree node)
         {
             CurrentBuffer.Append("[");
 
@@ -727,7 +727,7 @@ namespace CodeReformatter.Generators
         /// Object initialization '{}'
         /// </summary>
         /// <param name="node"></param>
-        protected static void parseObjectLiteral(CommonTree node)
+        protected void parseObjectLiteral(CommonTree node)
         {
             if (node.ChildCount > 0)
                 CurrentBuffer.Append(NEWLINE + TAB);
@@ -748,7 +748,7 @@ namespace CodeReformatter.Generators
             CurrentBuffer.Append((node.ChildCount > 0 ? NEWLINE + TAB : "") + "}");
         }
 
-        protected static void parseObjectField(CommonTree node)
+        protected void parseObjectField(CommonTree node)
         {
             ReformatNode(node.GetChild(0));
             CurrentBuffer.Append(" : ");
@@ -760,7 +760,7 @@ namespace CodeReformatter.Generators
         /// </summary>
         /// <param name="node"></param>
         /// <param name="addNewline"></param>
-        protected static void parseBlock(CommonTree node, Boolean addNewline)
+        protected void parseBlock(CommonTree node, Boolean addNewline)
         {
             if (addNewline)
                 CurrentBuffer.Append(NEWLINE + TAB);
@@ -779,7 +779,7 @@ namespace CodeReformatter.Generators
             CurrentBuffer.Append(NEWLINE + TAB + "}");
         }
 
-        protected static void AddBlock(ITree node, Boolean addNewLine)
+        protected void AddBlock(ITree node, Boolean addNewLine)
         {
             if (addNewLine)
                 CurrentBuffer.Append(NEWLINE + TAB);
@@ -794,7 +794,7 @@ namespace CodeReformatter.Generators
             CurrentBuffer.Append(NEWLINE + TAB + "}");
         }
 
-        protected static void AddBlock(ITree[] nodes, Boolean addNewLine)
+        protected void AddBlock(ITree[] nodes, Boolean addNewLine)
         {
             if (addNewLine)
                 CurrentBuffer.Append(NEWLINE + TAB);
@@ -810,7 +810,7 @@ namespace CodeReformatter.Generators
             CurrentBuffer.Append(NEWLINE + TAB + "}");
         }
 
-        protected static void parseExpressionList(CommonTree node)
+        protected void parseExpressionList(CommonTree node)
         {
             for (int i = 0; i < node.ChildCount; i++)
             {
@@ -818,12 +818,12 @@ namespace CodeReformatter.Generators
             }
         }
 
-        protected static void parseForCondition(CommonTree node)
+        protected void parseForCondition(CommonTree node)
         {
             ReformatNode(node.GetChild(0));
         }
 
-        protected static void parseForInit(CommonTree node)
+        protected void parseForInit(CommonTree node)
         {
             ReformatNode(node.GetChild(0));
         }
@@ -832,7 +832,7 @@ namespace CodeReformatter.Generators
         /// For..in loop
         /// </summary>
         /// <param name="node"></param>
-        protected static void parseForIn(CommonTree node)
+        protected void parseForIn(CommonTree node)
         {
             CurrentBuffer.Append("for");
 
@@ -854,7 +854,7 @@ namespace CodeReformatter.Generators
             }
         }
 
-        protected static void parseFor(CommonTree node)
+        protected void parseFor(CommonTree node)
         {
             CurrentBuffer.Append("for");
             CurrentBuffer.Append(settingObject.SPACE_BETWEEN_METHOD_CALL ? " (" : "(");
@@ -878,7 +878,7 @@ namespace CodeReformatter.Generators
 
         }
 
-        protected static void parseWhile(CommonTree node)
+        protected void parseWhile(CommonTree node)
         {
             CurrentBuffer.Append("while");
             CurrentBuffer.Append(settingObject.SPACE_BETWEEN_METHOD_CALL ? " (" : "(");
@@ -887,12 +887,12 @@ namespace CodeReformatter.Generators
             ReformatNode(node.GetChild(1), settingObject.NEWLINE_AFTER_CONDITION);
         }
 
-        protected static void parseCondition(CommonTree node)
+        protected void parseCondition(CommonTree node)
         {
             ReformatNode(node.GetChild(0));
         }
 
-        protected static void parseIfCondition(CommonTree node)
+        protected void parseIfCondition(CommonTree node)
         {
             CommonTree nextNode;
             ITree commentNode = null;
@@ -939,21 +939,21 @@ namespace CodeReformatter.Generators
         }
         }
 
-        protected static void parseVariableDeclaration(CommonTree node)
+        protected void parseVariableDeclaration(CommonTree node)
         {
             CurrentBuffer.Append(node.Text + " ");
             CurrentBuffer.Append(node.GetChild(0).Text);
             ReformatCode(node.GetChild(0));
         }
 
-        protected static void parseParam(CommonTree node)
+        protected void parseParam(CommonTree node)
         {
             ReformatNode(node.GetChild(0));
             if (node.ChildCount > 1)
                 ReformatNode(node.GetChild(1));
         }
 
-        protected static void parseParams(CommonTree node)
+        protected void parseParams(CommonTree node)
         {
             if (node.ChildCount > 0)
             {
@@ -966,7 +966,7 @@ namespace CodeReformatter.Generators
             }
         }
 
-        protected static void parseMethodDefinition(CommonTree node)
+        protected void parseMethodDefinition(CommonTree node)
         {
             CommonTree blockNode;
             CurrentBuffer.Append(NEWLINE + TAB);
@@ -1004,7 +1004,7 @@ namespace CodeReformatter.Generators
             }
         }
 
-        protected static void parseArguments(CommonTree node)
+        protected void parseArguments(CommonTree node)
         {
             CurrentBuffer.Append("(");
             if (node.ChildCount > 0)
@@ -1020,7 +1020,7 @@ namespace CodeReformatter.Generators
             CurrentBuffer.Append(")");
         }
 
-        protected static void parseArrayAcc(CommonTree node)
+        protected void parseArrayAcc(CommonTree node)
         {
             ReformatNode(node.GetChild(0));
             CurrentBuffer.Append("[");
@@ -1028,14 +1028,14 @@ namespace CodeReformatter.Generators
             CurrentBuffer.Append("]");
         }
 
-        protected static void parseMethodCall(CommonTree node)
+        protected void parseMethodCall(CommonTree node)
         {
             ReformatNode(node.GetChild(0));
             CurrentBuffer.Append(settingObject.SPACE_BETWEEN_METHOD_CALL ? " " : "");
             ReformatNode(node.GetChild(1));
         }
 
-        protected static void parseAssign(CommonTree node)
+        protected void parseAssign(CommonTree node)
         {
             if (settingObject.SPACE_BETWEEN_ASSIGN) CurrentBuffer.Append(" ");
             CurrentBuffer.Append("=");
@@ -1043,13 +1043,13 @@ namespace CodeReformatter.Generators
             ReformatCode(node);
         }
 
-        protected static void parseTypeSpec(CommonTree node)
+        protected void parseTypeSpec(CommonTree node)
         {
             CurrentBuffer.Append((settingObject.SPACE_BETWEEN_TYPE ? " " : "") + ":" + (settingObject.SPACE_BETWEEN_TYPE ? " " : ""));
             CurrentBuffer.Append(fromIdentifier(node.GetChild(0)));
         }
 
-        protected static void parseVariableDefinition(CommonTree node)
+        protected void parseVariableDefinition(CommonTree node)
         {
             if(node.GetChild(0).ChildCount > 0)
                 CurrentBuffer.Append( fromModifiers( node.GetChild(0) ) + " ");
@@ -1063,7 +1063,7 @@ namespace CodeReformatter.Generators
         /// Class definition
         /// </summary>
         /// <param name="tree"></param>
-        protected static void parseClass(CommonTree tree)
+        protected void parseClass(CommonTree tree)
         {
             String st = NEWLINE + TAB;
             if (tree.GetChild(0).ChildCount > 0)
@@ -1094,7 +1094,7 @@ namespace CodeReformatter.Generators
         /// Class Body
         /// </summary>
         /// <param name="tree"></param>
-        protected static void parseTypeBlock(CommonTree tree, Boolean isInterface)
+        protected void parseTypeBlock(CommonTree tree, Boolean isInterface)
         {
             CurrentBuffer.Append((settingObject.NEWLINE_AFTER_CLASS ? NEWLINE : " ") + TAB + "{");
             CurrentTab++;
@@ -1114,7 +1114,7 @@ namespace CodeReformatter.Generators
         /// Append the SEMI ";" at the end of a line
         /// </summary>
         /// <param name="node"></param>
-        protected static void AppendSemiColon(ITree node, Boolean isInterface)
+        protected void AppendSemiColon(ITree node, Boolean isInterface)
         {
             if (
                 (node.Type != ASLexer.IF
@@ -1143,7 +1143,7 @@ namespace CodeReformatter.Generators
         /// </summary>
         /// <param name="tree"></param>
         /// <returns></returns>
-        protected static String fromIdentifier(ITree tree)
+        protected String fromIdentifier(ITree tree)
         {
             tree = (CommonTree)tree;
 
@@ -1162,7 +1162,7 @@ namespace CodeReformatter.Generators
         /// </summary>
         /// <param name="tree"></param>
         /// <returns></returns>
-        protected static String fromModifiers(ITree tree)
+        protected String fromModifiers(ITree tree)
         {
             tree = (CommonTree)tree;
             string[] buff = new string[tree.ChildCount];
@@ -1178,7 +1178,7 @@ namespace CodeReformatter.Generators
         /// </summary>
         /// <param name="tree"></param>
         /// <returns></returns>
-        protected static String fromImplements(ITree tree)
+        protected String fromImplements(ITree tree)
         {
             tree = (CommonTree)tree;
             string[] st = new string[tree.ChildCount];
@@ -1195,7 +1195,7 @@ namespace CodeReformatter.Generators
         /// </summary>
         /// <param name="node"></param>
         /// <returns></returns>
-        protected static String fromDot(CommonTree node)
+        protected String fromDot(CommonTree node)
         {
             String text = "";
             if (node.GetChild(0).ChildCount > 0)
