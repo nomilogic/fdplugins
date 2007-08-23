@@ -1,4 +1,4 @@
-// $ANTLR 3.0 C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g 2007-08-23 01:12:10
+// $ANTLR 3.0 C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g 2007-08-23 10:40:58
 namespace 
 CodeReformatter.Generators.Core
 
@@ -18,119 +18,116 @@ using Stack 		= Antlr.Runtime.Collections.StackList;
 
 public class ASLexer : Lexer 
 {
-    public const int INTERNAL = 105;
+    public const int INTERNAL = 104;
     public const int BLOCK = 19;
-    public const int BOR_ASSIGN = 120;
-    public const int STRING_LITERAL = 70;
-    public const int GT = 134;
-    public const int HEX_DIGIT = 167;
-    public const int GET = 72;
-    public const int UNDEFINED = 155;
-    public const int SL_ASSIGN = 115;
+    public const int BOR_ASSIGN = 119;
+    public const int STRING_LITERAL = 69;
+    public const int GT = 133;
+    public const int HEX_DIGIT = 166;
+    public const int GET = 71;
+    public const int UNDEFINED = 154;
+    public const int SL_ASSIGN = 114;
     public const int PRE_DEC = 36;
-    public const int LOR_ASSIGN = 122;
-    public const int SR = 141;
-    public const int IMPLEMENTS = 68;
-    public const int GE = 136;
-    public const int LBRACK = 106;
-    public const int OCTAL_LITERAL = 161;
-    public const int SL = 140;
+    public const int LOR_ASSIGN = 121;
+    public const int SR = 140;
+    public const int IMPLEMENTS = 67;
+    public const int GE = 135;
+    public const int LBRACK = 105;
+    public const int OCTAL_LITERAL = 160;
+    public const int SL = 139;
     public const int PROPERTY_OR_IDENTIFIER = 27;
     public const int SINGLELINE_COMMENT = 50;
-    public const int UNICODE_ESC = 174;
-    public const int EXTENDS = 66;
+    public const int UNICODE_ESC = 173;
+    public const int EXTENDS = 65;
     public const int NAMESPACE_DEF = 12;
     public const int FOR_IN = 46;
-    public const int NOT_EQUAL = 131;
-    public const int MOD_ASSIGN = 112;
-    public const int LCURLY = 60;
+    public const int NOT_EQUAL = 130;
+    public const int MOD_ASSIGN = 111;
+    public const int LCURLY = 59;
     public const int UNARY_MINUS = 32;
-    public const int LNOT = 151;
+    public const int LNOT = 150;
     public const int ANNOTATION_ASSIGN = 55;
     public const int ACCESSOR_ROLE = 13;
-    public const int E4X_ATTRI = 154;
+    public const int E4X_ATTRI = 153;
     public const int MULTILINE_COMMENT = 51;
-    public const int DEFAULT = 90;
-    public const int STATIC = 108;
-    public const int ML_COMMENT = 165;
-    public const int OCTAL_ESC = 175;
-    public const int STRICT_NOT_EQUAL = 130;
-    public const int Tokens = 189;
-    public const int OCT_DIGIT = 172;
+    public const int DEFAULT = 89;
+    public const int STATIC = 107;
+    public const int ML_COMMENT = 164;
+    public const int OCTAL_ESC = 174;
+    public const int STRICT_NOT_EQUAL = 129;
+    public const int Tokens = 188;
+    public const int OCT_DIGIT = 171;
     public const int ANNOTATIONS = 8;
-    public const int E4X_DESC = 153;
+    public const int E4X_DESC = 152;
     public const int POST_DEC = 34;
-    public const int MOD = 146;
-    public const int DECIMAL_LITERAL = 160;
+    public const int MOD = 145;
+    public const int DECIMAL_LITERAL = 159;
     public const int INTERFACE_DEF = 15;
     public const int MODIFIERS = 11;
     public const int TYPE_SPEC = 18;
-    public const int DIV = 145;
+    public const int DIV = 144;
     public const int UNARY_PLUS = 31;
-    public const int EACH = 92;
+    public const int EACH = 91;
     public const int DEFAULT_XML_NAMESPACE = 49;
-    public const int LAND_ASSIGN = 121;
+    public const int LAND_ASSIGN = 120;
     public const int CONDITION = 21;
-    public const int ASSIGN = 78;
-    public const int NULL = 158;
-    public const int PRIVATE = 103;
-    public const int DO = 95;
+    public const int ASSIGN = 77;
+    public const int NULL = 157;
+    public const int PRIVATE = 102;
+    public const int DO = 94;
     public const int EOF = -1;
-    public const int MINUS = 144;
+    public const int MINUS = 143;
     public const int SWITCH_STATEMENT_LIST = 47;
     public const int PARAM = 17;
     public const int TYPE_BLOCK = 5;
     public const int VIRTUAL_PLACEHOLDER = 54;
     public const int VAR_INIT = 25;
-    public const int INSTANCEOF = 139;
-    public const int FUNCTION = 71;
+    public const int INSTANCEOF = 138;
+    public const int FUNCTION = 70;
     public const int PROPERTY_ACCESS = 28;
     public const int TYPE_NAME = 29;
-    public const int INC = 147;
-    public const int RETURN = 84;
-    public const int HIDDEN = 57;
-    public const int ELSE = 83;
-    public const int EQUAL = 132;
-    public const int HIDDEN_CHANNEL = 58;
-    public const int BXOR_ASSIGN = 119;
-    public const int BSR_ASSIGN = 117;
-    public const int CTRLCHAR_ESC = 173;
-    public const int TRUE = 156;
-    public const int DBL_COLON = 100;
+    public const int INC = 146;
+    public const int RETURN = 83;
+    public const int ELSE = 82;
+    public const int EQUAL = 131;
+    public const int BXOR_ASSIGN = 118;
+    public const int BSR_ASSIGN = 116;
+    public const int CTRLCHAR_ESC = 172;
+    public const int TRUE = 155;
+    public const int DBL_COLON = 99;
     public const int IDENTIFIER = 48;
     public const int COMMENT_ENTRY = 53;
     public const int COMMENT_LIST = 52;
-    public const int SEMI = 62;
-    public const int STRICT_EQUAL = 129;
-    public const int PLUS_ASSIGN = 113;
-    public const int BSR = 142;
+    public const int SEMI = 61;
+    public const int STRICT_EQUAL = 128;
+    public const int PLUS_ASSIGN = 112;
+    public const int BSR = 141;
     public const int OBJECT_FIELD = 40;
     public const int ELEMENT = 38;
-    public const int NEW = 163;
-    public const int DIV_ASSIGN = 111;
-    public const int DELETE = 149;
-    public const int NL = 170;
-    public const int IDENT = 101;
-    public const int BAND_ASSIGN = 118;
-    public const int AS = 138;
+    public const int NEW = 162;
+    public const int DIV_ASSIGN = 110;
+    public const int DELETE = 148;
+    public const int NL = 169;
+    public const int IDENT = 100;
+    public const int BAND_ASSIGN = 117;
+    public const int AS = 137;
     public const int AS2_COMPILATION_UNIT = 56;
-    public const int CASE = 88;
+    public const int CASE = 87;
     public const int OBJECT_LITERAL = 39;
-    public const int RBRACK = 107;
-    public const int LPAREN = 79;
-    public const int PLUS = 143;
-    public const int CLASS = 64;
+    public const int RBRACK = 106;
+    public const int LPAREN = 78;
+    public const int PLUS = 142;
+    public const int CLASS = 63;
     public const int FUNC_DEF = 41;
     public const int ARRAY_ACC = 30;
-    public const int BREAK = 86;
-    public const int WHILE = 94;
-    public const int T188 = 188;
-    public const int CONST = 77;
+    public const int BREAK = 85;
+    public const int WHILE = 93;
+    public const int CONST = 76;
     public const int T187 = 187;
     public const int T186 = 186;
-    public const int RCURLY = 61;
+    public const int RCURLY = 60;
     public const int T185 = 185;
-    public const int INTERFACE = 65;
+    public const int INTERFACE = 64;
     public const int T184 = 184;
     public const int T183 = 183;
     public const int T182 = 182;
@@ -138,73 +135,75 @@ public class ASLexer : Lexer
     public const int PARAMS = 16;
     public const int T180 = 180;
     public const int FOR_INIT = 42;
-    public const int DEC = 148;
-    public const int COMMA = 67;
+    public const int DEC = 147;
+    public const int COMMA = 66;
     public const int COMPILATION_UNIT = 4;
-    public const int LT = 133;
+    public const int LT = 132;
     public const int FOR_ITERATOR = 44;
     public const int T179 = 179;
     public const int ARGUMENTS = 22;
     public const int T178 = 178;
     public const int T177 = 177;
     public const int T176 = 176;
-    public const int LE = 135;
+    public const int T175 = 175;
+    public const int LE = 134;
     public const int FOR_CONDITION = 43;
     public const int CLASS_DEF = 14;
-    public const int MINUS_ASSIGN = 114;
+    public const int MINUS_ASSIGN = 113;
     public const int ENCPS_EXPR = 24;
-    public const int LOR = 124;
-    public const int WITH = 96;
-    public const int REST = 81;
-    public const int INCLUDE_DIRECTIVE = 69;
-    public const int BAND = 128;
-    public const int STAR_ASSIGN = 110;
-    public const int EXPONENT = 168;
-    public const int SL_COMMENT = 164;
-    public const int VAR = 76;
-    public const int WS = 169;
-    public const int PACKAGE = 59;
-    public const int STAR = 98;
-    public const int FOR = 91;
-    public const int FALSE = 157;
-    public const int IMPORT = 63;
-    public const int XML = 97;
-    public const int DOT = 99;
+    public const int LOR = 123;
+    public const int WITH = 95;
+    public const int REST = 80;
+    public const int INCLUDE_DIRECTIVE = 68;
+    public const int BAND = 127;
+    public const int STAR_ASSIGN = 109;
+    public const int EXPONENT = 167;
+    public const int SL_COMMENT = 163;
+    public const int VAR = 75;
+    public const int WS = 168;
+    public const int PACKAGE = 58;
+    public const int STAR = 97;
+    public const int FOR = 90;
+    public const int FALSE = 156;
+    public const int IMPORT = 62;
+    public const int XML = 96;
+    public const int DOT = 98;
     public const int ANNOTATION = 9;
-    public const int QUESTION = 123;
+    public const int QUESTION = 122;
     public const int EXPR_STMNT = 23;
     public const int PRE_INC = 35;
-    public const int BOR = 126;
-    public const int NAMESPACE = 74;
-    public const int BOM = 171;
-    public const int SWITCH = 87;
-    public const int CONTINUE = 85;
+    public const int BOR = 125;
+    public const int NAMESPACE = 73;
+    public const int BOM = 170;
+    public const int SWITCH = 86;
+    public const int CONTINUE = 84;
     public const int ARRAY_LITERAL = 37;
-    public const int USE = 75;
-    public const int SR_ASSIGN = 116;
+    public const int USE = 74;
+    public const int SR_ASSIGN = 115;
+    public const int IMETHOD_DEF = 57;
     public const int ANNOTATION_PARAMS = 10;
-    public const int HEX_LITERAL = 159;
-    public const int IS = 137;
+    public const int HEX_LITERAL = 158;
+    public const int IS = 136;
     public const int METHOD_CALL = 26;
-    public const int LAND = 125;
+    public const int LAND = 124;
     public const int FOR_EACH = 45;
-    public const int IN = 93;
-    public const int DYNAMIC = 109;
+    public const int IN = 92;
+    public const int DYNAMIC = 108;
     public const int METHOD_DEF = 6;
-    public const int BXOR = 127;
+    public const int BXOR = 126;
     public const int VAR_DEF = 7;
     public const int ELIST = 20;
-    public const int IF = 82;
-    public const int TYPEOF = 150;
-    public const int FLOAT_LITERAL = 162;
-    public const int COLON = 89;
-    public const int PUBLIC = 102;
-    public const int SET = 73;
+    public const int IF = 81;
+    public const int TYPEOF = 149;
+    public const int FLOAT_LITERAL = 161;
+    public const int COLON = 88;
+    public const int PUBLIC = 101;
+    public const int SET = 72;
     public const int POST_INC = 33;
-    public const int BNOT = 152;
-    public const int ESC = 166;
-    public const int RPAREN = 80;
-    public const int PROTECTED = 104;
+    public const int BNOT = 151;
+    public const int ESC = 165;
+    public const int RPAREN = 79;
+    public const int PROTECTED = 103;
 
     public ASLexer() 
     {
@@ -221,16 +220,38 @@ public class ASLexer : Lexer
     	get { return "C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g";} 
     }
 
+    // $ANTLR start T175 
+    public void mT175() // throws RecognitionException [2]
+    {
+        try 
+    	{
+            int _type = T175;
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:14:8: ( 'include' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:14:8: 'include'
+            {
+            	Match("include"); 
+
+            
+            }
+    
+            this.type = _type;
+        }
+        finally 
+    	{
+        }
+    }
+    // $ANTLR end T175
+
     // $ANTLR start T176 
     public void mT176() // throws RecognitionException [2]
     {
         try 
     	{
             int _type = T176;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:14:8: ( 'include' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:14:8: 'include'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:15:8: ( 'throw' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:15:8: 'throw'
             {
-            	Match("include"); 
+            	Match("throw"); 
 
             
             }
@@ -249,10 +270,10 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = T177;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:15:8: ( 'throw' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:15:8: 'throw'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:16:8: ( 'try' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:16:8: 'try'
             {
-            	Match("throw"); 
+            	Match("try"); 
 
             
             }
@@ -271,10 +292,10 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = T178;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:16:8: ( 'try' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:16:8: 'try'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:17:8: ( 'catch' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:17:8: 'catch'
             {
-            	Match("try"); 
+            	Match("catch"); 
 
             
             }
@@ -293,10 +314,10 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = T179;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:17:8: ( 'catch' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:17:8: 'catch'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:18:8: ( 'finally' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:18:8: 'finally'
             {
-            	Match("catch"); 
+            	Match("finally"); 
 
             
             }
@@ -315,10 +336,10 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = T180;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:18:8: ( 'finally' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:18:8: 'finally'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:19:8: ( 'void' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:19:8: 'void'
             {
-            	Match("finally"); 
+            	Match("void"); 
 
             
             }
@@ -337,10 +358,10 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = T181;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:19:8: ( 'void' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:19:8: 'void'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:20:8: ( 'final' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:20:8: 'final'
             {
-            	Match("void"); 
+            	Match("final"); 
 
             
             }
@@ -359,10 +380,10 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = T182;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:20:8: ( 'final' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:20:8: 'final'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:21:8: ( 'enumerable' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:21:8: 'enumerable'
             {
-            	Match("final"); 
+            	Match("enumerable"); 
 
             
             }
@@ -381,10 +402,10 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = T183;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:21:8: ( 'enumerable' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:21:8: 'enumerable'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:22:8: ( 'explicit' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:22:8: 'explicit'
             {
-            	Match("enumerable"); 
+            	Match("explicit"); 
 
             
             }
@@ -403,10 +424,10 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = T184;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:22:8: ( 'explicit' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:22:8: 'explicit'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:23:8: ( 'override' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:23:8: 'override'
             {
-            	Match("explicit"); 
+            	Match("override"); 
 
             
             }
@@ -425,10 +446,10 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = T185;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:23:8: ( 'override' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:23:8: 'override'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:24:8: ( 'intrinsic' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:24:8: 'intrinsic'
             {
-            	Match("override"); 
+            	Match("intrinsic"); 
 
             
             }
@@ -447,10 +468,10 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = T186;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:24:8: ( 'intrinsic' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:24:8: 'intrinsic'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:25:8: ( 'or' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:25:8: 'or'
             {
-            	Match("intrinsic"); 
+            	Match("or"); 
 
             
             }
@@ -469,28 +490,6 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = T187;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:25:8: ( 'or' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:25:8: 'or'
-            {
-            	Match("or"); 
-
-            
-            }
-    
-            this.type = _type;
-        }
-        finally 
-    	{
-        }
-    }
-    // $ANTLR end T187
-
-    // $ANTLR start T188 
-    public void mT188() // throws RecognitionException [2]
-    {
-        try 
-    	{
-            int _type = T188;
             // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:26:8: ( 'and' )
             // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:26:8: 'and'
             {
@@ -505,7 +504,7 @@ public class ASLexer : Lexer
     	{
         }
     }
-    // $ANTLR end T188
+    // $ANTLR end T187
 
     // $ANTLR start PACKAGE 
     public void mPACKAGE() // throws RecognitionException [2]
@@ -513,8 +512,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = PACKAGE;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1085:12: ( 'package' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1085:12: 'package'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1122:12: ( 'package' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1122:12: 'package'
             {
             	Match("package"); 
 
@@ -535,8 +534,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = PUBLIC;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1086:11: ( 'public' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1086:11: 'public'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1123:11: ( 'public' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1123:11: 'public'
             {
             	Match("public"); 
 
@@ -557,8 +556,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = PRIVATE;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1087:12: ( 'private' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1087:12: 'private'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1124:12: ( 'private' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1124:12: 'private'
             {
             	Match("private"); 
 
@@ -579,8 +578,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = PROTECTED;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1088:13: ( 'protected' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1088:13: 'protected'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1125:13: ( 'protected' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1125:13: 'protected'
             {
             	Match("protected"); 
 
@@ -601,8 +600,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = INTERNAL;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1089:12: ( 'internal' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1089:12: 'internal'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1126:12: ( 'internal' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1126:12: 'internal'
             {
             	Match("internal"); 
 
@@ -623,8 +622,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = FUNCTION;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1090:12: ( 'function' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1090:12: 'function'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1127:12: ( 'function' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1127:12: 'function'
             {
             	Match("function"); 
 
@@ -645,8 +644,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = EXTENDS;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1091:12: ( 'extends' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1091:12: 'extends'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1128:12: ( 'extends' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1128:12: 'extends'
             {
             	Match("extends"); 
 
@@ -667,8 +666,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = IMPLEMENTS;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1092:14: ( 'implements' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1092:14: 'implements'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1129:14: ( 'implements' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1129:14: 'implements'
             {
             	Match("implements"); 
 
@@ -689,8 +688,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = VAR;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1093:8: ( 'var' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1093:8: 'var'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1130:8: ( 'var' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1130:8: 'var'
             {
             	Match("var"); 
 
@@ -711,8 +710,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = STATIC;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1094:11: ( 'static' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1094:11: 'static'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1131:11: ( 'static' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1131:11: 'static'
             {
             	Match("static"); 
 
@@ -733,8 +732,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = IF;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1095:7: ( 'if' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1095:7: 'if'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1132:7: ( 'if' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1132:7: 'if'
             {
             	Match("if"); 
 
@@ -755,8 +754,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = IMPORT;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1096:11: ( 'import' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1096:11: 'import'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1133:11: ( 'import' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1133:11: 'import'
             {
             	Match("import"); 
 
@@ -777,8 +776,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = FOR;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1097:8: ( 'for' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1097:8: 'for'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1134:8: ( 'for' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1134:8: 'for'
             {
             	Match("for"); 
 
@@ -799,8 +798,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = EACH;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1098:9: ( 'each' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1098:9: 'each'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1135:9: ( 'each' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1135:9: 'each'
             {
             	Match("each"); 
 
@@ -821,8 +820,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = IN;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1099:7: ( 'in' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1099:7: 'in'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1136:7: ( 'in' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1136:7: 'in'
             {
             	Match("in"); 
 
@@ -843,8 +842,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = WHILE;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1100:10: ( 'while' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1100:10: 'while'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1137:10: ( 'while' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1137:10: 'while'
             {
             	Match("while"); 
 
@@ -865,8 +864,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = DO;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1101:7: ( 'do' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1101:7: 'do'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1138:7: ( 'do' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1138:7: 'do'
             {
             	Match("do"); 
 
@@ -887,8 +886,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = SWITCH;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1102:11: ( 'switch' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1102:11: 'switch'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1139:11: ( 'switch' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1139:11: 'switch'
             {
             	Match("switch"); 
 
@@ -909,8 +908,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = CASE;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1103:9: ( 'case' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1103:9: 'case'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1140:9: ( 'case' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1140:9: 'case'
             {
             	Match("case"); 
 
@@ -931,8 +930,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = DEFAULT;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1104:12: ( 'default' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1104:12: 'default'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1141:12: ( 'default' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1141:12: 'default'
             {
             	Match("default"); 
 
@@ -953,8 +952,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = ELSE;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1105:9: ( 'else' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1105:9: 'else'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1142:9: ( 'else' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1142:9: 'else'
             {
             	Match("else"); 
 
@@ -975,8 +974,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = CONST;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1106:10: ( 'const' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1106:10: 'const'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1143:10: ( 'const' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1143:10: 'const'
             {
             	Match("const"); 
 
@@ -997,8 +996,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = CLASS;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1107:10: ( 'class' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1107:10: 'class'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1144:10: ( 'class' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1144:10: 'class'
             {
             	Match("class"); 
 
@@ -1019,8 +1018,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = INTERFACE;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1108:13: ( 'interface' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1108:13: 'interface'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1145:13: ( 'interface' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1145:13: 'interface'
             {
             	Match("interface"); 
 
@@ -1041,8 +1040,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = TRUE;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1109:9: ( 'true' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1109:9: 'true'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1146:9: ( 'true' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1146:9: 'true'
             {
             	Match("true"); 
 
@@ -1063,8 +1062,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = FALSE;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1110:10: ( 'false' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1110:10: 'false'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1147:10: ( 'false' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1147:10: 'false'
             {
             	Match("false"); 
 
@@ -1085,8 +1084,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = DYNAMIC;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1111:12: ( 'dynamic' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1111:12: 'dynamic'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1148:12: ( 'dynamic' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1148:12: 'dynamic'
             {
             	Match("dynamic"); 
 
@@ -1107,8 +1106,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = USE;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1112:8: ( 'use' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1112:8: 'use'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1149:8: ( 'use' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1149:8: 'use'
             {
             	Match("use"); 
 
@@ -1129,8 +1128,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = XML;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1113:8: ( 'xml' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1113:8: 'xml'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1150:8: ( 'xml' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1150:8: 'xml'
             {
             	Match("xml"); 
 
@@ -1151,8 +1150,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = NAMESPACE;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1114:13: ( 'namespace' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1114:13: 'namespace'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1151:13: ( 'namespace' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1151:13: 'namespace'
             {
             	Match("namespace"); 
 
@@ -1173,8 +1172,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = IS;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1115:7: ( 'is' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1115:7: 'is'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1152:7: ( 'is' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1152:7: 'is'
             {
             	Match("is"); 
 
@@ -1195,8 +1194,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = AS;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1116:7: ( 'as' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1116:7: 'as'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1153:7: ( 'as' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1153:7: 'as'
             {
             	Match("as"); 
 
@@ -1217,8 +1216,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = GET;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1117:8: ( 'get' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1117:8: 'get'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1154:8: ( 'get' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1154:8: 'get'
             {
             	Match("get"); 
 
@@ -1239,8 +1238,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = SET;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1118:8: ( 'set' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1118:8: 'set'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1155:8: ( 'set' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1155:8: 'set'
             {
             	Match("set"); 
 
@@ -1261,8 +1260,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = WITH;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1119:9: ( 'with' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1119:9: 'with'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1156:9: ( 'with' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1156:9: 'with'
             {
             	Match("with"); 
 
@@ -1283,8 +1282,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = RETURN;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1120:11: ( 'return' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1120:11: 'return'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1157:11: ( 'return' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1157:11: 'return'
             {
             	Match("return"); 
 
@@ -1305,8 +1304,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = CONTINUE;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1121:12: ( 'continue' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1121:12: 'continue'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1158:12: ( 'continue' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1158:12: 'continue'
             {
             	Match("continue"); 
 
@@ -1327,8 +1326,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = BREAK;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1122:10: ( 'break' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1122:10: 'break'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1159:10: ( 'break' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1159:10: 'break'
             {
             	Match("break"); 
 
@@ -1349,8 +1348,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = NULL;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1123:9: ( 'null' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1123:9: 'null'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1160:9: ( 'null' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1160:9: 'null'
             {
             	Match("null"); 
 
@@ -1371,8 +1370,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = UNDEFINED;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1124:17: ( 'undefined' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1124:17: 'undefined'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1161:17: ( 'undefined' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1161:17: 'undefined'
             {
             	Match("undefined"); 
 
@@ -1393,8 +1392,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = NEW;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1125:8: ( 'new' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1125:8: 'new'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1162:8: ( 'new' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1162:8: 'new'
             {
             	Match("new"); 
 
@@ -1415,8 +1414,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = INSTANCEOF;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1126:14: ( 'instanceof' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1126:14: 'instanceof'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1163:14: ( 'instanceof' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1163:14: 'instanceof'
             {
             	Match("instanceof"); 
 
@@ -1437,8 +1436,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = DELETE;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1127:10: ( 'delete' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1127:10: 'delete'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1164:10: ( 'delete' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1164:10: 'delete'
             {
             	Match("delete"); 
 
@@ -1459,8 +1458,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = TYPEOF;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1128:10: ( 'typeof' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1128:10: 'typeof'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1165:10: ( 'typeof' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1165:10: 'typeof'
             {
             	Match("typeof"); 
 
@@ -1481,8 +1480,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = QUESTION;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1131:13: ( '?' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1131:13: '?'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1168:13: ( '?' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1168:13: '?'
             {
             	Match('?'); 
             
@@ -1502,8 +1501,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = LPAREN;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1132:12: ( '(' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1132:12: '('
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1169:12: ( '(' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1169:12: '('
             {
             	Match('('); 
             
@@ -1523,8 +1522,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = RPAREN;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1133:12: ( ')' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1133:12: ')'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1170:12: ( ')' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1170:12: ')'
             {
             	Match(')'); 
             
@@ -1544,8 +1543,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = LBRACK;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1134:12: ( '[' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1134:12: '['
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1171:12: ( '[' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1171:12: '['
             {
             	Match('['); 
             
@@ -1565,8 +1564,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = RBRACK;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1135:12: ( ']' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1135:12: ']'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1172:12: ( ']' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1172:12: ']'
             {
             	Match(']'); 
             
@@ -1586,8 +1585,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = LCURLY;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1136:12: ( '{' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1136:12: '{'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1173:12: ( '{' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1173:12: '{'
             {
             	Match('{'); 
             
@@ -1607,8 +1606,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = RCURLY;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1137:12: ( '}' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1137:12: '}'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1174:12: ( '}' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1174:12: '}'
             {
             	Match('}'); 
             
@@ -1628,8 +1627,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = COLON;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1138:11: ( ':' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1138:11: ':'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1175:11: ( ':' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1175:11: ':'
             {
             	Match(':'); 
             
@@ -1649,8 +1648,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = DBL_COLON;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1139:14: ( '::' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1139:14: '::'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1176:14: ( '::' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1176:14: '::'
             {
             	Match("::"); 
 
@@ -1671,8 +1670,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = COMMA;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1140:11: ( ',' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1140:11: ','
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1177:11: ( ',' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1177:11: ','
             {
             	Match(','); 
             
@@ -1692,8 +1691,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = ASSIGN;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1141:12: ( '=' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1141:12: '='
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1178:12: ( '=' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1178:12: '='
             {
             	Match('='); 
             
@@ -1713,8 +1712,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = EQUAL;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1142:11: ( '==' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1142:11: '=='
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1179:11: ( '==' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1179:11: '=='
             {
             	Match("=="); 
 
@@ -1735,8 +1734,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = STRICT_EQUAL;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1143:17: ( '===' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1143:17: '==='
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1180:17: ( '===' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1180:17: '==='
             {
             	Match("==="); 
 
@@ -1757,8 +1756,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = LNOT;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1144:10: ( '!' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1144:10: '!'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1181:10: ( '!' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1181:10: '!'
             {
             	Match('!'); 
             
@@ -1778,8 +1777,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = BNOT;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1145:10: ( '~' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1145:10: '~'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1182:10: ( '~' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1182:10: '~'
             {
             	Match('~'); 
             
@@ -1799,8 +1798,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = NOT_EQUAL;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1146:14: ( '!=' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1146:14: '!='
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1183:14: ( '!=' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1183:14: '!='
             {
             	Match("!="); 
 
@@ -1821,8 +1820,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = STRICT_NOT_EQUAL;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1147:20: ( '!==' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1147:20: '!=='
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1184:20: ( '!==' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1184:20: '!=='
             {
             	Match("!=="); 
 
@@ -1843,8 +1842,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = DIV;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1148:9: ( '/' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1148:9: '/'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1185:9: ( '/' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1185:9: '/'
             {
             	Match('/'); 
             
@@ -1864,8 +1863,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = DIV_ASSIGN;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1149:15: ( '/=' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1149:15: '/='
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1186:15: ( '/=' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1186:15: '/='
             {
             	Match("/="); 
 
@@ -1886,8 +1885,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = PLUS;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1150:10: ( '+' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1150:10: '+'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1187:10: ( '+' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1187:10: '+'
             {
             	Match('+'); 
             
@@ -1907,8 +1906,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = PLUS_ASSIGN;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1151:16: ( '+=' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1151:16: '+='
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1188:16: ( '+=' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1188:16: '+='
             {
             	Match("+="); 
 
@@ -1929,8 +1928,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = INC;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1152:9: ( '++' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1152:9: '++'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1189:9: ( '++' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1189:9: '++'
             {
             	Match("++"); 
 
@@ -1951,8 +1950,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = MINUS;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1153:11: ( '-' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1153:11: '-'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1190:11: ( '-' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1190:11: '-'
             {
             	Match('-'); 
             
@@ -1972,8 +1971,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = MINUS_ASSIGN;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1154:17: ( '-=' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1154:17: '-='
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1191:17: ( '-=' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1191:17: '-='
             {
             	Match("-="); 
 
@@ -1994,8 +1993,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = DEC;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1155:9: ( '--' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1155:9: '--'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1192:9: ( '--' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1192:9: '--'
             {
             	Match("--"); 
 
@@ -2016,8 +2015,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = STAR;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1156:10: ( '*' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1156:10: '*'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1193:10: ( '*' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1193:10: '*'
             {
             	Match('*'); 
             
@@ -2037,8 +2036,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = STAR_ASSIGN;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1157:16: ( '*=' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1157:16: '*='
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1194:16: ( '*=' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1194:16: '*='
             {
             	Match("*="); 
 
@@ -2059,8 +2058,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = MOD;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1158:9: ( '%' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1158:9: '%'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1195:9: ( '%' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1195:9: '%'
             {
             	Match('%'); 
             
@@ -2080,8 +2079,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = MOD_ASSIGN;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1159:15: ( '%=' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1159:15: '%='
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1196:15: ( '%=' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1196:15: '%='
             {
             	Match("%="); 
 
@@ -2102,8 +2101,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = SR;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1160:8: ( '>>' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1160:8: '>>'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1197:8: ( '>>' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1197:8: '>>'
             {
             	Match(">>"); 
 
@@ -2124,8 +2123,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = SR_ASSIGN;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1161:14: ( '>>=' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1161:14: '>>='
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1198:14: ( '>>=' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1198:14: '>>='
             {
             	Match(">>="); 
 
@@ -2146,8 +2145,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = BSR;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1162:9: ( '>>>' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1162:9: '>>>'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1199:9: ( '>>>' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1199:9: '>>>'
             {
             	Match(">>>"); 
 
@@ -2168,8 +2167,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = BSR_ASSIGN;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1163:15: ( '>>>=' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1163:15: '>>>='
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1200:15: ( '>>>=' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1200:15: '>>>='
             {
             	Match(">>>="); 
 
@@ -2190,8 +2189,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = GE;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1164:8: ( '>=' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1164:8: '>='
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1201:8: ( '>=' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1201:8: '>='
             {
             	Match(">="); 
 
@@ -2212,8 +2211,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = GT;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1165:8: ( '>' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1165:8: '>'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1202:8: ( '>' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1202:8: '>'
             {
             	Match('>'); 
             
@@ -2233,8 +2232,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = SL;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1166:8: ( '<<' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1166:8: '<<'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1203:8: ( '<<' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1203:8: '<<'
             {
             	Match("<<"); 
 
@@ -2255,8 +2254,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = SL_ASSIGN;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1167:14: ( '<<=' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1167:14: '<<='
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1204:14: ( '<<=' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1204:14: '<<='
             {
             	Match("<<="); 
 
@@ -2277,8 +2276,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = LE;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1168:8: ( '<=' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1168:8: '<='
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1205:8: ( '<=' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1205:8: '<='
             {
             	Match("<="); 
 
@@ -2299,8 +2298,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = LT;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1169:8: ( '<' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1169:8: '<'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1206:8: ( '<' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1206:8: '<'
             {
             	Match('<'); 
             
@@ -2320,8 +2319,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = BXOR;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1170:10: ( '^' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1170:10: '^'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1207:10: ( '^' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1207:10: '^'
             {
             	Match('^'); 
             
@@ -2341,8 +2340,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = BXOR_ASSIGN;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1171:16: ( '^=' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1171:16: '^='
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1208:16: ( '^=' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1208:16: '^='
             {
             	Match("^="); 
 
@@ -2363,8 +2362,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = BOR;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1172:9: ( '|' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1172:9: '|'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1209:9: ( '|' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1209:9: '|'
             {
             	Match('|'); 
             
@@ -2384,8 +2383,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = BOR_ASSIGN;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1173:15: ( '|=' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1173:15: '|='
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1210:15: ( '|=' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1210:15: '|='
             {
             	Match("|="); 
 
@@ -2406,8 +2405,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = LOR;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1174:9: ( '||' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1174:9: '||'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1211:9: ( '||' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1211:9: '||'
             {
             	Match("||"); 
 
@@ -2428,8 +2427,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = BAND;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1175:10: ( '&' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1175:10: '&'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1212:10: ( '&' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1212:10: '&'
             {
             	Match('&'); 
             
@@ -2449,8 +2448,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = BAND_ASSIGN;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1176:16: ( '&=' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1176:16: '&='
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1213:16: ( '&=' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1213:16: '&='
             {
             	Match("&="); 
 
@@ -2471,8 +2470,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = LAND;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1177:10: ( '&&' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1177:10: '&&'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1214:10: ( '&&' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1214:10: '&&'
             {
             	Match("&&"); 
 
@@ -2493,8 +2492,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = LAND_ASSIGN;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1178:16: ( '&&=' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1178:16: '&&='
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1215:16: ( '&&=' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1215:16: '&&='
             {
             	Match("&&="); 
 
@@ -2515,8 +2514,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = LOR_ASSIGN;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1179:15: ( '||=' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1179:15: '||='
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1216:15: ( '||=' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1216:15: '||='
             {
             	Match("||="); 
 
@@ -2537,8 +2536,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = E4X_ATTRI;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1180:14: ( '@' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1180:14: '@'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1217:14: ( '@' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1217:14: '@'
             {
             	Match('@'); 
             
@@ -2558,8 +2557,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = SEMI;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1181:10: ( ';' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1181:10: ';'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1218:10: ( ';' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1218:10: ';'
             {
             	Match(';'); 
             
@@ -2579,8 +2578,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = DOT;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1184:8: ( '.' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1184:8: '.'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1221:8: ( '.' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1221:8: '.'
             {
             	Match('.'); 
             
@@ -2600,8 +2599,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = E4X_DESC;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1185:12: ( '..' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1185:12: '..'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1222:12: ( '..' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1222:12: '..'
             {
             	Match(".."); 
 
@@ -2622,8 +2621,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = REST;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1186:9: ( '...' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1186:9: '...'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1223:9: ( '...' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1223:9: '...'
             {
             	Match("..."); 
 
@@ -2644,8 +2643,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = IDENT;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1189:4: ( ( 'A' .. 'Z' | 'a' .. 'z' | '_' | '$' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '$' )* )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1189:4: ( 'A' .. 'Z' | 'a' .. 'z' | '_' | '$' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '$' )*
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1226:4: ( ( 'A' .. 'Z' | 'a' .. 'z' | '_' | '$' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '$' )* )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1226:4: ( 'A' .. 'Z' | 'a' .. 'z' | '_' | '$' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '$' )*
             {
             	if ( input.LA(1) == '$' || (input.LA(1) >= 'A' && input.LA(1) <= 'Z') || input.LA(1) == '_' || (input.LA(1) >= 'a' && input.LA(1) <= 'z') ) 
             	{
@@ -2659,7 +2658,7 @@ public class ASLexer : Lexer
             	    Recover(mse);    throw mse;
             	}
 
-            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1189:38: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '$' )*
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1226:38: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '$' )*
             	do 
             	{
             	    int alt1 = 2;
@@ -2717,7 +2716,7 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = STRING_LITERAL;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1193:4: ( '\"' ( ESC | ~ ( '\"' | '\\\\' | '\\n' | '\\r' ) )* '\"' | '\\'' ( ESC | ~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) )* '\\'' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1230:4: ( '\"' ( ESC | ~ ( '\"' | '\\\\' | '\\n' | '\\r' ) )* '\"' | '\\'' ( ESC | ~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) )* '\\'' )
             int alt4 = 2;
             int LA4_0 = input.LA(1);
             
@@ -2732,17 +2731,17 @@ public class ASLexer : Lexer
             else 
             {
                 NoViableAltException nvae_d4s0 =
-                    new NoViableAltException("1192:1: STRING_LITERAL : ( '\"' ( ESC | ~ ( '\"' | '\\\\' | '\\n' | '\\r' ) )* '\"' | '\\'' ( ESC | ~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) )* '\\'' );", 4, 0, input);
+                    new NoViableAltException("1229:1: STRING_LITERAL : ( '\"' ( ESC | ~ ( '\"' | '\\\\' | '\\n' | '\\r' ) )* '\"' | '\\'' ( ESC | ~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) )* '\\'' );", 4, 0, input);
             
                 throw nvae_d4s0;
             }
             switch (alt4) 
             {
                 case 1 :
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1193:4: '\"' ( ESC | ~ ( '\"' | '\\\\' | '\\n' | '\\r' ) )* '\"'
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1230:4: '\"' ( ESC | ~ ( '\"' | '\\\\' | '\\n' | '\\r' ) )* '\"'
                     {
                     	Match('\"'); 
-                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1193:8: ( ESC | ~ ( '\"' | '\\\\' | '\\n' | '\\r' ) )*
+                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1230:8: ( ESC | ~ ( '\"' | '\\\\' | '\\n' | '\\r' ) )*
                     	do 
                     	{
                     	    int alt2 = 3;
@@ -2761,14 +2760,14 @@ public class ASLexer : Lexer
                     	    switch (alt2) 
                     		{
                     			case 1 :
-                    			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1193:9: ESC
+                    			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1230:9: ESC
                     			    {
                     			    	mESC(); 
                     			    
                     			    }
                     			    break;
                     			case 2 :
-                    			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1193:13: ~ ( '\"' | '\\\\' | '\\n' | '\\r' )
+                    			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1230:13: ~ ( '\"' | '\\\\' | '\\n' | '\\r' )
                     			    {
                     			    	if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '\t') || (input.LA(1) >= '\u000B' && input.LA(1) <= '\f') || (input.LA(1) >= '\u000E' && input.LA(1) <= '!') || (input.LA(1) >= '#' && input.LA(1) <= '[') || (input.LA(1) >= ']' && input.LA(1) <= '\uFFFE') ) 
                     			    	{
@@ -2799,10 +2798,10 @@ public class ASLexer : Lexer
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1194:4: '\\'' ( ESC | ~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) )* '\\''
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1231:4: '\\'' ( ESC | ~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) )* '\\''
                     {
                     	Match('\''); 
-                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1194:9: ( ESC | ~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) )*
+                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1231:9: ( ESC | ~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) )*
                     	do 
                     	{
                     	    int alt3 = 3;
@@ -2821,14 +2820,14 @@ public class ASLexer : Lexer
                     	    switch (alt3) 
                     		{
                     			case 1 :
-                    			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1194:10: ESC
+                    			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1231:10: ESC
                     			    {
                     			    	mESC(); 
                     			    
                     			    }
                     			    break;
                     			case 2 :
-                    			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1194:14: ~ ( '\\'' | '\\\\' | '\\n' | '\\r' )
+                    			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1231:14: ~ ( '\\'' | '\\\\' | '\\n' | '\\r' )
                     			    {
                     			    	if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '\t') || (input.LA(1) >= '\u000B' && input.LA(1) <= '\f') || (input.LA(1) >= '\u000E' && input.LA(1) <= '&') || (input.LA(1) >= '(' && input.LA(1) <= '[') || (input.LA(1) >= ']' && input.LA(1) <= '\uFFFE') ) 
                     			    	{
@@ -2874,8 +2873,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = HEX_LITERAL;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1197:15: ( '0' ( 'x' | 'X' ) ( HEX_DIGIT )+ )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1197:15: '0' ( 'x' | 'X' ) ( HEX_DIGIT )+
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1234:15: ( '0' ( 'x' | 'X' ) ( HEX_DIGIT )+ )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1234:15: '0' ( 'x' | 'X' ) ( HEX_DIGIT )+
             {
             	Match('0'); 
             	if ( input.LA(1) == 'X' || input.LA(1) == 'x' ) 
@@ -2890,7 +2889,7 @@ public class ASLexer : Lexer
             	    Recover(mse);    throw mse;
             	}
 
-            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1197:29: ( HEX_DIGIT )+
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1234:29: ( HEX_DIGIT )+
             	int cnt5 = 0;
             	do 
             	{
@@ -2906,7 +2905,7 @@ public class ASLexer : Lexer
             	    switch (alt5) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1197:29: HEX_DIGIT
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1234:29: HEX_DIGIT
             			    {
             			    	mHEX_DIGIT(); 
             			    
@@ -2942,10 +2941,10 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = DECIMAL_LITERAL;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1199:19: ( ( '0' | '1' .. '9' ( '0' .. '9' )* ) )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1199:19: ( '0' | '1' .. '9' ( '0' .. '9' )* )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1236:19: ( ( '0' | '1' .. '9' ( '0' .. '9' )* ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1236:19: ( '0' | '1' .. '9' ( '0' .. '9' )* )
             {
-            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1199:19: ( '0' | '1' .. '9' ( '0' .. '9' )* )
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1236:19: ( '0' | '1' .. '9' ( '0' .. '9' )* )
             	int alt7 = 2;
             	int LA7_0 = input.LA(1);
             	
@@ -2960,24 +2959,24 @@ public class ASLexer : Lexer
             	else 
             	{
             	    NoViableAltException nvae_d7s0 =
-            	        new NoViableAltException("1199:19: ( '0' | '1' .. '9' ( '0' .. '9' )* )", 7, 0, input);
+            	        new NoViableAltException("1236:19: ( '0' | '1' .. '9' ( '0' .. '9' )* )", 7, 0, input);
             	
             	    throw nvae_d7s0;
             	}
             	switch (alt7) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1199:20: '0'
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1236:20: '0'
             	        {
             	        	Match('0'); 
             	        
             	        }
             	        break;
             	    case 2 :
-            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1199:26: '1' .. '9' ( '0' .. '9' )*
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1236:26: '1' .. '9' ( '0' .. '9' )*
             	        {
             	        	MatchRange('1','9'); 
-            	        	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1199:35: ( '0' .. '9' )*
+            	        	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1236:35: ( '0' .. '9' )*
             	        	do 
             	        	{
             	        	    int alt6 = 2;
@@ -2992,7 +2991,7 @@ public class ASLexer : Lexer
             	        	    switch (alt6) 
             	        		{
             	        			case 1 :
-            	        			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1199:35: '0' .. '9'
+            	        			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1236:35: '0' .. '9'
             	        			    {
             	        			    	MatchRange('0','9'); 
             	        			    
@@ -3030,11 +3029,11 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = OCTAL_LITERAL;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1201:17: ( '0' ( '0' .. '7' )+ )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1201:17: '0' ( '0' .. '7' )+
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1238:17: ( '0' ( '0' .. '7' )+ )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1238:17: '0' ( '0' .. '7' )+
             {
             	Match('0'); 
-            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1201:21: ( '0' .. '7' )+
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1238:21: ( '0' .. '7' )+
             	int cnt8 = 0;
             	do 
             	{
@@ -3050,7 +3049,7 @@ public class ASLexer : Lexer
             	    switch (alt8) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1201:22: '0' .. '7'
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1238:22: '0' .. '7'
             			    {
             			    	MatchRange('0','7'); 
             			    
@@ -3086,7 +3085,7 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = FLOAT_LITERAL;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1204:9: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1241:9: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? )
             int alt14 = 2;
             int LA14_0 = input.LA(1);
             
@@ -3101,16 +3100,16 @@ public class ASLexer : Lexer
             else 
             {
                 NoViableAltException nvae_d14s0 =
-                    new NoViableAltException("1203:1: FLOAT_LITERAL : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? );", 14, 0, input);
+                    new NoViableAltException("1240:1: FLOAT_LITERAL : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? );", 14, 0, input);
             
                 throw nvae_d14s0;
             }
             switch (alt14) 
             {
                 case 1 :
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1204:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1241:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
                     {
-                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1204:9: ( '0' .. '9' )+
+                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1241:9: ( '0' .. '9' )+
                     	int cnt9 = 0;
                     	do 
                     	{
@@ -3126,7 +3125,7 @@ public class ASLexer : Lexer
                     	    switch (alt9) 
                     		{
                     			case 1 :
-                    			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1204:10: '0' .. '9'
+                    			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1241:10: '0' .. '9'
                     			    {
                     			    	MatchRange('0','9'); 
                     			    
@@ -3146,7 +3145,7 @@ public class ASLexer : Lexer
                     		;	// Stops C# compiler whinging that label 'loop9' has no statements
 
                     	Match('.'); 
-                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1204:25: ( '0' .. '9' )*
+                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1241:25: ( '0' .. '9' )*
                     	do 
                     	{
                     	    int alt10 = 2;
@@ -3161,7 +3160,7 @@ public class ASLexer : Lexer
                     	    switch (alt10) 
                     		{
                     			case 1 :
-                    			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1204:26: '0' .. '9'
+                    			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1241:26: '0' .. '9'
                     			    {
                     			    	MatchRange('0','9'); 
                     			    
@@ -3176,7 +3175,7 @@ public class ASLexer : Lexer
                     	loop10:
                     		;	// Stops C# compiler whinging that label 'loop10' has no statements
 
-                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1204:37: ( EXPONENT )?
+                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1241:37: ( EXPONENT )?
                     	int alt11 = 2;
                     	int LA11_0 = input.LA(1);
                     	
@@ -3187,7 +3186,7 @@ public class ASLexer : Lexer
                     	switch (alt11) 
                     	{
                     	    case 1 :
-                    	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1204:37: EXPONENT
+                    	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1241:37: EXPONENT
                     	        {
                     	        	mEXPONENT(); 
                     	        
@@ -3200,10 +3199,10 @@ public class ASLexer : Lexer
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1205:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1242:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
                     {
                     	Match('.'); 
-                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1205:13: ( '0' .. '9' )+
+                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1242:13: ( '0' .. '9' )+
                     	int cnt12 = 0;
                     	do 
                     	{
@@ -3219,7 +3218,7 @@ public class ASLexer : Lexer
                     	    switch (alt12) 
                     		{
                     			case 1 :
-                    			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1205:14: '0' .. '9'
+                    			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1242:14: '0' .. '9'
                     			    {
                     			    	MatchRange('0','9'); 
                     			    
@@ -3238,7 +3237,7 @@ public class ASLexer : Lexer
                     	loop12:
                     		;	// Stops C# compiler whinging that label 'loop12' has no statements
 
-                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1205:25: ( EXPONENT )?
+                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1242:25: ( EXPONENT )?
                     	int alt13 = 2;
                     	int LA13_0 = input.LA(1);
                     	
@@ -3249,7 +3248,7 @@ public class ASLexer : Lexer
                     	switch (alt13) 
                     	{
                     	    case 1 :
-                    	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1205:25: EXPONENT
+                    	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1242:25: EXPONENT
                     	        {
                     	        	mEXPONENT(); 
                     	        
@@ -3277,10 +3276,10 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = WS;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1210:6: ( ( ' ' | '\\t' | '\\f' )+ )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1210:6: ( ' ' | '\\t' | '\\f' )+
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1247:6: ( ( ' ' | '\\t' | '\\f' )+ )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1247:6: ( ' ' | '\\t' | '\\f' )+
             {
-            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1210:6: ( ' ' | '\\t' | '\\f' )+
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1247:6: ( ' ' | '\\t' | '\\f' )+
             	int cnt15 = 0;
             	do 
             	{
@@ -3344,10 +3343,10 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = NL;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1218:4: ( ( '\\r' '\\n' | '\\r' | '\\n' ) )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1218:4: ( '\\r' '\\n' | '\\r' | '\\n' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1255:4: ( ( '\\r' '\\n' | '\\r' | '\\n' ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1255:4: ( '\\r' '\\n' | '\\r' | '\\n' )
             {
-            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1218:4: ( '\\r' '\\n' | '\\r' | '\\n' )
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1255:4: ( '\\r' '\\n' | '\\r' | '\\n' )
             	int alt16 = 3;
             	int LA16_0 = input.LA(1);
             	
@@ -3370,14 +3369,14 @@ public class ASLexer : Lexer
             	else 
             	{
             	    NoViableAltException nvae_d16s0 =
-            	        new NoViableAltException("1218:4: ( '\\r' '\\n' | '\\r' | '\\n' )", 16, 0, input);
+            	        new NoViableAltException("1255:4: ( '\\r' '\\n' | '\\r' | '\\n' )", 16, 0, input);
             	
             	    throw nvae_d16s0;
             	}
             	switch (alt16) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1219:4: '\\r' '\\n'
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1256:4: '\\r' '\\n'
             	        {
             	        	Match('\r'); 
             	        	Match('\n'); 
@@ -3385,14 +3384,14 @@ public class ASLexer : Lexer
             	        }
             	        break;
             	    case 2 :
-            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1220:5: '\\r'
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1257:5: '\\r'
             	        {
             	        	Match('\r'); 
             	        
             	        }
             	        break;
             	    case 3 :
-            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1221:5: '\\n'
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1258:5: '\\n'
             	        {
             	        	Match('\n'); 
             	        
@@ -3419,10 +3418,10 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = BOM;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1227:7: ( ( '\\u00EF' '\\u00BB' '\\u00BF' | '\\uFEFF' ) )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1227:7: ( '\\u00EF' '\\u00BB' '\\u00BF' | '\\uFEFF' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1264:7: ( ( '\\u00EF' '\\u00BB' '\\u00BF' | '\\uFEFF' ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1264:7: ( '\\u00EF' '\\u00BB' '\\u00BF' | '\\uFEFF' )
             {
-            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1227:7: ( '\\u00EF' '\\u00BB' '\\u00BF' | '\\uFEFF' )
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1264:7: ( '\\u00EF' '\\u00BB' '\\u00BF' | '\\uFEFF' )
             	int alt17 = 2;
             	int LA17_0 = input.LA(1);
             	
@@ -3437,14 +3436,14 @@ public class ASLexer : Lexer
             	else 
             	{
             	    NoViableAltException nvae_d17s0 =
-            	        new NoViableAltException("1227:7: ( '\\u00EF' '\\u00BB' '\\u00BF' | '\\uFEFF' )", 17, 0, input);
+            	        new NoViableAltException("1264:7: ( '\\u00EF' '\\u00BB' '\\u00BF' | '\\uFEFF' )", 17, 0, input);
             	
             	    throw nvae_d17s0;
             	}
             	switch (alt17) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1227:9: '\\u00EF' '\\u00BB' '\\u00BF'
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1264:9: '\\u00EF' '\\u00BB' '\\u00BF'
             	        {
             	        	Match('\u00EF'); 
             	        	Match('\u00BB'); 
@@ -3453,7 +3452,7 @@ public class ASLexer : Lexer
             	        }
             	        break;
             	    case 2 :
-            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1228:5: '\\uFEFF'
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1265:5: '\\uFEFF'
             	        {
             	        	Match('\uFEFF'); 
             	        
@@ -3480,8 +3479,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = INCLUDE_DIRECTIVE;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1234:4: ( '#include' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1234:4: '#include'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1271:4: ( '#include' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1271:4: '#include'
             {
             	Match("#include"); 
 
@@ -3502,12 +3501,12 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = SL_COMMENT;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1239:4: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\n' | '\\r' ( '\\n' )? )? )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1239:4: '//' (~ ( '\\n' | '\\r' ) )* ( '\\n' | '\\r' ( '\\n' )? )?
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1276:4: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\n' | '\\r' ( '\\n' )? )? )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1276:4: '//' (~ ( '\\n' | '\\r' ) )* ( '\\n' | '\\r' ( '\\n' )? )?
             {
             	Match("//"); 
 
-            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1239:9: (~ ( '\\n' | '\\r' ) )*
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1276:9: (~ ( '\\n' | '\\r' ) )*
             	do 
             	{
             	    int alt18 = 2;
@@ -3522,7 +3521,7 @@ public class ASLexer : Lexer
             	    switch (alt18) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1239:10: ~ ( '\\n' | '\\r' )
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1276:10: ~ ( '\\n' | '\\r' )
             			    {
             			    	if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '\t') || (input.LA(1) >= '\u000B' && input.LA(1) <= '\f') || (input.LA(1) >= '\u000E' && input.LA(1) <= '\uFFFE') ) 
             			    	{
@@ -3548,7 +3547,7 @@ public class ASLexer : Lexer
             	loop18:
             		;	// Stops C# compiler whinging that label 'loop18' has no statements
 
-            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1239:25: ( '\\n' | '\\r' ( '\\n' )? )?
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1276:25: ( '\\n' | '\\r' ( '\\n' )? )?
             	int alt20 = 3;
             	int LA20_0 = input.LA(1);
             	
@@ -3563,17 +3562,17 @@ public class ASLexer : Lexer
             	switch (alt20) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1239:26: '\\n'
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1276:26: '\\n'
             	        {
             	        	Match('\n'); 
             	        
             	        }
             	        break;
             	    case 2 :
-            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1239:31: '\\r' ( '\\n' )?
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1276:31: '\\r' ( '\\n' )?
             	        {
             	        	Match('\r'); 
-            	        	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1239:35: ( '\\n' )?
+            	        	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1276:35: ( '\\n' )?
             	        	int alt19 = 2;
             	        	int LA19_0 = input.LA(1);
             	        	
@@ -3584,7 +3583,7 @@ public class ASLexer : Lexer
             	        	switch (alt19) 
             	        	{
             	        	    case 1 :
-            	        	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1239:36: '\\n'
+            	        	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1276:36: '\\n'
             	        	        {
             	        	        	Match('\n'); 
             	        	        
@@ -3617,12 +3616,12 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = ML_COMMENT;
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1244:4: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1244:4: '/*' ( options {greedy=false; } : . )* '*/'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1281:4: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1281:4: '/*' ( options {greedy=false; } : . )* '*/'
             {
             	Match("/*"); 
 
-            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1244:9: ( options {greedy=false; } : . )*
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1281:9: ( options {greedy=false; } : . )*
             	do 
             	{
             	    int alt21 = 2;
@@ -3652,7 +3651,7 @@ public class ASLexer : Lexer
             	    switch (alt21) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1244:37: .
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1281:37: .
             			    {
             			    	MatchAny(); 
             			    
@@ -3686,8 +3685,8 @@ public class ASLexer : Lexer
     {
         try 
     	{
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1249:4: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1249:4: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1286:4: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1286:4: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
             {
             	if ( input.LA(1) == 'E' || input.LA(1) == 'e' ) 
             	{
@@ -3701,7 +3700,7 @@ public class ASLexer : Lexer
             	    Recover(mse);    throw mse;
             	}
 
-            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1249:14: ( '+' | '-' )?
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1286:14: ( '+' | '-' )?
             	int alt22 = 2;
             	int LA22_0 = input.LA(1);
             	
@@ -3732,7 +3731,7 @@ public class ASLexer : Lexer
             	
             	}
 
-            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1249:25: ( '0' .. '9' )+
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1286:25: ( '0' .. '9' )+
             	int cnt23 = 0;
             	do 
             	{
@@ -3748,7 +3747,7 @@ public class ASLexer : Lexer
             	    switch (alt23) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1249:26: '0' .. '9'
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1286:26: '0' .. '9'
             			    {
             			    	MatchRange('0','9'); 
             			    
@@ -3782,8 +3781,8 @@ public class ASLexer : Lexer
     {
         try 
     	{
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1252:4: ( ( '0' .. '9' | 'A' .. 'F' | 'a' .. 'f' ) )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1252:4: ( '0' .. '9' | 'A' .. 'F' | 'a' .. 'f' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1289:4: ( ( '0' .. '9' | 'A' .. 'F' | 'a' .. 'f' ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1289:4: ( '0' .. '9' | 'A' .. 'F' | 'a' .. 'f' )
             {
             	if ( (input.LA(1) >= '0' && input.LA(1) <= '9') || (input.LA(1) >= 'A' && input.LA(1) <= 'F') || (input.LA(1) >= 'a' && input.LA(1) <= 'f') ) 
             	{
@@ -3812,8 +3811,8 @@ public class ASLexer : Lexer
     {
         try 
     	{
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1256:4: ( '0' .. '7' )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1256:4: '0' .. '7'
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1293:4: ( '0' .. '7' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1293:4: '0' .. '7'
             {
             	MatchRange('0','7'); 
             
@@ -3831,7 +3830,7 @@ public class ASLexer : Lexer
     {
         try 
     	{
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1260:6: ( CTRLCHAR_ESC | UNICODE_ESC | OCTAL_ESC )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1297:6: ( CTRLCHAR_ESC | UNICODE_ESC | OCTAL_ESC )
             int alt24 = 3;
             int LA24_0 = input.LA(1);
             
@@ -3870,7 +3869,7 @@ public class ASLexer : Lexer
                     break;
                 	default:
                 	    NoViableAltException nvae_d24s1 =
-                	        new NoViableAltException("1259:10: fragment ESC : ( CTRLCHAR_ESC | UNICODE_ESC | OCTAL_ESC );", 24, 1, input);
+                	        new NoViableAltException("1296:10: fragment ESC : ( CTRLCHAR_ESC | UNICODE_ESC | OCTAL_ESC );", 24, 1, input);
                 
                 	    throw nvae_d24s1;
                 }
@@ -3879,28 +3878,28 @@ public class ASLexer : Lexer
             else 
             {
                 NoViableAltException nvae_d24s0 =
-                    new NoViableAltException("1259:10: fragment ESC : ( CTRLCHAR_ESC | UNICODE_ESC | OCTAL_ESC );", 24, 0, input);
+                    new NoViableAltException("1296:10: fragment ESC : ( CTRLCHAR_ESC | UNICODE_ESC | OCTAL_ESC );", 24, 0, input);
             
                 throw nvae_d24s0;
             }
             switch (alt24) 
             {
                 case 1 :
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1260:6: CTRLCHAR_ESC
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1297:6: CTRLCHAR_ESC
                     {
                     	mCTRLCHAR_ESC(); 
                     
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1261:6: UNICODE_ESC
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1298:6: UNICODE_ESC
                     {
                     	mUNICODE_ESC(); 
                     
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1262:6: OCTAL_ESC
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1299:6: OCTAL_ESC
                     {
                     	mOCTAL_ESC(); 
                     
@@ -3920,8 +3919,8 @@ public class ASLexer : Lexer
     {
         try 
     	{
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1266:4: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1266:4: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1303:4: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1303:4: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
             {
             	Match('\\'); 
             	if ( input.LA(1) == '\"' || input.LA(1) == '\'' || input.LA(1) == '\\' || input.LA(1) == 'b' || input.LA(1) == 'f' || input.LA(1) == 'n' || input.LA(1) == 'r' || input.LA(1) == 't' ) 
@@ -3951,7 +3950,7 @@ public class ASLexer : Lexer
     {
         try 
     	{
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1270:6: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1307:6: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
             int alt25 = 3;
             int LA25_0 = input.LA(1);
             
@@ -3994,7 +3993,7 @@ public class ASLexer : Lexer
                 else 
                 {
                     NoViableAltException nvae_d25s1 =
-                        new NoViableAltException("1269:10: fragment OCTAL_ESC : ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) );", 25, 1, input);
+                        new NoViableAltException("1306:10: fragment OCTAL_ESC : ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) );", 25, 1, input);
                 
                     throw nvae_d25s1;
                 }
@@ -4002,32 +4001,32 @@ public class ASLexer : Lexer
             else 
             {
                 NoViableAltException nvae_d25s0 =
-                    new NoViableAltException("1269:10: fragment OCTAL_ESC : ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) );", 25, 0, input);
+                    new NoViableAltException("1306:10: fragment OCTAL_ESC : ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) );", 25, 0, input);
             
                 throw nvae_d25s0;
             }
             switch (alt25) 
             {
                 case 1 :
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1270:6: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1307:6: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
                     {
                     	Match('\\'); 
-                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1270:11: ( '0' .. '3' )
-                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1270:12: '0' .. '3'
+                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1307:11: ( '0' .. '3' )
+                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1307:12: '0' .. '3'
                     	{
                     		MatchRange('0','3'); 
                     	
                     	}
 
-                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1270:22: ( '0' .. '7' )
-                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1270:23: '0' .. '7'
+                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1307:22: ( '0' .. '7' )
+                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1307:23: '0' .. '7'
                     	{
                     		MatchRange('0','7'); 
                     	
                     	}
 
-                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1270:33: ( '0' .. '7' )
-                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1270:34: '0' .. '7'
+                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1307:33: ( '0' .. '7' )
+                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1307:34: '0' .. '7'
                     	{
                     		MatchRange('0','7'); 
                     	
@@ -4037,18 +4036,18 @@ public class ASLexer : Lexer
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1271:6: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1308:6: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
                     {
                     	Match('\\'); 
-                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1271:11: ( '0' .. '7' )
-                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1271:12: '0' .. '7'
+                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1308:11: ( '0' .. '7' )
+                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1308:12: '0' .. '7'
                     	{
                     		MatchRange('0','7'); 
                     	
                     	}
 
-                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1271:22: ( '0' .. '7' )
-                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1271:23: '0' .. '7'
+                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1308:22: ( '0' .. '7' )
+                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1308:23: '0' .. '7'
                     	{
                     		MatchRange('0','7'); 
                     	
@@ -4058,11 +4057,11 @@ public class ASLexer : Lexer
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1272:6: '\\\\' ( '0' .. '7' )
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1309:6: '\\\\' ( '0' .. '7' )
                     {
                     	Match('\\'); 
-                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1272:11: ( '0' .. '7' )
-                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1272:12: '0' .. '7'
+                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1309:11: ( '0' .. '7' )
+                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1309:12: '0' .. '7'
                     	{
                     		MatchRange('0','7'); 
                     	
@@ -4085,8 +4084,8 @@ public class ASLexer : Lexer
     {
         try 
     	{
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1276:6: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
-            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1276:6: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1313:6: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1313:6: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
             {
             	Match('\\'); 
             	Match('u'); 
@@ -4106,99 +4105,99 @@ public class ASLexer : Lexer
 
     override public void mTokens() // throws RecognitionException 
     {
-        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:10: ( T176 | T177 | T178 | T179 | T180 | T181 | T182 | T183 | T184 | T185 | T186 | T187 | T188 | PACKAGE | PUBLIC | PRIVATE | PROTECTED | INTERNAL | FUNCTION | EXTENDS | IMPLEMENTS | VAR | STATIC | IF | IMPORT | FOR | EACH | IN | WHILE | DO | SWITCH | CASE | DEFAULT | ELSE | CONST | CLASS | INTERFACE | TRUE | FALSE | DYNAMIC | USE | XML | NAMESPACE | IS | AS | GET | SET | WITH | RETURN | CONTINUE | BREAK | NULL | UNDEFINED | NEW | INSTANCEOF | DELETE | TYPEOF | QUESTION | LPAREN | RPAREN | LBRACK | RBRACK | LCURLY | RCURLY | COLON | DBL_COLON | COMMA | ASSIGN | EQUAL | STRICT_EQUAL | LNOT | BNOT | NOT_EQUAL | STRICT_NOT_EQUAL | DIV | DIV_ASSIGN | PLUS | PLUS_ASSIGN | INC | MINUS | MINUS_ASSIGN | DEC | STAR | STAR_ASSIGN | MOD | MOD_ASSIGN | SR | SR_ASSIGN | BSR | BSR_ASSIGN | GE | GT | SL | SL_ASSIGN | LE | LT | BXOR | BXOR_ASSIGN | BOR | BOR_ASSIGN | LOR | BAND | BAND_ASSIGN | LAND | LAND_ASSIGN | LOR_ASSIGN | E4X_ATTRI | SEMI | DOT | E4X_DESC | REST | IDENT | STRING_LITERAL | HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | FLOAT_LITERAL | WS | NL | BOM | INCLUDE_DIRECTIVE | SL_COMMENT | ML_COMMENT )
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:10: ( T175 | T176 | T177 | T178 | T179 | T180 | T181 | T182 | T183 | T184 | T185 | T186 | T187 | PACKAGE | PUBLIC | PRIVATE | PROTECTED | INTERNAL | FUNCTION | EXTENDS | IMPLEMENTS | VAR | STATIC | IF | IMPORT | FOR | EACH | IN | WHILE | DO | SWITCH | CASE | DEFAULT | ELSE | CONST | CLASS | INTERFACE | TRUE | FALSE | DYNAMIC | USE | XML | NAMESPACE | IS | AS | GET | SET | WITH | RETURN | CONTINUE | BREAK | NULL | UNDEFINED | NEW | INSTANCEOF | DELETE | TYPEOF | QUESTION | LPAREN | RPAREN | LBRACK | RBRACK | LCURLY | RCURLY | COLON | DBL_COLON | COMMA | ASSIGN | EQUAL | STRICT_EQUAL | LNOT | BNOT | NOT_EQUAL | STRICT_NOT_EQUAL | DIV | DIV_ASSIGN | PLUS | PLUS_ASSIGN | INC | MINUS | MINUS_ASSIGN | DEC | STAR | STAR_ASSIGN | MOD | MOD_ASSIGN | SR | SR_ASSIGN | BSR | BSR_ASSIGN | GE | GT | SL | SL_ASSIGN | LE | LT | BXOR | BXOR_ASSIGN | BOR | BOR_ASSIGN | LOR | BAND | BAND_ASSIGN | LAND | LAND_ASSIGN | LOR_ASSIGN | E4X_ATTRI | SEMI | DOT | E4X_DESC | REST | IDENT | STRING_LITERAL | HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | FLOAT_LITERAL | WS | NL | BOM | INCLUDE_DIRECTIVE | SL_COMMENT | ML_COMMENT )
         int alt26 = 123;
         alt26 = dfa26.Predict(input);
         switch (alt26) 
         {
             case 1 :
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:10: T176
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:10: T175
+                {
+                	mT175(); 
+                
+                }
+                break;
+            case 2 :
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:15: T176
                 {
                 	mT176(); 
                 
                 }
                 break;
-            case 2 :
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:15: T177
+            case 3 :
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:20: T177
                 {
                 	mT177(); 
                 
                 }
                 break;
-            case 3 :
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:20: T178
+            case 4 :
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:25: T178
                 {
                 	mT178(); 
                 
                 }
                 break;
-            case 4 :
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:25: T179
+            case 5 :
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:30: T179
                 {
                 	mT179(); 
                 
                 }
                 break;
-            case 5 :
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:30: T180
+            case 6 :
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:35: T180
                 {
                 	mT180(); 
                 
                 }
                 break;
-            case 6 :
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:35: T181
+            case 7 :
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:40: T181
                 {
                 	mT181(); 
                 
                 }
                 break;
-            case 7 :
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:40: T182
+            case 8 :
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:45: T182
                 {
                 	mT182(); 
                 
                 }
                 break;
-            case 8 :
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:45: T183
+            case 9 :
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:50: T183
                 {
                 	mT183(); 
                 
                 }
                 break;
-            case 9 :
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:50: T184
+            case 10 :
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:55: T184
                 {
                 	mT184(); 
                 
                 }
                 break;
-            case 10 :
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:55: T185
+            case 11 :
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:60: T185
                 {
                 	mT185(); 
                 
                 }
                 break;
-            case 11 :
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:60: T186
+            case 12 :
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:65: T186
                 {
                 	mT186(); 
                 
                 }
                 break;
-            case 12 :
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:65: T187
+            case 13 :
+                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:70: T187
                 {
                 	mT187(); 
-                
-                }
-                break;
-            case 13 :
-                // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\AS3Parser\\AS3Parser\\AS.g:1:70: T188
-                {
-                	mT188(); 
                 
                 }
                 break;
@@ -10361,7 +10360,7 @@ public class ASLexer : Lexer
     
         override public string Description
         {
-            get { return "1:1: Tokens : ( T176 | T177 | T178 | T179 | T180 | T181 | T182 | T183 | T184 | T185 | T186 | T187 | T188 | PACKAGE | PUBLIC | PRIVATE | PROTECTED | INTERNAL | FUNCTION | EXTENDS | IMPLEMENTS | VAR | STATIC | IF | IMPORT | FOR | EACH | IN | WHILE | DO | SWITCH | CASE | DEFAULT | ELSE | CONST | CLASS | INTERFACE | TRUE | FALSE | DYNAMIC | USE | XML | NAMESPACE | IS | AS | GET | SET | WITH | RETURN | CONTINUE | BREAK | NULL | UNDEFINED | NEW | INSTANCEOF | DELETE | TYPEOF | QUESTION | LPAREN | RPAREN | LBRACK | RBRACK | LCURLY | RCURLY | COLON | DBL_COLON | COMMA | ASSIGN | EQUAL | STRICT_EQUAL | LNOT | BNOT | NOT_EQUAL | STRICT_NOT_EQUAL | DIV | DIV_ASSIGN | PLUS | PLUS_ASSIGN | INC | MINUS | MINUS_ASSIGN | DEC | STAR | STAR_ASSIGN | MOD | MOD_ASSIGN | SR | SR_ASSIGN | BSR | BSR_ASSIGN | GE | GT | SL | SL_ASSIGN | LE | LT | BXOR | BXOR_ASSIGN | BOR | BOR_ASSIGN | LOR | BAND | BAND_ASSIGN | LAND | LAND_ASSIGN | LOR_ASSIGN | E4X_ATTRI | SEMI | DOT | E4X_DESC | REST | IDENT | STRING_LITERAL | HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | FLOAT_LITERAL | WS | NL | BOM | INCLUDE_DIRECTIVE | SL_COMMENT | ML_COMMENT );"; }
+            get { return "1:1: Tokens : ( T175 | T176 | T177 | T178 | T179 | T180 | T181 | T182 | T183 | T184 | T185 | T186 | T187 | PACKAGE | PUBLIC | PRIVATE | PROTECTED | INTERNAL | FUNCTION | EXTENDS | IMPLEMENTS | VAR | STATIC | IF | IMPORT | FOR | EACH | IN | WHILE | DO | SWITCH | CASE | DEFAULT | ELSE | CONST | CLASS | INTERFACE | TRUE | FALSE | DYNAMIC | USE | XML | NAMESPACE | IS | AS | GET | SET | WITH | RETURN | CONTINUE | BREAK | NULL | UNDEFINED | NEW | INSTANCEOF | DELETE | TYPEOF | QUESTION | LPAREN | RPAREN | LBRACK | RBRACK | LCURLY | RCURLY | COLON | DBL_COLON | COMMA | ASSIGN | EQUAL | STRICT_EQUAL | LNOT | BNOT | NOT_EQUAL | STRICT_NOT_EQUAL | DIV | DIV_ASSIGN | PLUS | PLUS_ASSIGN | INC | MINUS | MINUS_ASSIGN | DEC | STAR | STAR_ASSIGN | MOD | MOD_ASSIGN | SR | SR_ASSIGN | BSR | BSR_ASSIGN | GE | GT | SL | SL_ASSIGN | LE | LT | BXOR | BXOR_ASSIGN | BOR | BOR_ASSIGN | LOR | BAND | BAND_ASSIGN | LAND | LAND_ASSIGN | LOR_ASSIGN | E4X_ATTRI | SEMI | DOT | E4X_DESC | REST | IDENT | STRING_LITERAL | HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | FLOAT_LITERAL | WS | NL | BOM | INCLUDE_DIRECTIVE | SL_COMMENT | ML_COMMENT );"; }
         }
     
     }

@@ -20,6 +20,7 @@ namespace CodeReformatter.Generators
         private String tabString;
         private String NEWLINE = "\n";
         private String TAB = "";
+        private Boolean isInterface = false;
 
         /// <summary>
         /// Get the current Tab String
@@ -120,6 +121,7 @@ namespace CodeReformatter.Generators
                     break;
 
                 case ASLexer.INTERFACE_DEF:
+                    isInterface = true;
                     parseInterface(node);
                     break;
 
@@ -188,15 +190,12 @@ namespace CodeReformatter.Generators
                     break;
 
                 case ASLexer.COMMENT_ENTRY:
-                    for (int i = 0; i < node.ChildCount; i++)
-                    {
-                        ReformatNode(node.GetChild(i), ((i < node.ChildCount-1) || endWithNewLine));
-                    }
+                    parseCommentEntry(node, true, endWithNewLine);
                     break;
 
                 case ASLexer.SINGLELINE_COMMENT:
                     if(node.ChildCount > 0)
-                        CurrentBuffer.Append(node.GetChild(0).Text.TrimEnd() + (endWithNewLine ? NEWLINE + TAB : ""));
+                        CurrentBuffer.Append(node.GetChild(0).Text.TrimEnd() + NEWLINE + TAB);
                     break;
 
                 case ASLexer.MULTILINE_COMMENT:
@@ -332,6 +331,10 @@ namespace CodeReformatter.Generators
 
                 case ASLexer.METHOD_DEF:
                     parseMethodDefinition(node);
+                    break;
+
+                case ASLexer.IMETHOD_DEF:
+                    parseIMethodDefinition(node);
                     break;
 
                 case ASLexer.PARAMS:
@@ -481,6 +484,27 @@ namespace CodeReformatter.Generators
             }
         }
 
+        private void parseCommentEntry(CommonTree node, Boolean startWithNewLine, Boolean endWithNewLine)
+        {
+            Console.WriteLine("parseCommentEntry: " + endWithNewLine);
+            CommonTree nextNode;
+            for (int i = 0; i < node.ChildCount; i++)
+            {
+                nextNode = (CommonTree)node.GetChild(i);
+                if ((i == 0 && nextNode.Type == ASLexer.SINGLELINE_COMMENT) && startWithNewLine)
+                    CurrentBuffer.Append(NEWLINE + TAB);
+
+                if (nextNode.Type != ASLexer.COMMENT_ENTRY)
+                {
+                    ReformatNode(nextNode, endWithNewLine);
+                }
+                else
+                {
+                    parseCommentEntry(nextNode, false, endWithNewLine);
+                }
+            }
+        }
+
         protected void parseElseCondition(CommonTree node)
         {
             CommonTree nextNode;
@@ -532,7 +556,7 @@ namespace CodeReformatter.Generators
             CurrentBuffer.Append(st);
 
             if (node.GetChild(node.ChildCount - 1).Type == ASLexer.TYPE_BLOCK)
-                parseTypeBlock((CommonTree)node.GetChild(node.ChildCount - 1), true);
+                parseTypeBlock((CommonTree)node.GetChild(node.ChildCount - 1));
         }
 
         protected void parseDoWhile(CommonTree node)
@@ -574,26 +598,31 @@ namespace CodeReformatter.Generators
 
         protected void parseInlineFunction(CommonTree node)
         {
-            CommonTree blockNode = null;
+            CommonTree nextNode = (CommonTree)node.DeleteChild(0);
             CurrentBuffer.Append("function");
+
+            if (nextNode.Type == ASLexer.IDENT)
+            {
+                CurrentBuffer.Append(" " + nextNode.Text);
+                nextNode = (CommonTree)node.DeleteChild(0);
+            }
+
             CurrentBuffer.Append((settingObject.SPACE_BETWEEN_METHOD_CALL ? " " : "") + "(");
-            ReformatNode(node.GetChild(0)); // params
+            ReformatNode(nextNode); // params
             CurrentBuffer.Append(")");
 
-            if (node.GetChild(1).Type == ASLexer.TYPE_SPEC)
+            nextNode = (CommonTree)node.DeleteChild(0);
+
+            if (nextNode.Type == ASLexer.TYPE_SPEC)
             {
-                ReformatNode(node.GetChild(1));
-                blockNode = (CommonTree)node.GetChild(2);
-            }
-            else
-            {
-                blockNode = (CommonTree)node.GetChild(1);
+                ReformatNode(nextNode);
+                nextNode = (CommonTree)node.DeleteChild(0);
             }
 
-            if (blockNode != null)
+            if (nextNode != null)
             {
                 if (settingObject.SPACE_BETWEEN_METHOD_CALL) CurrentBuffer.Append(" ");
-                ReformatNode(blockNode, settingObject.NEWLINE_AFTER_METHOD);
+                ReformatNode(nextNode, settingObject.NEWLINE_AFTER_METHOD);
             }
 
         }
@@ -631,7 +660,7 @@ namespace CodeReformatter.Generators
             {
                 CurrentBuffer.Append(NEWLINE + TAB);
                 ReformatNode(node.GetChild(i), true);
-                AppendSemiColon(node.GetChild(i), false);
+                AppendSemiColon(node.GetChild(i));
             }
             CurrentTab--;
         }
@@ -663,7 +692,9 @@ namespace CodeReformatter.Generators
             }
             else
             {
-                ReformatCode(node);
+                String result = fromPropertyOrIdentifier(node);
+                //ReformatCode(node);
+                CurrentBuffer.Append(result);
             }
         }
 
@@ -771,8 +802,8 @@ namespace CodeReformatter.Generators
             for (int i = 0; i < node.ChildCount; i++)
             {
                 CurrentBuffer.Append(NEWLINE + TAB);
-                ReformatNode(node.GetChild(i));
-                AppendSemiColon(node.GetChild(i), false);
+                ReformatNode(node.GetChild(i), true);
+                AppendSemiColon(node.GetChild(i));
             }
 
             CurrentTab--;
@@ -788,8 +819,8 @@ namespace CodeReformatter.Generators
             CurrentTab++;
 
             CurrentBuffer.Append(NEWLINE + TAB);
-            ReformatNode(node);
-            AppendSemiColon(node, false);
+            ReformatNode(node, true);
+            AppendSemiColon(node);
             CurrentTab--;
             CurrentBuffer.Append(NEWLINE + TAB + "}");
         }
@@ -804,7 +835,7 @@ namespace CodeReformatter.Generators
             {
                 CurrentBuffer.Append(NEWLINE + TAB);
                 ReformatNode(node, false);
-                AppendSemiColon(node, false);
+                AppendSemiColon(node);
             }
             CurrentTab--;
             CurrentBuffer.Append(NEWLINE + TAB + "}");
@@ -968,38 +999,115 @@ namespace CodeReformatter.Generators
 
         protected void parseMethodDefinition(CommonTree node)
         {
-            CommonTree blockNode;
+            CommonTree nextNode = (CommonTree)node.DeleteChild(0);
+            CommonTree commentNode = null;
             CurrentBuffer.Append(NEWLINE + TAB);
-            if (node.GetChild(0).ChildCount > 0)
-                CurrentBuffer.Append(fromModifiers(node.GetChild(0)) + " ");
+            if(nextNode.ChildCount > 0)
+                CurrentBuffer.Append(fromModifiers(nextNode) + " ");
 
             CurrentBuffer.Append("function");
+            nextNode = (CommonTree)node.DeleteChild(0);
+            
+            if (nextNode.ChildCount > 0)
+                CurrentBuffer.Append(" " + nextNode.GetChild(0).Text);
 
-            if (node.GetChild(1).ChildCount > 0)
-                CurrentBuffer.Append(" " + node.GetChild(1).GetChild(0).Text);
+            nextNode = (CommonTree)node.DeleteChild(0);
 
             CurrentBuffer.Append(" ");
-            ReformatNode(node.GetChild(2));
+            ReformatNode(nextNode);
             CurrentBuffer.Append((settingObject.SPACE_BETWEEN_METHOD_CALL ? " " : "") + "(");
-            ReformatNode(node.GetChild(3));
+            nextNode = (CommonTree)node.DeleteChild(0);
+            ReformatNode(nextNode);
             CurrentBuffer.Append(")");
 
-            if (node.ChildCount > 4)
+            if (node.ChildCount > 0)
             {
-                if (node.GetChild(4).Type == ASLexer.TYPE_SPEC)
+                nextNode = (CommonTree)node.DeleteChild(0);
+                if (nextNode.Type == ASLexer.COMMENT_LIST)
                 {
-                    ReformatNode(node.GetChild(4));
-                    blockNode = (CommonTree)node.GetChild(5);
-                }
-                else
-                {
-                    blockNode = (CommonTree)node.GetChild(4);
+                    commentNode = (CommonTree)nextNode.DupTree();
+                    nextNode = (CommonTree)node.DeleteChild(0);
+                    //CurrentBuffer.Append(NEWLINE + TAB);
+                    ReformatCode(commentNode, false);
                 }
 
-                if (blockNode != null)
+                if (nextNode.Type == ASLexer.TYPE_SPEC)
+                {
+                    ReformatNode(nextNode);
+                    nextNode = (CommonTree)node.DeleteChild(0);
+                }
+
+                if (nextNode.Type == ASLexer.COMMENT_LIST)
+                {
+                    commentNode = (CommonTree)nextNode.DupTree();
+                    //CurrentBuffer.Append(NEWLINE + TAB);
+                    ReformatCode(commentNode, false);
+
+                    if (node.ChildCount > 0)
+                        nextNode = (CommonTree)node.DeleteChild(0);
+                else
+                        nextNode = null;
+                }
+
+                if (nextNode != null)
                 {
                     if (settingObject.SPACE_BETWEEN_METHOD_CALL) CurrentBuffer.Append(" ");
-                    ReformatNode(blockNode, settingObject.NEWLINE_AFTER_METHOD);
+                    ReformatNode(nextNode, settingObject.NEWLINE_AFTER_METHOD);
+                }
+            }
+                }
+
+        /// <summary>
+        /// Interface method definition. Interface method cannot
+        /// have the block node
+        /// </summary>
+        /// <param name="node"></param>
+        protected void parseIMethodDefinition(CommonTree node)
+        {
+            CommonTree nextNode = (CommonTree)node.DeleteChild(0);
+            CommonTree commentNode = null;
+            //CurrentBuffer.Append(NEWLINE + TAB);
+            if (nextNode.ChildCount > 0)
+                CurrentBuffer.Append(fromModifiers(nextNode) + " ");
+
+            CurrentBuffer.Append("function");
+            nextNode = (CommonTree)node.DeleteChild(0);
+
+            if (nextNode.ChildCount > 0)
+                CurrentBuffer.Append(" " + nextNode.GetChild(0).Text);
+
+            nextNode = (CommonTree)node.DeleteChild(0);
+
+            CurrentBuffer.Append(" ");
+            ReformatNode(nextNode);
+            CurrentBuffer.Append((settingObject.SPACE_BETWEEN_METHOD_CALL ? " " : "") + "(");
+            nextNode = (CommonTree)node.DeleteChild(0);
+            ReformatNode(nextNode);
+            CurrentBuffer.Append(")");
+
+            if (node.ChildCount > 0)
+            {
+                nextNode = (CommonTree)node.DeleteChild(0);
+                if (nextNode.Type == ASLexer.COMMENT_LIST)
+                {
+                    commentNode = (CommonTree)nextNode.DupTree();
+                    nextNode = (CommonTree)node.DeleteChild(0);
+                    //CurrentBuffer.Append(NEWLINE + TAB);
+                    ReformatCode(commentNode, false);
+                }
+
+                if (nextNode.Type == ASLexer.TYPE_SPEC)
+                {
+                    ReformatNode(nextNode);
+                    if (node.ChildCount > 0)
+                        nextNode = (CommonTree)node.DeleteChild(0);
+                    else
+                        nextNode = null;
+                }
+
+                if (nextNode != null && nextNode.Type == ASLexer.COMMENT_LIST)
+                {
+                    ReformatCode(nextNode, false);
                 }
             }
         }
@@ -1087,14 +1195,14 @@ namespace CodeReformatter.Generators
             CurrentBuffer.Append(st);
 
             if (tree.GetChild(tree.ChildCount - 1).Type == ASLexer.TYPE_BLOCK)
-                parseTypeBlock( (CommonTree)tree.GetChild(tree.ChildCount - 1), false);
+                parseTypeBlock( (CommonTree)tree.GetChild(tree.ChildCount - 1));
         }
 
         /// <summary>
         /// Class Body
         /// </summary>
         /// <param name="tree"></param>
-        protected void parseTypeBlock(CommonTree tree, Boolean isInterface)
+        protected void parseTypeBlock(CommonTree tree)
         {
             CurrentBuffer.Append((settingObject.NEWLINE_AFTER_CLASS ? NEWLINE : " ") + TAB + "{");
             CurrentTab++;
@@ -1102,8 +1210,8 @@ namespace CodeReformatter.Generators
             for (int i = 0; i < tree.ChildCount; i++)
             {
                 CurrentBuffer.Append(NEWLINE + TAB);
-                ReformatNode(tree.GetChild(i));
-                AppendSemiColon(tree.GetChild(i), isInterface);
+                ReformatNode(tree.GetChild(i), true);
+                AppendSemiColon(tree.GetChild(i));
             }
 
             CurrentTab--;
@@ -1114,10 +1222,10 @@ namespace CodeReformatter.Generators
         /// Append the SEMI ";" at the end of a line
         /// </summary>
         /// <param name="node"></param>
-        protected void AppendSemiColon(ITree node, Boolean isInterface)
+        protected void AppendSemiColon(ITree node)
         {
             if (
-                (node.Type != ASLexer.IF
+                node.Type != ASLexer.IF
                 && node.Type != ASLexer.COMMENT_LIST
                 && node.Type != ASLexer.COMMENT_ENTRY
                 && node.Type != ASLexer.SINGLELINE_COMMENT
@@ -1130,11 +1238,8 @@ namespace CodeReformatter.Generators
                 && node.Type != ASLexer.CASE
                 && node.Type != ASLexer.DEFAULT
                 && node.Type != ASLexer.ANNOTATIONS
-                && node.Type != ASLexer.INCLUDE_DIRECTIVE)
-                ||
-                (node.Type == ASLexer.METHOD_DEF && isInterface)
-                
-                )
+                && node.Type != ASLexer.INCLUDE_DIRECTIVE
+                && node.Type != ASLexer.IMETHOD_DEF)
                 CurrentBuffer.Append(";");
         }
 
@@ -1206,6 +1311,22 @@ namespace CodeReformatter.Generators
             else
             {
                 text = node.GetChild(0).Text + node.Text + node.GetChild(1).Text + text;
+            }
+            return text;
+        }
+
+
+        protected String fromPropertyOrIdentifier(CommonTree node)
+        {
+            String text = "";
+            if (node.GetChild(0).Type == ASLexer.PROPERTY_OR_IDENTIFIER)
+            {
+                text += fromPropertyOrIdentifier((CommonTree)node.GetChild(0));
+                text += "." + node.GetChild(1).Text;
+            }
+            else
+            {
+                text = node.GetChild(0).Text + "." + node.GetChild(1).Text  + text;
             }
             return text;
         }
