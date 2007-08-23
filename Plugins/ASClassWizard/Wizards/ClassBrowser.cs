@@ -74,22 +74,25 @@ namespace ASClassWizard.Wizards
 
             this.listView1.BeginUpdate();
             this.listView1.Items.Clear();
-            foreach(MemberModel item in this.ClassList)
+            if (this.ClassList != null)
             {
-                if(ExcludeFlag > 0) if ((item.Flags & ExcludeFlag) > 0) continue;
-                if (IncludeFlag > 0)
+                foreach (MemberModel item in this.ClassList)
                 {
-                    if (!((item.Flags & IncludeFlag) > 0))
+                    if (ExcludeFlag > 0) if ((item.Flags & ExcludeFlag) > 0) continue;
+                    if (IncludeFlag > 0)
                     {
-                        continue;
+                        if (!((item.Flags & IncludeFlag) > 0))
+                        {
+                            continue;
+                        }
                     }
+
+                    if (this.listView1.Items.Count > 0 && item.Name == this.listView1.Items[this.listView1.Items.Count - 1].ToString()) continue;
+
+                    node = new ASClassWizard.Wizards.GListBox.GListBoxItem(item.Name, (item.Flags & FlagType.Interface) > 0 ? 6 : 8);
+                    this.listView1.Items.Add(node);
+                    this.DataProvider.Add(node);
                 }
-
-                if (this.listView1.Items.Count > 0 && item.Name == this.listView1.Items[this.listView1.Items.Count - 1].ToString()) continue;
-
-                node = new ASClassWizard.Wizards.GListBox.GListBoxItem(item.Name, (item.Flags & FlagType.Interface) > 0 ? 6 : 8);
-                this.listView1.Items.Add(node);
-                this.DataProvider.Add(node);
             }
             if (this.listView1.Items.Count > 0)
             {

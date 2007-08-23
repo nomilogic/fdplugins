@@ -21,6 +21,7 @@ using ASCompletion.Model;
 using AS3Context;
 using AS2Context;
 using System.Reflection;
+using System.Diagnostics;
 
 
 namespace ASClassWizard.Wizards
@@ -154,7 +155,11 @@ namespace ASClassWizard.Wizards
         {
             ClassBrowser browser = new ClassBrowser();
             IASContext context   = ASContext.GetLanguageContext(PluginBase.CurrentProject.Language);
-            browser.ClassList    = context.GetAllProjectClasses();
+            try
+            {
+                browser.ClassList = context.GetAllProjectClasses();
+            }
+            catch { }
             browser.ExcludeFlag  = FlagType.Interface;
             browser.IncludeFlag  = FlagType.Class;
             if (browser.ShowDialog(this) == DialogResult.OK)
@@ -171,10 +176,19 @@ namespace ASClassWizard.Wizards
         private void button5_Click(object sender, EventArgs e)
         {
             ClassBrowser browser = new ClassBrowser();
+            MemberList known = null;
             browser.IncludeFlag = FlagType.Interface;
             IASContext context = ASContext.GetLanguageContext(PluginBase.CurrentProject.Language);
-            MemberList known = context.GetAllProjectClasses();
-            known.Merge(ASContext.Context.GetVisibleExternalElements(true));
+            try
+            {
+                known = context.GetAllProjectClasses();
+                known.Merge(ASContext.Context.GetVisibleExternalElements(true));
+            }
+            catch (Exception error)
+            {
+                Debug.WriteLine(error.StackTrace);
+            }
+            
             browser.ClassList = known;
 
             if (browser.ShowDialog(this) == DialogResult.OK)
