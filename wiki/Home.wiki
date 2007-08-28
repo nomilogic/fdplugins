@@ -18,6 +18,7 @@ This is the complete list of available plugins you can find here:
  * SourceOptions
  * StickiesNotes 
  * CodeReformatter
+ * RegularExpressionPanel
  
 Please use the plugin specific wiki page to report issues or comments.
  
