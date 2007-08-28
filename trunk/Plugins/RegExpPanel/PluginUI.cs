@@ -85,7 +85,7 @@ namespace RegExpPanel
             this.groupBox1.Text = LocaleHelper.GetString("Label.Modifiers");
             this.groupBox3.Text = LocaleHelper.GetString("Label.Modifiers");
 
-            this.treeColumn1.Header = LocaleHelper.GetString("Math.Group");
+            this.treeColumn1.Header = LocaleHelper.GetString("Match.Group");
             this.treeColumn2.Header = LocaleHelper.GetString("Match.Span");
             this.treeColumn3.Header = LocaleHelper.GetString("Match.Text");
 
