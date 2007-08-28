@@ -147,7 +147,7 @@
   <data name="Match.Span" xml:space="preserve">
     <value>Span</value>
   </data>
-  <data name="Math.Text" xml:space="preserve">
+  <data name="Match.Text" xml:space="preserve">
     <value>Text</value>
   </data>
   <data name="Menu.ASRegexpHelp" xml:space="preserve">
