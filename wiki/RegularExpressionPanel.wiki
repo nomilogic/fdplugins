@@ -1,0 +1,11 @@
+#summary Regular Expression Toolkit
+#labels Featured
+
+= Introduction =
+
+Regular Expression Panel help you to find/match/replace text
+
+
+= Details =
+
+
