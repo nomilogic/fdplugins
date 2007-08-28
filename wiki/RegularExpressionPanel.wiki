@@ -1,5 +1,4 @@
 #summary Regular Expression Toolkit
-#labels Featured
 
 = Introduction =
 
