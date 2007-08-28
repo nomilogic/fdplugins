@@ -255,7 +255,17 @@ namespace RegExpPanel
             sci.SetMarginTypeN(0, 1);
             sci.SetMarginMaskN(0, 0);
             sci.SetYCaretPolicy((Int32)(ScintillaNet.Enums.CaretPolicy.Jumps | ScintillaNet.Enums.CaretPolicy.Even), 0);
-            sci.Encoding = Encoding.GetEncoding((Int32)MainForm.Settings.DefaultCodePage);
+
+            /*try
+            {
+                sci.Encoding = Encoding.GetEncoding((Int32)MainForm.Settings.DefaultCodePage);
+            }
+            catch(Exception error)
+            {
+                sci.Encoding = Encoding.GetEncoding(65001);
+            }*/
+
+            sci.Encoding = Encoding.UTF8;
             sci.EmptyUndoBuffer(); 
             ApplySciSettings(sci);
             return sci;
