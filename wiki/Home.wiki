@@ -10,8 +10,8 @@ fdplugins is a project containing a collection of various [http://www.flashdevel
 
 This is the complete list of available plugins you can find here:
 
- * QuickFind
- * TaskList
+ * ~~QuickFind~~ ^(implemented in FD3 as built-in)^
+ * ~~TaskList~~  ^(implemented in FD3 as built-in)^
  * BookmarkPanel
  * AsClassWizard
  * FlashApi
@@ -26,3 +26,5 @@ Please use the plugin specific wiki page to report issues or comments.
 = Source Code =
 Get the source:
 http://fdplugins.googlecode.com/svn/trunk/
+
+
