@@ -94,7 +94,6 @@ CodeReformatter.Generators.Core
 CodeReformatter.Generators.Core
 }
 
-
 // disable standard error handling; be strict
 
 @rulecatch { 
@@ -113,40 +112,36 @@ CodeReformatter.Generators.Core
 @lexer::members {
 
 	ASParser parser;
-	
-	
 	public void SetInput(ASParser p)
 	{
 		this.parser = p;
 	}
-
 }
 
 @parser::members {
 
 	#region Properties
 
-	private StringBuilder buffer = new StringBuilder();
+	private ReformatOptions options = new ReformatOptions();
+	private StringBuilder buffer;
 	private List<string> importList;
 	private int currentTab = 0;
     private String tabString = "\t";
     private String newline = "\n";
     private String tab = "";
     private Regex lineSplitterReg = new Regex("[\n\r]+", RegexOptions.Multiline);
-    
-    public static Boolean NEWLINE_AFTER_METHOD      = true; // insert a newline after a method definition (before the '{')
-    public static Boolean NEWLINE_AFTER_CONDITION   = false; // insert newline after if, for, while...
-    public static Boolean NEWLINE_BEFORE_ELSE       = false; // insert newline after 'else'
-    public static Boolean NEWLINE_BETWEEN_FIELDS    = true; // separate object literals by newline
-    public static Boolean SPACE_BETWEEN_TYPE        = false; // Separate type declaration with a space
-    public static Boolean SPACE_BETWEEN_ASSIGN      = true; // Seaparate assignment expression with a space
-    public static Boolean SPACE_BEFORE_METHOD_DEF   = false; // Add a space before a method call
-    public static Boolean SPACE_BETWEEN_OPERATORS   = true; // Space between any operator
-    public static Boolean SPACE_BETWEEN_ARGUMENTS   = true; // Space between arguments
-	
 	private ASLexer lexer;
 	private ICharStream cs;
 	public static int CHANNEL_PLACEHOLDER = 999;
+	
+	
+    public ASParser(ITokenStream input, ReformatOptions opt)
+        : base(input)
+    {
+        options = opt;
+        InitializeCyclicDFAs();
+        ruleMemo = new IDictionary[307 + 1];
+    }	
 	
     /// <summary>
     /// Get/Set the Tab Width
@@ -241,7 +236,7 @@ CodeReformatter.Generators.Core
     		{
     			tree = (CommonTree)rule.Tree;
     			Debug.WriteLine("Comments: " + tree.GetChild(0).ChildCount);
-    			buffer.Append(NewLine + tab);
+    			//buffer.Append(NewLine + tab);
     			for(int i = 0; i < tree.GetChild(0).ChildCount; i++)
     			{
     				comment = (CommonTree)tree.GetChild(0).GetChild(i);
@@ -256,7 +251,7 @@ CodeReformatter.Generators.Core
     						k++;
     					}				
     				} else {
-    					buffer.Append(comment.GetChild(0).Text);
+    					buffer.Append(comment.GetChild(0).Text.TrimEnd());
     				}
     			}
     		}
@@ -309,10 +304,9 @@ CodeReformatter.Generators.Core
 	#endregion
 }
 
-compilationUnit
+compilationUnit[StringBuilder ret]
 @init {
-	// this should be done in the constructor
-	buffer = new StringBuilder();
+	buffer = ret;
 }
 @after {
 	finalize();
@@ -361,7 +355,7 @@ as2ClassDefinition[CommonTree mods]
 		ide=identifier
 		ext=classExtendsClause	
 		imp=implementsClause	{
-									buffer.Append(NEWLINE_AFTER_METHOD ? NewLine + tab : " ");
+									buffer.Append(options.NewlineAfterMethod ? NewLine + tab : " ");
 									buffer.Append("{");
 									CurrentTab++; 
 								}
@@ -380,7 +374,7 @@ interfaceDefinition[CommonTree mods]
 	:	tk=INTERFACE				{ buffer.Append(NewLine + tab + NewLine + tab + tk.Text + " "); }
 		ide=ident
 		interfaceExtendsClause	{
-									buffer.Append(NEWLINE_AFTER_METHOD ? NewLine + tab : "");
+									buffer.Append(options.NewlineAfterMethod ? NewLine + tab : "");
 									buffer.Append("{");
 									CurrentTab++; 
 								}
@@ -479,7 +473,7 @@ interfaceMethodDefinition[CommonTree mods]
 		ide=ident					{ buffer.Append(((CommonTree)ide.Tree).Text); }
 		parameterDeclarationList
 		type_exp=typeExpression?	{
-										if(NEWLINE_AFTER_METHOD) buffer.Append(NewLine + tab);
+										if(options.NewlineAfterMethod) buffer.Append(NewLine + tab);
 										buffer.Append("{");
 										CurrentTab++;
 									}
@@ -505,7 +499,7 @@ methodDefinition[CommonTree mods]
 		parameterDeclarationList
 		type_exp=typeExpression?
 									{
-										if(NEWLINE_AFTER_METHOD) buffer.Append(NewLine + tab);
+										if(options.NewlineAfterMethod) buffer.Append(NewLine + tab);
 										buffer.Append("{");
 										CurrentTab++;
 									}
@@ -553,7 +547,7 @@ scope InOperator;
 									}
 			variableDeclarator
 		)*
-		semi						
+		semi
 		-> ^(VAR_DEF {$mods} $decl variableDeclarator+)
 	;
 
@@ -580,16 +574,16 @@ scope InOperator;
 	$InOperator::allowed = true;
 }
 	:	(
-			COMMA!	{ buffer.Append(SPACE_BETWEEN_ARGUMENTS ? ", " : ","); }
+			COMMA!	{ buffer.Append(options.SpaceBetweenArguments ? ", " : ","); }
 			variableDeclarator
 		)*
 	;
 
 variableInitializer
 	:	ASSIGN^				{ 
-								if(SPACE_BETWEEN_ASSIGN) buffer.Append(" ");
+								if(options.SpaceBetweenAssign) buffer.Append(" ");
 								buffer.Append("=");
-								if(SPACE_BETWEEN_ASSIGN) buffer.Append(" ");
+								if(options.SpaceBetweenAssign) buffer.Append(" ");
 							}
 		assignmentExpression
 	;
@@ -597,10 +591,10 @@ variableInitializer
 // A list of formal parameters
 // TODO: shouldn't the 'rest' parameter only be allowed in the last position?
 parameterDeclarationList
-	:	LPAREN			{ buffer.Append(SPACE_BEFORE_METHOD_DEF ? " (" : "("); }
+	:	LPAREN			{ buffer.Append(options.SpaceBeforeMethodDef ? " (" : "("); }
 		(	parameterDeclaration
 			(
-				COMMA	{ buffer.Append(SPACE_BETWEEN_ARGUMENTS ? ", " : ","); } 
+				COMMA	{ buffer.Append(options.SpaceBetweenArguments ? ", " : ","); } 
 				parameterDeclaration
 			)*
 		)?
@@ -642,7 +636,7 @@ blockEntry
 	;
 
 condition
-	:	LPAREN			{ buffer.Append(SPACE_BEFORE_METHOD_DEF ? " (" : "("); }
+	:	LPAREN			{ buffer.Append(options.SpaceBeforeMethodDef ? " (" : "("); }
 		expression 
 		RPAREN			{ buffer.Append(")"); }
 		-> ^(CONDITION expression)
@@ -664,7 +658,7 @@ statement
 	|	throwStatement				{ buffer.Append(";"); }
 	|	tryStatement
 	|	SEMI!
-	|	c=comments					{ }
+	|	c=comments					{ insertComment(c); }
 	;
 
 declarationStatement
@@ -689,7 +683,7 @@ ifStatement
 	:	IF^						{ buffer.Append("if");}
 		condition				{ }
 								{
-									buffer.Append( (NEWLINE_AFTER_CONDITION ? NewLine + tab : "") + "{"); 
+									buffer.Append( (options.NewlineAfterCondition ? NewLine + tab : "") + "{"); 
 									CurrentTab++;
 									int next_test = input.LA(1);
 									if(next_test != ASLexer.LCURLY)	buffer.Append(NewLine + tab);
@@ -711,14 +705,14 @@ elseClause
 	int next_test_2 = -1;
 }
 	:	ELSE^					{
-									buffer.Append(NEWLINE_BEFORE_ELSE ? NewLine + tab : " ");
+									buffer.Append(options.NewlineBeforeElse ? NewLine + tab : " ");
 									buffer.Append("else");
 									
 									next_test = input.LA(1);
 									if(next_test == ASLexer.IF) {
 										buffer.Append(" ");
 									} else {
-										buffer.Append( (NEWLINE_AFTER_CONDITION ? NewLine + tab : " ") + "{"); 
+										buffer.Append( (options.NewlineAfterCondition ? NewLine + tab : " ") + "{"); 
 										next_test_2 = input.LA(1);
 										CurrentTab++;
 										if(next_test_2 != ASLexer.LCURLY) buffer.Append(NewLine + tab);										
@@ -741,7 +735,7 @@ throwStatement
 tryStatement
 	:	'try'			{ 
 							buffer.Append("try");
-							buffer.Append((NEWLINE_AFTER_CONDITION ? NewLine + tab : "") + "{"); 
+							buffer.Append((options.NewlineAfterCondition ? NewLine + tab : "") + "{"); 
 							CurrentTab++;
 						}
 		block			{
@@ -749,8 +743,8 @@ tryStatement
 							buffer.Append(NewLine + tab);
 							buffer.Append("}");
 						}
-		( { buffer.Append((NEWLINE_BEFORE_ELSE ? NewLine + tab : " ")); }  catchBlock)*
-		( { buffer.Append((NEWLINE_BEFORE_ELSE ? NewLine + tab : " ")); } finallyBlock)?
+		( { buffer.Append((options.NewlineBeforeElse ? NewLine + tab : " ")); }  catchBlock)*
+		( { buffer.Append((options.NewlineBeforeElse ? NewLine + tab : " ")); } finallyBlock)?
 	;
 
 catchBlock
@@ -760,7 +754,7 @@ catchBlock
 		typeExpression? 
 		RPAREN!		{ 
 						buffer.Append(")"); 
-						buffer.Append((NEWLINE_AFTER_CONDITION ? NewLine + tab : "") + "{"); 
+						buffer.Append((options.NewlineAfterCondition ? NewLine + tab : "") + "{"); 
 						CurrentTab++;
 					}
 		block		{
@@ -773,7 +767,7 @@ catchBlock
 finallyBlock
 	:	'finally'	{ 
 						buffer.Append("finally"); 
-						buffer.Append((NEWLINE_AFTER_CONDITION ? NewLine + tab : "") + "{"); 
+						buffer.Append((options.NewlineAfterCondition ? NewLine + tab : "") + "{"); 
 						CurrentTab++;
 					}
 		block		{
@@ -804,7 +798,7 @@ switchStatement
 
 switchBlock
 	:	LCURLY								{ 
-												buffer.Append((NEWLINE_AFTER_CONDITION ? NewLine + tab : "") + "{");
+												buffer.Append((options.NewlineAfterCondition ? NewLine + tab : "") + "{");
 												CurrentTab++;
 											}
 		( {buffer.Append(NewLine + tab); } caseStatement)*
@@ -850,12 +844,12 @@ scope InOperator;
 	int next_node_2 = -1;
 }
 	:	f=FOR			{ buffer.Append("for"); }
-		LPAREN			{ buffer.Append(SPACE_BEFORE_METHOD_DEF ? " (" : "(");   }
+		LPAREN			{ buffer.Append(options.SpaceBeforeMethodDef ? " (" : "(");   }
 		(	
 			(forInClauseDecl IN)=>forInClause 
 			RPAREN							{ 
 												buffer.Append(")"); 
-												buffer.Append((NEWLINE_AFTER_CONDITION ? NewLine + tab : "") + "{"); 
+												buffer.Append((options.NewlineAfterCondition ? NewLine + tab : "") + "{"); 
 												CurrentTab++;
 												int next_test = input.LA(1);
 												if(next_test != ASLexer.LCURLY)	buffer.Append(NewLine + tab);												
@@ -869,7 +863,7 @@ scope InOperator;
 
 			|	traditionalForClause RPAREN { 
 												buffer.Append(")"); 
-												buffer.Append((NEWLINE_AFTER_CONDITION ? NewLine + tab : "") + "{"); 
+												buffer.Append((options.NewlineAfterCondition ? NewLine + tab : "") + "{"); 
 												CurrentTab++;
 												int next_test_2 = input.LA(1);
 												if(next_test_2 != ASLexer.LCURLY)	buffer.Append(NewLine + tab);												
@@ -884,8 +878,8 @@ scope InOperator;
 	;
 
 traditionalForClause
-	:	a=forInit SEMI!	{ buffer.Append(SPACE_BETWEEN_ARGUMENTS ? "; " : ";"); } // initializer
-		b=forCond SEMI!	{ buffer.Append(SPACE_BETWEEN_ARGUMENTS ? "; " : ";"); } // condition test
+	:	a=forInit SEMI!	{ buffer.Append(options.SpaceBetweenArguments ? "; " : ";"); } // initializer
+		b=forCond SEMI!	{ buffer.Append(options.SpaceBetweenArguments ? "; " : ";"); } // condition test
 		c=forIter // updater
 	;
 
@@ -942,7 +936,7 @@ scope InOperator;
 whileStatement
 	:	WHILE^			{ buffer.Append("while"); }
 		condition		{
-							buffer.Append((NEWLINE_AFTER_CONDITION ? NewLine + tab : "") + "{"); 
+							buffer.Append((options.NewlineAfterCondition ? NewLine + tab : "") + "{"); 
 							CurrentTab++;
 							int next_test = input.LA(1);
 							if(next_test != ASLexer.LCURLY)	buffer.Append(NewLine + tab);
@@ -957,7 +951,7 @@ whileStatement
 doWhileStatement
 	:	DO^				{
 							buffer.Append("do");
-							buffer.Append((NEWLINE_AFTER_CONDITION ? NewLine + tab : "") + "{"); 
+							buffer.Append((options.NewlineAfterCondition ? NewLine + tab : "") + "{"); 
 							CurrentTab++;
 							int next_test = input.LA(1);
 							if(next_test != ASLexer.LCURLY)	buffer.Append(NewLine + tab);							
@@ -975,7 +969,7 @@ doWhileStatement
 withStatement
 	:	WITH^			{ buffer.Append("with"); }
 		condition		{
-							buffer.Append((NEWLINE_AFTER_CONDITION ? NewLine + tab : "") + "{"); 
+							buffer.Append((options.NewlineAfterCondition ? NewLine + tab : "") + "{"); 
 							CurrentTab++;
 							int next_test = input.LA(1);
 							if(next_test != ASLexer.LCURLY)	buffer.Append(NewLine + tab);
@@ -989,7 +983,7 @@ withStatement
 
 typeExpression
 	:	
-		c=COLON			{ buffer.Append(SPACE_BETWEEN_TYPE ? " : " : ":"); }
+		c=COLON			{ buffer.Append(options.SpaceBetweenType ? " : " : ":"); }
 		(
 			identifier 
 			| VOID		{ buffer.Append("Void"); }
@@ -1113,7 +1107,7 @@ arrayLiteral
 elementList
 	:	nonemptyElementList 
 		(
-			COMMA!						{ buffer.Append(SPACE_BETWEEN_ARGUMENTS ? ", " : ","); }
+			COMMA!						{ buffer.Append(options.SpaceBetweenArguments ? ", " : ","); }
 			nonemptyElementList?
 		)*
 	;
@@ -1125,7 +1119,7 @@ scope InOperator;
 }
 	:	assignmentExpression 
 		(
-			COMMA						{ buffer.Append(SPACE_BETWEEN_ARGUMENTS ? ", " : ","); }
+			COMMA						{ buffer.Append(options.SpaceBetweenArguments ? ", " : ","); }
 			assignmentExpression
 		)*
 	;	
@@ -1138,7 +1132,7 @@ objectLiteral
 	:	LCURLY			{ 
 							buffer.Append("{"); 
 							next_token = input.LA(1);
-							if(next_token != ASLexer.RCURLY && NEWLINE_BETWEEN_FIELDS)
+							if(next_token != ASLexer.RCURLY && options.NewlineBetweenFields)
 							{
 								CurrentTab++;
 								buffer.Append(NewLine + tab);
@@ -1146,7 +1140,7 @@ objectLiteral
 						} 
 		fieldList? 
 		RCURLY			{ 
-							if(next_token != ASLexer.RCURLY && NEWLINE_BETWEEN_FIELDS)
+							if(next_token != ASLexer.RCURLY && options.NewlineBetweenFields)
 							{
 								CurrentTab--;
 								buffer.Append(NewLine + tab);
@@ -1160,12 +1154,12 @@ fieldList
 	:	literalField 
 		(
 			COMMA!						{
-											if(NEWLINE_BETWEEN_FIELDS)
+											if(options.NewlineBetweenFields)
 											{
 												buffer.Append("," + NewLine + tab);
 											} else 
 											{ 
-												buffer.Append(SPACE_BETWEEN_ARGUMENTS ? ", " : ","); 
+												buffer.Append(options.SpaceBetweenArguments ? ", " : ","); 
 											}
 										} 
 			literalField?
@@ -1174,7 +1168,7 @@ fieldList
 	
 literalField 
 	: 	field=fieldName 
-		COLON			{ buffer.Append( SPACE_BETWEEN_TYPE ? " : " : ":"); }
+		COLON			{ buffer.Append( options.SpaceBetweenType ? " : " : ":"); }
 		element
 		-> ^(OBJECT_FIELD fieldName element)
 	;
@@ -1197,7 +1191,7 @@ scope InOperator;
 expressionList
 	:	assignmentExpression 
 		(
-			COMMA					{buffer.Append(SPACE_BETWEEN_ARGUMENTS ? ", " : ","); } 
+			COMMA					{buffer.Append(options.SpaceBetweenArguments ? ", " : ","); } 
 			assignmentExpression
 		)* -> ^(ELIST assignmentExpression (COMMA assignmentExpression)*)
 	;
@@ -1207,9 +1201,9 @@ assignmentExpression
 	:	c=conditionalExpression		{ }
 	(	(assignmentOperator)=> op=assignmentOperator 
 													{ 
-														if(SPACE_BETWEEN_ASSIGN) buffer.Append(" ");
+														if(options.SpaceBetweenAssign) buffer.Append(" ");
 														buffer.Append(((CommonTree)op.Tree).Text ); 
-														if(SPACE_BETWEEN_ASSIGN) buffer.Append(" "); 
+														if(options.SpaceBetweenAssign) buffer.Append(" "); 
 													}
 		assignmentExpression
 	)*
@@ -1237,9 +1231,9 @@ conditionalExpression
 	:	(logicalOrExpression -> logicalOrExpression)
 		(
 			QUESTION	{ 
-							if(SPACE_BETWEEN_OPERATORS) buffer.Append(" ");
+							if(options.SpaceBetweenOperators) buffer.Append(" ");
 							buffer.Append("?"); 
-							if(SPACE_BETWEEN_OPERATORS) buffer.Append(" "); 
+							if(options.SpaceBetweenOperators) buffer.Append(" "); 
 						}
 			conditionalSubExpression
 			-> ^(QUESTION $conditionalExpression conditionalSubExpression)
@@ -1247,7 +1241,7 @@ conditionalExpression
 	;
 conditionalSubExpression
 	:	assignmentExpression 
-		COLON^			{ buffer.Append(SPACE_BETWEEN_OPERATORS ? " : " : ":"); }
+		COLON^			{ buffer.Append(options.SpaceBetweenOperators ? " : " : ":"); }
 		assignmentExpression
 	;
 
@@ -1258,9 +1252,9 @@ logicalOrExpression
 	:	logicalAndExpression
 		(
 			op=logicalOrOperator^					{ 
-														if(SPACE_BETWEEN_OPERATORS) buffer.Append(" ");
+														if(options.SpaceBetweenOperators) buffer.Append(" ");
 														buffer.Append(((CommonTree)op.Tree).Text ); 
-														if(SPACE_BETWEEN_OPERATORS) buffer.Append(" "); 
+														if(options.SpaceBetweenOperators) buffer.Append(" "); 
 													}
 			logicalAndExpression
 		)*
@@ -1275,9 +1269,9 @@ logicalAndExpression
 	:	bitwiseOrExpression
 		(
 			op=logicalAndOperator^					{ 
-														if(SPACE_BETWEEN_OPERATORS) buffer.Append(" ");
+														if(options.SpaceBetweenOperators) buffer.Append(" ");
 														buffer.Append(((CommonTree)op.Tree).Text ); 
-														if(SPACE_BETWEEN_OPERATORS) buffer.Append(" "); 
+														if(options.SpaceBetweenOperators) buffer.Append(" "); 
 													}
 			bitwiseOrExpression
 		)*
@@ -1310,9 +1304,9 @@ equalityExpression
 	:	relationalExpression
 	(	
 		op=equalityOperator^						{ 
-														if(SPACE_BETWEEN_OPERATORS) buffer.Append(" ");
+														if(options.SpaceBetweenOperators) buffer.Append(" ");
 														buffer.Append(((CommonTree)op.Tree).Text ); 
-														if(SPACE_BETWEEN_OPERATORS) buffer.Append(" "); 
+														if(options.SpaceBetweenOperators) buffer.Append(" "); 
 													}
 		relationalExpression
 	)*
@@ -1345,9 +1339,9 @@ shiftExpression
 	:	additiveExpression
 		(
 			op=shiftOperator^			{ 
-											if(SPACE_BETWEEN_OPERATORS) buffer.Append(" ");
+											if(options.SpaceBetweenOperators) buffer.Append(" ");
 											buffer.Append(((CommonTree)op.Tree).Text ); 
-											if(SPACE_BETWEEN_OPERATORS) buffer.Append(" "); 
+											if(options.SpaceBetweenOperators) buffer.Append(" "); 
 										}
 			additiveExpression
 		)*
@@ -1362,9 +1356,9 @@ additiveExpression
 	:	multiplicativeExpression
 		(
 			op=additiveOperator^ 		{ 
-											if(SPACE_BETWEEN_OPERATORS) buffer.Append(" ");
+											if(options.SpaceBetweenOperators) buffer.Append(" ");
 											buffer.Append(((CommonTree)op.Tree).Text ); 
-											if(SPACE_BETWEEN_OPERATORS) buffer.Append(" "); 
+											if(options.SpaceBetweenOperators) buffer.Append(" "); 
 										}
 			multiplicativeExpression
 		)*
@@ -1379,9 +1373,9 @@ multiplicativeExpression
 	:	unaryExpression
 		(	
 			op=multiplicativeOperator^	{ 
-											if(SPACE_BETWEEN_OPERATORS) buffer.Append(" ");
+											if(options.SpaceBetweenOperators) buffer.Append(" ");
 											buffer.Append(((CommonTree)op.Tree).Text ); 
-											if(SPACE_BETWEEN_OPERATORS) buffer.Append(" "); 
+											if(options.SpaceBetweenOperators) buffer.Append(" "); 
 										}
 			unaryExpression
 		)*
@@ -1522,7 +1516,7 @@ scope InOperator;
 
 
 functionDefinition
-	:	f=FUNCTION { buffer.Append(f.Text + (SPACE_BEFORE_METHOD_DEF ? " " : "")); } parameterDeclarationList typeExpression? block
+	:	f=FUNCTION { buffer.Append(f.Text + (options.SpaceBeforeMethodDef ? " " : "")); } parameterDeclarationList typeExpression? block
 		-> ^(FUNC_DEF parameterDeclarationList typeExpression? block)
 	;
 
