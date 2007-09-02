@@ -1,4 +1,4 @@
-// $ANTLR 3.0 C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g 2007-09-02 13:12:31
+// $ANTLR 3.0 C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g 2007-09-02 14:57:46
 namespace 
 CodeReformatter.Generators.Core
 
@@ -530,36 +530,36 @@ public class ASParser : Parser
         /// Insert a comment in the passed String builder
         /// </summary>
         /// <param name="tree"></param>    
-            private void insertComment(ParserRuleReturnScope rule)
-            {
-        		Debug.WriteLine("insertComment: " + (rule == null));
-        		CommonTree tree;
-        		CommonTree comment;
-        		
-        		if(rule != null)
-        		{
-        			tree = (CommonTree)rule.Tree;
-        			Debug.WriteLine("Comments: " + tree.GetChild(0).ChildCount);
-        			//buffer.Append(NewLine + tab);
-        			for(int i = 0; i < tree.GetChild(0).ChildCount; i++)
-        			{
-        				comment = (CommonTree)tree.GetChild(0).GetChild(i);
-        				Debug.WriteLine("SubComments: " + comment.GetChild(0).Text);
-        				if(comment.GetChild(0).Type == ASLexer.ML_COMMENT)
-        				{
-        					string[] lines = lineSplitterReg.Split(comment.GetChild(0).Text);
-        					int k = 0;
-        					foreach (string line in lines)
-        					{
-        						buffer.Append((k > 0 ? " " : "") + line.Trim() + (k < lines.Length-1 ? NewLine + tab : ""));
-        						k++;
-        					}				
-        				} else {
-        					buffer.Append(comment.GetChild(0).Text.TrimEnd());
-        				}
-        			}
-        		}
-            }
+                private void insertComment(ParserRuleReturnScope rule)
+                {
+            		CommonTree tree;
+            		CommonTree comment;
+            		
+            		if(rule != null)
+            		{
+            			tree = (CommonTree)rule.Tree;   // COMMENT_LIST
+            			for(int i = 0; i < tree.ChildCount; i++)
+            			{
+            				comment = (CommonTree)tree.GetChild(i); // COMMENT_ENTRY
+            				if(comment.GetChild(0).Type == ASLexer.MULTILINE_COMMENT)
+            				{
+            					string[] lines = lineSplitterReg.Split(comment.GetChild(0).GetChild(0).Text);
+            					Debug.WriteLine("total lines: " + lines.Length);
+            					int k = 0;
+            					foreach (string line in lines)
+            					{
+            						Debug.WriteLine(k + ": " + line);
+            						buffer.Append((k > 0 ? " " : "") + line.Trim() + (k < lines.Length-1 ? NewLine + tab : ""));
+            						k++;
+            					}				
+            				} else {
+            					buffer.Append(comment.GetChild(0).GetChild(0).Text.TrimEnd());
+            				}
+                            if(i < tree.ChildCount - 1)
+                                buffer.Append(NewLine + tab);
+            			}
+            		}
+                }
         
     	/// <summary>
         /// Remove duplicates from a list of strings
@@ -807,7 +807,11 @@ public class ASParser : Parser
             			case 3 :
             			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:325:5: c= comments
             			    {
-            			    	PushFollow(FOLLOW_comments_in_as2CompilationUnit482);
+            			    	if ( backtracking == 0 ) 
+            			    	{
+            			    	   buffer.Append(NewLine + tab + NewLine + tab); 
+            			    	}
+            			    	PushFollow(FOLLOW_comments_in_as2CompilationUnit484);
             			    	c = comments();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -828,7 +832,7 @@ public class ASParser : Parser
             	loop1:
             		;	// Stops C# compiler whinging that label 'loop1' has no statements
 
-            	PushFollow(FOLLOW_as2Type_in_as2CompilationUnit493);
+            	PushFollow(FOLLOW_as2Type_in_as2CompilationUnit495);
             	as2Type4 = as2Type();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -902,7 +906,7 @@ public class ASParser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_modifiers_in_as2Type506);
+            	PushFollow(FOLLOW_modifiers_in_as2Type508);
             	mods = modifiers();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -931,7 +935,7 @@ public class ASParser : Parser
             	    case 1 :
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:332:4: as2ClassDefinition[$mods.tree]
             	        {
-            	        	PushFollow(FOLLOW_as2ClassDefinition_in_as2Type512);
+            	        	PushFollow(FOLLOW_as2ClassDefinition_in_as2Type514);
             	        	as2ClassDefinition5 = as2ClassDefinition(((CommonTree)mods.tree));
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -942,7 +946,7 @@ public class ASParser : Parser
             	    case 2 :
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:333:4: as2InterfaceDefinition[$mods.tree]
             	        {
-            	        	PushFollow(FOLLOW_as2InterfaceDefinition_in_as2Type518);
+            	        	PushFollow(FOLLOW_as2InterfaceDefinition_in_as2Type520);
             	        	as2InterfaceDefinition6 = as2InterfaceDefinition(((CommonTree)mods.tree));
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -1019,7 +1023,7 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
             	EOF7 = (CommonToken)input.LT(1);
-            	Match(input,EOF,FOLLOW_EOF_in_endOfFile535); if (failed) return retval;
+            	Match(input,EOF,FOLLOW_EOF_in_endOfFile537); if (failed) return retval;
             
             }
     
@@ -1090,12 +1094,12 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
             	IMPORT8 = (CommonToken)input.LT(1);
-            	Match(input,IMPORT,FOLLOW_IMPORT_in_importDefinition547); if (failed) return retval;
+            	Match(input,IMPORT,FOLLOW_IMPORT_in_importDefinition549); if (failed) return retval;
             	if ( backtracking==0 ) {
             	IMPORT8_tree = (CommonTree)adaptor.Create(IMPORT8);
             	root_0 = (CommonTree)adaptor.BecomeRoot(IMPORT8_tree, root_0);
             	}
-            	PushFollow(FOLLOW_identifierStar_in_importDefinition554);
+            	PushFollow(FOLLOW_identifierStar_in_importDefinition556);
             	ide = identifierStar();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -1104,7 +1108,7 @@ public class ASParser : Parser
             	{
             	   importList.Add(fromIdentifier((CommonTree)ide.Tree)); 
             	}
-            	PushFollow(FOLLOW_semi_in_importDefinition562);
+            	PushFollow(FOLLOW_semi_in_importDefinition564);
             	semi9 = semi();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -1214,7 +1218,7 @@ public class ASParser : Parser
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	SEMI10 = (CommonToken)input.LT(1);
-                    	Match(input,SEMI,FOLLOW_SEMI_in_semi573); if (failed) return retval;
+                    	Match(input,SEMI,FOLLOW_SEMI_in_semi575); if (failed) return retval;
                     
                     }
                     break;
@@ -1300,24 +1304,24 @@ public class ASParser : Parser
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:354:4: cl= CLASS ide= identifier ext= classExtendsClause imp= implementsClause typeBlock
             {
             	cl = (CommonToken)input.LT(1);
-            	Match(input,CLASS,FOLLOW_CLASS_in_as2ClassDefinition592); if (failed) return retval;
+            	Match(input,CLASS,FOLLOW_CLASS_in_as2ClassDefinition594); if (failed) return retval;
             	if ( backtracking==0 ) stream_CLASS.Add(cl);
 
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append(NewLine + tab + cl.Text + " "); 
             	}
-            	PushFollow(FOLLOW_identifier_in_as2ClassDefinition604);
+            	PushFollow(FOLLOW_identifier_in_as2ClassDefinition606);
             	ide = identifier();
             	followingStackPointer_--;
             	if (failed) return retval;
             	if ( backtracking==0 ) stream_identifier.Add(ide.Tree);
-            	PushFollow(FOLLOW_classExtendsClause_in_as2ClassDefinition610);
+            	PushFollow(FOLLOW_classExtendsClause_in_as2ClassDefinition612);
             	ext = classExtendsClause();
             	followingStackPointer_--;
             	if (failed) return retval;
             	if ( backtracking==0 ) stream_classExtendsClause.Add(ext.Tree);
-            	PushFollow(FOLLOW_implementsClause_in_as2ClassDefinition617);
+            	PushFollow(FOLLOW_implementsClause_in_as2ClassDefinition619);
             	imp = implementsClause();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -1330,7 +1334,7 @@ public class ASParser : Parser
             	  									CurrentTab++; 
             	  								
             	}
-            	PushFollow(FOLLOW_typeBlock_in_as2ClassDefinition623);
+            	PushFollow(FOLLOW_typeBlock_in_as2ClassDefinition625);
             	typeBlock11 = typeBlock();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -1448,19 +1452,19 @@ public class ASParser : Parser
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:374:4: tk= INTERFACE ide= ident interfaceExtendsClause interfaceTypeBlock
             {
             	tk = (CommonToken)input.LT(1);
-            	Match(input,INTERFACE,FOLLOW_INTERFACE_in_interfaceDefinition670); if (failed) return retval;
+            	Match(input,INTERFACE,FOLLOW_INTERFACE_in_interfaceDefinition672); if (failed) return retval;
             	if ( backtracking==0 ) stream_INTERFACE.Add(tk);
 
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append(NewLine + tab + NewLine + tab + tk.Text + " "); 
             	}
-            	PushFollow(FOLLOW_ident_in_interfaceDefinition681);
+            	PushFollow(FOLLOW_ident_in_interfaceDefinition683);
             	ide = ident();
             	followingStackPointer_--;
             	if (failed) return retval;
             	if ( backtracking==0 ) stream_ident.Add(ide.Tree);
-            	PushFollow(FOLLOW_interfaceExtendsClause_in_interfaceDefinition685);
+            	PushFollow(FOLLOW_interfaceExtendsClause_in_interfaceDefinition687);
             	interfaceExtendsClause12 = interfaceExtendsClause();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -1473,7 +1477,7 @@ public class ASParser : Parser
             	  									CurrentTab++; 
             	  								
             	}
-            	PushFollow(FOLLOW_interfaceTypeBlock_in_interfaceDefinition691);
+            	PushFollow(FOLLOW_interfaceTypeBlock_in_interfaceDefinition693);
             	interfaceTypeBlock13 = interfaceTypeBlock();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -1590,20 +1594,20 @@ public class ASParser : Parser
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:391:4: INTERFACE identifier interfaceExtendsClause interfaceTypeBlock
             {
             	INTERFACE14 = (CommonToken)input.LT(1);
-            	Match(input,INTERFACE,FOLLOW_INTERFACE_in_as2InterfaceDefinition727); if (failed) return retval;
+            	Match(input,INTERFACE,FOLLOW_INTERFACE_in_as2InterfaceDefinition729); if (failed) return retval;
             	if ( backtracking==0 ) stream_INTERFACE.Add(INTERFACE14);
 
-            	PushFollow(FOLLOW_identifier_in_as2InterfaceDefinition729);
+            	PushFollow(FOLLOW_identifier_in_as2InterfaceDefinition731);
             	identifier15 = identifier();
             	followingStackPointer_--;
             	if (failed) return retval;
             	if ( backtracking==0 ) stream_identifier.Add(identifier15.Tree);
-            	PushFollow(FOLLOW_interfaceExtendsClause_in_as2InterfaceDefinition733);
+            	PushFollow(FOLLOW_interfaceExtendsClause_in_as2InterfaceDefinition735);
             	interfaceExtendsClause16 = interfaceExtendsClause();
             	followingStackPointer_--;
             	if (failed) return retval;
             	if ( backtracking==0 ) stream_interfaceExtendsClause.Add(interfaceExtendsClause16.Tree);
-            	PushFollow(FOLLOW_interfaceTypeBlock_in_as2InterfaceDefinition737);
+            	PushFollow(FOLLOW_interfaceTypeBlock_in_as2InterfaceDefinition739);
             	interfaceTypeBlock17 = interfaceTypeBlock();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -1719,7 +1723,7 @@ public class ASParser : Parser
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:399:4: tk= EXTENDS ide= identifier
             	        {
             	        	tk = (CommonToken)input.LT(1);
-            	        	Match(input,EXTENDS,FOLLOW_EXTENDS_in_classExtendsClause771); if (failed) return retval;
+            	        	Match(input,EXTENDS,FOLLOW_EXTENDS_in_classExtendsClause773); if (failed) return retval;
             	        	if ( backtracking==0 ) {
             	        	tk_tree = (CommonTree)adaptor.Create(tk);
             	        	root_0 = (CommonTree)adaptor.BecomeRoot(tk_tree, root_0);
@@ -1728,7 +1732,7 @@ public class ASParser : Parser
             	        	{
             	        	   buffer.Append(" " + tk.Text + " "); 
             	        	}
-            	        	PushFollow(FOLLOW_identifier_in_classExtendsClause783);
+            	        	PushFollow(FOLLOW_identifier_in_classExtendsClause785);
             	        	ide = identifier();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -1824,7 +1828,7 @@ public class ASParser : Parser
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:405:4: tk= EXTENDS ide= identifier ( COMMA ide2= identifier )*
             	        {
             	        	tk = (CommonToken)input.LT(1);
-            	        	Match(input,EXTENDS,FOLLOW_EXTENDS_in_interfaceExtendsClause806); if (failed) return retval;
+            	        	Match(input,EXTENDS,FOLLOW_EXTENDS_in_interfaceExtendsClause808); if (failed) return retval;
             	        	if ( backtracking==0 ) {
             	        	tk_tree = (CommonTree)adaptor.Create(tk);
             	        	root_0 = (CommonTree)adaptor.BecomeRoot(tk_tree, root_0);
@@ -1833,7 +1837,7 @@ public class ASParser : Parser
             	        	{
             	        	   buffer.Append(tk.Text + " "); 
             	        	}
-            	        	PushFollow(FOLLOW_identifier_in_interfaceExtendsClause818);
+            	        	PushFollow(FOLLOW_identifier_in_interfaceExtendsClause820);
             	        	ide = identifier();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -1860,12 +1864,12 @@ public class ASParser : Parser
             	        			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:408:5: COMMA ide2= identifier
             	        			    {
             	        			    	COMMA18 = (CommonToken)input.LT(1);
-            	        			    	Match(input,COMMA,FOLLOW_COMMA_in_interfaceExtendsClause832); if (failed) return retval;
+            	        			    	Match(input,COMMA,FOLLOW_COMMA_in_interfaceExtendsClause834); if (failed) return retval;
             	        			    	if ( backtracking == 0 ) 
             	        			    	{
             	        			    	   buffer.Append(", "); 
             	        			    	}
-            	        			    	PushFollow(FOLLOW_identifier_in_interfaceExtendsClause846);
+            	        			    	PushFollow(FOLLOW_identifier_in_interfaceExtendsClause848);
             	        			    	ide2 = identifier();
             	        			    	followingStackPointer_--;
             	        			    	if (failed) return retval;
@@ -1975,7 +1979,7 @@ public class ASParser : Parser
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:415:5: IMPLEMENTS ide= identifier ( COMMA ide= identifier )*
             	        {
             	        	IMPLEMENTS19 = (CommonToken)input.LT(1);
-            	        	Match(input,IMPLEMENTS,FOLLOW_IMPLEMENTS_in_implementsClause873); if (failed) return retval;
+            	        	Match(input,IMPLEMENTS,FOLLOW_IMPLEMENTS_in_implementsClause875); if (failed) return retval;
             	        	if ( backtracking==0 ) {
             	        	IMPLEMENTS19_tree = (CommonTree)adaptor.Create(IMPLEMENTS19);
             	        	root_0 = (CommonTree)adaptor.BecomeRoot(IMPLEMENTS19_tree, root_0);
@@ -1984,7 +1988,7 @@ public class ASParser : Parser
             	        	{
             	        	   buffer.Append(" implements "); 
             	        	}
-            	        	PushFollow(FOLLOW_identifier_in_implementsClause884);
+            	        	PushFollow(FOLLOW_identifier_in_implementsClause886);
             	        	ide = identifier();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -2011,12 +2015,12 @@ public class ASParser : Parser
             	        			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:418:5: COMMA ide= identifier
             	        			    {
             	        			    	COMMA20 = (CommonToken)input.LT(1);
-            	        			    	Match(input,COMMA,FOLLOW_COMMA_in_implementsClause898); if (failed) return retval;
+            	        			    	Match(input,COMMA,FOLLOW_COMMA_in_implementsClause900); if (failed) return retval;
             	        			    	if ( backtracking == 0 ) 
             	        			    	{
             	        			    	   buffer.Append(", "); 
             	        			    	}
-            	        			    	PushFollow(FOLLOW_identifier_in_implementsClause911);
+            	        			    	PushFollow(FOLLOW_identifier_in_implementsClause913);
             	        			    	ide = identifier();
             	        			    	followingStackPointer_--;
             	        			    	if (failed) return retval;
@@ -2113,7 +2117,7 @@ public class ASParser : Parser
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:425:4: LCURLY ( interfaceTypeBlockEntry )* RCURLY
             {
             	LCURLY21 = (CommonToken)input.LT(1);
-            	Match(input,LCURLY,FOLLOW_LCURLY_in_interfaceTypeBlock937); if (failed) return retval;
+            	Match(input,LCURLY,FOLLOW_LCURLY_in_interfaceTypeBlock939); if (failed) return retval;
             	if ( backtracking==0 ) stream_LCURLY.Add(LCURLY21);
 
             	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:426:3: ( interfaceTypeBlockEntry )*
@@ -2133,7 +2137,7 @@ public class ASParser : Parser
             			case 1 :
             			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:426:4: interfaceTypeBlockEntry
             			    {
-            			    	PushFollow(FOLLOW_interfaceTypeBlockEntry_in_interfaceTypeBlock942);
+            			    	PushFollow(FOLLOW_interfaceTypeBlockEntry_in_interfaceTypeBlock944);
             			    	interfaceTypeBlockEntry22 = interfaceTypeBlockEntry();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -2151,7 +2155,7 @@ public class ASParser : Parser
             		;	// Stops C# compiler whinging that label 'loop9' has no statements
 
             	RCURLY23 = (CommonToken)input.LT(1);
-            	Match(input,RCURLY,FOLLOW_RCURLY_in_interfaceTypeBlock948); if (failed) return retval;
+            	Match(input,RCURLY,FOLLOW_RCURLY_in_interfaceTypeBlock950); if (failed) return retval;
             	if ( backtracking==0 ) stream_RCURLY.Add(RCURLY23);
 
             	
@@ -2257,7 +2261,7 @@ public class ASParser : Parser
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:432:4: LCURLY ( typeBlockEntry )* RCURLY
             {
             	LCURLY24 = (CommonToken)input.LT(1);
-            	Match(input,LCURLY,FOLLOW_LCURLY_in_typeBlock971); if (failed) return retval;
+            	Match(input,LCURLY,FOLLOW_LCURLY_in_typeBlock973); if (failed) return retval;
             	if ( backtracking==0 ) stream_LCURLY.Add(LCURLY24);
 
             	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:433:3: ( typeBlockEntry )*
@@ -2277,7 +2281,7 @@ public class ASParser : Parser
             			case 1 :
             			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:433:4: typeBlockEntry
             			    {
-            			    	PushFollow(FOLLOW_typeBlockEntry_in_typeBlock976);
+            			    	PushFollow(FOLLOW_typeBlockEntry_in_typeBlock978);
             			    	typeBlockEntry25 = typeBlockEntry();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -2295,7 +2299,7 @@ public class ASParser : Parser
             		;	// Stops C# compiler whinging that label 'loop10' has no statements
 
             	RCURLY26 = (CommonToken)input.LT(1);
-            	Match(input,RCURLY,FOLLOW_RCURLY_in_typeBlock982); if (failed) return retval;
+            	Match(input,RCURLY,FOLLOW_RCURLY_in_typeBlock984); if (failed) return retval;
             	if ( backtracking==0 ) stream_RCURLY.Add(RCURLY26);
 
             	
@@ -2455,14 +2459,14 @@ public class ASParser : Parser
                     	{
                     	   buffer.Append(NewLine + tab); 
                     	}
-                    	PushFollow(FOLLOW_modifiers_in_interfaceTypeBlockEntry1010);
+                    	PushFollow(FOLLOW_modifiers_in_interfaceTypeBlockEntry1012);
                     	m = modifiers();
                     	followingStackPointer_--;
                     	if (failed) return retval;
                     	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:441:3: ( interfaceMethodDefinition[$m.tree] )
                     	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:442:4: interfaceMethodDefinition[$m.tree]
                     	{
-                    		PushFollow(FOLLOW_interfaceMethodDefinition_in_interfaceTypeBlockEntry1021);
+                    		PushFollow(FOLLOW_interfaceMethodDefinition_in_interfaceTypeBlockEntry1023);
                     		interfaceMethodDefinition27 = interfaceMethodDefinition(((CommonTree)m.tree));
                     		followingStackPointer_--;
                     		if (failed) return retval;
@@ -2478,7 +2482,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_importDefinition_in_interfaceTypeBlockEntry1031);
+                    	PushFollow(FOLLOW_importDefinition_in_interfaceTypeBlockEntry1033);
                     	importDefinition28 = importDefinition();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -2495,7 +2499,7 @@ public class ASParser : Parser
                     	{
                     	   buffer.Append(NewLine + tab); 
                     	}
-                    	PushFollow(FOLLOW_as2IncludeDirective_in_interfaceTypeBlockEntry1038);
+                    	PushFollow(FOLLOW_as2IncludeDirective_in_interfaceTypeBlockEntry1040);
                     	as2IncludeDirective29 = as2IncludeDirective();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -2512,7 +2516,7 @@ public class ASParser : Parser
                     	{
                     	   buffer.Append(NewLine + tab); 
                     	}
-                    	PushFollow(FOLLOW_annotations_in_interfaceTypeBlockEntry1045);
+                    	PushFollow(FOLLOW_annotations_in_interfaceTypeBlockEntry1047);
                     	annotations30 = annotations();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -2655,7 +2659,7 @@ public class ASParser : Parser
                     	{
                     	   buffer.Append(NewLine + tab); 
                     	}
-                    	PushFollow(FOLLOW_modifiers_in_typeBlockEntry1062);
+                    	PushFollow(FOLLOW_modifiers_in_typeBlockEntry1064);
                     	m = modifiers();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -2684,7 +2688,7 @@ public class ASParser : Parser
                     	    case 1 :
                     	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:452:5: variableDefinition[$m.tree]
                     	        {
-                    	        	PushFollow(FOLLOW_variableDefinition_in_typeBlockEntry1069);
+                    	        	PushFollow(FOLLOW_variableDefinition_in_typeBlockEntry1071);
                     	        	variableDefinition31 = variableDefinition(((CommonTree)m.tree));
                     	        	followingStackPointer_--;
                     	        	if (failed) return retval;
@@ -2699,7 +2703,7 @@ public class ASParser : Parser
                     	    case 2 :
                     	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:453:5: methodDefinition[$m.tree]
                     	        {
-                    	        	PushFollow(FOLLOW_methodDefinition_in_typeBlockEntry1079);
+                    	        	PushFollow(FOLLOW_methodDefinition_in_typeBlockEntry1081);
                     	        	methodDefinition32 = methodDefinition(((CommonTree)m.tree));
                     	        	followingStackPointer_--;
                     	        	if (failed) return retval;
@@ -2718,7 +2722,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_importDefinition_in_typeBlockEntry1089);
+                    	PushFollow(FOLLOW_importDefinition_in_typeBlockEntry1091);
                     	importDefinition33 = importDefinition();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -2735,7 +2739,7 @@ public class ASParser : Parser
                     	{
                     	   buffer.Append(NewLine + tab); 
                     	}
-                    	PushFollow(FOLLOW_as2IncludeDirective_in_typeBlockEntry1096);
+                    	PushFollow(FOLLOW_as2IncludeDirective_in_typeBlockEntry1098);
                     	as2IncludeDirective34 = as2IncludeDirective();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -2752,7 +2756,7 @@ public class ASParser : Parser
                     	{
                     	   buffer.Append(NewLine + tab); 
                     	}
-                    	PushFollow(FOLLOW_annotations_in_typeBlockEntry1103);
+                    	PushFollow(FOLLOW_annotations_in_typeBlockEntry1105);
                     	annotations35 = annotations();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -2765,7 +2769,11 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_comments_in_typeBlockEntry1110);
+                    	if ( backtracking == 0 ) 
+                    	{
+                    	   buffer.Append(NewLine + tab + NewLine + tab); 
+                    	}
+                    	PushFollow(FOLLOW_comments_in_typeBlockEntry1114);
                     	c = comments();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -2844,11 +2852,11 @@ public class ASParser : Parser
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:462:4: INCLUDE_DIRECTIVE st= STRING_LITERAL
             {
             	INCLUDE_DIRECTIVE36 = (CommonToken)input.LT(1);
-            	Match(input,INCLUDE_DIRECTIVE,FOLLOW_INCLUDE_DIRECTIVE_in_as2IncludeDirective1123); if (failed) return retval;
+            	Match(input,INCLUDE_DIRECTIVE,FOLLOW_INCLUDE_DIRECTIVE_in_as2IncludeDirective1127); if (failed) return retval;
             	if ( backtracking==0 ) stream_INCLUDE_DIRECTIVE.Add(INCLUDE_DIRECTIVE36);
 
             	st = (CommonToken)input.LT(1);
-            	Match(input,STRING_LITERAL,FOLLOW_STRING_LITERAL_in_as2IncludeDirective1127); if (failed) return retval;
+            	Match(input,STRING_LITERAL,FOLLOW_STRING_LITERAL_in_as2IncludeDirective1131); if (failed) return retval;
             	if ( backtracking==0 ) stream_STRING_LITERAL.Add(st);
 
             	if ( backtracking == 0 ) 
@@ -2952,18 +2960,18 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
             	string_literal37 = (CommonToken)input.LT(1);
-            	Match(input,175,FOLLOW_175_in_includeDirective1150); if (failed) return retval;
+            	Match(input,175,FOLLOW_175_in_includeDirective1154); if (failed) return retval;
             	if ( backtracking==0 ) {
             	string_literal37_tree = (CommonTree)adaptor.Create(string_literal37);
             	adaptor.AddChild(root_0, string_literal37_tree);
             	}
             	STRING_LITERAL38 = (CommonToken)input.LT(1);
-            	Match(input,STRING_LITERAL,FOLLOW_STRING_LITERAL_in_includeDirective1152); if (failed) return retval;
+            	Match(input,STRING_LITERAL,FOLLOW_STRING_LITERAL_in_includeDirective1156); if (failed) return retval;
             	if ( backtracking==0 ) {
             	STRING_LITERAL38_tree = (CommonTree)adaptor.Create(STRING_LITERAL38);
             	adaptor.AddChild(root_0, STRING_LITERAL38_tree);
             	}
-            	PushFollow(FOLLOW_semi_in_includeDirective1154);
+            	PushFollow(FOLLOW_semi_in_includeDirective1158);
             	semi39 = semi();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -3047,19 +3055,19 @@ public class ASParser : Parser
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:471:4: FUNCTION r= optionalAccessorRole ide= ident parameterDeclarationList (type_exp= typeExpression )? ( semi )
             {
             	FUNCTION40 = (CommonToken)input.LT(1);
-            	Match(input,FUNCTION,FOLLOW_FUNCTION_in_interfaceMethodDefinition1166); if (failed) return retval;
+            	Match(input,FUNCTION,FOLLOW_FUNCTION_in_interfaceMethodDefinition1170); if (failed) return retval;
             	if ( backtracking==0 ) stream_FUNCTION.Add(FUNCTION40);
 
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append("function "); 
             	}
-            	PushFollow(FOLLOW_optionalAccessorRole_in_interfaceMethodDefinition1178);
+            	PushFollow(FOLLOW_optionalAccessorRole_in_interfaceMethodDefinition1182);
             	r = optionalAccessorRole();
             	followingStackPointer_--;
             	if (failed) return retval;
             	if ( backtracking==0 ) stream_optionalAccessorRole.Add(r.Tree);
-            	PushFollow(FOLLOW_ident_in_interfaceMethodDefinition1184);
+            	PushFollow(FOLLOW_ident_in_interfaceMethodDefinition1188);
             	ide = ident();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -3068,7 +3076,7 @@ public class ASParser : Parser
             	{
             	   buffer.Append(((CommonTree)ide.Tree).Text); 
             	}
-            	PushFollow(FOLLOW_parameterDeclarationList_in_interfaceMethodDefinition1194);
+            	PushFollow(FOLLOW_parameterDeclarationList_in_interfaceMethodDefinition1198);
             	parameterDeclarationList41 = parameterDeclarationList();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -3086,7 +3094,7 @@ public class ASParser : Parser
             	    case 1 :
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: type_exp= typeExpression
             	        {
-            	        	PushFollow(FOLLOW_typeExpression_in_interfaceMethodDefinition1200);
+            	        	PushFollow(FOLLOW_typeExpression_in_interfaceMethodDefinition1204);
             	        	type_exp = typeExpression();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -3108,7 +3116,7 @@ public class ASParser : Parser
             	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:480:3: ( semi )
             	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:480:4: semi
             	{
-            		PushFollow(FOLLOW_semi_in_interfaceMethodDefinition1208);
+            		PushFollow(FOLLOW_semi_in_interfaceMethodDefinition1212);
             		semi42 = semi();
             		followingStackPointer_--;
             		if (failed) return retval;
@@ -3239,19 +3247,19 @@ public class ASParser : Parser
             	  		
             	}
             	FUNCTION43 = (CommonToken)input.LT(1);
-            	Match(input,FUNCTION,FOLLOW_FUNCTION_in_methodDefinition1279); if (failed) return retval;
+            	Match(input,FUNCTION,FOLLOW_FUNCTION_in_methodDefinition1283); if (failed) return retval;
             	if ( backtracking==0 ) stream_FUNCTION.Add(FUNCTION43);
 
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append("function "); 
             	}
-            	PushFollow(FOLLOW_optionalAccessorRole_in_methodDefinition1291);
+            	PushFollow(FOLLOW_optionalAccessorRole_in_methodDefinition1295);
             	r = optionalAccessorRole();
             	followingStackPointer_--;
             	if (failed) return retval;
             	if ( backtracking==0 ) stream_optionalAccessorRole.Add(r.Tree);
-            	PushFollow(FOLLOW_ident_in_methodDefinition1297);
+            	PushFollow(FOLLOW_ident_in_methodDefinition1301);
             	ide = ident();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -3260,7 +3268,7 @@ public class ASParser : Parser
             	{
             	   buffer.Append(((CommonTree)ide.Tree).Text); 
             	}
-            	PushFollow(FOLLOW_parameterDeclarationList_in_methodDefinition1315);
+            	PushFollow(FOLLOW_parameterDeclarationList_in_methodDefinition1319);
             	parameterDeclarationList44 = parameterDeclarationList();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -3278,7 +3286,7 @@ public class ASParser : Parser
             	    case 1 :
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: type_exp= typeExpression
             	        {
-            	        	PushFollow(FOLLOW_typeExpression_in_methodDefinition1321);
+            	        	PushFollow(FOLLOW_typeExpression_in_methodDefinition1325);
             	        	type_exp = typeExpression();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -3297,7 +3305,7 @@ public class ASParser : Parser
             	  										CurrentTab++;
             	  									
             	}
-            	PushFollow(FOLLOW_block_in_methodDefinition1337);
+            	PushFollow(FOLLOW_block_in_methodDefinition1341);
             	block45 = block();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -3439,7 +3447,7 @@ public class ASParser : Parser
             	    case 1 :
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: accessorRole
             	        {
-            	        	PushFollow(FOLLOW_accessorRole_in_optionalAccessorRole1420);
+            	        	PushFollow(FOLLOW_accessorRole_in_optionalAccessorRole1424);
             	        	accessorRole46 = accessorRole();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -3573,7 +3581,7 @@ public class ASParser : Parser
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	GET47 = (CommonToken)input.LT(1);
-                    	Match(input,GET,FOLLOW_GET_in_accessorRole1443); if (failed) return retval;
+                    	Match(input,GET,FOLLOW_GET_in_accessorRole1447); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	GET47_tree = (CommonTree)adaptor.Create(GET47);
                     	adaptor.AddChild(root_0, GET47_tree);
@@ -3591,7 +3599,7 @@ public class ASParser : Parser
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	SET48 = (CommonToken)input.LT(1);
-                    	Match(input,SET,FOLLOW_SET_in_accessorRole1451); if (failed) return retval;
+                    	Match(input,SET,FOLLOW_SET_in_accessorRole1455); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	SET48_tree = (CommonTree)adaptor.Create(SET48);
                     	adaptor.AddChild(root_0, SET48_tree);
@@ -3687,7 +3695,7 @@ public class ASParser : Parser
             	  			if(mods.ChildCount > 0) buffer.Append(fromModifiers(mods) + " ");
             	  		
             	}
-            	PushFollow(FOLLOW_varOrConst_in_variableDefinition1482);
+            	PushFollow(FOLLOW_varOrConst_in_variableDefinition1486);
             	decl = varOrConst();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -3696,7 +3704,7 @@ public class ASParser : Parser
             	{
             	   buffer.Append(((CommonTree)decl.Tree).Text + " "); 
             	}
-            	PushFollow(FOLLOW_variableDeclarator_in_variableDefinition1491);
+            	PushFollow(FOLLOW_variableDeclarator_in_variableDefinition1495);
             	variableDeclarator49 = variableDeclarator();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -3723,7 +3731,7 @@ public class ASParser : Parser
             			    	  	buffer.Append(";"); 
             			    	}
             			    	COMMA50 = (CommonToken)input.LT(1);
-            			    	Match(input,COMMA,FOLLOW_COMMA_in_variableDefinition1511); if (failed) return retval;
+            			    	Match(input,COMMA,FOLLOW_COMMA_in_variableDefinition1515); if (failed) return retval;
             			    	if ( backtracking==0 ) stream_COMMA.Add(COMMA50);
 
             			    	if ( backtracking == 0 ) 
@@ -3734,7 +3742,7 @@ public class ASParser : Parser
             			    	  										buffer.Append(((CommonTree)decl.Tree).Text + " ");
             			    	  									
             			    	}
-            			    	PushFollow(FOLLOW_variableDeclarator_in_variableDefinition1522);
+            			    	PushFollow(FOLLOW_variableDeclarator_in_variableDefinition1526);
             			    	variableDeclarator51 = variableDeclarator();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -3751,7 +3759,7 @@ public class ASParser : Parser
             	loop18:
             		;	// Stops C# compiler whinging that label 'loop18' has no statements
 
-            	PushFollow(FOLLOW_semi_in_variableDefinition1531);
+            	PushFollow(FOLLOW_semi_in_variableDefinition1535);
             	semi52 = semi();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -3945,7 +3953,7 @@ public class ASParser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_ident_in_variableDeclarator1575);
+            	PushFollow(FOLLOW_ident_in_variableDeclarator1579);
             	ide = ident();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -3967,7 +3975,7 @@ public class ASParser : Parser
             	    case 1 :
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: type_exp= typeExpression
             	        {
-            	        	PushFollow(FOLLOW_typeExpression_in_variableDeclarator1588);
+            	        	PushFollow(FOLLOW_typeExpression_in_variableDeclarator1592);
             	        	type_exp = typeExpression();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -3996,7 +4004,7 @@ public class ASParser : Parser
             	    case 1 :
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: variableInitializer
             	        {
-            	        	PushFollow(FOLLOW_variableInitializer_in_variableDeclarator1595);
+            	        	PushFollow(FOLLOW_variableInitializer_in_variableDeclarator1599);
             	        	variableInitializer54 = variableInitializer();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -4076,7 +4084,7 @@ public class ASParser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_varOrConst_in_declaration1610);
+            	PushFollow(FOLLOW_varOrConst_in_declaration1614);
             	decl = varOrConst();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -4085,12 +4093,12 @@ public class ASParser : Parser
             	{
             	   buffer.Append(((CommonTree)decl.Tree).Text + " "); 
             	}
-            	PushFollow(FOLLOW_variableDeclarator_in_declaration1620);
+            	PushFollow(FOLLOW_variableDeclarator_in_declaration1624);
             	variableDeclarator55 = variableDeclarator();
             	followingStackPointer_--;
             	if (failed) return retval;
             	if ( backtracking==0 ) adaptor.AddChild(root_0, variableDeclarator55.Tree);
-            	PushFollow(FOLLOW_declarationTail_in_declaration1624);
+            	PushFollow(FOLLOW_declarationTail_in_declaration1628);
             	declarationTail56 = declarationTail();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -4185,12 +4193,12 @@ public class ASParser : Parser
             			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:577:4: COMMA variableDeclarator
             			    {
             			    	COMMA57 = (CommonToken)input.LT(1);
-            			    	Match(input,COMMA,FOLLOW_COMMA_in_declarationTail1650); if (failed) return retval;
+            			    	Match(input,COMMA,FOLLOW_COMMA_in_declarationTail1654); if (failed) return retval;
             			    	if ( backtracking == 0 ) 
             			    	{
             			    	   buffer.Append(options.SpaceBetweenArguments ? ", " : ","); 
             			    	}
-            			    	PushFollow(FOLLOW_variableDeclarator_in_declarationTail1658);
+            			    	PushFollow(FOLLOW_variableDeclarator_in_declarationTail1662);
             			    	variableDeclarator58 = variableDeclarator();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -4277,7 +4285,7 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
             	ASSIGN59 = (CommonToken)input.LT(1);
-            	Match(input,ASSIGN,FOLLOW_ASSIGN_in_variableInitializer1674); if (failed) return retval;
+            	Match(input,ASSIGN,FOLLOW_ASSIGN_in_variableInitializer1678); if (failed) return retval;
             	if ( backtracking==0 ) {
             	ASSIGN59_tree = (CommonTree)adaptor.Create(ASSIGN59);
             	root_0 = (CommonTree)adaptor.BecomeRoot(ASSIGN59_tree, root_0);
@@ -4290,7 +4298,7 @@ public class ASParser : Parser
             	  								if(options.SpaceBetweenAssign) buffer.Append(" ");
             	  							
             	}
-            	PushFollow(FOLLOW_assignmentExpression_in_variableInitializer1684);
+            	PushFollow(FOLLOW_assignmentExpression_in_variableInitializer1688);
             	assignmentExpression60 = assignmentExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -4370,7 +4378,7 @@ public class ASParser : Parser
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:594:4: LPAREN ( parameterDeclaration ( COMMA parameterDeclaration )* )? RPAREN
             {
             	LPAREN61 = (CommonToken)input.LT(1);
-            	Match(input,LPAREN,FOLLOW_LPAREN_in_parameterDeclarationList1697); if (failed) return retval;
+            	Match(input,LPAREN,FOLLOW_LPAREN_in_parameterDeclarationList1701); if (failed) return retval;
             	if ( backtracking==0 ) stream_LPAREN.Add(LPAREN61);
 
             	if ( backtracking == 0 ) 
@@ -4390,7 +4398,7 @@ public class ASParser : Parser
             	    case 1 :
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:595:5: parameterDeclaration ( COMMA parameterDeclaration )*
             	        {
-            	        	PushFollow(FOLLOW_parameterDeclaration_in_parameterDeclarationList1707);
+            	        	PushFollow(FOLLOW_parameterDeclaration_in_parameterDeclarationList1711);
             	        	parameterDeclaration62 = parameterDeclaration();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -4413,14 +4421,14 @@ public class ASParser : Parser
             	        			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:597:5: COMMA parameterDeclaration
             	        			    {
             	        			    	COMMA63 = (CommonToken)input.LT(1);
-            	        			    	Match(input,COMMA,FOLLOW_COMMA_in_parameterDeclarationList1718); if (failed) return retval;
+            	        			    	Match(input,COMMA,FOLLOW_COMMA_in_parameterDeclarationList1722); if (failed) return retval;
             	        			    	if ( backtracking==0 ) stream_COMMA.Add(COMMA63);
 
             	        			    	if ( backtracking == 0 ) 
             	        			    	{
             	        			    	   buffer.Append(options.SpaceBetweenArguments ? ", " : ","); 
             	        			    	}
-            	        			    	PushFollow(FOLLOW_parameterDeclaration_in_parameterDeclarationList1727);
+            	        			    	PushFollow(FOLLOW_parameterDeclaration_in_parameterDeclarationList1731);
             	        			    	parameterDeclaration64 = parameterDeclaration();
             	        			    	followingStackPointer_--;
             	        			    	if (failed) return retval;
@@ -4444,7 +4452,7 @@ public class ASParser : Parser
             	}
 
             	RPAREN65 = (CommonToken)input.LT(1);
-            	Match(input,RPAREN,FOLLOW_RPAREN_in_parameterDeclarationList1742); if (failed) return retval;
+            	Match(input,RPAREN,FOLLOW_RPAREN_in_parameterDeclarationList1746); if (failed) return retval;
             	if ( backtracking==0 ) stream_RPAREN.Add(RPAREN65);
 
             	if ( backtracking == 0 ) 
@@ -4549,7 +4557,7 @@ public class ASParser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_basicParameterDeclaration_in_parameterDeclaration1769);
+            	PushFollow(FOLLOW_basicParameterDeclaration_in_parameterDeclaration1773);
             	basicParameterDeclaration66 = basicParameterDeclaration();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -4640,7 +4648,7 @@ public class ASParser : Parser
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: CONST
             	        {
             	        	CONST67 = (CommonToken)input.LT(1);
-            	        	Match(input,CONST,FOLLOW_CONST_in_basicParameterDeclaration1780); if (failed) return retval;
+            	        	Match(input,CONST,FOLLOW_CONST_in_basicParameterDeclaration1784); if (failed) return retval;
             	        	if ( backtracking==0 ) stream_CONST.Add(CONST67);
 
             	        
@@ -4649,7 +4657,7 @@ public class ASParser : Parser
             	
             	}
 
-            	PushFollow(FOLLOW_ident_in_basicParameterDeclaration1788);
+            	PushFollow(FOLLOW_ident_in_basicParameterDeclaration1792);
             	ide = ident();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -4671,7 +4679,7 @@ public class ASParser : Parser
             	    case 1 :
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: type_exp= typeExpression
             	        {
-            	        	PushFollow(FOLLOW_typeExpression_in_basicParameterDeclaration1800);
+            	        	PushFollow(FOLLOW_typeExpression_in_basicParameterDeclaration1804);
             	        	type_exp = typeExpression();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -4699,7 +4707,7 @@ public class ASParser : Parser
             	    case 1 :
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: parameterDefault
             	        {
-            	        	PushFollow(FOLLOW_parameterDefault_in_basicParameterDeclaration1807);
+            	        	PushFollow(FOLLOW_parameterDefault_in_basicParameterDeclaration1811);
             	        	parameterDefault68 = parameterDefault();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -4831,12 +4839,12 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
             	ASSIGN69 = (CommonToken)input.LT(1);
-            	Match(input,ASSIGN,FOLLOW_ASSIGN_in_parameterDefault1851); if (failed) return retval;
+            	Match(input,ASSIGN,FOLLOW_ASSIGN_in_parameterDefault1855); if (failed) return retval;
             	if ( backtracking==0 ) {
             	ASSIGN69_tree = (CommonTree)adaptor.Create(ASSIGN69);
             	root_0 = (CommonTree)adaptor.BecomeRoot(ASSIGN69_tree, root_0);
             	}
-            	PushFollow(FOLLOW_assignmentExpression_in_parameterDefault1854);
+            	PushFollow(FOLLOW_assignmentExpression_in_parameterDefault1858);
             	assignmentExpression70 = assignmentExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -4913,7 +4921,7 @@ public class ASParser : Parser
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:628:4: LCURLY ( blockEntry )* RCURLY
             {
             	LCURLY71 = (CommonToken)input.LT(1);
-            	Match(input,LCURLY,FOLLOW_LCURLY_in_block1865); if (failed) return retval;
+            	Match(input,LCURLY,FOLLOW_LCURLY_in_block1869); if (failed) return retval;
             	if ( backtracking==0 ) stream_LCURLY.Add(LCURLY71);
 
             	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:629:3: ( blockEntry )*
@@ -4933,7 +4941,7 @@ public class ASParser : Parser
             			case 1 :
             			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: blockEntry
             			    {
-            			    	PushFollow(FOLLOW_blockEntry_in_block1869);
+            			    	PushFollow(FOLLOW_blockEntry_in_block1873);
             			    	blockEntry72 = blockEntry();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -4951,7 +4959,7 @@ public class ASParser : Parser
             		;	// Stops C# compiler whinging that label 'loop27' has no statements
 
             	RCURLY73 = (CommonToken)input.LT(1);
-            	Match(input,RCURLY,FOLLOW_RCURLY_in_block1875); if (failed) return retval;
+            	Match(input,RCURLY,FOLLOW_RCURLY_in_block1879); if (failed) return retval;
             	if ( backtracking==0 ) stream_RCURLY.Add(RCURLY73);
 
             	
@@ -5056,7 +5064,7 @@ public class ASParser : Parser
             	{
             	   buffer.Append(NewLine + tab); 
             	}
-            	PushFollow(FOLLOW_statement_in_blockEntry1899);
+            	PushFollow(FOLLOW_statement_in_blockEntry1903);
             	statement74 = statement();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -5131,20 +5139,20 @@ public class ASParser : Parser
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:639:4: LPAREN expression RPAREN
             {
             	LPAREN75 = (CommonToken)input.LT(1);
-            	Match(input,LPAREN,FOLLOW_LPAREN_in_condition1910); if (failed) return retval;
+            	Match(input,LPAREN,FOLLOW_LPAREN_in_condition1914); if (failed) return retval;
             	if ( backtracking==0 ) stream_LPAREN.Add(LPAREN75);
 
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append(options.SpaceBeforeMethodDef ? " (" : "("); 
             	}
-            	PushFollow(FOLLOW_expression_in_condition1918);
+            	PushFollow(FOLLOW_expression_in_condition1922);
             	expression76 = expression();
             	followingStackPointer_--;
             	if (failed) return retval;
             	if ( backtracking==0 ) stream_expression.Add(expression76.Tree);
             	RPAREN77 = (CommonToken)input.LT(1);
-            	Match(input,RPAREN,FOLLOW_RPAREN_in_condition1923); if (failed) return retval;
+            	Match(input,RPAREN,FOLLOW_RPAREN_in_condition1927); if (failed) return retval;
             	if ( backtracking==0 ) stream_RPAREN.Add(RPAREN77);
 
             	if ( backtracking == 0 ) 
@@ -5753,7 +5761,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_block_in_statement1953);
+                    	PushFollow(FOLLOW_block_in_statement1957);
                     	block78 = block();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -5766,7 +5774,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_declarationStatement_in_statement1958);
+                    	PushFollow(FOLLOW_declarationStatement_in_statement1962);
                     	declarationStatement79 = declarationStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -5783,7 +5791,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_expressionStatement_in_statement1966);
+                    	PushFollow(FOLLOW_expressionStatement_in_statement1970);
                     	expressionStatement80 = expressionStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -5800,7 +5808,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_ifStatement_in_statement1975);
+                    	PushFollow(FOLLOW_ifStatement_in_statement1979);
                     	ifStatement81 = ifStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -5813,7 +5821,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_forStatement_in_statement1980);
+                    	PushFollow(FOLLOW_forStatement_in_statement1984);
                     	forStatement82 = forStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -5826,7 +5834,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_whileStatement_in_statement1985);
+                    	PushFollow(FOLLOW_whileStatement_in_statement1989);
                     	whileStatement83 = whileStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -5839,7 +5847,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_doWhileStatement_in_statement1990);
+                    	PushFollow(FOLLOW_doWhileStatement_in_statement1994);
                     	doWhileStatement84 = doWhileStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -5852,7 +5860,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_withStatement_in_statement1995);
+                    	PushFollow(FOLLOW_withStatement_in_statement1999);
                     	withStatement85 = withStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -5865,7 +5873,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_switchStatement_in_statement2000);
+                    	PushFollow(FOLLOW_switchStatement_in_statement2004);
                     	switchStatement86 = switchStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -5878,7 +5886,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_breakStatement_in_statement2005);
+                    	PushFollow(FOLLOW_breakStatement_in_statement2009);
                     	breakStatement87 = breakStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -5895,7 +5903,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_continueStatement_in_statement2015);
+                    	PushFollow(FOLLOW_continueStatement_in_statement2019);
                     	continueStatement88 = continueStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -5912,7 +5920,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_returnStatement_in_statement2024);
+                    	PushFollow(FOLLOW_returnStatement_in_statement2028);
                     	returnStatement89 = returnStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -5929,7 +5937,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_throwStatement_in_statement2034);
+                    	PushFollow(FOLLOW_throwStatement_in_statement2038);
                     	throwStatement90 = throwStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -5946,7 +5954,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_tryStatement_in_statement2044);
+                    	PushFollow(FOLLOW_tryStatement_in_statement2048);
                     	tryStatement91 = tryStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -5960,7 +5968,7 @@ public class ASParser : Parser
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	SEMI92 = (CommonToken)input.LT(1);
-                    	Match(input,SEMI,FOLLOW_SEMI_in_statement2049); if (failed) return retval;
+                    	Match(input,SEMI,FOLLOW_SEMI_in_statement2053); if (failed) return retval;
                     
                     }
                     break;
@@ -5969,7 +5977,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_comments_in_statement2057);
+                    	PushFollow(FOLLOW_comments_in_statement2061);
                     	c = comments();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -6052,12 +6060,12 @@ public class ASParser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_declaration_in_declarationStatement2084);
+            	PushFollow(FOLLOW_declaration_in_declarationStatement2088);
             	declaration93 = declaration();
             	followingStackPointer_--;
             	if (failed) return retval;
             	if ( backtracking==0 ) adaptor.AddChild(root_0, declaration93.Tree);
-            	PushFollow(FOLLOW_semi_in_declarationStatement2089);
+            	PushFollow(FOLLOW_semi_in_declarationStatement2093);
             	semi94 = semi();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -6135,12 +6143,12 @@ public class ASParser : Parser
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:678:4: ( expressionList semi -> ^( EXPR_STMNT expressionList ) )
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:678:4: expressionList semi
             {
-            	PushFollow(FOLLOW_expressionList_in_expressionStatement2110);
+            	PushFollow(FOLLOW_expressionList_in_expressionStatement2114);
             	expressionList95 = expressionList();
             	followingStackPointer_--;
             	if (failed) return retval;
             	if ( backtracking==0 ) stream_expressionList.Add(expressionList95.Tree);
-            	PushFollow(FOLLOW_semi_in_expressionStatement2112);
+            	PushFollow(FOLLOW_semi_in_expressionStatement2116);
             	semi96 = semi();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -6246,7 +6254,7 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
             	IF97 = (CommonToken)input.LT(1);
-            	Match(input,IF,FOLLOW_IF_in_ifStatement2134); if (failed) return retval;
+            	Match(input,IF,FOLLOW_IF_in_ifStatement2138); if (failed) return retval;
             	if ( backtracking==0 ) {
             	IF97_tree = (CommonTree)adaptor.Create(IF97);
             	root_0 = (CommonTree)adaptor.BecomeRoot(IF97_tree, root_0);
@@ -6255,7 +6263,7 @@ public class ASParser : Parser
             	{
             	   buffer.Append("if");
             	}
-            	PushFollow(FOLLOW_condition_in_ifStatement2146);
+            	PushFollow(FOLLOW_condition_in_ifStatement2150);
             	condition98 = condition();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -6273,7 +6281,7 @@ public class ASParser : Parser
             	  									if(next_test != ASLexer.LCURLY)	buffer.Append(NewLine + tab);
             	  								
             	}
-            	PushFollow(FOLLOW_statement_in_ifStatement2165);
+            	PushFollow(FOLLOW_statement_in_ifStatement2169);
             	statement99 = statement();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -6304,7 +6312,7 @@ public class ASParser : Parser
             	    case 1 :
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:698:4: ( ELSE )=> elseClause
             	        {
-            	        	PushFollow(FOLLOW_elseClause_in_ifStatement2188);
+            	        	PushFollow(FOLLOW_elseClause_in_ifStatement2192);
             	        	elseClause100 = elseClause();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -6387,7 +6395,7 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
             	ELSE101 = (CommonToken)input.LT(1);
-            	Match(input,ELSE,FOLLOW_ELSE_in_elseClause2208); if (failed) return retval;
+            	Match(input,ELSE,FOLLOW_ELSE_in_elseClause2212); if (failed) return retval;
             	if ( backtracking==0 ) {
             	ELSE101_tree = (CommonTree)adaptor.Create(ELSE101);
             	root_0 = (CommonTree)adaptor.BecomeRoot(ELSE101_tree, root_0);
@@ -6409,7 +6417,7 @@ public class ASParser : Parser
             	  									}
             	  								
             	}
-            	PushFollow(FOLLOW_statement_in_elseClause2219);
+            	PushFollow(FOLLOW_statement_in_elseClause2223);
             	statement102 = statement();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -6495,7 +6503,7 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
             	string_literal103 = (CommonToken)input.LT(1);
-            	Match(input,176,FOLLOW_176_in_throwStatement2235); if (failed) return retval;
+            	Match(input,176,FOLLOW_176_in_throwStatement2239); if (failed) return retval;
             	if ( backtracking==0 ) {
             	string_literal103_tree = (CommonTree)adaptor.Create(string_literal103);
             	root_0 = (CommonTree)adaptor.BecomeRoot(string_literal103_tree, root_0);
@@ -6504,12 +6512,12 @@ public class ASParser : Parser
             	{
             	   buffer.Append("throw "); 
             	}
-            	PushFollow(FOLLOW_expression_in_throwStatement2240);
+            	PushFollow(FOLLOW_expression_in_throwStatement2244);
             	expression104 = expression();
             	followingStackPointer_--;
             	if (failed) return retval;
             	if ( backtracking==0 ) adaptor.AddChild(root_0, expression104.Tree);
-            	PushFollow(FOLLOW_semi_in_throwStatement2242);
+            	PushFollow(FOLLOW_semi_in_throwStatement2246);
             	semi105 = semi();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -6586,7 +6594,7 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
             	string_literal106 = (CommonToken)input.LT(1);
-            	Match(input,177,FOLLOW_177_in_tryStatement2253); if (failed) return retval;
+            	Match(input,177,FOLLOW_177_in_tryStatement2257); if (failed) return retval;
             	if ( backtracking==0 ) {
             	string_literal106_tree = (CommonTree)adaptor.Create(string_literal106);
             	adaptor.AddChild(root_0, string_literal106_tree);
@@ -6599,7 +6607,7 @@ public class ASParser : Parser
             	  							CurrentTab++;
             	  						
             	}
-            	PushFollow(FOLLOW_block_in_tryStatement2261);
+            	PushFollow(FOLLOW_block_in_tryStatement2265);
             	block107 = block();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -6633,7 +6641,7 @@ public class ASParser : Parser
             			    	{
             			    	   buffer.Append((options.NewlineBeforeElse ? NewLine + tab : " ")); 
             			    	}
-            			    	PushFollow(FOLLOW_catchBlock_in_tryStatement2274);
+            			    	PushFollow(FOLLOW_catchBlock_in_tryStatement2278);
             			    	catchBlock108 = catchBlock();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -6667,7 +6675,7 @@ public class ASParser : Parser
             	        	{
             	        	   buffer.Append((options.NewlineBeforeElse ? NewLine + tab : " ")); 
             	        	}
-            	        	PushFollow(FOLLOW_finallyBlock_in_tryStatement2284);
+            	        	PushFollow(FOLLOW_finallyBlock_in_tryStatement2288);
             	        	finallyBlock109 = finallyBlock();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -6754,7 +6762,7 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
             	string_literal110 = (CommonToken)input.LT(1);
-            	Match(input,178,FOLLOW_178_in_catchBlock2297); if (failed) return retval;
+            	Match(input,178,FOLLOW_178_in_catchBlock2301); if (failed) return retval;
             	if ( backtracking==0 ) {
             	string_literal110_tree = (CommonTree)adaptor.Create(string_literal110);
             	adaptor.AddChild(root_0, string_literal110_tree);
@@ -6764,12 +6772,12 @@ public class ASParser : Parser
             	   buffer.Append("catch"); 
             	}
             	LPAREN111 = (CommonToken)input.LT(1);
-            	Match(input,LPAREN,FOLLOW_LPAREN_in_catchBlock2304); if (failed) return retval;
+            	Match(input,LPAREN,FOLLOW_LPAREN_in_catchBlock2308); if (failed) return retval;
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append("("); 
             	}
-            	PushFollow(FOLLOW_ident_in_catchBlock2314);
+            	PushFollow(FOLLOW_ident_in_catchBlock2318);
             	ide = ident();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -6791,7 +6799,7 @@ public class ASParser : Parser
             	    case 1 :
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: typeExpression
             	        {
-            	        	PushFollow(FOLLOW_typeExpression_in_catchBlock2320);
+            	        	PushFollow(FOLLOW_typeExpression_in_catchBlock2324);
             	        	typeExpression112 = typeExpression();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -6803,7 +6811,7 @@ public class ASParser : Parser
             	}
 
             	RPAREN113 = (CommonToken)input.LT(1);
-            	Match(input,RPAREN,FOLLOW_RPAREN_in_catchBlock2326); if (failed) return retval;
+            	Match(input,RPAREN,FOLLOW_RPAREN_in_catchBlock2330); if (failed) return retval;
             	if ( backtracking == 0 ) 
             	{
             	   
@@ -6812,7 +6820,7 @@ public class ASParser : Parser
             	  						CurrentTab++;
             	  					
             	}
-            	PushFollow(FOLLOW_block_in_catchBlock2334);
+            	PushFollow(FOLLOW_block_in_catchBlock2338);
             	block114 = block();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -6893,7 +6901,7 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
             	string_literal115 = (CommonToken)input.LT(1);
-            	Match(input,179,FOLLOW_179_in_finallyBlock2348); if (failed) return retval;
+            	Match(input,179,FOLLOW_179_in_finallyBlock2352); if (failed) return retval;
             	if ( backtracking==0 ) {
             	string_literal115_tree = (CommonTree)adaptor.Create(string_literal115);
             	adaptor.AddChild(root_0, string_literal115_tree);
@@ -6906,7 +6914,7 @@ public class ASParser : Parser
             	  						CurrentTab++;
             	  					
             	}
-            	PushFollow(FOLLOW_block_in_finallyBlock2354);
+            	PushFollow(FOLLOW_block_in_finallyBlock2358);
             	block116 = block();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -7664,7 +7672,7 @@ public class ASParser : Parser
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	RETURN117 = (CommonToken)input.LT(1);
-                    	Match(input,RETURN,FOLLOW_RETURN_in_returnStatement2368); if (failed) return retval;
+                    	Match(input,RETURN,FOLLOW_RETURN_in_returnStatement2372); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	RETURN117_tree = (CommonTree)adaptor.Create(RETURN117);
                     	root_0 = (CommonTree)adaptor.BecomeRoot(RETURN117_tree, root_0);
@@ -7673,12 +7681,12 @@ public class ASParser : Parser
                     	{
                     	   buffer.Append("return "); 
                     	}
-                    	PushFollow(FOLLOW_expression_in_returnStatement2373);
+                    	PushFollow(FOLLOW_expression_in_returnStatement2377);
                     	expression118 = expression();
                     	followingStackPointer_--;
                     	if (failed) return retval;
                     	if ( backtracking==0 ) adaptor.AddChild(root_0, expression118.Tree);
-                    	PushFollow(FOLLOW_semi_in_returnStatement2375);
+                    	PushFollow(FOLLOW_semi_in_returnStatement2379);
                     	semi119 = semi();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -7692,12 +7700,12 @@ public class ASParser : Parser
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	RETURN120 = (CommonToken)input.LT(1);
-                    	Match(input,RETURN,FOLLOW_RETURN_in_returnStatement2380); if (failed) return retval;
+                    	Match(input,RETURN,FOLLOW_RETURN_in_returnStatement2384); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	RETURN120_tree = (CommonTree)adaptor.Create(RETURN120);
                     	root_0 = (CommonTree)adaptor.BecomeRoot(RETURN120_tree, root_0);
                     	}
-                    	PushFollow(FOLLOW_semi_in_returnStatement2383);
+                    	PushFollow(FOLLOW_semi_in_returnStatement2387);
                     	semi121 = semi();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -7776,12 +7784,12 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
             	CONTINUE122 = (CommonToken)input.LT(1);
-            	Match(input,CONTINUE,FOLLOW_CONTINUE_in_continueStatement2398); if (failed) return retval;
+            	Match(input,CONTINUE,FOLLOW_CONTINUE_in_continueStatement2402); if (failed) return retval;
             	if ( backtracking==0 ) {
             	CONTINUE122_tree = (CommonTree)adaptor.Create(CONTINUE122);
             	root_0 = (CommonTree)adaptor.BecomeRoot(CONTINUE122_tree, root_0);
             	}
-            	PushFollow(FOLLOW_semi_in_continueStatement2401);
+            	PushFollow(FOLLOW_semi_in_continueStatement2405);
             	semi123 = semi();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -7858,12 +7866,12 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
             	BREAK124 = (CommonToken)input.LT(1);
-            	Match(input,BREAK,FOLLOW_BREAK_in_breakStatement2414); if (failed) return retval;
+            	Match(input,BREAK,FOLLOW_BREAK_in_breakStatement2418); if (failed) return retval;
             	if ( backtracking==0 ) {
             	BREAK124_tree = (CommonTree)adaptor.Create(BREAK124);
             	root_0 = (CommonTree)adaptor.BecomeRoot(BREAK124_tree, root_0);
             	}
-            	PushFollow(FOLLOW_semi_in_breakStatement2417);
+            	PushFollow(FOLLOW_semi_in_breakStatement2421);
             	semi125 = semi();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -7942,7 +7950,7 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
             	SWITCH126 = (CommonToken)input.LT(1);
-            	Match(input,SWITCH,FOLLOW_SWITCH_in_switchStatement2431); if (failed) return retval;
+            	Match(input,SWITCH,FOLLOW_SWITCH_in_switchStatement2435); if (failed) return retval;
             	if ( backtracking==0 ) {
             	SWITCH126_tree = (CommonTree)adaptor.Create(SWITCH126);
             	root_0 = (CommonTree)adaptor.BecomeRoot(SWITCH126_tree, root_0);
@@ -7954,7 +7962,7 @@ public class ASParser : Parser
             	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:795:3: ( condition )
             	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:795:4: condition
             	{
-            		PushFollow(FOLLOW_condition_in_switchStatement2440);
+            		PushFollow(FOLLOW_condition_in_switchStatement2444);
             		condition127 = condition();
             		followingStackPointer_--;
             		if (failed) return retval;
@@ -7962,7 +7970,7 @@ public class ASParser : Parser
             	
             	}
 
-            	PushFollow(FOLLOW_switchBlock_in_switchStatement2445);
+            	PushFollow(FOLLOW_switchBlock_in_switchStatement2449);
             	switchBlock128 = switchBlock();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -8040,7 +8048,7 @@ public class ASParser : Parser
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:800:4: LCURLY ( caseStatement )* ( defaultStatement )? RCURLY
             {
             	LCURLY129 = (CommonToken)input.LT(1);
-            	Match(input,LCURLY,FOLLOW_LCURLY_in_switchBlock2456); if (failed) return retval;
+            	Match(input,LCURLY,FOLLOW_LCURLY_in_switchBlock2460); if (failed) return retval;
             	if ( backtracking==0 ) stream_LCURLY.Add(LCURLY129);
 
             	if ( backtracking == 0 ) 
@@ -8071,7 +8079,7 @@ public class ASParser : Parser
             			    	{
             			    	  buffer.Append(NewLine + tab); 
             			    	}
-            			    	PushFollow(FOLLOW_caseStatement_in_switchBlock2473);
+            			    	PushFollow(FOLLOW_caseStatement_in_switchBlock2477);
             			    	caseStatement130 = caseStatement();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -8105,7 +8113,7 @@ public class ASParser : Parser
             	        	{
             	        	  buffer.Append(NewLine + tab); 
             	        	}
-            	        	PushFollow(FOLLOW_defaultStatement_in_switchBlock2483);
+            	        	PushFollow(FOLLOW_defaultStatement_in_switchBlock2487);
             	        	defaultStatement131 = defaultStatement();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -8117,7 +8125,7 @@ public class ASParser : Parser
             	}
 
             	RCURLY132 = (CommonToken)input.LT(1);
-            	Match(input,RCURLY,FOLLOW_RCURLY_in_switchBlock2489); if (failed) return retval;
+            	Match(input,RCURLY,FOLLOW_RCURLY_in_switchBlock2493); if (failed) return retval;
             	if ( backtracking==0 ) stream_RCURLY.Add(RCURLY132);
 
             	if ( backtracking == 0 ) 
@@ -8240,7 +8248,7 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
             	CASE133 = (CommonToken)input.LT(1);
-            	Match(input,CASE,FOLLOW_CASE_in_caseStatement2523); if (failed) return retval;
+            	Match(input,CASE,FOLLOW_CASE_in_caseStatement2527); if (failed) return retval;
             	if ( backtracking==0 ) {
             	CASE133_tree = (CommonTree)adaptor.Create(CASE133);
             	root_0 = (CommonTree)adaptor.BecomeRoot(CASE133_tree, root_0);
@@ -8249,13 +8257,13 @@ public class ASParser : Parser
             	{
             	   buffer.Append("case "); 
             	}
-            	PushFollow(FOLLOW_expression_in_caseStatement2532);
+            	PushFollow(FOLLOW_expression_in_caseStatement2536);
             	expression134 = expression();
             	followingStackPointer_--;
             	if (failed) return retval;
             	if ( backtracking==0 ) adaptor.AddChild(root_0, expression134.Tree);
             	COLON135 = (CommonToken)input.LT(1);
-            	Match(input,COLON,FOLLOW_COLON_in_caseStatement2537); if (failed) return retval;
+            	Match(input,COLON,FOLLOW_COLON_in_caseStatement2541); if (failed) return retval;
             	if ( backtracking == 0 ) 
             	{
             	   
@@ -8263,7 +8271,7 @@ public class ASParser : Parser
             	  						CurrentTab++;
             	  					
             	}
-            	PushFollow(FOLLOW_switchStatementList_in_caseStatement2547);
+            	PushFollow(FOLLOW_switchStatementList_in_caseStatement2551);
             	l = switchStatementList();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -8342,7 +8350,7 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
             	DEFAULT136 = (CommonToken)input.LT(1);
-            	Match(input,DEFAULT,FOLLOW_DEFAULT_in_defaultStatement2566); if (failed) return retval;
+            	Match(input,DEFAULT,FOLLOW_DEFAULT_in_defaultStatement2570); if (failed) return retval;
             	if ( backtracking==0 ) {
             	DEFAULT136_tree = (CommonTree)adaptor.Create(DEFAULT136);
             	root_0 = (CommonTree)adaptor.BecomeRoot(DEFAULT136_tree, root_0);
@@ -8352,7 +8360,7 @@ public class ASParser : Parser
             	   buffer.Append("default"); 
             	}
             	COLON137 = (CommonToken)input.LT(1);
-            	Match(input,COLON,FOLLOW_COLON_in_defaultStatement2573); if (failed) return retval;
+            	Match(input,COLON,FOLLOW_COLON_in_defaultStatement2577); if (failed) return retval;
             	if ( backtracking == 0 ) 
             	{
             	   
@@ -8360,7 +8368,7 @@ public class ASParser : Parser
             	  						CurrentTab++;
             	  					
             	}
-            	PushFollow(FOLLOW_switchStatementList_in_defaultStatement2583);
+            	PushFollow(FOLLOW_switchStatementList_in_defaultStatement2587);
             	l = switchStatementList();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -8453,7 +8461,7 @@ public class ASParser : Parser
             			    	{
             			    	  buffer.Append(NewLine + tab); 
             			    	}
-            			    	PushFollow(FOLLOW_statement_in_switchStatementList2605);
+            			    	PushFollow(FOLLOW_statement_in_switchStatementList2609);
             			    	statement138 = statement();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -8593,7 +8601,7 @@ public class ASParser : Parser
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:846:4: f= FOR LPAREN ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )
             {
             	f = (CommonToken)input.LT(1);
-            	Match(input,FOR,FOLLOW_FOR_in_forStatement2639); if (failed) return retval;
+            	Match(input,FOR,FOLLOW_FOR_in_forStatement2643); if (failed) return retval;
             	if ( backtracking==0 ) stream_FOR.Add(f);
 
             	if ( backtracking == 0 ) 
@@ -8601,7 +8609,7 @@ public class ASParser : Parser
             	   buffer.Append("for"); 
             	}
             	LPAREN139 = (CommonToken)input.LT(1);
-            	Match(input,LPAREN,FOLLOW_LPAREN_in_forStatement2647); if (failed) return retval;
+            	Match(input,LPAREN,FOLLOW_LPAREN_in_forStatement2651); if (failed) return retval;
             	if ( backtracking==0 ) stream_LPAREN.Add(LPAREN139);
 
             	if ( backtracking == 0 ) 
@@ -9156,13 +9164,13 @@ public class ASParser : Parser
             	    case 1 :
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:849:4: ( forInClauseDecl IN )=> forInClause RPAREN statement
             	        {
-            	        	PushFollow(FOLLOW_forInClause_in_forStatement2667);
+            	        	PushFollow(FOLLOW_forInClause_in_forStatement2671);
             	        	forInClause140 = forInClause();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
             	        	if ( backtracking==0 ) stream_forInClause.Add(forInClause140.Tree);
             	        	RPAREN141 = (CommonToken)input.LT(1);
-            	        	Match(input,RPAREN,FOLLOW_RPAREN_in_forStatement2673); if (failed) return retval;
+            	        	Match(input,RPAREN,FOLLOW_RPAREN_in_forStatement2677); if (failed) return retval;
             	        	if ( backtracking==0 ) stream_RPAREN.Add(RPAREN141);
 
             	        	if ( backtracking == 0 ) 
@@ -9175,7 +9183,7 @@ public class ASParser : Parser
             	        	  												if(next_test != ASLexer.LCURLY)	buffer.Append(NewLine + tab);												
             	        	  											
             	        	}
-            	        	PushFollow(FOLLOW_statement_in_forStatement2686);
+            	        	PushFollow(FOLLOW_statement_in_forStatement2690);
             	        	statement142 = statement();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -9222,13 +9230,13 @@ public class ASParser : Parser
             	    case 2 :
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:864:6: traditionalForClause RPAREN statement
             	        {
-            	        	PushFollow(FOLLOW_traditionalForClause_in_forStatement2715);
+            	        	PushFollow(FOLLOW_traditionalForClause_in_forStatement2719);
             	        	traditionalForClause143 = traditionalForClause();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
             	        	if ( backtracking==0 ) stream_traditionalForClause.Add(traditionalForClause143.Tree);
             	        	RPAREN144 = (CommonToken)input.LT(1);
-            	        	Match(input,RPAREN,FOLLOW_RPAREN_in_forStatement2717); if (failed) return retval;
+            	        	Match(input,RPAREN,FOLLOW_RPAREN_in_forStatement2721); if (failed) return retval;
             	        	if ( backtracking==0 ) stream_RPAREN.Add(RPAREN144);
 
             	        	if ( backtracking == 0 ) 
@@ -9241,7 +9249,7 @@ public class ASParser : Parser
             	        	  												if(next_test_2 != ASLexer.LCURLY)	buffer.Append(NewLine + tab);												
             	        	  											
             	        	}
-            	        	PushFollow(FOLLOW_statement_in_forStatement2726);
+            	        	PushFollow(FOLLOW_statement_in_forStatement2730);
             	        	statement145 = statement();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -9364,29 +9372,29 @@ public class ASParser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_forInit_in_traditionalForClause2763);
+            	PushFollow(FOLLOW_forInit_in_traditionalForClause2767);
             	a = forInit();
             	followingStackPointer_--;
             	if (failed) return retval;
             	if ( backtracking==0 ) adaptor.AddChild(root_0, a.Tree);
             	SEMI146 = (CommonToken)input.LT(1);
-            	Match(input,SEMI,FOLLOW_SEMI_in_traditionalForClause2765); if (failed) return retval;
+            	Match(input,SEMI,FOLLOW_SEMI_in_traditionalForClause2769); if (failed) return retval;
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append(options.SpaceBetweenArguments ? "; " : ";"); 
             	}
-            	PushFollow(FOLLOW_forCond_in_traditionalForClause2775);
+            	PushFollow(FOLLOW_forCond_in_traditionalForClause2779);
             	b = forCond();
             	followingStackPointer_--;
             	if (failed) return retval;
             	if ( backtracking==0 ) adaptor.AddChild(root_0, b.Tree);
             	SEMI147 = (CommonToken)input.LT(1);
-            	Match(input,SEMI,FOLLOW_SEMI_in_traditionalForClause2777); if (failed) return retval;
+            	Match(input,SEMI,FOLLOW_SEMI_in_traditionalForClause2781); if (failed) return retval;
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append(options.SpaceBetweenArguments ? "; " : ";"); 
             	}
-            	PushFollow(FOLLOW_forIter_in_traditionalForClause2787);
+            	PushFollow(FOLLOW_forIter_in_traditionalForClause2791);
             	c = forIter();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -9460,18 +9468,18 @@ public class ASParser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_forInClauseDecl_in_forInClause2799);
+            	PushFollow(FOLLOW_forInClauseDecl_in_forInClause2803);
             	forInClauseDecl148 = forInClauseDecl();
             	followingStackPointer_--;
             	if (failed) return retval;
             	if ( backtracking==0 ) adaptor.AddChild(root_0, forInClauseDecl148.Tree);
             	IN149 = (CommonToken)input.LT(1);
-            	Match(input,IN,FOLLOW_IN_in_forInClause2801); if (failed) return retval;
+            	Match(input,IN,FOLLOW_IN_in_forInClause2805); if (failed) return retval;
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append(" in "); 
             	}
-            	PushFollow(FOLLOW_forInClauseTail_in_forInClause2806);
+            	PushFollow(FOLLOW_forInClauseTail_in_forInClause2810);
             	forInClauseTail150 = forInClauseTail();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -9570,7 +9578,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_declaration_in_forInClauseDecl2827);
+                    	PushFollow(FOLLOW_declaration_in_forInClauseDecl2831);
                     	declaration151 = declaration();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -9583,7 +9591,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_ident_in_forInClauseDecl2835);
+                    	PushFollow(FOLLOW_ident_in_forInClauseDecl2839);
                     	ide = ident();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -9666,7 +9674,7 @@ public class ASParser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_expressionList_in_forInClauseTail2861);
+            	PushFollow(FOLLOW_expressionList_in_forInClauseTail2865);
             	expressionList152 = expressionList();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -9761,7 +9769,7 @@ public class ASParser : Parser
             	    case 1 :
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:914:5: declaration
             	        {
-            	        	PushFollow(FOLLOW_declaration_in_forInit2885);
+            	        	PushFollow(FOLLOW_declaration_in_forInit2889);
             	        	declaration153 = declaration();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -9772,7 +9780,7 @@ public class ASParser : Parser
             	    case 2 :
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:914:19: expressionList
             	        {
-            	        	PushFollow(FOLLOW_expressionList_in_forInit2889);
+            	        	PushFollow(FOLLOW_expressionList_in_forInit2893);
             	        	expressionList154 = expressionList();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -9906,7 +9914,7 @@ public class ASParser : Parser
             	    case 1 :
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: expressionList
             	        {
-            	        	PushFollow(FOLLOW_expressionList_in_forCond2927);
+            	        	PushFollow(FOLLOW_expressionList_in_forCond2931);
             	        	expressionList155 = expressionList();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -10033,7 +10041,7 @@ public class ASParser : Parser
             	    case 1 :
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: expressionList
             	        {
-            	        	PushFollow(FOLLOW_expressionList_in_forIter2960);
+            	        	PushFollow(FOLLOW_expressionList_in_forIter2964);
             	        	expressionList156 = expressionList();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -10149,7 +10157,7 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
             	WHILE157 = (CommonToken)input.LT(1);
-            	Match(input,WHILE,FOLLOW_WHILE_in_whileStatement2983); if (failed) return retval;
+            	Match(input,WHILE,FOLLOW_WHILE_in_whileStatement2987); if (failed) return retval;
             	if ( backtracking==0 ) {
             	WHILE157_tree = (CommonTree)adaptor.Create(WHILE157);
             	root_0 = (CommonTree)adaptor.BecomeRoot(WHILE157_tree, root_0);
@@ -10158,7 +10166,7 @@ public class ASParser : Parser
             	{
             	   buffer.Append("while"); 
             	}
-            	PushFollow(FOLLOW_condition_in_whileStatement2992);
+            	PushFollow(FOLLOW_condition_in_whileStatement2996);
             	condition158 = condition();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -10175,7 +10183,7 @@ public class ASParser : Parser
             	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:944:3: ( statement )
             	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:944:4: statement
             	{
-            		PushFollow(FOLLOW_statement_in_whileStatement3000);
+            		PushFollow(FOLLOW_statement_in_whileStatement3004);
             		statement159 = statement();
             		followingStackPointer_--;
             		if (failed) return retval;
@@ -10265,7 +10273,7 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
             	DO160 = (CommonToken)input.LT(1);
-            	Match(input,DO,FOLLOW_DO_in_doWhileStatement3015); if (failed) return retval;
+            	Match(input,DO,FOLLOW_DO_in_doWhileStatement3019); if (failed) return retval;
             	if ( backtracking==0 ) {
             	DO160_tree = (CommonTree)adaptor.Create(DO160);
             	root_0 = (CommonTree)adaptor.BecomeRoot(DO160_tree, root_0);
@@ -10280,7 +10288,7 @@ public class ASParser : Parser
             	  							if(next_test != ASLexer.LCURLY)	buffer.Append(NewLine + tab);							
             	  						
             	}
-            	PushFollow(FOLLOW_statement_in_doWhileStatement3025);
+            	PushFollow(FOLLOW_statement_in_doWhileStatement3029);
             	statement161 = statement();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -10294,7 +10302,7 @@ public class ASParser : Parser
             	  						
             	}
             	WHILE162 = (CommonToken)input.LT(1);
-            	Match(input,WHILE,FOLLOW_WHILE_in_doWhileStatement3032); if (failed) return retval;
+            	Match(input,WHILE,FOLLOW_WHILE_in_doWhileStatement3036); if (failed) return retval;
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append(" while"); 
@@ -10302,7 +10310,7 @@ public class ASParser : Parser
             	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:965:3: ( condition )
             	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:965:4: condition
             	{
-            		PushFollow(FOLLOW_condition_in_doWhileStatement3042);
+            		PushFollow(FOLLOW_condition_in_doWhileStatement3046);
             		condition163 = condition();
             		followingStackPointer_--;
             		if (failed) return retval;
@@ -10310,7 +10318,7 @@ public class ASParser : Parser
             	
             	}
 
-            	PushFollow(FOLLOW_semi_in_doWhileStatement3048);
+            	PushFollow(FOLLOW_semi_in_doWhileStatement3052);
             	semi164 = semi();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -10385,7 +10393,7 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
             	WITH165 = (CommonToken)input.LT(1);
-            	Match(input,WITH,FOLLOW_WITH_in_withStatement3059); if (failed) return retval;
+            	Match(input,WITH,FOLLOW_WITH_in_withStatement3063); if (failed) return retval;
             	if ( backtracking==0 ) {
             	WITH165_tree = (CommonTree)adaptor.Create(WITH165);
             	root_0 = (CommonTree)adaptor.BecomeRoot(WITH165_tree, root_0);
@@ -10394,7 +10402,7 @@ public class ASParser : Parser
             	{
             	   buffer.Append("with"); 
             	}
-            	PushFollow(FOLLOW_condition_in_withStatement3068);
+            	PushFollow(FOLLOW_condition_in_withStatement3072);
             	condition166 = condition();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -10411,7 +10419,7 @@ public class ASParser : Parser
             	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:977:3: ( statement )
             	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:977:4: statement
             	{
-            		PushFollow(FOLLOW_statement_in_withStatement3076);
+            		PushFollow(FOLLOW_statement_in_withStatement3080);
             		statement167 = statement();
             		followingStackPointer_--;
             		if (failed) return retval;
@@ -10500,7 +10508,7 @@ public class ASParser : Parser
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:986:3: c= COLON ( identifier | VOID | STAR )
             {
             	c = (CommonToken)input.LT(1);
-            	Match(input,COLON,FOLLOW_COLON_in_typeExpression3096); if (failed) return retval;
+            	Match(input,COLON,FOLLOW_COLON_in_typeExpression3100); if (failed) return retval;
             	if ( backtracking==0 ) stream_COLON.Add(c);
 
             	if ( backtracking == 0 ) 
@@ -10546,7 +10554,7 @@ public class ASParser : Parser
             	    case 1 :
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:988:4: identifier
             	        {
-            	        	PushFollow(FOLLOW_identifier_in_typeExpression3109);
+            	        	PushFollow(FOLLOW_identifier_in_typeExpression3113);
             	        	identifier168 = identifier();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -10558,7 +10566,7 @@ public class ASParser : Parser
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:989:6: VOID
             	        {
             	        	VOID169 = (CommonToken)input.LT(1);
-            	        	Match(input,VOID,FOLLOW_VOID_in_typeExpression3117); if (failed) return retval;
+            	        	Match(input,VOID,FOLLOW_VOID_in_typeExpression3121); if (failed) return retval;
             	        	if ( backtracking==0 ) stream_VOID.Add(VOID169);
 
             	        	if ( backtracking == 0 ) 
@@ -10572,7 +10580,7 @@ public class ASParser : Parser
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:990:6: STAR
             	        {
             	        	STAR170 = (CommonToken)input.LT(1);
-            	        	Match(input,STAR,FOLLOW_STAR_in_typeExpression3127); if (failed) return retval;
+            	        	Match(input,STAR,FOLLOW_STAR_in_typeExpression3131); if (failed) return retval;
             	        	if ( backtracking==0 ) stream_STAR.Add(STAR170);
 
             	        	if ( backtracking == 0 ) 
@@ -10700,7 +10708,7 @@ public class ASParser : Parser
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:996:4: ( qualifiedIdent ( options {greedy=true; } : DOT qualifiedIdent )* -> ^( IDENTIFIER ( qualifiedIdent )+ ) )
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:996:4: qualifiedIdent ( options {greedy=true; } : DOT qualifiedIdent )*
             {
-            	PushFollow(FOLLOW_qualifiedIdent_in_identifier3165);
+            	PushFollow(FOLLOW_qualifiedIdent_in_identifier3169);
             	qualifiedIdent171 = qualifiedIdent();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -10727,14 +10735,14 @@ public class ASParser : Parser
             			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:998:6: DOT qualifiedIdent
             			    {
             			    	DOT172 = (CommonToken)input.LT(1);
-            			    	Match(input,DOT,FOLLOW_DOT_in_identifier3189); if (failed) return retval;
+            			    	Match(input,DOT,FOLLOW_DOT_in_identifier3193); if (failed) return retval;
             			    	if ( backtracking==0 ) stream_DOT.Add(DOT172);
 
             			    	if ( backtracking == 0 ) 
             			    	{
             			    	   buffer.Append("."); 
             			    	}
-            			    	PushFollow(FOLLOW_qualifiedIdent_in_identifier3193);
+            			    	PushFollow(FOLLOW_qualifiedIdent_in_identifier3197);
             			    	qualifiedIdent173 = qualifiedIdent();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -10851,7 +10859,7 @@ public class ASParser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_ident_in_qualifiedIdent3222);
+            	PushFollow(FOLLOW_ident_in_qualifiedIdent3226);
             	ide = ident();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -10950,7 +10958,7 @@ public class ASParser : Parser
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	IDENT174 = (CommonToken)input.LT(1);
-                    	Match(input,IDENT,FOLLOW_IDENT_in_namespaceName3236); if (failed) return retval;
+                    	Match(input,IDENT,FOLLOW_IDENT_in_namespaceName3240); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	IDENT174_tree = (CommonTree)adaptor.Create(IDENT174);
                     	adaptor.AddChild(root_0, IDENT174_tree);
@@ -10963,7 +10971,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_reservedNamespace_in_namespaceName3240);
+                    	PushFollow(FOLLOW_reservedNamespace_in_namespaceName3244);
                     	reservedNamespace175 = reservedNamespace();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -11123,7 +11131,7 @@ public class ASParser : Parser
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1019:4: (ide= ident ( options {greedy=true; } : DOT ide2= ident )* ( DOT STAR )? -> ^( IDENTIFIER ( ident )+ ( STAR )? ) )
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1019:4: ide= ident ( options {greedy=true; } : DOT ide2= ident )* ( DOT STAR )?
             {
-            	PushFollow(FOLLOW_ident_in_identifierStar3279);
+            	PushFollow(FOLLOW_ident_in_identifierStar3283);
             	ide = ident();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -11153,10 +11161,10 @@ public class ASParser : Parser
             			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1021:5: DOT ide2= ident
             			    {
             			    	DOT177 = (CommonToken)input.LT(1);
-            			    	Match(input,DOT,FOLLOW_DOT_in_identifierStar3301); if (failed) return retval;
+            			    	Match(input,DOT,FOLLOW_DOT_in_identifierStar3305); if (failed) return retval;
             			    	if ( backtracking==0 ) stream_DOT.Add(DOT177);
 
-            			    	PushFollow(FOLLOW_ident_in_identifierStar3305);
+            			    	PushFollow(FOLLOW_ident_in_identifierStar3309);
             			    	ide2 = ident();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -11187,11 +11195,11 @@ public class ASParser : Parser
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1023:5: DOT STAR
             	        {
             	        	DOT178 = (CommonToken)input.LT(1);
-            	        	Match(input,DOT,FOLLOW_DOT_in_identifierStar3320); if (failed) return retval;
+            	        	Match(input,DOT,FOLLOW_DOT_in_identifierStar3324); if (failed) return retval;
             	        	if ( backtracking==0 ) stream_DOT.Add(DOT178);
 
             	        	STAR179 = (CommonToken)input.LT(1);
-            	        	Match(input,STAR,FOLLOW_STAR_in_identifierStar3322); if (failed) return retval;
+            	        	Match(input,STAR,FOLLOW_STAR_in_identifierStar3326); if (failed) return retval;
             	        	if ( backtracking==0 ) stream_STAR.Add(STAR179);
 
             	        
@@ -11351,7 +11359,7 @@ public class ASParser : Parser
             			    		{
             			    		   buffer.Append(NewLine + tab); 
             			    		}
-            			    		PushFollow(FOLLOW_annotation_in_annotations3368);
+            			    		PushFollow(FOLLOW_annotation_in_annotations3372);
             			    		annotation180 = annotation();
             			    		followingStackPointer_--;
             			    		if (failed) return retval;
@@ -11372,7 +11380,7 @@ public class ASParser : Parser
             			    		{
             			    		   buffer.Append(NewLine + tab); 
             			    		}
-            			    		PushFollow(FOLLOW_includeDirective_in_annotations3381);
+            			    		PushFollow(FOLLOW_includeDirective_in_annotations3385);
             			    		includeDirective181 = includeDirective();
             			    		followingStackPointer_--;
             			    		if (failed) return retval;
@@ -11505,14 +11513,14 @@ public class ASParser : Parser
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1037:4: LBRACK ide= ident ( annotationParamList )? RBRACK
             {
             	LBRACK182 = (CommonToken)input.LT(1);
-            	Match(input,LBRACK,FOLLOW_LBRACK_in_annotation3410); if (failed) return retval;
+            	Match(input,LBRACK,FOLLOW_LBRACK_in_annotation3414); if (failed) return retval;
             	if ( backtracking==0 ) stream_LBRACK.Add(LBRACK182);
 
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append("["); 
             	}
-            	PushFollow(FOLLOW_ident_in_annotation3422);
+            	PushFollow(FOLLOW_ident_in_annotation3426);
             	ide = ident();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -11534,7 +11542,7 @@ public class ASParser : Parser
             	    case 1 :
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: annotationParamList
             	        {
-            	        	PushFollow(FOLLOW_annotationParamList_in_annotation3431);
+            	        	PushFollow(FOLLOW_annotationParamList_in_annotation3435);
             	        	annotationParamList183 = annotationParamList();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -11546,7 +11554,7 @@ public class ASParser : Parser
             	}
 
             	RBRACK184 = (CommonToken)input.LT(1);
-            	Match(input,RBRACK,FOLLOW_RBRACK_in_annotation3436); if (failed) return retval;
+            	Match(input,RBRACK,FOLLOW_RBRACK_in_annotation3440); if (failed) return retval;
             	if ( backtracking==0 ) stream_RBRACK.Add(RBRACK184);
 
             	if ( backtracking == 0 ) 
@@ -11662,7 +11670,7 @@ public class ASParser : Parser
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1046:3: LPAREN ( annotationParam ( COMMA annotationParam )* )? RPAREN
             {
             	LPAREN185 = (CommonToken)input.LT(1);
-            	Match(input,LPAREN,FOLLOW_LPAREN_in_annotationParamList3468); if (failed) return retval;
+            	Match(input,LPAREN,FOLLOW_LPAREN_in_annotationParamList3472); if (failed) return retval;
             	if ( backtracking==0 ) stream_LPAREN.Add(LPAREN185);
 
             	if ( backtracking == 0 ) 
@@ -11682,7 +11690,7 @@ public class ASParser : Parser
             	    case 1 :
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1047:5: annotationParam ( COMMA annotationParam )*
             	        {
-            	        	PushFollow(FOLLOW_annotationParam_in_annotationParamList3481);
+            	        	PushFollow(FOLLOW_annotationParam_in_annotationParamList3485);
             	        	annotationParam186 = annotationParam();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -11705,14 +11713,14 @@ public class ASParser : Parser
             	        			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1049:5: COMMA annotationParam
             	        			    {
             	        			    	COMMA187 = (CommonToken)input.LT(1);
-            	        			    	Match(input,COMMA,FOLLOW_COMMA_in_annotationParamList3492); if (failed) return retval;
+            	        			    	Match(input,COMMA,FOLLOW_COMMA_in_annotationParamList3496); if (failed) return retval;
             	        			    	if ( backtracking==0 ) stream_COMMA.Add(COMMA187);
 
             	        			    	if ( backtracking == 0 ) 
             	        			    	{
             	        			    	   buffer.Append(","); 
             	        			    	}
-            	        			    	PushFollow(FOLLOW_annotationParam_in_annotationParamList3503);
+            	        			    	PushFollow(FOLLOW_annotationParam_in_annotationParamList3507);
             	        			    	annotationParam188 = annotationParam();
             	        			    	followingStackPointer_--;
             	        			    	if (failed) return retval;
@@ -11736,7 +11744,7 @@ public class ASParser : Parser
             	}
 
             	RPAREN189 = (CommonToken)input.LT(1);
-            	Match(input,RPAREN,FOLLOW_RPAREN_in_annotationParamList3518); if (failed) return retval;
+            	Match(input,RPAREN,FOLLOW_RPAREN_in_annotationParamList3522); if (failed) return retval;
             	if ( backtracking==0 ) stream_RPAREN.Add(RPAREN189);
 
             	if ( backtracking == 0 ) 
@@ -12193,16 +12201,16 @@ public class ASParser : Parser
                 case 1 :
                     // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1059:3: ide1= ident ASSIGN cn1= constant
                     {
-                    	PushFollow(FOLLOW_ident_in_annotationParam3551);
+                    	PushFollow(FOLLOW_ident_in_annotationParam3555);
                     	ide1 = ident();
                     	followingStackPointer_--;
                     	if (failed) return retval;
                     	if ( backtracking==0 ) stream_ident.Add(ide1.Tree);
                     	ASSIGN190 = (CommonToken)input.LT(1);
-                    	Match(input,ASSIGN,FOLLOW_ASSIGN_in_annotationParam3553); if (failed) return retval;
+                    	Match(input,ASSIGN,FOLLOW_ASSIGN_in_annotationParam3557); if (failed) return retval;
                     	if ( backtracking==0 ) stream_ASSIGN.Add(ASSIGN190);
 
-                    	PushFollow(FOLLOW_constant_in_annotationParam3557);
+                    	PushFollow(FOLLOW_constant_in_annotationParam3561);
                     	cn1 = constant();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -12245,16 +12253,16 @@ public class ASParser : Parser
                 case 2 :
                     // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1060:4: ide2= ident ASSIGN ide3= ident
                     {
-                    	PushFollow(FOLLOW_ident_in_annotationParam3576);
+                    	PushFollow(FOLLOW_ident_in_annotationParam3580);
                     	ide2 = ident();
                     	followingStackPointer_--;
                     	if (failed) return retval;
                     	if ( backtracking==0 ) stream_ident.Add(ide2.Tree);
                     	ASSIGN191 = (CommonToken)input.LT(1);
-                    	Match(input,ASSIGN,FOLLOW_ASSIGN_in_annotationParam3578); if (failed) return retval;
+                    	Match(input,ASSIGN,FOLLOW_ASSIGN_in_annotationParam3582); if (failed) return retval;
                     	if ( backtracking==0 ) stream_ASSIGN.Add(ASSIGN191);
 
-                    	PushFollow(FOLLOW_ident_in_annotationParam3582);
+                    	PushFollow(FOLLOW_ident_in_annotationParam3586);
                     	ide3 = ident();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -12297,7 +12305,7 @@ public class ASParser : Parser
                 case 3 :
                     // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1061:4: cn2= constant
                     {
-                    	PushFollow(FOLLOW_constant_in_annotationParam3601);
+                    	PushFollow(FOLLOW_constant_in_annotationParam3605);
                     	cn2 = constant();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -12331,7 +12339,7 @@ public class ASParser : Parser
                 case 4 :
                     // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1062:4: ide4= ident
                     {
-                    	PushFollow(FOLLOW_ident_in_annotationParam3614);
+                    	PushFollow(FOLLOW_ident_in_annotationParam3618);
                     	ide4 = ident();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -12441,7 +12449,7 @@ public class ASParser : Parser
             			case 1 :
             			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: modifier
             			    {
-            			    	PushFollow(FOLLOW_modifier_in_modifiers3634);
+            			    	PushFollow(FOLLOW_modifier_in_modifiers3638);
             			    	modifier192 = modifier();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -12628,7 +12636,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_namespaceName_in_modifier3657);
+                    	PushFollow(FOLLOW_namespaceName_in_modifier3661);
                     	namespaceName193 = namespaceName();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -12642,7 +12650,7 @@ public class ASParser : Parser
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	STATIC194 = (CommonToken)input.LT(1);
-                    	Match(input,STATIC,FOLLOW_STATIC_in_modifier3662); if (failed) return retval;
+                    	Match(input,STATIC,FOLLOW_STATIC_in_modifier3666); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	STATIC194_tree = (CommonTree)adaptor.Create(STATIC194);
                     	adaptor.AddChild(root_0, STATIC194_tree);
@@ -12656,7 +12664,7 @@ public class ASParser : Parser
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	string_literal195 = (CommonToken)input.LT(1);
-                    	Match(input,180,FOLLOW_180_in_modifier3667); if (failed) return retval;
+                    	Match(input,180,FOLLOW_180_in_modifier3671); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	string_literal195_tree = (CommonTree)adaptor.Create(string_literal195);
                     	adaptor.AddChild(root_0, string_literal195_tree);
@@ -12670,7 +12678,7 @@ public class ASParser : Parser
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	string_literal196 = (CommonToken)input.LT(1);
-                    	Match(input,181,FOLLOW_181_in_modifier3672); if (failed) return retval;
+                    	Match(input,181,FOLLOW_181_in_modifier3676); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	string_literal196_tree = (CommonTree)adaptor.Create(string_literal196);
                     	adaptor.AddChild(root_0, string_literal196_tree);
@@ -12684,7 +12692,7 @@ public class ASParser : Parser
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	string_literal197 = (CommonToken)input.LT(1);
-                    	Match(input,182,FOLLOW_182_in_modifier3677); if (failed) return retval;
+                    	Match(input,182,FOLLOW_182_in_modifier3681); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	string_literal197_tree = (CommonTree)adaptor.Create(string_literal197);
                     	adaptor.AddChild(root_0, string_literal197_tree);
@@ -12698,7 +12706,7 @@ public class ASParser : Parser
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	string_literal198 = (CommonToken)input.LT(1);
-                    	Match(input,183,FOLLOW_183_in_modifier3682); if (failed) return retval;
+                    	Match(input,183,FOLLOW_183_in_modifier3686); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	string_literal198_tree = (CommonTree)adaptor.Create(string_literal198);
                     	adaptor.AddChild(root_0, string_literal198_tree);
@@ -12712,7 +12720,7 @@ public class ASParser : Parser
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	DYNAMIC199 = (CommonToken)input.LT(1);
-                    	Match(input,DYNAMIC,FOLLOW_DYNAMIC_in_modifier3687); if (failed) return retval;
+                    	Match(input,DYNAMIC,FOLLOW_DYNAMIC_in_modifier3691); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	DYNAMIC199_tree = (CommonTree)adaptor.Create(DYNAMIC199);
                     	adaptor.AddChild(root_0, DYNAMIC199_tree);
@@ -12726,7 +12734,7 @@ public class ASParser : Parser
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	string_literal200 = (CommonToken)input.LT(1);
-                    	Match(input,184,FOLLOW_184_in_modifier3692); if (failed) return retval;
+                    	Match(input,184,FOLLOW_184_in_modifier3696); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	string_literal200_tree = (CommonTree)adaptor.Create(string_literal200);
                     	adaptor.AddChild(root_0, string_literal200_tree);
@@ -12847,7 +12855,7 @@ public class ASParser : Parser
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	LPAREN201 = (CommonToken)input.LT(1);
-                    	Match(input,LPAREN,FOLLOW_LPAREN_in_arguments3713); if (failed) return retval;
+                    	Match(input,LPAREN,FOLLOW_LPAREN_in_arguments3717); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	LPAREN201_tree = (CommonTree)adaptor.Create(LPAREN201);
                     	adaptor.AddChild(root_0, LPAREN201_tree);
@@ -12856,13 +12864,13 @@ public class ASParser : Parser
                     	{
                     	   buffer.Append("("); 
                     	}
-                    	PushFollow(FOLLOW_expressionList_in_arguments3717);
+                    	PushFollow(FOLLOW_expressionList_in_arguments3721);
                     	expressionList202 = expressionList();
                     	followingStackPointer_--;
                     	if (failed) return retval;
                     	if ( backtracking==0 ) adaptor.AddChild(root_0, expressionList202.Tree);
                     	RPAREN203 = (CommonToken)input.LT(1);
-                    	Match(input,RPAREN,FOLLOW_RPAREN_in_arguments3719); if (failed) return retval;
+                    	Match(input,RPAREN,FOLLOW_RPAREN_in_arguments3723); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	RPAREN203_tree = (CommonTree)adaptor.Create(RPAREN203);
                     	adaptor.AddChild(root_0, RPAREN203_tree);
@@ -12880,13 +12888,13 @@ public class ASParser : Parser
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	LPAREN204 = (CommonToken)input.LT(1);
-                    	Match(input,LPAREN,FOLLOW_LPAREN_in_arguments3726); if (failed) return retval;
+                    	Match(input,LPAREN,FOLLOW_LPAREN_in_arguments3730); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	LPAREN204_tree = (CommonTree)adaptor.Create(LPAREN204);
                     	adaptor.AddChild(root_0, LPAREN204_tree);
                     	}
                     	RPAREN205 = (CommonToken)input.LT(1);
-                    	Match(input,RPAREN,FOLLOW_RPAREN_in_arguments3728); if (failed) return retval;
+                    	Match(input,RPAREN,FOLLOW_RPAREN_in_arguments3732); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	RPAREN205_tree = (CommonTree)adaptor.Create(RPAREN205);
                     	adaptor.AddChild(root_0, RPAREN205_tree);
@@ -12967,7 +12975,7 @@ public class ASParser : Parser
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1097:4: ( assignmentExpression -> ^( ELEMENT assignmentExpression ) )
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1097:4: assignmentExpression
             {
-            	PushFollow(FOLLOW_assignmentExpression_in_element3754);
+            	PushFollow(FOLLOW_assignmentExpression_in_element3758);
             	assignmentExpression206 = assignmentExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -13071,7 +13079,7 @@ public class ASParser : Parser
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1103:4: LBRACK ( elementList )? RBRACK
             {
             	LBRACK207 = (CommonToken)input.LT(1);
-            	Match(input,LBRACK,FOLLOW_LBRACK_in_arrayLiteral3776); if (failed) return retval;
+            	Match(input,LBRACK,FOLLOW_LBRACK_in_arrayLiteral3780); if (failed) return retval;
             	if ( backtracking==0 ) stream_LBRACK.Add(LBRACK207);
 
             	if ( backtracking == 0 ) 
@@ -13091,7 +13099,7 @@ public class ASParser : Parser
             	    case 1 :
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: elementList
             	        {
-            	        	PushFollow(FOLLOW_elementList_in_arrayLiteral3780);
+            	        	PushFollow(FOLLOW_elementList_in_arrayLiteral3784);
             	        	elementList208 = elementList();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -13103,7 +13111,7 @@ public class ASParser : Parser
             	}
 
             	RBRACK209 = (CommonToken)input.LT(1);
-            	Match(input,RBRACK,FOLLOW_RBRACK_in_arrayLiteral3783); if (failed) return retval;
+            	Match(input,RBRACK,FOLLOW_RBRACK_in_arrayLiteral3787); if (failed) return retval;
             	if ( backtracking==0 ) stream_RBRACK.Add(RBRACK209);
 
             	if ( backtracking == 0 ) 
@@ -13212,7 +13220,7 @@ public class ASParser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_nonemptyElementList_in_elementList3807);
+            	PushFollow(FOLLOW_nonemptyElementList_in_elementList3811);
             	nonemptyElementList210 = nonemptyElementList();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -13235,7 +13243,7 @@ public class ASParser : Parser
             			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1110:4: COMMA ( nonemptyElementList )?
             			    {
             			    	COMMA211 = (CommonToken)input.LT(1);
-            			    	Match(input,COMMA,FOLLOW_COMMA_in_elementList3817); if (failed) return retval;
+            			    	Match(input,COMMA,FOLLOW_COMMA_in_elementList3821); if (failed) return retval;
             			    	if ( backtracking == 0 ) 
             			    	{
             			    	   buffer.Append(options.SpaceBetweenArguments ? ", " : ","); 
@@ -13253,7 +13261,7 @@ public class ASParser : Parser
             			    	    case 1 :
             			    	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: nonemptyElementList
             			    	        {
-            			    	        	PushFollow(FOLLOW_nonemptyElementList_in_elementList3830);
+            			    	        	PushFollow(FOLLOW_nonemptyElementList_in_elementList3834);
             			    	        	nonemptyElementList212 = nonemptyElementList();
             			    	        	followingStackPointer_--;
             			    	        	if (failed) return retval;
@@ -13350,7 +13358,7 @@ public class ASParser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_assignmentExpression_in_nonemptyElementList3858);
+            	PushFollow(FOLLOW_assignmentExpression_in_nonemptyElementList3862);
             	assignmentExpression213 = assignmentExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -13716,7 +13724,7 @@ public class ASParser : Parser
             			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1122:4: COMMA assignmentExpression
             			    {
             			    	COMMA214 = (CommonToken)input.LT(1);
-            			    	Match(input,COMMA,FOLLOW_COMMA_in_nonemptyElementList3868); if (failed) return retval;
+            			    	Match(input,COMMA,FOLLOW_COMMA_in_nonemptyElementList3872); if (failed) return retval;
             			    	if ( backtracking==0 ) {
             			    	COMMA214_tree = (CommonTree)adaptor.Create(COMMA214);
             			    	adaptor.AddChild(root_0, COMMA214_tree);
@@ -13725,7 +13733,7 @@ public class ASParser : Parser
             			    	{
             			    	   buffer.Append(options.SpaceBetweenArguments ? ", " : ","); 
             			    	}
-            			    	PushFollow(FOLLOW_assignmentExpression_in_nonemptyElementList3880);
+            			    	PushFollow(FOLLOW_assignmentExpression_in_nonemptyElementList3884);
             			    	assignmentExpression215 = assignmentExpression();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -13817,7 +13825,7 @@ public class ASParser : Parser
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1132:4: LCURLY ( fieldList )? RCURLY
             {
             	LCURLY216 = (CommonToken)input.LT(1);
-            	Match(input,LCURLY,FOLLOW_LCURLY_in_objectLiteral3902); if (failed) return retval;
+            	Match(input,LCURLY,FOLLOW_LCURLY_in_objectLiteral3906); if (failed) return retval;
             	if ( backtracking==0 ) stream_LCURLY.Add(LCURLY216);
 
             	if ( backtracking == 0 ) 
@@ -13845,7 +13853,7 @@ public class ASParser : Parser
             	    case 1 :
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: fieldList
             	        {
-            	        	PushFollow(FOLLOW_fieldList_in_objectLiteral3911);
+            	        	PushFollow(FOLLOW_fieldList_in_objectLiteral3915);
             	        	fieldList217 = fieldList();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -13857,7 +13865,7 @@ public class ASParser : Parser
             	}
 
             	RCURLY218 = (CommonToken)input.LT(1);
-            	Match(input,RCURLY,FOLLOW_RCURLY_in_objectLiteral3917); if (failed) return retval;
+            	Match(input,RCURLY,FOLLOW_RCURLY_in_objectLiteral3921); if (failed) return retval;
             	if ( backtracking==0 ) stream_RCURLY.Add(RCURLY218);
 
             	if ( backtracking == 0 ) 
@@ -13973,7 +13981,7 @@ public class ASParser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_literalField_in_fieldList3944);
+            	PushFollow(FOLLOW_literalField_in_fieldList3948);
             	literalField219 = literalField();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -13996,7 +14004,7 @@ public class ASParser : Parser
             			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1156:4: COMMA ( literalField )?
             			    {
             			    	COMMA220 = (CommonToken)input.LT(1);
-            			    	Match(input,COMMA,FOLLOW_COMMA_in_fieldList3954); if (failed) return retval;
+            			    	Match(input,COMMA,FOLLOW_COMMA_in_fieldList3958); if (failed) return retval;
             			    	if ( backtracking == 0 ) 
             			    	{
             			    	  
@@ -14022,7 +14030,7 @@ public class ASParser : Parser
             			    	    case 1 :
             			    	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: literalField
             			    	        {
-            			    	        	PushFollow(FOLLOW_literalField_in_fieldList3968);
+            			    	        	PushFollow(FOLLOW_literalField_in_fieldList3972);
             			    	        	literalField221 = literalField();
             			    	        	followingStackPointer_--;
             			    	        	if (failed) return retval;
@@ -14114,20 +14122,20 @@ public class ASParser : Parser
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1170:5: (field= fieldName COLON element -> ^( OBJECT_FIELD fieldName element ) )
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1170:5: field= fieldName COLON element
             {
-            	PushFollow(FOLLOW_fieldName_in_literalField3990);
+            	PushFollow(FOLLOW_fieldName_in_literalField3994);
             	field = fieldName();
             	followingStackPointer_--;
             	if (failed) return retval;
             	if ( backtracking==0 ) stream_fieldName.Add(field.Tree);
             	COLON222 = (CommonToken)input.LT(1);
-            	Match(input,COLON,FOLLOW_COLON_in_literalField3995); if (failed) return retval;
+            	Match(input,COLON,FOLLOW_COLON_in_literalField3999); if (failed) return retval;
             	if ( backtracking==0 ) stream_COLON.Add(COLON222);
 
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append( options.SpaceBetweenType ? " : " : ":"); 
             	}
-            	PushFollow(FOLLOW_element_in_literalField4003);
+            	PushFollow(FOLLOW_element_in_literalField4007);
             	element223 = element();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -14249,7 +14257,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_ident_in_fieldName4029);
+                    	PushFollow(FOLLOW_ident_in_fieldName4033);
                     	ide = ident();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -14266,7 +14274,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_number_in_fieldName4039);
+                    	PushFollow(FOLLOW_number_in_fieldName4043);
                     	num = number();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -14347,7 +14355,7 @@ public class ASParser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_assignmentExpression_in_expression4064);
+            	PushFollow(FOLLOW_assignmentExpression_in_expression4068);
             	assignmentExpression224 = assignmentExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -14422,7 +14430,7 @@ public class ASParser : Parser
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1192:4: ( assignmentExpression ( COMMA assignmentExpression )* -> ^( ELIST assignmentExpression ( COMMA assignmentExpression )* ) )
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1192:4: assignmentExpression ( COMMA assignmentExpression )*
             {
-            	PushFollow(FOLLOW_assignmentExpression_in_expressionList4076);
+            	PushFollow(FOLLOW_assignmentExpression_in_expressionList4080);
             	assignmentExpression225 = assignmentExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -14445,14 +14453,14 @@ public class ASParser : Parser
             			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1194:4: COMMA assignmentExpression
             			    {
             			    	COMMA226 = (CommonToken)input.LT(1);
-            			    	Match(input,COMMA,FOLLOW_COMMA_in_expressionList4086); if (failed) return retval;
+            			    	Match(input,COMMA,FOLLOW_COMMA_in_expressionList4090); if (failed) return retval;
             			    	if ( backtracking==0 ) stream_COMMA.Add(COMMA226);
 
             			    	if ( backtracking == 0 ) 
             			    	{
             			    	  buffer.Append(options.SpaceBetweenArguments ? ", " : ","); 
             			    	}
-            			    	PushFollow(FOLLOW_assignmentExpression_in_expressionList4098);
+            			    	PushFollow(FOLLOW_assignmentExpression_in_expressionList4102);
             			    	assignmentExpression227 = assignmentExpression();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -14574,7 +14582,7 @@ public class ASParser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_conditionalExpression_in_assignmentExpression4132);
+            	PushFollow(FOLLOW_conditionalExpression_in_assignmentExpression4136);
             	c = conditionalExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -14607,7 +14615,7 @@ public class ASParser : Parser
             			case 1 :
             			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1202:4: ( assignmentOperator )=>op= assignmentOperator assignmentExpression
             			    {
-            			    	PushFollow(FOLLOW_assignmentOperator_in_assignmentExpression4147);
+            			    	PushFollow(FOLLOW_assignmentOperator_in_assignmentExpression4151);
             			    	op = assignmentOperator();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -14620,7 +14628,7 @@ public class ASParser : Parser
             			    	  														if(options.SpaceBetweenAssign) buffer.Append(" "); 
             			    	  													
             			    	}
-            			    	PushFollow(FOLLOW_assignmentExpression_in_assignmentExpression4167);
+            			    	PushFollow(FOLLOW_assignmentExpression_in_assignmentExpression4171);
             			    	assignmentExpression228 = assignmentExpression();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -14789,7 +14797,7 @@ public class ASParser : Parser
             	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1231:4: ( logicalOrExpression -> logicalOrExpression )
             	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1231:5: logicalOrExpression
             	{
-            		PushFollow(FOLLOW_logicalOrExpression_in_conditionalExpression4261);
+            		PushFollow(FOLLOW_logicalOrExpression_in_conditionalExpression4265);
             		logicalOrExpression230 = logicalOrExpression();
             		followingStackPointer_--;
             		if (failed) return retval;
@@ -14830,7 +14838,7 @@ public class ASParser : Parser
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1233:4: QUESTION conditionalSubExpression
             	        {
             	        	QUESTION231 = (CommonToken)input.LT(1);
-            	        	Match(input,QUESTION,FOLLOW_QUESTION_in_conditionalExpression4275); if (failed) return retval;
+            	        	Match(input,QUESTION,FOLLOW_QUESTION_in_conditionalExpression4279); if (failed) return retval;
             	        	if ( backtracking==0 ) stream_QUESTION.Add(QUESTION231);
 
             	        	if ( backtracking == 0 ) 
@@ -14841,7 +14849,7 @@ public class ASParser : Parser
             	        	  							if(options.SpaceBetweenOperators) buffer.Append(" "); 
             	        	  						
             	        	}
-            	        	PushFollow(FOLLOW_conditionalSubExpression_in_conditionalExpression4282);
+            	        	PushFollow(FOLLOW_conditionalSubExpression_in_conditionalExpression4286);
             	        	conditionalSubExpression232 = conditionalSubExpression();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -14949,13 +14957,13 @@ public class ASParser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_assignmentExpression_in_conditionalSubExpression4311);
+            	PushFollow(FOLLOW_assignmentExpression_in_conditionalSubExpression4315);
             	assignmentExpression233 = assignmentExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
             	if ( backtracking==0 ) adaptor.AddChild(root_0, assignmentExpression233.Tree);
             	COLON234 = (CommonToken)input.LT(1);
-            	Match(input,COLON,FOLLOW_COLON_in_conditionalSubExpression4316); if (failed) return retval;
+            	Match(input,COLON,FOLLOW_COLON_in_conditionalSubExpression4320); if (failed) return retval;
             	if ( backtracking==0 ) {
             	COLON234_tree = (CommonTree)adaptor.Create(COLON234);
             	root_0 = (CommonTree)adaptor.BecomeRoot(COLON234_tree, root_0);
@@ -14964,7 +14972,7 @@ public class ASParser : Parser
             	{
             	   buffer.Append(options.SpaceBetweenOperators ? " : " : ":"); 
             	}
-            	PushFollow(FOLLOW_assignmentExpression_in_conditionalSubExpression4325);
+            	PushFollow(FOLLOW_assignmentExpression_in_conditionalSubExpression4329);
             	assignmentExpression235 = assignmentExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -15038,7 +15046,7 @@ public class ASParser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_logicalAndExpression_in_logicalOrExpression4339);
+            	PushFollow(FOLLOW_logicalAndExpression_in_logicalOrExpression4343);
             	logicalAndExpression236 = logicalAndExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -15060,7 +15068,7 @@ public class ASParser : Parser
             			case 1 :
             			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1254:4: op= logicalOrOperator logicalAndExpression
             			    {
-            			    	PushFollow(FOLLOW_logicalOrOperator_in_logicalOrExpression4350);
+            			    	PushFollow(FOLLOW_logicalOrOperator_in_logicalOrExpression4354);
             			    	op = logicalOrOperator();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -15073,7 +15081,7 @@ public class ASParser : Parser
             			    	  														if(options.SpaceBetweenOperators) buffer.Append(" "); 
             			    	  													
             			    	}
-            			    	PushFollow(FOLLOW_logicalAndExpression_in_logicalOrExpression4362);
+            			    	PushFollow(FOLLOW_logicalAndExpression_in_logicalOrExpression4366);
             			    	logicalAndExpression237 = logicalAndExpression();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -15239,7 +15247,7 @@ public class ASParser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_bitwiseOrExpression_in_logicalAndExpression4394);
+            	PushFollow(FOLLOW_bitwiseOrExpression_in_logicalAndExpression4398);
             	bitwiseOrExpression239 = bitwiseOrExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -15261,7 +15269,7 @@ public class ASParser : Parser
             			case 1 :
             			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1271:4: op= logicalAndOperator bitwiseOrExpression
             			    {
-            			    	PushFollow(FOLLOW_logicalAndOperator_in_logicalAndExpression4405);
+            			    	PushFollow(FOLLOW_logicalAndOperator_in_logicalAndExpression4409);
             			    	op = logicalAndOperator();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -15274,7 +15282,7 @@ public class ASParser : Parser
             			    	  														if(options.SpaceBetweenOperators) buffer.Append(" "); 
             			    	  													
             			    	}
-            			    	PushFollow(FOLLOW_bitwiseOrExpression_in_logicalAndExpression4417);
+            			    	PushFollow(FOLLOW_bitwiseOrExpression_in_logicalAndExpression4421);
             			    	bitwiseOrExpression240 = bitwiseOrExpression();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -15440,7 +15448,7 @@ public class ASParser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_bitwiseXorExpression_in_bitwiseOrExpression4449);
+            	PushFollow(FOLLOW_bitwiseXorExpression_in_bitwiseOrExpression4453);
             	bitwiseXorExpression242 = bitwiseXorExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -15463,12 +15471,12 @@ public class ASParser : Parser
             			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1287:4: BOR bitwiseXorExpression
             			    {
             			    	BOR243 = (CommonToken)input.LT(1);
-            			    	Match(input,BOR,FOLLOW_BOR_in_bitwiseOrExpression4454); if (failed) return retval;
+            			    	Match(input,BOR,FOLLOW_BOR_in_bitwiseOrExpression4458); if (failed) return retval;
             			    	if ( backtracking==0 ) {
             			    	BOR243_tree = (CommonTree)adaptor.Create(BOR243);
             			    	root_0 = (CommonTree)adaptor.BecomeRoot(BOR243_tree, root_0);
             			    	}
-            			    	PushFollow(FOLLOW_bitwiseXorExpression_in_bitwiseOrExpression4457);
+            			    	PushFollow(FOLLOW_bitwiseXorExpression_in_bitwiseOrExpression4461);
             			    	bitwiseXorExpression244 = bitwiseXorExpression();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -15554,7 +15562,7 @@ public class ASParser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_bitwiseAndExpression_in_bitwiseXorExpression4471);
+            	PushFollow(FOLLOW_bitwiseAndExpression_in_bitwiseXorExpression4475);
             	bitwiseAndExpression245 = bitwiseAndExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -15577,12 +15585,12 @@ public class ASParser : Parser
             			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1293:4: BXOR bitwiseAndExpression
             			    {
             			    	BXOR246 = (CommonToken)input.LT(1);
-            			    	Match(input,BXOR,FOLLOW_BXOR_in_bitwiseXorExpression4476); if (failed) return retval;
+            			    	Match(input,BXOR,FOLLOW_BXOR_in_bitwiseXorExpression4480); if (failed) return retval;
             			    	if ( backtracking==0 ) {
             			    	BXOR246_tree = (CommonTree)adaptor.Create(BXOR246);
             			    	root_0 = (CommonTree)adaptor.BecomeRoot(BXOR246_tree, root_0);
             			    	}
-            			    	PushFollow(FOLLOW_bitwiseAndExpression_in_bitwiseXorExpression4479);
+            			    	PushFollow(FOLLOW_bitwiseAndExpression_in_bitwiseXorExpression4483);
             			    	bitwiseAndExpression247 = bitwiseAndExpression();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -15668,7 +15676,7 @@ public class ASParser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_equalityExpression_in_bitwiseAndExpression4493);
+            	PushFollow(FOLLOW_equalityExpression_in_bitwiseAndExpression4497);
             	equalityExpression248 = equalityExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -15691,12 +15699,12 @@ public class ASParser : Parser
             			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1299:4: BAND equalityExpression
             			    {
             			    	BAND249 = (CommonToken)input.LT(1);
-            			    	Match(input,BAND,FOLLOW_BAND_in_bitwiseAndExpression4498); if (failed) return retval;
+            			    	Match(input,BAND,FOLLOW_BAND_in_bitwiseAndExpression4502); if (failed) return retval;
             			    	if ( backtracking==0 ) {
             			    	BAND249_tree = (CommonTree)adaptor.Create(BAND249);
             			    	root_0 = (CommonTree)adaptor.BecomeRoot(BAND249_tree, root_0);
             			    	}
-            			    	PushFollow(FOLLOW_equalityExpression_in_bitwiseAndExpression4501);
+            			    	PushFollow(FOLLOW_equalityExpression_in_bitwiseAndExpression4505);
             			    	equalityExpression250 = equalityExpression();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -15782,7 +15790,7 @@ public class ASParser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_relationalExpression_in_equalityExpression4515);
+            	PushFollow(FOLLOW_relationalExpression_in_equalityExpression4519);
             	relationalExpression251 = relationalExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -15804,7 +15812,7 @@ public class ASParser : Parser
             			case 1 :
             			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1306:3: op= equalityOperator relationalExpression
             			    {
-            			    	PushFollow(FOLLOW_equalityOperator_in_equalityExpression4525);
+            			    	PushFollow(FOLLOW_equalityOperator_in_equalityExpression4529);
             			    	op = equalityOperator();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -15817,7 +15825,7 @@ public class ASParser : Parser
             			    	  														if(options.SpaceBetweenOperators) buffer.Append(" "); 
             			    	  													
             			    	}
-            			    	PushFollow(FOLLOW_relationalExpression_in_equalityExpression4537);
+            			    	PushFollow(FOLLOW_relationalExpression_in_equalityExpression4541);
             			    	relationalExpression252 = relationalExpression();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -15983,7 +15991,7 @@ public class ASParser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_shiftExpression_in_relationalExpression4577);
+            	PushFollow(FOLLOW_shiftExpression_in_relationalExpression4581);
             	shiftExpression254 = shiftExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -17062,7 +17070,7 @@ public class ASParser : Parser
             			case 1 :
             			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1323:4: ( relationalOperator )=>op= relationalOperator shiftExpression
             			    {
-            			    	PushFollow(FOLLOW_relationalOperator_in_relationalExpression4593);
+            			    	PushFollow(FOLLOW_relationalOperator_in_relationalExpression4597);
             			    	op = relationalOperator();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -17075,7 +17083,7 @@ public class ASParser : Parser
             			    	  																buffer.Append(" "); 
             			    	  															
             			    	}
-            			    	PushFollow(FOLLOW_shiftExpression_in_relationalExpression4601);
+            			    	PushFollow(FOLLOW_shiftExpression_in_relationalExpression4605);
             			    	shiftExpression255 = shiftExpression();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -17231,7 +17239,7 @@ public class ASParser : Parser
                     	    throw new FailedPredicateException(input, "relationalOperator", "$InOperator::allowed");
                     	}
                     	IN256 = (CommonToken)input.LT(1);
-                    	Match(input,IN,FOLLOW_IN_in_relationalOperator4619); if (failed) return retval;
+                    	Match(input,IN,FOLLOW_IN_in_relationalOperator4623); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	IN256_tree = (CommonTree)adaptor.Create(IN256);
                     	adaptor.AddChild(root_0, IN256_tree);
@@ -17245,7 +17253,7 @@ public class ASParser : Parser
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	LT257 = (CommonToken)input.LT(1);
-                    	Match(input,LT,FOLLOW_LT_in_relationalOperator4624); if (failed) return retval;
+                    	Match(input,LT,FOLLOW_LT_in_relationalOperator4628); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	LT257_tree = (CommonTree)adaptor.Create(LT257);
                     	adaptor.AddChild(root_0, LT257_tree);
@@ -17259,7 +17267,7 @@ public class ASParser : Parser
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	GT258 = (CommonToken)input.LT(1);
-                    	Match(input,GT,FOLLOW_GT_in_relationalOperator4628); if (failed) return retval;
+                    	Match(input,GT,FOLLOW_GT_in_relationalOperator4632); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	GT258_tree = (CommonTree)adaptor.Create(GT258);
                     	adaptor.AddChild(root_0, GT258_tree);
@@ -17273,7 +17281,7 @@ public class ASParser : Parser
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	LE259 = (CommonToken)input.LT(1);
-                    	Match(input,LE,FOLLOW_LE_in_relationalOperator4632); if (failed) return retval;
+                    	Match(input,LE,FOLLOW_LE_in_relationalOperator4636); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	LE259_tree = (CommonTree)adaptor.Create(LE259);
                     	adaptor.AddChild(root_0, LE259_tree);
@@ -17287,7 +17295,7 @@ public class ASParser : Parser
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	GE260 = (CommonToken)input.LT(1);
-                    	Match(input,GE,FOLLOW_GE_in_relationalOperator4636); if (failed) return retval;
+                    	Match(input,GE,FOLLOW_GE_in_relationalOperator4640); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	GE260_tree = (CommonTree)adaptor.Create(GE260);
                     	adaptor.AddChild(root_0, GE260_tree);
@@ -17301,7 +17309,7 @@ public class ASParser : Parser
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	IS261 = (CommonToken)input.LT(1);
-                    	Match(input,IS,FOLLOW_IS_in_relationalOperator4640); if (failed) return retval;
+                    	Match(input,IS,FOLLOW_IS_in_relationalOperator4644); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	IS261_tree = (CommonTree)adaptor.Create(IS261);
                     	adaptor.AddChild(root_0, IS261_tree);
@@ -17315,7 +17323,7 @@ public class ASParser : Parser
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	AS262 = (CommonToken)input.LT(1);
-                    	Match(input,AS,FOLLOW_AS_in_relationalOperator4644); if (failed) return retval;
+                    	Match(input,AS,FOLLOW_AS_in_relationalOperator4648); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	AS262_tree = (CommonTree)adaptor.Create(AS262);
                     	adaptor.AddChild(root_0, AS262_tree);
@@ -17329,7 +17337,7 @@ public class ASParser : Parser
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	INSTANCEOF263 = (CommonToken)input.LT(1);
-                    	Match(input,INSTANCEOF,FOLLOW_INSTANCEOF_in_relationalOperator4648); if (failed) return retval;
+                    	Match(input,INSTANCEOF,FOLLOW_INSTANCEOF_in_relationalOperator4652); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	INSTANCEOF263_tree = (CommonTree)adaptor.Create(INSTANCEOF263);
                     	adaptor.AddChild(root_0, INSTANCEOF263_tree);
@@ -17405,7 +17413,7 @@ public class ASParser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_additiveExpression_in_shiftExpression4660);
+            	PushFollow(FOLLOW_additiveExpression_in_shiftExpression4664);
             	additiveExpression264 = additiveExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -17427,7 +17435,7 @@ public class ASParser : Parser
             			case 1 :
             			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1341:4: op= shiftOperator additiveExpression
             			    {
-            			    	PushFollow(FOLLOW_shiftOperator_in_shiftExpression4671);
+            			    	PushFollow(FOLLOW_shiftOperator_in_shiftExpression4675);
             			    	op = shiftOperator();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -17440,7 +17448,7 @@ public class ASParser : Parser
             			    	  											if(options.SpaceBetweenOperators) buffer.Append(" "); 
             			    	  										
             			    	}
-            			    	PushFollow(FOLLOW_additiveExpression_in_shiftExpression4681);
+            			    	PushFollow(FOLLOW_additiveExpression_in_shiftExpression4685);
             			    	additiveExpression265 = additiveExpression();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -17606,7 +17614,7 @@ public class ASParser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_multiplicativeExpression_in_additiveExpression4717);
+            	PushFollow(FOLLOW_multiplicativeExpression_in_additiveExpression4721);
             	multiplicativeExpression267 = multiplicativeExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -18318,7 +18326,7 @@ public class ASParser : Parser
             			case 1 :
             			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1358:4: op= additiveOperator multiplicativeExpression
             			    {
-            			    	PushFollow(FOLLOW_additiveOperator_in_additiveExpression4728);
+            			    	PushFollow(FOLLOW_additiveOperator_in_additiveExpression4732);
             			    	op = additiveOperator();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -18331,7 +18339,7 @@ public class ASParser : Parser
             			    	  											if(options.SpaceBetweenOperators) buffer.Append(" "); 
             			    	  										
             			    	}
-            			    	PushFollow(FOLLOW_multiplicativeExpression_in_additiveExpression4738);
+            			    	PushFollow(FOLLOW_multiplicativeExpression_in_additiveExpression4742);
             			    	multiplicativeExpression268 = multiplicativeExpression();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -18497,7 +18505,7 @@ public class ASParser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_unaryExpression_in_multiplicativeExpression4770);
+            	PushFollow(FOLLOW_unaryExpression_in_multiplicativeExpression4774);
             	unaryExpression270 = unaryExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -18519,7 +18527,7 @@ public class ASParser : Parser
             			case 1 :
             			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1375:4: op= multiplicativeOperator unaryExpression
             			    {
-            			    	PushFollow(FOLLOW_multiplicativeOperator_in_multiplicativeExpression4782);
+            			    	PushFollow(FOLLOW_multiplicativeOperator_in_multiplicativeExpression4786);
             			    	op = multiplicativeOperator();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -18532,7 +18540,7 @@ public class ASParser : Parser
             			    	  											if(options.SpaceBetweenOperators) buffer.Append(" "); 
             			    	  										
             			    	}
-            			    	PushFollow(FOLLOW_unaryExpression_in_multiplicativeExpression4790);
+            			    	PushFollow(FOLLOW_unaryExpression_in_multiplicativeExpression4794);
             			    	unaryExpression271 = unaryExpression();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -18778,14 +18786,14 @@ public class ASParser : Parser
                     // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1390:4: iin= INC unaryExpression
                     {
                     	iin = (CommonToken)input.LT(1);
-                    	Match(input,INC,FOLLOW_INC_in_unaryExpression4828); if (failed) return retval;
+                    	Match(input,INC,FOLLOW_INC_in_unaryExpression4832); if (failed) return retval;
                     	if ( backtracking==0 ) stream_INC.Add(iin);
 
                     	if ( backtracking == 0 ) 
                     	{
                     	   buffer.Append(iin.Text); 
                     	}
-                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpression4833);
+                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpression4837);
                     	unaryExpression273 = unaryExpression();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -18824,14 +18832,14 @@ public class ASParser : Parser
                     // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1391:4: dde= DEC unaryExpression
                     {
                     	dde = (CommonToken)input.LT(1);
-                    	Match(input,DEC,FOLLOW_DEC_in_unaryExpression4850); if (failed) return retval;
+                    	Match(input,DEC,FOLLOW_DEC_in_unaryExpression4854); if (failed) return retval;
                     	if ( backtracking==0 ) stream_DEC.Add(dde);
 
                     	if ( backtracking == 0 ) 
                     	{
                     	   buffer.Append(dde.Text); 
                     	}
-                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpression4855);
+                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpression4859);
                     	unaryExpression274 = unaryExpression();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -18870,14 +18878,14 @@ public class ASParser : Parser
                     // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1392:4: tmin= MINUS unaryExpression
                     {
                     	tmin = (CommonToken)input.LT(1);
-                    	Match(input,MINUS,FOLLOW_MINUS_in_unaryExpression4872); if (failed) return retval;
+                    	Match(input,MINUS,FOLLOW_MINUS_in_unaryExpression4876); if (failed) return retval;
                     	if ( backtracking==0 ) stream_MINUS.Add(tmin);
 
                     	if ( backtracking == 0 ) 
                     	{
                     	   buffer.Append(tmin.Text);  
                     	}
-                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpression4876);
+                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpression4880);
                     	unaryExpression275 = unaryExpression();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -18916,14 +18924,14 @@ public class ASParser : Parser
                     // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1393:4: tplus= PLUS unaryExpression
                     {
                     	tplus = (CommonToken)input.LT(1);
-                    	Match(input,PLUS,FOLLOW_PLUS_in_unaryExpression4892); if (failed) return retval;
+                    	Match(input,PLUS,FOLLOW_PLUS_in_unaryExpression4896); if (failed) return retval;
                     	if ( backtracking==0 ) stream_PLUS.Add(tplus);
 
                     	if ( backtracking == 0 ) 
                     	{
                     	   buffer.Append(tplus.Text); 
                     	}
-                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpression4896);
+                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpression4900);
                     	unaryExpression276 = unaryExpression();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -18963,7 +18971,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_unaryExpressionNotPlusMinus_in_unaryExpression4910);
+                    	PushFollow(FOLLOW_unaryExpressionNotPlusMinus_in_unaryExpression4914);
                     	unaryExpressionNotPlusMinus277 = unaryExpressionNotPlusMinus();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -19125,14 +19133,14 @@ public class ASParser : Parser
                     // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1398:4: tk1= DELETE postfixExpression
                     {
                     	tk1 = (CommonToken)input.LT(1);
-                    	Match(input,DELETE,FOLLOW_DELETE_in_unaryExpressionNotPlusMinus4923); if (failed) return retval;
+                    	Match(input,DELETE,FOLLOW_DELETE_in_unaryExpressionNotPlusMinus4927); if (failed) return retval;
                     	if ( backtracking==0 ) stream_DELETE.Add(tk1);
 
                     	if ( backtracking == 0 ) 
                     	{
                     	   buffer.Append(tk1.Text + " ");  
                     	}
-                    	PushFollow(FOLLOW_postfixExpression_in_unaryExpressionNotPlusMinus4928);
+                    	PushFollow(FOLLOW_postfixExpression_in_unaryExpressionNotPlusMinus4932);
                     	postfixExpression278 = postfixExpression();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -19171,14 +19179,14 @@ public class ASParser : Parser
                     // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1399:4: tk2= VOID unaryExpression
                     {
                     	tk2 = (CommonToken)input.LT(1);
-                    	Match(input,VOID,FOLLOW_VOID_in_unaryExpressionNotPlusMinus4943); if (failed) return retval;
+                    	Match(input,VOID,FOLLOW_VOID_in_unaryExpressionNotPlusMinus4947); if (failed) return retval;
                     	if ( backtracking==0 ) stream_VOID.Add(tk2);
 
                     	if ( backtracking == 0 ) 
                     	{
                     	   buffer.Append(tk2.Text + " ");  
                     	}
-                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus4947);
+                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus4951);
                     	unaryExpression279 = unaryExpression();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -19217,14 +19225,14 @@ public class ASParser : Parser
                     // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1400:4: tk3= TYPEOF unaryExpression
                     {
                     	tk3 = (CommonToken)input.LT(1);
-                    	Match(input,TYPEOF,FOLLOW_TYPEOF_in_unaryExpressionNotPlusMinus4962); if (failed) return retval;
+                    	Match(input,TYPEOF,FOLLOW_TYPEOF_in_unaryExpressionNotPlusMinus4966); if (failed) return retval;
                     	if ( backtracking==0 ) stream_TYPEOF.Add(tk3);
 
                     	if ( backtracking == 0 ) 
                     	{
                     	   buffer.Append(tk3.Text + " ");  
                     	}
-                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus4966);
+                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus4970);
                     	unaryExpression280 = unaryExpression();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -19263,14 +19271,14 @@ public class ASParser : Parser
                     // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1401:4: tk4= LNOT unaryExpression
                     {
                     	tk4 = (CommonToken)input.LT(1);
-                    	Match(input,LNOT,FOLLOW_LNOT_in_unaryExpressionNotPlusMinus4981); if (failed) return retval;
+                    	Match(input,LNOT,FOLLOW_LNOT_in_unaryExpressionNotPlusMinus4985); if (failed) return retval;
                     	if ( backtracking==0 ) stream_LNOT.Add(tk4);
 
                     	if ( backtracking == 0 ) 
                     	{
                     	   buffer.Append(tk4.Text + " ");  
                     	}
-                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus4985);
+                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus4989);
                     	unaryExpression281 = unaryExpression();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -19309,14 +19317,14 @@ public class ASParser : Parser
                     // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1402:4: tk5= BNOT unaryExpression
                     {
                     	tk5 = (CommonToken)input.LT(1);
-                    	Match(input,BNOT,FOLLOW_BNOT_in_unaryExpressionNotPlusMinus5000); if (failed) return retval;
+                    	Match(input,BNOT,FOLLOW_BNOT_in_unaryExpressionNotPlusMinus5004); if (failed) return retval;
                     	if ( backtracking==0 ) stream_BNOT.Add(tk5);
 
                     	if ( backtracking == 0 ) 
                     	{
                     	   buffer.Append(tk5.Text + " ");  
                     	}
-                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus5004);
+                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus5008);
                     	unaryExpression282 = unaryExpression();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -19356,7 +19364,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_postfixExpression_in_unaryExpressionNotPlusMinus5017);
+                    	PushFollow(FOLLOW_postfixExpression_in_unaryExpressionNotPlusMinus5021);
                     	postfixExpression283 = postfixExpression();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -19450,7 +19458,7 @@ public class ASParser : Parser
             	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1408:4: ( primaryExpression -> primaryExpression )
             	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1408:5: primaryExpression
             	{
-            		PushFollow(FOLLOW_primaryExpression_in_postfixExpression5030);
+            		PushFollow(FOLLOW_primaryExpression_in_postfixExpression5034);
             		primaryExpression284 = primaryExpression();
             		followingStackPointer_--;
             		if (failed) return retval;
@@ -20197,7 +20205,7 @@ public class ASParser : Parser
             			case 1 :
             			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1409:5: poi= propOrIdent[root_0, retval.start]
             			    {
-            			    	PushFollow(FOLLOW_propOrIdent_in_postfixExpression5043);
+            			    	PushFollow(FOLLOW_propOrIdent_in_postfixExpression5047);
             			    	poi = propOrIdent(root_0,  retval.start);
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -20233,20 +20241,20 @@ public class ASParser : Parser
             			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1410:5: LBRACK expression RBRACK
             			    {
             			    	LBRACK285 = (CommonToken)input.LT(1);
-            			    	Match(input,LBRACK,FOLLOW_LBRACK_in_postfixExpression5057); if (failed) return retval;
+            			    	Match(input,LBRACK,FOLLOW_LBRACK_in_postfixExpression5061); if (failed) return retval;
             			    	if ( backtracking==0 ) stream_LBRACK.Add(LBRACK285);
 
             			    	if ( backtracking == 0 ) 
             			    	{
             			    	   buffer.Append("["); 
             			    	}
-            			    	PushFollow(FOLLOW_expression_in_postfixExpression5061);
+            			    	PushFollow(FOLLOW_expression_in_postfixExpression5065);
             			    	expression286 = expression();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
             			    	if ( backtracking==0 ) stream_expression.Add(expression286.Tree);
             			    	RBRACK287 = (CommonToken)input.LT(1);
-            			    	Match(input,RBRACK,FOLLOW_RBRACK_in_postfixExpression5063); if (failed) return retval;
+            			    	Match(input,RBRACK,FOLLOW_RBRACK_in_postfixExpression5067); if (failed) return retval;
             			    	if ( backtracking==0 ) stream_RBRACK.Add(RBRACK287);
 
             			    	if ( backtracking == 0 ) 
@@ -20287,7 +20295,7 @@ public class ASParser : Parser
             			case 3 :
             			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1411:5: arguments
             			    {
-            			    	PushFollow(FOLLOW_arguments_in_postfixExpression5082);
+            			    	PushFollow(FOLLOW_arguments_in_postfixExpression5086);
             			    	arguments288 = arguments();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -21082,7 +21090,7 @@ public class ASParser : Parser
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1414:6: iin= INC
             	        {
             	        	iin = (CommonToken)input.LT(1);
-            	        	Match(input,INC,FOLLOW_INC_in_postfixExpression5108); if (failed) return retval;
+            	        	Match(input,INC,FOLLOW_INC_in_postfixExpression5112); if (failed) return retval;
             	        	if ( backtracking==0 ) stream_INC.Add(iin);
 
             	        	if ( backtracking == 0 ) 
@@ -21123,7 +21131,7 @@ public class ASParser : Parser
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1415:6: dde= DEC
             	        {
             	        	dde = (CommonToken)input.LT(1);
-            	        	Match(input,DEC,FOLLOW_DEC_in_postfixExpression5129); if (failed) return retval;
+            	        	Match(input,DEC,FOLLOW_DEC_in_postfixExpression5133); if (failed) return retval;
             	        	if ( backtracking==0 ) stream_DEC.Add(dde);
 
             	        	if ( backtracking == 0 ) 
@@ -21311,7 +21319,7 @@ public class ASParser : Parser
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	und = (CommonToken)input.LT(1);
-                    	Match(input,UNDEFINED,FOLLOW_UNDEFINED_in_primaryExpression5160); if (failed) return retval;
+                    	Match(input,UNDEFINED,FOLLOW_UNDEFINED_in_primaryExpression5164); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	und_tree = (CommonTree)adaptor.Create(und);
                     	adaptor.AddChild(root_0, und_tree);
@@ -21328,7 +21336,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_constant_in_primaryExpression5172);
+                    	PushFollow(FOLLOW_constant_in_primaryExpression5176);
                     	c = constant();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -21345,7 +21353,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_arrayLiteral_in_primaryExpression5183);
+                    	PushFollow(FOLLOW_arrayLiteral_in_primaryExpression5187);
                     	arrayLiteral289 = arrayLiteral();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -21358,7 +21366,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_objectLiteral_in_primaryExpression5188);
+                    	PushFollow(FOLLOW_objectLiteral_in_primaryExpression5192);
                     	objectLiteral290 = objectLiteral();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -21371,7 +21379,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_functionDefinition_in_primaryExpression5193);
+                    	PushFollow(FOLLOW_functionDefinition_in_primaryExpression5197);
                     	functionDefinition291 = functionDefinition();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -21384,7 +21392,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_newFullExpression_in_primaryExpression5198);
+                    	PushFollow(FOLLOW_newFullExpression_in_primaryExpression5202);
                     	newFullExpression292 = newFullExpression();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -21397,7 +21405,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_encapsulatedExpression_in_primaryExpression5203);
+                    	PushFollow(FOLLOW_encapsulatedExpression_in_primaryExpression5207);
                     	encapsulatedExpression293 = encapsulatedExpression();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -21410,7 +21418,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_qualifiedIdent_in_primaryExpression5208);
+                    	PushFollow(FOLLOW_qualifiedIdent_in_primaryExpression5212);
                     	qualifiedIdent294 = qualifiedIdent();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -21488,14 +21496,14 @@ public class ASParser : Parser
             	   retval.start = startToken; 
             	}
             	DOT295 = (CommonToken)input.LT(1);
-            	Match(input,DOT,FOLLOW_DOT_in_propOrIdent5234); if (failed) return retval;
+            	Match(input,DOT,FOLLOW_DOT_in_propOrIdent5238); if (failed) return retval;
             	if ( backtracking==0 ) stream_DOT.Add(DOT295);
 
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append("."); 
             	}
-            	PushFollow(FOLLOW_qualifiedIdent_in_propOrIdent5247);
+            	PushFollow(FOLLOW_qualifiedIdent_in_propOrIdent5251);
             	propId = qualifiedIdent();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -21644,7 +21652,7 @@ public class ASParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_number_in_constant5271);
+                    	PushFollow(FOLLOW_number_in_constant5275);
                     	number296 = number();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -21658,7 +21666,7 @@ public class ASParser : Parser
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	STRING_LITERAL297 = (CommonToken)input.LT(1);
-                    	Match(input,STRING_LITERAL,FOLLOW_STRING_LITERAL_in_constant5276); if (failed) return retval;
+                    	Match(input,STRING_LITERAL,FOLLOW_STRING_LITERAL_in_constant5280); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	STRING_LITERAL297_tree = (CommonTree)adaptor.Create(STRING_LITERAL297);
                     	adaptor.AddChild(root_0, STRING_LITERAL297_tree);
@@ -21672,7 +21680,7 @@ public class ASParser : Parser
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	TRUE298 = (CommonToken)input.LT(1);
-                    	Match(input,TRUE,FOLLOW_TRUE_in_constant5281); if (failed) return retval;
+                    	Match(input,TRUE,FOLLOW_TRUE_in_constant5285); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	TRUE298_tree = (CommonTree)adaptor.Create(TRUE298);
                     	adaptor.AddChild(root_0, TRUE298_tree);
@@ -21686,7 +21694,7 @@ public class ASParser : Parser
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	FALSE299 = (CommonToken)input.LT(1);
-                    	Match(input,FALSE,FOLLOW_FALSE_in_constant5286); if (failed) return retval;
+                    	Match(input,FALSE,FOLLOW_FALSE_in_constant5290); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	FALSE299_tree = (CommonTree)adaptor.Create(FALSE299);
                     	adaptor.AddChild(root_0, FALSE299_tree);
@@ -21700,7 +21708,7 @@ public class ASParser : Parser
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	NULL300 = (CommonToken)input.LT(1);
-                    	Match(input,NULL,FOLLOW_NULL_in_constant5291); if (failed) return retval;
+                    	Match(input,NULL,FOLLOW_NULL_in_constant5295); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	NULL300_tree = (CommonTree)adaptor.Create(NULL300);
                     	adaptor.AddChild(root_0, NULL300_tree);
@@ -21857,7 +21865,7 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
             	n = (CommonToken)input.LT(1);
-            	Match(input,NEW,FOLLOW_NEW_in_newFullExpression5333); if (failed) return retval;
+            	Match(input,NEW,FOLLOW_NEW_in_newFullExpression5337); if (failed) return retval;
             	if ( backtracking==0 ) {
             	n_tree = (CommonTree)adaptor.Create(n);
             	root_0 = (CommonTree)adaptor.BecomeRoot(n_tree, root_0);
@@ -21866,7 +21874,7 @@ public class ASParser : Parser
             	{
             	   buffer.Append(n.Text + " "); 
             	}
-            	PushFollow(FOLLOW_fullNewSubexpression_in_newFullExpression5344);
+            	PushFollow(FOLLOW_fullNewSubexpression_in_newFullExpression5348);
             	fullNewSubexpression302 = fullNewSubexpression();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -21875,7 +21883,7 @@ public class ASParser : Parser
             	{
             	   
             	}
-            	PushFollow(FOLLOW_arguments_in_newFullExpression5350);
+            	PushFollow(FOLLOW_arguments_in_newFullExpression5354);
             	arguments303 = arguments();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -21959,7 +21967,7 @@ public class ASParser : Parser
             	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1462:4: ( primaryExpression -> primaryExpression )
             	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1462:6: primaryExpression
             	{
-            		PushFollow(FOLLOW_primaryExpression_in_fullNewSubexpression5368);
+            		PushFollow(FOLLOW_primaryExpression_in_fullNewSubexpression5372);
             		primaryExpression304 = primaryExpression();
             		followingStackPointer_--;
             		if (failed) return retval;
@@ -22008,14 +22016,14 @@ public class ASParser : Parser
             			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1464:5: DOT qualifiedIdent
             			    {
             			    	DOT305 = (CommonToken)input.LT(1);
-            			    	Match(input,DOT,FOLLOW_DOT_in_fullNewSubexpression5382); if (failed) return retval;
+            			    	Match(input,DOT,FOLLOW_DOT_in_fullNewSubexpression5386); if (failed) return retval;
             			    	if ( backtracking==0 ) stream_DOT.Add(DOT305);
 
             			    	if ( backtracking == 0 ) 
             			    	{
             			    	   buffer.Append("."); 
             			    	}
-            			    	PushFollow(FOLLOW_qualifiedIdent_in_fullNewSubexpression5387);
+            			    	PushFollow(FOLLOW_qualifiedIdent_in_fullNewSubexpression5391);
             			    	qualifiedIdent306 = qualifiedIdent();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -22054,7 +22062,7 @@ public class ASParser : Parser
             			case 2 :
             			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1465:5: brackets
             			    {
-            			    	PushFollow(FOLLOW_brackets_in_fullNewSubexpression5404);
+            			    	PushFollow(FOLLOW_brackets_in_fullNewSubexpression5408);
             			    	brackets307 = brackets();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -22202,7 +22210,7 @@ public class ASParser : Parser
             			case 1 :
             			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: comment
             			    {
-            			    	PushFollow(FOLLOW_comment_in_comments5446);
+            			    	PushFollow(FOLLOW_comment_in_comments5450);
             			    	comment308 = comment();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -22352,7 +22360,7 @@ public class ASParser : Parser
                 case 1 :
                     // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1482:4: singleCommentStatement ( comment )*
                     {
-                    	PushFollow(FOLLOW_singleCommentStatement_in_comment5467);
+                    	PushFollow(FOLLOW_singleCommentStatement_in_comment5471);
                     	singleCommentStatement309 = singleCommentStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -22392,7 +22400,7 @@ public class ASParser : Parser
                     			case 1 :
                     			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: comment
                     			    {
-                    			    	PushFollow(FOLLOW_comment_in_comment5469);
+                    			    	PushFollow(FOLLOW_comment_in_comment5473);
                     			    	comment310 = comment();
                     			    	followingStackPointer_--;
                     			    	if (failed) return retval;
@@ -22449,7 +22457,7 @@ public class ASParser : Parser
                 case 2 :
                     // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1483:4: multiCommentStatement ( comment )*
                     {
-                    	PushFollow(FOLLOW_multiCommentStatement_in_comment5486);
+                    	PushFollow(FOLLOW_multiCommentStatement_in_comment5490);
                     	multiCommentStatement311 = multiCommentStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -22489,7 +22497,7 @@ public class ASParser : Parser
                     			case 1 :
                     			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: comment
                     			    {
-                    			    	PushFollow(FOLLOW_comment_in_comment5489);
+                    			    	PushFollow(FOLLOW_comment_in_comment5493);
                     			    	comment312 = comment();
                     			    	followingStackPointer_--;
                     			    	if (failed) return retval;
@@ -22607,7 +22615,7 @@ public class ASParser : Parser
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1487:4: SL_COMMENT
             {
             	SL_COMMENT313 = (CommonToken)input.LT(1);
-            	Match(input,SL_COMMENT,FOLLOW_SL_COMMENT_in_singleCommentStatement5512); if (failed) return retval;
+            	Match(input,SL_COMMENT,FOLLOW_SL_COMMENT_in_singleCommentStatement5516); if (failed) return retval;
             	if ( backtracking==0 ) stream_SL_COMMENT.Add(SL_COMMENT313);
 
             	
@@ -22702,7 +22710,7 @@ public class ASParser : Parser
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1491:4: ML_COMMENT
             {
             	ML_COMMENT314 = (CommonToken)input.LT(1);
-            	Match(input,ML_COMMENT,FOLLOW_ML_COMMENT_in_multiCommentStatement5532); if (failed) return retval;
+            	Match(input,ML_COMMENT,FOLLOW_ML_COMMENT_in_multiCommentStatement5536); if (failed) return retval;
             	if ( backtracking==0 ) stream_ML_COMMENT.Add(ML_COMMENT314);
 
             	
@@ -22805,7 +22813,7 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
             	LBRACK315 = (CommonToken)input.LT(1);
-            	Match(input,LBRACK,FOLLOW_LBRACK_in_brackets5560); if (failed) return retval;
+            	Match(input,LBRACK,FOLLOW_LBRACK_in_brackets5564); if (failed) return retval;
             	if ( backtracking==0 ) {
             	LBRACK315_tree = (CommonTree)adaptor.Create(LBRACK315);
             	adaptor.AddChild(root_0, LBRACK315_tree);
@@ -22814,13 +22822,13 @@ public class ASParser : Parser
             	{
             	   buffer.Append("["); 
             	}
-            	PushFollow(FOLLOW_expressionList_in_brackets5568);
+            	PushFollow(FOLLOW_expressionList_in_brackets5572);
             	expressionList316 = expressionList();
             	followingStackPointer_--;
             	if (failed) return retval;
             	if ( backtracking==0 ) adaptor.AddChild(root_0, expressionList316.Tree);
             	RBRACK317 = (CommonToken)input.LT(1);
-            	Match(input,RBRACK,FOLLOW_RBRACK_in_brackets5573); if (failed) return retval;
+            	Match(input,RBRACK,FOLLOW_RBRACK_in_brackets5577); if (failed) return retval;
             	if ( backtracking==0 ) {
             	RBRACK317_tree = (CommonTree)adaptor.Create(RBRACK317);
             	adaptor.AddChild(root_0, RBRACK317_tree);
@@ -22904,20 +22912,20 @@ public class ASParser : Parser
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1511:4: LPAREN assignmentExpression RPAREN
             {
             	LPAREN318 = (CommonToken)input.LT(1);
-            	Match(input,LPAREN,FOLLOW_LPAREN_in_encapsulatedExpression5598); if (failed) return retval;
+            	Match(input,LPAREN,FOLLOW_LPAREN_in_encapsulatedExpression5602); if (failed) return retval;
             	if ( backtracking==0 ) stream_LPAREN.Add(LPAREN318);
 
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append("("); 
             	}
-            	PushFollow(FOLLOW_assignmentExpression_in_encapsulatedExpression5608);
+            	PushFollow(FOLLOW_assignmentExpression_in_encapsulatedExpression5612);
             	assignmentExpression319 = assignmentExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
             	if ( backtracking==0 ) stream_assignmentExpression.Add(assignmentExpression319.Tree);
             	RPAREN320 = (CommonToken)input.LT(1);
-            	Match(input,RPAREN,FOLLOW_RPAREN_in_encapsulatedExpression5613); if (failed) return retval;
+            	Match(input,RPAREN,FOLLOW_RPAREN_in_encapsulatedExpression5617); if (failed) return retval;
             	if ( backtracking==0 ) stream_RPAREN.Add(RPAREN320);
 
             	if ( backtracking == 0 ) 
@@ -23026,14 +23034,14 @@ public class ASParser : Parser
             // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1519:4: f= FUNCTION parameterDeclarationList ( typeExpression )? block
             {
             	f = (CommonToken)input.LT(1);
-            	Match(input,FUNCTION,FOLLOW_FUNCTION_in_functionDefinition5643); if (failed) return retval;
+            	Match(input,FUNCTION,FOLLOW_FUNCTION_in_functionDefinition5647); if (failed) return retval;
             	if ( backtracking==0 ) stream_FUNCTION.Add(f);
 
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append(f.Text + (options.SpaceBeforeMethodDef ? " " : "")); 
             	}
-            	PushFollow(FOLLOW_parameterDeclarationList_in_functionDefinition5647);
+            	PushFollow(FOLLOW_parameterDeclarationList_in_functionDefinition5651);
             	parameterDeclarationList321 = parameterDeclarationList();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -23051,7 +23059,7 @@ public class ASParser : Parser
             	    case 1 :
             	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: typeExpression
             	        {
-            	        	PushFollow(FOLLOW_typeExpression_in_functionDefinition5649);
+            	        	PushFollow(FOLLOW_typeExpression_in_functionDefinition5653);
             	        	typeExpression322 = typeExpression();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -23062,7 +23070,7 @@ public class ASParser : Parser
             	
             	}
 
-            	PushFollow(FOLLOW_block_in_functionDefinition5652);
+            	PushFollow(FOLLOW_block_in_functionDefinition5656);
             	block323 = block();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -23231,7 +23239,7 @@ public class ASParser : Parser
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	IDENT324 = (CommonToken)input.LT(1);
-                    	Match(input,IDENT,FOLLOW_IDENT_in_ident5679); if (failed) return retval;
+                    	Match(input,IDENT,FOLLOW_IDENT_in_ident5683); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	IDENT324_tree = (CommonTree)adaptor.Create(IDENT324);
                     	adaptor.AddChild(root_0, IDENT324_tree);
@@ -23243,7 +23251,7 @@ public class ASParser : Parser
                     // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1526:4: i= USE
                     {
                     	i = (CommonToken)input.LT(1);
-                    	Match(input,USE,FOLLOW_USE_in_ident5686); if (failed) return retval;
+                    	Match(input,USE,FOLLOW_USE_in_ident5690); if (failed) return retval;
                     	if ( backtracking==0 ) stream_USE.Add(i);
 
                     	
@@ -23272,7 +23280,7 @@ public class ASParser : Parser
                     // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1527:4: i= XML
                     {
                     	i = (CommonToken)input.LT(1);
-                    	Match(input,XML,FOLLOW_XML_in_ident5698); if (failed) return retval;
+                    	Match(input,XML,FOLLOW_XML_in_ident5702); if (failed) return retval;
                     	if ( backtracking==0 ) stream_XML.Add(i);
 
                     	
@@ -23301,7 +23309,7 @@ public class ASParser : Parser
                     // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1528:4: i= DYNAMIC
                     {
                     	i = (CommonToken)input.LT(1);
-                    	Match(input,DYNAMIC,FOLLOW_DYNAMIC_in_ident5710); if (failed) return retval;
+                    	Match(input,DYNAMIC,FOLLOW_DYNAMIC_in_ident5714); if (failed) return retval;
                     	if ( backtracking==0 ) stream_DYNAMIC.Add(i);
 
                     	
@@ -23330,7 +23338,7 @@ public class ASParser : Parser
                     // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1529:4: i= IS
                     {
                     	i = (CommonToken)input.LT(1);
-                    	Match(input,IS,FOLLOW_IS_in_ident5722); if (failed) return retval;
+                    	Match(input,IS,FOLLOW_IS_in_ident5726); if (failed) return retval;
                     	if ( backtracking==0 ) stream_IS.Add(i);
 
                     	
@@ -23359,7 +23367,7 @@ public class ASParser : Parser
                     // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1530:4: i= AS
                     {
                     	i = (CommonToken)input.LT(1);
-                    	Match(input,AS,FOLLOW_AS_in_ident5734); if (failed) return retval;
+                    	Match(input,AS,FOLLOW_AS_in_ident5738); if (failed) return retval;
                     	if ( backtracking==0 ) stream_AS.Add(i);
 
                     	
@@ -23388,7 +23396,7 @@ public class ASParser : Parser
                     // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1531:4: i= GET
                     {
                     	i = (CommonToken)input.LT(1);
-                    	Match(input,GET,FOLLOW_GET_in_ident5746); if (failed) return retval;
+                    	Match(input,GET,FOLLOW_GET_in_ident5750); if (failed) return retval;
                     	if ( backtracking==0 ) stream_GET.Add(i);
 
                     	
@@ -23417,7 +23425,7 @@ public class ASParser : Parser
                     // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1532:4: i= SET
                     {
                     	i = (CommonToken)input.LT(1);
-                    	Match(input,SET,FOLLOW_SET_in_ident5758); if (failed) return retval;
+                    	Match(input,SET,FOLLOW_SET_in_ident5762); if (failed) return retval;
                     	if ( backtracking==0 ) stream_SET.Add(i);
 
                     	
@@ -23479,7 +23487,7 @@ public class ASParser : Parser
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:349:4: ( SEMI )
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:349:4: SEMI
         {
-        	Match(input,SEMI,FOLLOW_SEMI_in_synpred5573); if (failed) return ;
+        	Match(input,SEMI,FOLLOW_SEMI_in_synpred5575); if (failed) return ;
         
         }
     }
@@ -23491,7 +23499,7 @@ public class ASParser : Parser
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:646:4: ( LCURLY )
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:646:5: LCURLY
         {
-        	Match(input,LCURLY,FOLLOW_LCURLY_in_synpred361949); if (failed) return ;
+        	Match(input,LCURLY,FOLLOW_LCURLY_in_synpred361953); if (failed) return ;
         
         }
     }
@@ -23503,7 +23511,7 @@ public class ASParser : Parser
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:648:4: ( expressionStatement )
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:648:4: expressionStatement
         {
-        	PushFollow(FOLLOW_expressionStatement_in_synpred381966);
+        	PushFollow(FOLLOW_expressionStatement_in_synpred381970);
         	expressionStatement();
         	followingStackPointer_--;
         	if (failed) return ;
@@ -23518,7 +23526,7 @@ public class ASParser : Parser
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:698:4: ( ELSE )
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:698:5: ELSE
         {
-        	Match(input,ELSE,FOLLOW_ELSE_in_synpred512185); if (failed) return ;
+        	Match(input,ELSE,FOLLOW_ELSE_in_synpred512189); if (failed) return ;
         
         }
     }
@@ -23530,12 +23538,12 @@ public class ASParser : Parser
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:781:4: ( RETURN expression semi )
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:781:4: RETURN expression semi
         {
-        	Match(input,RETURN,FOLLOW_RETURN_in_synpred552368); if (failed) return ;
-        	PushFollow(FOLLOW_expression_in_synpred552373);
+        	Match(input,RETURN,FOLLOW_RETURN_in_synpred552372); if (failed) return ;
+        	PushFollow(FOLLOW_expression_in_synpred552377);
         	expression();
         	followingStackPointer_--;
         	if (failed) return ;
-        	PushFollow(FOLLOW_semi_in_synpred552375);
+        	PushFollow(FOLLOW_semi_in_synpred552379);
         	semi();
         	followingStackPointer_--;
         	if (failed) return ;
@@ -23550,11 +23558,11 @@ public class ASParser : Parser
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:849:4: ( forInClauseDecl IN )
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:849:5: forInClauseDecl IN
         {
-        	PushFollow(FOLLOW_forInClauseDecl_in_synpred592662);
+        	PushFollow(FOLLOW_forInClauseDecl_in_synpred592666);
         	forInClauseDecl();
         	followingStackPointer_--;
         	if (failed) return ;
-        	Match(input,IN,FOLLOW_IN_in_synpred592664); if (failed) return ;
+        	Match(input,IN,FOLLOW_IN_in_synpred592668); if (failed) return ;
         
         }
     }
@@ -23573,7 +23581,7 @@ public class ASParser : Parser
         		{
         		   buffer.Append(NewLine + tab); 
         		}
-        		PushFollow(FOLLOW_annotation_in_synpred743368);
+        		PushFollow(FOLLOW_annotation_in_synpred743372);
         		annotation();
         		followingStackPointer_--;
         		if (failed) return ;
@@ -23598,7 +23606,7 @@ public class ASParser : Parser
         		{
         		   buffer.Append(NewLine + tab); 
         		}
-        		PushFollow(FOLLOW_includeDirective_in_synpred753381);
+        		PushFollow(FOLLOW_includeDirective_in_synpred753385);
         		includeDirective();
         		followingStackPointer_--;
         		if (failed) return ;
@@ -23616,12 +23624,12 @@ public class ASParser : Parser
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1059:3: ( ident ASSIGN constant )
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1059:3: ident ASSIGN constant
         {
-        	PushFollow(FOLLOW_ident_in_synpred793551);
+        	PushFollow(FOLLOW_ident_in_synpred793555);
         	ident();
         	followingStackPointer_--;
         	if (failed) return ;
-        	Match(input,ASSIGN,FOLLOW_ASSIGN_in_synpred793553); if (failed) return ;
-        	PushFollow(FOLLOW_constant_in_synpred793557);
+        	Match(input,ASSIGN,FOLLOW_ASSIGN_in_synpred793557); if (failed) return ;
+        	PushFollow(FOLLOW_constant_in_synpred793561);
         	constant();
         	followingStackPointer_--;
         	if (failed) return ;
@@ -23636,12 +23644,12 @@ public class ASParser : Parser
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1060:4: ( ident ASSIGN ident )
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1060:4: ident ASSIGN ident
         {
-        	PushFollow(FOLLOW_ident_in_synpred803576);
+        	PushFollow(FOLLOW_ident_in_synpred803580);
         	ident();
         	followingStackPointer_--;
         	if (failed) return ;
-        	Match(input,ASSIGN,FOLLOW_ASSIGN_in_synpred803578); if (failed) return ;
-        	PushFollow(FOLLOW_ident_in_synpred803582);
+        	Match(input,ASSIGN,FOLLOW_ASSIGN_in_synpred803582); if (failed) return ;
+        	PushFollow(FOLLOW_ident_in_synpred803586);
         	ident();
         	followingStackPointer_--;
         	if (failed) return ;
@@ -23656,8 +23664,8 @@ public class ASParser : Parser
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1122:4: ( COMMA assignmentExpression )
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1122:4: COMMA assignmentExpression
         {
-        	Match(input,COMMA,FOLLOW_COMMA_in_synpred943868); if (failed) return ;
-        	PushFollow(FOLLOW_assignmentExpression_in_synpred943880);
+        	Match(input,COMMA,FOLLOW_COMMA_in_synpred943872); if (failed) return ;
+        	PushFollow(FOLLOW_assignmentExpression_in_synpred943884);
         	assignmentExpression();
         	followingStackPointer_--;
         	if (failed) return ;
@@ -23672,7 +23680,7 @@ public class ASParser : Parser
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1202:4: ( assignmentOperator )
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1202:5: assignmentOperator
         {
-        	PushFollow(FOLLOW_assignmentOperator_in_synpred1004141);
+        	PushFollow(FOLLOW_assignmentOperator_in_synpred1004145);
         	assignmentOperator();
         	followingStackPointer_--;
         	if (failed) return ;
@@ -23687,7 +23695,7 @@ public class ASParser : Parser
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1323:4: ( relationalOperator )
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1323:5: relationalOperator
         {
-        	PushFollow(FOLLOW_relationalOperator_in_synpred1264587);
+        	PushFollow(FOLLOW_relationalOperator_in_synpred1264591);
         	relationalOperator();
         	followingStackPointer_--;
         	if (failed) return ;
@@ -23702,11 +23710,11 @@ public class ASParser : Parser
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1358:4: ( additiveOperator multiplicativeExpression )
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1358:4: additiveOperator multiplicativeExpression
         {
-        	PushFollow(FOLLOW_additiveOperator_in_synpred1374728);
+        	PushFollow(FOLLOW_additiveOperator_in_synpred1374732);
         	additiveOperator();
         	followingStackPointer_--;
         	if (failed) return ;
-        	PushFollow(FOLLOW_multiplicativeExpression_in_synpred1374738);
+        	PushFollow(FOLLOW_multiplicativeExpression_in_synpred1374742);
         	multiplicativeExpression();
         	followingStackPointer_--;
         	if (failed) return ;
@@ -23721,12 +23729,12 @@ public class ASParser : Parser
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1410:5: ( LBRACK expression RBRACK )
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1410:5: LBRACK expression RBRACK
         {
-        	Match(input,LBRACK,FOLLOW_LBRACK_in_synpred1525057); if (failed) return ;
-        	PushFollow(FOLLOW_expression_in_synpred1525061);
+        	Match(input,LBRACK,FOLLOW_LBRACK_in_synpred1525061); if (failed) return ;
+        	PushFollow(FOLLOW_expression_in_synpred1525065);
         	expression();
         	followingStackPointer_--;
         	if (failed) return ;
-        	Match(input,RBRACK,FOLLOW_RBRACK_in_synpred1525063); if (failed) return ;
+        	Match(input,RBRACK,FOLLOW_RBRACK_in_synpred1525067); if (failed) return ;
         
         }
     }
@@ -23738,7 +23746,7 @@ public class ASParser : Parser
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1411:5: ( arguments )
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1411:5: arguments
         {
-        	PushFollow(FOLLOW_arguments_in_synpred1535082);
+        	PushFollow(FOLLOW_arguments_in_synpred1535086);
         	arguments();
         	followingStackPointer_--;
         	if (failed) return ;
@@ -23753,7 +23761,7 @@ public class ASParser : Parser
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1414:6: ( INC )
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1414:6: INC
         {
-        	Match(input,INC,FOLLOW_INC_in_synpred1545108); if (failed) return ;
+        	Match(input,INC,FOLLOW_INC_in_synpred1545112); if (failed) return ;
         
         }
     }
@@ -23765,7 +23773,7 @@ public class ASParser : Parser
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1415:6: ( DEC )
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1415:6: DEC
         {
-        	Match(input,DEC,FOLLOW_DEC_in_synpred1555129); if (failed) return ;
+        	Match(input,DEC,FOLLOW_DEC_in_synpred1555133); if (failed) return ;
         
         }
     }
@@ -23777,7 +23785,7 @@ public class ASParser : Parser
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1478:4: ( comment )
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1478:4: comment
         {
-        	PushFollow(FOLLOW_comment_in_synpred1725446);
+        	PushFollow(FOLLOW_comment_in_synpred1725450);
         	comment();
         	followingStackPointer_--;
         	if (failed) return ;
@@ -23792,7 +23800,7 @@ public class ASParser : Parser
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1482:27: ( comment )
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1482:27: comment
         {
-        	PushFollow(FOLLOW_comment_in_synpred1735469);
+        	PushFollow(FOLLOW_comment_in_synpred1735473);
         	comment();
         	followingStackPointer_--;
         	if (failed) return ;
@@ -23807,7 +23815,7 @@ public class ASParser : Parser
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1483:27: ( comment )
         // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1483:27: comment
         {
-        	PushFollow(FOLLOW_comment_in_synpred1755489);
+        	PushFollow(FOLLOW_comment_in_synpred1755493);
         	comment();
         	followingStackPointer_--;
         	if (failed) return ;
@@ -24205,447 +24213,447 @@ public class ASParser : Parser
     public static readonly BitSet FOLLOW_as2CompilationUnit_in_compilationUnit437 = new BitSet(new ulong[]{0x0000000000000002UL});
     public static readonly BitSet FOLLOW_importDefinition_in_as2CompilationUnit468 = new BitSet(new ulong[]{0x3400000000000000UL,0x0000006FC0000000UL,0x01F0800018000000UL});
     public static readonly BitSet FOLLOW_annotations_in_as2CompilationUnit474 = new BitSet(new ulong[]{0x3400000000000000UL,0x0000006FC0000000UL,0x01F0800018000000UL});
-    public static readonly BitSet FOLLOW_comments_in_as2CompilationUnit482 = new BitSet(new ulong[]{0x3400000000000000UL,0x0000006FC0000000UL,0x01F0800018000000UL});
-    public static readonly BitSet FOLLOW_as2Type_in_as2CompilationUnit493 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_modifiers_in_as2Type506 = new BitSet(new ulong[]{0x3000000000000000UL});
-    public static readonly BitSet FOLLOW_as2ClassDefinition_in_as2Type512 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_as2InterfaceDefinition_in_as2Type518 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_EOF_in_endOfFile535 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_IMPORT_in_importDefinition547 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_identifierStar_in_importDefinition554 = new BitSet(new ulong[]{0x0800000000000002UL});
-    public static readonly BitSet FOLLOW_semi_in_importDefinition562 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_SEMI_in_semi573 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_CLASS_in_as2ClassDefinition592 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_identifier_in_as2ClassDefinition604 = new BitSet(new ulong[]{0x4000000000000000UL,0x0000000000000003UL});
-    public static readonly BitSet FOLLOW_classExtendsClause_in_as2ClassDefinition610 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000003UL});
-    public static readonly BitSet FOLLOW_implementsClause_in_as2ClassDefinition617 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_typeBlock_in_as2ClassDefinition623 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_INTERFACE_in_interfaceDefinition670 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_ident_in_interfaceDefinition681 = new BitSet(new ulong[]{0x4000000000000000UL,0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_interfaceExtendsClause_in_interfaceDefinition685 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_interfaceTypeBlock_in_interfaceDefinition691 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_INTERFACE_in_as2InterfaceDefinition727 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_identifier_in_as2InterfaceDefinition729 = new BitSet(new ulong[]{0x4000000000000000UL,0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_interfaceExtendsClause_in_as2InterfaceDefinition733 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_interfaceTypeBlock_in_as2InterfaceDefinition737 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_EXTENDS_in_classExtendsClause771 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_identifier_in_classExtendsClause783 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_EXTENDS_in_interfaceExtendsClause806 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_identifier_in_interfaceExtendsClause818 = new BitSet(new ulong[]{0x8000000000000002UL});
-    public static readonly BitSet FOLLOW_COMMA_in_interfaceExtendsClause832 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_identifier_in_interfaceExtendsClause846 = new BitSet(new ulong[]{0x8000000000000002UL});
-    public static readonly BitSet FOLLOW_IMPLEMENTS_in_implementsClause873 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_identifier_in_implementsClause884 = new BitSet(new ulong[]{0x8000000000000002UL});
-    public static readonly BitSet FOLLOW_COMMA_in_implementsClause898 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_identifier_in_implementsClause911 = new BitSet(new ulong[]{0x8000000000000002UL});
-    public static readonly BitSet FOLLOW_LCURLY_in_interfaceTypeBlock937 = new BitSet(new ulong[]{0x0400000000000000UL,0x0000006FC000002CUL,0x01F0800000000000UL});
-    public static readonly BitSet FOLLOW_interfaceTypeBlockEntry_in_interfaceTypeBlock942 = new BitSet(new ulong[]{0x0400000000000000UL,0x0000006FC000002CUL,0x01F0800000000000UL});
-    public static readonly BitSet FOLLOW_RCURLY_in_interfaceTypeBlock948 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LCURLY_in_typeBlock971 = new BitSet(new ulong[]{0x0400000000000000UL,0x0000006FC000032CUL,0x01F0800018000000UL});
-    public static readonly BitSet FOLLOW_typeBlockEntry_in_typeBlock976 = new BitSet(new ulong[]{0x0400000000000000UL,0x0000006FC000032CUL,0x01F0800018000000UL});
-    public static readonly BitSet FOLLOW_RCURLY_in_typeBlock982 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_modifiers_in_interfaceTypeBlockEntry1010 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000020UL});
-    public static readonly BitSet FOLLOW_interfaceMethodDefinition_in_interfaceTypeBlockEntry1021 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_importDefinition_in_interfaceTypeBlockEntry1031 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_as2IncludeDirective_in_interfaceTypeBlockEntry1038 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_annotations_in_interfaceTypeBlockEntry1045 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_modifiers_in_typeBlockEntry1062 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000320UL});
-    public static readonly BitSet FOLLOW_variableDefinition_in_typeBlockEntry1069 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_methodDefinition_in_typeBlockEntry1079 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_importDefinition_in_typeBlockEntry1089 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_as2IncludeDirective_in_typeBlockEntry1096 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_annotations_in_typeBlockEntry1103 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_comments_in_typeBlockEntry1110 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_INCLUDE_DIRECTIVE_in_as2IncludeDirective1123 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000010UL});
-    public static readonly BitSet FOLLOW_STRING_LITERAL_in_as2IncludeDirective1127 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_175_in_includeDirective1150 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000010UL});
-    public static readonly BitSet FOLLOW_STRING_LITERAL_in_includeDirective1152 = new BitSet(new ulong[]{0x0800000000000002UL});
-    public static readonly BitSet FOLLOW_semi_in_includeDirective1154 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_FUNCTION_in_interfaceMethodDefinition1166 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_optionalAccessorRole_in_interfaceMethodDefinition1178 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_ident_in_interfaceMethodDefinition1184 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
-    public static readonly BitSet FOLLOW_parameterDeclarationList_in_interfaceMethodDefinition1194 = new BitSet(new ulong[]{0x0800000000000002UL,0x0000000000100000UL});
-    public static readonly BitSet FOLLOW_typeExpression_in_interfaceMethodDefinition1200 = new BitSet(new ulong[]{0x0800000000000002UL});
-    public static readonly BitSet FOLLOW_semi_in_interfaceMethodDefinition1208 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_FUNCTION_in_methodDefinition1279 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_optionalAccessorRole_in_methodDefinition1291 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_ident_in_methodDefinition1297 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
-    public static readonly BitSet FOLLOW_parameterDeclarationList_in_methodDefinition1315 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000100002UL});
-    public static readonly BitSet FOLLOW_typeExpression_in_methodDefinition1321 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_block_in_methodDefinition1337 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_accessorRole_in_optionalAccessorRole1420 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_GET_in_accessorRole1443 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_SET_in_accessorRole1451 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_varOrConst_in_variableDefinition1482 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_variableDeclarator_in_variableDefinition1491 = new BitSet(new ulong[]{0x8800000000000002UL});
-    public static readonly BitSet FOLLOW_COMMA_in_variableDefinition1511 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_variableDeclarator_in_variableDefinition1522 = new BitSet(new ulong[]{0x8800000000000002UL});
-    public static readonly BitSet FOLLOW_semi_in_variableDefinition1531 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_comments_in_as2CompilationUnit484 = new BitSet(new ulong[]{0x3400000000000000UL,0x0000006FC0000000UL,0x01F0800018000000UL});
+    public static readonly BitSet FOLLOW_as2Type_in_as2CompilationUnit495 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_modifiers_in_as2Type508 = new BitSet(new ulong[]{0x3000000000000000UL});
+    public static readonly BitSet FOLLOW_as2ClassDefinition_in_as2Type514 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_as2InterfaceDefinition_in_as2Type520 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_EOF_in_endOfFile537 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_IMPORT_in_importDefinition549 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_identifierStar_in_importDefinition556 = new BitSet(new ulong[]{0x0800000000000002UL});
+    public static readonly BitSet FOLLOW_semi_in_importDefinition564 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_SEMI_in_semi575 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_CLASS_in_as2ClassDefinition594 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_identifier_in_as2ClassDefinition606 = new BitSet(new ulong[]{0x4000000000000000UL,0x0000000000000003UL});
+    public static readonly BitSet FOLLOW_classExtendsClause_in_as2ClassDefinition612 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000003UL});
+    public static readonly BitSet FOLLOW_implementsClause_in_as2ClassDefinition619 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_typeBlock_in_as2ClassDefinition625 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_INTERFACE_in_interfaceDefinition672 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_ident_in_interfaceDefinition683 = new BitSet(new ulong[]{0x4000000000000000UL,0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_interfaceExtendsClause_in_interfaceDefinition687 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_interfaceTypeBlock_in_interfaceDefinition693 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_INTERFACE_in_as2InterfaceDefinition729 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_identifier_in_as2InterfaceDefinition731 = new BitSet(new ulong[]{0x4000000000000000UL,0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_interfaceExtendsClause_in_as2InterfaceDefinition735 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_interfaceTypeBlock_in_as2InterfaceDefinition739 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_EXTENDS_in_classExtendsClause773 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_identifier_in_classExtendsClause785 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_EXTENDS_in_interfaceExtendsClause808 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_identifier_in_interfaceExtendsClause820 = new BitSet(new ulong[]{0x8000000000000002UL});
+    public static readonly BitSet FOLLOW_COMMA_in_interfaceExtendsClause834 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_identifier_in_interfaceExtendsClause848 = new BitSet(new ulong[]{0x8000000000000002UL});
+    public static readonly BitSet FOLLOW_IMPLEMENTS_in_implementsClause875 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_identifier_in_implementsClause886 = new BitSet(new ulong[]{0x8000000000000002UL});
+    public static readonly BitSet FOLLOW_COMMA_in_implementsClause900 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_identifier_in_implementsClause913 = new BitSet(new ulong[]{0x8000000000000002UL});
+    public static readonly BitSet FOLLOW_LCURLY_in_interfaceTypeBlock939 = new BitSet(new ulong[]{0x0400000000000000UL,0x0000006FC000002CUL,0x01F0800000000000UL});
+    public static readonly BitSet FOLLOW_interfaceTypeBlockEntry_in_interfaceTypeBlock944 = new BitSet(new ulong[]{0x0400000000000000UL,0x0000006FC000002CUL,0x01F0800000000000UL});
+    public static readonly BitSet FOLLOW_RCURLY_in_interfaceTypeBlock950 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LCURLY_in_typeBlock973 = new BitSet(new ulong[]{0x0400000000000000UL,0x0000006FC000032CUL,0x01F0800018000000UL});
+    public static readonly BitSet FOLLOW_typeBlockEntry_in_typeBlock978 = new BitSet(new ulong[]{0x0400000000000000UL,0x0000006FC000032CUL,0x01F0800018000000UL});
+    public static readonly BitSet FOLLOW_RCURLY_in_typeBlock984 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_modifiers_in_interfaceTypeBlockEntry1012 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000020UL});
+    public static readonly BitSet FOLLOW_interfaceMethodDefinition_in_interfaceTypeBlockEntry1023 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_importDefinition_in_interfaceTypeBlockEntry1033 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_as2IncludeDirective_in_interfaceTypeBlockEntry1040 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_annotations_in_interfaceTypeBlockEntry1047 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_modifiers_in_typeBlockEntry1064 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000320UL});
+    public static readonly BitSet FOLLOW_variableDefinition_in_typeBlockEntry1071 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_methodDefinition_in_typeBlockEntry1081 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_importDefinition_in_typeBlockEntry1091 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_as2IncludeDirective_in_typeBlockEntry1098 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_annotations_in_typeBlockEntry1105 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_comments_in_typeBlockEntry1114 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_INCLUDE_DIRECTIVE_in_as2IncludeDirective1127 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000010UL});
+    public static readonly BitSet FOLLOW_STRING_LITERAL_in_as2IncludeDirective1131 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_175_in_includeDirective1154 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000010UL});
+    public static readonly BitSet FOLLOW_STRING_LITERAL_in_includeDirective1156 = new BitSet(new ulong[]{0x0800000000000002UL});
+    public static readonly BitSet FOLLOW_semi_in_includeDirective1158 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_FUNCTION_in_interfaceMethodDefinition1170 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_optionalAccessorRole_in_interfaceMethodDefinition1182 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_ident_in_interfaceMethodDefinition1188 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
+    public static readonly BitSet FOLLOW_parameterDeclarationList_in_interfaceMethodDefinition1198 = new BitSet(new ulong[]{0x0800000000000002UL,0x0000000000100000UL});
+    public static readonly BitSet FOLLOW_typeExpression_in_interfaceMethodDefinition1204 = new BitSet(new ulong[]{0x0800000000000002UL});
+    public static readonly BitSet FOLLOW_semi_in_interfaceMethodDefinition1212 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_FUNCTION_in_methodDefinition1283 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_optionalAccessorRole_in_methodDefinition1295 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_ident_in_methodDefinition1301 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
+    public static readonly BitSet FOLLOW_parameterDeclarationList_in_methodDefinition1319 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000100002UL});
+    public static readonly BitSet FOLLOW_typeExpression_in_methodDefinition1325 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_block_in_methodDefinition1341 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_accessorRole_in_optionalAccessorRole1424 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_GET_in_accessorRole1447 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_SET_in_accessorRole1455 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_varOrConst_in_variableDefinition1486 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_variableDeclarator_in_variableDefinition1495 = new BitSet(new ulong[]{0x8800000000000002UL});
+    public static readonly BitSet FOLLOW_COMMA_in_variableDefinition1515 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_variableDeclarator_in_variableDefinition1526 = new BitSet(new ulong[]{0x8800000000000002UL});
+    public static readonly BitSet FOLLOW_semi_in_variableDefinition1535 = new BitSet(new ulong[]{0x0000000000000002UL});
     public static readonly BitSet FOLLOW_set_in_varOrConst0 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ident_in_variableDeclarator1575 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000100400UL});
-    public static readonly BitSet FOLLOW_typeExpression_in_variableDeclarator1588 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000400UL});
-    public static readonly BitSet FOLLOW_variableInitializer_in_variableDeclarator1595 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_varOrConst_in_declaration1610 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_variableDeclarator_in_declaration1620 = new BitSet(new ulong[]{0x8000000000000002UL});
-    public static readonly BitSet FOLLOW_declarationTail_in_declaration1624 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_COMMA_in_declarationTail1650 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_variableDeclarator_in_declarationTail1658 = new BitSet(new ulong[]{0x8000000000000002UL});
-    public static readonly BitSet FOLLOW_ASSIGN_in_variableInitializer1674 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_assignmentExpression_in_variableInitializer1684 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LPAREN_in_parameterDeclarationList1697 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400012C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_parameterDeclaration_in_parameterDeclarationList1707 = new BitSet(new ulong[]{0x8000000000000000UL,0x0000000000001000UL});
-    public static readonly BitSet FOLLOW_COMMA_in_parameterDeclarationList1718 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400002C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_parameterDeclaration_in_parameterDeclarationList1727 = new BitSet(new ulong[]{0x8000000000000000UL,0x0000000000001000UL});
-    public static readonly BitSet FOLLOW_RPAREN_in_parameterDeclarationList1742 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_basicParameterDeclaration_in_parameterDeclaration1769 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_CONST_in_basicParameterDeclaration1780 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_ident_in_basicParameterDeclaration1788 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000100400UL});
-    public static readonly BitSet FOLLOW_typeExpression_in_basicParameterDeclaration1800 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000400UL});
-    public static readonly BitSet FOLLOW_parameterDefault_in_basicParameterDeclaration1807 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ASSIGN_in_parameterDefault1851 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_assignmentExpression_in_parameterDefault1854 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LCURLY_in_block1865 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF6UL,0x000300007FFFF30CUL});
-    public static readonly BitSet FOLLOW_blockEntry_in_block1869 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF6UL,0x000300007FFFF30CUL});
-    public static readonly BitSet FOLLOW_RCURLY_in_block1875 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_statement_in_blockEntry1899 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LPAREN_in_condition1910 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_expression_in_condition1918 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000001000UL});
-    public static readonly BitSet FOLLOW_RPAREN_in_condition1923 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_block_in_statement1953 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_declarationStatement_in_statement1958 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_expressionStatement_in_statement1966 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ifStatement_in_statement1975 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_forStatement_in_statement1980 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_whileStatement_in_statement1985 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_doWhileStatement_in_statement1990 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_withStatement_in_statement1995 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_switchStatement_in_statement2000 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_breakStatement_in_statement2005 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_continueStatement_in_statement2015 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_returnStatement_in_statement2024 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_throwStatement_in_statement2034 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_tryStatement_in_statement2044 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_SEMI_in_statement2049 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_comments_in_statement2057 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_declaration_in_declarationStatement2084 = new BitSet(new ulong[]{0x0800000000000002UL});
-    public static readonly BitSet FOLLOW_semi_in_declarationStatement2089 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_expressionList_in_expressionStatement2110 = new BitSet(new ulong[]{0x0800000000000002UL});
-    public static readonly BitSet FOLLOW_semi_in_expressionStatement2112 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_IF_in_ifStatement2134 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
-    public static readonly BitSet FOLLOW_condition_in_ifStatement2146 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
-    public static readonly BitSet FOLLOW_statement_in_ifStatement2165 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000004000UL});
-    public static readonly BitSet FOLLOW_elseClause_in_ifStatement2188 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ELSE_in_elseClause2208 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
-    public static readonly BitSet FOLLOW_statement_in_elseClause2219 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_176_in_throwStatement2235 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_expression_in_throwStatement2240 = new BitSet(new ulong[]{0x0800000000000002UL});
-    public static readonly BitSet FOLLOW_semi_in_throwStatement2242 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_177_in_tryStatement2253 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_block_in_tryStatement2261 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x000C000000000000UL});
-    public static readonly BitSet FOLLOW_catchBlock_in_tryStatement2274 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x000C000000000000UL});
-    public static readonly BitSet FOLLOW_finallyBlock_in_tryStatement2284 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_178_in_catchBlock2297 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
-    public static readonly BitSet FOLLOW_LPAREN_in_catchBlock2304 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_ident_in_catchBlock2314 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000101000UL});
-    public static readonly BitSet FOLLOW_typeExpression_in_catchBlock2320 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000001000UL});
-    public static readonly BitSet FOLLOW_RPAREN_in_catchBlock2326 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_block_in_catchBlock2334 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_179_in_finallyBlock2348 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_block_in_finallyBlock2354 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_RETURN_in_returnStatement2368 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_expression_in_returnStatement2373 = new BitSet(new ulong[]{0x0800000000000002UL});
-    public static readonly BitSet FOLLOW_semi_in_returnStatement2375 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_RETURN_in_returnStatement2380 = new BitSet(new ulong[]{0x0800000000000002UL});
-    public static readonly BitSet FOLLOW_semi_in_returnStatement2383 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_CONTINUE_in_continueStatement2398 = new BitSet(new ulong[]{0x0800000000000002UL});
-    public static readonly BitSet FOLLOW_semi_in_continueStatement2401 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_BREAK_in_breakStatement2414 = new BitSet(new ulong[]{0x0800000000000002UL});
-    public static readonly BitSet FOLLOW_semi_in_breakStatement2417 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_SWITCH_in_switchStatement2431 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
-    public static readonly BitSet FOLLOW_condition_in_switchStatement2440 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_switchBlock_in_switchStatement2445 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LCURLY_in_switchBlock2456 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000280004UL});
-    public static readonly BitSet FOLLOW_caseStatement_in_switchBlock2473 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000280004UL});
-    public static readonly BitSet FOLLOW_defaultStatement_in_switchBlock2483 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000004UL});
-    public static readonly BitSet FOLLOW_RCURLY_in_switchBlock2489 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_CASE_in_caseStatement2523 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_expression_in_caseStatement2532 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000100000UL});
-    public static readonly BitSet FOLLOW_COLON_in_caseStatement2537 = new BitSet(new ulong[]{0x0800000000000002UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
-    public static readonly BitSet FOLLOW_switchStatementList_in_caseStatement2547 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_DEFAULT_in_defaultStatement2566 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000100000UL});
-    public static readonly BitSet FOLLOW_COLON_in_defaultStatement2573 = new BitSet(new ulong[]{0x0800000000000002UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
-    public static readonly BitSet FOLLOW_switchStatementList_in_defaultStatement2583 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_statement_in_switchStatementList2605 = new BitSet(new ulong[]{0x0800000000000002UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
-    public static readonly BitSet FOLLOW_FOR_in_forStatement2639 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
-    public static readonly BitSet FOLLOW_LPAREN_in_forStatement2647 = new BitSet(new ulong[]{0x0800000000000000UL,0x0000004848000BF2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_forInClause_in_forStatement2667 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000001000UL});
-    public static readonly BitSet FOLLOW_RPAREN_in_forStatement2673 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
-    public static readonly BitSet FOLLOW_statement_in_forStatement2686 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_traditionalForClause_in_forStatement2715 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000001000UL});
-    public static readonly BitSet FOLLOW_RPAREN_in_forStatement2717 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
-    public static readonly BitSet FOLLOW_statement_in_forStatement2726 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_forInit_in_traditionalForClause2763 = new BitSet(new ulong[]{0x0800000000000000UL});
-    public static readonly BitSet FOLLOW_SEMI_in_traditionalForClause2765 = new BitSet(new ulong[]{0x0800000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_forCond_in_traditionalForClause2775 = new BitSet(new ulong[]{0x0800000000000000UL});
-    public static readonly BitSet FOLLOW_SEMI_in_traditionalForClause2777 = new BitSet(new ulong[]{0x0000000000000002UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_forIter_in_traditionalForClause2787 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_forInClauseDecl_in_forInClause2799 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000800000UL});
-    public static readonly BitSet FOLLOW_IN_in_forInClause2801 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_forInClauseTail_in_forInClause2806 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_declaration_in_forInClauseDecl2827 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ident_in_forInClauseDecl2835 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_expressionList_in_forInClauseTail2861 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_declaration_in_forInit2885 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_expressionList_in_forInit2889 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_expressionList_in_forCond2927 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_expressionList_in_forIter2960 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_WHILE_in_whileStatement2983 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
-    public static readonly BitSet FOLLOW_condition_in_whileStatement2992 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
-    public static readonly BitSet FOLLOW_statement_in_whileStatement3000 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_DO_in_doWhileStatement3015 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
-    public static readonly BitSet FOLLOW_statement_in_doWhileStatement3025 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000001000000UL});
-    public static readonly BitSet FOLLOW_WHILE_in_doWhileStatement3032 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
-    public static readonly BitSet FOLLOW_condition_in_doWhileStatement3042 = new BitSet(new ulong[]{0x0800000000000002UL});
-    public static readonly BitSet FOLLOW_semi_in_doWhileStatement3048 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_WITH_in_withStatement3059 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
-    public static readonly BitSet FOLLOW_condition_in_withStatement3068 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
-    public static readonly BitSet FOLLOW_statement_in_withStatement3076 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_COLON_in_typeExpression3096 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040580000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_identifier_in_typeExpression3109 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_VOID_in_typeExpression3117 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_STAR_in_typeExpression3127 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_qualifiedIdent_in_identifier3165 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000020000000UL});
-    public static readonly BitSet FOLLOW_DOT_in_identifier3189 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_qualifiedIdent_in_identifier3193 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000020000000UL});
-    public static readonly BitSet FOLLOW_ident_in_qualifiedIdent3222 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_IDENT_in_namespaceName3236 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_reservedNamespace_in_namespaceName3240 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ident_in_variableDeclarator1579 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000100400UL});
+    public static readonly BitSet FOLLOW_typeExpression_in_variableDeclarator1592 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000400UL});
+    public static readonly BitSet FOLLOW_variableInitializer_in_variableDeclarator1599 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_varOrConst_in_declaration1614 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_variableDeclarator_in_declaration1624 = new BitSet(new ulong[]{0x8000000000000002UL});
+    public static readonly BitSet FOLLOW_declarationTail_in_declaration1628 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_COMMA_in_declarationTail1654 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_variableDeclarator_in_declarationTail1662 = new BitSet(new ulong[]{0x8000000000000002UL});
+    public static readonly BitSet FOLLOW_ASSIGN_in_variableInitializer1678 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_assignmentExpression_in_variableInitializer1688 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LPAREN_in_parameterDeclarationList1701 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400012C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_parameterDeclaration_in_parameterDeclarationList1711 = new BitSet(new ulong[]{0x8000000000000000UL,0x0000000000001000UL});
+    public static readonly BitSet FOLLOW_COMMA_in_parameterDeclarationList1722 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400002C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_parameterDeclaration_in_parameterDeclarationList1731 = new BitSet(new ulong[]{0x8000000000000000UL,0x0000000000001000UL});
+    public static readonly BitSet FOLLOW_RPAREN_in_parameterDeclarationList1746 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_basicParameterDeclaration_in_parameterDeclaration1773 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_CONST_in_basicParameterDeclaration1784 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_ident_in_basicParameterDeclaration1792 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000100400UL});
+    public static readonly BitSet FOLLOW_typeExpression_in_basicParameterDeclaration1804 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000400UL});
+    public static readonly BitSet FOLLOW_parameterDefault_in_basicParameterDeclaration1811 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ASSIGN_in_parameterDefault1855 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_assignmentExpression_in_parameterDefault1858 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LCURLY_in_block1869 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF6UL,0x000300007FFFF30CUL});
+    public static readonly BitSet FOLLOW_blockEntry_in_block1873 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF6UL,0x000300007FFFF30CUL});
+    public static readonly BitSet FOLLOW_RCURLY_in_block1879 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_statement_in_blockEntry1903 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LPAREN_in_condition1914 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_expression_in_condition1922 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000001000UL});
+    public static readonly BitSet FOLLOW_RPAREN_in_condition1927 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_block_in_statement1957 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_declarationStatement_in_statement1962 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_expressionStatement_in_statement1970 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ifStatement_in_statement1979 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_forStatement_in_statement1984 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_whileStatement_in_statement1989 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_doWhileStatement_in_statement1994 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_withStatement_in_statement1999 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_switchStatement_in_statement2004 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_breakStatement_in_statement2009 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_continueStatement_in_statement2019 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_returnStatement_in_statement2028 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_throwStatement_in_statement2038 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_tryStatement_in_statement2048 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_SEMI_in_statement2053 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_comments_in_statement2061 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_declaration_in_declarationStatement2088 = new BitSet(new ulong[]{0x0800000000000002UL});
+    public static readonly BitSet FOLLOW_semi_in_declarationStatement2093 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_expressionList_in_expressionStatement2114 = new BitSet(new ulong[]{0x0800000000000002UL});
+    public static readonly BitSet FOLLOW_semi_in_expressionStatement2116 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_IF_in_ifStatement2138 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
+    public static readonly BitSet FOLLOW_condition_in_ifStatement2150 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
+    public static readonly BitSet FOLLOW_statement_in_ifStatement2169 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000004000UL});
+    public static readonly BitSet FOLLOW_elseClause_in_ifStatement2192 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ELSE_in_elseClause2212 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
+    public static readonly BitSet FOLLOW_statement_in_elseClause2223 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_176_in_throwStatement2239 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_expression_in_throwStatement2244 = new BitSet(new ulong[]{0x0800000000000002UL});
+    public static readonly BitSet FOLLOW_semi_in_throwStatement2246 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_177_in_tryStatement2257 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_block_in_tryStatement2265 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x000C000000000000UL});
+    public static readonly BitSet FOLLOW_catchBlock_in_tryStatement2278 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x000C000000000000UL});
+    public static readonly BitSet FOLLOW_finallyBlock_in_tryStatement2288 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_178_in_catchBlock2301 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
+    public static readonly BitSet FOLLOW_LPAREN_in_catchBlock2308 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_ident_in_catchBlock2318 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000101000UL});
+    public static readonly BitSet FOLLOW_typeExpression_in_catchBlock2324 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000001000UL});
+    public static readonly BitSet FOLLOW_RPAREN_in_catchBlock2330 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_block_in_catchBlock2338 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_179_in_finallyBlock2352 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_block_in_finallyBlock2358 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_RETURN_in_returnStatement2372 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_expression_in_returnStatement2377 = new BitSet(new ulong[]{0x0800000000000002UL});
+    public static readonly BitSet FOLLOW_semi_in_returnStatement2379 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_RETURN_in_returnStatement2384 = new BitSet(new ulong[]{0x0800000000000002UL});
+    public static readonly BitSet FOLLOW_semi_in_returnStatement2387 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_CONTINUE_in_continueStatement2402 = new BitSet(new ulong[]{0x0800000000000002UL});
+    public static readonly BitSet FOLLOW_semi_in_continueStatement2405 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_BREAK_in_breakStatement2418 = new BitSet(new ulong[]{0x0800000000000002UL});
+    public static readonly BitSet FOLLOW_semi_in_breakStatement2421 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_SWITCH_in_switchStatement2435 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
+    public static readonly BitSet FOLLOW_condition_in_switchStatement2444 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_switchBlock_in_switchStatement2449 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LCURLY_in_switchBlock2460 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000280004UL});
+    public static readonly BitSet FOLLOW_caseStatement_in_switchBlock2477 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000280004UL});
+    public static readonly BitSet FOLLOW_defaultStatement_in_switchBlock2487 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000004UL});
+    public static readonly BitSet FOLLOW_RCURLY_in_switchBlock2493 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_CASE_in_caseStatement2527 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_expression_in_caseStatement2536 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000100000UL});
+    public static readonly BitSet FOLLOW_COLON_in_caseStatement2541 = new BitSet(new ulong[]{0x0800000000000002UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
+    public static readonly BitSet FOLLOW_switchStatementList_in_caseStatement2551 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_DEFAULT_in_defaultStatement2570 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000100000UL});
+    public static readonly BitSet FOLLOW_COLON_in_defaultStatement2577 = new BitSet(new ulong[]{0x0800000000000002UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
+    public static readonly BitSet FOLLOW_switchStatementList_in_defaultStatement2587 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_statement_in_switchStatementList2609 = new BitSet(new ulong[]{0x0800000000000002UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
+    public static readonly BitSet FOLLOW_FOR_in_forStatement2643 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
+    public static readonly BitSet FOLLOW_LPAREN_in_forStatement2651 = new BitSet(new ulong[]{0x0800000000000000UL,0x0000004848000BF2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_forInClause_in_forStatement2671 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000001000UL});
+    public static readonly BitSet FOLLOW_RPAREN_in_forStatement2677 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
+    public static readonly BitSet FOLLOW_statement_in_forStatement2690 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_traditionalForClause_in_forStatement2719 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000001000UL});
+    public static readonly BitSet FOLLOW_RPAREN_in_forStatement2721 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
+    public static readonly BitSet FOLLOW_statement_in_forStatement2730 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_forInit_in_traditionalForClause2767 = new BitSet(new ulong[]{0x0800000000000000UL});
+    public static readonly BitSet FOLLOW_SEMI_in_traditionalForClause2769 = new BitSet(new ulong[]{0x0800000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_forCond_in_traditionalForClause2779 = new BitSet(new ulong[]{0x0800000000000000UL});
+    public static readonly BitSet FOLLOW_SEMI_in_traditionalForClause2781 = new BitSet(new ulong[]{0x0000000000000002UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_forIter_in_traditionalForClause2791 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_forInClauseDecl_in_forInClause2803 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000800000UL});
+    public static readonly BitSet FOLLOW_IN_in_forInClause2805 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_forInClauseTail_in_forInClause2810 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_declaration_in_forInClauseDecl2831 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ident_in_forInClauseDecl2839 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_expressionList_in_forInClauseTail2865 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_declaration_in_forInit2889 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_expressionList_in_forInit2893 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_expressionList_in_forCond2931 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_expressionList_in_forIter2964 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_WHILE_in_whileStatement2987 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
+    public static readonly BitSet FOLLOW_condition_in_whileStatement2996 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
+    public static readonly BitSet FOLLOW_statement_in_whileStatement3004 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_DO_in_doWhileStatement3019 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
+    public static readonly BitSet FOLLOW_statement_in_doWhileStatement3029 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000001000000UL});
+    public static readonly BitSet FOLLOW_WHILE_in_doWhileStatement3036 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
+    public static readonly BitSet FOLLOW_condition_in_doWhileStatement3046 = new BitSet(new ulong[]{0x0800000000000002UL});
+    public static readonly BitSet FOLLOW_semi_in_doWhileStatement3052 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_WITH_in_withStatement3063 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
+    public static readonly BitSet FOLLOW_condition_in_withStatement3072 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
+    public static readonly BitSet FOLLOW_statement_in_withStatement3080 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_COLON_in_typeExpression3100 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040580000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_identifier_in_typeExpression3113 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_VOID_in_typeExpression3121 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_STAR_in_typeExpression3131 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_qualifiedIdent_in_identifier3169 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000020000000UL});
+    public static readonly BitSet FOLLOW_DOT_in_identifier3193 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_qualifiedIdent_in_identifier3197 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000020000000UL});
+    public static readonly BitSet FOLLOW_ident_in_qualifiedIdent3226 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_IDENT_in_namespaceName3240 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_reservedNamespace_in_namespaceName3244 = new BitSet(new ulong[]{0x0000000000000002UL});
     public static readonly BitSet FOLLOW_set_in_reservedNamespace0 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ident_in_identifierStar3279 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000020000000UL});
-    public static readonly BitSet FOLLOW_DOT_in_identifierStar3301 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_ident_in_identifierStar3305 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000020000000UL});
-    public static readonly BitSet FOLLOW_DOT_in_identifierStar3320 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000010000000UL});
-    public static readonly BitSet FOLLOW_STAR_in_identifierStar3322 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_annotation_in_annotations3368 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000800000000UL,0x0000800000000000UL});
-    public static readonly BitSet FOLLOW_includeDirective_in_annotations3381 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000800000000UL,0x0000800000000000UL});
-    public static readonly BitSet FOLLOW_LBRACK_in_annotation3410 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_ident_in_annotation3422 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000001000000800UL});
-    public static readonly BitSet FOLLOW_annotationParamList_in_annotation3431 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000001000000000UL});
-    public static readonly BitSet FOLLOW_RBRACK_in_annotation3436 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LPAREN_in_annotationParamList3468 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400010D0UL,0x0000000063F8000CUL});
-    public static readonly BitSet FOLLOW_annotationParam_in_annotationParamList3481 = new BitSet(new ulong[]{0x8000000000000000UL,0x0000000000001000UL});
-    public static readonly BitSet FOLLOW_COMMA_in_annotationParamList3492 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000D0UL,0x0000000063F8000CUL});
-    public static readonly BitSet FOLLOW_annotationParam_in_annotationParamList3503 = new BitSet(new ulong[]{0x8000000000000000UL,0x0000000000001000UL});
-    public static readonly BitSet FOLLOW_RPAREN_in_annotationParamList3518 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ident_in_annotationParam3551 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000400UL});
-    public static readonly BitSet FOLLOW_ASSIGN_in_annotationParam3553 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000010UL,0x0000000003F80000UL});
-    public static readonly BitSet FOLLOW_constant_in_annotationParam3557 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ident_in_annotationParam3576 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000400UL});
-    public static readonly BitSet FOLLOW_ASSIGN_in_annotationParam3578 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_ident_in_annotationParam3582 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_constant_in_annotationParam3601 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ident_in_annotationParam3614 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_modifier_in_modifiers3634 = new BitSet(new ulong[]{0x0000000000000002UL,0x00000067C0000000UL,0x01F0000000000000UL});
-    public static readonly BitSet FOLLOW_namespaceName_in_modifier3657 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_STATIC_in_modifier3662 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_180_in_modifier3667 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_181_in_modifier3672 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_182_in_modifier3677 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_183_in_modifier3682 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_DYNAMIC_in_modifier3687 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_184_in_modifier3692 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LPAREN_in_arguments3713 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_expressionList_in_arguments3717 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000001000UL});
-    public static readonly BitSet FOLLOW_RPAREN_in_arguments3719 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LPAREN_in_arguments3726 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000001000UL});
-    public static readonly BitSet FOLLOW_RPAREN_in_arguments3728 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_assignmentExpression_in_element3754 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LBRACK_in_arrayLiteral3776 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000058480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_elementList_in_arrayLiteral3780 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000001000000000UL});
-    public static readonly BitSet FOLLOW_RBRACK_in_arrayLiteral3783 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_nonemptyElementList_in_elementList3807 = new BitSet(new ulong[]{0x8000000000000002UL});
-    public static readonly BitSet FOLLOW_COMMA_in_elementList3817 = new BitSet(new ulong[]{0x0000000000000002UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_nonemptyElementList_in_elementList3830 = new BitSet(new ulong[]{0x8000000000000002UL});
-    public static readonly BitSet FOLLOW_assignmentExpression_in_nonemptyElementList3858 = new BitSet(new ulong[]{0x8000000000000002UL});
-    public static readonly BitSet FOLLOW_COMMA_in_nonemptyElementList3868 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_assignmentExpression_in_nonemptyElementList3880 = new BitSet(new ulong[]{0x8000000000000002UL});
-    public static readonly BitSet FOLLOW_LCURLY_in_objectLiteral3902 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C4UL,0x0000000063C0000CUL});
-    public static readonly BitSet FOLLOW_fieldList_in_objectLiteral3911 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000004UL});
-    public static readonly BitSet FOLLOW_RCURLY_in_objectLiteral3917 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_literalField_in_fieldList3944 = new BitSet(new ulong[]{0x8000000000000002UL});
-    public static readonly BitSet FOLLOW_COMMA_in_fieldList3954 = new BitSet(new ulong[]{0x0000000000000002UL,0x00000040400000C0UL,0x0000000063C0000CUL});
-    public static readonly BitSet FOLLOW_literalField_in_fieldList3968 = new BitSet(new ulong[]{0x8000000000000002UL});
-    public static readonly BitSet FOLLOW_fieldName_in_literalField3990 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000100000UL});
-    public static readonly BitSet FOLLOW_COLON_in_literalField3995 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_element_in_literalField4003 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ident_in_fieldName4029 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_number_in_fieldName4039 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_assignmentExpression_in_expression4064 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_assignmentExpression_in_expressionList4076 = new BitSet(new ulong[]{0x8000000000000002UL});
-    public static readonly BitSet FOLLOW_COMMA_in_expressionList4086 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_assignmentExpression_in_expressionList4098 = new BitSet(new ulong[]{0x8000000000000002UL});
-    public static readonly BitSet FOLLOW_conditionalExpression_in_assignmentExpression4132 = new BitSet(new ulong[]{0x0000000000000002UL,0x000FFF8000000400UL});
-    public static readonly BitSet FOLLOW_assignmentOperator_in_assignmentExpression4147 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_assignmentExpression_in_assignmentExpression4167 = new BitSet(new ulong[]{0x0000000000000002UL,0x000FFF8000000400UL});
+    public static readonly BitSet FOLLOW_ident_in_identifierStar3283 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000020000000UL});
+    public static readonly BitSet FOLLOW_DOT_in_identifierStar3305 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_ident_in_identifierStar3309 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000020000000UL});
+    public static readonly BitSet FOLLOW_DOT_in_identifierStar3324 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000010000000UL});
+    public static readonly BitSet FOLLOW_STAR_in_identifierStar3326 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_annotation_in_annotations3372 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000800000000UL,0x0000800000000000UL});
+    public static readonly BitSet FOLLOW_includeDirective_in_annotations3385 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000800000000UL,0x0000800000000000UL});
+    public static readonly BitSet FOLLOW_LBRACK_in_annotation3414 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_ident_in_annotation3426 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000001000000800UL});
+    public static readonly BitSet FOLLOW_annotationParamList_in_annotation3435 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000001000000000UL});
+    public static readonly BitSet FOLLOW_RBRACK_in_annotation3440 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LPAREN_in_annotationParamList3472 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400010D0UL,0x0000000063F8000CUL});
+    public static readonly BitSet FOLLOW_annotationParam_in_annotationParamList3485 = new BitSet(new ulong[]{0x8000000000000000UL,0x0000000000001000UL});
+    public static readonly BitSet FOLLOW_COMMA_in_annotationParamList3496 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000D0UL,0x0000000063F8000CUL});
+    public static readonly BitSet FOLLOW_annotationParam_in_annotationParamList3507 = new BitSet(new ulong[]{0x8000000000000000UL,0x0000000000001000UL});
+    public static readonly BitSet FOLLOW_RPAREN_in_annotationParamList3522 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ident_in_annotationParam3555 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000400UL});
+    public static readonly BitSet FOLLOW_ASSIGN_in_annotationParam3557 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000010UL,0x0000000003F80000UL});
+    public static readonly BitSet FOLLOW_constant_in_annotationParam3561 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ident_in_annotationParam3580 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000400UL});
+    public static readonly BitSet FOLLOW_ASSIGN_in_annotationParam3582 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_ident_in_annotationParam3586 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_constant_in_annotationParam3605 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ident_in_annotationParam3618 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_modifier_in_modifiers3638 = new BitSet(new ulong[]{0x0000000000000002UL,0x00000067C0000000UL,0x01F0000000000000UL});
+    public static readonly BitSet FOLLOW_namespaceName_in_modifier3661 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_STATIC_in_modifier3666 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_180_in_modifier3671 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_181_in_modifier3676 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_182_in_modifier3681 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_183_in_modifier3686 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_DYNAMIC_in_modifier3691 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_184_in_modifier3696 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LPAREN_in_arguments3717 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_expressionList_in_arguments3721 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000001000UL});
+    public static readonly BitSet FOLLOW_RPAREN_in_arguments3723 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LPAREN_in_arguments3730 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000001000UL});
+    public static readonly BitSet FOLLOW_RPAREN_in_arguments3732 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_assignmentExpression_in_element3758 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LBRACK_in_arrayLiteral3780 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000058480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_elementList_in_arrayLiteral3784 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000001000000000UL});
+    public static readonly BitSet FOLLOW_RBRACK_in_arrayLiteral3787 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_nonemptyElementList_in_elementList3811 = new BitSet(new ulong[]{0x8000000000000002UL});
+    public static readonly BitSet FOLLOW_COMMA_in_elementList3821 = new BitSet(new ulong[]{0x0000000000000002UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_nonemptyElementList_in_elementList3834 = new BitSet(new ulong[]{0x8000000000000002UL});
+    public static readonly BitSet FOLLOW_assignmentExpression_in_nonemptyElementList3862 = new BitSet(new ulong[]{0x8000000000000002UL});
+    public static readonly BitSet FOLLOW_COMMA_in_nonemptyElementList3872 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_assignmentExpression_in_nonemptyElementList3884 = new BitSet(new ulong[]{0x8000000000000002UL});
+    public static readonly BitSet FOLLOW_LCURLY_in_objectLiteral3906 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C4UL,0x0000000063C0000CUL});
+    public static readonly BitSet FOLLOW_fieldList_in_objectLiteral3915 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000004UL});
+    public static readonly BitSet FOLLOW_RCURLY_in_objectLiteral3921 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_literalField_in_fieldList3948 = new BitSet(new ulong[]{0x8000000000000002UL});
+    public static readonly BitSet FOLLOW_COMMA_in_fieldList3958 = new BitSet(new ulong[]{0x0000000000000002UL,0x00000040400000C0UL,0x0000000063C0000CUL});
+    public static readonly BitSet FOLLOW_literalField_in_fieldList3972 = new BitSet(new ulong[]{0x8000000000000002UL});
+    public static readonly BitSet FOLLOW_fieldName_in_literalField3994 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000100000UL});
+    public static readonly BitSet FOLLOW_COLON_in_literalField3999 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_element_in_literalField4007 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ident_in_fieldName4033 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_number_in_fieldName4043 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_assignmentExpression_in_expression4068 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_assignmentExpression_in_expressionList4080 = new BitSet(new ulong[]{0x8000000000000002UL});
+    public static readonly BitSet FOLLOW_COMMA_in_expressionList4090 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_assignmentExpression_in_expressionList4102 = new BitSet(new ulong[]{0x8000000000000002UL});
+    public static readonly BitSet FOLLOW_conditionalExpression_in_assignmentExpression4136 = new BitSet(new ulong[]{0x0000000000000002UL,0x000FFF8000000400UL});
+    public static readonly BitSet FOLLOW_assignmentOperator_in_assignmentExpression4151 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_assignmentExpression_in_assignmentExpression4171 = new BitSet(new ulong[]{0x0000000000000002UL,0x000FFF8000000400UL});
     public static readonly BitSet FOLLOW_set_in_assignmentOperator0 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_logicalOrExpression_in_conditionalExpression4261 = new BitSet(new ulong[]{0x0000000000000002UL,0x0010000000000000UL});
-    public static readonly BitSet FOLLOW_QUESTION_in_conditionalExpression4275 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_conditionalSubExpression_in_conditionalExpression4282 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_assignmentExpression_in_conditionalSubExpression4311 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000100000UL});
-    public static readonly BitSet FOLLOW_COLON_in_conditionalSubExpression4316 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_assignmentExpression_in_conditionalSubExpression4325 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_logicalAndExpression_in_logicalOrExpression4339 = new BitSet(new ulong[]{0x0000000000000002UL,0x0020000000000000UL,0x0200000000000000UL});
-    public static readonly BitSet FOLLOW_logicalOrOperator_in_logicalOrExpression4350 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_logicalAndExpression_in_logicalOrExpression4362 = new BitSet(new ulong[]{0x0000000000000002UL,0x0020000000000000UL,0x0200000000000000UL});
+    public static readonly BitSet FOLLOW_logicalOrExpression_in_conditionalExpression4265 = new BitSet(new ulong[]{0x0000000000000002UL,0x0010000000000000UL});
+    public static readonly BitSet FOLLOW_QUESTION_in_conditionalExpression4279 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_conditionalSubExpression_in_conditionalExpression4286 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_assignmentExpression_in_conditionalSubExpression4315 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000100000UL});
+    public static readonly BitSet FOLLOW_COLON_in_conditionalSubExpression4320 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_assignmentExpression_in_conditionalSubExpression4329 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_logicalAndExpression_in_logicalOrExpression4343 = new BitSet(new ulong[]{0x0000000000000002UL,0x0020000000000000UL,0x0200000000000000UL});
+    public static readonly BitSet FOLLOW_logicalOrOperator_in_logicalOrExpression4354 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_logicalAndExpression_in_logicalOrExpression4366 = new BitSet(new ulong[]{0x0000000000000002UL,0x0020000000000000UL,0x0200000000000000UL});
     public static readonly BitSet FOLLOW_set_in_logicalOrOperator0 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_bitwiseOrExpression_in_logicalAndExpression4394 = new BitSet(new ulong[]{0x0000000000000002UL,0x0040000000000000UL,0x0400000000000000UL});
-    public static readonly BitSet FOLLOW_logicalAndOperator_in_logicalAndExpression4405 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_bitwiseOrExpression_in_logicalAndExpression4417 = new BitSet(new ulong[]{0x0000000000000002UL,0x0040000000000000UL,0x0400000000000000UL});
+    public static readonly BitSet FOLLOW_bitwiseOrExpression_in_logicalAndExpression4398 = new BitSet(new ulong[]{0x0000000000000002UL,0x0040000000000000UL,0x0400000000000000UL});
+    public static readonly BitSet FOLLOW_logicalAndOperator_in_logicalAndExpression4409 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_bitwiseOrExpression_in_logicalAndExpression4421 = new BitSet(new ulong[]{0x0000000000000002UL,0x0040000000000000UL,0x0400000000000000UL});
     public static readonly BitSet FOLLOW_set_in_logicalAndOperator0 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_bitwiseXorExpression_in_bitwiseOrExpression4449 = new BitSet(new ulong[]{0x0000000000000002UL,0x0080000000000000UL});
-    public static readonly BitSet FOLLOW_BOR_in_bitwiseOrExpression4454 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_bitwiseXorExpression_in_bitwiseOrExpression4457 = new BitSet(new ulong[]{0x0000000000000002UL,0x0080000000000000UL});
-    public static readonly BitSet FOLLOW_bitwiseAndExpression_in_bitwiseXorExpression4471 = new BitSet(new ulong[]{0x0000000000000002UL,0x0100000000000000UL});
-    public static readonly BitSet FOLLOW_BXOR_in_bitwiseXorExpression4476 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_bitwiseAndExpression_in_bitwiseXorExpression4479 = new BitSet(new ulong[]{0x0000000000000002UL,0x0100000000000000UL});
-    public static readonly BitSet FOLLOW_equalityExpression_in_bitwiseAndExpression4493 = new BitSet(new ulong[]{0x0000000000000002UL,0x0200000000000000UL});
-    public static readonly BitSet FOLLOW_BAND_in_bitwiseAndExpression4498 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_equalityExpression_in_bitwiseAndExpression4501 = new BitSet(new ulong[]{0x0000000000000002UL,0x0200000000000000UL});
-    public static readonly BitSet FOLLOW_relationalExpression_in_equalityExpression4515 = new BitSet(new ulong[]{0x0000000000000002UL,0x3C00000000000000UL});
-    public static readonly BitSet FOLLOW_equalityOperator_in_equalityExpression4525 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_relationalExpression_in_equalityExpression4537 = new BitSet(new ulong[]{0x0000000000000002UL,0x3C00000000000000UL});
+    public static readonly BitSet FOLLOW_bitwiseXorExpression_in_bitwiseOrExpression4453 = new BitSet(new ulong[]{0x0000000000000002UL,0x0080000000000000UL});
+    public static readonly BitSet FOLLOW_BOR_in_bitwiseOrExpression4458 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_bitwiseXorExpression_in_bitwiseOrExpression4461 = new BitSet(new ulong[]{0x0000000000000002UL,0x0080000000000000UL});
+    public static readonly BitSet FOLLOW_bitwiseAndExpression_in_bitwiseXorExpression4475 = new BitSet(new ulong[]{0x0000000000000002UL,0x0100000000000000UL});
+    public static readonly BitSet FOLLOW_BXOR_in_bitwiseXorExpression4480 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_bitwiseAndExpression_in_bitwiseXorExpression4483 = new BitSet(new ulong[]{0x0000000000000002UL,0x0100000000000000UL});
+    public static readonly BitSet FOLLOW_equalityExpression_in_bitwiseAndExpression4497 = new BitSet(new ulong[]{0x0000000000000002UL,0x0200000000000000UL});
+    public static readonly BitSet FOLLOW_BAND_in_bitwiseAndExpression4502 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_equalityExpression_in_bitwiseAndExpression4505 = new BitSet(new ulong[]{0x0000000000000002UL,0x0200000000000000UL});
+    public static readonly BitSet FOLLOW_relationalExpression_in_equalityExpression4519 = new BitSet(new ulong[]{0x0000000000000002UL,0x3C00000000000000UL});
+    public static readonly BitSet FOLLOW_equalityOperator_in_equalityExpression4529 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_relationalExpression_in_equalityExpression4541 = new BitSet(new ulong[]{0x0000000000000002UL,0x3C00000000000000UL});
     public static readonly BitSet FOLLOW_set_in_equalityOperator0 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_shiftExpression_in_relationalExpression4577 = new BitSet(new ulong[]{0x0000000000000002UL,0xC000000000800000UL,0x000000000000001FUL});
-    public static readonly BitSet FOLLOW_relationalOperator_in_relationalExpression4593 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_shiftExpression_in_relationalExpression4601 = new BitSet(new ulong[]{0x0000000000000002UL,0xC000000000800000UL,0x000000000000001FUL});
-    public static readonly BitSet FOLLOW_IN_in_relationalOperator4619 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LT_in_relationalOperator4624 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_GT_in_relationalOperator4628 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LE_in_relationalOperator4632 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_GE_in_relationalOperator4636 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_IS_in_relationalOperator4640 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_AS_in_relationalOperator4644 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_INSTANCEOF_in_relationalOperator4648 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_additiveExpression_in_shiftExpression4660 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x00000000000000E0UL});
-    public static readonly BitSet FOLLOW_shiftOperator_in_shiftExpression4671 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_additiveExpression_in_shiftExpression4681 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x00000000000000E0UL});
+    public static readonly BitSet FOLLOW_shiftExpression_in_relationalExpression4581 = new BitSet(new ulong[]{0x0000000000000002UL,0xC000000000800000UL,0x000000000000001FUL});
+    public static readonly BitSet FOLLOW_relationalOperator_in_relationalExpression4597 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_shiftExpression_in_relationalExpression4605 = new BitSet(new ulong[]{0x0000000000000002UL,0xC000000000800000UL,0x000000000000001FUL});
+    public static readonly BitSet FOLLOW_IN_in_relationalOperator4623 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LT_in_relationalOperator4628 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_GT_in_relationalOperator4632 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LE_in_relationalOperator4636 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_GE_in_relationalOperator4640 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_IS_in_relationalOperator4644 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_AS_in_relationalOperator4648 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_INSTANCEOF_in_relationalOperator4652 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_additiveExpression_in_shiftExpression4664 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x00000000000000E0UL});
+    public static readonly BitSet FOLLOW_shiftOperator_in_shiftExpression4675 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_additiveExpression_in_shiftExpression4685 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x00000000000000E0UL});
     public static readonly BitSet FOLLOW_set_in_shiftOperator0 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_multiplicativeExpression_in_additiveExpression4717 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x0000000000000300UL});
-    public static readonly BitSet FOLLOW_additiveOperator_in_additiveExpression4728 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_multiplicativeExpression_in_additiveExpression4738 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x0000000000000300UL});
+    public static readonly BitSet FOLLOW_multiplicativeExpression_in_additiveExpression4721 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x0000000000000300UL});
+    public static readonly BitSet FOLLOW_additiveOperator_in_additiveExpression4732 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_multiplicativeExpression_in_additiveExpression4742 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x0000000000000300UL});
     public static readonly BitSet FOLLOW_set_in_additiveOperator0 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_unaryExpression_in_multiplicativeExpression4770 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000010000000UL,0x0000000000000C00UL});
-    public static readonly BitSet FOLLOW_multiplicativeOperator_in_multiplicativeExpression4782 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_unaryExpression_in_multiplicativeExpression4790 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000010000000UL,0x0000000000000C00UL});
+    public static readonly BitSet FOLLOW_unaryExpression_in_multiplicativeExpression4774 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000010000000UL,0x0000000000000C00UL});
+    public static readonly BitSet FOLLOW_multiplicativeOperator_in_multiplicativeExpression4786 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_unaryExpression_in_multiplicativeExpression4794 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000010000000UL,0x0000000000000C00UL});
     public static readonly BitSet FOLLOW_set_in_multiplicativeOperator0 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_INC_in_unaryExpression4828 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpression4833 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_DEC_in_unaryExpression4850 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpression4855 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_MINUS_in_unaryExpression4872 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpression4876 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_PLUS_in_unaryExpression4892 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpression4896 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_unaryExpressionNotPlusMinus_in_unaryExpression4910 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_DELETE_in_unaryExpressionNotPlusMinus4923 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048400008F2UL,0x0000000067FC000CUL});
-    public static readonly BitSet FOLLOW_postfixExpression_in_unaryExpressionNotPlusMinus4928 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_VOID_in_unaryExpressionNotPlusMinus4943 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus4947 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_TYPEOF_in_unaryExpressionNotPlusMinus4962 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus4966 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LNOT_in_unaryExpressionNotPlusMinus4981 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus4985 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_BNOT_in_unaryExpressionNotPlusMinus5000 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus5004 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_postfixExpression_in_unaryExpressionNotPlusMinus5017 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_primaryExpression_in_postfixExpression5030 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000820000800UL,0x0000000000003000UL});
-    public static readonly BitSet FOLLOW_propOrIdent_in_postfixExpression5043 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000820000800UL,0x0000000000003000UL});
-    public static readonly BitSet FOLLOW_LBRACK_in_postfixExpression5057 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_expression_in_postfixExpression5061 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000001000000000UL});
-    public static readonly BitSet FOLLOW_RBRACK_in_postfixExpression5063 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000820000800UL,0x0000000000003000UL});
-    public static readonly BitSet FOLLOW_arguments_in_postfixExpression5082 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000820000800UL,0x0000000000003000UL});
-    public static readonly BitSet FOLLOW_INC_in_postfixExpression5108 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_DEC_in_postfixExpression5129 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_UNDEFINED_in_primaryExpression5160 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_constant_in_primaryExpression5172 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_arrayLiteral_in_primaryExpression5183 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_objectLiteral_in_primaryExpression5188 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_functionDefinition_in_primaryExpression5193 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_newFullExpression_in_primaryExpression5198 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_encapsulatedExpression_in_primaryExpression5203 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_qualifiedIdent_in_primaryExpression5208 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_DOT_in_propOrIdent5234 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_qualifiedIdent_in_propOrIdent5247 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_number_in_constant5271 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_STRING_LITERAL_in_constant5276 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_TRUE_in_constant5281 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_FALSE_in_constant5286 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_NULL_in_constant5291 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_INC_in_unaryExpression4832 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpression4837 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_DEC_in_unaryExpression4854 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpression4859 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_MINUS_in_unaryExpression4876 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpression4880 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_PLUS_in_unaryExpression4896 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpression4900 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_unaryExpressionNotPlusMinus_in_unaryExpression4914 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_DELETE_in_unaryExpressionNotPlusMinus4927 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048400008F2UL,0x0000000067FC000CUL});
+    public static readonly BitSet FOLLOW_postfixExpression_in_unaryExpressionNotPlusMinus4932 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_VOID_in_unaryExpressionNotPlusMinus4947 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus4951 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_TYPEOF_in_unaryExpressionNotPlusMinus4966 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus4970 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LNOT_in_unaryExpressionNotPlusMinus4985 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus4989 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_BNOT_in_unaryExpressionNotPlusMinus5004 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus5008 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_postfixExpression_in_unaryExpressionNotPlusMinus5021 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_primaryExpression_in_postfixExpression5034 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000820000800UL,0x0000000000003000UL});
+    public static readonly BitSet FOLLOW_propOrIdent_in_postfixExpression5047 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000820000800UL,0x0000000000003000UL});
+    public static readonly BitSet FOLLOW_LBRACK_in_postfixExpression5061 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_expression_in_postfixExpression5065 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000001000000000UL});
+    public static readonly BitSet FOLLOW_RBRACK_in_postfixExpression5067 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000820000800UL,0x0000000000003000UL});
+    public static readonly BitSet FOLLOW_arguments_in_postfixExpression5086 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000820000800UL,0x0000000000003000UL});
+    public static readonly BitSet FOLLOW_INC_in_postfixExpression5112 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_DEC_in_postfixExpression5133 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_UNDEFINED_in_primaryExpression5164 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_constant_in_primaryExpression5176 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_arrayLiteral_in_primaryExpression5187 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_objectLiteral_in_primaryExpression5192 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_functionDefinition_in_primaryExpression5197 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_newFullExpression_in_primaryExpression5202 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_encapsulatedExpression_in_primaryExpression5207 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_qualifiedIdent_in_primaryExpression5212 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_DOT_in_propOrIdent5238 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_qualifiedIdent_in_propOrIdent5251 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_number_in_constant5275 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_STRING_LITERAL_in_constant5280 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_TRUE_in_constant5285 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_FALSE_in_constant5290 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_NULL_in_constant5295 = new BitSet(new ulong[]{0x0000000000000002UL});
     public static readonly BitSet FOLLOW_set_in_number0 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_NEW_in_newFullExpression5333 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048400008F2UL,0x0000000067FC000CUL});
-    public static readonly BitSet FOLLOW_fullNewSubexpression_in_newFullExpression5344 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
-    public static readonly BitSet FOLLOW_arguments_in_newFullExpression5350 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_primaryExpression_in_fullNewSubexpression5368 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000820000000UL});
-    public static readonly BitSet FOLLOW_DOT_in_fullNewSubexpression5382 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_qualifiedIdent_in_fullNewSubexpression5387 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000820000000UL});
-    public static readonly BitSet FOLLOW_brackets_in_fullNewSubexpression5404 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000820000000UL});
-    public static readonly BitSet FOLLOW_comment_in_comments5446 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x0000000018000000UL});
-    public static readonly BitSet FOLLOW_singleCommentStatement_in_comment5467 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x0000000018000000UL});
-    public static readonly BitSet FOLLOW_comment_in_comment5469 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x0000000018000000UL});
-    public static readonly BitSet FOLLOW_multiCommentStatement_in_comment5486 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x0000000018000000UL});
-    public static readonly BitSet FOLLOW_comment_in_comment5489 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x0000000018000000UL});
-    public static readonly BitSet FOLLOW_SL_COMMENT_in_singleCommentStatement5512 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ML_COMMENT_in_multiCommentStatement5532 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LBRACK_in_brackets5560 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_expressionList_in_brackets5568 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000001000000000UL});
-    public static readonly BitSet FOLLOW_RBRACK_in_brackets5573 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LPAREN_in_encapsulatedExpression5598 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_assignmentExpression_in_encapsulatedExpression5608 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000001000UL});
-    public static readonly BitSet FOLLOW_RPAREN_in_encapsulatedExpression5613 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_FUNCTION_in_functionDefinition5643 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
-    public static readonly BitSet FOLLOW_parameterDeclarationList_in_functionDefinition5647 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000100002UL});
-    public static readonly BitSet FOLLOW_typeExpression_in_functionDefinition5649 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_block_in_functionDefinition5652 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_IDENT_in_ident5679 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_USE_in_ident5686 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_XML_in_ident5698 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_DYNAMIC_in_ident5710 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_IS_in_ident5722 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_AS_in_ident5734 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_GET_in_ident5746 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_SET_in_ident5758 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_SEMI_in_synpred5573 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LCURLY_in_synpred361949 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_expressionStatement_in_synpred381966 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ELSE_in_synpred512185 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_RETURN_in_synpred552368 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_expression_in_synpred552373 = new BitSet(new ulong[]{0x0800000000000002UL});
-    public static readonly BitSet FOLLOW_semi_in_synpred552375 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_forInClauseDecl_in_synpred592662 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000800000UL});
-    public static readonly BitSet FOLLOW_IN_in_synpred592664 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_annotation_in_synpred743368 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_includeDirective_in_synpred753381 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ident_in_synpred793551 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000400UL});
-    public static readonly BitSet FOLLOW_ASSIGN_in_synpred793553 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000010UL,0x0000000003F80000UL});
-    public static readonly BitSet FOLLOW_constant_in_synpred793557 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ident_in_synpred803576 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000400UL});
-    public static readonly BitSet FOLLOW_ASSIGN_in_synpred803578 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_ident_in_synpred803582 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_COMMA_in_synpred943868 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_assignmentExpression_in_synpred943880 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_assignmentOperator_in_synpred1004141 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_relationalOperator_in_synpred1264587 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_additiveOperator_in_synpred1374728 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_multiplicativeExpression_in_synpred1374738 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LBRACK_in_synpred1525057 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_expression_in_synpred1525061 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000001000000000UL});
-    public static readonly BitSet FOLLOW_RBRACK_in_synpred1525063 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_arguments_in_synpred1535082 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_INC_in_synpred1545108 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_DEC_in_synpred1555129 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_comment_in_synpred1725446 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_comment_in_synpred1735469 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_comment_in_synpred1755489 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_NEW_in_newFullExpression5337 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048400008F2UL,0x0000000067FC000CUL});
+    public static readonly BitSet FOLLOW_fullNewSubexpression_in_newFullExpression5348 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
+    public static readonly BitSet FOLLOW_arguments_in_newFullExpression5354 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_primaryExpression_in_fullNewSubexpression5372 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000820000000UL});
+    public static readonly BitSet FOLLOW_DOT_in_fullNewSubexpression5386 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_qualifiedIdent_in_fullNewSubexpression5391 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000820000000UL});
+    public static readonly BitSet FOLLOW_brackets_in_fullNewSubexpression5408 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000820000000UL});
+    public static readonly BitSet FOLLOW_comment_in_comments5450 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x0000000018000000UL});
+    public static readonly BitSet FOLLOW_singleCommentStatement_in_comment5471 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x0000000018000000UL});
+    public static readonly BitSet FOLLOW_comment_in_comment5473 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x0000000018000000UL});
+    public static readonly BitSet FOLLOW_multiCommentStatement_in_comment5490 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x0000000018000000UL});
+    public static readonly BitSet FOLLOW_comment_in_comment5493 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x0000000018000000UL});
+    public static readonly BitSet FOLLOW_SL_COMMENT_in_singleCommentStatement5516 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ML_COMMENT_in_multiCommentStatement5536 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LBRACK_in_brackets5564 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_expressionList_in_brackets5572 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000001000000000UL});
+    public static readonly BitSet FOLLOW_RBRACK_in_brackets5577 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LPAREN_in_encapsulatedExpression5602 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_assignmentExpression_in_encapsulatedExpression5612 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000001000UL});
+    public static readonly BitSet FOLLOW_RPAREN_in_encapsulatedExpression5617 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_FUNCTION_in_functionDefinition5647 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
+    public static readonly BitSet FOLLOW_parameterDeclarationList_in_functionDefinition5651 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000100002UL});
+    public static readonly BitSet FOLLOW_typeExpression_in_functionDefinition5653 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_block_in_functionDefinition5656 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_IDENT_in_ident5683 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_USE_in_ident5690 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_XML_in_ident5702 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_DYNAMIC_in_ident5714 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_IS_in_ident5726 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_AS_in_ident5738 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_GET_in_ident5750 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_SET_in_ident5762 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_SEMI_in_synpred5575 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LCURLY_in_synpred361953 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_expressionStatement_in_synpred381970 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ELSE_in_synpred512189 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_RETURN_in_synpred552372 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_expression_in_synpred552377 = new BitSet(new ulong[]{0x0800000000000002UL});
+    public static readonly BitSet FOLLOW_semi_in_synpred552379 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_forInClauseDecl_in_synpred592666 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000800000UL});
+    public static readonly BitSet FOLLOW_IN_in_synpred592668 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_annotation_in_synpred743372 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_includeDirective_in_synpred753385 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ident_in_synpred793555 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000400UL});
+    public static readonly BitSet FOLLOW_ASSIGN_in_synpred793557 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000010UL,0x0000000003F80000UL});
+    public static readonly BitSet FOLLOW_constant_in_synpred793561 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ident_in_synpred803580 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000400UL});
+    public static readonly BitSet FOLLOW_ASSIGN_in_synpred803582 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_ident_in_synpred803586 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_COMMA_in_synpred943872 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_assignmentExpression_in_synpred943884 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_assignmentOperator_in_synpred1004145 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_relationalOperator_in_synpred1264591 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_additiveOperator_in_synpred1374732 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_multiplicativeExpression_in_synpred1374742 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LBRACK_in_synpred1525061 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_expression_in_synpred1525065 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000001000000000UL});
+    public static readonly BitSet FOLLOW_RBRACK_in_synpred1525067 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_arguments_in_synpred1535086 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_INC_in_synpred1545112 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_DEC_in_synpred1555133 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_comment_in_synpred1725450 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_comment_in_synpred1735473 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_comment_in_synpred1755493 = new BitSet(new ulong[]{0x0000000000000002UL});
 
 }
 }

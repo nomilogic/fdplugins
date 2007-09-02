@@ -226,36 +226,36 @@ CodeReformatter.Generators.Core
     /// Insert a comment in the passed String builder
     /// </summary>
     /// <param name="tree"></param>    
-        private void insertComment(ParserRuleReturnScope rule)
-        {
-    		Debug.WriteLine("insertComment: " + (rule == null));
-    		CommonTree tree;
-    		CommonTree comment;
-    		
-    		if(rule != null)
-    		{
-    			tree = (CommonTree)rule.Tree;
-    			Debug.WriteLine("Comments: " + tree.GetChild(0).ChildCount);
-    			//buffer.Append(NewLine + tab);
-    			for(int i = 0; i < tree.GetChild(0).ChildCount; i++)
-    			{
-    				comment = (CommonTree)tree.GetChild(0).GetChild(i);
-    				Debug.WriteLine("SubComments: " + comment.GetChild(0).Text);
-    				if(comment.GetChild(0).Type == ASLexer.ML_COMMENT)
-    				{
-    					string[] lines = lineSplitterReg.Split(comment.GetChild(0).Text);
-    					int k = 0;
-    					foreach (string line in lines)
-    					{
-    						buffer.Append((k > 0 ? " " : "") + line.Trim() + (k < lines.Length-1 ? NewLine + tab : ""));
-    						k++;
-    					}				
-    				} else {
-    					buffer.Append(comment.GetChild(0).Text.TrimEnd());
-    				}
-    			}
-    		}
-        }
+            private void insertComment(ParserRuleReturnScope rule)
+            {
+        		CommonTree tree;
+        		CommonTree comment;
+        		
+        		if(rule != null)
+        		{
+        			tree = (CommonTree)rule.Tree;   // COMMENT_LIST
+        			for(int i = 0; i < tree.ChildCount; i++)
+        			{
+        				comment = (CommonTree)tree.GetChild(i); // COMMENT_ENTRY
+        				if(comment.GetChild(0).Type == ASLexer.MULTILINE_COMMENT)
+        				{
+        					string[] lines = lineSplitterReg.Split(comment.GetChild(0).GetChild(0).Text);
+        					Debug.WriteLine("total lines: " + lines.Length);
+        					int k = 0;
+        					foreach (string line in lines)
+        					{
+        						Debug.WriteLine(k + ": " + line);
+        						buffer.Append((k > 0 ? " " : "") + line.Trim() + (k < lines.Length-1 ? NewLine + tab : ""));
+        						k++;
+        					}				
+        				} else {
+        					buffer.Append(comment.GetChild(0).GetChild(0).Text.TrimEnd());
+        				}
+                        if(i < tree.ChildCount - 1)
+                            buffer.Append(NewLine + tab);
+        			}
+        		}
+            }
     
 	/// <summary>
     /// Remove duplicates from a list of strings
@@ -322,7 +322,7 @@ as2CompilationUnit
 	:	(
 			importDefinition
 		|	annotations
-		|	c=comments	{ insertComment(c); }
+		|	{ buffer.Append(NewLine + tab + NewLine + tab); } c=comments { insertComment(c); }
 		)*
 		as2Type
 	;
@@ -455,7 +455,7 @@ typeBlockEntry
 	|	importDefinition
 	|	{ buffer.Append(NewLine + tab); } as2IncludeDirective
 	|	{ buffer.Append(NewLine + tab); } annotations
-	|	c=comments { insertComment(c); }
+	|	{ buffer.Append(NewLine + tab + NewLine + tab); } c=comments { insertComment(c); }
 	;
 
 as2IncludeDirective
