@@ -1516,7 +1516,21 @@ scope InOperator;
 
 
 functionDefinition
-	:	f=FUNCTION { buffer.Append(f.Text + (options.SpaceBeforeMethodDef ? " " : "")); } parameterDeclarationList typeExpression? block
+	:	f=FUNCTION { buffer.Append(f.Text + (options.SpaceBeforeMethodDef ? " " : "")); } 
+		parameterDeclarationList 
+		type_exp=typeExpression?
+									{
+										if(options.NewlineAfterMethod) buffer.Append(NewLine + tab);
+										buffer.Append("{");
+										CurrentTab++;
+									}
+		block
+									{
+										CurrentTab--;
+										buffer.Append(NewLine + tab);
+										buffer.Append("}");
+										buffer.Append(NewLine + tab);
+									}
 		-> ^(FUNC_DEF parameterDeclarationList typeExpression? block)
 	;
 

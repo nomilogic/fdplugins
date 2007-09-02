@@ -1,4 +1,4 @@
-// $ANTLR 3.0 C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g 2007-09-02 14:57:46
+// $ANTLR 3.0 C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g 2007-09-02 17:33:52
 namespace 
 CodeReformatter.Generators.Core
 
@@ -23003,7 +23003,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start functionDefinition
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1518:1: functionDefinition : f= FUNCTION parameterDeclarationList ( typeExpression )? block -> ^( FUNC_DEF parameterDeclarationList ( typeExpression )? block ) ;
+    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1518:1: functionDefinition : f= FUNCTION parameterDeclarationList (type_exp= typeExpression )? block -> ^( FUNC_DEF parameterDeclarationList ( typeExpression )? block ) ;
     public functionDefinition_return functionDefinition() // throws RecognitionException [1]
     {   
         functionDefinition_return retval = new functionDefinition_return();
@@ -23012,11 +23012,11 @@ public class ASParser : Parser
         CommonTree root_0 = null;
     
         CommonToken f = null;
+        typeExpression_return type_exp = null;
+
         parameterDeclarationList_return parameterDeclarationList321 = null;
 
-        typeExpression_return typeExpression322 = null;
-
-        block_return block323 = null;
+        block_return block322 = null;
         
         
         CommonTree f_tree=null;
@@ -23030,8 +23030,8 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1519:4: (f= FUNCTION parameterDeclarationList ( typeExpression )? block -> ^( FUNC_DEF parameterDeclarationList ( typeExpression )? block ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1519:4: f= FUNCTION parameterDeclarationList ( typeExpression )? block
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1519:4: (f= FUNCTION parameterDeclarationList (type_exp= typeExpression )? block -> ^( FUNC_DEF parameterDeclarationList ( typeExpression )? block ) )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1519:4: f= FUNCTION parameterDeclarationList (type_exp= typeExpression )? block
             {
             	f = (CommonToken)input.LT(1);
             	Match(input,FUNCTION,FOLLOW_FUNCTION_in_functionDefinition5647); if (failed) return retval;
@@ -23041,12 +23041,12 @@ public class ASParser : Parser
             	{
             	   buffer.Append(f.Text + (options.SpaceBeforeMethodDef ? " " : "")); 
             	}
-            	PushFollow(FOLLOW_parameterDeclarationList_in_functionDefinition5651);
+            	PushFollow(FOLLOW_parameterDeclarationList_in_functionDefinition5654);
             	parameterDeclarationList321 = parameterDeclarationList();
             	followingStackPointer_--;
             	if (failed) return retval;
             	if ( backtracking==0 ) stream_parameterDeclarationList.Add(parameterDeclarationList321.Tree);
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1519:111: ( typeExpression )?
+            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1521:11: (type_exp= typeExpression )?
             	int alt88 = 2;
             	int LA88_0 = input.LA(1);
             	
@@ -23057,24 +23057,41 @@ public class ASParser : Parser
             	switch (alt88) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: typeExpression
+            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: type_exp= typeExpression
             	        {
-            	        	PushFollow(FOLLOW_typeExpression_in_functionDefinition5653);
-            	        	typeExpression322 = typeExpression();
+            	        	PushFollow(FOLLOW_typeExpression_in_functionDefinition5661);
+            	        	type_exp = typeExpression();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
-            	        	if ( backtracking==0 ) stream_typeExpression.Add(typeExpression322.Tree);
+            	        	if ( backtracking==0 ) stream_typeExpression.Add(type_exp.Tree);
             	        
             	        }
             	        break;
             	
             	}
 
-            	PushFollow(FOLLOW_block_in_functionDefinition5656);
-            	block323 = block();
+            	if ( backtracking == 0 ) 
+            	{
+            	  
+            	  										if(options.NewlineAfterMethod) buffer.Append(NewLine + tab);
+            	  										buffer.Append("{");
+            	  										CurrentTab++;
+            	  									
+            	}
+            	PushFollow(FOLLOW_block_in_functionDefinition5677);
+            	block322 = block();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) stream_block.Add(block323.Tree);
+            	if ( backtracking==0 ) stream_block.Add(block322.Tree);
+            	if ( backtracking == 0 ) 
+            	{
+            	  
+            	  										CurrentTab--;
+            	  										buffer.Append(NewLine + tab);
+            	  										buffer.Append("}");
+            	  										buffer.Append(NewLine + tab);
+            	  									
+            	}
             	
             	// AST REWRITE
             	// elements:          parameterDeclarationList, typeExpression, block
@@ -23087,15 +23104,15 @@ public class ASParser : Parser
             	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	
             	root_0 = (CommonTree)adaptor.GetNilNode();
-            	// 1520:3: -> ^( FUNC_DEF parameterDeclarationList ( typeExpression )? block )
+            	// 1534:3: -> ^( FUNC_DEF parameterDeclarationList ( typeExpression )? block )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1520:6: ^( FUNC_DEF parameterDeclarationList ( typeExpression )? block )
+            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1534:6: ^( FUNC_DEF parameterDeclarationList ( typeExpression )? block )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(FUNC_DEF, "FUNC_DEF"), root_1);
             	    
             	    adaptor.AddChild(root_1, stream_parameterDeclarationList.Next());
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1520:42: ( typeExpression )?
+            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1534:42: ( typeExpression )?
             	    if ( stream_typeExpression.HasNext() )
             	    {
             	        adaptor.AddChild(root_1, stream_typeExpression.Next());
@@ -23152,7 +23169,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start ident
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1524:1: ident : ( IDENT | i= USE -> IDENT[$i] | i= XML -> IDENT[$i] | i= DYNAMIC -> IDENT[$i] | i= IS -> IDENT[$i] | i= AS -> IDENT[$i] | i= GET -> IDENT[$i] | i= SET -> IDENT[$i] );
+    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1538:1: ident : ( IDENT | i= USE -> IDENT[$i] | i= XML -> IDENT[$i] | i= DYNAMIC -> IDENT[$i] | i= IS -> IDENT[$i] | i= AS -> IDENT[$i] | i= GET -> IDENT[$i] | i= SET -> IDENT[$i] );
     public ident_return ident() // throws RecognitionException [1]
     {   
         ident_return retval = new ident_return();
@@ -23161,10 +23178,10 @@ public class ASParser : Parser
         CommonTree root_0 = null;
     
         CommonToken i = null;
-        CommonToken IDENT324 = null;
+        CommonToken IDENT323 = null;
         
         CommonTree i_tree=null;
-        CommonTree IDENT324_tree=null;
+        CommonTree IDENT323_tree=null;
         RewriteRuleTokenStream stream_GET = new RewriteRuleTokenStream(adaptor,"token GET");
         RewriteRuleTokenStream stream_XML = new RewriteRuleTokenStream(adaptor,"token XML");
         RewriteRuleTokenStream stream_AS = new RewriteRuleTokenStream(adaptor,"token AS");
@@ -23179,7 +23196,7 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1525:4: ( IDENT | i= USE -> IDENT[$i] | i= XML -> IDENT[$i] | i= DYNAMIC -> IDENT[$i] | i= IS -> IDENT[$i] | i= AS -> IDENT[$i] | i= GET -> IDENT[$i] | i= SET -> IDENT[$i] )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1539:4: ( IDENT | i= USE -> IDENT[$i] | i= XML -> IDENT[$i] | i= DYNAMIC -> IDENT[$i] | i= IS -> IDENT[$i] | i= AS -> IDENT[$i] | i= GET -> IDENT[$i] | i= SET -> IDENT[$i] )
             int alt89 = 8;
             switch ( input.LA(1) ) 
             {
@@ -23226,7 +23243,7 @@ public class ASParser : Parser
             	default:
             	    if ( backtracking > 0 ) {failed = true; return retval;}
             	    NoViableAltException nvae_d89s0 =
-            	        new NoViableAltException("1524:1: ident : ( IDENT | i= USE -> IDENT[$i] | i= XML -> IDENT[$i] | i= DYNAMIC -> IDENT[$i] | i= IS -> IDENT[$i] | i= AS -> IDENT[$i] | i= GET -> IDENT[$i] | i= SET -> IDENT[$i] );", 89, 0, input);
+            	        new NoViableAltException("1538:1: ident : ( IDENT | i= USE -> IDENT[$i] | i= XML -> IDENT[$i] | i= DYNAMIC -> IDENT[$i] | i= IS -> IDENT[$i] | i= AS -> IDENT[$i] | i= GET -> IDENT[$i] | i= SET -> IDENT[$i] );", 89, 0, input);
             
             	    throw nvae_d89s0;
             }
@@ -23234,24 +23251,24 @@ public class ASParser : Parser
             switch (alt89) 
             {
                 case 1 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1525:4: IDENT
+                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1539:4: IDENT
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	IDENT324 = (CommonToken)input.LT(1);
-                    	Match(input,IDENT,FOLLOW_IDENT_in_ident5683); if (failed) return retval;
+                    	IDENT323 = (CommonToken)input.LT(1);
+                    	Match(input,IDENT,FOLLOW_IDENT_in_ident5715); if (failed) return retval;
                     	if ( backtracking==0 ) {
-                    	IDENT324_tree = (CommonTree)adaptor.Create(IDENT324);
-                    	adaptor.AddChild(root_0, IDENT324_tree);
+                    	IDENT323_tree = (CommonTree)adaptor.Create(IDENT323);
+                    	adaptor.AddChild(root_0, IDENT323_tree);
                     	}
                     
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1526:4: i= USE
+                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1540:4: i= USE
                     {
                     	i = (CommonToken)input.LT(1);
-                    	Match(input,USE,FOLLOW_USE_in_ident5690); if (failed) return retval;
+                    	Match(input,USE,FOLLOW_USE_in_ident5722); if (failed) return retval;
                     	if ( backtracking==0 ) stream_USE.Add(i);
 
                     	
@@ -23266,7 +23283,7 @@ public class ASParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
                     	
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 1526:10: -> IDENT[$i]
+                    	// 1540:10: -> IDENT[$i]
                     	{
                     	    adaptor.AddChild(root_0, adaptor.Create(IDENT, i));
                     	
@@ -23277,10 +23294,10 @@ public class ASParser : Parser
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1527:4: i= XML
+                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1541:4: i= XML
                     {
                     	i = (CommonToken)input.LT(1);
-                    	Match(input,XML,FOLLOW_XML_in_ident5702); if (failed) return retval;
+                    	Match(input,XML,FOLLOW_XML_in_ident5734); if (failed) return retval;
                     	if ( backtracking==0 ) stream_XML.Add(i);
 
                     	
@@ -23295,7 +23312,7 @@ public class ASParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
                     	
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 1527:10: -> IDENT[$i]
+                    	// 1541:10: -> IDENT[$i]
                     	{
                     	    adaptor.AddChild(root_0, adaptor.Create(IDENT, i));
                     	
@@ -23306,10 +23323,10 @@ public class ASParser : Parser
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1528:4: i= DYNAMIC
+                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1542:4: i= DYNAMIC
                     {
                     	i = (CommonToken)input.LT(1);
-                    	Match(input,DYNAMIC,FOLLOW_DYNAMIC_in_ident5714); if (failed) return retval;
+                    	Match(input,DYNAMIC,FOLLOW_DYNAMIC_in_ident5746); if (failed) return retval;
                     	if ( backtracking==0 ) stream_DYNAMIC.Add(i);
 
                     	
@@ -23324,7 +23341,7 @@ public class ASParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
                     	
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 1528:14: -> IDENT[$i]
+                    	// 1542:14: -> IDENT[$i]
                     	{
                     	    adaptor.AddChild(root_0, adaptor.Create(IDENT, i));
                     	
@@ -23335,10 +23352,10 @@ public class ASParser : Parser
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1529:4: i= IS
+                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1543:4: i= IS
                     {
                     	i = (CommonToken)input.LT(1);
-                    	Match(input,IS,FOLLOW_IS_in_ident5726); if (failed) return retval;
+                    	Match(input,IS,FOLLOW_IS_in_ident5758); if (failed) return retval;
                     	if ( backtracking==0 ) stream_IS.Add(i);
 
                     	
@@ -23353,7 +23370,7 @@ public class ASParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
                     	
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 1529:9: -> IDENT[$i]
+                    	// 1543:9: -> IDENT[$i]
                     	{
                     	    adaptor.AddChild(root_0, adaptor.Create(IDENT, i));
                     	
@@ -23364,10 +23381,10 @@ public class ASParser : Parser
                     }
                     break;
                 case 6 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1530:4: i= AS
+                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1544:4: i= AS
                     {
                     	i = (CommonToken)input.LT(1);
-                    	Match(input,AS,FOLLOW_AS_in_ident5738); if (failed) return retval;
+                    	Match(input,AS,FOLLOW_AS_in_ident5770); if (failed) return retval;
                     	if ( backtracking==0 ) stream_AS.Add(i);
 
                     	
@@ -23382,7 +23399,7 @@ public class ASParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
                     	
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 1530:9: -> IDENT[$i]
+                    	// 1544:9: -> IDENT[$i]
                     	{
                     	    adaptor.AddChild(root_0, adaptor.Create(IDENT, i));
                     	
@@ -23393,10 +23410,10 @@ public class ASParser : Parser
                     }
                     break;
                 case 7 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1531:4: i= GET
+                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1545:4: i= GET
                     {
                     	i = (CommonToken)input.LT(1);
-                    	Match(input,GET,FOLLOW_GET_in_ident5750); if (failed) return retval;
+                    	Match(input,GET,FOLLOW_GET_in_ident5782); if (failed) return retval;
                     	if ( backtracking==0 ) stream_GET.Add(i);
 
                     	
@@ -23411,7 +23428,7 @@ public class ASParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
                     	
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 1531:10: -> IDENT[$i]
+                    	// 1545:10: -> IDENT[$i]
                     	{
                     	    adaptor.AddChild(root_0, adaptor.Create(IDENT, i));
                     	
@@ -23422,10 +23439,10 @@ public class ASParser : Parser
                     }
                     break;
                 case 8 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1532:4: i= SET
+                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1546:4: i= SET
                     {
                     	i = (CommonToken)input.LT(1);
-                    	Match(input,SET,FOLLOW_SET_in_ident5762); if (failed) return retval;
+                    	Match(input,SET,FOLLOW_SET_in_ident5794); if (failed) return retval;
                     	if ( backtracking==0 ) stream_SET.Add(i);
 
                     	
@@ -23440,7 +23457,7 @@ public class ASParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
                     	
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 1532:10: -> IDENT[$i]
+                    	// 1546:10: -> IDENT[$i]
                     	{
                     	    adaptor.AddChild(root_0, adaptor.Create(IDENT, i));
                     	
@@ -24611,17 +24628,17 @@ public class ASParser : Parser
     public static readonly BitSet FOLLOW_assignmentExpression_in_encapsulatedExpression5612 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000001000UL});
     public static readonly BitSet FOLLOW_RPAREN_in_encapsulatedExpression5617 = new BitSet(new ulong[]{0x0000000000000002UL});
     public static readonly BitSet FOLLOW_FUNCTION_in_functionDefinition5647 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
-    public static readonly BitSet FOLLOW_parameterDeclarationList_in_functionDefinition5651 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000100002UL});
-    public static readonly BitSet FOLLOW_typeExpression_in_functionDefinition5653 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_block_in_functionDefinition5656 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_IDENT_in_ident5683 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_USE_in_ident5690 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_XML_in_ident5702 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_DYNAMIC_in_ident5714 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_IS_in_ident5726 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_AS_in_ident5738 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_GET_in_ident5750 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_SET_in_ident5762 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_parameterDeclarationList_in_functionDefinition5654 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000100002UL});
+    public static readonly BitSet FOLLOW_typeExpression_in_functionDefinition5661 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_block_in_functionDefinition5677 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_IDENT_in_ident5715 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_USE_in_ident5722 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_XML_in_ident5734 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_DYNAMIC_in_ident5746 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_IS_in_ident5758 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_AS_in_ident5770 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_GET_in_ident5782 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_SET_in_ident5794 = new BitSet(new ulong[]{0x0000000000000002UL});
     public static readonly BitSet FOLLOW_SEMI_in_synpred5575 = new BitSet(new ulong[]{0x0000000000000002UL});
     public static readonly BitSet FOLLOW_LCURLY_in_synpred361953 = new BitSet(new ulong[]{0x0000000000000002UL});
     public static readonly BitSet FOLLOW_expressionStatement_in_synpred381970 = new BitSet(new ulong[]{0x0000000000000002UL});
