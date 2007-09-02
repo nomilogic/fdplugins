@@ -192,7 +192,7 @@ namespace CodeReformatter
         {
             IASContext context   = ASContext.Context.CurrentModel.Context;
 
-            if (context != null && (context.GetType().ToString().Equals("AS2Context.Context") || context.GetType().ToString().Equals("AS3Context.Context")))
+            if (context != null && (context.GetType().ToString().Equals("AS2Context.Context")))
             {
                 ReformatMenuItem.Enabled = true;
             }
@@ -211,12 +211,14 @@ namespace CodeReformatter
         {
             ITabbedDocument doc = MainForm.CurrentDocument;
             IGenerator generator = null;
+            GeneratorReturnScope result = null;
+            CodeReformatter.Generators.ReformatOptions options = new CodeReformatter.Generators.ReformatOptions( this.settingObject );
 
             if (doc.IsEditable)
             {
                 if (ASContext.Context.CurrentModel.Context.GetType().ToString().Equals("AS2Context.Context"))
                 {
-                    generator = new AS2Generator();
+                    generator = new AS2Generator(options);
                 }
 
                 if (generator != null)
@@ -224,7 +226,6 @@ namespace CodeReformatter
                     MainForm.CallCommand("PluginCommand", "ResultsPanel.ClearResults");
                     String source = doc.SciControl.Text;
                     generator.NewLine = ASComplete.GetNewLineMarker(doc.SciControl.EOLMode);
-                    generator.SettingObject = settingObject;
                     
                     if (MainForm.Settings.UseTabs)
                     {
@@ -242,24 +243,25 @@ namespace CodeReformatter
 
                     try
                     {
-                        doc.SciControl.Text = generator.GenerateCode(source).ToString();
-                    }
-                    catch (Antlr.Runtime.RecognitionException error)
+                        result = generator.Parse(source);
+                    } catch (Antlr.Runtime.RecognitionException error)
                     {
                         MessageBar.ShowWarning(error.Line + ": " + error.Message);
-
                         TraceItem item = new TraceItem(doc.FileName + ":" + error.Line + ": characters " + error.CharPositionInLine + "-" + (error.CharPositionInLine + ((CommonToken)error.Token).Text.Length) + " : " + error.Message.TrimStart(), -3);
                         TraceManager.Add(item);
                         TraceManager.Add(error.StackTrace);
-
                         MainForm.CallCommand("PluginCommand", "ResultsPanel.ShowResults");
-                    }
-                    catch (Exception error)
+                        return;
+                    } catch (Exception error)
                     {
                         TraceManager.Add(error.StackTrace);
                         MessageBar.ShowWarning(error.Message);
                         MainForm.CallCommand("PluginCommand", "ResultsPanel.ShowResults");
+                        return;
                     }
+
+                    doc.SciControl.Text = result.Buffer.ToString();
+
                 }
             }
         }

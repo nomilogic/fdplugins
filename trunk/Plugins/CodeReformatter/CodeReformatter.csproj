@@ -72,6 +72,7 @@
     <Compile Include="Generators\Core\ASLexer.cs" />
     <Compile Include="Generators\Core\ASParser.cs" />
     <Compile Include="Generators\AS2Generator.cs" />
+    <Compile Include="Generators\ReformatOptions.cs" />
     <Compile Include="Generators\IGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PluginMain.cs" />
@@ -110,4 +111,7 @@ cd ..
 rmdir /S /Q _tmp_
 cd $(ProjectDir)</PostBuildEvent>
   </PropertyGroup>
+  <ItemGroup>
+    <None Include="AS.g" />
+  </ItemGroup>
 </Project>

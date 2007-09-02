@@ -9,77 +9,77 @@ namespace CodeReformatter
     [Serializable]
     public class Settings
     {
-        private Boolean NEWLINE_AFTER_CLASS_ = true;   // insert a newline after class definition (before the '{')
-        private Boolean NEWLINE_AFTER_METHOD_ = true;   // insert a newline after a method definition (before the '{')
-        private Boolean NEWLINE_AFTER_CONDITION_ = true;   // insert newline after if, for, while...
-        private Boolean NEWLINE_BEFORE_ELSE_ = true;   // insert newline after 'else'
-        private Boolean SPACE_BETWEEN_TYPE_ = false;
-        private Boolean SPACE_BETWEEN_ASSIGN_ = true;
-        private Boolean SPACE_BETWEEN_METHOD_CALL_ = false;
-        private Boolean SPACE_BETWEEN_OPERATORS_ = true;
-        private Boolean SPACE_BETWEEN_ARGUMENTS_ = true;
-
-        [Description("Insert a newline after class/package definition"), DefaultValue(true)]
-        public Boolean NEWLINE_AFTER_CLASS
-        {
-            get { return this.NEWLINE_AFTER_CLASS_; }
-            set { this.NEWLINE_AFTER_CLASS_ = value; }
-        }
+        private Boolean newline_after_method = true;   // insert a newline after a method definition (before the '{')
+        private Boolean newline_after_condition = true;   // insert newline after if, for, while...
+        private Boolean newline_before_else = true;   // insert newline after 'else'
+        private Boolean newline_between_fields = true;
+        private Boolean space_between_type = false;
+        private Boolean space_between_assign = true;
+        private Boolean space_before_method_call = false;
+        private Boolean space_between_operators = true;
+        private Boolean space_between_arguments = true;
 
         [Description("Insert a newline after method definition"), DefaultValue(true)]
-        public Boolean NEWLINE_AFTER_METHOD
+        public Boolean NewlineAfterMethod
         {
-            get { return this.NEWLINE_AFTER_METHOD_; }
-            set { this.NEWLINE_AFTER_METHOD_ = value; }
+            get { return this.newline_after_method; }
+            set { this.newline_after_method = value; }
         }
 
         [Description("Insert a newline after a loop (for, if, while..)"), DefaultValue(true)]
-        public Boolean NEWLINE_AFTER_CONDITION
+        public Boolean NewlineAfterCondition
         {
-            get { return this.NEWLINE_AFTER_CONDITION_; }
-            set { this.NEWLINE_AFTER_CONDITION_ = value; }
+            get { return this.newline_after_condition; }
+            set { this.newline_after_condition = value; }
         }
 
         [Description("Insert a newline before 'else'"), DefaultValue(true)]
-        public Boolean NEWLINE_BEFORE_ELSE
+        public Boolean NewlineBeforeElse
         {
-            get { return this.NEWLINE_BEFORE_ELSE_; }
-            set { this.NEWLINE_BEFORE_ELSE_ = value; }
+            get { return this.newline_before_else; }
+            set { this.newline_before_else = value; }
         }
 
         [Description("Insert between ':' type block"), DefaultValue(true)]
-        public Boolean SPACE_BETWEEN_TYPE
+        public Boolean SpaceBetweenType
         {
-            get { return this.SPACE_BETWEEN_TYPE_; }
-            set { this.SPACE_BETWEEN_TYPE_ = value; }
+            get { return this.space_between_type; }
+            set { this.space_between_type = value; }
         }
 
         [Description("Insert a space between '='"), DefaultValue(true)]
-        public Boolean SPACE_BETWEEN_ASSIGN
+        public Boolean SpaceBetweenAssign
         {
-            get { return this.SPACE_BETWEEN_ASSIGN_; }
-            set { this.SPACE_BETWEEN_ASSIGN_ = value; }
+            get { return this.space_between_assign; }
+            set { this.space_between_assign = value; }
         }
 
         [Description("Insert a space before and after method call parameter list '()'"), DefaultValue(true)]
-        public Boolean SPACE_BETWEEN_METHOD_CALL
+        public Boolean SpaceBeforeMethodCall
         {
-            get { return this.SPACE_BETWEEN_METHOD_CALL_; }
-            set { this.SPACE_BETWEEN_METHOD_CALL_ = value; }
+            get { return this.space_before_method_call; }
+            set { this.space_before_method_call = value; }
         }
 
         [Description("Insert a space between operators"), DefaultValue(true)]
-        public Boolean SPACE_BETWEEN_OPERATORS
+        public Boolean SpaceBetweenOperators
         {
-            get { return this.SPACE_BETWEEN_OPERATORS_; }
-            set { this.SPACE_BETWEEN_OPERATORS_ = value; }
+            get { return this.space_between_operators; }
+            set { this.space_between_operators = value; }
         }
 
         [Description("Insert a space after each argument, parameter"), DefaultValue(true)]
-        public Boolean SPACE_BETWEEN_ARGUMENTS
+        public Boolean SpaceBetweenArguments
         {
-            get { return this.SPACE_BETWEEN_ARGUMENTS_; }
-            set { this.SPACE_BETWEEN_ARGUMENTS_ = value; }
+            get { return this.space_between_arguments; }
+            set { this.space_between_arguments = value; }
+        }
+
+        [Description("Insert a newline after each object field, if any"), DefaultValue(true)]
+        public Boolean NewlineBetweenFields
+        {
+            get { return this.newline_between_fields; }
+            set { this.newline_between_fields = value; }
         }
     }
 
