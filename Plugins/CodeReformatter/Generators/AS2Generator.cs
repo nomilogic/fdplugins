@@ -24,6 +24,18 @@ namespace CodeReformatter.Generators
         private String newline = "\n";
         private String tab = "";
         private StringBuilder buffer;
+        private ASParser parser;
+        private ASLexer lexer;
+
+        public ASParser Parser
+        {
+            get { return this.parser; }
+        }
+
+        public ASLexer Lexer
+        {
+            get { return this.lexer; }
+        }
 
         /// <summary>
         /// Get/Set the Tab Width
@@ -79,9 +91,9 @@ namespace CodeReformatter.Generators
         {
             buffer = new StringBuilder();
             ANTLRStringStream input = new ANTLRStringStream(source);
-            ASLexer lexer = new ASLexer(input);
+            lexer = new ASLexer(input);
             CommonTokenStream tokens = new CommonTokenStream(lexer);
-            ASParser parser  = new ASParser(tokens, options);
+            parser  = new ASParser(tokens, options);
             parser.NewLine   = NewLine;
             parser.TabString = TabString;
             parser.SetInput(lexer, input);

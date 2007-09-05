@@ -104,7 +104,7 @@ CodeReformatter.Generators.Core
 	}
 	catch (MismatchedTokenException e)
 	{
-        Debug.WriteLine("[" + e.Line + ":" + e.Index + "]: Unexpected " + e.UnexpectedType.ToString() +  "( expecting: "+ e.expecting + " )");
+        Debug.WriteLine("[" + e.Line + ":" + e.Index + "]: " + e.Message + ". Unexpected " + e.UnexpectedType.ToString() +  "( expecting: "+ e.expecting + " )");
         throw e;
 	}
 	catch(RecognitionException e)
@@ -235,8 +235,6 @@ CodeReformatter.Generators.Core
     {
 		CommonTree tree;
 		CommonTree comment;
-		
-		Debug.WriteLine("insertComment(rule): " + rule);
 		
 		if(rule != null)
 		{
@@ -529,7 +527,7 @@ methodDefinition[CommonTree mods]
 									}
 		(
 			c1=comments?			{ insertComment(c1, true, false); }
-			block
+			block semi
 		)
 									{
 										CurrentTab--;
@@ -672,7 +670,7 @@ condition
 statement
 	:	(LCURLY)=> block
 	|	declarationStatement		{ buffer.Append(";"); }
-	|	expressionStatement			{ buffer.Append(";"); }
+	|	exp=expressionStatement			{ buffer.Append(";"); }
 	|	ifStatement
 	|	forStatement
 	|	whileStatement
@@ -1560,7 +1558,7 @@ functionDefinition
 										CurrentTab--;
 										buffer.Append(NewLine + tab);
 										buffer.Append("}");
-										buffer.Append(NewLine + tab);
+										//buffer.Append(NewLine + tab);
 									}
 		-> ^(FUNC_DEF parameterDeclarationList typeExpression? block)
 	;
