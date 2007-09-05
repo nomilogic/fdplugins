@@ -244,7 +244,7 @@ namespace CodeReformatter
                     try
                     {
                         result = generator.Parse(source);
-                    } catch (Antlr.Runtime.RecognitionException error)
+                    } catch (RecognitionException error)
                     {
                         MessageBar.ShowWarning(error.Line + ": " + error.Message);
                         TraceItem item = new TraceItem(doc.FileName + ":" + 
