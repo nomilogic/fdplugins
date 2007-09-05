@@ -1,4 +1,4 @@
-// $ANTLR 3.0 C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g 2007-09-05 21:22:56
+// $ANTLR 3.0 C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g 2007-09-06 00:56:26
 namespace 
 CodeReformatter.Generators.Core
 
@@ -498,8 +498,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = PACKAGE;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1582:12: ( 'package' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1582:12: 'package'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1580:12: ( 'package' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1580:12: 'package'
             {
             	Match("package"); 
 
@@ -520,8 +520,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = PUBLIC;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1583:11: ( 'public' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1583:11: 'public'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1581:11: ( 'public' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1581:11: 'public'
             {
             	Match("public"); 
 
@@ -542,8 +542,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = PRIVATE;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1584:12: ( 'private' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1584:12: 'private'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1582:12: ( 'private' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1582:12: 'private'
             {
             	Match("private"); 
 
@@ -564,8 +564,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = PROTECTED;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1585:13: ( 'protected' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1585:13: 'protected'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1583:13: ( 'protected' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1583:13: 'protected'
             {
             	Match("protected"); 
 
@@ -586,8 +586,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = INTERNAL;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1586:12: ( 'internal' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1586:12: 'internal'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1584:12: ( 'internal' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1584:12: 'internal'
             {
             	Match("internal"); 
 
@@ -608,8 +608,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = FUNCTION;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1587:12: ( 'function' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1587:12: 'function'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1585:12: ( 'function' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1585:12: 'function'
             {
             	Match("function"); 
 
@@ -630,8 +630,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = EXTENDS;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1588:12: ( 'extends' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1588:12: 'extends'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1586:12: ( 'extends' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1586:12: 'extends'
             {
             	Match("extends"); 
 
@@ -652,8 +652,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = IMPLEMENTS;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1589:14: ( 'implements' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1589:14: 'implements'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1587:14: ( 'implements' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1587:14: 'implements'
             {
             	Match("implements"); 
 
@@ -674,8 +674,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = VAR;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1590:9: ( 'var' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1590:9: 'var'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1588:9: ( 'var' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1588:9: 'var'
             {
             	Match("var"); 
 
@@ -696,8 +696,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = STATIC;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1591:11: ( 'static' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1591:11: 'static'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1589:11: ( 'static' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1589:11: 'static'
             {
             	Match("static"); 
 
@@ -718,8 +718,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = IF;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1592:8: ( 'if' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1592:8: 'if'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1590:8: ( 'if' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1590:8: 'if'
             {
             	Match("if"); 
 
@@ -740,8 +740,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = IMPORT;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1593:11: ( 'import' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1593:11: 'import'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1591:11: ( 'import' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1591:11: 'import'
             {
             	Match("import"); 
 
@@ -762,8 +762,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = FOR;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1594:9: ( 'for' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1594:9: 'for'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1592:9: ( 'for' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1592:9: 'for'
             {
             	Match("for"); 
 
@@ -784,8 +784,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = EACH;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1595:9: ( 'each' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1595:9: 'each'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1593:9: ( 'each' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1593:9: 'each'
             {
             	Match("each"); 
 
@@ -806,8 +806,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = IN;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1596:8: ( 'in' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1596:8: 'in'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1594:8: ( 'in' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1594:8: 'in'
             {
             	Match("in"); 
 
@@ -828,8 +828,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = WHILE;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1597:10: ( 'while' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1597:10: 'while'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1595:10: ( 'while' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1595:10: 'while'
             {
             	Match("while"); 
 
@@ -850,8 +850,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = DO;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1598:8: ( 'do' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1598:8: 'do'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1596:8: ( 'do' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1596:8: 'do'
             {
             	Match("do"); 
 
@@ -872,8 +872,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = SWITCH;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1599:11: ( 'switch' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1599:11: 'switch'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1597:11: ( 'switch' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1597:11: 'switch'
             {
             	Match("switch"); 
 
@@ -894,8 +894,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = CASE;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1600:9: ( 'case' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1600:9: 'case'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1598:9: ( 'case' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1598:9: 'case'
             {
             	Match("case"); 
 
@@ -916,8 +916,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = DEFAULT;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1601:12: ( 'default' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1601:12: 'default'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1599:12: ( 'default' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1599:12: 'default'
             {
             	Match("default"); 
 
@@ -938,8 +938,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = ELSE;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1602:9: ( 'else' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1602:9: 'else'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1600:9: ( 'else' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1600:9: 'else'
             {
             	Match("else"); 
 
@@ -960,8 +960,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = CONST;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1603:10: ( 'const' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1603:10: 'const'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1601:10: ( 'const' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1601:10: 'const'
             {
             	Match("const"); 
 
@@ -982,8 +982,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = CLASS;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1604:10: ( 'class' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1604:10: 'class'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1602:10: ( 'class' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1602:10: 'class'
             {
             	Match("class"); 
 
@@ -1004,8 +1004,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = INTERFACE;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1605:13: ( 'interface' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1605:13: 'interface'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1603:13: ( 'interface' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1603:13: 'interface'
             {
             	Match("interface"); 
 
@@ -1026,8 +1026,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = TRUE;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1606:9: ( 'true' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1606:9: 'true'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1604:9: ( 'true' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1604:9: 'true'
             {
             	Match("true"); 
 
@@ -1048,8 +1048,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = FALSE;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1607:10: ( 'false' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1607:10: 'false'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1605:10: ( 'false' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1605:10: 'false'
             {
             	Match("false"); 
 
@@ -1070,8 +1070,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = DYNAMIC;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1608:12: ( 'dynamic' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1608:12: 'dynamic'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1606:12: ( 'dynamic' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1606:12: 'dynamic'
             {
             	Match("dynamic"); 
 
@@ -1092,8 +1092,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = USE;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1609:9: ( 'use' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1609:9: 'use'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1607:9: ( 'use' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1607:9: 'use'
             {
             	Match("use"); 
 
@@ -1114,8 +1114,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = XML;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1610:9: ( 'xml' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1610:9: 'xml'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1608:9: ( 'xml' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1608:9: 'xml'
             {
             	Match("xml"); 
 
@@ -1136,8 +1136,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = IS;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1611:8: ( 'is' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1611:8: 'is'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1609:8: ( 'is' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1609:8: 'is'
             {
             	Match("is"); 
 
@@ -1158,8 +1158,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = AS;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1612:8: ( 'as' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1612:8: 'as'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1610:8: ( 'as' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1610:8: 'as'
             {
             	Match("as"); 
 
@@ -1180,8 +1180,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = GET;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1613:9: ( 'get' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1613:9: 'get'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1611:9: ( 'get' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1611:9: 'get'
             {
             	Match("get"); 
 
@@ -1202,8 +1202,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = SET;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1614:9: ( 'set' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1614:9: 'set'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1612:9: ( 'set' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1612:9: 'set'
             {
             	Match("set"); 
 
@@ -1224,8 +1224,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = WITH;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1615:9: ( 'with' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1615:9: 'with'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1613:9: ( 'with' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1613:9: 'with'
             {
             	Match("with"); 
 
@@ -1246,8 +1246,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = RETURN;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1616:11: ( 'return' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1616:11: 'return'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1614:11: ( 'return' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1614:11: 'return'
             {
             	Match("return"); 
 
@@ -1268,8 +1268,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = CONTINUE;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1617:12: ( 'continue' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1617:12: 'continue'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1615:12: ( 'continue' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1615:12: 'continue'
             {
             	Match("continue"); 
 
@@ -1290,8 +1290,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = BREAK;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1618:10: ( 'break' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1618:10: 'break'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1616:10: ( 'break' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1616:10: 'break'
             {
             	Match("break"); 
 
@@ -1312,8 +1312,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = NULL;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1619:9: ( 'null' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1619:9: 'null'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1617:9: ( 'null' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1617:9: 'null'
             {
             	Match("null"); 
 
@@ -1334,8 +1334,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = UNDEFINED;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1620:17: ( 'undefined' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1620:17: 'undefined'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1618:17: ( 'undefined' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1618:17: 'undefined'
             {
             	Match("undefined"); 
 
@@ -1356,8 +1356,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = NEW;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1621:9: ( 'new' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1621:9: 'new'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1619:9: ( 'new' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1619:9: 'new'
             {
             	Match("new"); 
 
@@ -1378,8 +1378,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = INSTANCEOF;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1622:14: ( 'instanceof' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1622:14: 'instanceof'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1620:14: ( 'instanceof' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1620:14: 'instanceof'
             {
             	Match("instanceof"); 
 
@@ -1400,8 +1400,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = DELETE;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1623:11: ( 'delete' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1623:11: 'delete'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1621:11: ( 'delete' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1621:11: 'delete'
             {
             	Match("delete"); 
 
@@ -1422,8 +1422,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = TYPEOF;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1624:11: ( 'typeof' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1624:11: 'typeof'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1622:11: ( 'typeof' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1622:11: 'typeof'
             {
             	Match("typeof"); 
 
@@ -1444,8 +1444,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = QUESTION;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1627:13: ( '?' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1627:13: '?'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1625:13: ( '?' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1625:13: '?'
             {
             	Match('?'); 
             
@@ -1465,8 +1465,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = LPAREN;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1628:12: ( '(' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1628:12: '('
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1626:12: ( '(' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1626:12: '('
             {
             	Match('('); 
             
@@ -1486,8 +1486,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = RPAREN;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1629:12: ( ')' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1629:12: ')'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1627:12: ( ')' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1627:12: ')'
             {
             	Match(')'); 
             
@@ -1507,8 +1507,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = LBRACK;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1630:12: ( '[' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1630:12: '['
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1628:12: ( '[' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1628:12: '['
             {
             	Match('['); 
             
@@ -1528,8 +1528,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = RBRACK;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1631:12: ( ']' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1631:12: ']'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1629:12: ( ']' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1629:12: ']'
             {
             	Match(']'); 
             
@@ -1549,8 +1549,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = LCURLY;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1632:12: ( '{' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1632:12: '{'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1630:12: ( '{' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1630:12: '{'
             {
             	Match('{'); 
             
@@ -1570,8 +1570,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = RCURLY;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1633:12: ( '}' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1633:12: '}'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1631:12: ( '}' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1631:12: '}'
             {
             	Match('}'); 
             
@@ -1591,8 +1591,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = COLON;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1634:11: ( ':' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1634:11: ':'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1632:11: ( ':' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1632:11: ':'
             {
             	Match(':'); 
             
@@ -1612,8 +1612,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = DBL_COLON;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1635:14: ( '::' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1635:14: '::'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1633:14: ( '::' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1633:14: '::'
             {
             	Match("::"); 
 
@@ -1634,8 +1634,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = COMMA;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1636:11: ( ',' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1636:11: ','
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1634:11: ( ',' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1634:11: ','
             {
             	Match(','); 
             
@@ -1655,8 +1655,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = ASSIGN;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1637:12: ( '=' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1637:12: '='
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1635:12: ( '=' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1635:12: '='
             {
             	Match('='); 
             
@@ -1676,8 +1676,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = EQUAL;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1638:11: ( '==' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1638:11: '=='
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1636:11: ( '==' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1636:11: '=='
             {
             	Match("=="); 
 
@@ -1698,8 +1698,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = STRICT_EQUAL;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1639:16: ( '===' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1639:16: '==='
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1637:16: ( '===' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1637:16: '==='
             {
             	Match("==="); 
 
@@ -1720,8 +1720,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = LNOT;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1640:10: ( '!' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1640:10: '!'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1638:10: ( '!' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1638:10: '!'
             {
             	Match('!'); 
             
@@ -1741,8 +1741,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = BNOT;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1641:10: ( '~' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1641:10: '~'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1639:10: ( '~' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1639:10: '~'
             {
             	Match('~'); 
             
@@ -1762,8 +1762,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = NOT_EQUAL;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1642:14: ( '!=' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1642:14: '!='
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1640:14: ( '!=' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1640:14: '!='
             {
             	Match("!="); 
 
@@ -1784,8 +1784,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = STRICT_NOT_EQUAL;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1643:19: ( '!==' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1643:19: '!=='
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1641:19: ( '!==' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1641:19: '!=='
             {
             	Match("!=="); 
 
@@ -1806,8 +1806,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = DIV;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1644:10: ( '/' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1644:10: '/'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1642:10: ( '/' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1642:10: '/'
             {
             	Match('/'); 
             
@@ -1827,8 +1827,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = DIV_ASSIGN;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1645:15: ( '/=' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1645:15: '/='
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1643:15: ( '/=' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1643:15: '/='
             {
             	Match("/="); 
 
@@ -1849,8 +1849,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = PLUS;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1646:10: ( '+' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1646:10: '+'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1644:10: ( '+' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1644:10: '+'
             {
             	Match('+'); 
             
@@ -1870,8 +1870,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = PLUS_ASSIGN;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1647:16: ( '+=' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1647:16: '+='
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1645:16: ( '+=' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1645:16: '+='
             {
             	Match("+="); 
 
@@ -1892,8 +1892,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = INC;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1648:10: ( '++' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1648:10: '++'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1646:10: ( '++' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1646:10: '++'
             {
             	Match("++"); 
 
@@ -1914,8 +1914,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = MINUS;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1649:11: ( '-' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1649:11: '-'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1647:11: ( '-' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1647:11: '-'
             {
             	Match('-'); 
             
@@ -1935,8 +1935,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = MINUS_ASSIGN;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1650:16: ( '-=' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1650:16: '-='
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1648:16: ( '-=' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1648:16: '-='
             {
             	Match("-="); 
 
@@ -1957,8 +1957,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = DEC;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1651:10: ( '--' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1651:10: '--'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1649:10: ( '--' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1649:10: '--'
             {
             	Match("--"); 
 
@@ -1979,8 +1979,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = STAR;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1652:10: ( '*' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1652:10: '*'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1650:10: ( '*' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1650:10: '*'
             {
             	Match('*'); 
             
@@ -2000,8 +2000,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = STAR_ASSIGN;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1653:16: ( '*=' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1653:16: '*='
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1651:16: ( '*=' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1651:16: '*='
             {
             	Match("*="); 
 
@@ -2022,8 +2022,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = MOD;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1654:10: ( '%' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1654:10: '%'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1652:10: ( '%' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1652:10: '%'
             {
             	Match('%'); 
             
@@ -2043,8 +2043,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = MOD_ASSIGN;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1655:15: ( '%=' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1655:15: '%='
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1653:15: ( '%=' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1653:15: '%='
             {
             	Match("%="); 
 
@@ -2065,8 +2065,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = SR;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1656:9: ( '>>' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1656:9: '>>'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1654:9: ( '>>' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1654:9: '>>'
             {
             	Match(">>"); 
 
@@ -2087,8 +2087,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = SR_ASSIGN;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1657:14: ( '>>=' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1657:14: '>>='
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1655:14: ( '>>=' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1655:14: '>>='
             {
             	Match(">>="); 
 
@@ -2109,8 +2109,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = BSR;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1658:10: ( '>>>' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1658:10: '>>>'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1656:10: ( '>>>' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1656:10: '>>>'
             {
             	Match(">>>"); 
 
@@ -2131,8 +2131,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = BSR_ASSIGN;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1659:15: ( '>>>=' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1659:15: '>>>='
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1657:15: ( '>>>=' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1657:15: '>>>='
             {
             	Match(">>>="); 
 
@@ -2153,8 +2153,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = GE;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1660:9: ( '>=' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1660:9: '>='
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1658:9: ( '>=' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1658:9: '>='
             {
             	Match(">="); 
 
@@ -2175,8 +2175,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = GT;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1661:9: ( '>' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1661:9: '>'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1659:9: ( '>' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1659:9: '>'
             {
             	Match('>'); 
             
@@ -2196,8 +2196,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = SL;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1662:9: ( '<<' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1662:9: '<<'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1660:9: ( '<<' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1660:9: '<<'
             {
             	Match("<<"); 
 
@@ -2218,8 +2218,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = SL_ASSIGN;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1663:14: ( '<<=' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1663:14: '<<='
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1661:14: ( '<<=' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1661:14: '<<='
             {
             	Match("<<="); 
 
@@ -2240,8 +2240,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = LE;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1664:9: ( '<=' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1664:9: '<='
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1662:9: ( '<=' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1662:9: '<='
             {
             	Match("<="); 
 
@@ -2262,8 +2262,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = LT;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1665:9: ( '<' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1665:9: '<'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1663:9: ( '<' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1663:9: '<'
             {
             	Match('<'); 
             
@@ -2283,8 +2283,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = BXOR;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1666:10: ( '^' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1666:10: '^'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1664:10: ( '^' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1664:10: '^'
             {
             	Match('^'); 
             
@@ -2304,8 +2304,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = BXOR_ASSIGN;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1667:16: ( '^=' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1667:16: '^='
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1665:16: ( '^=' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1665:16: '^='
             {
             	Match("^="); 
 
@@ -2326,8 +2326,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = BOR;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1668:10: ( '|' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1668:10: '|'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1666:10: ( '|' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1666:10: '|'
             {
             	Match('|'); 
             
@@ -2347,8 +2347,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = BOR_ASSIGN;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1669:15: ( '|=' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1669:15: '|='
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1667:15: ( '|=' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1667:15: '|='
             {
             	Match("|="); 
 
@@ -2369,8 +2369,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = LOR;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1670:10: ( '||' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1670:10: '||'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1668:10: ( '||' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1668:10: '||'
             {
             	Match("||"); 
 
@@ -2391,8 +2391,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = BAND;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1671:10: ( '&' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1671:10: '&'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1669:10: ( '&' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1669:10: '&'
             {
             	Match('&'); 
             
@@ -2412,8 +2412,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = BAND_ASSIGN;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1672:16: ( '&=' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1672:16: '&='
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1670:16: ( '&=' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1670:16: '&='
             {
             	Match("&="); 
 
@@ -2434,8 +2434,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = LAND;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1673:10: ( '&&' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1673:10: '&&'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1671:10: ( '&&' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1671:10: '&&'
             {
             	Match("&&"); 
 
@@ -2456,8 +2456,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = LAND_ASSIGN;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1674:16: ( '&&=' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1674:16: '&&='
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1672:16: ( '&&=' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1672:16: '&&='
             {
             	Match("&&="); 
 
@@ -2478,8 +2478,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = LOR_ASSIGN;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1675:15: ( '||=' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1675:15: '||='
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1673:15: ( '||=' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1673:15: '||='
             {
             	Match("||="); 
 
@@ -2500,8 +2500,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = E4X_ATTRI;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1676:14: ( '@' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1676:14: '@'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1674:14: ( '@' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1674:14: '@'
             {
             	Match('@'); 
             
@@ -2521,8 +2521,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = SEMI;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1677:10: ( ';' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1677:10: ';'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1675:10: ( ';' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1675:10: ';'
             {
             	Match(';'); 
             
@@ -2542,8 +2542,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = DOT;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1678:10: ( '.' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1678:10: '.'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1676:10: ( '.' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1676:10: '.'
             {
             	Match('.'); 
             
@@ -2563,8 +2563,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = E4X_DESC;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1679:13: ( '..' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1679:13: '..'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1677:13: ( '..' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1677:13: '..'
             {
             	Match(".."); 
 
@@ -2585,8 +2585,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = REST;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1680:10: ( '...' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1680:10: '...'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1678:10: ( '...' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1678:10: '...'
             {
             	Match("..."); 
 
@@ -2607,8 +2607,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = VOID;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1681:10: ( 'Void' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1681:10: 'Void'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1679:10: ( 'Void' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1679:10: 'Void'
             {
             	Match("Void"); 
 
@@ -2629,8 +2629,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = IDENT;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1684:4: ( ( 'A' .. 'Z' | 'a' .. 'z' | '_' | '$' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '$' )* )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1684:4: ( 'A' .. 'Z' | 'a' .. 'z' | '_' | '$' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '$' )*
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1682:4: ( ( 'A' .. 'Z' | 'a' .. 'z' | '_' | '$' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '$' )* )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1682:4: ( 'A' .. 'Z' | 'a' .. 'z' | '_' | '$' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '$' )*
             {
             	if ( input.LA(1) == '$' || (input.LA(1) >= 'A' && input.LA(1) <= 'Z') || input.LA(1) == '_' || (input.LA(1) >= 'a' && input.LA(1) <= 'z') ) 
             	{
@@ -2644,7 +2644,7 @@ public class ASLexer : Lexer
             	    Recover(mse);    throw mse;
             	}
 
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1684:38: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '$' )*
+            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1682:38: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '$' )*
             	do 
             	{
             	    int alt1 = 2;
@@ -2702,7 +2702,7 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = STRING_LITERAL;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1688:4: ( '\"' ( ESC | ~ ( '\"' | '\\\\' | '\\n' | '\\r' ) )* '\"' | '\\'' ( ESC | ~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) )* '\\'' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1686:4: ( '\"' ( ESC | ~ ( '\"' | '\\\\' | '\\n' | '\\r' ) )* '\"' | '\\'' ( ESC | ~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) )* '\\'' )
             int alt4 = 2;
             int LA4_0 = input.LA(1);
             
@@ -2717,17 +2717,17 @@ public class ASLexer : Lexer
             else 
             {
                 NoViableAltException nvae_d4s0 =
-                    new NoViableAltException("1687:1: STRING_LITERAL : ( '\"' ( ESC | ~ ( '\"' | '\\\\' | '\\n' | '\\r' ) )* '\"' | '\\'' ( ESC | ~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) )* '\\'' );", 4, 0, input);
+                    new NoViableAltException("1685:1: STRING_LITERAL : ( '\"' ( ESC | ~ ( '\"' | '\\\\' | '\\n' | '\\r' ) )* '\"' | '\\'' ( ESC | ~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) )* '\\'' );", 4, 0, input);
             
                 throw nvae_d4s0;
             }
             switch (alt4) 
             {
                 case 1 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1688:4: '\"' ( ESC | ~ ( '\"' | '\\\\' | '\\n' | '\\r' ) )* '\"'
+                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1686:4: '\"' ( ESC | ~ ( '\"' | '\\\\' | '\\n' | '\\r' ) )* '\"'
                     {
                     	Match('\"'); 
-                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1688:8: ( ESC | ~ ( '\"' | '\\\\' | '\\n' | '\\r' ) )*
+                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1686:8: ( ESC | ~ ( '\"' | '\\\\' | '\\n' | '\\r' ) )*
                     	do 
                     	{
                     	    int alt2 = 3;
@@ -2746,14 +2746,14 @@ public class ASLexer : Lexer
                     	    switch (alt2) 
                     		{
                     			case 1 :
-                    			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1688:9: ESC
+                    			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1686:9: ESC
                     			    {
                     			    	mESC(); 
                     			    
                     			    }
                     			    break;
                     			case 2 :
-                    			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1688:13: ~ ( '\"' | '\\\\' | '\\n' | '\\r' )
+                    			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1686:13: ~ ( '\"' | '\\\\' | '\\n' | '\\r' )
                     			    {
                     			    	if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '\t') || (input.LA(1) >= '\u000B' && input.LA(1) <= '\f') || (input.LA(1) >= '\u000E' && input.LA(1) <= '!') || (input.LA(1) >= '#' && input.LA(1) <= '[') || (input.LA(1) >= ']' && input.LA(1) <= '\uFFFE') ) 
                     			    	{
@@ -2784,10 +2784,10 @@ public class ASLexer : Lexer
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1689:4: '\\'' ( ESC | ~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) )* '\\''
+                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1687:4: '\\'' ( ESC | ~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) )* '\\''
                     {
                     	Match('\''); 
-                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1689:9: ( ESC | ~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) )*
+                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1687:9: ( ESC | ~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) )*
                     	do 
                     	{
                     	    int alt3 = 3;
@@ -2806,14 +2806,14 @@ public class ASLexer : Lexer
                     	    switch (alt3) 
                     		{
                     			case 1 :
-                    			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1689:10: ESC
+                    			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1687:10: ESC
                     			    {
                     			    	mESC(); 
                     			    
                     			    }
                     			    break;
                     			case 2 :
-                    			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1689:14: ~ ( '\\'' | '\\\\' | '\\n' | '\\r' )
+                    			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1687:14: ~ ( '\\'' | '\\\\' | '\\n' | '\\r' )
                     			    {
                     			    	if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '\t') || (input.LA(1) >= '\u000B' && input.LA(1) <= '\f') || (input.LA(1) >= '\u000E' && input.LA(1) <= '&') || (input.LA(1) >= '(' && input.LA(1) <= '[') || (input.LA(1) >= ']' && input.LA(1) <= '\uFFFE') ) 
                     			    	{
@@ -2859,8 +2859,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = HEX_LITERAL;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1692:15: ( '0' ( 'x' | 'X' ) ( HEX_DIGIT )+ )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1692:15: '0' ( 'x' | 'X' ) ( HEX_DIGIT )+
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1690:15: ( '0' ( 'x' | 'X' ) ( HEX_DIGIT )+ )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1690:15: '0' ( 'x' | 'X' ) ( HEX_DIGIT )+
             {
             	Match('0'); 
             	if ( input.LA(1) == 'X' || input.LA(1) == 'x' ) 
@@ -2875,7 +2875,7 @@ public class ASLexer : Lexer
             	    Recover(mse);    throw mse;
             	}
 
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1692:29: ( HEX_DIGIT )+
+            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1690:29: ( HEX_DIGIT )+
             	int cnt5 = 0;
             	do 
             	{
@@ -2891,7 +2891,7 @@ public class ASLexer : Lexer
             	    switch (alt5) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1692:29: HEX_DIGIT
+            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1690:29: HEX_DIGIT
             			    {
             			    	mHEX_DIGIT(); 
             			    
@@ -2927,10 +2927,10 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = DECIMAL_LITERAL;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1694:19: ( ( '0' | '1' .. '9' ( '0' .. '9' )* ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1694:19: ( '0' | '1' .. '9' ( '0' .. '9' )* )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1692:19: ( ( '0' | '1' .. '9' ( '0' .. '9' )* ) )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1692:19: ( '0' | '1' .. '9' ( '0' .. '9' )* )
             {
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1694:19: ( '0' | '1' .. '9' ( '0' .. '9' )* )
+            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1692:19: ( '0' | '1' .. '9' ( '0' .. '9' )* )
             	int alt7 = 2;
             	int LA7_0 = input.LA(1);
             	
@@ -2945,24 +2945,24 @@ public class ASLexer : Lexer
             	else 
             	{
             	    NoViableAltException nvae_d7s0 =
-            	        new NoViableAltException("1694:19: ( '0' | '1' .. '9' ( '0' .. '9' )* )", 7, 0, input);
+            	        new NoViableAltException("1692:19: ( '0' | '1' .. '9' ( '0' .. '9' )* )", 7, 0, input);
             	
             	    throw nvae_d7s0;
             	}
             	switch (alt7) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1694:20: '0'
+            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1692:20: '0'
             	        {
             	        	Match('0'); 
             	        
             	        }
             	        break;
             	    case 2 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1694:26: '1' .. '9' ( '0' .. '9' )*
+            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1692:26: '1' .. '9' ( '0' .. '9' )*
             	        {
             	        	MatchRange('1','9'); 
-            	        	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1694:35: ( '0' .. '9' )*
+            	        	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1692:35: ( '0' .. '9' )*
             	        	do 
             	        	{
             	        	    int alt6 = 2;
@@ -2977,7 +2977,7 @@ public class ASLexer : Lexer
             	        	    switch (alt6) 
             	        		{
             	        			case 1 :
-            	        			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1694:35: '0' .. '9'
+            	        			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1692:35: '0' .. '9'
             	        			    {
             	        			    	MatchRange('0','9'); 
             	        			    
@@ -3015,11 +3015,11 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = OCTAL_LITERAL;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1696:17: ( '0' ( '0' .. '7' )+ )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1696:17: '0' ( '0' .. '7' )+
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1694:17: ( '0' ( '0' .. '7' )+ )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1694:17: '0' ( '0' .. '7' )+
             {
             	Match('0'); 
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1696:21: ( '0' .. '7' )+
+            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1694:21: ( '0' .. '7' )+
             	int cnt8 = 0;
             	do 
             	{
@@ -3035,7 +3035,7 @@ public class ASLexer : Lexer
             	    switch (alt8) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1696:22: '0' .. '7'
+            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1694:22: '0' .. '7'
             			    {
             			    	MatchRange('0','7'); 
             			    
@@ -3071,7 +3071,7 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = FLOAT_LITERAL;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1699:9: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1697:9: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? )
             int alt14 = 2;
             int LA14_0 = input.LA(1);
             
@@ -3086,16 +3086,16 @@ public class ASLexer : Lexer
             else 
             {
                 NoViableAltException nvae_d14s0 =
-                    new NoViableAltException("1698:1: FLOAT_LITERAL : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? );", 14, 0, input);
+                    new NoViableAltException("1696:1: FLOAT_LITERAL : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? );", 14, 0, input);
             
                 throw nvae_d14s0;
             }
             switch (alt14) 
             {
                 case 1 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1699:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
+                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1697:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
                     {
-                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1699:9: ( '0' .. '9' )+
+                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1697:9: ( '0' .. '9' )+
                     	int cnt9 = 0;
                     	do 
                     	{
@@ -3111,7 +3111,7 @@ public class ASLexer : Lexer
                     	    switch (alt9) 
                     		{
                     			case 1 :
-                    			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1699:10: '0' .. '9'
+                    			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1697:10: '0' .. '9'
                     			    {
                     			    	MatchRange('0','9'); 
                     			    
@@ -3131,7 +3131,7 @@ public class ASLexer : Lexer
                     		;	// Stops C# compiler whinging that label 'loop9' has no statements
 
                     	Match('.'); 
-                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1699:25: ( '0' .. '9' )*
+                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1697:25: ( '0' .. '9' )*
                     	do 
                     	{
                     	    int alt10 = 2;
@@ -3146,7 +3146,7 @@ public class ASLexer : Lexer
                     	    switch (alt10) 
                     		{
                     			case 1 :
-                    			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1699:26: '0' .. '9'
+                    			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1697:26: '0' .. '9'
                     			    {
                     			    	MatchRange('0','9'); 
                     			    
@@ -3161,7 +3161,7 @@ public class ASLexer : Lexer
                     	loop10:
                     		;	// Stops C# compiler whinging that label 'loop10' has no statements
 
-                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1699:37: ( EXPONENT )?
+                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1697:37: ( EXPONENT )?
                     	int alt11 = 2;
                     	int LA11_0 = input.LA(1);
                     	
@@ -3172,7 +3172,7 @@ public class ASLexer : Lexer
                     	switch (alt11) 
                     	{
                     	    case 1 :
-                    	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1699:37: EXPONENT
+                    	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1697:37: EXPONENT
                     	        {
                     	        	mEXPONENT(); 
                     	        
@@ -3185,10 +3185,10 @@ public class ASLexer : Lexer
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1700:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
+                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1698:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
                     {
                     	Match('.'); 
-                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1700:13: ( '0' .. '9' )+
+                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1698:13: ( '0' .. '9' )+
                     	int cnt12 = 0;
                     	do 
                     	{
@@ -3204,7 +3204,7 @@ public class ASLexer : Lexer
                     	    switch (alt12) 
                     		{
                     			case 1 :
-                    			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1700:14: '0' .. '9'
+                    			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1698:14: '0' .. '9'
                     			    {
                     			    	MatchRange('0','9'); 
                     			    
@@ -3223,7 +3223,7 @@ public class ASLexer : Lexer
                     	loop12:
                     		;	// Stops C# compiler whinging that label 'loop12' has no statements
 
-                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1700:25: ( EXPONENT )?
+                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1698:25: ( EXPONENT )?
                     	int alt13 = 2;
                     	int LA13_0 = input.LA(1);
                     	
@@ -3234,7 +3234,7 @@ public class ASLexer : Lexer
                     	switch (alt13) 
                     	{
                     	    case 1 :
-                    	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1700:25: EXPONENT
+                    	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1698:25: EXPONENT
                     	        {
                     	        	mEXPONENT(); 
                     	        
@@ -3262,10 +3262,10 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = WS;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1705:6: ( ( ' ' | '\\t' | '\\f' )+ )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1705:6: ( ' ' | '\\t' | '\\f' )+
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1703:6: ( ( ' ' | '\\t' | '\\f' )+ )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1703:6: ( ' ' | '\\t' | '\\f' )+
             {
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1705:6: ( ' ' | '\\t' | '\\f' )+
+            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1703:6: ( ' ' | '\\t' | '\\f' )+
             	int cnt15 = 0;
             	do 
             	{
@@ -3329,10 +3329,10 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = NL;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1713:4: ( ( '\\r' '\\n' | '\\r' | '\\n' ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1713:4: ( '\\r' '\\n' | '\\r' | '\\n' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1711:4: ( ( '\\r' '\\n' | '\\r' | '\\n' ) )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1711:4: ( '\\r' '\\n' | '\\r' | '\\n' )
             {
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1713:4: ( '\\r' '\\n' | '\\r' | '\\n' )
+            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1711:4: ( '\\r' '\\n' | '\\r' | '\\n' )
             	int alt16 = 3;
             	int LA16_0 = input.LA(1);
             	
@@ -3355,14 +3355,14 @@ public class ASLexer : Lexer
             	else 
             	{
             	    NoViableAltException nvae_d16s0 =
-            	        new NoViableAltException("1713:4: ( '\\r' '\\n' | '\\r' | '\\n' )", 16, 0, input);
+            	        new NoViableAltException("1711:4: ( '\\r' '\\n' | '\\r' | '\\n' )", 16, 0, input);
             	
             	    throw nvae_d16s0;
             	}
             	switch (alt16) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1714:4: '\\r' '\\n'
+            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1712:4: '\\r' '\\n'
             	        {
             	        	Match('\r'); 
             	        	Match('\n'); 
@@ -3370,14 +3370,14 @@ public class ASLexer : Lexer
             	        }
             	        break;
             	    case 2 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1715:5: '\\r'
+            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1713:5: '\\r'
             	        {
             	        	Match('\r'); 
             	        
             	        }
             	        break;
             	    case 3 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1716:5: '\\n'
+            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1714:5: '\\n'
             	        {
             	        	Match('\n'); 
             	        
@@ -3404,10 +3404,10 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = BOM;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1722:7: ( ( '\\u00EF' '\\u00BB' '\\u00BF' | '\\uFEFF' ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1722:7: ( '\\u00EF' '\\u00BB' '\\u00BF' | '\\uFEFF' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1720:7: ( ( '\\u00EF' '\\u00BB' '\\u00BF' | '\\uFEFF' ) )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1720:7: ( '\\u00EF' '\\u00BB' '\\u00BF' | '\\uFEFF' )
             {
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1722:7: ( '\\u00EF' '\\u00BB' '\\u00BF' | '\\uFEFF' )
+            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1720:7: ( '\\u00EF' '\\u00BB' '\\u00BF' | '\\uFEFF' )
             	int alt17 = 2;
             	int LA17_0 = input.LA(1);
             	
@@ -3422,14 +3422,14 @@ public class ASLexer : Lexer
             	else 
             	{
             	    NoViableAltException nvae_d17s0 =
-            	        new NoViableAltException("1722:7: ( '\\u00EF' '\\u00BB' '\\u00BF' | '\\uFEFF' )", 17, 0, input);
+            	        new NoViableAltException("1720:7: ( '\\u00EF' '\\u00BB' '\\u00BF' | '\\uFEFF' )", 17, 0, input);
             	
             	    throw nvae_d17s0;
             	}
             	switch (alt17) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1722:9: '\\u00EF' '\\u00BB' '\\u00BF'
+            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1720:9: '\\u00EF' '\\u00BB' '\\u00BF'
             	        {
             	        	Match('\u00EF'); 
             	        	Match('\u00BB'); 
@@ -3438,7 +3438,7 @@ public class ASLexer : Lexer
             	        }
             	        break;
             	    case 2 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1723:5: '\\uFEFF'
+            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1721:5: '\\uFEFF'
             	        {
             	        	Match('\uFEFF'); 
             	        
@@ -3465,8 +3465,8 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = INCLUDE_DIRECTIVE;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1729:4: ( '#include' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1729:4: '#include'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1727:4: ( '#include' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1727:4: '#include'
             {
             	Match("#include"); 
 
@@ -3487,12 +3487,12 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = SL_COMMENT;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1734:4: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\n' | '\\r' ( '\\n' )? )? )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1734:4: '//' (~ ( '\\n' | '\\r' ) )* ( '\\n' | '\\r' ( '\\n' )? )?
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1732:4: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\n' | '\\r' ( '\\n' )? )? )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1732:4: '//' (~ ( '\\n' | '\\r' ) )* ( '\\n' | '\\r' ( '\\n' )? )?
             {
             	Match("//"); 
 
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1734:9: (~ ( '\\n' | '\\r' ) )*
+            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1732:9: (~ ( '\\n' | '\\r' ) )*
             	do 
             	{
             	    int alt18 = 2;
@@ -3507,7 +3507,7 @@ public class ASLexer : Lexer
             	    switch (alt18) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1734:10: ~ ( '\\n' | '\\r' )
+            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1732:10: ~ ( '\\n' | '\\r' )
             			    {
             			    	if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '\t') || (input.LA(1) >= '\u000B' && input.LA(1) <= '\f') || (input.LA(1) >= '\u000E' && input.LA(1) <= '\uFFFE') ) 
             			    	{
@@ -3533,7 +3533,7 @@ public class ASLexer : Lexer
             	loop18:
             		;	// Stops C# compiler whinging that label 'loop18' has no statements
 
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1734:25: ( '\\n' | '\\r' ( '\\n' )? )?
+            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1732:25: ( '\\n' | '\\r' ( '\\n' )? )?
             	int alt20 = 3;
             	int LA20_0 = input.LA(1);
             	
@@ -3548,17 +3548,17 @@ public class ASLexer : Lexer
             	switch (alt20) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1734:26: '\\n'
+            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1732:26: '\\n'
             	        {
             	        	Match('\n'); 
             	        
             	        }
             	        break;
             	    case 2 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1734:31: '\\r' ( '\\n' )?
+            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1732:31: '\\r' ( '\\n' )?
             	        {
             	        	Match('\r'); 
-            	        	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1734:35: ( '\\n' )?
+            	        	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1732:35: ( '\\n' )?
             	        	int alt19 = 2;
             	        	int LA19_0 = input.LA(1);
             	        	
@@ -3569,7 +3569,7 @@ public class ASLexer : Lexer
             	        	switch (alt19) 
             	        	{
             	        	    case 1 :
-            	        	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1734:36: '\\n'
+            	        	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1732:36: '\\n'
             	        	        {
             	        	        	Match('\n'); 
             	        	        
@@ -3604,12 +3604,12 @@ public class ASLexer : Lexer
         try 
     	{
             int _type = ML_COMMENT;
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1743:4: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1743:4: '/*' ( options {greedy=false; } : . )* '*/'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1741:4: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1741:4: '/*' ( options {greedy=false; } : . )* '*/'
             {
             	Match("/*"); 
 
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1743:9: ( options {greedy=false; } : . )*
+            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1741:9: ( options {greedy=false; } : . )*
             	do 
             	{
             	    int alt21 = 2;
@@ -3639,7 +3639,7 @@ public class ASLexer : Lexer
             	    switch (alt21) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1743:37: .
+            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1741:37: .
             			    {
             			    	MatchAny(); 
             			    
@@ -3676,8 +3676,8 @@ public class ASLexer : Lexer
     {
         try 
     	{
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1750:4: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1750:4: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1748:4: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1748:4: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
             {
             	if ( input.LA(1) == 'E' || input.LA(1) == 'e' ) 
             	{
@@ -3691,7 +3691,7 @@ public class ASLexer : Lexer
             	    Recover(mse);    throw mse;
             	}
 
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1750:14: ( '+' | '-' )?
+            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1748:14: ( '+' | '-' )?
             	int alt22 = 2;
             	int LA22_0 = input.LA(1);
             	
@@ -3722,7 +3722,7 @@ public class ASLexer : Lexer
             	
             	}
 
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1750:25: ( '0' .. '9' )+
+            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1748:25: ( '0' .. '9' )+
             	int cnt23 = 0;
             	do 
             	{
@@ -3738,7 +3738,7 @@ public class ASLexer : Lexer
             	    switch (alt23) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1750:26: '0' .. '9'
+            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1748:26: '0' .. '9'
             			    {
             			    	MatchRange('0','9'); 
             			    
@@ -3772,8 +3772,8 @@ public class ASLexer : Lexer
     {
         try 
     	{
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1753:4: ( ( '0' .. '9' | 'A' .. 'F' | 'a' .. 'f' ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1753:4: ( '0' .. '9' | 'A' .. 'F' | 'a' .. 'f' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1751:4: ( ( '0' .. '9' | 'A' .. 'F' | 'a' .. 'f' ) )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1751:4: ( '0' .. '9' | 'A' .. 'F' | 'a' .. 'f' )
             {
             	if ( (input.LA(1) >= '0' && input.LA(1) <= '9') || (input.LA(1) >= 'A' && input.LA(1) <= 'F') || (input.LA(1) >= 'a' && input.LA(1) <= 'f') ) 
             	{
@@ -3802,8 +3802,8 @@ public class ASLexer : Lexer
     {
         try 
     	{
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1757:4: ( '0' .. '7' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1757:4: '0' .. '7'
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1755:4: ( '0' .. '7' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1755:4: '0' .. '7'
             {
             	MatchRange('0','7'); 
             
@@ -3821,7 +3821,7 @@ public class ASLexer : Lexer
     {
         try 
     	{
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1761:6: ( CTRLCHAR_ESC | UNICODE_ESC | OCTAL_ESC )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1759:6: ( CTRLCHAR_ESC | UNICODE_ESC | OCTAL_ESC )
             int alt24 = 3;
             int LA24_0 = input.LA(1);
             
@@ -3860,7 +3860,7 @@ public class ASLexer : Lexer
                     break;
                 	default:
                 	    NoViableAltException nvae_d24s1 =
-                	        new NoViableAltException("1760:10: fragment ESC : ( CTRLCHAR_ESC | UNICODE_ESC | OCTAL_ESC );", 24, 1, input);
+                	        new NoViableAltException("1758:10: fragment ESC : ( CTRLCHAR_ESC | UNICODE_ESC | OCTAL_ESC );", 24, 1, input);
                 
                 	    throw nvae_d24s1;
                 }
@@ -3869,28 +3869,28 @@ public class ASLexer : Lexer
             else 
             {
                 NoViableAltException nvae_d24s0 =
-                    new NoViableAltException("1760:10: fragment ESC : ( CTRLCHAR_ESC | UNICODE_ESC | OCTAL_ESC );", 24, 0, input);
+                    new NoViableAltException("1758:10: fragment ESC : ( CTRLCHAR_ESC | UNICODE_ESC | OCTAL_ESC );", 24, 0, input);
             
                 throw nvae_d24s0;
             }
             switch (alt24) 
             {
                 case 1 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1761:6: CTRLCHAR_ESC
+                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1759:6: CTRLCHAR_ESC
                     {
                     	mCTRLCHAR_ESC(); 
                     
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1762:6: UNICODE_ESC
+                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1760:6: UNICODE_ESC
                     {
                     	mUNICODE_ESC(); 
                     
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1763:6: OCTAL_ESC
+                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1761:6: OCTAL_ESC
                     {
                     	mOCTAL_ESC(); 
                     
@@ -3910,8 +3910,8 @@ public class ASLexer : Lexer
     {
         try 
     	{
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1767:4: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1767:4: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1765:4: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1765:4: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
             {
             	Match('\\'); 
             	if ( input.LA(1) == '\"' || input.LA(1) == '\'' || input.LA(1) == '\\' || input.LA(1) == 'b' || input.LA(1) == 'f' || input.LA(1) == 'n' || input.LA(1) == 'r' || input.LA(1) == 't' ) 
@@ -3941,7 +3941,7 @@ public class ASLexer : Lexer
     {
         try 
     	{
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1771:6: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1769:6: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
             int alt25 = 3;
             int LA25_0 = input.LA(1);
             
@@ -3984,7 +3984,7 @@ public class ASLexer : Lexer
                 else 
                 {
                     NoViableAltException nvae_d25s1 =
-                        new NoViableAltException("1770:10: fragment OCTAL_ESC : ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) );", 25, 1, input);
+                        new NoViableAltException("1768:10: fragment OCTAL_ESC : ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) );", 25, 1, input);
                 
                     throw nvae_d25s1;
                 }
@@ -3992,32 +3992,32 @@ public class ASLexer : Lexer
             else 
             {
                 NoViableAltException nvae_d25s0 =
-                    new NoViableAltException("1770:10: fragment OCTAL_ESC : ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) );", 25, 0, input);
+                    new NoViableAltException("1768:10: fragment OCTAL_ESC : ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) );", 25, 0, input);
             
                 throw nvae_d25s0;
             }
             switch (alt25) 
             {
                 case 1 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1771:6: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
+                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1769:6: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
                     {
                     	Match('\\'); 
-                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1771:11: ( '0' .. '3' )
-                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1771:12: '0' .. '3'
+                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1769:11: ( '0' .. '3' )
+                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1769:12: '0' .. '3'
                     	{
                     		MatchRange('0','3'); 
                     	
                     	}
 
-                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1771:22: ( '0' .. '7' )
-                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1771:23: '0' .. '7'
+                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1769:22: ( '0' .. '7' )
+                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1769:23: '0' .. '7'
                     	{
                     		MatchRange('0','7'); 
                     	
                     	}
 
-                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1771:33: ( '0' .. '7' )
-                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1771:34: '0' .. '7'
+                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1769:33: ( '0' .. '7' )
+                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1769:34: '0' .. '7'
                     	{
                     		MatchRange('0','7'); 
                     	
@@ -4027,18 +4027,18 @@ public class ASLexer : Lexer
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1772:6: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
+                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1770:6: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
                     {
                     	Match('\\'); 
-                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1772:11: ( '0' .. '7' )
-                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1772:12: '0' .. '7'
+                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1770:11: ( '0' .. '7' )
+                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1770:12: '0' .. '7'
                     	{
                     		MatchRange('0','7'); 
                     	
                     	}
 
-                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1772:22: ( '0' .. '7' )
-                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1772:23: '0' .. '7'
+                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1770:22: ( '0' .. '7' )
+                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1770:23: '0' .. '7'
                     	{
                     		MatchRange('0','7'); 
                     	
@@ -4048,11 +4048,11 @@ public class ASLexer : Lexer
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1773:6: '\\\\' ( '0' .. '7' )
+                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1771:6: '\\\\' ( '0' .. '7' )
                     {
                     	Match('\\'); 
-                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1773:11: ( '0' .. '7' )
-                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1773:12: '0' .. '7'
+                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1771:11: ( '0' .. '7' )
+                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1771:12: '0' .. '7'
                     	{
                     		MatchRange('0','7'); 
                     	
@@ -4075,8 +4075,8 @@ public class ASLexer : Lexer
     {
         try 
     	{
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1777:6: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1777:6: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1775:6: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
+            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1775:6: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
             {
             	Match('\\'); 
             	Match('u'); 

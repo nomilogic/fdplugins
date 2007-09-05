@@ -247,7 +247,13 @@ namespace CodeReformatter
                     } catch (Antlr.Runtime.RecognitionException error)
                     {
                         MessageBar.ShowWarning(error.Line + ": " + error.Message);
-                        TraceItem item = new TraceItem(doc.FileName + ":" + error.Line + ": characters " + error.CharPositionInLine + "-" + (error.CharPositionInLine + ((CommonToken)error.Token).Text.Length) + " : " + error.Message.TrimStart(), -3);
+                        TraceItem item = new TraceItem(doc.FileName + ":" + 
+                                                        error.Line + ": characters " + error.CharPositionInLine + "-" + 
+                                                        (error.CharPositionInLine + ((CommonToken)error.Token).Text.Length) + " : " + 
+                                                        error.Message.TrimStart() + ". Unexpected " + 
+                                                        generator.Parser.TokenNames.GetValue(error.UnexpectedType) + 
+                                                        (error is MismatchedTokenException ? ", expecting: " + generator.Parser.TokenNames.GetValue(((MismatchedTokenException)error).expecting) : ""),
+                                                        -3);
                         TraceManager.Add(item);
                         TraceManager.Add(error.StackTrace);
                         MainForm.CallCommand("PluginCommand", "ResultsPanel.ShowResults");
