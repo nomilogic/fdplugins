@@ -107,6 +107,11 @@ CodeReformatter.Generators.Core
         Debug.WriteLine("[" + e.Line + ":" + e.Index + "]: Unexpected " + e.UnexpectedType.ToString() +  "( expecting: "+ e.expecting + " )");
         throw e;
 	}
+	catch(RecognitionException e)
+	{
+		Debug.WriteLine("RecognitionException: " + e);
+		throw e;
+	}
 }
 
 @lexer::members {
@@ -231,6 +236,8 @@ CodeReformatter.Generators.Core
 		CommonTree tree;
 		CommonTree comment;
 		
+		Debug.WriteLine("insertComment(rule): " + rule);
+		
 		if(rule != null)
 		{
 			tree = (CommonTree)rule.Tree;   // COMMENT_LIST
@@ -265,7 +272,7 @@ CodeReformatter.Generators.Core
 
     private void insertComment(ParserRuleReturnScope rule, Boolean newlineBefore, Boolean newlineAfter)
     {
-		insertComment(rule, newlineBefore, newlineAfter, 0);
+		insertComment(rule, newlineBefore, newlineAfter, 1);
     }
     
     
@@ -520,7 +527,10 @@ methodDefinition[CommonTree mods]
 										buffer.Append("{");
 										CurrentTab++;
 									}
-		block
+		(
+			c1=comments?			{ insertComment(c1, true, false); }
+			block
+		)
 									{
 										CurrentTab--;
 										buffer.Append(NewLine + tab);
@@ -713,9 +723,12 @@ ifStatement
 									buffer.Append("}");
 								}
 		(
-			c2=comments? { insertComment(c2, true, true, 1); } (ELSE)=>elseClause
+			c2=comments?	{	insertComment(c2, true, true, 1);	} 
+			(ELSE)=>elseClause
 		)?
 	;
+
+
 
 elseClause
 @init{
