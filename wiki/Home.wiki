@@ -19,6 +19,7 @@ This is the complete list of available plugins you can find here:
  * StickiesNotes 
  * CodeReformatter
  * RegularExpressionPanel
+ * ShardObjectReader
  
 Please use the plugin specific wiki page to report issues or comments.
  
@@ -28,3 +29,4 @@ Get the source:
 http://fdplugins.googlecode.com/svn/trunk/
 
 
+ 
