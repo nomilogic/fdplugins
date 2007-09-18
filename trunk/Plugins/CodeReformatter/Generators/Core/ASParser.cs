@@ -1,4 +1,4 @@
-// $ANTLR 3.0 C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g 2007-09-06 00:56:22
+// $ANTLR 3.0 C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g 2007-09-17 08:49:46
 namespace 
 CodeReformatter.Generators.Core
 
@@ -419,7 +419,7 @@ public class ASParser : Parser
 
     override public string GrammarFileName
 	{
-		get { return "C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g"; }
+		get { return "C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g"; }
 	}
 
     
@@ -635,7 +635,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start compilationUnit
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:329:1: compilationUnit[StringBuilder ret] : as2CompilationUnit -> ^( COMPILATION_UNIT as2CompilationUnit ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:329:1: compilationUnit[StringBuilder ret] : as2CompilationUnit -> ^( COMPILATION_UNIT as2CompilationUnit ) ;
     public compilationUnit_return compilationUnit(StringBuilder ret) // throws RecognitionException [1]
     {   
         compilationUnit_return retval = new compilationUnit_return();
@@ -656,8 +656,8 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:336:4: ( as2CompilationUnit -> ^( COMPILATION_UNIT as2CompilationUnit ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:336:4: as2CompilationUnit
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:336:4: ( as2CompilationUnit -> ^( COMPILATION_UNIT as2CompilationUnit ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:336:4: as2CompilationUnit
             {
             	PushFollow(FOLLOW_as2CompilationUnit_in_compilationUnit437);
             	as2CompilationUnit1 = as2CompilationUnit();
@@ -678,7 +678,7 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             	// 336:23: -> ^( COMPILATION_UNIT as2CompilationUnit )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:336:26: ^( COMPILATION_UNIT as2CompilationUnit )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:336:26: ^( COMPILATION_UNIT as2CompilationUnit )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(COMPILATION_UNIT, "COMPILATION_UNIT"), root_1);
@@ -744,7 +744,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start as2CompilationUnit
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:340:1: as2CompilationUnit : ( importDefinition | annotations | c= comments )* as2Type ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:340:1: as2CompilationUnit : ( importDefinition | annotations | c= comments )* as2Type ;
     public as2CompilationUnit_return as2CompilationUnit() // throws RecognitionException [1]
     {   
         as2CompilationUnit_return retval = new as2CompilationUnit_return();
@@ -771,12 +771,12 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:344:4: ( ( importDefinition | annotations | c= comments )* as2Type )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:344:4: ( importDefinition | annotations | c= comments )* as2Type
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:344:4: ( ( importDefinition | annotations | c= comments )* as2Type )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:344:4: ( importDefinition | annotations | c= comments )* as2Type
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:344:4: ( importDefinition | annotations | c= comments )*
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:344:4: ( importDefinition | annotations | c= comments )*
             	do 
             	{
             	    int alt1 = 4;
@@ -805,7 +805,7 @@ public class ASParser : Parser
             	    switch (alt1) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:345:4: importDefinition
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:345:4: importDefinition
             			    {
             			    	PushFollow(FOLLOW_importDefinition_in_as2CompilationUnit468);
             			    	importDefinition2 = importDefinition();
@@ -816,7 +816,7 @@ public class ASParser : Parser
             			    }
             			    break;
             			case 2 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:346:5: annotations
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:346:5: annotations
             			    {
             			    	PushFollow(FOLLOW_annotations_in_as2CompilationUnit474);
             			    	annotations3 = annotations();
@@ -827,7 +827,7 @@ public class ASParser : Parser
             			    }
             			    break;
             			case 3 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:347:5: c= comments
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:347:5: c= comments
             			    {
             			    	if ( backtracking == 0 ) 
             			    	{
@@ -906,7 +906,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start as2Type
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:352:1: as2Type : mods= modifiers ( as2ClassDefinition[$mods.tree] | as2InterfaceDefinition[$mods.tree] ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:352:1: as2Type : mods= modifiers ( as2ClassDefinition[$mods.tree] | as2InterfaceDefinition[$mods.tree] ) ;
     public as2Type_return as2Type() // throws RecognitionException [1]
     {   
         as2Type_return retval = new as2Type_return();
@@ -928,8 +928,8 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:353:4: (mods= modifiers ( as2ClassDefinition[$mods.tree] | as2InterfaceDefinition[$mods.tree] ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:353:4: mods= modifiers ( as2ClassDefinition[$mods.tree] | as2InterfaceDefinition[$mods.tree] )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:353:4: (mods= modifiers ( as2ClassDefinition[$mods.tree] | as2InterfaceDefinition[$mods.tree] ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:353:4: mods= modifiers ( as2ClassDefinition[$mods.tree] | as2InterfaceDefinition[$mods.tree] )
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
@@ -937,7 +937,7 @@ public class ASParser : Parser
             	mods = modifiers();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:354:2: ( as2ClassDefinition[$mods.tree] | as2InterfaceDefinition[$mods.tree] )
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:354:2: ( as2ClassDefinition[$mods.tree] | as2InterfaceDefinition[$mods.tree] )
             	int alt2 = 2;
             	int LA2_0 = input.LA(1);
             	
@@ -960,7 +960,7 @@ public class ASParser : Parser
             	switch (alt2) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:354:4: as2ClassDefinition[$mods.tree]
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:354:4: as2ClassDefinition[$mods.tree]
             	        {
             	        	PushFollow(FOLLOW_as2ClassDefinition_in_as2Type514);
             	        	as2ClassDefinition5 = as2ClassDefinition(((CommonTree)mods.tree));
@@ -971,7 +971,7 @@ public class ASParser : Parser
             	        }
             	        break;
             	    case 2 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:355:4: as2InterfaceDefinition[$mods.tree]
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:355:4: as2InterfaceDefinition[$mods.tree]
             	        {
             	        	PushFollow(FOLLOW_as2InterfaceDefinition_in_as2Type520);
             	        	as2InterfaceDefinition6 = as2InterfaceDefinition(((CommonTree)mods.tree));
@@ -1031,7 +1031,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start endOfFile
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:360:1: endOfFile : EOF ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:360:1: endOfFile : EOF ;
     public endOfFile_return endOfFile() // throws RecognitionException [1]
     {   
         endOfFile_return retval = new endOfFile_return();
@@ -1049,8 +1049,8 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:361:4: ( EOF )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:361:4: EOF
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:361:4: ( EOF )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:361:4: EOF
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
@@ -1103,7 +1103,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start importDefinition
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:364:1: importDefinition : IMPORT ide= identifierStar semi ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:364:1: importDefinition : IMPORT ide= identifierStar semi ;
     public importDefinition_return importDefinition() // throws RecognitionException [1]
     {   
         importDefinition_return retval = new importDefinition_return();
@@ -1125,8 +1125,8 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:365:4: ( IMPORT ide= identifierStar semi )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:365:4: IMPORT ide= identifierStar semi
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:365:4: ( IMPORT ide= identifierStar semi )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:365:4: IMPORT ide= identifierStar semi
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
@@ -1197,7 +1197,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start semi
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:370:1: semi : ( SEMI | );
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:370:1: semi : ( SEMI | );
     public semi_return semi() // throws RecognitionException [1]
     {   
         semi_return retval = new semi_return();
@@ -1215,7 +1215,7 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:371:4: ( SEMI | )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:371:4: ( SEMI | )
             int alt3 = 2;
             int LA3_0 = input.LA(1);
             
@@ -1255,7 +1255,7 @@ public class ASParser : Parser
             switch (alt3) 
             {
                 case 1 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:371:4: SEMI
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:371:4: SEMI
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
@@ -1265,7 +1265,7 @@ public class ASParser : Parser
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:373:2: 
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:373:2: 
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
@@ -1317,7 +1317,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start as2ClassDefinition
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:375:1: as2ClassDefinition[CommonTree mods] : cl= CLASS ide= identifier ext= classExtendsClause imp= implementsClause typeBlock -> ^( CLASS_DEF identifier classExtendsClause implementsClause typeBlock ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:375:1: as2ClassDefinition[CommonTree mods] : cl= CLASS ide= identifier ext= classExtendsClause imp= implementsClause typeBlock -> ^( CLASS_DEF identifier classExtendsClause implementsClause typeBlock ) ;
     public as2ClassDefinition_return as2ClassDefinition(CommonTree mods) // throws RecognitionException [1]
     {   
         as2ClassDefinition_return retval = new as2ClassDefinition_return();
@@ -1347,8 +1347,8 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:376:4: (cl= CLASS ide= identifier ext= classExtendsClause imp= implementsClause typeBlock -> ^( CLASS_DEF identifier classExtendsClause implementsClause typeBlock ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:376:4: cl= CLASS ide= identifier ext= classExtendsClause imp= implementsClause typeBlock
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:376:4: (cl= CLASS ide= identifier ext= classExtendsClause imp= implementsClause typeBlock -> ^( CLASS_DEF identifier classExtendsClause implementsClause typeBlock ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:376:4: cl= CLASS ide= identifier ext= classExtendsClause imp= implementsClause typeBlock
             {
             	cl = (CommonToken)input.LT(1);
             	Match(input,CLASS,FOLLOW_CLASS_in_as2ClassDefinition594); if (failed) return retval;
@@ -1408,7 +1408,7 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             	// 390:3: -> ^( CLASS_DEF identifier classExtendsClause implementsClause typeBlock )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:390:6: ^( CLASS_DEF identifier classExtendsClause implementsClause typeBlock )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:390:6: ^( CLASS_DEF identifier classExtendsClause implementsClause typeBlock )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(CLASS_DEF, "CLASS_DEF"), root_1);
@@ -1472,7 +1472,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start interfaceDefinition
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:394:1: interfaceDefinition[CommonTree mods] : tk= INTERFACE ide= ident interfaceExtendsClause interfaceTypeBlock -> ^( INTERFACE_DEF ident interfaceExtendsClause interfaceTypeBlock ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:394:1: interfaceDefinition[CommonTree mods] : tk= INTERFACE ide= ident interfaceExtendsClause interfaceTypeBlock -> ^( INTERFACE_DEF ident interfaceExtendsClause interfaceTypeBlock ) ;
     public interfaceDefinition_return interfaceDefinition(CommonTree mods) // throws RecognitionException [1]
     {   
         interfaceDefinition_return retval = new interfaceDefinition_return();
@@ -1500,8 +1500,8 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:396:4: (tk= INTERFACE ide= ident interfaceExtendsClause interfaceTypeBlock -> ^( INTERFACE_DEF ident interfaceExtendsClause interfaceTypeBlock ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:396:4: tk= INTERFACE ide= ident interfaceExtendsClause interfaceTypeBlock
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:396:4: (tk= INTERFACE ide= ident interfaceExtendsClause interfaceTypeBlock -> ^( INTERFACE_DEF ident interfaceExtendsClause interfaceTypeBlock ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:396:4: tk= INTERFACE ide= ident interfaceExtendsClause interfaceTypeBlock
             {
             	tk = (CommonToken)input.LT(1);
             	Match(input,INTERFACE,FOLLOW_INTERFACE_in_interfaceDefinition672); if (failed) return retval;
@@ -1556,7 +1556,7 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             	// 408:3: -> ^( INTERFACE_DEF ident interfaceExtendsClause interfaceTypeBlock )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:408:6: ^( INTERFACE_DEF ident interfaceExtendsClause interfaceTypeBlock )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:408:6: ^( INTERFACE_DEF ident interfaceExtendsClause interfaceTypeBlock )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(INTERFACE_DEF, "INTERFACE_DEF"), root_1);
@@ -1619,7 +1619,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start as2InterfaceDefinition
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:411:1: as2InterfaceDefinition[CommonTree mods] : INTERFACE identifier interfaceExtendsClause interfaceTypeBlock -> ^( INTERFACE_DEF identifier interfaceExtendsClause interfaceTypeBlock ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:411:1: as2InterfaceDefinition[CommonTree mods] : INTERFACE identifier interfaceExtendsClause interfaceTypeBlock -> ^( INTERFACE_DEF identifier interfaceExtendsClause interfaceTypeBlock ) ;
     public as2InterfaceDefinition_return as2InterfaceDefinition(CommonTree mods) // throws RecognitionException [1]
     {   
         as2InterfaceDefinition_return retval = new as2InterfaceDefinition_return();
@@ -1647,8 +1647,8 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:413:4: ( INTERFACE identifier interfaceExtendsClause interfaceTypeBlock -> ^( INTERFACE_DEF identifier interfaceExtendsClause interfaceTypeBlock ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:413:4: INTERFACE identifier interfaceExtendsClause interfaceTypeBlock
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:413:4: ( INTERFACE identifier interfaceExtendsClause interfaceTypeBlock -> ^( INTERFACE_DEF identifier interfaceExtendsClause interfaceTypeBlock ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:413:4: INTERFACE identifier interfaceExtendsClause interfaceTypeBlock
             {
             	INTERFACE14 = (CommonToken)input.LT(1);
             	Match(input,INTERFACE,FOLLOW_INTERFACE_in_as2InterfaceDefinition729); if (failed) return retval;
@@ -1683,7 +1683,7 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             	// 416:3: -> ^( INTERFACE_DEF identifier interfaceExtendsClause interfaceTypeBlock )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:416:6: ^( INTERFACE_DEF identifier interfaceExtendsClause interfaceTypeBlock )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:416:6: ^( INTERFACE_DEF identifier interfaceExtendsClause interfaceTypeBlock )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(INTERFACE_DEF, "INTERFACE_DEF"), root_1);
@@ -1746,7 +1746,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start classExtendsClause
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:419:1: classExtendsClause : (tk= EXTENDS ide= identifier )? ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:419:1: classExtendsClause : (tk= EXTENDS ide= identifier )? ;
     public classExtendsClause_return classExtendsClause() // throws RecognitionException [1]
     {   
         classExtendsClause_return retval = new classExtendsClause_return();
@@ -1766,12 +1766,12 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:420:4: ( (tk= EXTENDS ide= identifier )? )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:420:4: (tk= EXTENDS ide= identifier )?
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:420:4: ( (tk= EXTENDS ide= identifier )? )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:420:4: (tk= EXTENDS ide= identifier )?
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:420:4: (tk= EXTENDS ide= identifier )?
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:420:4: (tk= EXTENDS ide= identifier )?
             	int alt4 = 2;
             	int LA4_0 = input.LA(1);
             	
@@ -1782,7 +1782,7 @@ public class ASParser : Parser
             	switch (alt4) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:421:4: tk= EXTENDS ide= identifier
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:421:4: tk= EXTENDS ide= identifier
             	        {
             	        	tk = (CommonToken)input.LT(1);
             	        	Match(input,EXTENDS,FOLLOW_EXTENDS_in_classExtendsClause773); if (failed) return retval;
@@ -1852,7 +1852,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start interfaceExtendsClause
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:425:1: interfaceExtendsClause : (tk= EXTENDS ide= identifier ( COMMA ide2= identifier )* )? ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:425:1: interfaceExtendsClause : (tk= EXTENDS ide= identifier ( COMMA ide2= identifier )* )? ;
     public interfaceExtendsClause_return interfaceExtendsClause() // throws RecognitionException [1]
     {   
         interfaceExtendsClause_return retval = new interfaceExtendsClause_return();
@@ -1876,12 +1876,12 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:426:4: ( (tk= EXTENDS ide= identifier ( COMMA ide2= identifier )* )? )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:426:4: (tk= EXTENDS ide= identifier ( COMMA ide2= identifier )* )?
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:426:4: ( (tk= EXTENDS ide= identifier ( COMMA ide2= identifier )* )? )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:426:4: (tk= EXTENDS ide= identifier ( COMMA ide2= identifier )* )?
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:426:4: (tk= EXTENDS ide= identifier ( COMMA ide2= identifier )* )?
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:426:4: (tk= EXTENDS ide= identifier ( COMMA ide2= identifier )* )?
             	int alt6 = 2;
             	int LA6_0 = input.LA(1);
             	
@@ -1892,7 +1892,7 @@ public class ASParser : Parser
             	switch (alt6) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:427:4: tk= EXTENDS ide= identifier ( COMMA ide2= identifier )*
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:427:4: tk= EXTENDS ide= identifier ( COMMA ide2= identifier )*
             	        {
             	        	tk = (CommonToken)input.LT(1);
             	        	Match(input,EXTENDS,FOLLOW_EXTENDS_in_interfaceExtendsClause808); if (failed) return retval;
@@ -1913,7 +1913,7 @@ public class ASParser : Parser
             	        	{
             	        	   buffer.Append(" "); 
             	        	}
-            	        	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:429:4: ( COMMA ide2= identifier )*
+            	        	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:429:4: ( COMMA ide2= identifier )*
             	        	do 
             	        	{
             	        	    int alt5 = 2;
@@ -1928,7 +1928,7 @@ public class ASParser : Parser
             	        	    switch (alt5) 
             	        		{
             	        			case 1 :
-            	        			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:430:5: COMMA ide2= identifier
+            	        			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:430:5: COMMA ide2= identifier
             	        			    {
             	        			    	COMMA18 = (CommonToken)input.LT(1);
             	        			    	Match(input,COMMA,FOLLOW_COMMA_in_interfaceExtendsClause834); if (failed) return retval;
@@ -2010,7 +2010,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start implementsClause
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:436:1: implementsClause : ( IMPLEMENTS ide= identifier ( COMMA ide= identifier )* )? ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:436:1: implementsClause : ( IMPLEMENTS ide= identifier ( COMMA ide= identifier )* )? ;
     public implementsClause_return implementsClause() // throws RecognitionException [1]
     {   
         implementsClause_return retval = new implementsClause_return();
@@ -2032,12 +2032,12 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:437:4: ( ( IMPLEMENTS ide= identifier ( COMMA ide= identifier )* )? )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:437:4: ( IMPLEMENTS ide= identifier ( COMMA ide= identifier )* )?
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:437:4: ( ( IMPLEMENTS ide= identifier ( COMMA ide= identifier )* )? )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:437:4: ( IMPLEMENTS ide= identifier ( COMMA ide= identifier )* )?
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:437:4: ( IMPLEMENTS ide= identifier ( COMMA ide= identifier )* )?
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:437:4: ( IMPLEMENTS ide= identifier ( COMMA ide= identifier )* )?
             	int alt8 = 2;
             	int LA8_0 = input.LA(1);
             	
@@ -2048,7 +2048,7 @@ public class ASParser : Parser
             	switch (alt8) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:437:5: IMPLEMENTS ide= identifier ( COMMA ide= identifier )*
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:437:5: IMPLEMENTS ide= identifier ( COMMA ide= identifier )*
             	        {
             	        	IMPLEMENTS19 = (CommonToken)input.LT(1);
             	        	Match(input,IMPLEMENTS,FOLLOW_IMPLEMENTS_in_implementsClause875); if (failed) return retval;
@@ -2069,7 +2069,7 @@ public class ASParser : Parser
             	        	{
             	        	   
             	        	}
-            	        	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:439:4: ( COMMA ide= identifier )*
+            	        	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:439:4: ( COMMA ide= identifier )*
             	        	do 
             	        	{
             	        	    int alt7 = 2;
@@ -2084,7 +2084,7 @@ public class ASParser : Parser
             	        	    switch (alt7) 
             	        		{
             	        			case 1 :
-            	        			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:440:5: COMMA ide= identifier
+            	        			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:440:5: COMMA ide= identifier
             	        			    {
             	        			    	COMMA20 = (CommonToken)input.LT(1);
             	        			    	Match(input,COMMA,FOLLOW_COMMA_in_implementsClause900); if (failed) return retval;
@@ -2166,7 +2166,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start interfaceTypeBlock
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:446:1: interfaceTypeBlock : LCURLY ( interfaceTypeBlockEntry )* RCURLY -> ^( TYPE_BLOCK ( interfaceTypeBlockEntry )* ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:446:1: interfaceTypeBlock : LCURLY ( interfaceTypeBlockEntry )* RCURLY -> ^( TYPE_BLOCK ( interfaceTypeBlockEntry )* ) ;
     public interfaceTypeBlock_return interfaceTypeBlock() // throws RecognitionException [1]
     {   
         interfaceTypeBlock_return retval = new interfaceTypeBlock_return();
@@ -2190,14 +2190,14 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:447:4: ( LCURLY ( interfaceTypeBlockEntry )* RCURLY -> ^( TYPE_BLOCK ( interfaceTypeBlockEntry )* ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:447:4: LCURLY ( interfaceTypeBlockEntry )* RCURLY
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:447:4: ( LCURLY ( interfaceTypeBlockEntry )* RCURLY -> ^( TYPE_BLOCK ( interfaceTypeBlockEntry )* ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:447:4: LCURLY ( interfaceTypeBlockEntry )* RCURLY
             {
             	LCURLY21 = (CommonToken)input.LT(1);
             	Match(input,LCURLY,FOLLOW_LCURLY_in_interfaceTypeBlock939); if (failed) return retval;
             	if ( backtracking==0 ) stream_LCURLY.Add(LCURLY21);
 
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:448:3: ( interfaceTypeBlockEntry )*
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:448:3: ( interfaceTypeBlockEntry )*
             	do 
             	{
             	    int alt9 = 2;
@@ -2212,7 +2212,7 @@ public class ASParser : Parser
             	    switch (alt9) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:448:4: interfaceTypeBlockEntry
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:448:4: interfaceTypeBlockEntry
             			    {
             			    	PushFollow(FOLLOW_interfaceTypeBlockEntry_in_interfaceTypeBlock944);
             			    	interfaceTypeBlockEntry22 = interfaceTypeBlockEntry();
@@ -2249,12 +2249,12 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             	// 450:3: -> ^( TYPE_BLOCK ( interfaceTypeBlockEntry )* )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:450:6: ^( TYPE_BLOCK ( interfaceTypeBlockEntry )* )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:450:6: ^( TYPE_BLOCK ( interfaceTypeBlockEntry )* )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(TYPE_BLOCK, "TYPE_BLOCK"), root_1);
             	    
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:450:19: ( interfaceTypeBlockEntry )*
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:450:19: ( interfaceTypeBlockEntry )*
             	    while ( stream_interfaceTypeBlockEntry.HasNext() )
             	    {
             	        adaptor.AddChild(root_1, stream_interfaceTypeBlockEntry.Next());
@@ -2315,7 +2315,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start typeBlock
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:453:1: typeBlock : LCURLY ( typeBlockEntry )* RCURLY -> ^( TYPE_BLOCK ( typeBlockEntry )* ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:453:1: typeBlock : LCURLY ( typeBlockEntry )* RCURLY -> ^( TYPE_BLOCK ( typeBlockEntry )* ) ;
     public typeBlock_return typeBlock() // throws RecognitionException [1]
     {   
         typeBlock_return retval = new typeBlock_return();
@@ -2339,14 +2339,14 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:454:4: ( LCURLY ( typeBlockEntry )* RCURLY -> ^( TYPE_BLOCK ( typeBlockEntry )* ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:454:4: LCURLY ( typeBlockEntry )* RCURLY
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:454:4: ( LCURLY ( typeBlockEntry )* RCURLY -> ^( TYPE_BLOCK ( typeBlockEntry )* ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:454:4: LCURLY ( typeBlockEntry )* RCURLY
             {
             	LCURLY24 = (CommonToken)input.LT(1);
             	Match(input,LCURLY,FOLLOW_LCURLY_in_typeBlock973); if (failed) return retval;
             	if ( backtracking==0 ) stream_LCURLY.Add(LCURLY24);
 
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:455:3: ( typeBlockEntry )*
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:455:3: ( typeBlockEntry )*
             	do 
             	{
             	    int alt10 = 2;
@@ -2361,7 +2361,7 @@ public class ASParser : Parser
             	    switch (alt10) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:455:4: typeBlockEntry
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:455:4: typeBlockEntry
             			    {
             			    	PushFollow(FOLLOW_typeBlockEntry_in_typeBlock978);
             			    	typeBlockEntry25 = typeBlockEntry();
@@ -2398,12 +2398,12 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             	// 457:3: -> ^( TYPE_BLOCK ( typeBlockEntry )* )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:457:6: ^( TYPE_BLOCK ( typeBlockEntry )* )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:457:6: ^( TYPE_BLOCK ( typeBlockEntry )* )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(TYPE_BLOCK, "TYPE_BLOCK"), root_1);
             	    
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:457:19: ( typeBlockEntry )*
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:457:19: ( typeBlockEntry )*
             	    while ( stream_typeBlockEntry.HasNext() )
             	    {
             	        adaptor.AddChild(root_1, stream_typeBlockEntry.Next());
@@ -2464,7 +2464,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start interfaceTypeBlockEntry
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:460:1: interfaceTypeBlockEntry : (m= modifiers ( interfaceMethodDefinition[$m.tree] ) | importDefinition | as2IncludeDirective | annotations );
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:460:1: interfaceTypeBlockEntry : (m= modifiers ( interfaceMethodDefinition[$m.tree] ) | importDefinition | as2IncludeDirective | annotations );
     public interfaceTypeBlockEntry_return interfaceTypeBlockEntry() // throws RecognitionException [1]
     {   
         interfaceTypeBlockEntry_return retval = new interfaceTypeBlockEntry_return();
@@ -2490,7 +2490,7 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:461:4: (m= modifiers ( interfaceMethodDefinition[$m.tree] ) | importDefinition | as2IncludeDirective | annotations )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:461:4: (m= modifiers ( interfaceMethodDefinition[$m.tree] ) | importDefinition | as2IncludeDirective | annotations )
             int alt11 = 4;
             switch ( input.LA(1) ) 
             {
@@ -2538,7 +2538,7 @@ public class ASParser : Parser
             switch (alt11) 
             {
                 case 1 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:461:4: m= modifiers ( interfaceMethodDefinition[$m.tree] )
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:461:4: m= modifiers ( interfaceMethodDefinition[$m.tree] )
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
@@ -2550,8 +2550,8 @@ public class ASParser : Parser
                     	m = modifiers();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:463:3: ( interfaceMethodDefinition[$m.tree] )
-                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:464:4: interfaceMethodDefinition[$m.tree]
+                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:463:3: ( interfaceMethodDefinition[$m.tree] )
+                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:464:4: interfaceMethodDefinition[$m.tree]
                     	{
                     		PushFollow(FOLLOW_interfaceMethodDefinition_in_interfaceTypeBlockEntry1023);
                     		interfaceMethodDefinition27 = interfaceMethodDefinition(((CommonTree)m.tree));
@@ -2565,7 +2565,7 @@ public class ASParser : Parser
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:466:4: importDefinition
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:466:4: importDefinition
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
@@ -2578,7 +2578,7 @@ public class ASParser : Parser
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:467:4: as2IncludeDirective
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:467:4: as2IncludeDirective
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
@@ -2595,7 +2595,7 @@ public class ASParser : Parser
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:468:4: annotations
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:468:4: annotations
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
@@ -2657,7 +2657,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start typeBlockEntry
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:471:1: typeBlockEntry : (m= modifiers ( variableDefinition[$m.tree] | methodDefinition[$m.tree] ) | importDefinition | as2IncludeDirective | annotations | c= comments );
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:471:1: typeBlockEntry : (m= modifiers ( variableDefinition[$m.tree] | methodDefinition[$m.tree] ) | importDefinition | as2IncludeDirective | annotations | c= comments );
     public typeBlockEntry_return typeBlockEntry() // throws RecognitionException [1]
     {   
         typeBlockEntry_return retval = new typeBlockEntry_return();
@@ -2687,7 +2687,7 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:472:4: (m= modifiers ( variableDefinition[$m.tree] | methodDefinition[$m.tree] ) | importDefinition | as2IncludeDirective | annotations | c= comments )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:472:4: (m= modifiers ( variableDefinition[$m.tree] | methodDefinition[$m.tree] ) | importDefinition | as2IncludeDirective | annotations | c= comments )
             int alt13 = 5;
             switch ( input.LA(1) ) 
             {
@@ -2743,7 +2743,7 @@ public class ASParser : Parser
             switch (alt13) 
             {
                 case 1 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:472:4: m= modifiers ( variableDefinition[$m.tree] | methodDefinition[$m.tree] )
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:472:4: m= modifiers ( variableDefinition[$m.tree] | methodDefinition[$m.tree] )
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
@@ -2755,7 +2755,7 @@ public class ASParser : Parser
                     	m = modifiers();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:474:3: ( variableDefinition[$m.tree] | methodDefinition[$m.tree] )
+                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:474:3: ( variableDefinition[$m.tree] | methodDefinition[$m.tree] )
                     	int alt12 = 2;
                     	int LA12_0 = input.LA(1);
                     	
@@ -2778,7 +2778,7 @@ public class ASParser : Parser
                     	switch (alt12) 
                     	{
                     	    case 1 :
-                    	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:474:5: variableDefinition[$m.tree]
+                    	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:474:5: variableDefinition[$m.tree]
                     	        {
                     	        	PushFollow(FOLLOW_variableDefinition_in_typeBlockEntry1071);
                     	        	variableDefinition31 = variableDefinition(((CommonTree)m.tree));
@@ -2793,7 +2793,7 @@ public class ASParser : Parser
                     	        }
                     	        break;
                     	    case 2 :
-                    	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:475:5: methodDefinition[$m.tree]
+                    	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:475:5: methodDefinition[$m.tree]
                     	        {
                     	        	PushFollow(FOLLOW_methodDefinition_in_typeBlockEntry1081);
                     	        	methodDefinition32 = methodDefinition(((CommonTree)m.tree));
@@ -2810,7 +2810,7 @@ public class ASParser : Parser
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:477:4: importDefinition
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:477:4: importDefinition
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
@@ -2823,7 +2823,7 @@ public class ASParser : Parser
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:478:4: as2IncludeDirective
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:478:4: as2IncludeDirective
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
@@ -2840,7 +2840,7 @@ public class ASParser : Parser
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:479:4: annotations
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:479:4: annotations
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
@@ -2857,7 +2857,7 @@ public class ASParser : Parser
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:480:4: c= comments
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:480:4: c= comments
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
@@ -2923,7 +2923,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start as2IncludeDirective
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:483:1: as2IncludeDirective : INCLUDE_DIRECTIVE st= STRING_LITERAL -> ^( INCLUDE_DIRECTIVE STRING_LITERAL ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:483:1: as2IncludeDirective : INCLUDE_DIRECTIVE st= STRING_LITERAL -> ^( INCLUDE_DIRECTIVE STRING_LITERAL ) ;
     public as2IncludeDirective_return as2IncludeDirective() // throws RecognitionException [1]
     {   
         as2IncludeDirective_return retval = new as2IncludeDirective_return();
@@ -2945,8 +2945,8 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:484:4: ( INCLUDE_DIRECTIVE st= STRING_LITERAL -> ^( INCLUDE_DIRECTIVE STRING_LITERAL ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:484:4: INCLUDE_DIRECTIVE st= STRING_LITERAL
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:484:4: ( INCLUDE_DIRECTIVE st= STRING_LITERAL -> ^( INCLUDE_DIRECTIVE STRING_LITERAL ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:484:4: INCLUDE_DIRECTIVE st= STRING_LITERAL
             {
             	INCLUDE_DIRECTIVE36 = (CommonToken)input.LT(1);
             	Match(input,INCLUDE_DIRECTIVE,FOLLOW_INCLUDE_DIRECTIVE_in_as2IncludeDirective1127); if (failed) return retval;
@@ -2974,7 +2974,7 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             	// 485:3: -> ^( INCLUDE_DIRECTIVE STRING_LITERAL )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:485:6: ^( INCLUDE_DIRECTIVE STRING_LITERAL )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:485:6: ^( INCLUDE_DIRECTIVE STRING_LITERAL )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(stream_INCLUDE_DIRECTIVE.Next(), root_1);
@@ -3034,7 +3034,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start includeDirective
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:488:1: includeDirective : 'include' STRING_LITERAL semi ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:488:1: includeDirective : 'include' STRING_LITERAL semi ;
     public includeDirective_return includeDirective() // throws RecognitionException [1]
     {   
         includeDirective_return retval = new includeDirective_return();
@@ -3056,8 +3056,8 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:489:4: ( 'include' STRING_LITERAL semi )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:489:4: 'include' STRING_LITERAL semi
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:489:4: ( 'include' STRING_LITERAL semi )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:489:4: 'include' STRING_LITERAL semi
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
@@ -3125,7 +3125,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start interfaceMethodDefinition
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:492:1: interfaceMethodDefinition[CommonTree mods] : FUNCTION r= optionalAccessorRole ide= ident parameterDeclarationList (type_exp= typeExpression )? ( semi ) -> ^( IMETHOD_DEF optionalAccessorRole ident parameterDeclarationList ( typeExpression )? ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:492:1: interfaceMethodDefinition[CommonTree mods] : FUNCTION r= optionalAccessorRole ide= ident parameterDeclarationList (type_exp= typeExpression )? ( semi ) -> ^( IMETHOD_DEF optionalAccessorRole ident parameterDeclarationList ( typeExpression )? ) ;
     public interfaceMethodDefinition_return interfaceMethodDefinition(CommonTree mods) // throws RecognitionException [1]
     {   
         interfaceMethodDefinition_return retval = new interfaceMethodDefinition_return();
@@ -3158,8 +3158,8 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:493:4: ( FUNCTION r= optionalAccessorRole ide= ident parameterDeclarationList (type_exp= typeExpression )? ( semi ) -> ^( IMETHOD_DEF optionalAccessorRole ident parameterDeclarationList ( typeExpression )? ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:493:4: FUNCTION r= optionalAccessorRole ide= ident parameterDeclarationList (type_exp= typeExpression )? ( semi )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:493:4: ( FUNCTION r= optionalAccessorRole ide= ident parameterDeclarationList (type_exp= typeExpression )? ( semi ) -> ^( IMETHOD_DEF optionalAccessorRole ident parameterDeclarationList ( typeExpression )? ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:493:4: FUNCTION r= optionalAccessorRole ide= ident parameterDeclarationList (type_exp= typeExpression )? ( semi )
             {
             	FUNCTION40 = (CommonToken)input.LT(1);
             	Match(input,FUNCTION,FOLLOW_FUNCTION_in_interfaceMethodDefinition1170); if (failed) return retval;
@@ -3188,7 +3188,7 @@ public class ASParser : Parser
             	followingStackPointer_--;
             	if (failed) return retval;
             	if ( backtracking==0 ) stream_parameterDeclarationList.Add(parameterDeclarationList41.Tree);
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:497:11: (type_exp= typeExpression )?
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:497:11: (type_exp= typeExpression )?
             	int alt14 = 2;
             	int LA14_0 = input.LA(1);
             	
@@ -3199,7 +3199,7 @@ public class ASParser : Parser
             	switch (alt14) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: type_exp= typeExpression
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:0:0: type_exp= typeExpression
             	        {
             	        	PushFollow(FOLLOW_typeExpression_in_interfaceMethodDefinition1204);
             	        	type_exp = typeExpression();
@@ -3220,8 +3220,8 @@ public class ASParser : Parser
             	  										CurrentTab++;
             	  									
             	}
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:502:3: ( semi )
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:502:4: semi
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:502:3: ( semi )
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:502:4: semi
             	{
             		PushFollow(FOLLOW_semi_in_interfaceMethodDefinition1212);
             		semi42 = semi();
@@ -3245,7 +3245,7 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             	// 503:3: -> ^( IMETHOD_DEF optionalAccessorRole ident parameterDeclarationList ( typeExpression )? )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:503:6: ^( IMETHOD_DEF optionalAccessorRole ident parameterDeclarationList ( typeExpression )? )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:503:6: ^( IMETHOD_DEF optionalAccessorRole ident parameterDeclarationList ( typeExpression )? )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(IMETHOD_DEF, "IMETHOD_DEF"), root_1);
@@ -3254,7 +3254,7 @@ public class ASParser : Parser
             	    adaptor.AddChild(root_1, stream_optionalAccessorRole.Next());
             	    adaptor.AddChild(root_1, stream_ident.Next());
             	    adaptor.AddChild(root_1, stream_parameterDeclarationList.Next());
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:506:7: ( typeExpression )?
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:506:7: ( typeExpression )?
             	    if ( stream_typeExpression.HasNext() )
             	    {
             	        adaptor.AddChild(root_1, stream_typeExpression.Next());
@@ -3315,7 +3315,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start methodDefinition
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:511:1: methodDefinition[CommonTree mods] : FUNCTION r= optionalAccessorRole ide= ident parameterDeclarationList (type_exp= typeExpression )? ( (c1= comments )? block semi ) -> ^( METHOD_DEF optionalAccessorRole ident parameterDeclarationList ( typeExpression )? block ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:511:1: methodDefinition[CommonTree mods] : FUNCTION r= optionalAccessorRole ide= ident parameterDeclarationList (type_exp= typeExpression )? ( (c1= comments )? block semi ) -> ^( METHOD_DEF optionalAccessorRole ident parameterDeclarationList ( typeExpression )? block ) ;
     public methodDefinition_return methodDefinition(CommonTree mods) // throws RecognitionException [1]
     {   
         methodDefinition_return retval = new methodDefinition_return();
@@ -3354,8 +3354,8 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:512:4: ( FUNCTION r= optionalAccessorRole ide= ident parameterDeclarationList (type_exp= typeExpression )? ( (c1= comments )? block semi ) -> ^( METHOD_DEF optionalAccessorRole ident parameterDeclarationList ( typeExpression )? block ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:512:4: FUNCTION r= optionalAccessorRole ide= ident parameterDeclarationList (type_exp= typeExpression )? ( (c1= comments )? block semi )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:512:4: ( FUNCTION r= optionalAccessorRole ide= ident parameterDeclarationList (type_exp= typeExpression )? ( (c1= comments )? block semi ) -> ^( METHOD_DEF optionalAccessorRole ident parameterDeclarationList ( typeExpression )? block ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:512:4: FUNCTION r= optionalAccessorRole ide= ident parameterDeclarationList (type_exp= typeExpression )? ( (c1= comments )? block semi )
             {
             	if ( backtracking == 0 ) 
             	{
@@ -3391,7 +3391,7 @@ public class ASParser : Parser
             	followingStackPointer_--;
             	if (failed) return retval;
             	if ( backtracking==0 ) stream_parameterDeclarationList.Add(parameterDeclarationList44.Tree);
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:522:11: (type_exp= typeExpression )?
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:522:11: (type_exp= typeExpression )?
             	int alt15 = 2;
             	int LA15_0 = input.LA(1);
             	
@@ -3402,7 +3402,7 @@ public class ASParser : Parser
             	switch (alt15) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: type_exp= typeExpression
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:0:0: type_exp= typeExpression
             	        {
             	        	PushFollow(FOLLOW_typeExpression_in_methodDefinition1325);
             	        	type_exp = typeExpression();
@@ -3423,10 +3423,10 @@ public class ASParser : Parser
             	  										CurrentTab++;
             	  									
             	}
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:528:3: ( (c1= comments )? block semi )
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:529:4: (c1= comments )? block semi
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:528:3: ( (c1= comments )? block semi )
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:529:4: (c1= comments )? block semi
             	{
-            		// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:529:6: (c1= comments )?
+            		// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:529:6: (c1= comments )?
             		int alt16 = 2;
             		int LA16_0 = input.LA(1);
             		
@@ -3437,7 +3437,7 @@ public class ASParser : Parser
             		switch (alt16) 
             		{
             		    case 1 :
-            		        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: c1= comments
+            		        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:0:0: c1= comments
             		        {
             		        	PushFollow(FOLLOW_comments_in_methodDefinition1348);
             		        	c1 = comments();
@@ -3490,7 +3490,7 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             	// 538:3: -> ^( METHOD_DEF optionalAccessorRole ident parameterDeclarationList ( typeExpression )? block )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:538:6: ^( METHOD_DEF optionalAccessorRole ident parameterDeclarationList ( typeExpression )? block )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:538:6: ^( METHOD_DEF optionalAccessorRole ident parameterDeclarationList ( typeExpression )? block )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(METHOD_DEF, "METHOD_DEF"), root_1);
@@ -3499,7 +3499,7 @@ public class ASParser : Parser
             	    adaptor.AddChild(root_1, stream_optionalAccessorRole.Next());
             	    adaptor.AddChild(root_1, stream_ident.Next());
             	    adaptor.AddChild(root_1, stream_parameterDeclarationList.Next());
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:541:7: ( typeExpression )?
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:541:7: ( typeExpression )?
             	    if ( stream_typeExpression.HasNext() )
             	    {
             	        adaptor.AddChild(root_1, stream_typeExpression.Next());
@@ -3561,7 +3561,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start optionalAccessorRole
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:546:1: optionalAccessorRole : ( accessorRole )? -> ^( ACCESSOR_ROLE ( accessorRole )? ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:546:1: optionalAccessorRole : ( accessorRole )? -> ^( ACCESSOR_ROLE ( accessorRole )? ) ;
     public optionalAccessorRole_return optionalAccessorRole() // throws RecognitionException [1]
     {   
         optionalAccessorRole_return retval = new optionalAccessorRole_return();
@@ -3579,10 +3579,10 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:547:4: ( ( accessorRole )? -> ^( ACCESSOR_ROLE ( accessorRole )? ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:547:4: ( accessorRole )?
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:547:4: ( ( accessorRole )? -> ^( ACCESSOR_ROLE ( accessorRole )? ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:547:4: ( accessorRole )?
             {
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:547:4: ( accessorRole )?
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:547:4: ( accessorRole )?
             	int alt17 = 2;
             	int LA17_0 = input.LA(1);
             	
@@ -3607,7 +3607,7 @@ public class ASParser : Parser
             	switch (alt17) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: accessorRole
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:0:0: accessorRole
             	        {
             	        	PushFollow(FOLLOW_accessorRole_in_optionalAccessorRole1447);
             	        	accessorRole47 = accessorRole();
@@ -3634,12 +3634,12 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             	// 548:3: -> ^( ACCESSOR_ROLE ( accessorRole )? )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:548:6: ^( ACCESSOR_ROLE ( accessorRole )? )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:548:6: ^( ACCESSOR_ROLE ( accessorRole )? )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(ACCESSOR_ROLE, "ACCESSOR_ROLE"), root_1);
             	    
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:548:22: ( accessorRole )?
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:548:22: ( accessorRole )?
             	    if ( stream_accessorRole.HasNext() )
             	    {
             	        adaptor.AddChild(root_1, stream_accessorRole.Next());
@@ -3700,7 +3700,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start accessorRole
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:551:1: accessorRole : ( GET | SET );
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:551:1: accessorRole : ( GET | SET );
     public accessorRole_return accessorRole() // throws RecognitionException [1]
     {   
         accessorRole_return retval = new accessorRole_return();
@@ -3720,7 +3720,7 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:552:4: ( GET | SET )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:552:4: ( GET | SET )
             int alt18 = 2;
             int LA18_0 = input.LA(1);
             
@@ -3743,7 +3743,7 @@ public class ASParser : Parser
             switch (alt18) 
             {
                 case 1 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:552:4: GET
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:552:4: GET
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
@@ -3761,7 +3761,7 @@ public class ASParser : Parser
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:553:4: SET
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:553:4: SET
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
@@ -3824,7 +3824,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start variableDefinition
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:556:1: variableDefinition[CommonTree mods] : decl= varOrConst variableDeclarator ( COMMA variableDeclarator )* semi -> ^( VAR_DEF $decl ( variableDeclarator )+ ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:556:1: variableDefinition[CommonTree mods] : decl= varOrConst variableDeclarator ( COMMA variableDeclarator )* semi -> ^( VAR_DEF $decl ( variableDeclarator )+ ) ;
     public variableDefinition_return variableDefinition(CommonTree mods) // throws RecognitionException [1]
     {   
         InOperator_stack.Push(new InOperator_scope());
@@ -3858,8 +3858,8 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:561:4: (decl= varOrConst variableDeclarator ( COMMA variableDeclarator )* semi -> ^( VAR_DEF $decl ( variableDeclarator )+ ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:561:4: decl= varOrConst variableDeclarator ( COMMA variableDeclarator )* semi
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:561:4: (decl= varOrConst variableDeclarator ( COMMA variableDeclarator )* semi -> ^( VAR_DEF $decl ( variableDeclarator )+ ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:561:4: decl= varOrConst variableDeclarator ( COMMA variableDeclarator )* semi
             {
             	if ( backtracking == 0 ) 
             	{
@@ -3881,7 +3881,7 @@ public class ASParser : Parser
             	followingStackPointer_--;
             	if (failed) return retval;
             	if ( backtracking==0 ) stream_variableDeclarator.Add(variableDeclarator50.Tree);
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:566:3: ( COMMA variableDeclarator )*
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:566:3: ( COMMA variableDeclarator )*
             	do 
             	{
             	    int alt19 = 2;
@@ -3896,7 +3896,7 @@ public class ASParser : Parser
             	    switch (alt19) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:567:10: COMMA variableDeclarator
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:567:10: COMMA variableDeclarator
             			    {
             			    	if ( backtracking == 0 ) 
             			    	{
@@ -3951,7 +3951,7 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             	// 576:3: -> ^( VAR_DEF $decl ( variableDeclarator )+ )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:576:6: ^( VAR_DEF $decl ( variableDeclarator )+ )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:576:6: ^( VAR_DEF $decl ( variableDeclarator )+ )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(VAR_DEF, "VAR_DEF"), root_1);
@@ -4023,7 +4023,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start varOrConst
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:579:1: varOrConst : ( VAR | CONST );
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:579:1: varOrConst : ( VAR | CONST );
     public varOrConst_return varOrConst() // throws RecognitionException [1]
     {   
         varOrConst_return retval = new varOrConst_return();
@@ -4041,8 +4041,8 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:580:4: ( VAR | CONST )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:580:4: ( VAR | CONST )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
@@ -4108,7 +4108,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start variableDeclarator
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:583:1: variableDeclarator : ide= ident (type_exp= typeExpression )? ( variableInitializer )? ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:583:1: variableDeclarator : ide= ident (type_exp= typeExpression )? ( variableInitializer )? ;
     public variableDeclarator_return variableDeclarator() // throws RecognitionException [1]
     {   
         variableDeclarator_return retval = new variableDeclarator_return();
@@ -4130,8 +4130,8 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:584:4: (ide= ident (type_exp= typeExpression )? ( variableInitializer )? )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:584:4: ide= ident (type_exp= typeExpression )? ( variableInitializer )?
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:584:4: (ide= ident (type_exp= typeExpression )? ( variableInitializer )? )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:584:4: ide= ident (type_exp= typeExpression )? ( variableInitializer )?
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
@@ -4144,7 +4144,7 @@ public class ASParser : Parser
             	{
             	   buffer.Append(((CommonTree)ide.Tree).Text);  
             	}
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:585:11: (type_exp= typeExpression )?
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:585:11: (type_exp= typeExpression )?
             	int alt20 = 2;
             	int LA20_0 = input.LA(1);
             	
@@ -4155,7 +4155,7 @@ public class ASParser : Parser
             	switch (alt20) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: type_exp= typeExpression
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:0:0: type_exp= typeExpression
             	        {
             	        	PushFollow(FOLLOW_typeExpression_in_variableDeclarator1615);
             	        	type_exp = typeExpression();
@@ -4173,7 +4173,7 @@ public class ASParser : Parser
             	  
             	  									
             	}
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:587:3: ( variableInitializer )?
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:587:3: ( variableInitializer )?
             	int alt21 = 2;
             	int LA21_0 = input.LA(1);
             	
@@ -4184,7 +4184,7 @@ public class ASParser : Parser
             	switch (alt21) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: variableInitializer
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:0:0: variableInitializer
             	        {
             	        	PushFollow(FOLLOW_variableInitializer_in_variableDeclarator1622);
             	        	variableInitializer55 = variableInitializer();
@@ -4244,7 +4244,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start declaration
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:590:1: declaration : decl= varOrConst variableDeclarator declarationTail ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:590:1: declaration : decl= varOrConst variableDeclarator declarationTail ;
     public declaration_return declaration() // throws RecognitionException [1]
     {   
         declaration_return retval = new declaration_return();
@@ -4266,8 +4266,8 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:591:4: (decl= varOrConst variableDeclarator declarationTail )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:591:4: decl= varOrConst variableDeclarator declarationTail
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:591:4: (decl= varOrConst variableDeclarator declarationTail )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:591:4: decl= varOrConst variableDeclarator declarationTail
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
@@ -4337,7 +4337,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start declarationTail
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:596:1: declarationTail : ( COMMA variableDeclarator )* ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:596:1: declarationTail : ( COMMA variableDeclarator )* ;
     public declarationTail_return declarationTail() // throws RecognitionException [1]
     {   
         InOperator_stack.Push(new InOperator_scope());
@@ -4362,12 +4362,12 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:601:4: ( ( COMMA variableDeclarator )* )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:601:4: ( COMMA variableDeclarator )*
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:601:4: ( ( COMMA variableDeclarator )* )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:601:4: ( COMMA variableDeclarator )*
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:601:4: ( COMMA variableDeclarator )*
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:601:4: ( COMMA variableDeclarator )*
             	do 
             	{
             	    int alt22 = 2;
@@ -4382,7 +4382,7 @@ public class ASParser : Parser
             	    switch (alt22) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:602:4: COMMA variableDeclarator
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:602:4: COMMA variableDeclarator
             			    {
             			    	COMMA58 = (CommonToken)input.LT(1);
             			    	Match(input,COMMA,FOLLOW_COMMA_in_declarationTail1677); if (failed) return retval;
@@ -4456,7 +4456,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start variableInitializer
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:607:1: variableInitializer : ASSIGN assignmentExpression ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:607:1: variableInitializer : ASSIGN assignmentExpression ;
     public variableInitializer_return variableInitializer() // throws RecognitionException [1]
     {   
         variableInitializer_return retval = new variableInitializer_return();
@@ -4476,8 +4476,8 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:608:4: ( ASSIGN assignmentExpression )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:608:4: ASSIGN assignmentExpression
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:608:4: ( ASSIGN assignmentExpression )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:608:4: ASSIGN assignmentExpression
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
@@ -4547,7 +4547,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start parameterDeclarationList
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:618:1: parameterDeclarationList : LPAREN ( parameterDeclaration ( COMMA parameterDeclaration )* )? RPAREN -> ^( PARAMS ( parameterDeclaration )* ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:618:1: parameterDeclarationList : LPAREN ( parameterDeclaration ( COMMA parameterDeclaration )* )? RPAREN -> ^( PARAMS ( parameterDeclaration )* ) ;
     public parameterDeclarationList_return parameterDeclarationList() // throws RecognitionException [1]
     {   
         parameterDeclarationList_return retval = new parameterDeclarationList_return();
@@ -4576,8 +4576,8 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:619:4: ( LPAREN ( parameterDeclaration ( COMMA parameterDeclaration )* )? RPAREN -> ^( PARAMS ( parameterDeclaration )* ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:619:4: LPAREN ( parameterDeclaration ( COMMA parameterDeclaration )* )? RPAREN
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:619:4: ( LPAREN ( parameterDeclaration ( COMMA parameterDeclaration )* )? RPAREN -> ^( PARAMS ( parameterDeclaration )* ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:619:4: LPAREN ( parameterDeclaration ( COMMA parameterDeclaration )* )? RPAREN
             {
             	LPAREN62 = (CommonToken)input.LT(1);
             	Match(input,LPAREN,FOLLOW_LPAREN_in_parameterDeclarationList1724); if (failed) return retval;
@@ -4587,7 +4587,7 @@ public class ASParser : Parser
             	{
             	   buffer.Append(options.SpaceBeforeMethodDef ? " (" : "("); 
             	}
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:620:3: ( parameterDeclaration ( COMMA parameterDeclaration )* )?
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:620:3: ( parameterDeclaration ( COMMA parameterDeclaration )* )?
             	int alt24 = 2;
             	int LA24_0 = input.LA(1);
             	
@@ -4598,14 +4598,14 @@ public class ASParser : Parser
             	switch (alt24) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:620:5: parameterDeclaration ( COMMA parameterDeclaration )*
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:620:5: parameterDeclaration ( COMMA parameterDeclaration )*
             	        {
             	        	PushFollow(FOLLOW_parameterDeclaration_in_parameterDeclarationList1734);
             	        	parameterDeclaration63 = parameterDeclaration();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
             	        	if ( backtracking==0 ) stream_parameterDeclaration.Add(parameterDeclaration63.Tree);
-            	        	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:621:4: ( COMMA parameterDeclaration )*
+            	        	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:621:4: ( COMMA parameterDeclaration )*
             	        	do 
             	        	{
             	        	    int alt23 = 2;
@@ -4620,7 +4620,7 @@ public class ASParser : Parser
             	        	    switch (alt23) 
             	        		{
             	        			case 1 :
-            	        			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:622:5: COMMA parameterDeclaration
+            	        			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:622:5: COMMA parameterDeclaration
             	        			    {
             	        			    	COMMA64 = (CommonToken)input.LT(1);
             	        			    	Match(input,COMMA,FOLLOW_COMMA_in_parameterDeclarationList1745); if (failed) return retval;
@@ -4675,12 +4675,12 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             	// 627:3: -> ^( PARAMS ( parameterDeclaration )* )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:627:6: ^( PARAMS ( parameterDeclaration )* )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:627:6: ^( PARAMS ( parameterDeclaration )* )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(PARAMS, "PARAMS"), root_1);
             	    
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:627:15: ( parameterDeclaration )*
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:627:15: ( parameterDeclaration )*
             	    while ( stream_parameterDeclaration.HasNext() )
             	    {
             	        adaptor.AddChild(root_1, stream_parameterDeclaration.Next());
@@ -4741,7 +4741,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start parameterDeclaration
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:631:1: parameterDeclaration : basicParameterDeclaration ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:631:1: parameterDeclaration : basicParameterDeclaration ;
     public parameterDeclaration_return parameterDeclaration() // throws RecognitionException [1]
     {   
         parameterDeclaration_return retval = new parameterDeclaration_return();
@@ -4759,8 +4759,8 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:632:4: ( basicParameterDeclaration )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:632:4: basicParameterDeclaration
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:632:4: ( basicParameterDeclaration )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:632:4: basicParameterDeclaration
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
@@ -4816,7 +4816,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start basicParameterDeclaration
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:635:1: basicParameterDeclaration : ( CONST )? ide= ident (type_exp= typeExpression )? ( parameterDefault )? -> ^( PARAM ( CONST )? ident ( typeExpression )? ( parameterDefault )? ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:635:1: basicParameterDeclaration : ( CONST )? ide= ident (type_exp= typeExpression )? ( parameterDefault )? -> ^( PARAM ( CONST )? ident ( typeExpression )? ( parameterDefault )? ) ;
     public basicParameterDeclaration_return basicParameterDeclaration() // throws RecognitionException [1]
     {   
         basicParameterDeclaration_return retval = new basicParameterDeclaration_return();
@@ -4843,10 +4843,10 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:636:4: ( ( CONST )? ide= ident (type_exp= typeExpression )? ( parameterDefault )? -> ^( PARAM ( CONST )? ident ( typeExpression )? ( parameterDefault )? ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:636:4: ( CONST )? ide= ident (type_exp= typeExpression )? ( parameterDefault )?
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:636:4: ( ( CONST )? ide= ident (type_exp= typeExpression )? ( parameterDefault )? -> ^( PARAM ( CONST )? ident ( typeExpression )? ( parameterDefault )? ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:636:4: ( CONST )? ide= ident (type_exp= typeExpression )? ( parameterDefault )?
             {
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:636:4: ( CONST )?
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:636:4: ( CONST )?
             	int alt25 = 2;
             	int LA25_0 = input.LA(1);
             	
@@ -4857,7 +4857,7 @@ public class ASParser : Parser
             	switch (alt25) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: CONST
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:0:0: CONST
             	        {
             	        	CONST68 = (CommonToken)input.LT(1);
             	        	Match(input,CONST,FOLLOW_CONST_in_basicParameterDeclaration1807); if (failed) return retval;
@@ -4878,7 +4878,7 @@ public class ASParser : Parser
             	{
             	   buffer.Append(((CommonTree)ide.Tree).Text); 
             	}
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:638:11: (type_exp= typeExpression )?
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:638:11: (type_exp= typeExpression )?
             	int alt26 = 2;
             	int LA26_0 = input.LA(1);
             	
@@ -4889,7 +4889,7 @@ public class ASParser : Parser
             	switch (alt26) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: type_exp= typeExpression
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:0:0: type_exp= typeExpression
             	        {
             	        	PushFollow(FOLLOW_typeExpression_in_basicParameterDeclaration1827);
             	        	type_exp = typeExpression();
@@ -4906,7 +4906,7 @@ public class ASParser : Parser
             	{
             	    
             	}
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:639:3: ( parameterDefault )?
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:639:3: ( parameterDefault )?
             	int alt27 = 2;
             	int LA27_0 = input.LA(1);
             	
@@ -4917,7 +4917,7 @@ public class ASParser : Parser
             	switch (alt27) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: parameterDefault
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:0:0: parameterDefault
             	        {
             	        	PushFollow(FOLLOW_parameterDefault_in_basicParameterDeclaration1834);
             	        	parameterDefault69 = parameterDefault();
@@ -4944,12 +4944,12 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             	// 640:3: -> ^( PARAM ( CONST )? ident ( typeExpression )? ( parameterDefault )? )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:640:6: ^( PARAM ( CONST )? ident ( typeExpression )? ( parameterDefault )? )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:640:6: ^( PARAM ( CONST )? ident ( typeExpression )? ( parameterDefault )? )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(PARAM, "PARAM"), root_1);
             	    
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:640:14: ( CONST )?
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:640:14: ( CONST )?
             	    if ( stream_CONST.HasNext() )
             	    {
             	        adaptor.AddChild(root_1, stream_CONST.Next());
@@ -4957,14 +4957,14 @@ public class ASParser : Parser
             	    }
             	    stream_CONST.Reset();
             	    adaptor.AddChild(root_1, stream_ident.Next());
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:640:27: ( typeExpression )?
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:640:27: ( typeExpression )?
             	    if ( stream_typeExpression.HasNext() )
             	    {
             	        adaptor.AddChild(root_1, stream_typeExpression.Next());
             	    
             	    }
             	    stream_typeExpression.Reset();
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:640:43: ( parameterDefault )?
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:640:43: ( parameterDefault )?
             	    if ( stream_parameterDefault.HasNext() )
             	    {
             	        adaptor.AddChild(root_1, stream_parameterDefault.Next());
@@ -5025,7 +5025,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start parameterDefault
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:643:1: parameterDefault : ASSIGN assignmentExpression ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:643:1: parameterDefault : ASSIGN assignmentExpression ;
     public parameterDefault_return parameterDefault() // throws RecognitionException [1]
     {   
         InOperator_stack.Push(new InOperator_scope());
@@ -5050,8 +5050,8 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:649:4: ( ASSIGN assignmentExpression )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:649:4: ASSIGN assignmentExpression
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:649:4: ( ASSIGN assignmentExpression )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:649:4: ASSIGN assignmentExpression
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
@@ -5115,7 +5115,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start block
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:652:1: block : LCURLY ( blockEntry )* RCURLY -> ^( BLOCK ( blockEntry )* ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:652:1: block : LCURLY ( blockEntry )* RCURLY -> ^( BLOCK ( blockEntry )* ) ;
     public block_return block() // throws RecognitionException [1]
     {   
         block_return retval = new block_return();
@@ -5139,14 +5139,14 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:653:4: ( LCURLY ( blockEntry )* RCURLY -> ^( BLOCK ( blockEntry )* ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:653:4: LCURLY ( blockEntry )* RCURLY
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:653:4: ( LCURLY ( blockEntry )* RCURLY -> ^( BLOCK ( blockEntry )* ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:653:4: LCURLY ( blockEntry )* RCURLY
             {
             	LCURLY72 = (CommonToken)input.LT(1);
             	Match(input,LCURLY,FOLLOW_LCURLY_in_block1892); if (failed) return retval;
             	if ( backtracking==0 ) stream_LCURLY.Add(LCURLY72);
 
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:654:3: ( blockEntry )*
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:654:3: ( blockEntry )*
             	do 
             	{
             	    int alt28 = 2;
@@ -5161,7 +5161,7 @@ public class ASParser : Parser
             	    switch (alt28) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: blockEntry
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:0:0: blockEntry
             			    {
             			    	PushFollow(FOLLOW_blockEntry_in_block1896);
             			    	blockEntry73 = blockEntry();
@@ -5198,12 +5198,12 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             	// 656:3: -> ^( BLOCK ( blockEntry )* )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:656:6: ^( BLOCK ( blockEntry )* )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:656:6: ^( BLOCK ( blockEntry )* )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(BLOCK, "BLOCK"), root_1);
             	    
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:656:14: ( blockEntry )*
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:656:14: ( blockEntry )*
             	    while ( stream_blockEntry.HasNext() )
             	    {
             	        adaptor.AddChild(root_1, stream_blockEntry.Next());
@@ -5264,7 +5264,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start blockEntry
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:659:1: blockEntry : statement ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:659:1: blockEntry : statement ;
     public blockEntry_return blockEntry() // throws RecognitionException [1]
     {   
         blockEntry_return retval = new blockEntry_return();
@@ -5282,8 +5282,8 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:660:4: ( statement )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:660:4: statement
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:660:4: ( statement )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:660:4: statement
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
@@ -5343,7 +5343,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start condition
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:663:1: condition : LPAREN expression RPAREN -> ^( CONDITION expression ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:663:1: condition : LPAREN expression RPAREN -> ^( CONDITION expression ) ;
     public condition_return condition() // throws RecognitionException [1]
     {   
         condition_return retval = new condition_return();
@@ -5367,8 +5367,8 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:664:4: ( LPAREN expression RPAREN -> ^( CONDITION expression ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:664:4: LPAREN expression RPAREN
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:664:4: ( LPAREN expression RPAREN -> ^( CONDITION expression ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:664:4: LPAREN expression RPAREN
             {
             	LPAREN76 = (CommonToken)input.LT(1);
             	Match(input,LPAREN,FOLLOW_LPAREN_in_condition1937); if (failed) return retval;
@@ -5405,7 +5405,7 @@ public class ASParser : Parser
             	root_0 = (CommonTree)adaptor.GetNilNode();
             	// 667:3: -> ^( CONDITION expression )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:667:6: ^( CONDITION expression )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:667:6: ^( CONDITION expression )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(CONDITION, "CONDITION"), root_1);
@@ -5465,7 +5465,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start statement
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:670:1: statement : ( ( LCURLY )=> block | declarationStatement | exp= expressionStatement | ifStatement | forStatement | whileStatement | doWhileStatement | withStatement | switchStatement | breakStatement | continueStatement | returnStatement | throwStatement | tryStatement | SEMI | c= comments );
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:672:1: statement : ( ( LCURLY )=> block | declarationStatement | expressionStatement | ifStatement | forStatement | whileStatement | doWhileStatement | withStatement | switchStatement | breakStatement | continueStatement | returnStatement | throwStatement | tryStatement | SEMI | c= comments );
     public statement_return statement() // throws RecognitionException [1]
     {   
         statement_return retval = new statement_return();
@@ -5473,39 +5473,39 @@ public class ASParser : Parser
         int statement_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken SEMI92 = null;
-        expressionStatement_return exp = null;
-
+        CommonToken SEMI93 = null;
         comments_return c = null;
 
         block_return block79 = null;
 
         declarationStatement_return declarationStatement80 = null;
 
-        ifStatement_return ifStatement81 = null;
+        expressionStatement_return expressionStatement81 = null;
 
-        forStatement_return forStatement82 = null;
+        ifStatement_return ifStatement82 = null;
 
-        whileStatement_return whileStatement83 = null;
+        forStatement_return forStatement83 = null;
 
-        doWhileStatement_return doWhileStatement84 = null;
+        whileStatement_return whileStatement84 = null;
 
-        withStatement_return withStatement85 = null;
+        doWhileStatement_return doWhileStatement85 = null;
 
-        switchStatement_return switchStatement86 = null;
+        withStatement_return withStatement86 = null;
 
-        breakStatement_return breakStatement87 = null;
+        switchStatement_return switchStatement87 = null;
 
-        continueStatement_return continueStatement88 = null;
+        breakStatement_return breakStatement88 = null;
 
-        returnStatement_return returnStatement89 = null;
+        continueStatement_return continueStatement89 = null;
 
-        throwStatement_return throwStatement90 = null;
+        returnStatement_return returnStatement90 = null;
 
-        tryStatement_return tryStatement91 = null;
+        throwStatement_return throwStatement91 = null;
+
+        tryStatement_return tryStatement92 = null;
         
         
-        CommonTree SEMI92_tree=null;
+        CommonTree SEMI93_tree=null;
     
         try 
     	{
@@ -5513,7 +5513,7 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:671:4: ( ( LCURLY )=> block | declarationStatement | exp= expressionStatement | ifStatement | forStatement | whileStatement | doWhileStatement | withStatement | switchStatement | breakStatement | continueStatement | returnStatement | throwStatement | tryStatement | SEMI | c= comments )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:673:4: ( ( LCURLY )=> block | declarationStatement | expressionStatement | ifStatement | forStatement | whileStatement | doWhileStatement | withStatement | switchStatement | breakStatement | continueStatement | returnStatement | throwStatement | tryStatement | SEMI | c= comments )
             int alt29 = 16;
             switch ( input.LA(1) ) 
             {
@@ -5585,7 +5585,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d29s56 =
-                            new NoViableAltException("670:1: statement : ( ( LCURLY )=> block | declarationStatement | exp= expressionStatement | ifStatement | forStatement | whileStatement | doWhileStatement | withStatement | switchStatement | breakStatement | continueStatement | returnStatement | throwStatement | tryStatement | SEMI | c= comments );", 29, 56, input);
+                            new NoViableAltException("672:1: statement : ( ( LCURLY )=> block | declarationStatement | expressionStatement | ifStatement | forStatement | whileStatement | doWhileStatement | withStatement | switchStatement | breakStatement | continueStatement | returnStatement | throwStatement | tryStatement | SEMI | c= comments );", 29, 56, input);
                     
                         throw nvae_d29s56;
                     }
@@ -5638,7 +5638,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d29s65 =
-                            new NoViableAltException("670:1: statement : ( ( LCURLY )=> block | declarationStatement | exp= expressionStatement | ifStatement | forStatement | whileStatement | doWhileStatement | withStatement | switchStatement | breakStatement | continueStatement | returnStatement | throwStatement | tryStatement | SEMI | c= comments );", 29, 65, input);
+                            new NoViableAltException("672:1: statement : ( ( LCURLY )=> block | declarationStatement | expressionStatement | ifStatement | forStatement | whileStatement | doWhileStatement | withStatement | switchStatement | breakStatement | continueStatement | returnStatement | throwStatement | tryStatement | SEMI | c= comments );", 29, 65, input);
                     
                         throw nvae_d29s65;
                     }
@@ -5659,7 +5659,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d29s66 =
-                            new NoViableAltException("670:1: statement : ( ( LCURLY )=> block | declarationStatement | exp= expressionStatement | ifStatement | forStatement | whileStatement | doWhileStatement | withStatement | switchStatement | breakStatement | continueStatement | returnStatement | throwStatement | tryStatement | SEMI | c= comments );", 29, 66, input);
+                            new NoViableAltException("672:1: statement : ( ( LCURLY )=> block | declarationStatement | expressionStatement | ifStatement | forStatement | whileStatement | doWhileStatement | withStatement | switchStatement | breakStatement | continueStatement | returnStatement | throwStatement | tryStatement | SEMI | c= comments );", 29, 66, input);
                     
                         throw nvae_d29s66;
                     }
@@ -5680,7 +5680,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d29s67 =
-                            new NoViableAltException("670:1: statement : ( ( LCURLY )=> block | declarationStatement | exp= expressionStatement | ifStatement | forStatement | whileStatement | doWhileStatement | withStatement | switchStatement | breakStatement | continueStatement | returnStatement | throwStatement | tryStatement | SEMI | c= comments );", 29, 67, input);
+                            new NoViableAltException("672:1: statement : ( ( LCURLY )=> block | declarationStatement | expressionStatement | ifStatement | forStatement | whileStatement | doWhileStatement | withStatement | switchStatement | breakStatement | continueStatement | returnStatement | throwStatement | tryStatement | SEMI | c= comments );", 29, 67, input);
                     
                         throw nvae_d29s67;
                     }
@@ -5701,7 +5701,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d29s68 =
-                            new NoViableAltException("670:1: statement : ( ( LCURLY )=> block | declarationStatement | exp= expressionStatement | ifStatement | forStatement | whileStatement | doWhileStatement | withStatement | switchStatement | breakStatement | continueStatement | returnStatement | throwStatement | tryStatement | SEMI | c= comments );", 29, 68, input);
+                            new NoViableAltException("672:1: statement : ( ( LCURLY )=> block | declarationStatement | expressionStatement | ifStatement | forStatement | whileStatement | doWhileStatement | withStatement | switchStatement | breakStatement | continueStatement | returnStatement | throwStatement | tryStatement | SEMI | c= comments );", 29, 68, input);
                     
                         throw nvae_d29s68;
                     }
@@ -5722,7 +5722,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d29s69 =
-                            new NoViableAltException("670:1: statement : ( ( LCURLY )=> block | declarationStatement | exp= expressionStatement | ifStatement | forStatement | whileStatement | doWhileStatement | withStatement | switchStatement | breakStatement | continueStatement | returnStatement | throwStatement | tryStatement | SEMI | c= comments );", 29, 69, input);
+                            new NoViableAltException("672:1: statement : ( ( LCURLY )=> block | declarationStatement | expressionStatement | ifStatement | forStatement | whileStatement | doWhileStatement | withStatement | switchStatement | breakStatement | continueStatement | returnStatement | throwStatement | tryStatement | SEMI | c= comments );", 29, 69, input);
                     
                         throw nvae_d29s69;
                     }
@@ -5743,7 +5743,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d29s70 =
-                            new NoViableAltException("670:1: statement : ( ( LCURLY )=> block | declarationStatement | exp= expressionStatement | ifStatement | forStatement | whileStatement | doWhileStatement | withStatement | switchStatement | breakStatement | continueStatement | returnStatement | throwStatement | tryStatement | SEMI | c= comments );", 29, 70, input);
+                            new NoViableAltException("672:1: statement : ( ( LCURLY )=> block | declarationStatement | expressionStatement | ifStatement | forStatement | whileStatement | doWhileStatement | withStatement | switchStatement | breakStatement | continueStatement | returnStatement | throwStatement | tryStatement | SEMI | c= comments );", 29, 70, input);
                     
                         throw nvae_d29s70;
                     }
@@ -5764,7 +5764,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d29s71 =
-                            new NoViableAltException("670:1: statement : ( ( LCURLY )=> block | declarationStatement | exp= expressionStatement | ifStatement | forStatement | whileStatement | doWhileStatement | withStatement | switchStatement | breakStatement | continueStatement | returnStatement | throwStatement | tryStatement | SEMI | c= comments );", 29, 71, input);
+                            new NoViableAltException("672:1: statement : ( ( LCURLY )=> block | declarationStatement | expressionStatement | ifStatement | forStatement | whileStatement | doWhileStatement | withStatement | switchStatement | breakStatement | continueStatement | returnStatement | throwStatement | tryStatement | SEMI | c= comments );", 29, 71, input);
                     
                         throw nvae_d29s71;
                     }
@@ -5785,7 +5785,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d29s72 =
-                            new NoViableAltException("670:1: statement : ( ( LCURLY )=> block | declarationStatement | exp= expressionStatement | ifStatement | forStatement | whileStatement | doWhileStatement | withStatement | switchStatement | breakStatement | continueStatement | returnStatement | throwStatement | tryStatement | SEMI | c= comments );", 29, 72, input);
+                            new NoViableAltException("672:1: statement : ( ( LCURLY )=> block | declarationStatement | expressionStatement | ifStatement | forStatement | whileStatement | doWhileStatement | withStatement | switchStatement | breakStatement | continueStatement | returnStatement | throwStatement | tryStatement | SEMI | c= comments );", 29, 72, input);
                     
                         throw nvae_d29s72;
                     }
@@ -5862,7 +5862,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d29s87 =
-                            new NoViableAltException("670:1: statement : ( ( LCURLY )=> block | declarationStatement | exp= expressionStatement | ifStatement | forStatement | whileStatement | doWhileStatement | withStatement | switchStatement | breakStatement | continueStatement | returnStatement | throwStatement | tryStatement | SEMI | c= comments );", 29, 87, input);
+                            new NoViableAltException("672:1: statement : ( ( LCURLY )=> block | declarationStatement | expressionStatement | ifStatement | forStatement | whileStatement | doWhileStatement | withStatement | switchStatement | breakStatement | continueStatement | returnStatement | throwStatement | tryStatement | SEMI | c= comments );", 29, 87, input);
                     
                         throw nvae_d29s87;
                     }
@@ -5871,7 +5871,7 @@ public class ASParser : Parser
                 {
                     if ( backtracking > 0 ) {failed = true; return retval;}
                     NoViableAltException nvae_d29s1 =
-                        new NoViableAltException("670:1: statement : ( ( LCURLY )=> block | declarationStatement | exp= expressionStatement | ifStatement | forStatement | whileStatement | doWhileStatement | withStatement | switchStatement | breakStatement | continueStatement | returnStatement | throwStatement | tryStatement | SEMI | c= comments );", 29, 1, input);
+                        new NoViableAltException("672:1: statement : ( ( LCURLY )=> block | declarationStatement | expressionStatement | ifStatement | forStatement | whileStatement | doWhileStatement | withStatement | switchStatement | breakStatement | continueStatement | returnStatement | throwStatement | tryStatement | SEMI | c= comments );", 29, 1, input);
                 
                     throw nvae_d29s1;
                 }
@@ -5986,7 +5986,7 @@ public class ASParser : Parser
             	default:
             	    if ( backtracking > 0 ) {failed = true; return retval;}
             	    NoViableAltException nvae_d29s0 =
-            	        new NoViableAltException("670:1: statement : ( ( LCURLY )=> block | declarationStatement | exp= expressionStatement | ifStatement | forStatement | whileStatement | doWhileStatement | withStatement | switchStatement | breakStatement | continueStatement | returnStatement | throwStatement | tryStatement | SEMI | c= comments );", 29, 0, input);
+            	        new NoViableAltException("672:1: statement : ( ( LCURLY )=> block | declarationStatement | expressionStatement | ifStatement | forStatement | whileStatement | doWhileStatement | withStatement | switchStatement | breakStatement | continueStatement | returnStatement | throwStatement | tryStatement | SEMI | c= comments );", 29, 0, input);
             
             	    throw nvae_d29s0;
             }
@@ -5994,11 +5994,11 @@ public class ASParser : Parser
             switch (alt29) 
             {
                 case 1 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:671:4: ( LCURLY )=> block
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:673:4: ( LCURLY )=> block
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_block_in_statement1980);
+                    	PushFollow(FOLLOW_block_in_statement1982);
                     	block79 = block();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -6007,11 +6007,11 @@ public class ASParser : Parser
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:672:4: declarationStatement
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:674:4: declarationStatement
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_declarationStatement_in_statement1985);
+                    	PushFollow(FOLLOW_declarationStatement_in_statement1987);
                     	declarationStatement80 = declarationStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -6024,15 +6024,15 @@ public class ASParser : Parser
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:673:4: exp= expressionStatement
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:675:4: expressionStatement
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_expressionStatement_in_statement1995);
-                    	exp = expressionStatement();
+                    	PushFollow(FOLLOW_expressionStatement_in_statement1996);
+                    	expressionStatement81 = expressionStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) adaptor.AddChild(root_0, exp.Tree);
+                    	if ( backtracking==0 ) adaptor.AddChild(root_0, expressionStatement81.Tree);
                     	if ( backtracking == 0 ) 
                     	{
                     	   buffer.Append(";"); 
@@ -6041,93 +6041,93 @@ public class ASParser : Parser
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:674:4: ifStatement
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:676:4: ifStatement
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_ifStatement_in_statement2004);
-                    	ifStatement81 = ifStatement();
+                    	PushFollow(FOLLOW_ifStatement_in_statement2006);
+                    	ifStatement82 = ifStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) adaptor.AddChild(root_0, ifStatement81.Tree);
+                    	if ( backtracking==0 ) adaptor.AddChild(root_0, ifStatement82.Tree);
                     
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:675:4: forStatement
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:677:4: forStatement
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_forStatement_in_statement2009);
-                    	forStatement82 = forStatement();
+                    	PushFollow(FOLLOW_forStatement_in_statement2011);
+                    	forStatement83 = forStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) adaptor.AddChild(root_0, forStatement82.Tree);
+                    	if ( backtracking==0 ) adaptor.AddChild(root_0, forStatement83.Tree);
                     
                     }
                     break;
                 case 6 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:676:4: whileStatement
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:678:4: whileStatement
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_whileStatement_in_statement2014);
-                    	whileStatement83 = whileStatement();
+                    	PushFollow(FOLLOW_whileStatement_in_statement2016);
+                    	whileStatement84 = whileStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) adaptor.AddChild(root_0, whileStatement83.Tree);
+                    	if ( backtracking==0 ) adaptor.AddChild(root_0, whileStatement84.Tree);
                     
                     }
                     break;
                 case 7 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:677:4: doWhileStatement
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:679:4: doWhileStatement
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_doWhileStatement_in_statement2019);
-                    	doWhileStatement84 = doWhileStatement();
+                    	PushFollow(FOLLOW_doWhileStatement_in_statement2021);
+                    	doWhileStatement85 = doWhileStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) adaptor.AddChild(root_0, doWhileStatement84.Tree);
+                    	if ( backtracking==0 ) adaptor.AddChild(root_0, doWhileStatement85.Tree);
                     
                     }
                     break;
                 case 8 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:678:4: withStatement
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:680:4: withStatement
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_withStatement_in_statement2024);
-                    	withStatement85 = withStatement();
+                    	PushFollow(FOLLOW_withStatement_in_statement2026);
+                    	withStatement86 = withStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) adaptor.AddChild(root_0, withStatement85.Tree);
+                    	if ( backtracking==0 ) adaptor.AddChild(root_0, withStatement86.Tree);
                     
                     }
                     break;
                 case 9 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:679:4: switchStatement
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:681:4: switchStatement
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_switchStatement_in_statement2029);
-                    	switchStatement86 = switchStatement();
+                    	PushFollow(FOLLOW_switchStatement_in_statement2031);
+                    	switchStatement87 = switchStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) adaptor.AddChild(root_0, switchStatement86.Tree);
+                    	if ( backtracking==0 ) adaptor.AddChild(root_0, switchStatement87.Tree);
                     
                     }
                     break;
                 case 10 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:680:4: breakStatement
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:682:4: breakStatement
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_breakStatement_in_statement2034);
-                    	breakStatement87 = breakStatement();
+                    	PushFollow(FOLLOW_breakStatement_in_statement2036);
+                    	breakStatement88 = breakStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) adaptor.AddChild(root_0, breakStatement87.Tree);
+                    	if ( backtracking==0 ) adaptor.AddChild(root_0, breakStatement88.Tree);
                     	if ( backtracking == 0 ) 
                     	{
                     	   buffer.Append(";"); 
@@ -6136,15 +6136,15 @@ public class ASParser : Parser
                     }
                     break;
                 case 11 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:681:4: continueStatement
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:683:4: continueStatement
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_continueStatement_in_statement2044);
-                    	continueStatement88 = continueStatement();
+                    	PushFollow(FOLLOW_continueStatement_in_statement2046);
+                    	continueStatement89 = continueStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) adaptor.AddChild(root_0, continueStatement88.Tree);
+                    	if ( backtracking==0 ) adaptor.AddChild(root_0, continueStatement89.Tree);
                     	if ( backtracking == 0 ) 
                     	{
                     	   buffer.Append(";"); 
@@ -6153,15 +6153,15 @@ public class ASParser : Parser
                     }
                     break;
                 case 12 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:682:4: returnStatement
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:684:4: returnStatement
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_returnStatement_in_statement2053);
-                    	returnStatement89 = returnStatement();
+                    	PushFollow(FOLLOW_returnStatement_in_statement2055);
+                    	returnStatement90 = returnStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) adaptor.AddChild(root_0, returnStatement89.Tree);
+                    	if ( backtracking==0 ) adaptor.AddChild(root_0, returnStatement90.Tree);
                     	if ( backtracking == 0 ) 
                     	{
                     	   buffer.Append(";"); 
@@ -6170,15 +6170,15 @@ public class ASParser : Parser
                     }
                     break;
                 case 13 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:683:4: throwStatement
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:685:4: throwStatement
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_throwStatement_in_statement2063);
-                    	throwStatement90 = throwStatement();
+                    	PushFollow(FOLLOW_throwStatement_in_statement2065);
+                    	throwStatement91 = throwStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) adaptor.AddChild(root_0, throwStatement90.Tree);
+                    	if ( backtracking==0 ) adaptor.AddChild(root_0, throwStatement91.Tree);
                     	if ( backtracking == 0 ) 
                     	{
                     	   buffer.Append(";"); 
@@ -6187,34 +6187,34 @@ public class ASParser : Parser
                     }
                     break;
                 case 14 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:684:4: tryStatement
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:686:4: tryStatement
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_tryStatement_in_statement2073);
-                    	tryStatement91 = tryStatement();
+                    	PushFollow(FOLLOW_tryStatement_in_statement2075);
+                    	tryStatement92 = tryStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) adaptor.AddChild(root_0, tryStatement91.Tree);
+                    	if ( backtracking==0 ) adaptor.AddChild(root_0, tryStatement92.Tree);
                     
                     }
                     break;
                 case 15 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:685:4: SEMI
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:687:4: SEMI
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	SEMI92 = (CommonToken)input.LT(1);
-                    	Match(input,SEMI,FOLLOW_SEMI_in_statement2078); if (failed) return retval;
+                    	SEMI93 = (CommonToken)input.LT(1);
+                    	Match(input,SEMI,FOLLOW_SEMI_in_statement2080); if (failed) return retval;
                     
                     }
                     break;
                 case 16 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:686:4: c= comments
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:688:4: c= comments
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_comments_in_statement2086);
+                    	PushFollow(FOLLOW_comments_in_statement2088);
                     	c = comments();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -6272,7 +6272,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start declarationStatement
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:689:1: declarationStatement : declaration semi ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:691:1: declarationStatement : declaration semi ;
     public declarationStatement_return declarationStatement() // throws RecognitionException [1]
     {   
         InOperator_stack.Push(new InOperator_scope());
@@ -6282,9 +6282,9 @@ public class ASParser : Parser
         int declarationStatement_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        declaration_return declaration93 = null;
+        declaration_return declaration94 = null;
 
-        semi_return semi94 = null;
+        semi_return semi95 = null;
         
         
     
@@ -6297,21 +6297,21 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:694:4: ( declaration semi )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:694:4: declaration semi
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:696:4: ( declaration semi )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:696:4: declaration semi
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_declaration_in_declarationStatement2113);
-            	declaration93 = declaration();
+            	PushFollow(FOLLOW_declaration_in_declarationStatement2115);
+            	declaration94 = declaration();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, declaration93.Tree);
-            	PushFollow(FOLLOW_semi_in_declarationStatement2118);
-            	semi94 = semi();
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, declaration94.Tree);
+            	PushFollow(FOLLOW_semi_in_declarationStatement2120);
+            	semi95 = semi();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, semi94.Tree);
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, semi95.Tree);
             
             }
     
@@ -6361,7 +6361,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start expressionStatement
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:698:1: expressionStatement : expressionList semi -> ^( EXPR_STMNT expressionList ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:700:1: expressionStatement : expressionList semi -> ^( EXPR_STMNT expressionList ) ;
     public expressionStatement_return expressionStatement() // throws RecognitionException [1]
     {   
         InOperator_stack.Push(new InOperator_scope());
@@ -6371,9 +6371,9 @@ public class ASParser : Parser
         int expressionStatement_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        expressionList_return expressionList95 = null;
+        expressionList_return expressionList96 = null;
 
-        semi_return semi96 = null;
+        semi_return semi97 = null;
         
         
         RewriteRuleSubtreeStream stream_semi = new RewriteRuleSubtreeStream(adaptor,"rule semi");
@@ -6387,19 +6387,19 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:703:4: ( expressionList semi -> ^( EXPR_STMNT expressionList ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:703:4: expressionList semi
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:705:4: ( expressionList semi -> ^( EXPR_STMNT expressionList ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:705:4: expressionList semi
             {
-            	PushFollow(FOLLOW_expressionList_in_expressionStatement2139);
-            	expressionList95 = expressionList();
+            	PushFollow(FOLLOW_expressionList_in_expressionStatement2141);
+            	expressionList96 = expressionList();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) stream_expressionList.Add(expressionList95.Tree);
-            	PushFollow(FOLLOW_semi_in_expressionStatement2141);
-            	semi96 = semi();
+            	if ( backtracking==0 ) stream_expressionList.Add(expressionList96.Tree);
+            	PushFollow(FOLLOW_semi_in_expressionStatement2143);
+            	semi97 = semi();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) stream_semi.Add(semi96.Tree);
+            	if ( backtracking==0 ) stream_semi.Add(semi97.Tree);
             	
             	// AST REWRITE
             	// elements:          expressionList
@@ -6412,9 +6412,9 @@ public class ASParser : Parser
             	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	
             	root_0 = (CommonTree)adaptor.GetNilNode();
-            	// 704:3: -> ^( EXPR_STMNT expressionList )
+            	// 706:3: -> ^( EXPR_STMNT expressionList )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:704:6: ^( EXPR_STMNT expressionList )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:706:6: ^( EXPR_STMNT expressionList )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(EXPR_STMNT, "EXPR_STMNT"), root_1);
@@ -6476,7 +6476,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start ifStatement
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:707:1: ifStatement : IF condition (c1= comments )? statement ( (c2= comments )? ( ELSE )=> elseClause )? ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:709:1: ifStatement : IF condition (c1= comments )? statement ( (c2= comments )? ( ELSE )=> elseClause )? ;
     public ifStatement_return ifStatement() // throws RecognitionException [1]
     {   
         ifStatement_return retval = new ifStatement_return();
@@ -6484,19 +6484,19 @@ public class ASParser : Parser
         int ifStatement_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken IF97 = null;
+        CommonToken IF98 = null;
         comments_return c1 = null;
 
         comments_return c2 = null;
 
-        condition_return condition98 = null;
+        condition_return condition99 = null;
 
-        statement_return statement99 = null;
+        statement_return statement100 = null;
 
-        elseClause_return elseClause100 = null;
+        elseClause_return elseClause101 = null;
         
         
-        CommonTree IF97_tree=null;
+        CommonTree IF98_tree=null;
     
         try 
     	{
@@ -6504,26 +6504,26 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:708:4: ( IF condition (c1= comments )? statement ( (c2= comments )? ( ELSE )=> elseClause )? )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:708:4: IF condition (c1= comments )? statement ( (c2= comments )? ( ELSE )=> elseClause )?
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:710:4: ( IF condition (c1= comments )? statement ( (c2= comments )? ( ELSE )=> elseClause )? )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:710:4: IF condition (c1= comments )? statement ( (c2= comments )? ( ELSE )=> elseClause )?
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	IF97 = (CommonToken)input.LT(1);
-            	Match(input,IF,FOLLOW_IF_in_ifStatement2163); if (failed) return retval;
+            	IF98 = (CommonToken)input.LT(1);
+            	Match(input,IF,FOLLOW_IF_in_ifStatement2165); if (failed) return retval;
             	if ( backtracking==0 ) {
-            	IF97_tree = (CommonTree)adaptor.Create(IF97);
-            	root_0 = (CommonTree)adaptor.BecomeRoot(IF97_tree, root_0);
+            	IF98_tree = (CommonTree)adaptor.Create(IF98);
+            	root_0 = (CommonTree)adaptor.BecomeRoot(IF98_tree, root_0);
             	}
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append("if");
             	}
-            	PushFollow(FOLLOW_condition_in_ifStatement2175);
-            	condition98 = condition();
+            	PushFollow(FOLLOW_condition_in_ifStatement2177);
+            	condition99 = condition();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, condition98.Tree);
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, condition99.Tree);
             	if ( backtracking == 0 ) 
             	{
             	   
@@ -6537,7 +6537,7 @@ public class ASParser : Parser
             	  									if(next_test != ASLexer.LCURLY)	buffer.Append(NewLine + tab);
             	  								
             	}
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:716:5: (c1= comments )?
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:718:5: (c1= comments )?
             	int alt30 = 2;
             	int LA30_0 = input.LA(1);
             	
@@ -6562,9 +6562,9 @@ public class ASParser : Parser
             	switch (alt30) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: c1= comments
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:0:0: c1= comments
             	        {
-            	        	PushFollow(FOLLOW_comments_in_ifStatement2196);
+            	        	PushFollow(FOLLOW_comments_in_ifStatement2198);
             	        	c1 = comments();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -6579,11 +6579,11 @@ public class ASParser : Parser
             	{
             	   insertComment(c1, false, true); 
             	}
-            	PushFollow(FOLLOW_statement_in_ifStatement2206);
-            	statement99 = statement();
+            	PushFollow(FOLLOW_statement_in_ifStatement2208);
+            	statement100 = statement();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, statement99.Tree);
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, statement100.Tree);
             	if ( backtracking == 0 ) 
             	{
             	  
@@ -6592,7 +6592,7 @@ public class ASParser : Parser
             	  									buffer.Append("}");
             	  								
             	}
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:723:3: ( (c2= comments )? ( ELSE )=> elseClause )?
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:725:3: ( (c2= comments )? ( ELSE )=> elseClause )?
             	int alt32 = 2;
             	switch ( input.LA(1) ) 
             	{
@@ -6631,9 +6631,9 @@ public class ASParser : Parser
             	switch (alt32) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:724:4: (c2= comments )? ( ELSE )=> elseClause
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:726:4: (c2= comments )? ( ELSE )=> elseClause
             	        {
-            	        	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:724:6: (c2= comments )?
+            	        	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:726:6: (c2= comments )?
             	        	int alt31 = 2;
             	        	int LA31_0 = input.LA(1);
             	        	
@@ -6644,9 +6644,9 @@ public class ASParser : Parser
             	        	switch (alt31) 
             	        	{
             	        	    case 1 :
-            	        	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: c2= comments
+            	        	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:0:0: c2= comments
             	        	        {
-            	        	        	PushFollow(FOLLOW_comments_in_ifStatement2227);
+            	        	        	PushFollow(FOLLOW_comments_in_ifStatement2229);
             	        	        	c2 = comments();
             	        	        	followingStackPointer_--;
             	        	        	if (failed) return retval;
@@ -6661,11 +6661,11 @@ public class ASParser : Parser
             	        	{
             	        	  	insertComment(c2, true, true, 1);	
             	        	}
-            	        	PushFollow(FOLLOW_elseClause_in_ifStatement2240);
-            	        	elseClause100 = elseClause();
+            	        	PushFollow(FOLLOW_elseClause_in_ifStatement2242);
+            	        	elseClause101 = elseClause();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
-            	        	if ( backtracking==0 ) adaptor.AddChild(root_0, elseClause100.Tree);
+            	        	if ( backtracking==0 ) adaptor.AddChild(root_0, elseClause101.Tree);
             	        
             	        }
             	        break;
@@ -6719,7 +6719,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start elseClause
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:731:1: elseClause : ELSE statement ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:733:1: elseClause : ELSE statement ;
     public elseClause_return elseClause() // throws RecognitionException [1]
     {   
         elseClause_return retval = new elseClause_return();
@@ -6727,11 +6727,11 @@ public class ASParser : Parser
         int elseClause_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken ELSE101 = null;
-        statement_return statement102 = null;
+        CommonToken ELSE102 = null;
+        statement_return statement103 = null;
         
         
-        CommonTree ELSE101_tree=null;
+        CommonTree ELSE102_tree=null;
     
         
         	int next_test   = -1;
@@ -6743,16 +6743,16 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:736:4: ( ELSE statement )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:736:4: ELSE statement
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:738:4: ( ELSE statement )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:738:4: ELSE statement
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	ELSE101 = (CommonToken)input.LT(1);
-            	Match(input,ELSE,FOLLOW_ELSE_in_elseClause2262); if (failed) return retval;
+            	ELSE102 = (CommonToken)input.LT(1);
+            	Match(input,ELSE,FOLLOW_ELSE_in_elseClause2264); if (failed) return retval;
             	if ( backtracking==0 ) {
-            	ELSE101_tree = (CommonTree)adaptor.Create(ELSE101);
-            	root_0 = (CommonTree)adaptor.BecomeRoot(ELSE101_tree, root_0);
+            	ELSE102_tree = (CommonTree)adaptor.Create(ELSE102);
+            	root_0 = (CommonTree)adaptor.BecomeRoot(ELSE102_tree, root_0);
             	}
             	if ( backtracking == 0 ) 
             	{
@@ -6771,11 +6771,11 @@ public class ASParser : Parser
             	  									}
             	  								
             	}
-            	PushFollow(FOLLOW_statement_in_elseClause2273);
-            	statement102 = statement();
+            	PushFollow(FOLLOW_statement_in_elseClause2275);
+            	statement103 = statement();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, statement102.Tree);
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, statement103.Tree);
             	if ( backtracking == 0 ) 
             	{
             	  
@@ -6834,7 +6834,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start throwStatement
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:760:1: throwStatement : 'throw' expression semi ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:762:1: throwStatement : 'throw' expression semi ;
     public throwStatement_return throwStatement() // throws RecognitionException [1]
     {   
         throwStatement_return retval = new throwStatement_return();
@@ -6842,13 +6842,13 @@ public class ASParser : Parser
         int throwStatement_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken string_literal103 = null;
-        expression_return expression104 = null;
+        CommonToken string_literal104 = null;
+        expression_return expression105 = null;
 
-        semi_return semi105 = null;
+        semi_return semi106 = null;
         
         
-        CommonTree string_literal103_tree=null;
+        CommonTree string_literal104_tree=null;
     
         try 
     	{
@@ -6856,31 +6856,31 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:761:4: ( 'throw' expression semi )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:761:4: 'throw' expression semi
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:763:4: ( 'throw' expression semi )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:763:4: 'throw' expression semi
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	string_literal103 = (CommonToken)input.LT(1);
-            	Match(input,176,FOLLOW_176_in_throwStatement2289); if (failed) return retval;
+            	string_literal104 = (CommonToken)input.LT(1);
+            	Match(input,176,FOLLOW_176_in_throwStatement2291); if (failed) return retval;
             	if ( backtracking==0 ) {
-            	string_literal103_tree = (CommonTree)adaptor.Create(string_literal103);
-            	root_0 = (CommonTree)adaptor.BecomeRoot(string_literal103_tree, root_0);
+            	string_literal104_tree = (CommonTree)adaptor.Create(string_literal104);
+            	root_0 = (CommonTree)adaptor.BecomeRoot(string_literal104_tree, root_0);
             	}
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append("throw "); 
             	}
-            	PushFollow(FOLLOW_expression_in_throwStatement2294);
-            	expression104 = expression();
+            	PushFollow(FOLLOW_expression_in_throwStatement2296);
+            	expression105 = expression();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, expression104.Tree);
-            	PushFollow(FOLLOW_semi_in_throwStatement2296);
-            	semi105 = semi();
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, expression105.Tree);
+            	PushFollow(FOLLOW_semi_in_throwStatement2298);
+            	semi106 = semi();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, semi105.Tree);
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, semi106.Tree);
             
             }
     
@@ -6928,7 +6928,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start tryStatement
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:764:1: tryStatement : 'try' block ( catchBlock )* ( finallyBlock )? ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:766:1: tryStatement : 'try' block ( catchBlock )* ( finallyBlock )? ;
     public tryStatement_return tryStatement() // throws RecognitionException [1]
     {   
         tryStatement_return retval = new tryStatement_return();
@@ -6936,15 +6936,15 @@ public class ASParser : Parser
         int tryStatement_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken string_literal106 = null;
-        block_return block107 = null;
+        CommonToken string_literal107 = null;
+        block_return block108 = null;
 
-        catchBlock_return catchBlock108 = null;
+        catchBlock_return catchBlock109 = null;
 
-        finallyBlock_return finallyBlock109 = null;
+        finallyBlock_return finallyBlock110 = null;
         
         
-        CommonTree string_literal106_tree=null;
+        CommonTree string_literal107_tree=null;
     
         try 
     	{
@@ -6952,16 +6952,16 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:765:4: ( 'try' block ( catchBlock )* ( finallyBlock )? )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:765:4: 'try' block ( catchBlock )* ( finallyBlock )?
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:767:4: ( 'try' block ( catchBlock )* ( finallyBlock )? )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:767:4: 'try' block ( catchBlock )* ( finallyBlock )?
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	string_literal106 = (CommonToken)input.LT(1);
-            	Match(input,177,FOLLOW_177_in_tryStatement2307); if (failed) return retval;
+            	string_literal107 = (CommonToken)input.LT(1);
+            	Match(input,177,FOLLOW_177_in_tryStatement2309); if (failed) return retval;
             	if ( backtracking==0 ) {
-            	string_literal106_tree = (CommonTree)adaptor.Create(string_literal106);
-            	adaptor.AddChild(root_0, string_literal106_tree);
+            	string_literal107_tree = (CommonTree)adaptor.Create(string_literal107);
+            	adaptor.AddChild(root_0, string_literal107_tree);
             	}
             	if ( backtracking == 0 ) 
             	{
@@ -6971,11 +6971,11 @@ public class ASParser : Parser
             	  							CurrentTab++;
             	  						
             	}
-            	PushFollow(FOLLOW_block_in_tryStatement2315);
-            	block107 = block();
+            	PushFollow(FOLLOW_block_in_tryStatement2317);
+            	block108 = block();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, block107.Tree);
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, block108.Tree);
             	if ( backtracking == 0 ) 
             	{
             	  
@@ -6984,7 +6984,7 @@ public class ASParser : Parser
             	  							buffer.Append("}");
             	  						
             	}
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:775:3: ( catchBlock )*
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:777:3: ( catchBlock )*
             	do 
             	{
             	    int alt33 = 2;
@@ -6999,17 +6999,17 @@ public class ASParser : Parser
             	    switch (alt33) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:775:5: catchBlock
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:777:5: catchBlock
             			    {
             			    	if ( backtracking == 0 ) 
             			    	{
             			    	   buffer.Append((options.NewlineBeforeElse ? NewLine + tab : " ")); 
             			    	}
-            			    	PushFollow(FOLLOW_catchBlock_in_tryStatement2328);
-            			    	catchBlock108 = catchBlock();
+            			    	PushFollow(FOLLOW_catchBlock_in_tryStatement2330);
+            			    	catchBlock109 = catchBlock();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
-            			    	if ( backtracking==0 ) adaptor.AddChild(root_0, catchBlock108.Tree);
+            			    	if ( backtracking==0 ) adaptor.AddChild(root_0, catchBlock109.Tree);
             			    
             			    }
             			    break;
@@ -7022,7 +7022,7 @@ public class ASParser : Parser
             	loop33:
             		;	// Stops C# compiler whinging that label 'loop33' has no statements
 
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:776:3: ( finallyBlock )?
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:778:3: ( finallyBlock )?
             	int alt34 = 2;
             	int LA34_0 = input.LA(1);
             	
@@ -7033,17 +7033,17 @@ public class ASParser : Parser
             	switch (alt34) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:776:5: finallyBlock
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:778:5: finallyBlock
             	        {
             	        	if ( backtracking == 0 ) 
             	        	{
             	        	   buffer.Append((options.NewlineBeforeElse ? NewLine + tab : " ")); 
             	        	}
-            	        	PushFollow(FOLLOW_finallyBlock_in_tryStatement2338);
-            	        	finallyBlock109 = finallyBlock();
+            	        	PushFollow(FOLLOW_finallyBlock_in_tryStatement2340);
+            	        	finallyBlock110 = finallyBlock();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
-            	        	if ( backtracking==0 ) adaptor.AddChild(root_0, finallyBlock109.Tree);
+            	        	if ( backtracking==0 ) adaptor.AddChild(root_0, finallyBlock110.Tree);
             	        
             	        }
             	        break;
@@ -7097,7 +7097,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start catchBlock
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:779:1: catchBlock : 'catch' LPAREN ide= ident ( typeExpression )? RPAREN block ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:781:1: catchBlock : 'catch' LPAREN ide= ident ( typeExpression )? RPAREN block ;
     public catchBlock_return catchBlock() // throws RecognitionException [1]
     {   
         catchBlock_return retval = new catchBlock_return();
@@ -7105,19 +7105,19 @@ public class ASParser : Parser
         int catchBlock_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken string_literal110 = null;
-        CommonToken LPAREN111 = null;
-        CommonToken RPAREN113 = null;
+        CommonToken string_literal111 = null;
+        CommonToken LPAREN112 = null;
+        CommonToken RPAREN114 = null;
         ident_return ide = null;
 
-        typeExpression_return typeExpression112 = null;
+        typeExpression_return typeExpression113 = null;
 
-        block_return block114 = null;
+        block_return block115 = null;
         
         
-        CommonTree string_literal110_tree=null;
-        CommonTree LPAREN111_tree=null;
-        CommonTree RPAREN113_tree=null;
+        CommonTree string_literal111_tree=null;
+        CommonTree LPAREN112_tree=null;
+        CommonTree RPAREN114_tree=null;
     
         try 
     	{
@@ -7125,28 +7125,28 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:780:4: ( 'catch' LPAREN ide= ident ( typeExpression )? RPAREN block )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:780:4: 'catch' LPAREN ide= ident ( typeExpression )? RPAREN block
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:782:4: ( 'catch' LPAREN ide= ident ( typeExpression )? RPAREN block )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:782:4: 'catch' LPAREN ide= ident ( typeExpression )? RPAREN block
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	string_literal110 = (CommonToken)input.LT(1);
-            	Match(input,178,FOLLOW_178_in_catchBlock2351); if (failed) return retval;
+            	string_literal111 = (CommonToken)input.LT(1);
+            	Match(input,178,FOLLOW_178_in_catchBlock2353); if (failed) return retval;
             	if ( backtracking==0 ) {
-            	string_literal110_tree = (CommonTree)adaptor.Create(string_literal110);
-            	adaptor.AddChild(root_0, string_literal110_tree);
+            	string_literal111_tree = (CommonTree)adaptor.Create(string_literal111);
+            	adaptor.AddChild(root_0, string_literal111_tree);
             	}
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append("catch"); 
             	}
-            	LPAREN111 = (CommonToken)input.LT(1);
-            	Match(input,LPAREN,FOLLOW_LPAREN_in_catchBlock2358); if (failed) return retval;
+            	LPAREN112 = (CommonToken)input.LT(1);
+            	Match(input,LPAREN,FOLLOW_LPAREN_in_catchBlock2360); if (failed) return retval;
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append("("); 
             	}
-            	PushFollow(FOLLOW_ident_in_catchBlock2368);
+            	PushFollow(FOLLOW_ident_in_catchBlock2370);
             	ide = ident();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -7155,7 +7155,7 @@ public class ASParser : Parser
             	{
             	   buffer.Append( ((CommonTree)ide.Tree).Text ); 
             	}
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:783:3: ( typeExpression )?
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:785:3: ( typeExpression )?
             	int alt35 = 2;
             	int LA35_0 = input.LA(1);
             	
@@ -7166,21 +7166,21 @@ public class ASParser : Parser
             	switch (alt35) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: typeExpression
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:0:0: typeExpression
             	        {
-            	        	PushFollow(FOLLOW_typeExpression_in_catchBlock2374);
-            	        	typeExpression112 = typeExpression();
+            	        	PushFollow(FOLLOW_typeExpression_in_catchBlock2376);
+            	        	typeExpression113 = typeExpression();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
-            	        	if ( backtracking==0 ) adaptor.AddChild(root_0, typeExpression112.Tree);
+            	        	if ( backtracking==0 ) adaptor.AddChild(root_0, typeExpression113.Tree);
             	        
             	        }
             	        break;
             	
             	}
 
-            	RPAREN113 = (CommonToken)input.LT(1);
-            	Match(input,RPAREN,FOLLOW_RPAREN_in_catchBlock2380); if (failed) return retval;
+            	RPAREN114 = (CommonToken)input.LT(1);
+            	Match(input,RPAREN,FOLLOW_RPAREN_in_catchBlock2382); if (failed) return retval;
             	if ( backtracking == 0 ) 
             	{
             	   
@@ -7189,11 +7189,11 @@ public class ASParser : Parser
             	  						CurrentTab++;
             	  					
             	}
-            	PushFollow(FOLLOW_block_in_catchBlock2388);
-            	block114 = block();
+            	PushFollow(FOLLOW_block_in_catchBlock2390);
+            	block115 = block();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, block114.Tree);
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, block115.Tree);
             	if ( backtracking == 0 ) 
             	{
             	  
@@ -7249,7 +7249,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start finallyBlock
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:796:1: finallyBlock : 'finally' block ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:798:1: finallyBlock : 'finally' block ;
     public finallyBlock_return finallyBlock() // throws RecognitionException [1]
     {   
         finallyBlock_return retval = new finallyBlock_return();
@@ -7257,11 +7257,11 @@ public class ASParser : Parser
         int finallyBlock_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken string_literal115 = null;
-        block_return block116 = null;
+        CommonToken string_literal116 = null;
+        block_return block117 = null;
         
         
-        CommonTree string_literal115_tree=null;
+        CommonTree string_literal116_tree=null;
     
         try 
     	{
@@ -7269,16 +7269,16 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:797:4: ( 'finally' block )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:797:4: 'finally' block
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:799:4: ( 'finally' block )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:799:4: 'finally' block
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	string_literal115 = (CommonToken)input.LT(1);
-            	Match(input,179,FOLLOW_179_in_finallyBlock2402); if (failed) return retval;
+            	string_literal116 = (CommonToken)input.LT(1);
+            	Match(input,179,FOLLOW_179_in_finallyBlock2404); if (failed) return retval;
             	if ( backtracking==0 ) {
-            	string_literal115_tree = (CommonTree)adaptor.Create(string_literal115);
-            	adaptor.AddChild(root_0, string_literal115_tree);
+            	string_literal116_tree = (CommonTree)adaptor.Create(string_literal116);
+            	adaptor.AddChild(root_0, string_literal116_tree);
             	}
             	if ( backtracking == 0 ) 
             	{
@@ -7288,11 +7288,11 @@ public class ASParser : Parser
             	  						CurrentTab++;
             	  					
             	}
-            	PushFollow(FOLLOW_block_in_finallyBlock2408);
-            	block116 = block();
+            	PushFollow(FOLLOW_block_in_finallyBlock2410);
+            	block117 = block();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, block116.Tree);
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, block117.Tree);
             	if ( backtracking == 0 ) 
             	{
             	  
@@ -7348,7 +7348,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start returnStatement
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:809:1: returnStatement : ( RETURN expression semi | RETURN semi );
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:811:1: returnStatement : ( RETURN expression semi | RETURN semi );
     public returnStatement_return returnStatement() // throws RecognitionException [1]
     {   
         returnStatement_return retval = new returnStatement_return();
@@ -7356,17 +7356,17 @@ public class ASParser : Parser
         int returnStatement_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken RETURN117 = null;
-        CommonToken RETURN120 = null;
-        expression_return expression118 = null;
+        CommonToken RETURN118 = null;
+        CommonToken RETURN121 = null;
+        expression_return expression119 = null;
 
-        semi_return semi119 = null;
+        semi_return semi120 = null;
 
-        semi_return semi121 = null;
+        semi_return semi122 = null;
         
         
-        CommonTree RETURN117_tree=null;
-        CommonTree RETURN120_tree=null;
+        CommonTree RETURN118_tree=null;
+        CommonTree RETURN121_tree=null;
     
         try 
     	{
@@ -7374,7 +7374,7 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:810:4: ( RETURN expression semi | RETURN semi )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:812:4: ( RETURN expression semi | RETURN semi )
             int alt36 = 2;
             int LA36_0 = input.LA(1);
             
@@ -7398,7 +7398,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d36s2 =
-                            new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 2, input);
+                            new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 2, input);
                     
                         throw nvae_d36s2;
                     }
@@ -7420,7 +7420,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d36s3 =
-                            new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 3, input);
+                            new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 3, input);
                     
                         throw nvae_d36s3;
                     }
@@ -7442,7 +7442,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d36s4 =
-                            new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 4, input);
+                            new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 4, input);
                     
                         throw nvae_d36s4;
                     }
@@ -7464,7 +7464,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d36s5 =
-                            new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 5, input);
+                            new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 5, input);
                     
                         throw nvae_d36s5;
                     }
@@ -7486,7 +7486,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d36s6 =
-                            new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 6, input);
+                            new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 6, input);
                     
                         throw nvae_d36s6;
                     }
@@ -7508,7 +7508,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d36s7 =
-                            new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 7, input);
+                            new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 7, input);
                     
                         throw nvae_d36s7;
                     }
@@ -7530,7 +7530,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d36s8 =
-                            new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 8, input);
+                            new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 8, input);
                     
                         throw nvae_d36s8;
                     }
@@ -7552,7 +7552,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d36s9 =
-                            new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 9, input);
+                            new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 9, input);
                     
                         throw nvae_d36s9;
                     }
@@ -7574,7 +7574,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d36s10 =
-                            new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 10, input);
+                            new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 10, input);
                     
                         throw nvae_d36s10;
                     }
@@ -7596,7 +7596,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d36s11 =
-                            new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 11, input);
+                            new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 11, input);
                     
                         throw nvae_d36s11;
                     }
@@ -7621,7 +7621,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d36s12 =
-                            new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 12, input);
+                            new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 12, input);
                     
                         throw nvae_d36s12;
                     }
@@ -7643,7 +7643,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d36s13 =
-                            new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 13, input);
+                            new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 13, input);
                     
                         throw nvae_d36s13;
                     }
@@ -7665,7 +7665,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d36s14 =
-                            new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 14, input);
+                            new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 14, input);
                     
                         throw nvae_d36s14;
                     }
@@ -7687,7 +7687,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d36s15 =
-                            new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 15, input);
+                            new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 15, input);
                     
                         throw nvae_d36s15;
                     }
@@ -7709,7 +7709,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d36s16 =
-                            new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 16, input);
+                            new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 16, input);
                     
                         throw nvae_d36s16;
                     }
@@ -7731,7 +7731,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d36s17 =
-                            new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 17, input);
+                            new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 17, input);
                     
                         throw nvae_d36s17;
                     }
@@ -7753,7 +7753,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d36s18 =
-                            new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 18, input);
+                            new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 18, input);
                     
                         throw nvae_d36s18;
                     }
@@ -7775,7 +7775,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d36s19 =
-                            new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 19, input);
+                            new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 19, input);
                     
                         throw nvae_d36s19;
                     }
@@ -7797,7 +7797,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d36s20 =
-                            new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 20, input);
+                            new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 20, input);
                     
                         throw nvae_d36s20;
                     }
@@ -7819,7 +7819,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d36s21 =
-                            new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 21, input);
+                            new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 21, input);
                     
                         throw nvae_d36s21;
                     }
@@ -7841,7 +7841,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d36s22 =
-                            new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 22, input);
+                            new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 22, input);
                     
                         throw nvae_d36s22;
                     }
@@ -7863,7 +7863,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d36s23 =
-                            new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 23, input);
+                            new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 23, input);
                     
                         throw nvae_d36s23;
                     }
@@ -7885,7 +7885,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d36s24 =
-                            new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 24, input);
+                            new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 24, input);
                     
                         throw nvae_d36s24;
                     }
@@ -7907,7 +7907,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d36s25 =
-                            new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 25, input);
+                            new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 25, input);
                     
                         throw nvae_d36s25;
                     }
@@ -7929,7 +7929,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d36s26 =
-                            new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 26, input);
+                            new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 26, input);
                     
                         throw nvae_d36s26;
                     }
@@ -7951,7 +7951,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d36s27 =
-                            new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 27, input);
+                            new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 27, input);
                     
                         throw nvae_d36s27;
                     }
@@ -7973,7 +7973,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d36s28 =
-                            new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 28, input);
+                            new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 28, input);
                     
                         throw nvae_d36s28;
                     }
@@ -7995,7 +7995,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d36s29 =
-                            new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 29, input);
+                            new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 29, input);
                     
                         throw nvae_d36s29;
                     }
@@ -8029,7 +8029,7 @@ public class ASParser : Parser
                 	default:
                 	    if ( backtracking > 0 ) {failed = true; return retval;}
                 	    NoViableAltException nvae_d36s1 =
-                	        new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 1, input);
+                	        new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 1, input);
                 
                 	    throw nvae_d36s1;
                 }
@@ -8039,56 +8039,56 @@ public class ASParser : Parser
             {
                 if ( backtracking > 0 ) {failed = true; return retval;}
                 NoViableAltException nvae_d36s0 =
-                    new NoViableAltException("809:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 0, input);
+                    new NoViableAltException("811:1: returnStatement : ( RETURN expression semi | RETURN semi );", 36, 0, input);
             
                 throw nvae_d36s0;
             }
             switch (alt36) 
             {
                 case 1 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:810:4: RETURN expression semi
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:812:4: RETURN expression semi
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	RETURN117 = (CommonToken)input.LT(1);
-                    	Match(input,RETURN,FOLLOW_RETURN_in_returnStatement2422); if (failed) return retval;
+                    	RETURN118 = (CommonToken)input.LT(1);
+                    	Match(input,RETURN,FOLLOW_RETURN_in_returnStatement2424); if (failed) return retval;
                     	if ( backtracking==0 ) {
-                    	RETURN117_tree = (CommonTree)adaptor.Create(RETURN117);
-                    	root_0 = (CommonTree)adaptor.BecomeRoot(RETURN117_tree, root_0);
+                    	RETURN118_tree = (CommonTree)adaptor.Create(RETURN118);
+                    	root_0 = (CommonTree)adaptor.BecomeRoot(RETURN118_tree, root_0);
                     	}
                     	if ( backtracking == 0 ) 
                     	{
                     	   buffer.Append("return "); 
                     	}
-                    	PushFollow(FOLLOW_expression_in_returnStatement2427);
-                    	expression118 = expression();
+                    	PushFollow(FOLLOW_expression_in_returnStatement2429);
+                    	expression119 = expression();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) adaptor.AddChild(root_0, expression118.Tree);
-                    	PushFollow(FOLLOW_semi_in_returnStatement2429);
-                    	semi119 = semi();
+                    	if ( backtracking==0 ) adaptor.AddChild(root_0, expression119.Tree);
+                    	PushFollow(FOLLOW_semi_in_returnStatement2431);
+                    	semi120 = semi();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) adaptor.AddChild(root_0, semi119.Tree);
+                    	if ( backtracking==0 ) adaptor.AddChild(root_0, semi120.Tree);
                     
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:811:4: RETURN semi
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:813:4: RETURN semi
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	RETURN120 = (CommonToken)input.LT(1);
-                    	Match(input,RETURN,FOLLOW_RETURN_in_returnStatement2434); if (failed) return retval;
+                    	RETURN121 = (CommonToken)input.LT(1);
+                    	Match(input,RETURN,FOLLOW_RETURN_in_returnStatement2436); if (failed) return retval;
                     	if ( backtracking==0 ) {
-                    	RETURN120_tree = (CommonTree)adaptor.Create(RETURN120);
-                    	root_0 = (CommonTree)adaptor.BecomeRoot(RETURN120_tree, root_0);
+                    	RETURN121_tree = (CommonTree)adaptor.Create(RETURN121);
+                    	root_0 = (CommonTree)adaptor.BecomeRoot(RETURN121_tree, root_0);
                     	}
-                    	PushFollow(FOLLOW_semi_in_returnStatement2437);
-                    	semi121 = semi();
+                    	PushFollow(FOLLOW_semi_in_returnStatement2439);
+                    	semi122 = semi();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) adaptor.AddChild(root_0, semi121.Tree);
+                    	if ( backtracking==0 ) adaptor.AddChild(root_0, semi122.Tree);
                     	if ( backtracking == 0 ) 
                     	{
                     	   buffer.Append("return"); 
@@ -8142,7 +8142,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start continueStatement
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:814:1: continueStatement : CONTINUE semi ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:816:1: continueStatement : CONTINUE semi ;
     public continueStatement_return continueStatement() // throws RecognitionException [1]
     {   
         continueStatement_return retval = new continueStatement_return();
@@ -8150,11 +8150,11 @@ public class ASParser : Parser
         int continueStatement_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken CONTINUE122 = null;
-        semi_return semi123 = null;
+        CommonToken CONTINUE123 = null;
+        semi_return semi124 = null;
         
         
-        CommonTree CONTINUE122_tree=null;
+        CommonTree CONTINUE123_tree=null;
     
         try 
     	{
@@ -8162,22 +8162,22 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:815:4: ( CONTINUE semi )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:815:4: CONTINUE semi
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:817:4: ( CONTINUE semi )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:817:4: CONTINUE semi
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	CONTINUE122 = (CommonToken)input.LT(1);
-            	Match(input,CONTINUE,FOLLOW_CONTINUE_in_continueStatement2452); if (failed) return retval;
+            	CONTINUE123 = (CommonToken)input.LT(1);
+            	Match(input,CONTINUE,FOLLOW_CONTINUE_in_continueStatement2454); if (failed) return retval;
             	if ( backtracking==0 ) {
-            	CONTINUE122_tree = (CommonTree)adaptor.Create(CONTINUE122);
-            	root_0 = (CommonTree)adaptor.BecomeRoot(CONTINUE122_tree, root_0);
+            	CONTINUE123_tree = (CommonTree)adaptor.Create(CONTINUE123);
+            	root_0 = (CommonTree)adaptor.BecomeRoot(CONTINUE123_tree, root_0);
             	}
-            	PushFollow(FOLLOW_semi_in_continueStatement2455);
-            	semi123 = semi();
+            	PushFollow(FOLLOW_semi_in_continueStatement2457);
+            	semi124 = semi();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, semi123.Tree);
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, semi124.Tree);
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append("continue"); 
@@ -8229,7 +8229,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start breakStatement
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:818:1: breakStatement : BREAK semi ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:820:1: breakStatement : BREAK semi ;
     public breakStatement_return breakStatement() // throws RecognitionException [1]
     {   
         breakStatement_return retval = new breakStatement_return();
@@ -8237,11 +8237,11 @@ public class ASParser : Parser
         int breakStatement_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken BREAK124 = null;
-        semi_return semi125 = null;
+        CommonToken BREAK125 = null;
+        semi_return semi126 = null;
         
         
-        CommonTree BREAK124_tree=null;
+        CommonTree BREAK125_tree=null;
     
         try 
     	{
@@ -8249,22 +8249,22 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:819:4: ( BREAK semi )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:819:4: BREAK semi
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:821:4: ( BREAK semi )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:821:4: BREAK semi
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	BREAK124 = (CommonToken)input.LT(1);
-            	Match(input,BREAK,FOLLOW_BREAK_in_breakStatement2468); if (failed) return retval;
+            	BREAK125 = (CommonToken)input.LT(1);
+            	Match(input,BREAK,FOLLOW_BREAK_in_breakStatement2470); if (failed) return retval;
             	if ( backtracking==0 ) {
-            	BREAK124_tree = (CommonTree)adaptor.Create(BREAK124);
-            	root_0 = (CommonTree)adaptor.BecomeRoot(BREAK124_tree, root_0);
+            	BREAK125_tree = (CommonTree)adaptor.Create(BREAK125);
+            	root_0 = (CommonTree)adaptor.BecomeRoot(BREAK125_tree, root_0);
             	}
-            	PushFollow(FOLLOW_semi_in_breakStatement2471);
-            	semi125 = semi();
+            	PushFollow(FOLLOW_semi_in_breakStatement2473);
+            	semi126 = semi();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, semi125.Tree);
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, semi126.Tree);
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append("break"); 
@@ -8316,7 +8316,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start switchStatement
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:822:1: switchStatement : SWITCH ( condition ) switchBlock ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:824:1: switchStatement : SWITCH ( condition ) switchBlock ;
     public switchStatement_return switchStatement() // throws RecognitionException [1]
     {   
         switchStatement_return retval = new switchStatement_return();
@@ -8324,13 +8324,13 @@ public class ASParser : Parser
         int switchStatement_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken SWITCH126 = null;
-        condition_return condition127 = null;
+        CommonToken SWITCH127 = null;
+        condition_return condition128 = null;
 
-        switchBlock_return switchBlock128 = null;
+        switchBlock_return switchBlock129 = null;
         
         
-        CommonTree SWITCH126_tree=null;
+        CommonTree SWITCH127_tree=null;
     
         try 
     	{
@@ -8338,37 +8338,37 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:823:4: ( SWITCH ( condition ) switchBlock )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:823:4: SWITCH ( condition ) switchBlock
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:825:4: ( SWITCH ( condition ) switchBlock )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:825:4: SWITCH ( condition ) switchBlock
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	SWITCH126 = (CommonToken)input.LT(1);
-            	Match(input,SWITCH,FOLLOW_SWITCH_in_switchStatement2485); if (failed) return retval;
+            	SWITCH127 = (CommonToken)input.LT(1);
+            	Match(input,SWITCH,FOLLOW_SWITCH_in_switchStatement2487); if (failed) return retval;
             	if ( backtracking==0 ) {
-            	SWITCH126_tree = (CommonTree)adaptor.Create(SWITCH126);
-            	root_0 = (CommonTree)adaptor.BecomeRoot(SWITCH126_tree, root_0);
+            	SWITCH127_tree = (CommonTree)adaptor.Create(SWITCH127);
+            	root_0 = (CommonTree)adaptor.BecomeRoot(SWITCH127_tree, root_0);
             	}
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append("switch"); 
             	}
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:824:3: ( condition )
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:824:4: condition
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:826:3: ( condition )
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:826:4: condition
             	{
-            		PushFollow(FOLLOW_condition_in_switchStatement2494);
-            		condition127 = condition();
+            		PushFollow(FOLLOW_condition_in_switchStatement2496);
+            		condition128 = condition();
             		followingStackPointer_--;
             		if (failed) return retval;
-            		if ( backtracking==0 ) adaptor.AddChild(root_0, condition127.Tree);
+            		if ( backtracking==0 ) adaptor.AddChild(root_0, condition128.Tree);
             	
             	}
 
-            	PushFollow(FOLLOW_switchBlock_in_switchStatement2499);
-            	switchBlock128 = switchBlock();
+            	PushFollow(FOLLOW_switchBlock_in_switchStatement2501);
+            	switchBlock129 = switchBlock();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, switchBlock128.Tree);
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, switchBlock129.Tree);
             
             }
     
@@ -8416,7 +8416,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start switchBlock
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:828:1: switchBlock : LCURLY ( caseStatement )* ( defaultStatement )? RCURLY -> ^( BLOCK ( caseStatement )* ( defaultStatement )? ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:830:1: switchBlock : LCURLY ( caseStatement )* ( defaultStatement )? RCURLY -> ^( BLOCK ( caseStatement )* ( defaultStatement )? ) ;
     public switchBlock_return switchBlock() // throws RecognitionException [1]
     {   
         switchBlock_return retval = new switchBlock_return();
@@ -8424,15 +8424,15 @@ public class ASParser : Parser
         int switchBlock_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken LCURLY129 = null;
-        CommonToken RCURLY132 = null;
-        caseStatement_return caseStatement130 = null;
+        CommonToken LCURLY130 = null;
+        CommonToken RCURLY133 = null;
+        caseStatement_return caseStatement131 = null;
 
-        defaultStatement_return defaultStatement131 = null;
+        defaultStatement_return defaultStatement132 = null;
         
         
-        CommonTree LCURLY129_tree=null;
-        CommonTree RCURLY132_tree=null;
+        CommonTree LCURLY130_tree=null;
+        CommonTree RCURLY133_tree=null;
         RewriteRuleTokenStream stream_LCURLY = new RewriteRuleTokenStream(adaptor,"token LCURLY");
         RewriteRuleTokenStream stream_RCURLY = new RewriteRuleTokenStream(adaptor,"token RCURLY");
         RewriteRuleSubtreeStream stream_caseStatement = new RewriteRuleSubtreeStream(adaptor,"rule caseStatement");
@@ -8443,12 +8443,12 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:829:4: ( LCURLY ( caseStatement )* ( defaultStatement )? RCURLY -> ^( BLOCK ( caseStatement )* ( defaultStatement )? ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:829:4: LCURLY ( caseStatement )* ( defaultStatement )? RCURLY
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:831:4: ( LCURLY ( caseStatement )* ( defaultStatement )? RCURLY -> ^( BLOCK ( caseStatement )* ( defaultStatement )? ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:831:4: LCURLY ( caseStatement )* ( defaultStatement )? RCURLY
             {
-            	LCURLY129 = (CommonToken)input.LT(1);
-            	Match(input,LCURLY,FOLLOW_LCURLY_in_switchBlock2510); if (failed) return retval;
-            	if ( backtracking==0 ) stream_LCURLY.Add(LCURLY129);
+            	LCURLY130 = (CommonToken)input.LT(1);
+            	Match(input,LCURLY,FOLLOW_LCURLY_in_switchBlock2512); if (failed) return retval;
+            	if ( backtracking==0 ) stream_LCURLY.Add(LCURLY130);
 
             	if ( backtracking == 0 ) 
             	{
@@ -8457,7 +8457,7 @@ public class ASParser : Parser
             	  												CurrentTab++;
             	  											
             	}
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:833:3: ( caseStatement )*
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:835:3: ( caseStatement )*
             	do 
             	{
             	    int alt37 = 2;
@@ -8472,17 +8472,17 @@ public class ASParser : Parser
             	    switch (alt37) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:833:5: caseStatement
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:835:5: caseStatement
             			    {
             			    	if ( backtracking == 0 ) 
             			    	{
             			    	  buffer.Append(NewLine + tab); 
             			    	}
-            			    	PushFollow(FOLLOW_caseStatement_in_switchBlock2527);
-            			    	caseStatement130 = caseStatement();
+            			    	PushFollow(FOLLOW_caseStatement_in_switchBlock2529);
+            			    	caseStatement131 = caseStatement();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
-            			    	if ( backtracking==0 ) stream_caseStatement.Add(caseStatement130.Tree);
+            			    	if ( backtracking==0 ) stream_caseStatement.Add(caseStatement131.Tree);
             			    
             			    }
             			    break;
@@ -8495,7 +8495,7 @@ public class ASParser : Parser
             	loop37:
             		;	// Stops C# compiler whinging that label 'loop37' has no statements
 
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:834:3: ( defaultStatement )?
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:836:3: ( defaultStatement )?
             	int alt38 = 2;
             	int LA38_0 = input.LA(1);
             	
@@ -8506,26 +8506,26 @@ public class ASParser : Parser
             	switch (alt38) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:834:5: defaultStatement
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:836:5: defaultStatement
             	        {
             	        	if ( backtracking == 0 ) 
             	        	{
             	        	  buffer.Append(NewLine + tab); 
             	        	}
-            	        	PushFollow(FOLLOW_defaultStatement_in_switchBlock2537);
-            	        	defaultStatement131 = defaultStatement();
+            	        	PushFollow(FOLLOW_defaultStatement_in_switchBlock2539);
+            	        	defaultStatement132 = defaultStatement();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
-            	        	if ( backtracking==0 ) stream_defaultStatement.Add(defaultStatement131.Tree);
+            	        	if ( backtracking==0 ) stream_defaultStatement.Add(defaultStatement132.Tree);
             	        
             	        }
             	        break;
             	
             	}
 
-            	RCURLY132 = (CommonToken)input.LT(1);
-            	Match(input,RCURLY,FOLLOW_RCURLY_in_switchBlock2543); if (failed) return retval;
-            	if ( backtracking==0 ) stream_RCURLY.Add(RCURLY132);
+            	RCURLY133 = (CommonToken)input.LT(1);
+            	Match(input,RCURLY,FOLLOW_RCURLY_in_switchBlock2545); if (failed) return retval;
+            	if ( backtracking==0 ) stream_RCURLY.Add(RCURLY133);
 
             	if ( backtracking == 0 ) 
             	{
@@ -8547,21 +8547,21 @@ public class ASParser : Parser
             	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	
             	root_0 = (CommonTree)adaptor.GetNilNode();
-            	// 840:3: -> ^( BLOCK ( caseStatement )* ( defaultStatement )? )
+            	// 842:3: -> ^( BLOCK ( caseStatement )* ( defaultStatement )? )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:840:6: ^( BLOCK ( caseStatement )* ( defaultStatement )? )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:842:6: ^( BLOCK ( caseStatement )* ( defaultStatement )? )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(BLOCK, "BLOCK"), root_1);
             	    
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:840:14: ( caseStatement )*
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:842:14: ( caseStatement )*
             	    while ( stream_caseStatement.HasNext() )
             	    {
             	        adaptor.AddChild(root_1, stream_caseStatement.Next());
             	    
             	    }
             	    stream_caseStatement.Reset();
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:840:29: ( defaultStatement )?
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:842:29: ( defaultStatement )?
             	    if ( stream_defaultStatement.HasNext() )
             	    {
             	        adaptor.AddChild(root_1, stream_defaultStatement.Next());
@@ -8622,7 +8622,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start caseStatement
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:843:1: caseStatement : CASE expression COLON l= switchStatementList ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:845:1: caseStatement : CASE expression COLON l= switchStatementList ;
     public caseStatement_return caseStatement() // throws RecognitionException [1]
     {   
         caseStatement_return retval = new caseStatement_return();
@@ -8630,15 +8630,15 @@ public class ASParser : Parser
         int caseStatement_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken CASE133 = null;
-        CommonToken COLON135 = null;
+        CommonToken CASE134 = null;
+        CommonToken COLON136 = null;
         switchStatementList_return l = null;
 
-        expression_return expression134 = null;
+        expression_return expression135 = null;
         
         
-        CommonTree CASE133_tree=null;
-        CommonTree COLON135_tree=null;
+        CommonTree CASE134_tree=null;
+        CommonTree COLON136_tree=null;
     
         try 
     	{
@@ -8646,28 +8646,28 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:844:4: ( CASE expression COLON l= switchStatementList )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:844:4: CASE expression COLON l= switchStatementList
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:846:4: ( CASE expression COLON l= switchStatementList )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:846:4: CASE expression COLON l= switchStatementList
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	CASE133 = (CommonToken)input.LT(1);
-            	Match(input,CASE,FOLLOW_CASE_in_caseStatement2577); if (failed) return retval;
+            	CASE134 = (CommonToken)input.LT(1);
+            	Match(input,CASE,FOLLOW_CASE_in_caseStatement2579); if (failed) return retval;
             	if ( backtracking==0 ) {
-            	CASE133_tree = (CommonTree)adaptor.Create(CASE133);
-            	root_0 = (CommonTree)adaptor.BecomeRoot(CASE133_tree, root_0);
+            	CASE134_tree = (CommonTree)adaptor.Create(CASE134);
+            	root_0 = (CommonTree)adaptor.BecomeRoot(CASE134_tree, root_0);
             	}
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append("case "); 
             	}
-            	PushFollow(FOLLOW_expression_in_caseStatement2586);
-            	expression134 = expression();
+            	PushFollow(FOLLOW_expression_in_caseStatement2588);
+            	expression135 = expression();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, expression134.Tree);
-            	COLON135 = (CommonToken)input.LT(1);
-            	Match(input,COLON,FOLLOW_COLON_in_caseStatement2591); if (failed) return retval;
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, expression135.Tree);
+            	COLON136 = (CommonToken)input.LT(1);
+            	Match(input,COLON,FOLLOW_COLON_in_caseStatement2593); if (failed) return retval;
             	if ( backtracking == 0 ) 
             	{
             	   
@@ -8675,7 +8675,7 @@ public class ASParser : Parser
             	  						CurrentTab++;
             	  					
             	}
-            	PushFollow(FOLLOW_switchStatementList_in_caseStatement2601);
+            	PushFollow(FOLLOW_switchStatementList_in_caseStatement2603);
             	l = switchStatementList();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -8731,7 +8731,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start defaultStatement
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:854:1: defaultStatement : DEFAULT COLON l= switchStatementList ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:856:1: defaultStatement : DEFAULT COLON l= switchStatementList ;
     public defaultStatement_return defaultStatement() // throws RecognitionException [1]
     {   
         defaultStatement_return retval = new defaultStatement_return();
@@ -8739,13 +8739,13 @@ public class ASParser : Parser
         int defaultStatement_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken DEFAULT136 = null;
-        CommonToken COLON137 = null;
+        CommonToken DEFAULT137 = null;
+        CommonToken COLON138 = null;
         switchStatementList_return l = null;
         
         
-        CommonTree DEFAULT136_tree=null;
-        CommonTree COLON137_tree=null;
+        CommonTree DEFAULT137_tree=null;
+        CommonTree COLON138_tree=null;
     
         try 
     	{
@@ -8753,23 +8753,23 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:855:4: ( DEFAULT COLON l= switchStatementList )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:855:4: DEFAULT COLON l= switchStatementList
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:857:4: ( DEFAULT COLON l= switchStatementList )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:857:4: DEFAULT COLON l= switchStatementList
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	DEFAULT136 = (CommonToken)input.LT(1);
-            	Match(input,DEFAULT,FOLLOW_DEFAULT_in_defaultStatement2620); if (failed) return retval;
+            	DEFAULT137 = (CommonToken)input.LT(1);
+            	Match(input,DEFAULT,FOLLOW_DEFAULT_in_defaultStatement2622); if (failed) return retval;
             	if ( backtracking==0 ) {
-            	DEFAULT136_tree = (CommonTree)adaptor.Create(DEFAULT136);
-            	root_0 = (CommonTree)adaptor.BecomeRoot(DEFAULT136_tree, root_0);
+            	DEFAULT137_tree = (CommonTree)adaptor.Create(DEFAULT137);
+            	root_0 = (CommonTree)adaptor.BecomeRoot(DEFAULT137_tree, root_0);
             	}
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append("default"); 
             	}
-            	COLON137 = (CommonToken)input.LT(1);
-            	Match(input,COLON,FOLLOW_COLON_in_defaultStatement2627); if (failed) return retval;
+            	COLON138 = (CommonToken)input.LT(1);
+            	Match(input,COLON,FOLLOW_COLON_in_defaultStatement2629); if (failed) return retval;
             	if ( backtracking == 0 ) 
             	{
             	   
@@ -8777,7 +8777,7 @@ public class ASParser : Parser
             	  						CurrentTab++;
             	  					
             	}
-            	PushFollow(FOLLOW_switchStatementList_in_defaultStatement2637);
+            	PushFollow(FOLLOW_switchStatementList_in_defaultStatement2639);
             	l = switchStatementList();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -8833,7 +8833,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start switchStatementList
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:864:1: switchStatementList : ( statement )* -> ^( SWITCH_STATEMENT_LIST ( statement )* ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:866:1: switchStatementList : ( statement )* -> ^( SWITCH_STATEMENT_LIST ( statement )* ) ;
     public switchStatementList_return switchStatementList() // throws RecognitionException [1]
     {   
         switchStatementList_return retval = new switchStatementList_return();
@@ -8841,7 +8841,7 @@ public class ASParser : Parser
         int switchStatementList_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        statement_return statement138 = null;
+        statement_return statement139 = null;
         
         
         RewriteRuleSubtreeStream stream_statement = new RewriteRuleSubtreeStream(adaptor,"rule statement");
@@ -8851,10 +8851,10 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:865:4: ( ( statement )* -> ^( SWITCH_STATEMENT_LIST ( statement )* ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:865:4: ( statement )*
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:867:4: ( ( statement )* -> ^( SWITCH_STATEMENT_LIST ( statement )* ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:867:4: ( statement )*
             {
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:865:4: ( statement )*
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:867:4: ( statement )*
             	do 
             	{
             	    int alt39 = 2;
@@ -8869,17 +8869,17 @@ public class ASParser : Parser
             	    switch (alt39) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:865:6: statement
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:867:6: statement
             			    {
             			    	if ( backtracking == 0 ) 
             			    	{
             			    	  buffer.Append(NewLine + tab); 
             			    	}
-            			    	PushFollow(FOLLOW_statement_in_switchStatementList2659);
-            			    	statement138 = statement();
+            			    	PushFollow(FOLLOW_statement_in_switchStatementList2661);
+            			    	statement139 = statement();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
-            			    	if ( backtracking==0 ) stream_statement.Add(statement138.Tree);
+            			    	if ( backtracking==0 ) stream_statement.Add(statement139.Tree);
             			    
             			    }
             			    break;
@@ -8904,14 +8904,14 @@ public class ASParser : Parser
             	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	
             	root_0 = (CommonTree)adaptor.GetNilNode();
-            	// 865:51: -> ^( SWITCH_STATEMENT_LIST ( statement )* )
+            	// 867:51: -> ^( SWITCH_STATEMENT_LIST ( statement )* )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:865:54: ^( SWITCH_STATEMENT_LIST ( statement )* )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:867:54: ^( SWITCH_STATEMENT_LIST ( statement )* )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(SWITCH_STATEMENT_LIST, "SWITCH_STATEMENT_LIST"), root_1);
             	    
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:865:78: ( statement )*
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:867:78: ( statement )*
             	    while ( stream_statement.HasNext() )
             	    {
             	        adaptor.AddChild(root_1, stream_statement.Next());
@@ -8972,7 +8972,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start forStatement
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:868:1: forStatement : f= FOR LPAREN ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:870:1: forStatement : f= FOR LPAREN ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) ) ;
     public forStatement_return forStatement() // throws RecognitionException [1]
     {   
         InOperator_stack.Push(new InOperator_scope());
@@ -8983,22 +8983,22 @@ public class ASParser : Parser
         CommonTree root_0 = null;
     
         CommonToken f = null;
-        CommonToken LPAREN139 = null;
-        CommonToken RPAREN141 = null;
-        CommonToken RPAREN144 = null;
-        forInClause_return forInClause140 = null;
+        CommonToken LPAREN140 = null;
+        CommonToken RPAREN142 = null;
+        CommonToken RPAREN145 = null;
+        forInClause_return forInClause141 = null;
 
-        statement_return statement142 = null;
+        statement_return statement143 = null;
 
-        traditionalForClause_return traditionalForClause143 = null;
+        traditionalForClause_return traditionalForClause144 = null;
 
-        statement_return statement145 = null;
+        statement_return statement146 = null;
         
         
         CommonTree f_tree=null;
-        CommonTree LPAREN139_tree=null;
-        CommonTree RPAREN141_tree=null;
-        CommonTree RPAREN144_tree=null;
+        CommonTree LPAREN140_tree=null;
+        CommonTree RPAREN142_tree=null;
+        CommonTree RPAREN145_tree=null;
         RewriteRuleTokenStream stream_FOR = new RewriteRuleTokenStream(adaptor,"token FOR");
         RewriteRuleTokenStream stream_RPAREN = new RewriteRuleTokenStream(adaptor,"token RPAREN");
         RewriteRuleTokenStream stream_LPAREN = new RewriteRuleTokenStream(adaptor,"token LPAREN");
@@ -9016,26 +9016,26 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:875:4: (f= FOR LPAREN ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:875:4: f= FOR LPAREN ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:877:4: (f= FOR LPAREN ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:877:4: f= FOR LPAREN ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )
             {
             	f = (CommonToken)input.LT(1);
-            	Match(input,FOR,FOLLOW_FOR_in_forStatement2693); if (failed) return retval;
+            	Match(input,FOR,FOLLOW_FOR_in_forStatement2695); if (failed) return retval;
             	if ( backtracking==0 ) stream_FOR.Add(f);
 
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append("for"); 
             	}
-            	LPAREN139 = (CommonToken)input.LT(1);
-            	Match(input,LPAREN,FOLLOW_LPAREN_in_forStatement2701); if (failed) return retval;
-            	if ( backtracking==0 ) stream_LPAREN.Add(LPAREN139);
+            	LPAREN140 = (CommonToken)input.LT(1);
+            	Match(input,LPAREN,FOLLOW_LPAREN_in_forStatement2703); if (failed) return retval;
+            	if ( backtracking==0 ) stream_LPAREN.Add(LPAREN140);
 
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append(options.SpaceBeforeMethodDef ? " (" : "(");   
             	}
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:877:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:879:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )
             	int alt40 = 2;
             	switch ( input.LA(1) ) 
             	{
@@ -9060,7 +9060,7 @@ public class ASParser : Parser
             	        {
             	            if ( backtracking > 0 ) {failed = true; return retval;}
             	            NoViableAltException nvae_d40s31 =
-            	                new NoViableAltException("877:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 31, input);
+            	                new NoViableAltException("879:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 31, input);
             	        
             	            throw nvae_d40s31;
             	        }
@@ -9082,7 +9082,7 @@ public class ASParser : Parser
             	        {
             	            if ( backtracking > 0 ) {failed = true; return retval;}
             	            NoViableAltException nvae_d40s32 =
-            	                new NoViableAltException("877:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 32, input);
+            	                new NoViableAltException("879:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 32, input);
             	        
             	            throw nvae_d40s32;
             	        }
@@ -9104,7 +9104,7 @@ public class ASParser : Parser
             	        {
             	            if ( backtracking > 0 ) {failed = true; return retval;}
             	            NoViableAltException nvae_d40s33 =
-            	                new NoViableAltException("877:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 33, input);
+            	                new NoViableAltException("879:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 33, input);
             	        
             	            throw nvae_d40s33;
             	        }
@@ -9126,7 +9126,7 @@ public class ASParser : Parser
             	        {
             	            if ( backtracking > 0 ) {failed = true; return retval;}
             	            NoViableAltException nvae_d40s34 =
-            	                new NoViableAltException("877:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 34, input);
+            	                new NoViableAltException("879:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 34, input);
             	        
             	            throw nvae_d40s34;
             	        }
@@ -9148,7 +9148,7 @@ public class ASParser : Parser
             	        {
             	            if ( backtracking > 0 ) {failed = true; return retval;}
             	            NoViableAltException nvae_d40s35 =
-            	                new NoViableAltException("877:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 35, input);
+            	                new NoViableAltException("879:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 35, input);
             	        
             	            throw nvae_d40s35;
             	        }
@@ -9170,7 +9170,7 @@ public class ASParser : Parser
             	        {
             	            if ( backtracking > 0 ) {failed = true; return retval;}
             	            NoViableAltException nvae_d40s36 =
-            	                new NoViableAltException("877:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 36, input);
+            	                new NoViableAltException("879:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 36, input);
             	        
             	            throw nvae_d40s36;
             	        }
@@ -9192,7 +9192,7 @@ public class ASParser : Parser
             	        {
             	            if ( backtracking > 0 ) {failed = true; return retval;}
             	            NoViableAltException nvae_d40s37 =
-            	                new NoViableAltException("877:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 37, input);
+            	                new NoViableAltException("879:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 37, input);
             	        
             	            throw nvae_d40s37;
             	        }
@@ -9214,7 +9214,7 @@ public class ASParser : Parser
             	        {
             	            if ( backtracking > 0 ) {failed = true; return retval;}
             	            NoViableAltException nvae_d40s38 =
-            	                new NoViableAltException("877:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 38, input);
+            	                new NoViableAltException("879:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 38, input);
             	        
             	            throw nvae_d40s38;
             	        }
@@ -9223,7 +9223,7 @@ public class ASParser : Parser
             	    	default:
             	    	    if ( backtracking > 0 ) {failed = true; return retval;}
             	    	    NoViableAltException nvae_d40s1 =
-            	    	        new NoViableAltException("877:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 1, input);
+            	    	        new NoViableAltException("879:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 1, input);
             	    
             	    	    throw nvae_d40s1;
             	    }
@@ -9254,7 +9254,7 @@ public class ASParser : Parser
             	        {
             	            if ( backtracking > 0 ) {failed = true; return retval;}
             	            NoViableAltException nvae_d40s47 =
-            	                new NoViableAltException("877:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 47, input);
+            	                new NoViableAltException("879:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 47, input);
             	        
             	            throw nvae_d40s47;
             	        }
@@ -9263,7 +9263,7 @@ public class ASParser : Parser
             	    {
             	        if ( backtracking > 0 ) {failed = true; return retval;}
             	        NoViableAltException nvae_d40s2 =
-            	            new NoViableAltException("877:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 2, input);
+            	            new NoViableAltException("879:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 2, input);
             	    
             	        throw nvae_d40s2;
             	    }
@@ -9293,7 +9293,7 @@ public class ASParser : Parser
             	        {
             	            if ( backtracking > 0 ) {failed = true; return retval;}
             	            NoViableAltException nvae_d40s73 =
-            	                new NoViableAltException("877:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 73, input);
+            	                new NoViableAltException("879:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 73, input);
             	        
             	            throw nvae_d40s73;
             	        }
@@ -9302,7 +9302,7 @@ public class ASParser : Parser
             	    {
             	        if ( backtracking > 0 ) {failed = true; return retval;}
             	        NoViableAltException nvae_d40s3 =
-            	            new NoViableAltException("877:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 3, input);
+            	            new NoViableAltException("879:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 3, input);
             	    
             	        throw nvae_d40s3;
             	    }
@@ -9328,7 +9328,7 @@ public class ASParser : Parser
             	        {
             	            if ( backtracking > 0 ) {failed = true; return retval;}
             	            NoViableAltException nvae_d40s91 =
-            	                new NoViableAltException("877:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 91, input);
+            	                new NoViableAltException("879:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 91, input);
             	        
             	            throw nvae_d40s91;
             	        }
@@ -9341,7 +9341,7 @@ public class ASParser : Parser
             	    {
             	        if ( backtracking > 0 ) {failed = true; return retval;}
             	        NoViableAltException nvae_d40s4 =
-            	            new NoViableAltException("877:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 4, input);
+            	            new NoViableAltException("879:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 4, input);
             	    
             	        throw nvae_d40s4;
             	    }
@@ -9371,7 +9371,7 @@ public class ASParser : Parser
             	        {
             	            if ( backtracking > 0 ) {failed = true; return retval;}
             	            NoViableAltException nvae_d40s125 =
-            	                new NoViableAltException("877:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 125, input);
+            	                new NoViableAltException("879:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 125, input);
             	        
             	            throw nvae_d40s125;
             	        }
@@ -9380,7 +9380,7 @@ public class ASParser : Parser
             	    {
             	        if ( backtracking > 0 ) {failed = true; return retval;}
             	        NoViableAltException nvae_d40s5 =
-            	            new NoViableAltException("877:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 5, input);
+            	            new NoViableAltException("879:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 5, input);
             	    
             	        throw nvae_d40s5;
             	    }
@@ -9410,7 +9410,7 @@ public class ASParser : Parser
             	        {
             	            if ( backtracking > 0 ) {failed = true; return retval;}
             	            NoViableAltException nvae_d40s151 =
-            	                new NoViableAltException("877:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 151, input);
+            	                new NoViableAltException("879:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 151, input);
             	        
             	            throw nvae_d40s151;
             	        }
@@ -9419,7 +9419,7 @@ public class ASParser : Parser
             	    {
             	        if ( backtracking > 0 ) {failed = true; return retval;}
             	        NoViableAltException nvae_d40s6 =
-            	            new NoViableAltException("877:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 6, input);
+            	            new NoViableAltException("879:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 6, input);
             	    
             	        throw nvae_d40s6;
             	    }
@@ -9445,7 +9445,7 @@ public class ASParser : Parser
             	        {
             	            if ( backtracking > 0 ) {failed = true; return retval;}
             	            NoViableAltException nvae_d40s169 =
-            	                new NoViableAltException("877:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 169, input);
+            	                new NoViableAltException("879:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 169, input);
             	        
             	            throw nvae_d40s169;
             	        }
@@ -9458,7 +9458,7 @@ public class ASParser : Parser
             	    {
             	        if ( backtracking > 0 ) {failed = true; return retval;}
             	        NoViableAltException nvae_d40s7 =
-            	            new NoViableAltException("877:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 7, input);
+            	            new NoViableAltException("879:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 7, input);
             	    
             	        throw nvae_d40s7;
             	    }
@@ -9488,7 +9488,7 @@ public class ASParser : Parser
             	        {
             	            if ( backtracking > 0 ) {failed = true; return retval;}
             	            NoViableAltException nvae_d40s203 =
-            	                new NoViableAltException("877:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 203, input);
+            	                new NoViableAltException("879:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 203, input);
             	        
             	            throw nvae_d40s203;
             	        }
@@ -9497,7 +9497,7 @@ public class ASParser : Parser
             	    {
             	        if ( backtracking > 0 ) {failed = true; return retval;}
             	        NoViableAltException nvae_d40s8 =
-            	            new NoViableAltException("877:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 8, input);
+            	            new NoViableAltException("879:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 8, input);
             	    
             	        throw nvae_d40s8;
             	    }
@@ -9527,7 +9527,7 @@ public class ASParser : Parser
             	        {
             	            if ( backtracking > 0 ) {failed = true; return retval;}
             	            NoViableAltException nvae_d40s229 =
-            	                new NoViableAltException("877:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 229, input);
+            	                new NoViableAltException("879:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 229, input);
             	        
             	            throw nvae_d40s229;
             	        }
@@ -9536,7 +9536,7 @@ public class ASParser : Parser
             	    {
             	        if ( backtracking > 0 ) {failed = true; return retval;}
             	        NoViableAltException nvae_d40s9 =
-            	            new NoViableAltException("877:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 9, input);
+            	            new NoViableAltException("879:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 9, input);
             	    
             	        throw nvae_d40s9;
             	    }
@@ -9573,7 +9573,7 @@ public class ASParser : Parser
             		default:
             		    if ( backtracking > 0 ) {failed = true; return retval;}
             		    NoViableAltException nvae_d40s0 =
-            		        new NoViableAltException("877:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 0, input);
+            		        new NoViableAltException("879:3: ( ( forInClauseDecl IN )=> forInClause RPAREN statement -> ^( FOR_IN[$f] forInClause statement ) | traditionalForClause RPAREN statement -> ^( $f traditionalForClause statement ) )", 40, 0, input);
             	
             		    throw nvae_d40s0;
             	}
@@ -9581,16 +9581,16 @@ public class ASParser : Parser
             	switch (alt40) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:878:4: ( forInClauseDecl IN )=> forInClause RPAREN statement
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:880:4: ( forInClauseDecl IN )=> forInClause RPAREN statement
             	        {
-            	        	PushFollow(FOLLOW_forInClause_in_forStatement2721);
-            	        	forInClause140 = forInClause();
+            	        	PushFollow(FOLLOW_forInClause_in_forStatement2723);
+            	        	forInClause141 = forInClause();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
-            	        	if ( backtracking==0 ) stream_forInClause.Add(forInClause140.Tree);
-            	        	RPAREN141 = (CommonToken)input.LT(1);
-            	        	Match(input,RPAREN,FOLLOW_RPAREN_in_forStatement2727); if (failed) return retval;
-            	        	if ( backtracking==0 ) stream_RPAREN.Add(RPAREN141);
+            	        	if ( backtracking==0 ) stream_forInClause.Add(forInClause141.Tree);
+            	        	RPAREN142 = (CommonToken)input.LT(1);
+            	        	Match(input,RPAREN,FOLLOW_RPAREN_in_forStatement2729); if (failed) return retval;
+            	        	if ( backtracking==0 ) stream_RPAREN.Add(RPAREN142);
 
             	        	if ( backtracking == 0 ) 
             	        	{
@@ -9602,11 +9602,11 @@ public class ASParser : Parser
             	        	  												if(next_test != ASLexer.LCURLY)	buffer.Append(NewLine + tab);												
             	        	  											
             	        	}
-            	        	PushFollow(FOLLOW_statement_in_forStatement2740);
-            	        	statement142 = statement();
+            	        	PushFollow(FOLLOW_statement_in_forStatement2742);
+            	        	statement143 = statement();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
-            	        	if ( backtracking==0 ) stream_statement.Add(statement142.Tree);
+            	        	if ( backtracking==0 ) stream_statement.Add(statement143.Tree);
             	        	if ( backtracking == 0 ) 
             	        	{
             	        	  
@@ -9627,9 +9627,9 @@ public class ASParser : Parser
             	        	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	        	
             	        	root_0 = (CommonTree)adaptor.GetNilNode();
-            	        	// 891:4: -> ^( FOR_IN[$f] forInClause statement )
+            	        	// 893:4: -> ^( FOR_IN[$f] forInClause statement )
             	        	{
-            	        	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:891:7: ^( FOR_IN[$f] forInClause statement )
+            	        	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:893:7: ^( FOR_IN[$f] forInClause statement )
             	        	    {
             	        	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	        	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(FOR_IN, f), root_1);
@@ -9647,16 +9647,16 @@ public class ASParser : Parser
             	        }
             	        break;
             	    case 2 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:893:6: traditionalForClause RPAREN statement
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:895:6: traditionalForClause RPAREN statement
             	        {
-            	        	PushFollow(FOLLOW_traditionalForClause_in_forStatement2769);
-            	        	traditionalForClause143 = traditionalForClause();
+            	        	PushFollow(FOLLOW_traditionalForClause_in_forStatement2771);
+            	        	traditionalForClause144 = traditionalForClause();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
-            	        	if ( backtracking==0 ) stream_traditionalForClause.Add(traditionalForClause143.Tree);
-            	        	RPAREN144 = (CommonToken)input.LT(1);
-            	        	Match(input,RPAREN,FOLLOW_RPAREN_in_forStatement2771); if (failed) return retval;
-            	        	if ( backtracking==0 ) stream_RPAREN.Add(RPAREN144);
+            	        	if ( backtracking==0 ) stream_traditionalForClause.Add(traditionalForClause144.Tree);
+            	        	RPAREN145 = (CommonToken)input.LT(1);
+            	        	Match(input,RPAREN,FOLLOW_RPAREN_in_forStatement2773); if (failed) return retval;
+            	        	if ( backtracking==0 ) stream_RPAREN.Add(RPAREN145);
 
             	        	if ( backtracking == 0 ) 
             	        	{
@@ -9668,11 +9668,11 @@ public class ASParser : Parser
             	        	  												if(next_test_2 != ASLexer.LCURLY)	buffer.Append(NewLine + tab);												
             	        	  											
             	        	}
-            	        	PushFollow(FOLLOW_statement_in_forStatement2780);
-            	        	statement145 = statement();
+            	        	PushFollow(FOLLOW_statement_in_forStatement2782);
+            	        	statement146 = statement();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
-            	        	if ( backtracking==0 ) stream_statement.Add(statement145.Tree);
+            	        	if ( backtracking==0 ) stream_statement.Add(statement146.Tree);
             	        	if ( backtracking == 0 ) 
             	        	{
             	        	  
@@ -9694,9 +9694,9 @@ public class ASParser : Parser
             	        	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	        	
             	        	root_0 = (CommonTree)adaptor.GetNilNode();
-            	        	// 905:4: -> ^( $f traditionalForClause statement )
+            	        	// 907:4: -> ^( $f traditionalForClause statement )
             	        	{
-            	        	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:905:7: ^( $f traditionalForClause statement )
+            	        	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:907:7: ^( $f traditionalForClause statement )
             	        	    {
             	        	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	        	    root_1 = (CommonTree)adaptor.BecomeRoot(stream_f.Next(), root_1);
@@ -9765,7 +9765,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start traditionalForClause
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:909:1: traditionalForClause : a= forInit SEMI b= forCond SEMI c= forIter ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:911:1: traditionalForClause : a= forInit SEMI b= forCond SEMI c= forIter ;
     public traditionalForClause_return traditionalForClause() // throws RecognitionException [1]
     {   
         traditionalForClause_return retval = new traditionalForClause_return();
@@ -9773,8 +9773,8 @@ public class ASParser : Parser
         int traditionalForClause_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken SEMI146 = null;
         CommonToken SEMI147 = null;
+        CommonToken SEMI148 = null;
         forInit_return a = null;
 
         forCond_return b = null;
@@ -9782,8 +9782,8 @@ public class ASParser : Parser
         forIter_return c = null;
         
         
-        CommonTree SEMI146_tree=null;
         CommonTree SEMI147_tree=null;
+        CommonTree SEMI148_tree=null;
     
         try 
     	{
@@ -9791,34 +9791,34 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:910:4: (a= forInit SEMI b= forCond SEMI c= forIter )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:910:4: a= forInit SEMI b= forCond SEMI c= forIter
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:912:4: (a= forInit SEMI b= forCond SEMI c= forIter )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:912:4: a= forInit SEMI b= forCond SEMI c= forIter
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_forInit_in_traditionalForClause2817);
+            	PushFollow(FOLLOW_forInit_in_traditionalForClause2819);
             	a = forInit();
             	followingStackPointer_--;
             	if (failed) return retval;
             	if ( backtracking==0 ) adaptor.AddChild(root_0, a.Tree);
-            	SEMI146 = (CommonToken)input.LT(1);
-            	Match(input,SEMI,FOLLOW_SEMI_in_traditionalForClause2819); if (failed) return retval;
+            	SEMI147 = (CommonToken)input.LT(1);
+            	Match(input,SEMI,FOLLOW_SEMI_in_traditionalForClause2821); if (failed) return retval;
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append(options.SpaceBetweenArguments ? "; " : ";"); 
             	}
-            	PushFollow(FOLLOW_forCond_in_traditionalForClause2829);
+            	PushFollow(FOLLOW_forCond_in_traditionalForClause2831);
             	b = forCond();
             	followingStackPointer_--;
             	if (failed) return retval;
             	if ( backtracking==0 ) adaptor.AddChild(root_0, b.Tree);
-            	SEMI147 = (CommonToken)input.LT(1);
-            	Match(input,SEMI,FOLLOW_SEMI_in_traditionalForClause2831); if (failed) return retval;
+            	SEMI148 = (CommonToken)input.LT(1);
+            	Match(input,SEMI,FOLLOW_SEMI_in_traditionalForClause2833); if (failed) return retval;
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append(options.SpaceBetweenArguments ? "; " : ";"); 
             	}
-            	PushFollow(FOLLOW_forIter_in_traditionalForClause2841);
+            	PushFollow(FOLLOW_forIter_in_traditionalForClause2843);
             	c = forIter();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -9870,7 +9870,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start forInClause
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:915:1: forInClause : forInClauseDecl IN forInClauseTail ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:917:1: forInClause : forInClauseDecl IN forInClauseTail ;
     public forInClause_return forInClause() // throws RecognitionException [1]
     {   
         forInClause_return retval = new forInClause_return();
@@ -9878,13 +9878,13 @@ public class ASParser : Parser
         int forInClause_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken IN149 = null;
-        forInClauseDecl_return forInClauseDecl148 = null;
+        CommonToken IN150 = null;
+        forInClauseDecl_return forInClauseDecl149 = null;
 
-        forInClauseTail_return forInClauseTail150 = null;
+        forInClauseTail_return forInClauseTail151 = null;
         
         
-        CommonTree IN149_tree=null;
+        CommonTree IN150_tree=null;
     
         try 
     	{
@@ -9892,27 +9892,27 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:916:4: ( forInClauseDecl IN forInClauseTail )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:916:4: forInClauseDecl IN forInClauseTail
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:918:4: ( forInClauseDecl IN forInClauseTail )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:918:4: forInClauseDecl IN forInClauseTail
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_forInClauseDecl_in_forInClause2853);
-            	forInClauseDecl148 = forInClauseDecl();
+            	PushFollow(FOLLOW_forInClauseDecl_in_forInClause2855);
+            	forInClauseDecl149 = forInClauseDecl();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, forInClauseDecl148.Tree);
-            	IN149 = (CommonToken)input.LT(1);
-            	Match(input,IN,FOLLOW_IN_in_forInClause2855); if (failed) return retval;
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, forInClauseDecl149.Tree);
+            	IN150 = (CommonToken)input.LT(1);
+            	Match(input,IN,FOLLOW_IN_in_forInClause2857); if (failed) return retval;
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append(" in "); 
             	}
-            	PushFollow(FOLLOW_forInClauseTail_in_forInClause2860);
-            	forInClauseTail150 = forInClauseTail();
+            	PushFollow(FOLLOW_forInClauseTail_in_forInClause2862);
+            	forInClauseTail151 = forInClauseTail();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, forInClauseTail150.Tree);
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, forInClauseTail151.Tree);
             
             }
     
@@ -9960,7 +9960,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start forInClauseDecl
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:919:1: forInClauseDecl : ( declaration | ide= ident );
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:921:1: forInClauseDecl : ( declaration | ide= ident );
     public forInClauseDecl_return forInClauseDecl() // throws RecognitionException [1]
     {   
         InOperator_stack.Push(new InOperator_scope());
@@ -9972,7 +9972,7 @@ public class ASParser : Parser
     
         ident_return ide = null;
 
-        declaration_return declaration151 = null;
+        declaration_return declaration152 = null;
         
         
     
@@ -9985,7 +9985,7 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:924:4: ( declaration | ide= ident )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:926:4: ( declaration | ide= ident )
             int alt41 = 2;
             int LA41_0 = input.LA(1);
             
@@ -10001,31 +10001,31 @@ public class ASParser : Parser
             {
                 if ( backtracking > 0 ) {failed = true; return retval;}
                 NoViableAltException nvae_d41s0 =
-                    new NoViableAltException("919:1: forInClauseDecl : ( declaration | ide= ident );", 41, 0, input);
+                    new NoViableAltException("921:1: forInClauseDecl : ( declaration | ide= ident );", 41, 0, input);
             
                 throw nvae_d41s0;
             }
             switch (alt41) 
             {
                 case 1 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:924:4: declaration
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:926:4: declaration
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_declaration_in_forInClauseDecl2881);
-                    	declaration151 = declaration();
+                    	PushFollow(FOLLOW_declaration_in_forInClauseDecl2883);
+                    	declaration152 = declaration();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) adaptor.AddChild(root_0, declaration151.Tree);
+                    	if ( backtracking==0 ) adaptor.AddChild(root_0, declaration152.Tree);
                     
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:925:4: ide= ident
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:927:4: ide= ident
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_ident_in_forInClauseDecl2889);
+                    	PushFollow(FOLLOW_ident_in_forInClauseDecl2891);
                     	ide = ident();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -10085,7 +10085,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start forInClauseTail
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:929:1: forInClauseTail : expressionList ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:931:1: forInClauseTail : expressionList ;
     public forInClauseTail_return forInClauseTail() // throws RecognitionException [1]
     {   
         InOperator_stack.Push(new InOperator_scope());
@@ -10095,7 +10095,7 @@ public class ASParser : Parser
         int forInClauseTail_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        expressionList_return expressionList152 = null;
+        expressionList_return expressionList153 = null;
         
         
     
@@ -10108,16 +10108,16 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:934:4: ( expressionList )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:934:4: expressionList
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:936:4: ( expressionList )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:936:4: expressionList
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_expressionList_in_forInClauseTail2915);
-            	expressionList152 = expressionList();
+            	PushFollow(FOLLOW_expressionList_in_forInClauseTail2917);
+            	expressionList153 = expressionList();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, expressionList152.Tree);
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, expressionList153.Tree);
             
             }
     
@@ -10167,7 +10167,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start forInit
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:938:1: forInit : ( declaration | expressionList )? -> ^( FOR_INIT ( declaration )? ( expressionList )? ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:940:1: forInit : ( declaration | expressionList )? -> ^( FOR_INIT ( declaration )? ( expressionList )? ) ;
     public forInit_return forInit() // throws RecognitionException [1]
     {   
         InOperator_stack.Push(new InOperator_scope());
@@ -10177,9 +10177,9 @@ public class ASParser : Parser
         int forInit_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        declaration_return declaration153 = null;
+        declaration_return declaration154 = null;
 
-        expressionList_return expressionList154 = null;
+        expressionList_return expressionList155 = null;
         
         
         RewriteRuleSubtreeStream stream_expressionList = new RewriteRuleSubtreeStream(adaptor,"rule expressionList");
@@ -10193,10 +10193,10 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:943:4: ( ( declaration | expressionList )? -> ^( FOR_INIT ( declaration )? ( expressionList )? ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:943:4: ( declaration | expressionList )?
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:945:4: ( ( declaration | expressionList )? -> ^( FOR_INIT ( declaration )? ( expressionList )? ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:945:4: ( declaration | expressionList )?
             {
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:943:4: ( declaration | expressionList )?
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:945:4: ( declaration | expressionList )?
             	int alt42 = 3;
             	int LA42_0 = input.LA(1);
             	
@@ -10211,24 +10211,24 @@ public class ASParser : Parser
             	switch (alt42) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:943:5: declaration
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:945:5: declaration
             	        {
-            	        	PushFollow(FOLLOW_declaration_in_forInit2939);
-            	        	declaration153 = declaration();
+            	        	PushFollow(FOLLOW_declaration_in_forInit2941);
+            	        	declaration154 = declaration();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
-            	        	if ( backtracking==0 ) stream_declaration.Add(declaration153.Tree);
+            	        	if ( backtracking==0 ) stream_declaration.Add(declaration154.Tree);
             	        
             	        }
             	        break;
             	    case 2 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:943:19: expressionList
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:945:19: expressionList
             	        {
-            	        	PushFollow(FOLLOW_expressionList_in_forInit2943);
-            	        	expressionList154 = expressionList();
+            	        	PushFollow(FOLLOW_expressionList_in_forInit2945);
+            	        	expressionList155 = expressionList();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
-            	        	if ( backtracking==0 ) stream_expressionList.Add(expressionList154.Tree);
+            	        	if ( backtracking==0 ) stream_expressionList.Add(expressionList155.Tree);
             	        
             	        }
             	        break;
@@ -10247,21 +10247,21 @@ public class ASParser : Parser
             	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	
             	root_0 = (CommonTree)adaptor.GetNilNode();
-            	// 944:3: -> ^( FOR_INIT ( declaration )? ( expressionList )? )
+            	// 946:3: -> ^( FOR_INIT ( declaration )? ( expressionList )? )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:944:6: ^( FOR_INIT ( declaration )? ( expressionList )? )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:946:6: ^( FOR_INIT ( declaration )? ( expressionList )? )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(FOR_INIT, "FOR_INIT"), root_1);
             	    
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:944:17: ( declaration )?
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:946:17: ( declaration )?
             	    if ( stream_declaration.HasNext() )
             	    {
             	        adaptor.AddChild(root_1, stream_declaration.Next());
             	    
             	    }
             	    stream_declaration.Reset();
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:944:30: ( expressionList )?
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:946:30: ( expressionList )?
             	    if ( stream_expressionList.HasNext() )
             	    {
             	        adaptor.AddChild(root_1, stream_expressionList.Next());
@@ -10324,7 +10324,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start forCond
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:947:1: forCond : ( expressionList )? -> ^( FOR_CONDITION ( expressionList )? ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:949:1: forCond : ( expressionList )? -> ^( FOR_CONDITION ( expressionList )? ) ;
     public forCond_return forCond() // throws RecognitionException [1]
     {   
         InOperator_stack.Push(new InOperator_scope());
@@ -10334,7 +10334,7 @@ public class ASParser : Parser
         int forCond_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        expressionList_return expressionList155 = null;
+        expressionList_return expressionList156 = null;
         
         
         RewriteRuleSubtreeStream stream_expressionList = new RewriteRuleSubtreeStream(adaptor,"rule expressionList");
@@ -10347,10 +10347,10 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:952:4: ( ( expressionList )? -> ^( FOR_CONDITION ( expressionList )? ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:952:4: ( expressionList )?
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:954:4: ( ( expressionList )? -> ^( FOR_CONDITION ( expressionList )? ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:954:4: ( expressionList )?
             {
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:952:4: ( expressionList )?
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:954:4: ( expressionList )?
             	int alt43 = 2;
             	int LA43_0 = input.LA(1);
             	
@@ -10361,13 +10361,13 @@ public class ASParser : Parser
             	switch (alt43) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: expressionList
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:0:0: expressionList
             	        {
-            	        	PushFollow(FOLLOW_expressionList_in_forCond2981);
-            	        	expressionList155 = expressionList();
+            	        	PushFollow(FOLLOW_expressionList_in_forCond2983);
+            	        	expressionList156 = expressionList();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
-            	        	if ( backtracking==0 ) stream_expressionList.Add(expressionList155.Tree);
+            	        	if ( backtracking==0 ) stream_expressionList.Add(expressionList156.Tree);
             	        
             	        }
             	        break;
@@ -10386,14 +10386,14 @@ public class ASParser : Parser
             	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	
             	root_0 = (CommonTree)adaptor.GetNilNode();
-            	// 953:3: -> ^( FOR_CONDITION ( expressionList )? )
+            	// 955:3: -> ^( FOR_CONDITION ( expressionList )? )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:953:6: ^( FOR_CONDITION ( expressionList )? )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:955:6: ^( FOR_CONDITION ( expressionList )? )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(FOR_CONDITION, "FOR_CONDITION"), root_1);
             	    
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:953:22: ( expressionList )?
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:955:22: ( expressionList )?
             	    if ( stream_expressionList.HasNext() )
             	    {
             	        adaptor.AddChild(root_1, stream_expressionList.Next());
@@ -10456,7 +10456,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start forIter
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:956:1: forIter : ( expressionList )? -> ^( FOR_ITERATOR ( expressionList )? ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:958:1: forIter : ( expressionList )? -> ^( FOR_ITERATOR ( expressionList )? ) ;
     public forIter_return forIter() // throws RecognitionException [1]
     {   
         InOperator_stack.Push(new InOperator_scope());
@@ -10466,7 +10466,7 @@ public class ASParser : Parser
         int forIter_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        expressionList_return expressionList156 = null;
+        expressionList_return expressionList157 = null;
         
         
         RewriteRuleSubtreeStream stream_expressionList = new RewriteRuleSubtreeStream(adaptor,"rule expressionList");
@@ -10479,10 +10479,10 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:961:4: ( ( expressionList )? -> ^( FOR_ITERATOR ( expressionList )? ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:961:4: ( expressionList )?
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:963:4: ( ( expressionList )? -> ^( FOR_ITERATOR ( expressionList )? ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:963:4: ( expressionList )?
             {
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:961:4: ( expressionList )?
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:963:4: ( expressionList )?
             	int alt44 = 2;
             	int LA44_0 = input.LA(1);
             	
@@ -10493,13 +10493,13 @@ public class ASParser : Parser
             	switch (alt44) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: expressionList
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:0:0: expressionList
             	        {
-            	        	PushFollow(FOLLOW_expressionList_in_forIter3014);
-            	        	expressionList156 = expressionList();
+            	        	PushFollow(FOLLOW_expressionList_in_forIter3016);
+            	        	expressionList157 = expressionList();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
-            	        	if ( backtracking==0 ) stream_expressionList.Add(expressionList156.Tree);
+            	        	if ( backtracking==0 ) stream_expressionList.Add(expressionList157.Tree);
             	        
             	        }
             	        break;
@@ -10518,14 +10518,14 @@ public class ASParser : Parser
             	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	
             	root_0 = (CommonTree)adaptor.GetNilNode();
-            	// 962:3: -> ^( FOR_ITERATOR ( expressionList )? )
+            	// 964:3: -> ^( FOR_ITERATOR ( expressionList )? )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:962:6: ^( FOR_ITERATOR ( expressionList )? )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:964:6: ^( FOR_ITERATOR ( expressionList )? )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(FOR_ITERATOR, "FOR_ITERATOR"), root_1);
             	    
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:962:21: ( expressionList )?
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:964:21: ( expressionList )?
             	    if ( stream_expressionList.HasNext() )
             	    {
             	        adaptor.AddChild(root_1, stream_expressionList.Next());
@@ -10588,7 +10588,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start whileStatement
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:965:1: whileStatement : WHILE condition ( statement ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:967:1: whileStatement : WHILE condition ( statement ) ;
     public whileStatement_return whileStatement() // throws RecognitionException [1]
     {   
         whileStatement_return retval = new whileStatement_return();
@@ -10596,13 +10596,13 @@ public class ASParser : Parser
         int whileStatement_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken WHILE157 = null;
-        condition_return condition158 = null;
+        CommonToken WHILE158 = null;
+        condition_return condition159 = null;
 
-        statement_return statement159 = null;
+        statement_return statement160 = null;
         
         
-        CommonTree WHILE157_tree=null;
+        CommonTree WHILE158_tree=null;
     
         try 
     	{
@@ -10610,26 +10610,26 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:966:4: ( WHILE condition ( statement ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:966:4: WHILE condition ( statement )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:968:4: ( WHILE condition ( statement ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:968:4: WHILE condition ( statement )
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	WHILE157 = (CommonToken)input.LT(1);
-            	Match(input,WHILE,FOLLOW_WHILE_in_whileStatement3037); if (failed) return retval;
+            	WHILE158 = (CommonToken)input.LT(1);
+            	Match(input,WHILE,FOLLOW_WHILE_in_whileStatement3039); if (failed) return retval;
             	if ( backtracking==0 ) {
-            	WHILE157_tree = (CommonTree)adaptor.Create(WHILE157);
-            	root_0 = (CommonTree)adaptor.BecomeRoot(WHILE157_tree, root_0);
+            	WHILE158_tree = (CommonTree)adaptor.Create(WHILE158);
+            	root_0 = (CommonTree)adaptor.BecomeRoot(WHILE158_tree, root_0);
             	}
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append("while"); 
             	}
-            	PushFollow(FOLLOW_condition_in_whileStatement3046);
-            	condition158 = condition();
+            	PushFollow(FOLLOW_condition_in_whileStatement3048);
+            	condition159 = condition();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, condition158.Tree);
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, condition159.Tree);
             	if ( backtracking == 0 ) 
             	{
             	  
@@ -10639,14 +10639,14 @@ public class ASParser : Parser
             	  							if(next_test != ASLexer.LCURLY)	buffer.Append(NewLine + tab);
             	  						
             	}
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:973:3: ( statement )
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:973:4: statement
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:975:3: ( statement )
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:975:4: statement
             	{
-            		PushFollow(FOLLOW_statement_in_whileStatement3054);
-            		statement159 = statement();
+            		PushFollow(FOLLOW_statement_in_whileStatement3056);
+            		statement160 = statement();
             		followingStackPointer_--;
             		if (failed) return retval;
-            		if ( backtracking==0 ) adaptor.AddChild(root_0, statement159.Tree);
+            		if ( backtracking==0 ) adaptor.AddChild(root_0, statement160.Tree);
             	
             	}
 
@@ -10705,7 +10705,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start doWhileStatement
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:980:1: doWhileStatement : DO statement WHILE ( condition ) semi ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:982:1: doWhileStatement : DO statement WHILE ( condition ) semi ;
     public doWhileStatement_return doWhileStatement() // throws RecognitionException [1]
     {   
         doWhileStatement_return retval = new doWhileStatement_return();
@@ -10713,17 +10713,17 @@ public class ASParser : Parser
         int doWhileStatement_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken DO160 = null;
-        CommonToken WHILE162 = null;
-        statement_return statement161 = null;
+        CommonToken DO161 = null;
+        CommonToken WHILE163 = null;
+        statement_return statement162 = null;
 
-        condition_return condition163 = null;
+        condition_return condition164 = null;
 
-        semi_return semi164 = null;
+        semi_return semi165 = null;
         
         
-        CommonTree DO160_tree=null;
-        CommonTree WHILE162_tree=null;
+        CommonTree DO161_tree=null;
+        CommonTree WHILE163_tree=null;
     
         try 
     	{
@@ -10731,16 +10731,16 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:981:4: ( DO statement WHILE ( condition ) semi )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:981:4: DO statement WHILE ( condition ) semi
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:983:4: ( DO statement WHILE ( condition ) semi )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:983:4: DO statement WHILE ( condition ) semi
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	DO160 = (CommonToken)input.LT(1);
-            	Match(input,DO,FOLLOW_DO_in_doWhileStatement3069); if (failed) return retval;
+            	DO161 = (CommonToken)input.LT(1);
+            	Match(input,DO,FOLLOW_DO_in_doWhileStatement3071); if (failed) return retval;
             	if ( backtracking==0 ) {
-            	DO160_tree = (CommonTree)adaptor.Create(DO160);
-            	root_0 = (CommonTree)adaptor.BecomeRoot(DO160_tree, root_0);
+            	DO161_tree = (CommonTree)adaptor.Create(DO161);
+            	root_0 = (CommonTree)adaptor.BecomeRoot(DO161_tree, root_0);
             	}
             	if ( backtracking == 0 ) 
             	{
@@ -10752,11 +10752,11 @@ public class ASParser : Parser
             	  							if(next_test != ASLexer.LCURLY)	buffer.Append(NewLine + tab);							
             	  						
             	}
-            	PushFollow(FOLLOW_statement_in_doWhileStatement3079);
-            	statement161 = statement();
+            	PushFollow(FOLLOW_statement_in_doWhileStatement3081);
+            	statement162 = statement();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, statement161.Tree);
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, statement162.Tree);
             	if ( backtracking == 0 ) 
             	{
             	  
@@ -10765,28 +10765,28 @@ public class ASParser : Parser
             	  							buffer.Append("}");
             	  						
             	}
-            	WHILE162 = (CommonToken)input.LT(1);
-            	Match(input,WHILE,FOLLOW_WHILE_in_doWhileStatement3086); if (failed) return retval;
+            	WHILE163 = (CommonToken)input.LT(1);
+            	Match(input,WHILE,FOLLOW_WHILE_in_doWhileStatement3088); if (failed) return retval;
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append(" while"); 
             	}
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:994:3: ( condition )
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:994:4: condition
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:996:3: ( condition )
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:996:4: condition
             	{
-            		PushFollow(FOLLOW_condition_in_doWhileStatement3096);
-            		condition163 = condition();
+            		PushFollow(FOLLOW_condition_in_doWhileStatement3098);
+            		condition164 = condition();
             		followingStackPointer_--;
             		if (failed) return retval;
-            		if ( backtracking==0 ) adaptor.AddChild(root_0, condition163.Tree);
+            		if ( backtracking==0 ) adaptor.AddChild(root_0, condition164.Tree);
             	
             	}
 
-            	PushFollow(FOLLOW_semi_in_doWhileStatement3102);
-            	semi164 = semi();
+            	PushFollow(FOLLOW_semi_in_doWhileStatement3104);
+            	semi165 = semi();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, semi164.Tree);
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, semi165.Tree);
             
             }
     
@@ -10834,7 +10834,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start withStatement
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:998:1: withStatement : WITH condition ( statement ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1000:1: withStatement : WITH condition ( statement ) ;
     public withStatement_return withStatement() // throws RecognitionException [1]
     {   
         withStatement_return retval = new withStatement_return();
@@ -10842,13 +10842,13 @@ public class ASParser : Parser
         int withStatement_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken WITH165 = null;
-        condition_return condition166 = null;
+        CommonToken WITH166 = null;
+        condition_return condition167 = null;
 
-        statement_return statement167 = null;
+        statement_return statement168 = null;
         
         
-        CommonTree WITH165_tree=null;
+        CommonTree WITH166_tree=null;
     
         try 
     	{
@@ -10856,26 +10856,26 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:999:4: ( WITH condition ( statement ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:999:4: WITH condition ( statement )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1001:4: ( WITH condition ( statement ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1001:4: WITH condition ( statement )
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	WITH165 = (CommonToken)input.LT(1);
-            	Match(input,WITH,FOLLOW_WITH_in_withStatement3113); if (failed) return retval;
+            	WITH166 = (CommonToken)input.LT(1);
+            	Match(input,WITH,FOLLOW_WITH_in_withStatement3115); if (failed) return retval;
             	if ( backtracking==0 ) {
-            	WITH165_tree = (CommonTree)adaptor.Create(WITH165);
-            	root_0 = (CommonTree)adaptor.BecomeRoot(WITH165_tree, root_0);
+            	WITH166_tree = (CommonTree)adaptor.Create(WITH166);
+            	root_0 = (CommonTree)adaptor.BecomeRoot(WITH166_tree, root_0);
             	}
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append("with"); 
             	}
-            	PushFollow(FOLLOW_condition_in_withStatement3122);
-            	condition166 = condition();
+            	PushFollow(FOLLOW_condition_in_withStatement3124);
+            	condition167 = condition();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, condition166.Tree);
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, condition167.Tree);
             	if ( backtracking == 0 ) 
             	{
             	  
@@ -10885,14 +10885,14 @@ public class ASParser : Parser
             	  							if(next_test != ASLexer.LCURLY)	buffer.Append(NewLine + tab);
             	  						
             	}
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1006:3: ( statement )
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1006:4: statement
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1008:3: ( statement )
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1008:4: statement
             	{
-            		PushFollow(FOLLOW_statement_in_withStatement3130);
-            		statement167 = statement();
+            		PushFollow(FOLLOW_statement_in_withStatement3132);
+            		statement168 = statement();
             		followingStackPointer_--;
             		if (failed) return retval;
-            		if ( backtracking==0 ) adaptor.AddChild(root_0, statement167.Tree);
+            		if ( backtracking==0 ) adaptor.AddChild(root_0, statement168.Tree);
             	
             	}
 
@@ -10951,7 +10951,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start typeExpression
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1013:1: typeExpression : c= COLON ( identifier | VOID | STAR ) -> ^( TYPE_SPEC[$c] ( identifier )? ( VOID )? ( STAR )? ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1015:1: typeExpression : c= COLON ( identifier | VOID | STAR ) -> ^( TYPE_SPEC[$c] ( identifier )? ( VOID )? ( STAR )? ) ;
     public typeExpression_return typeExpression() // throws RecognitionException [1]
     {   
         typeExpression_return retval = new typeExpression_return();
@@ -10960,14 +10960,14 @@ public class ASParser : Parser
         CommonTree root_0 = null;
     
         CommonToken c = null;
-        CommonToken VOID169 = null;
-        CommonToken STAR170 = null;
-        identifier_return identifier168 = null;
+        CommonToken VOID170 = null;
+        CommonToken STAR171 = null;
+        identifier_return identifier169 = null;
         
         
         CommonTree c_tree=null;
-        CommonTree VOID169_tree=null;
-        CommonTree STAR170_tree=null;
+        CommonTree VOID170_tree=null;
+        CommonTree STAR171_tree=null;
         RewriteRuleTokenStream stream_STAR = new RewriteRuleTokenStream(adaptor,"token STAR");
         RewriteRuleTokenStream stream_COLON = new RewriteRuleTokenStream(adaptor,"token COLON");
         RewriteRuleTokenStream stream_VOID = new RewriteRuleTokenStream(adaptor,"token VOID");
@@ -10978,18 +10978,18 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1015:3: (c= COLON ( identifier | VOID | STAR ) -> ^( TYPE_SPEC[$c] ( identifier )? ( VOID )? ( STAR )? ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1015:3: c= COLON ( identifier | VOID | STAR )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1017:3: (c= COLON ( identifier | VOID | STAR ) -> ^( TYPE_SPEC[$c] ( identifier )? ( VOID )? ( STAR )? ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1017:3: c= COLON ( identifier | VOID | STAR )
             {
             	c = (CommonToken)input.LT(1);
-            	Match(input,COLON,FOLLOW_COLON_in_typeExpression3150); if (failed) return retval;
+            	Match(input,COLON,FOLLOW_COLON_in_typeExpression3152); if (failed) return retval;
             	if ( backtracking==0 ) stream_COLON.Add(c);
 
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append(options.SpaceBetweenType ? " : " : ":"); 
             	}
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1016:3: ( identifier | VOID | STAR )
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1018:3: ( identifier | VOID | STAR )
             	int alt45 = 3;
             	switch ( input.LA(1) ) 
             	{
@@ -11018,7 +11018,7 @@ public class ASParser : Parser
             		default:
             		    if ( backtracking > 0 ) {failed = true; return retval;}
             		    NoViableAltException nvae_d45s0 =
-            		        new NoViableAltException("1016:3: ( identifier | VOID | STAR )", 45, 0, input);
+            		        new NoViableAltException("1018:3: ( identifier | VOID | STAR )", 45, 0, input);
             	
             		    throw nvae_d45s0;
             	}
@@ -11026,22 +11026,22 @@ public class ASParser : Parser
             	switch (alt45) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1017:4: identifier
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1019:4: identifier
             	        {
-            	        	PushFollow(FOLLOW_identifier_in_typeExpression3163);
-            	        	identifier168 = identifier();
+            	        	PushFollow(FOLLOW_identifier_in_typeExpression3165);
+            	        	identifier169 = identifier();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
-            	        	if ( backtracking==0 ) stream_identifier.Add(identifier168.Tree);
+            	        	if ( backtracking==0 ) stream_identifier.Add(identifier169.Tree);
             	        
             	        }
             	        break;
             	    case 2 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1018:6: VOID
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1020:6: VOID
             	        {
-            	        	VOID169 = (CommonToken)input.LT(1);
-            	        	Match(input,VOID,FOLLOW_VOID_in_typeExpression3171); if (failed) return retval;
-            	        	if ( backtracking==0 ) stream_VOID.Add(VOID169);
+            	        	VOID170 = (CommonToken)input.LT(1);
+            	        	Match(input,VOID,FOLLOW_VOID_in_typeExpression3173); if (failed) return retval;
+            	        	if ( backtracking==0 ) stream_VOID.Add(VOID170);
 
             	        	if ( backtracking == 0 ) 
             	        	{
@@ -11051,11 +11051,11 @@ public class ASParser : Parser
             	        }
             	        break;
             	    case 3 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1019:6: STAR
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1021:6: STAR
             	        {
-            	        	STAR170 = (CommonToken)input.LT(1);
-            	        	Match(input,STAR,FOLLOW_STAR_in_typeExpression3181); if (failed) return retval;
-            	        	if ( backtracking==0 ) stream_STAR.Add(STAR170);
+            	        	STAR171 = (CommonToken)input.LT(1);
+            	        	Match(input,STAR,FOLLOW_STAR_in_typeExpression3183); if (failed) return retval;
+            	        	if ( backtracking==0 ) stream_STAR.Add(STAR171);
 
             	        	if ( backtracking == 0 ) 
             	        	{
@@ -11079,28 +11079,28 @@ public class ASParser : Parser
             	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	
             	root_0 = (CommonTree)adaptor.GetNilNode();
-            	// 1021:3: -> ^( TYPE_SPEC[$c] ( identifier )? ( VOID )? ( STAR )? )
+            	// 1023:3: -> ^( TYPE_SPEC[$c] ( identifier )? ( VOID )? ( STAR )? )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1021:6: ^( TYPE_SPEC[$c] ( identifier )? ( VOID )? ( STAR )? )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1023:6: ^( TYPE_SPEC[$c] ( identifier )? ( VOID )? ( STAR )? )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(TYPE_SPEC, c), root_1);
             	    
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1021:22: ( identifier )?
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1023:22: ( identifier )?
             	    if ( stream_identifier.HasNext() )
             	    {
             	        adaptor.AddChild(root_1, stream_identifier.Next());
             	    
             	    }
             	    stream_identifier.Reset();
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1021:34: ( VOID )?
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1023:34: ( VOID )?
             	    if ( stream_VOID.HasNext() )
             	    {
             	        adaptor.AddChild(root_1, stream_VOID.Next());
             	    
             	    }
             	    stream_VOID.Reset();
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1021:40: ( STAR )?
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1023:40: ( STAR )?
             	    if ( stream_STAR.HasNext() )
             	    {
             	        adaptor.AddChild(root_1, stream_STAR.Next());
@@ -11161,7 +11161,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start identifier
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1024:1: identifier : qualifiedIdent ( options {greedy=true; } : DOT qualifiedIdent )* -> ^( IDENTIFIER ( qualifiedIdent )+ ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1026:1: identifier : qualifiedIdent ( options {greedy=true; } : DOT qualifiedIdent )* -> ^( IDENTIFIER ( qualifiedIdent )+ ) ;
     public identifier_return identifier() // throws RecognitionException [1]
     {   
         identifier_return retval = new identifier_return();
@@ -11169,13 +11169,13 @@ public class ASParser : Parser
         int identifier_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken DOT172 = null;
-        qualifiedIdent_return qualifiedIdent171 = null;
+        CommonToken DOT173 = null;
+        qualifiedIdent_return qualifiedIdent172 = null;
 
-        qualifiedIdent_return qualifiedIdent173 = null;
+        qualifiedIdent_return qualifiedIdent174 = null;
         
         
-        CommonTree DOT172_tree=null;
+        CommonTree DOT173_tree=null;
         RewriteRuleTokenStream stream_DOT = new RewriteRuleTokenStream(adaptor,"token DOT");
         RewriteRuleSubtreeStream stream_qualifiedIdent = new RewriteRuleSubtreeStream(adaptor,"rule qualifiedIdent");
         try 
@@ -11184,19 +11184,19 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1025:4: ( qualifiedIdent ( options {greedy=true; } : DOT qualifiedIdent )* -> ^( IDENTIFIER ( qualifiedIdent )+ ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1025:4: qualifiedIdent ( options {greedy=true; } : DOT qualifiedIdent )*
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1027:4: ( qualifiedIdent ( options {greedy=true; } : DOT qualifiedIdent )* -> ^( IDENTIFIER ( qualifiedIdent )+ ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1027:4: qualifiedIdent ( options {greedy=true; } : DOT qualifiedIdent )*
             {
-            	PushFollow(FOLLOW_qualifiedIdent_in_identifier3219);
-            	qualifiedIdent171 = qualifiedIdent();
+            	PushFollow(FOLLOW_qualifiedIdent_in_identifier3221);
+            	qualifiedIdent172 = qualifiedIdent();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) stream_qualifiedIdent.Add(qualifiedIdent171.Tree);
+            	if ( backtracking==0 ) stream_qualifiedIdent.Add(qualifiedIdent172.Tree);
             	if ( backtracking == 0 ) 
             	{
             	   
             	}
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1026:3: ( options {greedy=true; } : DOT qualifiedIdent )*
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1028:3: ( options {greedy=true; } : DOT qualifiedIdent )*
             	do 
             	{
             	    int alt46 = 2;
@@ -11211,21 +11211,21 @@ public class ASParser : Parser
             	    switch (alt46) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1027:6: DOT qualifiedIdent
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1029:6: DOT qualifiedIdent
             			    {
-            			    	DOT172 = (CommonToken)input.LT(1);
-            			    	Match(input,DOT,FOLLOW_DOT_in_identifier3243); if (failed) return retval;
-            			    	if ( backtracking==0 ) stream_DOT.Add(DOT172);
+            			    	DOT173 = (CommonToken)input.LT(1);
+            			    	Match(input,DOT,FOLLOW_DOT_in_identifier3245); if (failed) return retval;
+            			    	if ( backtracking==0 ) stream_DOT.Add(DOT173);
 
             			    	if ( backtracking == 0 ) 
             			    	{
             			    	   buffer.Append("."); 
             			    	}
-            			    	PushFollow(FOLLOW_qualifiedIdent_in_identifier3247);
-            			    	qualifiedIdent173 = qualifiedIdent();
+            			    	PushFollow(FOLLOW_qualifiedIdent_in_identifier3249);
+            			    	qualifiedIdent174 = qualifiedIdent();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
-            			    	if ( backtracking==0 ) stream_qualifiedIdent.Add(qualifiedIdent173.Tree);
+            			    	if ( backtracking==0 ) stream_qualifiedIdent.Add(qualifiedIdent174.Tree);
             			    
             			    }
             			    break;
@@ -11250,9 +11250,9 @@ public class ASParser : Parser
             	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	
             	root_0 = (CommonTree)adaptor.GetNilNode();
-            	// 1029:3: -> ^( IDENTIFIER ( qualifiedIdent )+ )
+            	// 1031:3: -> ^( IDENTIFIER ( qualifiedIdent )+ )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1029:6: ^( IDENTIFIER ( qualifiedIdent )+ )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1031:6: ^( IDENTIFIER ( qualifiedIdent )+ )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(IDENTIFIER, "IDENTIFIER"), root_1);
@@ -11320,7 +11320,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start qualifiedIdent
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1032:1: qualifiedIdent : ide= ident ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1034:1: qualifiedIdent : ide= ident ;
     public qualifiedIdent_return qualifiedIdent() // throws RecognitionException [1]
     {   
         qualifiedIdent_return retval = new qualifiedIdent_return();
@@ -11338,12 +11338,12 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1033:4: (ide= ident )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1033:4: ide= ident
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1035:4: (ide= ident )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1035:4: ide= ident
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_ident_in_qualifiedIdent3276);
+            	PushFollow(FOLLOW_ident_in_qualifiedIdent3278);
             	ide = ident();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -11399,7 +11399,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start namespaceName
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1036:1: namespaceName : ( IDENT | reservedNamespace );
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1038:1: namespaceName : ( IDENT | reservedNamespace );
     public namespaceName_return namespaceName() // throws RecognitionException [1]
     {   
         namespaceName_return retval = new namespaceName_return();
@@ -11407,11 +11407,11 @@ public class ASParser : Parser
         int namespaceName_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken IDENT174 = null;
-        reservedNamespace_return reservedNamespace175 = null;
+        CommonToken IDENT175 = null;
+        reservedNamespace_return reservedNamespace176 = null;
         
         
-        CommonTree IDENT174_tree=null;
+        CommonTree IDENT175_tree=null;
     
         try 
     	{
@@ -11419,7 +11419,7 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1037:4: ( IDENT | reservedNamespace )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1039:4: ( IDENT | reservedNamespace )
             int alt47 = 2;
             int LA47_0 = input.LA(1);
             
@@ -11435,36 +11435,36 @@ public class ASParser : Parser
             {
                 if ( backtracking > 0 ) {failed = true; return retval;}
                 NoViableAltException nvae_d47s0 =
-                    new NoViableAltException("1036:1: namespaceName : ( IDENT | reservedNamespace );", 47, 0, input);
+                    new NoViableAltException("1038:1: namespaceName : ( IDENT | reservedNamespace );", 47, 0, input);
             
                 throw nvae_d47s0;
             }
             switch (alt47) 
             {
                 case 1 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1037:4: IDENT
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1039:4: IDENT
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	IDENT174 = (CommonToken)input.LT(1);
-                    	Match(input,IDENT,FOLLOW_IDENT_in_namespaceName3290); if (failed) return retval;
+                    	IDENT175 = (CommonToken)input.LT(1);
+                    	Match(input,IDENT,FOLLOW_IDENT_in_namespaceName3292); if (failed) return retval;
                     	if ( backtracking==0 ) {
-                    	IDENT174_tree = (CommonTree)adaptor.Create(IDENT174);
-                    	adaptor.AddChild(root_0, IDENT174_tree);
+                    	IDENT175_tree = (CommonTree)adaptor.Create(IDENT175);
+                    	adaptor.AddChild(root_0, IDENT175_tree);
                     	}
                     
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1037:12: reservedNamespace
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1039:12: reservedNamespace
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_reservedNamespace_in_namespaceName3294);
-                    	reservedNamespace175 = reservedNamespace();
+                    	PushFollow(FOLLOW_reservedNamespace_in_namespaceName3296);
+                    	reservedNamespace176 = reservedNamespace();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) adaptor.AddChild(root_0, reservedNamespace175.Tree);
+                    	if ( backtracking==0 ) adaptor.AddChild(root_0, reservedNamespace176.Tree);
                     
                     }
                     break;
@@ -11514,7 +11514,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start reservedNamespace
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1040:1: reservedNamespace : ( PUBLIC | PRIVATE | PROTECTED | INTERNAL );
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1042:1: reservedNamespace : ( PUBLIC | PRIVATE | PROTECTED | INTERNAL );
     public reservedNamespace_return reservedNamespace() // throws RecognitionException [1]
     {   
         reservedNamespace_return retval = new reservedNamespace_return();
@@ -11522,9 +11522,9 @@ public class ASParser : Parser
         int reservedNamespace_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken set176 = null;
+        CommonToken set177 = null;
         
-        CommonTree set176_tree=null;
+        CommonTree set177_tree=null;
     
         try 
     	{
@@ -11532,16 +11532,16 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1041:4: ( PUBLIC | PRIVATE | PROTECTED | INTERNAL )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1043:4: ( PUBLIC | PRIVATE | PROTECTED | INTERNAL )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	set176 = (CommonToken)input.LT(1);
+            	set177 = (CommonToken)input.LT(1);
             	if ( (input.LA(1) >= PUBLIC && input.LA(1) <= INTERNAL) ) 
             	{
             	    input.Consume();
-            	    if ( backtracking==0 ) adaptor.AddChild(root_0, adaptor.Create(set176));
+            	    if ( backtracking==0 ) adaptor.AddChild(root_0, adaptor.Create(set177));
             	    errorRecovery = false;failed = false;
             	}
             	else 
@@ -11599,7 +11599,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start identifierStar
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1047:1: identifierStar : ide= ident ( options {greedy=true; } : DOT ide2= ident )* ( DOT STAR )? -> ^( IDENTIFIER ( ident )+ ( STAR )? ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1049:1: identifierStar : ide= ident ( options {greedy=true; } : DOT ide2= ident )* ( DOT STAR )? -> ^( IDENTIFIER ( ident )+ ( STAR )? ) ;
     public identifierStar_return identifierStar() // throws RecognitionException [1]
     {   
         identifierStar_return retval = new identifierStar_return();
@@ -11607,17 +11607,17 @@ public class ASParser : Parser
         int identifierStar_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken DOT177 = null;
         CommonToken DOT178 = null;
-        CommonToken STAR179 = null;
+        CommonToken DOT179 = null;
+        CommonToken STAR180 = null;
         ident_return ide = null;
 
         ident_return ide2 = null;
         
         
-        CommonTree DOT177_tree=null;
         CommonTree DOT178_tree=null;
-        CommonTree STAR179_tree=null;
+        CommonTree DOT179_tree=null;
+        CommonTree STAR180_tree=null;
         RewriteRuleTokenStream stream_STAR = new RewriteRuleTokenStream(adaptor,"token STAR");
         RewriteRuleTokenStream stream_DOT = new RewriteRuleTokenStream(adaptor,"token DOT");
         RewriteRuleSubtreeStream stream_ident = new RewriteRuleSubtreeStream(adaptor,"rule ident");
@@ -11627,15 +11627,15 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1048:4: (ide= ident ( options {greedy=true; } : DOT ide2= ident )* ( DOT STAR )? -> ^( IDENTIFIER ( ident )+ ( STAR )? ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1048:4: ide= ident ( options {greedy=true; } : DOT ide2= ident )* ( DOT STAR )?
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1050:4: (ide= ident ( options {greedy=true; } : DOT ide2= ident )* ( DOT STAR )? -> ^( IDENTIFIER ( ident )+ ( STAR )? ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1050:4: ide= ident ( options {greedy=true; } : DOT ide2= ident )* ( DOT STAR )?
             {
-            	PushFollow(FOLLOW_ident_in_identifierStar3333);
+            	PushFollow(FOLLOW_ident_in_identifierStar3335);
             	ide = ident();
             	followingStackPointer_--;
             	if (failed) return retval;
             	if ( backtracking==0 ) stream_ident.Add(ide.Tree);
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1049:3: ( options {greedy=true; } : DOT ide2= ident )*
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1051:3: ( options {greedy=true; } : DOT ide2= ident )*
             	do 
             	{
             	    int alt48 = 2;
@@ -11657,13 +11657,13 @@ public class ASParser : Parser
             	    switch (alt48) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1050:5: DOT ide2= ident
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1052:5: DOT ide2= ident
             			    {
-            			    	DOT177 = (CommonToken)input.LT(1);
-            			    	Match(input,DOT,FOLLOW_DOT_in_identifierStar3355); if (failed) return retval;
-            			    	if ( backtracking==0 ) stream_DOT.Add(DOT177);
+            			    	DOT178 = (CommonToken)input.LT(1);
+            			    	Match(input,DOT,FOLLOW_DOT_in_identifierStar3357); if (failed) return retval;
+            			    	if ( backtracking==0 ) stream_DOT.Add(DOT178);
 
-            			    	PushFollow(FOLLOW_ident_in_identifierStar3359);
+            			    	PushFollow(FOLLOW_ident_in_identifierStar3361);
             			    	ide2 = ident();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -11680,7 +11680,7 @@ public class ASParser : Parser
             	loop48:
             		;	// Stops C# compiler whinging that label 'loop48' has no statements
 
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1052:3: ( DOT STAR )?
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1054:3: ( DOT STAR )?
             	int alt49 = 2;
             	int LA49_0 = input.LA(1);
             	
@@ -11691,15 +11691,15 @@ public class ASParser : Parser
             	switch (alt49) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1052:5: DOT STAR
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1054:5: DOT STAR
             	        {
-            	        	DOT178 = (CommonToken)input.LT(1);
-            	        	Match(input,DOT,FOLLOW_DOT_in_identifierStar3374); if (failed) return retval;
-            	        	if ( backtracking==0 ) stream_DOT.Add(DOT178);
+            	        	DOT179 = (CommonToken)input.LT(1);
+            	        	Match(input,DOT,FOLLOW_DOT_in_identifierStar3376); if (failed) return retval;
+            	        	if ( backtracking==0 ) stream_DOT.Add(DOT179);
 
-            	        	STAR179 = (CommonToken)input.LT(1);
-            	        	Match(input,STAR,FOLLOW_STAR_in_identifierStar3376); if (failed) return retval;
-            	        	if ( backtracking==0 ) stream_STAR.Add(STAR179);
+            	        	STAR180 = (CommonToken)input.LT(1);
+            	        	Match(input,STAR,FOLLOW_STAR_in_identifierStar3378); if (failed) return retval;
+            	        	if ( backtracking==0 ) stream_STAR.Add(STAR180);
 
             	        
             	        }
@@ -11719,9 +11719,9 @@ public class ASParser : Parser
             	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	
             	root_0 = (CommonTree)adaptor.GetNilNode();
-            	// 1054:3: -> ^( IDENTIFIER ( ident )+ ( STAR )? )
+            	// 1056:3: -> ^( IDENTIFIER ( ident )+ ( STAR )? )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1054:6: ^( IDENTIFIER ( ident )+ ( STAR )? )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1056:6: ^( IDENTIFIER ( ident )+ ( STAR )? )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(IDENTIFIER, "IDENTIFIER"), root_1);
@@ -11735,7 +11735,7 @@ public class ASParser : Parser
             	    
             	    }
             	    stream_ident.Reset();
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1054:26: ( STAR )?
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1056:26: ( STAR )?
             	    if ( stream_STAR.HasNext() )
             	    {
             	        adaptor.AddChild(root_1, stream_STAR.Next());
@@ -11796,7 +11796,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start annotations
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1057:1: annotations : ( ( annotation ) | ( includeDirective ) )+ -> ^( ANNOTATIONS ( annotation )+ ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1059:1: annotations : ( ( annotation ) | ( includeDirective ) )+ -> ^( ANNOTATIONS ( annotation )+ ) ;
     public annotations_return annotations() // throws RecognitionException [1]
     {   
         annotations_return retval = new annotations_return();
@@ -11804,9 +11804,9 @@ public class ASParser : Parser
         int annotations_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        annotation_return annotation180 = null;
+        annotation_return annotation181 = null;
 
-        includeDirective_return includeDirective181 = null;
+        includeDirective_return includeDirective182 = null;
         
         
         RewriteRuleSubtreeStream stream_includeDirective = new RewriteRuleSubtreeStream(adaptor,"rule includeDirective");
@@ -11817,10 +11817,10 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1058:4: ( ( ( annotation ) | ( includeDirective ) )+ -> ^( ANNOTATIONS ( annotation )+ ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1058:4: ( ( annotation ) | ( includeDirective ) )+
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1060:4: ( ( ( annotation ) | ( includeDirective ) )+ -> ^( ANNOTATIONS ( annotation )+ ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1060:4: ( ( annotation ) | ( includeDirective ) )+
             {
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1058:4: ( ( annotation ) | ( includeDirective ) )+
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1060:4: ( ( annotation ) | ( includeDirective ) )+
             	int cnt50 = 0;
             	do 
             	{
@@ -11854,20 +11854,20 @@ public class ASParser : Parser
             	    switch (alt50) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1059:5: ( annotation )
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1061:5: ( annotation )
             			    {
-            			    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1059:5: ( annotation )
-            			    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1059:7: annotation
+            			    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1061:5: ( annotation )
+            			    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1061:7: annotation
             			    	{
             			    		if ( backtracking == 0 ) 
             			    		{
             			    		   buffer.Append(NewLine + tab); 
             			    		}
-            			    		PushFollow(FOLLOW_annotation_in_annotations3422);
-            			    		annotation180 = annotation();
+            			    		PushFollow(FOLLOW_annotation_in_annotations3424);
+            			    		annotation181 = annotation();
             			    		followingStackPointer_--;
             			    		if (failed) return retval;
-            			    		if ( backtracking==0 ) stream_annotation.Add(annotation180.Tree);
+            			    		if ( backtracking==0 ) stream_annotation.Add(annotation181.Tree);
             			    	
             			    	}
 
@@ -11875,20 +11875,20 @@ public class ASParser : Parser
             			    }
             			    break;
             			case 2 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1060:6: ( includeDirective )
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1062:6: ( includeDirective )
             			    {
-            			    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1060:6: ( includeDirective )
-            			    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1060:8: includeDirective
+            			    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1062:6: ( includeDirective )
+            			    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1062:8: includeDirective
             			    	{
             			    		if ( backtracking == 0 ) 
             			    		{
             			    		   buffer.Append(NewLine + tab); 
             			    		}
-            			    		PushFollow(FOLLOW_includeDirective_in_annotations3435);
-            			    		includeDirective181 = includeDirective();
+            			    		PushFollow(FOLLOW_includeDirective_in_annotations3437);
+            			    		includeDirective182 = includeDirective();
             			    		followingStackPointer_--;
             			    		if (failed) return retval;
-            			    		if ( backtracking==0 ) stream_includeDirective.Add(includeDirective181.Tree);
+            			    		if ( backtracking==0 ) stream_includeDirective.Add(includeDirective182.Tree);
             			    	
             			    	}
 
@@ -11921,9 +11921,9 @@ public class ASParser : Parser
             	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	
             	root_0 = (CommonTree)adaptor.GetNilNode();
-            	// 1062:3: -> ^( ANNOTATIONS ( annotation )+ )
+            	// 1064:3: -> ^( ANNOTATIONS ( annotation )+ )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1062:6: ^( ANNOTATIONS ( annotation )+ )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1064:6: ^( ANNOTATIONS ( annotation )+ )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(ANNOTATIONS, "ANNOTATIONS"), root_1);
@@ -11991,7 +11991,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start annotation
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1065:1: annotation : LBRACK ide= ident ( annotationParamList )? RBRACK -> ^( ANNOTATION ident ( annotationParamList )? ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1067:1: annotation : LBRACK ide= ident ( annotationParamList )? RBRACK -> ^( ANNOTATION ident ( annotationParamList )? ) ;
     public annotation_return annotation() // throws RecognitionException [1]
     {   
         annotation_return retval = new annotation_return();
@@ -11999,15 +11999,15 @@ public class ASParser : Parser
         int annotation_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken LBRACK182 = null;
-        CommonToken RBRACK184 = null;
+        CommonToken LBRACK183 = null;
+        CommonToken RBRACK185 = null;
         ident_return ide = null;
 
-        annotationParamList_return annotationParamList183 = null;
+        annotationParamList_return annotationParamList184 = null;
         
         
-        CommonTree LBRACK182_tree=null;
-        CommonTree RBRACK184_tree=null;
+        CommonTree LBRACK183_tree=null;
+        CommonTree RBRACK185_tree=null;
         RewriteRuleTokenStream stream_LBRACK = new RewriteRuleTokenStream(adaptor,"token LBRACK");
         RewriteRuleTokenStream stream_RBRACK = new RewriteRuleTokenStream(adaptor,"token RBRACK");
         RewriteRuleSubtreeStream stream_annotationParamList = new RewriteRuleSubtreeStream(adaptor,"rule annotationParamList");
@@ -12018,18 +12018,18 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1066:4: ( LBRACK ide= ident ( annotationParamList )? RBRACK -> ^( ANNOTATION ident ( annotationParamList )? ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1066:4: LBRACK ide= ident ( annotationParamList )? RBRACK
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1068:4: ( LBRACK ide= ident ( annotationParamList )? RBRACK -> ^( ANNOTATION ident ( annotationParamList )? ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1068:4: LBRACK ide= ident ( annotationParamList )? RBRACK
             {
-            	LBRACK182 = (CommonToken)input.LT(1);
-            	Match(input,LBRACK,FOLLOW_LBRACK_in_annotation3464); if (failed) return retval;
-            	if ( backtracking==0 ) stream_LBRACK.Add(LBRACK182);
+            	LBRACK183 = (CommonToken)input.LT(1);
+            	Match(input,LBRACK,FOLLOW_LBRACK_in_annotation3466); if (failed) return retval;
+            	if ( backtracking==0 ) stream_LBRACK.Add(LBRACK183);
 
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append("["); 
             	}
-            	PushFollow(FOLLOW_ident_in_annotation3476);
+            	PushFollow(FOLLOW_ident_in_annotation3478);
             	ide = ident();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -12038,7 +12038,7 @@ public class ASParser : Parser
             	{
             	   buffer.Append(((CommonTree)ide.Tree).Text); 
             	}
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1068:3: ( annotationParamList )?
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1070:3: ( annotationParamList )?
             	int alt51 = 2;
             	int LA51_0 = input.LA(1);
             	
@@ -12049,22 +12049,22 @@ public class ASParser : Parser
             	switch (alt51) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: annotationParamList
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:0:0: annotationParamList
             	        {
-            	        	PushFollow(FOLLOW_annotationParamList_in_annotation3485);
-            	        	annotationParamList183 = annotationParamList();
+            	        	PushFollow(FOLLOW_annotationParamList_in_annotation3487);
+            	        	annotationParamList184 = annotationParamList();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
-            	        	if ( backtracking==0 ) stream_annotationParamList.Add(annotationParamList183.Tree);
+            	        	if ( backtracking==0 ) stream_annotationParamList.Add(annotationParamList184.Tree);
             	        
             	        }
             	        break;
             	
             	}
 
-            	RBRACK184 = (CommonToken)input.LT(1);
-            	Match(input,RBRACK,FOLLOW_RBRACK_in_annotation3490); if (failed) return retval;
-            	if ( backtracking==0 ) stream_RBRACK.Add(RBRACK184);
+            	RBRACK185 = (CommonToken)input.LT(1);
+            	Match(input,RBRACK,FOLLOW_RBRACK_in_annotation3492); if (failed) return retval;
+            	if ( backtracking==0 ) stream_RBRACK.Add(RBRACK185);
 
             	if ( backtracking == 0 ) 
             	{
@@ -12082,15 +12082,15 @@ public class ASParser : Parser
             	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	
             	root_0 = (CommonTree)adaptor.GetNilNode();
-            	// 1070:3: -> ^( ANNOTATION ident ( annotationParamList )? )
+            	// 1072:3: -> ^( ANNOTATION ident ( annotationParamList )? )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1070:6: ^( ANNOTATION ident ( annotationParamList )? )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1072:6: ^( ANNOTATION ident ( annotationParamList )? )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(ANNOTATION, "ANNOTATION"), root_1);
             	    
             	    adaptor.AddChild(root_1, stream_ident.Next());
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1070:25: ( annotationParamList )?
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1072:25: ( annotationParamList )?
             	    if ( stream_annotationParamList.HasNext() )
             	    {
             	        adaptor.AddChild(root_1, stream_annotationParamList.Next());
@@ -12151,7 +12151,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start annotationParamList
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1073:1: annotationParamList : LPAREN ( annotationParam ( COMMA annotationParam )* )? RPAREN -> ^( ANNOTATION_PARAMS ( annotationParam )* ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1075:1: annotationParamList : LPAREN ( annotationParam ( COMMA annotationParam )* )? RPAREN -> ^( ANNOTATION_PARAMS ( annotationParam )* ) ;
     public annotationParamList_return annotationParamList() // throws RecognitionException [1]
     {   
         annotationParamList_return retval = new annotationParamList_return();
@@ -12159,17 +12159,17 @@ public class ASParser : Parser
         int annotationParamList_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken LPAREN185 = null;
-        CommonToken COMMA187 = null;
-        CommonToken RPAREN189 = null;
-        annotationParam_return annotationParam186 = null;
+        CommonToken LPAREN186 = null;
+        CommonToken COMMA188 = null;
+        CommonToken RPAREN190 = null;
+        annotationParam_return annotationParam187 = null;
 
-        annotationParam_return annotationParam188 = null;
+        annotationParam_return annotationParam189 = null;
         
         
-        CommonTree LPAREN185_tree=null;
-        CommonTree COMMA187_tree=null;
-        CommonTree RPAREN189_tree=null;
+        CommonTree LPAREN186_tree=null;
+        CommonTree COMMA188_tree=null;
+        CommonTree RPAREN190_tree=null;
         RewriteRuleTokenStream stream_COMMA = new RewriteRuleTokenStream(adaptor,"token COMMA");
         RewriteRuleTokenStream stream_RPAREN = new RewriteRuleTokenStream(adaptor,"token RPAREN");
         RewriteRuleTokenStream stream_LPAREN = new RewriteRuleTokenStream(adaptor,"token LPAREN");
@@ -12180,18 +12180,18 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1075:3: ( LPAREN ( annotationParam ( COMMA annotationParam )* )? RPAREN -> ^( ANNOTATION_PARAMS ( annotationParam )* ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1075:3: LPAREN ( annotationParam ( COMMA annotationParam )* )? RPAREN
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1077:3: ( LPAREN ( annotationParam ( COMMA annotationParam )* )? RPAREN -> ^( ANNOTATION_PARAMS ( annotationParam )* ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1077:3: LPAREN ( annotationParam ( COMMA annotationParam )* )? RPAREN
             {
-            	LPAREN185 = (CommonToken)input.LT(1);
-            	Match(input,LPAREN,FOLLOW_LPAREN_in_annotationParamList3522); if (failed) return retval;
-            	if ( backtracking==0 ) stream_LPAREN.Add(LPAREN185);
+            	LPAREN186 = (CommonToken)input.LT(1);
+            	Match(input,LPAREN,FOLLOW_LPAREN_in_annotationParamList3524); if (failed) return retval;
+            	if ( backtracking==0 ) stream_LPAREN.Add(LPAREN186);
 
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append("("); 
             	}
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1076:3: ( annotationParam ( COMMA annotationParam )* )?
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1078:3: ( annotationParam ( COMMA annotationParam )* )?
             	int alt53 = 2;
             	int LA53_0 = input.LA(1);
             	
@@ -12202,14 +12202,14 @@ public class ASParser : Parser
             	switch (alt53) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1076:5: annotationParam ( COMMA annotationParam )*
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1078:5: annotationParam ( COMMA annotationParam )*
             	        {
-            	        	PushFollow(FOLLOW_annotationParam_in_annotationParamList3535);
-            	        	annotationParam186 = annotationParam();
+            	        	PushFollow(FOLLOW_annotationParam_in_annotationParamList3537);
+            	        	annotationParam187 = annotationParam();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
-            	        	if ( backtracking==0 ) stream_annotationParam.Add(annotationParam186.Tree);
-            	        	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1077:4: ( COMMA annotationParam )*
+            	        	if ( backtracking==0 ) stream_annotationParam.Add(annotationParam187.Tree);
+            	        	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1079:4: ( COMMA annotationParam )*
             	        	do 
             	        	{
             	        	    int alt52 = 2;
@@ -12224,21 +12224,21 @@ public class ASParser : Parser
             	        	    switch (alt52) 
             	        		{
             	        			case 1 :
-            	        			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1078:5: COMMA annotationParam
+            	        			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1080:5: COMMA annotationParam
             	        			    {
-            	        			    	COMMA187 = (CommonToken)input.LT(1);
-            	        			    	Match(input,COMMA,FOLLOW_COMMA_in_annotationParamList3546); if (failed) return retval;
-            	        			    	if ( backtracking==0 ) stream_COMMA.Add(COMMA187);
+            	        			    	COMMA188 = (CommonToken)input.LT(1);
+            	        			    	Match(input,COMMA,FOLLOW_COMMA_in_annotationParamList3548); if (failed) return retval;
+            	        			    	if ( backtracking==0 ) stream_COMMA.Add(COMMA188);
 
             	        			    	if ( backtracking == 0 ) 
             	        			    	{
             	        			    	   buffer.Append(","); 
             	        			    	}
-            	        			    	PushFollow(FOLLOW_annotationParam_in_annotationParamList3557);
-            	        			    	annotationParam188 = annotationParam();
+            	        			    	PushFollow(FOLLOW_annotationParam_in_annotationParamList3559);
+            	        			    	annotationParam189 = annotationParam();
             	        			    	followingStackPointer_--;
             	        			    	if (failed) return retval;
-            	        			    	if ( backtracking==0 ) stream_annotationParam.Add(annotationParam188.Tree);
+            	        			    	if ( backtracking==0 ) stream_annotationParam.Add(annotationParam189.Tree);
             	        			    
             	        			    }
             	        			    break;
@@ -12257,9 +12257,9 @@ public class ASParser : Parser
             	
             	}
 
-            	RPAREN189 = (CommonToken)input.LT(1);
-            	Match(input,RPAREN,FOLLOW_RPAREN_in_annotationParamList3572); if (failed) return retval;
-            	if ( backtracking==0 ) stream_RPAREN.Add(RPAREN189);
+            	RPAREN190 = (CommonToken)input.LT(1);
+            	Match(input,RPAREN,FOLLOW_RPAREN_in_annotationParamList3574); if (failed) return retval;
+            	if ( backtracking==0 ) stream_RPAREN.Add(RPAREN190);
 
             	if ( backtracking == 0 ) 
             	{
@@ -12277,14 +12277,14 @@ public class ASParser : Parser
             	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	
             	root_0 = (CommonTree)adaptor.GetNilNode();
-            	// 1083:3: -> ^( ANNOTATION_PARAMS ( annotationParam )* )
+            	// 1085:3: -> ^( ANNOTATION_PARAMS ( annotationParam )* )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1083:6: ^( ANNOTATION_PARAMS ( annotationParam )* )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1085:6: ^( ANNOTATION_PARAMS ( annotationParam )* )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(ANNOTATION_PARAMS, "ANNOTATION_PARAMS"), root_1);
             	    
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1083:26: ( annotationParam )*
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1085:26: ( annotationParam )*
             	    while ( stream_annotationParam.HasNext() )
             	    {
             	        adaptor.AddChild(root_1, stream_annotationParam.Next());
@@ -12345,7 +12345,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start annotationParam
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1086:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1088:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );
     public annotationParam_return annotationParam() // throws RecognitionException [1]
     {   
         annotationParam_return retval = new annotationParam_return();
@@ -12353,8 +12353,8 @@ public class ASParser : Parser
         int annotationParam_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken ASSIGN190 = null;
         CommonToken ASSIGN191 = null;
+        CommonToken ASSIGN192 = null;
         ident_return ide1 = null;
 
         constant_return cn1 = null;
@@ -12368,8 +12368,8 @@ public class ASParser : Parser
         ident_return ide4 = null;
         
         
-        CommonTree ASSIGN190_tree=null;
         CommonTree ASSIGN191_tree=null;
+        CommonTree ASSIGN192_tree=null;
         RewriteRuleTokenStream stream_ASSIGN = new RewriteRuleTokenStream(adaptor,"token ASSIGN");
         RewriteRuleSubtreeStream stream_constant = new RewriteRuleSubtreeStream(adaptor,"rule constant");
         RewriteRuleSubtreeStream stream_ident = new RewriteRuleSubtreeStream(adaptor,"rule ident");
@@ -12379,7 +12379,7 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1088:3: (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1090:3: (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident )
             int alt54 = 4;
             switch ( input.LA(1) ) 
             {
@@ -12407,7 +12407,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d54s17 =
-                            new NoViableAltException("1086:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 17, input);
+                            new NoViableAltException("1088:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 17, input);
                     
                         throw nvae_d54s17;
                     }
@@ -12416,7 +12416,7 @@ public class ASParser : Parser
                 {
                     if ( backtracking > 0 ) {failed = true; return retval;}
                     NoViableAltException nvae_d54s1 =
-                        new NoViableAltException("1086:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 1, input);
+                        new NoViableAltException("1088:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 1, input);
                 
                     throw nvae_d54s1;
                 }
@@ -12442,7 +12442,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d54s18 =
-                            new NoViableAltException("1086:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 18, input);
+                            new NoViableAltException("1088:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 18, input);
                     
                         throw nvae_d54s18;
                     }
@@ -12455,7 +12455,7 @@ public class ASParser : Parser
                 {
                     if ( backtracking > 0 ) {failed = true; return retval;}
                     NoViableAltException nvae_d54s2 =
-                        new NoViableAltException("1086:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 2, input);
+                        new NoViableAltException("1088:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 2, input);
                 
                     throw nvae_d54s2;
                 }
@@ -12481,7 +12481,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d54s22 =
-                            new NoViableAltException("1086:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 22, input);
+                            new NoViableAltException("1088:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 22, input);
                     
                         throw nvae_d54s22;
                     }
@@ -12494,7 +12494,7 @@ public class ASParser : Parser
                 {
                     if ( backtracking > 0 ) {failed = true; return retval;}
                     NoViableAltException nvae_d54s3 =
-                        new NoViableAltException("1086:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 3, input);
+                        new NoViableAltException("1088:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 3, input);
                 
                     throw nvae_d54s3;
                 }
@@ -12524,7 +12524,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d54s29 =
-                            new NoViableAltException("1086:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 29, input);
+                            new NoViableAltException("1088:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 29, input);
                     
                         throw nvae_d54s29;
                     }
@@ -12533,7 +12533,7 @@ public class ASParser : Parser
                 {
                     if ( backtracking > 0 ) {failed = true; return retval;}
                     NoViableAltException nvae_d54s4 =
-                        new NoViableAltException("1086:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 4, input);
+                        new NoViableAltException("1088:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 4, input);
                 
                     throw nvae_d54s4;
                 }
@@ -12559,7 +12559,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d54s30 =
-                            new NoViableAltException("1086:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 30, input);
+                            new NoViableAltException("1088:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 30, input);
                     
                         throw nvae_d54s30;
                     }
@@ -12572,7 +12572,7 @@ public class ASParser : Parser
                 {
                     if ( backtracking > 0 ) {failed = true; return retval;}
                     NoViableAltException nvae_d54s5 =
-                        new NoViableAltException("1086:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 5, input);
+                        new NoViableAltException("1088:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 5, input);
                 
                     throw nvae_d54s5;
                 }
@@ -12602,7 +12602,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d54s37 =
-                            new NoViableAltException("1086:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 37, input);
+                            new NoViableAltException("1088:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 37, input);
                     
                         throw nvae_d54s37;
                     }
@@ -12611,7 +12611,7 @@ public class ASParser : Parser
                 {
                     if ( backtracking > 0 ) {failed = true; return retval;}
                     NoViableAltException nvae_d54s6 =
-                        new NoViableAltException("1086:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 6, input);
+                        new NoViableAltException("1088:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 6, input);
                 
                     throw nvae_d54s6;
                 }
@@ -12641,7 +12641,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d54s41 =
-                            new NoViableAltException("1086:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 41, input);
+                            new NoViableAltException("1088:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 41, input);
                     
                         throw nvae_d54s41;
                     }
@@ -12650,7 +12650,7 @@ public class ASParser : Parser
                 {
                     if ( backtracking > 0 ) {failed = true; return retval;}
                     NoViableAltException nvae_d54s7 =
-                        new NoViableAltException("1086:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 7, input);
+                        new NoViableAltException("1088:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 7, input);
                 
                     throw nvae_d54s7;
                 }
@@ -12676,7 +12676,7 @@ public class ASParser : Parser
                     {
                         if ( backtracking > 0 ) {failed = true; return retval;}
                         NoViableAltException nvae_d54s42 =
-                            new NoViableAltException("1086:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 42, input);
+                            new NoViableAltException("1088:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 42, input);
                     
                         throw nvae_d54s42;
                     }
@@ -12689,7 +12689,7 @@ public class ASParser : Parser
                 {
                     if ( backtracking > 0 ) {failed = true; return retval;}
                     NoViableAltException nvae_d54s8 =
-                        new NoViableAltException("1086:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 8, input);
+                        new NoViableAltException("1088:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 8, input);
                 
                     throw nvae_d54s8;
                 }
@@ -12710,7 +12710,7 @@ public class ASParser : Parser
             	default:
             	    if ( backtracking > 0 ) {failed = true; return retval;}
             	    NoViableAltException nvae_d54s0 =
-            	        new NoViableAltException("1086:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 0, input);
+            	        new NoViableAltException("1088:1: annotationParam : (ide1= ident ASSIGN cn1= constant -> ^( ASSIGN ident constant ) | ide2= ident ASSIGN ide3= ident -> ^( ASSIGN ident ident ) | cn2= constant -> constant | ide4= ident -> ident );", 54, 0, input);
             
             	    throw nvae_d54s0;
             }
@@ -12718,18 +12718,18 @@ public class ASParser : Parser
             switch (alt54) 
             {
                 case 1 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1088:3: ide1= ident ASSIGN cn1= constant
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1090:3: ide1= ident ASSIGN cn1= constant
                     {
-                    	PushFollow(FOLLOW_ident_in_annotationParam3605);
+                    	PushFollow(FOLLOW_ident_in_annotationParam3607);
                     	ide1 = ident();
                     	followingStackPointer_--;
                     	if (failed) return retval;
                     	if ( backtracking==0 ) stream_ident.Add(ide1.Tree);
-                    	ASSIGN190 = (CommonToken)input.LT(1);
-                    	Match(input,ASSIGN,FOLLOW_ASSIGN_in_annotationParam3607); if (failed) return retval;
-                    	if ( backtracking==0 ) stream_ASSIGN.Add(ASSIGN190);
+                    	ASSIGN191 = (CommonToken)input.LT(1);
+                    	Match(input,ASSIGN,FOLLOW_ASSIGN_in_annotationParam3609); if (failed) return retval;
+                    	if ( backtracking==0 ) stream_ASSIGN.Add(ASSIGN191);
 
-                    	PushFollow(FOLLOW_constant_in_annotationParam3611);
+                    	PushFollow(FOLLOW_constant_in_annotationParam3613);
                     	cn1 = constant();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -12750,9 +12750,9 @@ public class ASParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
                     	
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 1088:119: -> ^( ASSIGN ident constant )
+                    	// 1090:119: -> ^( ASSIGN ident constant )
                     	{
-                    	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1088:122: ^( ASSIGN ident constant )
+                    	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1090:122: ^( ASSIGN ident constant )
                     	    {
                     	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
                     	    root_1 = (CommonTree)adaptor.BecomeRoot(stream_ASSIGN.Next(), root_1);
@@ -12770,18 +12770,18 @@ public class ASParser : Parser
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1089:4: ide2= ident ASSIGN ide3= ident
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1091:4: ide2= ident ASSIGN ide3= ident
                     {
-                    	PushFollow(FOLLOW_ident_in_annotationParam3630);
+                    	PushFollow(FOLLOW_ident_in_annotationParam3632);
                     	ide2 = ident();
                     	followingStackPointer_--;
                     	if (failed) return retval;
                     	if ( backtracking==0 ) stream_ident.Add(ide2.Tree);
-                    	ASSIGN191 = (CommonToken)input.LT(1);
-                    	Match(input,ASSIGN,FOLLOW_ASSIGN_in_annotationParam3632); if (failed) return retval;
-                    	if ( backtracking==0 ) stream_ASSIGN.Add(ASSIGN191);
+                    	ASSIGN192 = (CommonToken)input.LT(1);
+                    	Match(input,ASSIGN,FOLLOW_ASSIGN_in_annotationParam3634); if (failed) return retval;
+                    	if ( backtracking==0 ) stream_ASSIGN.Add(ASSIGN192);
 
-                    	PushFollow(FOLLOW_ident_in_annotationParam3636);
+                    	PushFollow(FOLLOW_ident_in_annotationParam3638);
                     	ide3 = ident();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -12802,9 +12802,9 @@ public class ASParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
                     	
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 1089:119: -> ^( ASSIGN ident ident )
+                    	// 1091:119: -> ^( ASSIGN ident ident )
                     	{
-                    	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1089:122: ^( ASSIGN ident ident )
+                    	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1091:122: ^( ASSIGN ident ident )
                     	    {
                     	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
                     	    root_1 = (CommonTree)adaptor.BecomeRoot(stream_ASSIGN.Next(), root_1);
@@ -12822,9 +12822,9 @@ public class ASParser : Parser
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1090:4: cn2= constant
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1092:4: cn2= constant
                     {
-                    	PushFollow(FOLLOW_constant_in_annotationParam3655);
+                    	PushFollow(FOLLOW_constant_in_annotationParam3657);
                     	cn2 = constant();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -12845,7 +12845,7 @@ public class ASParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
                     	
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 1090:65: -> constant
+                    	// 1092:65: -> constant
                     	{
                     	    adaptor.AddChild(root_0, stream_constant.Next());
                     	
@@ -12856,9 +12856,9 @@ public class ASParser : Parser
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1091:4: ide4= ident
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1093:4: ide4= ident
                     {
-                    	PushFollow(FOLLOW_ident_in_annotationParam3668);
+                    	PushFollow(FOLLOW_ident_in_annotationParam3670);
                     	ide4 = ident();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -12879,7 +12879,7 @@ public class ASParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
                     	
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 1091:65: -> ident
+                    	// 1093:65: -> ident
                     	{
                     	    adaptor.AddChild(root_0, stream_ident.Next());
                     	
@@ -12935,7 +12935,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start modifiers
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1095:1: modifiers : ( modifier )* -> ^( MODIFIERS ( modifier )* ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1097:1: modifiers : ( modifier )* -> ^( MODIFIERS ( modifier )* ) ;
     public modifiers_return modifiers() // throws RecognitionException [1]
     {   
         modifiers_return retval = new modifiers_return();
@@ -12943,7 +12943,7 @@ public class ASParser : Parser
         int modifiers_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        modifier_return modifier192 = null;
+        modifier_return modifier193 = null;
         
         
         RewriteRuleSubtreeStream stream_modifier = new RewriteRuleSubtreeStream(adaptor,"rule modifier");
@@ -12953,10 +12953,10 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1096:4: ( ( modifier )* -> ^( MODIFIERS ( modifier )* ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1096:4: ( modifier )*
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1098:4: ( ( modifier )* -> ^( MODIFIERS ( modifier )* ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1098:4: ( modifier )*
             {
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1096:4: ( modifier )*
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1098:4: ( modifier )*
             	do 
             	{
             	    int alt55 = 2;
@@ -12971,13 +12971,13 @@ public class ASParser : Parser
             	    switch (alt55) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: modifier
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:0:0: modifier
             			    {
-            			    	PushFollow(FOLLOW_modifier_in_modifiers3688);
-            			    	modifier192 = modifier();
+            			    	PushFollow(FOLLOW_modifier_in_modifiers3690);
+            			    	modifier193 = modifier();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
-            			    	if ( backtracking==0 ) stream_modifier.Add(modifier192.Tree);
+            			    	if ( backtracking==0 ) stream_modifier.Add(modifier193.Tree);
             			    
             			    }
             			    break;
@@ -13002,14 +13002,14 @@ public class ASParser : Parser
             	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	
             	root_0 = (CommonTree)adaptor.GetNilNode();
-            	// 1097:3: -> ^( MODIFIERS ( modifier )* )
+            	// 1099:3: -> ^( MODIFIERS ( modifier )* )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1097:6: ^( MODIFIERS ( modifier )* )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1099:6: ^( MODIFIERS ( modifier )* )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(MODIFIERS, "MODIFIERS"), root_1);
             	    
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1097:18: ( modifier )*
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1099:18: ( modifier )*
             	    while ( stream_modifier.HasNext() )
             	    {
             	        adaptor.AddChild(root_1, stream_modifier.Next());
@@ -13070,7 +13070,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start modifier
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1100:1: modifier : ( namespaceName | STATIC | 'final' | 'enumerable' | 'explicit' | 'override' | DYNAMIC | 'intrinsic' );
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1102:1: modifier : ( namespaceName | STATIC | 'final' | 'enumerable' | 'explicit' | 'override' | DYNAMIC | 'intrinsic' );
     public modifier_return modifier() // throws RecognitionException [1]
     {   
         modifier_return retval = new modifier_return();
@@ -13078,23 +13078,23 @@ public class ASParser : Parser
         int modifier_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken STATIC194 = null;
-        CommonToken string_literal195 = null;
+        CommonToken STATIC195 = null;
         CommonToken string_literal196 = null;
         CommonToken string_literal197 = null;
         CommonToken string_literal198 = null;
-        CommonToken DYNAMIC199 = null;
-        CommonToken string_literal200 = null;
-        namespaceName_return namespaceName193 = null;
+        CommonToken string_literal199 = null;
+        CommonToken DYNAMIC200 = null;
+        CommonToken string_literal201 = null;
+        namespaceName_return namespaceName194 = null;
         
         
-        CommonTree STATIC194_tree=null;
-        CommonTree string_literal195_tree=null;
+        CommonTree STATIC195_tree=null;
         CommonTree string_literal196_tree=null;
         CommonTree string_literal197_tree=null;
         CommonTree string_literal198_tree=null;
-        CommonTree DYNAMIC199_tree=null;
-        CommonTree string_literal200_tree=null;
+        CommonTree string_literal199_tree=null;
+        CommonTree DYNAMIC200_tree=null;
+        CommonTree string_literal201_tree=null;
     
         try 
     	{
@@ -13102,7 +13102,7 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1101:4: ( namespaceName | STATIC | 'final' | 'enumerable' | 'explicit' | 'override' | DYNAMIC | 'intrinsic' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1103:4: ( namespaceName | STATIC | 'final' | 'enumerable' | 'explicit' | 'override' | DYNAMIC | 'intrinsic' )
             int alt56 = 8;
             switch ( input.LA(1) ) 
             {
@@ -13153,7 +13153,7 @@ public class ASParser : Parser
             	default:
             	    if ( backtracking > 0 ) {failed = true; return retval;}
             	    NoViableAltException nvae_d56s0 =
-            	        new NoViableAltException("1100:1: modifier : ( namespaceName | STATIC | 'final' | 'enumerable' | 'explicit' | 'override' | DYNAMIC | 'intrinsic' );", 56, 0, input);
+            	        new NoViableAltException("1102:1: modifier : ( namespaceName | STATIC | 'final' | 'enumerable' | 'explicit' | 'override' | DYNAMIC | 'intrinsic' );", 56, 0, input);
             
             	    throw nvae_d56s0;
             }
@@ -13161,53 +13161,39 @@ public class ASParser : Parser
             switch (alt56) 
             {
                 case 1 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1101:4: namespaceName
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1103:4: namespaceName
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_namespaceName_in_modifier3711);
-                    	namespaceName193 = namespaceName();
+                    	PushFollow(FOLLOW_namespaceName_in_modifier3713);
+                    	namespaceName194 = namespaceName();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) adaptor.AddChild(root_0, namespaceName193.Tree);
+                    	if ( backtracking==0 ) adaptor.AddChild(root_0, namespaceName194.Tree);
                     
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1102:4: STATIC
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1104:4: STATIC
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	STATIC194 = (CommonToken)input.LT(1);
-                    	Match(input,STATIC,FOLLOW_STATIC_in_modifier3716); if (failed) return retval;
+                    	STATIC195 = (CommonToken)input.LT(1);
+                    	Match(input,STATIC,FOLLOW_STATIC_in_modifier3718); if (failed) return retval;
                     	if ( backtracking==0 ) {
-                    	STATIC194_tree = (CommonTree)adaptor.Create(STATIC194);
-                    	adaptor.AddChild(root_0, STATIC194_tree);
+                    	STATIC195_tree = (CommonTree)adaptor.Create(STATIC195);
+                    	adaptor.AddChild(root_0, STATIC195_tree);
                     	}
                     
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1103:4: 'final'
-                    {
-                    	root_0 = (CommonTree)adaptor.GetNilNode();
-                    
-                    	string_literal195 = (CommonToken)input.LT(1);
-                    	Match(input,180,FOLLOW_180_in_modifier3721); if (failed) return retval;
-                    	if ( backtracking==0 ) {
-                    	string_literal195_tree = (CommonTree)adaptor.Create(string_literal195);
-                    	adaptor.AddChild(root_0, string_literal195_tree);
-                    	}
-                    
-                    }
-                    break;
-                case 4 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1104:4: 'enumerable'
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1105:4: 'final'
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	string_literal196 = (CommonToken)input.LT(1);
-                    	Match(input,181,FOLLOW_181_in_modifier3726); if (failed) return retval;
+                    	Match(input,180,FOLLOW_180_in_modifier3723); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	string_literal196_tree = (CommonTree)adaptor.Create(string_literal196);
                     	adaptor.AddChild(root_0, string_literal196_tree);
@@ -13215,13 +13201,13 @@ public class ASParser : Parser
                     
                     }
                     break;
-                case 5 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1105:4: 'explicit'
+                case 4 :
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1106:4: 'enumerable'
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	string_literal197 = (CommonToken)input.LT(1);
-                    	Match(input,182,FOLLOW_182_in_modifier3731); if (failed) return retval;
+                    	Match(input,181,FOLLOW_181_in_modifier3728); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	string_literal197_tree = (CommonTree)adaptor.Create(string_literal197);
                     	adaptor.AddChild(root_0, string_literal197_tree);
@@ -13229,13 +13215,13 @@ public class ASParser : Parser
                     
                     }
                     break;
-                case 6 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1106:4: 'override'
+                case 5 :
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1107:4: 'explicit'
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	string_literal198 = (CommonToken)input.LT(1);
-                    	Match(input,183,FOLLOW_183_in_modifier3736); if (failed) return retval;
+                    	Match(input,182,FOLLOW_182_in_modifier3733); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	string_literal198_tree = (CommonTree)adaptor.Create(string_literal198);
                     	adaptor.AddChild(root_0, string_literal198_tree);
@@ -13243,30 +13229,44 @@ public class ASParser : Parser
                     
                     }
                     break;
-                case 7 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1107:4: DYNAMIC
+                case 6 :
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1108:4: 'override'
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	DYNAMIC199 = (CommonToken)input.LT(1);
-                    	Match(input,DYNAMIC,FOLLOW_DYNAMIC_in_modifier3741); if (failed) return retval;
+                    	string_literal199 = (CommonToken)input.LT(1);
+                    	Match(input,183,FOLLOW_183_in_modifier3738); if (failed) return retval;
                     	if ( backtracking==0 ) {
-                    	DYNAMIC199_tree = (CommonTree)adaptor.Create(DYNAMIC199);
-                    	adaptor.AddChild(root_0, DYNAMIC199_tree);
+                    	string_literal199_tree = (CommonTree)adaptor.Create(string_literal199);
+                    	adaptor.AddChild(root_0, string_literal199_tree);
+                    	}
+                    
+                    }
+                    break;
+                case 7 :
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1109:4: DYNAMIC
+                    {
+                    	root_0 = (CommonTree)adaptor.GetNilNode();
+                    
+                    	DYNAMIC200 = (CommonToken)input.LT(1);
+                    	Match(input,DYNAMIC,FOLLOW_DYNAMIC_in_modifier3743); if (failed) return retval;
+                    	if ( backtracking==0 ) {
+                    	DYNAMIC200_tree = (CommonTree)adaptor.Create(DYNAMIC200);
+                    	adaptor.AddChild(root_0, DYNAMIC200_tree);
                     	}
                     
                     }
                     break;
                 case 8 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1108:4: 'intrinsic'
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1110:4: 'intrinsic'
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	string_literal200 = (CommonToken)input.LT(1);
-                    	Match(input,184,FOLLOW_184_in_modifier3746); if (failed) return retval;
+                    	string_literal201 = (CommonToken)input.LT(1);
+                    	Match(input,184,FOLLOW_184_in_modifier3748); if (failed) return retval;
                     	if ( backtracking==0 ) {
-                    	string_literal200_tree = (CommonTree)adaptor.Create(string_literal200);
-                    	adaptor.AddChild(root_0, string_literal200_tree);
+                    	string_literal201_tree = (CommonTree)adaptor.Create(string_literal201);
+                    	adaptor.AddChild(root_0, string_literal201_tree);
                     	}
                     
                     }
@@ -13317,7 +13317,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start arguments
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1111:1: arguments : ( LPAREN expressionList RPAREN | LPAREN RPAREN );
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1113:1: arguments : ( LPAREN expressionList RPAREN | LPAREN RPAREN );
     public arguments_return arguments() // throws RecognitionException [1]
     {   
         InOperator_stack.Push(new InOperator_scope());
@@ -13327,17 +13327,17 @@ public class ASParser : Parser
         int arguments_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken LPAREN201 = null;
-        CommonToken RPAREN203 = null;
-        CommonToken LPAREN204 = null;
-        CommonToken RPAREN205 = null;
-        expressionList_return expressionList202 = null;
+        CommonToken LPAREN202 = null;
+        CommonToken RPAREN204 = null;
+        CommonToken LPAREN205 = null;
+        CommonToken RPAREN206 = null;
+        expressionList_return expressionList203 = null;
         
         
-        CommonTree LPAREN201_tree=null;
-        CommonTree RPAREN203_tree=null;
-        CommonTree LPAREN204_tree=null;
-        CommonTree RPAREN205_tree=null;
+        CommonTree LPAREN202_tree=null;
+        CommonTree RPAREN204_tree=null;
+        CommonTree LPAREN205_tree=null;
+        CommonTree RPAREN206_tree=null;
     
         
         	((InOperator_scope)InOperator_stack.Peek()).allowed =  true;
@@ -13348,7 +13348,7 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1116:4: ( LPAREN expressionList RPAREN | LPAREN RPAREN )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1118:4: ( LPAREN expressionList RPAREN | LPAREN RPAREN )
             int alt57 = 2;
             int LA57_0 = input.LA(1);
             
@@ -13368,7 +13368,7 @@ public class ASParser : Parser
                 {
                     if ( backtracking > 0 ) {failed = true; return retval;}
                     NoViableAltException nvae_d57s1 =
-                        new NoViableAltException("1111:1: arguments : ( LPAREN expressionList RPAREN | LPAREN RPAREN );", 57, 1, input);
+                        new NoViableAltException("1113:1: arguments : ( LPAREN expressionList RPAREN | LPAREN RPAREN );", 57, 1, input);
                 
                     throw nvae_d57s1;
                 }
@@ -13377,37 +13377,37 @@ public class ASParser : Parser
             {
                 if ( backtracking > 0 ) {failed = true; return retval;}
                 NoViableAltException nvae_d57s0 =
-                    new NoViableAltException("1111:1: arguments : ( LPAREN expressionList RPAREN | LPAREN RPAREN );", 57, 0, input);
+                    new NoViableAltException("1113:1: arguments : ( LPAREN expressionList RPAREN | LPAREN RPAREN );", 57, 0, input);
             
                 throw nvae_d57s0;
             }
             switch (alt57) 
             {
                 case 1 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1116:4: LPAREN expressionList RPAREN
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1118:4: LPAREN expressionList RPAREN
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	LPAREN201 = (CommonToken)input.LT(1);
-                    	Match(input,LPAREN,FOLLOW_LPAREN_in_arguments3767); if (failed) return retval;
+                    	LPAREN202 = (CommonToken)input.LT(1);
+                    	Match(input,LPAREN,FOLLOW_LPAREN_in_arguments3769); if (failed) return retval;
                     	if ( backtracking==0 ) {
-                    	LPAREN201_tree = (CommonTree)adaptor.Create(LPAREN201);
-                    	adaptor.AddChild(root_0, LPAREN201_tree);
+                    	LPAREN202_tree = (CommonTree)adaptor.Create(LPAREN202);
+                    	adaptor.AddChild(root_0, LPAREN202_tree);
                     	}
                     	if ( backtracking == 0 ) 
                     	{
                     	   buffer.Append("("); 
                     	}
-                    	PushFollow(FOLLOW_expressionList_in_arguments3771);
-                    	expressionList202 = expressionList();
+                    	PushFollow(FOLLOW_expressionList_in_arguments3773);
+                    	expressionList203 = expressionList();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) adaptor.AddChild(root_0, expressionList202.Tree);
-                    	RPAREN203 = (CommonToken)input.LT(1);
-                    	Match(input,RPAREN,FOLLOW_RPAREN_in_arguments3773); if (failed) return retval;
+                    	if ( backtracking==0 ) adaptor.AddChild(root_0, expressionList203.Tree);
+                    	RPAREN204 = (CommonToken)input.LT(1);
+                    	Match(input,RPAREN,FOLLOW_RPAREN_in_arguments3775); if (failed) return retval;
                     	if ( backtracking==0 ) {
-                    	RPAREN203_tree = (CommonTree)adaptor.Create(RPAREN203);
-                    	adaptor.AddChild(root_0, RPAREN203_tree);
+                    	RPAREN204_tree = (CommonTree)adaptor.Create(RPAREN204);
+                    	adaptor.AddChild(root_0, RPAREN204_tree);
                     	}
                     	if ( backtracking == 0 ) 
                     	{
@@ -13417,21 +13417,21 @@ public class ASParser : Parser
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1117:4: LPAREN RPAREN
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1119:4: LPAREN RPAREN
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	LPAREN204 = (CommonToken)input.LT(1);
-                    	Match(input,LPAREN,FOLLOW_LPAREN_in_arguments3780); if (failed) return retval;
+                    	LPAREN205 = (CommonToken)input.LT(1);
+                    	Match(input,LPAREN,FOLLOW_LPAREN_in_arguments3782); if (failed) return retval;
                     	if ( backtracking==0 ) {
-                    	LPAREN204_tree = (CommonTree)adaptor.Create(LPAREN204);
-                    	adaptor.AddChild(root_0, LPAREN204_tree);
+                    	LPAREN205_tree = (CommonTree)adaptor.Create(LPAREN205);
+                    	adaptor.AddChild(root_0, LPAREN205_tree);
                     	}
-                    	RPAREN205 = (CommonToken)input.LT(1);
-                    	Match(input,RPAREN,FOLLOW_RPAREN_in_arguments3782); if (failed) return retval;
+                    	RPAREN206 = (CommonToken)input.LT(1);
+                    	Match(input,RPAREN,FOLLOW_RPAREN_in_arguments3784); if (failed) return retval;
                     	if ( backtracking==0 ) {
-                    	RPAREN205_tree = (CommonTree)adaptor.Create(RPAREN205);
-                    	adaptor.AddChild(root_0, RPAREN205_tree);
+                    	RPAREN206_tree = (CommonTree)adaptor.Create(RPAREN206);
+                    	adaptor.AddChild(root_0, RPAREN206_tree);
                     	}
                     	if ( backtracking == 0 ) 
                     	{
@@ -13488,7 +13488,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start element
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1121:1: element : assignmentExpression -> ^( ELEMENT assignmentExpression ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1123:1: element : assignmentExpression -> ^( ELEMENT assignmentExpression ) ;
     public element_return element() // throws RecognitionException [1]
     {   
         InOperator_stack.Push(new InOperator_scope());
@@ -13498,7 +13498,7 @@ public class ASParser : Parser
         int element_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        assignmentExpression_return assignmentExpression206 = null;
+        assignmentExpression_return assignmentExpression207 = null;
         
         
         RewriteRuleSubtreeStream stream_assignmentExpression = new RewriteRuleSubtreeStream(adaptor,"rule assignmentExpression");
@@ -13511,14 +13511,14 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1126:4: ( assignmentExpression -> ^( ELEMENT assignmentExpression ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1126:4: assignmentExpression
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1128:4: ( assignmentExpression -> ^( ELEMENT assignmentExpression ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1128:4: assignmentExpression
             {
-            	PushFollow(FOLLOW_assignmentExpression_in_element3808);
-            	assignmentExpression206 = assignmentExpression();
+            	PushFollow(FOLLOW_assignmentExpression_in_element3810);
+            	assignmentExpression207 = assignmentExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) stream_assignmentExpression.Add(assignmentExpression206.Tree);
+            	if ( backtracking==0 ) stream_assignmentExpression.Add(assignmentExpression207.Tree);
             	
             	// AST REWRITE
             	// elements:          assignmentExpression
@@ -13531,9 +13531,9 @@ public class ASParser : Parser
             	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	
             	root_0 = (CommonTree)adaptor.GetNilNode();
-            	// 1127:3: -> ^( ELEMENT assignmentExpression )
+            	// 1129:3: -> ^( ELEMENT assignmentExpression )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1127:6: ^( ELEMENT assignmentExpression )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1129:6: ^( ELEMENT assignmentExpression )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(ELEMENT, "ELEMENT"), root_1);
@@ -13595,7 +13595,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start arrayLiteral
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1131:1: arrayLiteral : LBRACK ( elementList )? RBRACK -> ^( ARRAY_LITERAL ( elementList )? ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1133:1: arrayLiteral : LBRACK ( elementList )? RBRACK -> ^( ARRAY_LITERAL ( elementList )? ) ;
     public arrayLiteral_return arrayLiteral() // throws RecognitionException [1]
     {   
         arrayLiteral_return retval = new arrayLiteral_return();
@@ -13603,13 +13603,13 @@ public class ASParser : Parser
         int arrayLiteral_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken LBRACK207 = null;
-        CommonToken RBRACK209 = null;
-        elementList_return elementList208 = null;
+        CommonToken LBRACK208 = null;
+        CommonToken RBRACK210 = null;
+        elementList_return elementList209 = null;
         
         
-        CommonTree LBRACK207_tree=null;
-        CommonTree RBRACK209_tree=null;
+        CommonTree LBRACK208_tree=null;
+        CommonTree RBRACK210_tree=null;
         RewriteRuleTokenStream stream_LBRACK = new RewriteRuleTokenStream(adaptor,"token LBRACK");
         RewriteRuleTokenStream stream_RBRACK = new RewriteRuleTokenStream(adaptor,"token RBRACK");
         RewriteRuleSubtreeStream stream_elementList = new RewriteRuleSubtreeStream(adaptor,"rule elementList");
@@ -13619,18 +13619,18 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1132:4: ( LBRACK ( elementList )? RBRACK -> ^( ARRAY_LITERAL ( elementList )? ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1132:4: LBRACK ( elementList )? RBRACK
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1134:4: ( LBRACK ( elementList )? RBRACK -> ^( ARRAY_LITERAL ( elementList )? ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1134:4: LBRACK ( elementList )? RBRACK
             {
-            	LBRACK207 = (CommonToken)input.LT(1);
-            	Match(input,LBRACK,FOLLOW_LBRACK_in_arrayLiteral3830); if (failed) return retval;
-            	if ( backtracking==0 ) stream_LBRACK.Add(LBRACK207);
+            	LBRACK208 = (CommonToken)input.LT(1);
+            	Match(input,LBRACK,FOLLOW_LBRACK_in_arrayLiteral3832); if (failed) return retval;
+            	if ( backtracking==0 ) stream_LBRACK.Add(LBRACK208);
 
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append("["); 
             	}
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1132:35: ( elementList )?
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1134:35: ( elementList )?
             	int alt58 = 2;
             	int LA58_0 = input.LA(1);
             	
@@ -13641,22 +13641,22 @@ public class ASParser : Parser
             	switch (alt58) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: elementList
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:0:0: elementList
             	        {
-            	        	PushFollow(FOLLOW_elementList_in_arrayLiteral3834);
-            	        	elementList208 = elementList();
+            	        	PushFollow(FOLLOW_elementList_in_arrayLiteral3836);
+            	        	elementList209 = elementList();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
-            	        	if ( backtracking==0 ) stream_elementList.Add(elementList208.Tree);
+            	        	if ( backtracking==0 ) stream_elementList.Add(elementList209.Tree);
             	        
             	        }
             	        break;
             	
             	}
 
-            	RBRACK209 = (CommonToken)input.LT(1);
-            	Match(input,RBRACK,FOLLOW_RBRACK_in_arrayLiteral3837); if (failed) return retval;
-            	if ( backtracking==0 ) stream_RBRACK.Add(RBRACK209);
+            	RBRACK210 = (CommonToken)input.LT(1);
+            	Match(input,RBRACK,FOLLOW_RBRACK_in_arrayLiteral3839); if (failed) return retval;
+            	if ( backtracking==0 ) stream_RBRACK.Add(RBRACK210);
 
             	if ( backtracking == 0 ) 
             	{
@@ -13674,14 +13674,14 @@ public class ASParser : Parser
             	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	
             	root_0 = (CommonTree)adaptor.GetNilNode();
-            	// 1133:3: -> ^( ARRAY_LITERAL ( elementList )? )
+            	// 1135:3: -> ^( ARRAY_LITERAL ( elementList )? )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1133:6: ^( ARRAY_LITERAL ( elementList )? )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1135:6: ^( ARRAY_LITERAL ( elementList )? )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(ARRAY_LITERAL, "ARRAY_LITERAL"), root_1);
             	    
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1133:22: ( elementList )?
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1135:22: ( elementList )?
             	    if ( stream_elementList.HasNext() )
             	    {
             	        adaptor.AddChild(root_1, stream_elementList.Next());
@@ -13742,7 +13742,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start elementList
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1136:1: elementList : nonemptyElementList ( COMMA ( nonemptyElementList )? )* ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1138:1: elementList : nonemptyElementList ( COMMA ( nonemptyElementList )? )* ;
     public elementList_return elementList() // throws RecognitionException [1]
     {   
         elementList_return retval = new elementList_return();
@@ -13750,13 +13750,13 @@ public class ASParser : Parser
         int elementList_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken COMMA211 = null;
-        nonemptyElementList_return nonemptyElementList210 = null;
+        CommonToken COMMA212 = null;
+        nonemptyElementList_return nonemptyElementList211 = null;
 
-        nonemptyElementList_return nonemptyElementList212 = null;
+        nonemptyElementList_return nonemptyElementList213 = null;
         
         
-        CommonTree COMMA211_tree=null;
+        CommonTree COMMA212_tree=null;
     
         try 
     	{
@@ -13764,17 +13764,17 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1137:4: ( nonemptyElementList ( COMMA ( nonemptyElementList )? )* )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1137:4: nonemptyElementList ( COMMA ( nonemptyElementList )? )*
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1139:4: ( nonemptyElementList ( COMMA ( nonemptyElementList )? )* )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1139:4: nonemptyElementList ( COMMA ( nonemptyElementList )? )*
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_nonemptyElementList_in_elementList3861);
-            	nonemptyElementList210 = nonemptyElementList();
+            	PushFollow(FOLLOW_nonemptyElementList_in_elementList3863);
+            	nonemptyElementList211 = nonemptyElementList();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, nonemptyElementList210.Tree);
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1138:3: ( COMMA ( nonemptyElementList )? )*
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, nonemptyElementList211.Tree);
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1140:3: ( COMMA ( nonemptyElementList )? )*
             	do 
             	{
             	    int alt60 = 2;
@@ -13789,15 +13789,15 @@ public class ASParser : Parser
             	    switch (alt60) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1139:4: COMMA ( nonemptyElementList )?
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1141:4: COMMA ( nonemptyElementList )?
             			    {
-            			    	COMMA211 = (CommonToken)input.LT(1);
-            			    	Match(input,COMMA,FOLLOW_COMMA_in_elementList3871); if (failed) return retval;
+            			    	COMMA212 = (CommonToken)input.LT(1);
+            			    	Match(input,COMMA,FOLLOW_COMMA_in_elementList3873); if (failed) return retval;
             			    	if ( backtracking == 0 ) 
             			    	{
             			    	   buffer.Append(options.SpaceBetweenArguments ? ", " : ","); 
             			    	}
-            			    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1140:4: ( nonemptyElementList )?
+            			    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1142:4: ( nonemptyElementList )?
             			    	int alt59 = 2;
             			    	int LA59_0 = input.LA(1);
             			    	
@@ -13808,13 +13808,13 @@ public class ASParser : Parser
             			    	switch (alt59) 
             			    	{
             			    	    case 1 :
-            			    	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: nonemptyElementList
+            			    	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:0:0: nonemptyElementList
             			    	        {
-            			    	        	PushFollow(FOLLOW_nonemptyElementList_in_elementList3884);
-            			    	        	nonemptyElementList212 = nonemptyElementList();
+            			    	        	PushFollow(FOLLOW_nonemptyElementList_in_elementList3886);
+            			    	        	nonemptyElementList213 = nonemptyElementList();
             			    	        	followingStackPointer_--;
             			    	        	if (failed) return retval;
-            			    	        	if ( backtracking==0 ) adaptor.AddChild(root_0, nonemptyElementList212.Tree);
+            			    	        	if ( backtracking==0 ) adaptor.AddChild(root_0, nonemptyElementList213.Tree);
             			    	        
             			    	        }
             			    	        break;
@@ -13880,7 +13880,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start nonemptyElementList
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1144:1: nonemptyElementList : assignmentExpression ( COMMA assignmentExpression )* ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1146:1: nonemptyElementList : assignmentExpression ( COMMA assignmentExpression )* ;
     public nonemptyElementList_return nonemptyElementList() // throws RecognitionException [1]
     {   
         InOperator_stack.Push(new InOperator_scope());
@@ -13890,13 +13890,13 @@ public class ASParser : Parser
         int nonemptyElementList_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken COMMA214 = null;
-        assignmentExpression_return assignmentExpression213 = null;
+        CommonToken COMMA215 = null;
+        assignmentExpression_return assignmentExpression214 = null;
 
-        assignmentExpression_return assignmentExpression215 = null;
+        assignmentExpression_return assignmentExpression216 = null;
         
         
-        CommonTree COMMA214_tree=null;
+        CommonTree COMMA215_tree=null;
     
         
         	((InOperator_scope)InOperator_stack.Peek()).allowed =  true;
@@ -13907,17 +13907,17 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1149:4: ( assignmentExpression ( COMMA assignmentExpression )* )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1149:4: assignmentExpression ( COMMA assignmentExpression )*
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1151:4: ( assignmentExpression ( COMMA assignmentExpression )* )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1151:4: assignmentExpression ( COMMA assignmentExpression )*
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_assignmentExpression_in_nonemptyElementList3912);
-            	assignmentExpression213 = assignmentExpression();
+            	PushFollow(FOLLOW_assignmentExpression_in_nonemptyElementList3914);
+            	assignmentExpression214 = assignmentExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, assignmentExpression213.Tree);
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1150:3: ( COMMA assignmentExpression )*
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, assignmentExpression214.Tree);
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1152:3: ( COMMA assignmentExpression )*
             	do 
             	{
             	    int alt61 = 2;
@@ -14275,23 +14275,23 @@ public class ASParser : Parser
             	    switch (alt61) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1151:4: COMMA assignmentExpression
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1153:4: COMMA assignmentExpression
             			    {
-            			    	COMMA214 = (CommonToken)input.LT(1);
-            			    	Match(input,COMMA,FOLLOW_COMMA_in_nonemptyElementList3922); if (failed) return retval;
+            			    	COMMA215 = (CommonToken)input.LT(1);
+            			    	Match(input,COMMA,FOLLOW_COMMA_in_nonemptyElementList3924); if (failed) return retval;
             			    	if ( backtracking==0 ) {
-            			    	COMMA214_tree = (CommonTree)adaptor.Create(COMMA214);
-            			    	adaptor.AddChild(root_0, COMMA214_tree);
+            			    	COMMA215_tree = (CommonTree)adaptor.Create(COMMA215);
+            			    	adaptor.AddChild(root_0, COMMA215_tree);
             			    	}
             			    	if ( backtracking == 0 ) 
             			    	{
             			    	   buffer.Append(options.SpaceBetweenArguments ? ", " : ","); 
             			    	}
-            			    	PushFollow(FOLLOW_assignmentExpression_in_nonemptyElementList3934);
-            			    	assignmentExpression215 = assignmentExpression();
+            			    	PushFollow(FOLLOW_assignmentExpression_in_nonemptyElementList3936);
+            			    	assignmentExpression216 = assignmentExpression();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
-            			    	if ( backtracking==0 ) adaptor.AddChild(root_0, assignmentExpression215.Tree);
+            			    	if ( backtracking==0 ) adaptor.AddChild(root_0, assignmentExpression216.Tree);
             			    
             			    }
             			    break;
@@ -14353,7 +14353,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start objectLiteral
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1157:1: objectLiteral : LCURLY ( fieldList )? RCURLY -> ^( OBJECT_LITERAL ( fieldList )? ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1159:1: objectLiteral : LCURLY ( fieldList )? RCURLY -> ^( OBJECT_LITERAL ( fieldList )? ) ;
     public objectLiteral_return objectLiteral() // throws RecognitionException [1]
     {   
         objectLiteral_return retval = new objectLiteral_return();
@@ -14361,13 +14361,13 @@ public class ASParser : Parser
         int objectLiteral_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken LCURLY216 = null;
-        CommonToken RCURLY218 = null;
-        fieldList_return fieldList217 = null;
+        CommonToken LCURLY217 = null;
+        CommonToken RCURLY219 = null;
+        fieldList_return fieldList218 = null;
         
         
-        CommonTree LCURLY216_tree=null;
-        CommonTree RCURLY218_tree=null;
+        CommonTree LCURLY217_tree=null;
+        CommonTree RCURLY219_tree=null;
         RewriteRuleTokenStream stream_LCURLY = new RewriteRuleTokenStream(adaptor,"token LCURLY");
         RewriteRuleTokenStream stream_RCURLY = new RewriteRuleTokenStream(adaptor,"token RCURLY");
         RewriteRuleSubtreeStream stream_fieldList = new RewriteRuleSubtreeStream(adaptor,"rule fieldList");
@@ -14380,12 +14380,12 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1161:4: ( LCURLY ( fieldList )? RCURLY -> ^( OBJECT_LITERAL ( fieldList )? ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1161:4: LCURLY ( fieldList )? RCURLY
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1163:4: ( LCURLY ( fieldList )? RCURLY -> ^( OBJECT_LITERAL ( fieldList )? ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1163:4: LCURLY ( fieldList )? RCURLY
             {
-            	LCURLY216 = (CommonToken)input.LT(1);
-            	Match(input,LCURLY,FOLLOW_LCURLY_in_objectLiteral3956); if (failed) return retval;
-            	if ( backtracking==0 ) stream_LCURLY.Add(LCURLY216);
+            	LCURLY217 = (CommonToken)input.LT(1);
+            	Match(input,LCURLY,FOLLOW_LCURLY_in_objectLiteral3958); if (failed) return retval;
+            	if ( backtracking==0 ) stream_LCURLY.Add(LCURLY217);
 
             	if ( backtracking == 0 ) 
             	{
@@ -14399,7 +14399,7 @@ public class ASParser : Parser
             	  							}
             	  						
             	}
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1170:3: ( fieldList )?
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1172:3: ( fieldList )?
             	int alt62 = 2;
             	int LA62_0 = input.LA(1);
             	
@@ -14410,22 +14410,22 @@ public class ASParser : Parser
             	switch (alt62) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: fieldList
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:0:0: fieldList
             	        {
-            	        	PushFollow(FOLLOW_fieldList_in_objectLiteral3965);
-            	        	fieldList217 = fieldList();
+            	        	PushFollow(FOLLOW_fieldList_in_objectLiteral3967);
+            	        	fieldList218 = fieldList();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
-            	        	if ( backtracking==0 ) stream_fieldList.Add(fieldList217.Tree);
+            	        	if ( backtracking==0 ) stream_fieldList.Add(fieldList218.Tree);
             	        
             	        }
             	        break;
             	
             	}
 
-            	RCURLY218 = (CommonToken)input.LT(1);
-            	Match(input,RCURLY,FOLLOW_RCURLY_in_objectLiteral3971); if (failed) return retval;
-            	if ( backtracking==0 ) stream_RCURLY.Add(RCURLY218);
+            	RCURLY219 = (CommonToken)input.LT(1);
+            	Match(input,RCURLY,FOLLOW_RCURLY_in_objectLiteral3973); if (failed) return retval;
+            	if ( backtracking==0 ) stream_RCURLY.Add(RCURLY219);
 
             	if ( backtracking == 0 ) 
             	{
@@ -14450,14 +14450,14 @@ public class ASParser : Parser
             	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	
             	root_0 = (CommonTree)adaptor.GetNilNode();
-            	// 1179:3: -> ^( OBJECT_LITERAL ( fieldList )? )
+            	// 1181:3: -> ^( OBJECT_LITERAL ( fieldList )? )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1179:6: ^( OBJECT_LITERAL ( fieldList )? )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1181:6: ^( OBJECT_LITERAL ( fieldList )? )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(OBJECT_LITERAL, "OBJECT_LITERAL"), root_1);
             	    
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1179:23: ( fieldList )?
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1181:23: ( fieldList )?
             	    if ( stream_fieldList.HasNext() )
             	    {
             	        adaptor.AddChild(root_1, stream_fieldList.Next());
@@ -14518,7 +14518,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start fieldList
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1182:1: fieldList : literalField ( COMMA ( literalField )? )* ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1184:1: fieldList : literalField ( COMMA ( literalField )? )* ;
     public fieldList_return fieldList() // throws RecognitionException [1]
     {   
         fieldList_return retval = new fieldList_return();
@@ -14526,13 +14526,13 @@ public class ASParser : Parser
         int fieldList_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken COMMA220 = null;
-        literalField_return literalField219 = null;
+        CommonToken COMMA221 = null;
+        literalField_return literalField220 = null;
 
-        literalField_return literalField221 = null;
+        literalField_return literalField222 = null;
         
         
-        CommonTree COMMA220_tree=null;
+        CommonTree COMMA221_tree=null;
     
         try 
     	{
@@ -14540,17 +14540,17 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1183:4: ( literalField ( COMMA ( literalField )? )* )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1183:4: literalField ( COMMA ( literalField )? )*
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1185:4: ( literalField ( COMMA ( literalField )? )* )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1185:4: literalField ( COMMA ( literalField )? )*
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_literalField_in_fieldList3998);
-            	literalField219 = literalField();
+            	PushFollow(FOLLOW_literalField_in_fieldList4000);
+            	literalField220 = literalField();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, literalField219.Tree);
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1184:3: ( COMMA ( literalField )? )*
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, literalField220.Tree);
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1186:3: ( COMMA ( literalField )? )*
             	do 
             	{
             	    int alt64 = 2;
@@ -14565,10 +14565,10 @@ public class ASParser : Parser
             	    switch (alt64) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1185:4: COMMA ( literalField )?
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1187:4: COMMA ( literalField )?
             			    {
-            			    	COMMA220 = (CommonToken)input.LT(1);
-            			    	Match(input,COMMA,FOLLOW_COMMA_in_fieldList4008); if (failed) return retval;
+            			    	COMMA221 = (CommonToken)input.LT(1);
+            			    	Match(input,COMMA,FOLLOW_COMMA_in_fieldList4010); if (failed) return retval;
             			    	if ( backtracking == 0 ) 
             			    	{
             			    	  
@@ -14581,7 +14581,7 @@ public class ASParser : Parser
             			    	  											}
             			    	  										
             			    	}
-            			    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1194:4: ( literalField )?
+            			    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1196:4: ( literalField )?
             			    	int alt63 = 2;
             			    	int LA63_0 = input.LA(1);
             			    	
@@ -14592,13 +14592,13 @@ public class ASParser : Parser
             			    	switch (alt63) 
             			    	{
             			    	    case 1 :
-            			    	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: literalField
+            			    	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:0:0: literalField
             			    	        {
-            			    	        	PushFollow(FOLLOW_literalField_in_fieldList4022);
-            			    	        	literalField221 = literalField();
+            			    	        	PushFollow(FOLLOW_literalField_in_fieldList4024);
+            			    	        	literalField222 = literalField();
             			    	        	followingStackPointer_--;
             			    	        	if (failed) return retval;
-            			    	        	if ( backtracking==0 ) adaptor.AddChild(root_0, literalField221.Tree);
+            			    	        	if ( backtracking==0 ) adaptor.AddChild(root_0, literalField222.Tree);
             			    	        
             			    	        }
             			    	        break;
@@ -14664,7 +14664,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start literalField
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1198:1: literalField : field= fieldName COLON element -> ^( OBJECT_FIELD fieldName element ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1200:1: literalField : field= fieldName COLON element -> ^( OBJECT_FIELD fieldName element ) ;
     public literalField_return literalField() // throws RecognitionException [1]
     {   
         literalField_return retval = new literalField_return();
@@ -14672,13 +14672,13 @@ public class ASParser : Parser
         int literalField_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken COLON222 = null;
+        CommonToken COLON223 = null;
         fieldName_return field = null;
 
-        element_return element223 = null;
+        element_return element224 = null;
         
         
-        CommonTree COLON222_tree=null;
+        CommonTree COLON223_tree=null;
         RewriteRuleTokenStream stream_COLON = new RewriteRuleTokenStream(adaptor,"token COLON");
         RewriteRuleSubtreeStream stream_element = new RewriteRuleSubtreeStream(adaptor,"rule element");
         RewriteRuleSubtreeStream stream_fieldName = new RewriteRuleSubtreeStream(adaptor,"rule fieldName");
@@ -14688,27 +14688,27 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1199:5: (field= fieldName COLON element -> ^( OBJECT_FIELD fieldName element ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1199:5: field= fieldName COLON element
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1201:5: (field= fieldName COLON element -> ^( OBJECT_FIELD fieldName element ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1201:5: field= fieldName COLON element
             {
-            	PushFollow(FOLLOW_fieldName_in_literalField4044);
+            	PushFollow(FOLLOW_fieldName_in_literalField4046);
             	field = fieldName();
             	followingStackPointer_--;
             	if (failed) return retval;
             	if ( backtracking==0 ) stream_fieldName.Add(field.Tree);
-            	COLON222 = (CommonToken)input.LT(1);
-            	Match(input,COLON,FOLLOW_COLON_in_literalField4049); if (failed) return retval;
-            	if ( backtracking==0 ) stream_COLON.Add(COLON222);
+            	COLON223 = (CommonToken)input.LT(1);
+            	Match(input,COLON,FOLLOW_COLON_in_literalField4051); if (failed) return retval;
+            	if ( backtracking==0 ) stream_COLON.Add(COLON223);
 
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append( options.SpaceBetweenType ? " : " : ":"); 
             	}
-            	PushFollow(FOLLOW_element_in_literalField4057);
-            	element223 = element();
+            	PushFollow(FOLLOW_element_in_literalField4059);
+            	element224 = element();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) stream_element.Add(element223.Tree);
+            	if ( backtracking==0 ) stream_element.Add(element224.Tree);
             	
             	// AST REWRITE
             	// elements:          fieldName, element
@@ -14721,9 +14721,9 @@ public class ASParser : Parser
             	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	
             	root_0 = (CommonTree)adaptor.GetNilNode();
-            	// 1202:3: -> ^( OBJECT_FIELD fieldName element )
+            	// 1204:3: -> ^( OBJECT_FIELD fieldName element )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1202:6: ^( OBJECT_FIELD fieldName element )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1204:6: ^( OBJECT_FIELD fieldName element )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(OBJECT_FIELD, "OBJECT_FIELD"), root_1);
@@ -14784,7 +14784,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start fieldName
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1205:1: fieldName : (ide= ident | num= number );
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1207:1: fieldName : (ide= ident | num= number );
     public fieldName_return fieldName() // throws RecognitionException [1]
     {   
         fieldName_return retval = new fieldName_return();
@@ -14804,7 +14804,7 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1206:4: (ide= ident | num= number )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1208:4: (ide= ident | num= number )
             int alt65 = 2;
             int LA65_0 = input.LA(1);
             
@@ -14820,18 +14820,18 @@ public class ASParser : Parser
             {
                 if ( backtracking > 0 ) {failed = true; return retval;}
                 NoViableAltException nvae_d65s0 =
-                    new NoViableAltException("1205:1: fieldName : (ide= ident | num= number );", 65, 0, input);
+                    new NoViableAltException("1207:1: fieldName : (ide= ident | num= number );", 65, 0, input);
             
                 throw nvae_d65s0;
             }
             switch (alt65) 
             {
                 case 1 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1206:4: ide= ident
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1208:4: ide= ident
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_ident_in_fieldName4083);
+                    	PushFollow(FOLLOW_ident_in_fieldName4085);
                     	ide = ident();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -14844,11 +14844,11 @@ public class ASParser : Parser
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1207:4: num= number
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1209:4: num= number
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_number_in_fieldName4093);
+                    	PushFollow(FOLLOW_number_in_fieldName4095);
                     	num = number();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -14906,7 +14906,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start expression
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1211:1: expression : assignmentExpression ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1213:1: expression : assignmentExpression ;
     public expression_return expression() // throws RecognitionException [1]
     {   
         InOperator_stack.Push(new InOperator_scope());
@@ -14916,7 +14916,7 @@ public class ASParser : Parser
         int expression_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        assignmentExpression_return assignmentExpression224 = null;
+        assignmentExpression_return assignmentExpression225 = null;
         
         
     
@@ -14929,16 +14929,16 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1216:4: ( assignmentExpression )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1216:4: assignmentExpression
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1218:4: ( assignmentExpression )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1218:4: assignmentExpression
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_assignmentExpression_in_expression4118);
-            	assignmentExpression224 = assignmentExpression();
+            	PushFollow(FOLLOW_assignmentExpression_in_expression4120);
+            	assignmentExpression225 = assignmentExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, assignmentExpression224.Tree);
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, assignmentExpression225.Tree);
             
             }
     
@@ -14988,7 +14988,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start expressionList
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1220:1: expressionList : assignmentExpression ( COMMA assignmentExpression )* -> ^( ELIST assignmentExpression ( COMMA assignmentExpression )* ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1222:1: expressionList : assignmentExpression ( COMMA assignmentExpression )* -> ^( ELIST assignmentExpression ( COMMA assignmentExpression )* ) ;
     public expressionList_return expressionList() // throws RecognitionException [1]
     {   
         expressionList_return retval = new expressionList_return();
@@ -14996,13 +14996,13 @@ public class ASParser : Parser
         int expressionList_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken COMMA226 = null;
-        assignmentExpression_return assignmentExpression225 = null;
+        CommonToken COMMA227 = null;
+        assignmentExpression_return assignmentExpression226 = null;
 
-        assignmentExpression_return assignmentExpression227 = null;
+        assignmentExpression_return assignmentExpression228 = null;
         
         
-        CommonTree COMMA226_tree=null;
+        CommonTree COMMA227_tree=null;
         RewriteRuleTokenStream stream_COMMA = new RewriteRuleTokenStream(adaptor,"token COMMA");
         RewriteRuleSubtreeStream stream_assignmentExpression = new RewriteRuleSubtreeStream(adaptor,"rule assignmentExpression");
         try 
@@ -15011,15 +15011,15 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1221:4: ( assignmentExpression ( COMMA assignmentExpression )* -> ^( ELIST assignmentExpression ( COMMA assignmentExpression )* ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1221:4: assignmentExpression ( COMMA assignmentExpression )*
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1223:4: ( assignmentExpression ( COMMA assignmentExpression )* -> ^( ELIST assignmentExpression ( COMMA assignmentExpression )* ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1223:4: assignmentExpression ( COMMA assignmentExpression )*
             {
-            	PushFollow(FOLLOW_assignmentExpression_in_expressionList4130);
-            	assignmentExpression225 = assignmentExpression();
+            	PushFollow(FOLLOW_assignmentExpression_in_expressionList4132);
+            	assignmentExpression226 = assignmentExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) stream_assignmentExpression.Add(assignmentExpression225.Tree);
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1222:3: ( COMMA assignmentExpression )*
+            	if ( backtracking==0 ) stream_assignmentExpression.Add(assignmentExpression226.Tree);
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1224:3: ( COMMA assignmentExpression )*
             	do 
             	{
             	    int alt66 = 2;
@@ -15034,21 +15034,21 @@ public class ASParser : Parser
             	    switch (alt66) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1223:4: COMMA assignmentExpression
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1225:4: COMMA assignmentExpression
             			    {
-            			    	COMMA226 = (CommonToken)input.LT(1);
-            			    	Match(input,COMMA,FOLLOW_COMMA_in_expressionList4140); if (failed) return retval;
-            			    	if ( backtracking==0 ) stream_COMMA.Add(COMMA226);
+            			    	COMMA227 = (CommonToken)input.LT(1);
+            			    	Match(input,COMMA,FOLLOW_COMMA_in_expressionList4142); if (failed) return retval;
+            			    	if ( backtracking==0 ) stream_COMMA.Add(COMMA227);
 
             			    	if ( backtracking == 0 ) 
             			    	{
             			    	  buffer.Append(options.SpaceBetweenArguments ? ", " : ","); 
             			    	}
-            			    	PushFollow(FOLLOW_assignmentExpression_in_expressionList4152);
-            			    	assignmentExpression227 = assignmentExpression();
+            			    	PushFollow(FOLLOW_assignmentExpression_in_expressionList4154);
+            			    	assignmentExpression228 = assignmentExpression();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
-            			    	if ( backtracking==0 ) stream_assignmentExpression.Add(assignmentExpression227.Tree);
+            			    	if ( backtracking==0 ) stream_assignmentExpression.Add(assignmentExpression228.Tree);
             			    
             			    }
             			    break;
@@ -15073,15 +15073,15 @@ public class ASParser : Parser
             	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	
             	root_0 = (CommonTree)adaptor.GetNilNode();
-            	// 1225:6: -> ^( ELIST assignmentExpression ( COMMA assignmentExpression )* )
+            	// 1227:6: -> ^( ELIST assignmentExpression ( COMMA assignmentExpression )* )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1225:9: ^( ELIST assignmentExpression ( COMMA assignmentExpression )* )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1227:9: ^( ELIST assignmentExpression ( COMMA assignmentExpression )* )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(ELIST, "ELIST"), root_1);
             	    
             	    adaptor.AddChild(root_1, stream_assignmentExpression.Next());
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1225:38: ( COMMA assignmentExpression )*
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1227:38: ( COMMA assignmentExpression )*
             	    while ( stream_assignmentExpression.HasNext() || stream_COMMA.HasNext() )
             	    {
             	        adaptor.AddChild(root_1, stream_COMMA.Next());
@@ -15144,7 +15144,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start assignmentExpression
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1229:1: assignmentExpression : c= conditionalExpression ( ( assignmentOperator )=>op= assignmentOperator assignmentExpression )* ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1231:1: assignmentExpression : c= conditionalExpression ( ( assignmentOperator )=>op= assignmentOperator assignmentExpression )* ;
     public assignmentExpression_return assignmentExpression() // throws RecognitionException [1]
     {   
         assignmentExpression_return retval = new assignmentExpression_return();
@@ -15156,7 +15156,7 @@ public class ASParser : Parser
 
         assignmentOperator_return op = null;
 
-        assignmentExpression_return assignmentExpression228 = null;
+        assignmentExpression_return assignmentExpression229 = null;
         
         
     
@@ -15166,12 +15166,12 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1230:4: (c= conditionalExpression ( ( assignmentOperator )=>op= assignmentOperator assignmentExpression )* )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1230:4: c= conditionalExpression ( ( assignmentOperator )=>op= assignmentOperator assignmentExpression )*
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1232:4: (c= conditionalExpression ( ( assignmentOperator )=>op= assignmentOperator assignmentExpression )* )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1232:4: c= conditionalExpression ( ( assignmentOperator )=>op= assignmentOperator assignmentExpression )*
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_conditionalExpression_in_assignmentExpression4186);
+            	PushFollow(FOLLOW_conditionalExpression_in_assignmentExpression4188);
             	c = conditionalExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -15180,7 +15180,7 @@ public class ASParser : Parser
             	{
             	   
             	}
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1231:2: ( ( assignmentOperator )=>op= assignmentOperator assignmentExpression )*
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1233:2: ( ( assignmentOperator )=>op= assignmentOperator assignmentExpression )*
             	do 
             	{
             	    int alt67 = 2;
@@ -15202,9 +15202,9 @@ public class ASParser : Parser
             	    switch (alt67) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1231:4: ( assignmentOperator )=>op= assignmentOperator assignmentExpression
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1233:4: ( assignmentOperator )=>op= assignmentOperator assignmentExpression
             			    {
-            			    	PushFollow(FOLLOW_assignmentOperator_in_assignmentExpression4201);
+            			    	PushFollow(FOLLOW_assignmentOperator_in_assignmentExpression4203);
             			    	op = assignmentOperator();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -15217,11 +15217,11 @@ public class ASParser : Parser
             			    	  														if(options.SpaceBetweenAssign) buffer.Append(" "); 
             			    	  													
             			    	}
-            			    	PushFollow(FOLLOW_assignmentExpression_in_assignmentExpression4221);
-            			    	assignmentExpression228 = assignmentExpression();
+            			    	PushFollow(FOLLOW_assignmentExpression_in_assignmentExpression4223);
+            			    	assignmentExpression229 = assignmentExpression();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
-            			    	if ( backtracking==0 ) adaptor.AddChild(root_0, assignmentExpression228.Tree);
+            			    	if ( backtracking==0 ) adaptor.AddChild(root_0, assignmentExpression229.Tree);
             			    
             			    }
             			    break;
@@ -15281,7 +15281,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start assignmentOperator
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1241:1: assignmentOperator : ( ASSIGN | STAR_ASSIGN | DIV_ASSIGN | MOD_ASSIGN | PLUS_ASSIGN | MINUS_ASSIGN | SL_ASSIGN | SR_ASSIGN | BSR_ASSIGN | BAND_ASSIGN | BXOR_ASSIGN | BOR_ASSIGN | LAND_ASSIGN | LOR_ASSIGN );
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1243:1: assignmentOperator : ( ASSIGN | STAR_ASSIGN | DIV_ASSIGN | MOD_ASSIGN | PLUS_ASSIGN | MINUS_ASSIGN | SL_ASSIGN | SR_ASSIGN | BSR_ASSIGN | BAND_ASSIGN | BXOR_ASSIGN | BOR_ASSIGN | LAND_ASSIGN | LOR_ASSIGN );
     public assignmentOperator_return assignmentOperator() // throws RecognitionException [1]
     {   
         assignmentOperator_return retval = new assignmentOperator_return();
@@ -15289,9 +15289,9 @@ public class ASParser : Parser
         int assignmentOperator_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken set229 = null;
+        CommonToken set230 = null;
         
-        CommonTree set229_tree=null;
+        CommonTree set230_tree=null;
     
         try 
     	{
@@ -15299,16 +15299,16 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1242:4: ( ASSIGN | STAR_ASSIGN | DIV_ASSIGN | MOD_ASSIGN | PLUS_ASSIGN | MINUS_ASSIGN | SL_ASSIGN | SR_ASSIGN | BSR_ASSIGN | BAND_ASSIGN | BXOR_ASSIGN | BOR_ASSIGN | LAND_ASSIGN | LOR_ASSIGN )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1244:4: ( ASSIGN | STAR_ASSIGN | DIV_ASSIGN | MOD_ASSIGN | PLUS_ASSIGN | MINUS_ASSIGN | SL_ASSIGN | SR_ASSIGN | BSR_ASSIGN | BAND_ASSIGN | BXOR_ASSIGN | BOR_ASSIGN | LAND_ASSIGN | LOR_ASSIGN )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	set229 = (CommonToken)input.LT(1);
+            	set230 = (CommonToken)input.LT(1);
             	if ( input.LA(1) == ASSIGN || (input.LA(1) >= STAR_ASSIGN && input.LA(1) <= LOR_ASSIGN) ) 
             	{
             	    input.Consume();
-            	    if ( backtracking==0 ) adaptor.AddChild(root_0, adaptor.Create(set229));
+            	    if ( backtracking==0 ) adaptor.AddChild(root_0, adaptor.Create(set230));
             	    errorRecovery = false;failed = false;
             	}
             	else 
@@ -15366,7 +15366,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start conditionalExpression
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1259:1: conditionalExpression : ( logicalOrExpression -> logicalOrExpression ) ( QUESTION conditionalSubExpression -> ^( QUESTION $conditionalExpression conditionalSubExpression ) )? ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1261:1: conditionalExpression : ( logicalOrExpression -> logicalOrExpression ) ( QUESTION conditionalSubExpression -> ^( QUESTION $conditionalExpression conditionalSubExpression ) )? ;
     public conditionalExpression_return conditionalExpression() // throws RecognitionException [1]
     {   
         conditionalExpression_return retval = new conditionalExpression_return();
@@ -15374,13 +15374,13 @@ public class ASParser : Parser
         int conditionalExpression_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken QUESTION231 = null;
-        logicalOrExpression_return logicalOrExpression230 = null;
+        CommonToken QUESTION232 = null;
+        logicalOrExpression_return logicalOrExpression231 = null;
 
-        conditionalSubExpression_return conditionalSubExpression232 = null;
+        conditionalSubExpression_return conditionalSubExpression233 = null;
         
         
-        CommonTree QUESTION231_tree=null;
+        CommonTree QUESTION232_tree=null;
         RewriteRuleTokenStream stream_QUESTION = new RewriteRuleTokenStream(adaptor,"token QUESTION");
         RewriteRuleSubtreeStream stream_logicalOrExpression = new RewriteRuleSubtreeStream(adaptor,"rule logicalOrExpression");
         RewriteRuleSubtreeStream stream_conditionalSubExpression = new RewriteRuleSubtreeStream(adaptor,"rule conditionalSubExpression");
@@ -15390,17 +15390,17 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1260:4: ( ( logicalOrExpression -> logicalOrExpression ) ( QUESTION conditionalSubExpression -> ^( QUESTION $conditionalExpression conditionalSubExpression ) )? )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1260:4: ( logicalOrExpression -> logicalOrExpression ) ( QUESTION conditionalSubExpression -> ^( QUESTION $conditionalExpression conditionalSubExpression ) )?
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1262:4: ( ( logicalOrExpression -> logicalOrExpression ) ( QUESTION conditionalSubExpression -> ^( QUESTION $conditionalExpression conditionalSubExpression ) )? )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1262:4: ( logicalOrExpression -> logicalOrExpression ) ( QUESTION conditionalSubExpression -> ^( QUESTION $conditionalExpression conditionalSubExpression ) )?
             {
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1260:4: ( logicalOrExpression -> logicalOrExpression )
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1260:5: logicalOrExpression
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1262:4: ( logicalOrExpression -> logicalOrExpression )
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1262:5: logicalOrExpression
             	{
-            		PushFollow(FOLLOW_logicalOrExpression_in_conditionalExpression4315);
-            		logicalOrExpression230 = logicalOrExpression();
+            		PushFollow(FOLLOW_logicalOrExpression_in_conditionalExpression4317);
+            		logicalOrExpression231 = logicalOrExpression();
             		followingStackPointer_--;
             		if (failed) return retval;
-            		if ( backtracking==0 ) stream_logicalOrExpression.Add(logicalOrExpression230.Tree);
+            		if ( backtracking==0 ) stream_logicalOrExpression.Add(logicalOrExpression231.Tree);
             		
             		// AST REWRITE
             		// elements:          logicalOrExpression
@@ -15413,7 +15413,7 @@ public class ASParser : Parser
             		RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             		
             		root_0 = (CommonTree)adaptor.GetNilNode();
-            		// 1260:25: -> logicalOrExpression
+            		// 1262:25: -> logicalOrExpression
             		{
             		    adaptor.AddChild(root_0, stream_logicalOrExpression.Next());
             		
@@ -15423,7 +15423,7 @@ public class ASParser : Parser
             	
             	}
 
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1261:3: ( QUESTION conditionalSubExpression -> ^( QUESTION $conditionalExpression conditionalSubExpression ) )?
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1263:3: ( QUESTION conditionalSubExpression -> ^( QUESTION $conditionalExpression conditionalSubExpression ) )?
             	int alt68 = 2;
             	int LA68_0 = input.LA(1);
             	
@@ -15434,11 +15434,11 @@ public class ASParser : Parser
             	switch (alt68) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1262:4: QUESTION conditionalSubExpression
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1264:4: QUESTION conditionalSubExpression
             	        {
-            	        	QUESTION231 = (CommonToken)input.LT(1);
-            	        	Match(input,QUESTION,FOLLOW_QUESTION_in_conditionalExpression4329); if (failed) return retval;
-            	        	if ( backtracking==0 ) stream_QUESTION.Add(QUESTION231);
+            	        	QUESTION232 = (CommonToken)input.LT(1);
+            	        	Match(input,QUESTION,FOLLOW_QUESTION_in_conditionalExpression4331); if (failed) return retval;
+            	        	if ( backtracking==0 ) stream_QUESTION.Add(QUESTION232);
 
             	        	if ( backtracking == 0 ) 
             	        	{
@@ -15448,11 +15448,11 @@ public class ASParser : Parser
             	        	  							if(options.SpaceBetweenOperators) buffer.Append(" "); 
             	        	  						
             	        	}
-            	        	PushFollow(FOLLOW_conditionalSubExpression_in_conditionalExpression4336);
-            	        	conditionalSubExpression232 = conditionalSubExpression();
+            	        	PushFollow(FOLLOW_conditionalSubExpression_in_conditionalExpression4338);
+            	        	conditionalSubExpression233 = conditionalSubExpression();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
-            	        	if ( backtracking==0 ) stream_conditionalSubExpression.Add(conditionalSubExpression232.Tree);
+            	        	if ( backtracking==0 ) stream_conditionalSubExpression.Add(conditionalSubExpression233.Tree);
             	        	
             	        	// AST REWRITE
             	        	// elements:          conditionalSubExpression, QUESTION, conditionalExpression
@@ -15465,9 +15465,9 @@ public class ASParser : Parser
             	        	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	        	
             	        	root_0 = (CommonTree)adaptor.GetNilNode();
-            	        	// 1268:4: -> ^( QUESTION $conditionalExpression conditionalSubExpression )
+            	        	// 1270:4: -> ^( QUESTION $conditionalExpression conditionalSubExpression )
             	        	{
-            	        	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1268:7: ^( QUESTION $conditionalExpression conditionalSubExpression )
+            	        	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1270:7: ^( QUESTION $conditionalExpression conditionalSubExpression )
             	        	    {
             	        	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	        	    root_1 = (CommonTree)adaptor.BecomeRoot(stream_QUESTION.Next(), root_1);
@@ -15534,7 +15534,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start conditionalSubExpression
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1271:1: conditionalSubExpression : assignmentExpression COLON assignmentExpression ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1273:1: conditionalSubExpression : assignmentExpression COLON assignmentExpression ;
     public conditionalSubExpression_return conditionalSubExpression() // throws RecognitionException [1]
     {   
         conditionalSubExpression_return retval = new conditionalSubExpression_return();
@@ -15542,13 +15542,13 @@ public class ASParser : Parser
         int conditionalSubExpression_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken COLON234 = null;
-        assignmentExpression_return assignmentExpression233 = null;
+        CommonToken COLON235 = null;
+        assignmentExpression_return assignmentExpression234 = null;
 
-        assignmentExpression_return assignmentExpression235 = null;
+        assignmentExpression_return assignmentExpression236 = null;
         
         
-        CommonTree COLON234_tree=null;
+        CommonTree COLON235_tree=null;
     
         try 
     	{
@@ -15556,31 +15556,31 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1272:4: ( assignmentExpression COLON assignmentExpression )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1272:4: assignmentExpression COLON assignmentExpression
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1274:4: ( assignmentExpression COLON assignmentExpression )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1274:4: assignmentExpression COLON assignmentExpression
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_assignmentExpression_in_conditionalSubExpression4365);
-            	assignmentExpression233 = assignmentExpression();
+            	PushFollow(FOLLOW_assignmentExpression_in_conditionalSubExpression4367);
+            	assignmentExpression234 = assignmentExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, assignmentExpression233.Tree);
-            	COLON234 = (CommonToken)input.LT(1);
-            	Match(input,COLON,FOLLOW_COLON_in_conditionalSubExpression4370); if (failed) return retval;
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, assignmentExpression234.Tree);
+            	COLON235 = (CommonToken)input.LT(1);
+            	Match(input,COLON,FOLLOW_COLON_in_conditionalSubExpression4372); if (failed) return retval;
             	if ( backtracking==0 ) {
-            	COLON234_tree = (CommonTree)adaptor.Create(COLON234);
-            	root_0 = (CommonTree)adaptor.BecomeRoot(COLON234_tree, root_0);
+            	COLON235_tree = (CommonTree)adaptor.Create(COLON235);
+            	root_0 = (CommonTree)adaptor.BecomeRoot(COLON235_tree, root_0);
             	}
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append(options.SpaceBetweenOperators ? " : " : ":"); 
             	}
-            	PushFollow(FOLLOW_assignmentExpression_in_conditionalSubExpression4379);
-            	assignmentExpression235 = assignmentExpression();
+            	PushFollow(FOLLOW_assignmentExpression_in_conditionalSubExpression4381);
+            	assignmentExpression236 = assignmentExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, assignmentExpression235.Tree);
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, assignmentExpression236.Tree);
             
             }
     
@@ -15628,7 +15628,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start logicalOrExpression
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1280:1: logicalOrExpression : logicalAndExpression (op= logicalOrOperator logicalAndExpression )* ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1282:1: logicalOrExpression : logicalAndExpression (op= logicalOrOperator logicalAndExpression )* ;
     public logicalOrExpression_return logicalOrExpression() // throws RecognitionException [1]
     {   
         logicalOrExpression_return retval = new logicalOrExpression_return();
@@ -15638,9 +15638,9 @@ public class ASParser : Parser
     
         logicalOrOperator_return op = null;
 
-        logicalAndExpression_return logicalAndExpression236 = null;
-
         logicalAndExpression_return logicalAndExpression237 = null;
+
+        logicalAndExpression_return logicalAndExpression238 = null;
         
         
     
@@ -15650,17 +15650,17 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1281:4: ( logicalAndExpression (op= logicalOrOperator logicalAndExpression )* )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1281:4: logicalAndExpression (op= logicalOrOperator logicalAndExpression )*
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1283:4: ( logicalAndExpression (op= logicalOrOperator logicalAndExpression )* )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1283:4: logicalAndExpression (op= logicalOrOperator logicalAndExpression )*
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_logicalAndExpression_in_logicalOrExpression4393);
-            	logicalAndExpression236 = logicalAndExpression();
+            	PushFollow(FOLLOW_logicalAndExpression_in_logicalOrExpression4395);
+            	logicalAndExpression237 = logicalAndExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, logicalAndExpression236.Tree);
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1282:3: (op= logicalOrOperator logicalAndExpression )*
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, logicalAndExpression237.Tree);
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1284:3: (op= logicalOrOperator logicalAndExpression )*
             	do 
             	{
             	    int alt69 = 2;
@@ -15675,9 +15675,9 @@ public class ASParser : Parser
             	    switch (alt69) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1283:4: op= logicalOrOperator logicalAndExpression
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1285:4: op= logicalOrOperator logicalAndExpression
             			    {
-            			    	PushFollow(FOLLOW_logicalOrOperator_in_logicalOrExpression4404);
+            			    	PushFollow(FOLLOW_logicalOrOperator_in_logicalOrExpression4406);
             			    	op = logicalOrOperator();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -15690,11 +15690,11 @@ public class ASParser : Parser
             			    	  														if(options.SpaceBetweenOperators) buffer.Append(" "); 
             			    	  													
             			    	}
-            			    	PushFollow(FOLLOW_logicalAndExpression_in_logicalOrExpression4416);
-            			    	logicalAndExpression237 = logicalAndExpression();
+            			    	PushFollow(FOLLOW_logicalAndExpression_in_logicalOrExpression4418);
+            			    	logicalAndExpression238 = logicalAndExpression();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
-            			    	if ( backtracking==0 ) adaptor.AddChild(root_0, logicalAndExpression237.Tree);
+            			    	if ( backtracking==0 ) adaptor.AddChild(root_0, logicalAndExpression238.Tree);
             			    
             			    }
             			    break;
@@ -15754,7 +15754,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start logicalOrOperator
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1292:1: logicalOrOperator : ( LOR | 'or' );
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1294:1: logicalOrOperator : ( LOR | 'or' );
     public logicalOrOperator_return logicalOrOperator() // throws RecognitionException [1]
     {   
         logicalOrOperator_return retval = new logicalOrOperator_return();
@@ -15762,9 +15762,9 @@ public class ASParser : Parser
         int logicalOrOperator_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken set238 = null;
+        CommonToken set239 = null;
         
-        CommonTree set238_tree=null;
+        CommonTree set239_tree=null;
     
         try 
     	{
@@ -15772,16 +15772,16 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1293:4: ( LOR | 'or' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1295:4: ( LOR | 'or' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	set238 = (CommonToken)input.LT(1);
+            	set239 = (CommonToken)input.LT(1);
             	if ( input.LA(1) == LOR || input.LA(1) == 185 ) 
             	{
             	    input.Consume();
-            	    if ( backtracking==0 ) adaptor.AddChild(root_0, adaptor.Create(set238));
+            	    if ( backtracking==0 ) adaptor.AddChild(root_0, adaptor.Create(set239));
             	    errorRecovery = false;failed = false;
             	}
             	else 
@@ -15839,7 +15839,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start logicalAndExpression
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1297:1: logicalAndExpression : bitwiseOrExpression (op= logicalAndOperator bitwiseOrExpression )* ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1299:1: logicalAndExpression : bitwiseOrExpression (op= logicalAndOperator bitwiseOrExpression )* ;
     public logicalAndExpression_return logicalAndExpression() // throws RecognitionException [1]
     {   
         logicalAndExpression_return retval = new logicalAndExpression_return();
@@ -15849,9 +15849,9 @@ public class ASParser : Parser
     
         logicalAndOperator_return op = null;
 
-        bitwiseOrExpression_return bitwiseOrExpression239 = null;
-
         bitwiseOrExpression_return bitwiseOrExpression240 = null;
+
+        bitwiseOrExpression_return bitwiseOrExpression241 = null;
         
         
     
@@ -15861,17 +15861,17 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1298:4: ( bitwiseOrExpression (op= logicalAndOperator bitwiseOrExpression )* )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1298:4: bitwiseOrExpression (op= logicalAndOperator bitwiseOrExpression )*
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1300:4: ( bitwiseOrExpression (op= logicalAndOperator bitwiseOrExpression )* )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1300:4: bitwiseOrExpression (op= logicalAndOperator bitwiseOrExpression )*
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_bitwiseOrExpression_in_logicalAndExpression4448);
-            	bitwiseOrExpression239 = bitwiseOrExpression();
+            	PushFollow(FOLLOW_bitwiseOrExpression_in_logicalAndExpression4450);
+            	bitwiseOrExpression240 = bitwiseOrExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, bitwiseOrExpression239.Tree);
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1299:3: (op= logicalAndOperator bitwiseOrExpression )*
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, bitwiseOrExpression240.Tree);
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1301:3: (op= logicalAndOperator bitwiseOrExpression )*
             	do 
             	{
             	    int alt70 = 2;
@@ -15886,9 +15886,9 @@ public class ASParser : Parser
             	    switch (alt70) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1300:4: op= logicalAndOperator bitwiseOrExpression
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1302:4: op= logicalAndOperator bitwiseOrExpression
             			    {
-            			    	PushFollow(FOLLOW_logicalAndOperator_in_logicalAndExpression4459);
+            			    	PushFollow(FOLLOW_logicalAndOperator_in_logicalAndExpression4461);
             			    	op = logicalAndOperator();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -15901,11 +15901,11 @@ public class ASParser : Parser
             			    	  														if(options.SpaceBetweenOperators) buffer.Append(" "); 
             			    	  													
             			    	}
-            			    	PushFollow(FOLLOW_bitwiseOrExpression_in_logicalAndExpression4471);
-            			    	bitwiseOrExpression240 = bitwiseOrExpression();
+            			    	PushFollow(FOLLOW_bitwiseOrExpression_in_logicalAndExpression4473);
+            			    	bitwiseOrExpression241 = bitwiseOrExpression();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
-            			    	if ( backtracking==0 ) adaptor.AddChild(root_0, bitwiseOrExpression240.Tree);
+            			    	if ( backtracking==0 ) adaptor.AddChild(root_0, bitwiseOrExpression241.Tree);
             			    
             			    }
             			    break;
@@ -15965,7 +15965,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start logicalAndOperator
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1309:1: logicalAndOperator : ( LAND | 'and' );
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1311:1: logicalAndOperator : ( LAND | 'and' );
     public logicalAndOperator_return logicalAndOperator() // throws RecognitionException [1]
     {   
         logicalAndOperator_return retval = new logicalAndOperator_return();
@@ -15973,9 +15973,9 @@ public class ASParser : Parser
         int logicalAndOperator_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken set241 = null;
+        CommonToken set242 = null;
         
-        CommonTree set241_tree=null;
+        CommonTree set242_tree=null;
     
         try 
     	{
@@ -15983,16 +15983,16 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1310:4: ( LAND | 'and' )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1312:4: ( LAND | 'and' )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	set241 = (CommonToken)input.LT(1);
+            	set242 = (CommonToken)input.LT(1);
             	if ( input.LA(1) == LAND || input.LA(1) == 186 ) 
             	{
             	    input.Consume();
-            	    if ( backtracking==0 ) adaptor.AddChild(root_0, adaptor.Create(set241));
+            	    if ( backtracking==0 ) adaptor.AddChild(root_0, adaptor.Create(set242));
             	    errorRecovery = false;failed = false;
             	}
             	else 
@@ -16050,7 +16050,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start bitwiseOrExpression
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1314:1: bitwiseOrExpression : bitwiseXorExpression ( BOR bitwiseXorExpression )* ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1316:1: bitwiseOrExpression : bitwiseXorExpression ( BOR bitwiseXorExpression )* ;
     public bitwiseOrExpression_return bitwiseOrExpression() // throws RecognitionException [1]
     {   
         bitwiseOrExpression_return retval = new bitwiseOrExpression_return();
@@ -16058,13 +16058,13 @@ public class ASParser : Parser
         int bitwiseOrExpression_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken BOR243 = null;
-        bitwiseXorExpression_return bitwiseXorExpression242 = null;
+        CommonToken BOR244 = null;
+        bitwiseXorExpression_return bitwiseXorExpression243 = null;
 
-        bitwiseXorExpression_return bitwiseXorExpression244 = null;
+        bitwiseXorExpression_return bitwiseXorExpression245 = null;
         
         
-        CommonTree BOR243_tree=null;
+        CommonTree BOR244_tree=null;
     
         try 
     	{
@@ -16072,17 +16072,17 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1315:4: ( bitwiseXorExpression ( BOR bitwiseXorExpression )* )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1315:4: bitwiseXorExpression ( BOR bitwiseXorExpression )*
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1317:4: ( bitwiseXorExpression ( BOR bitwiseXorExpression )* )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1317:4: bitwiseXorExpression ( BOR bitwiseXorExpression )*
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_bitwiseXorExpression_in_bitwiseOrExpression4503);
-            	bitwiseXorExpression242 = bitwiseXorExpression();
+            	PushFollow(FOLLOW_bitwiseXorExpression_in_bitwiseOrExpression4505);
+            	bitwiseXorExpression243 = bitwiseXorExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, bitwiseXorExpression242.Tree);
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1316:3: ( BOR bitwiseXorExpression )*
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, bitwiseXorExpression243.Tree);
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1318:3: ( BOR bitwiseXorExpression )*
             	do 
             	{
             	    int alt71 = 2;
@@ -16097,19 +16097,19 @@ public class ASParser : Parser
             	    switch (alt71) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1316:4: BOR bitwiseXorExpression
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1318:4: BOR bitwiseXorExpression
             			    {
-            			    	BOR243 = (CommonToken)input.LT(1);
-            			    	Match(input,BOR,FOLLOW_BOR_in_bitwiseOrExpression4508); if (failed) return retval;
+            			    	BOR244 = (CommonToken)input.LT(1);
+            			    	Match(input,BOR,FOLLOW_BOR_in_bitwiseOrExpression4510); if (failed) return retval;
             			    	if ( backtracking==0 ) {
-            			    	BOR243_tree = (CommonTree)adaptor.Create(BOR243);
-            			    	root_0 = (CommonTree)adaptor.BecomeRoot(BOR243_tree, root_0);
+            			    	BOR244_tree = (CommonTree)adaptor.Create(BOR244);
+            			    	root_0 = (CommonTree)adaptor.BecomeRoot(BOR244_tree, root_0);
             			    	}
-            			    	PushFollow(FOLLOW_bitwiseXorExpression_in_bitwiseOrExpression4511);
-            			    	bitwiseXorExpression244 = bitwiseXorExpression();
+            			    	PushFollow(FOLLOW_bitwiseXorExpression_in_bitwiseOrExpression4513);
+            			    	bitwiseXorExpression245 = bitwiseXorExpression();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
-            			    	if ( backtracking==0 ) adaptor.AddChild(root_0, bitwiseXorExpression244.Tree);
+            			    	if ( backtracking==0 ) adaptor.AddChild(root_0, bitwiseXorExpression245.Tree);
             			    
             			    }
             			    break;
@@ -16169,7 +16169,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start bitwiseXorExpression
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1320:1: bitwiseXorExpression : bitwiseAndExpression ( BXOR bitwiseAndExpression )* ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1322:1: bitwiseXorExpression : bitwiseAndExpression ( BXOR bitwiseAndExpression )* ;
     public bitwiseXorExpression_return bitwiseXorExpression() // throws RecognitionException [1]
     {   
         bitwiseXorExpression_return retval = new bitwiseXorExpression_return();
@@ -16177,13 +16177,13 @@ public class ASParser : Parser
         int bitwiseXorExpression_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken BXOR246 = null;
-        bitwiseAndExpression_return bitwiseAndExpression245 = null;
+        CommonToken BXOR247 = null;
+        bitwiseAndExpression_return bitwiseAndExpression246 = null;
 
-        bitwiseAndExpression_return bitwiseAndExpression247 = null;
+        bitwiseAndExpression_return bitwiseAndExpression248 = null;
         
         
-        CommonTree BXOR246_tree=null;
+        CommonTree BXOR247_tree=null;
     
         try 
     	{
@@ -16191,17 +16191,17 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1321:4: ( bitwiseAndExpression ( BXOR bitwiseAndExpression )* )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1321:4: bitwiseAndExpression ( BXOR bitwiseAndExpression )*
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1323:4: ( bitwiseAndExpression ( BXOR bitwiseAndExpression )* )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1323:4: bitwiseAndExpression ( BXOR bitwiseAndExpression )*
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_bitwiseAndExpression_in_bitwiseXorExpression4525);
-            	bitwiseAndExpression245 = bitwiseAndExpression();
+            	PushFollow(FOLLOW_bitwiseAndExpression_in_bitwiseXorExpression4527);
+            	bitwiseAndExpression246 = bitwiseAndExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, bitwiseAndExpression245.Tree);
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1322:3: ( BXOR bitwiseAndExpression )*
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, bitwiseAndExpression246.Tree);
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1324:3: ( BXOR bitwiseAndExpression )*
             	do 
             	{
             	    int alt72 = 2;
@@ -16216,19 +16216,19 @@ public class ASParser : Parser
             	    switch (alt72) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1322:4: BXOR bitwiseAndExpression
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1324:4: BXOR bitwiseAndExpression
             			    {
-            			    	BXOR246 = (CommonToken)input.LT(1);
-            			    	Match(input,BXOR,FOLLOW_BXOR_in_bitwiseXorExpression4530); if (failed) return retval;
+            			    	BXOR247 = (CommonToken)input.LT(1);
+            			    	Match(input,BXOR,FOLLOW_BXOR_in_bitwiseXorExpression4532); if (failed) return retval;
             			    	if ( backtracking==0 ) {
-            			    	BXOR246_tree = (CommonTree)adaptor.Create(BXOR246);
-            			    	root_0 = (CommonTree)adaptor.BecomeRoot(BXOR246_tree, root_0);
+            			    	BXOR247_tree = (CommonTree)adaptor.Create(BXOR247);
+            			    	root_0 = (CommonTree)adaptor.BecomeRoot(BXOR247_tree, root_0);
             			    	}
-            			    	PushFollow(FOLLOW_bitwiseAndExpression_in_bitwiseXorExpression4533);
-            			    	bitwiseAndExpression247 = bitwiseAndExpression();
+            			    	PushFollow(FOLLOW_bitwiseAndExpression_in_bitwiseXorExpression4535);
+            			    	bitwiseAndExpression248 = bitwiseAndExpression();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
-            			    	if ( backtracking==0 ) adaptor.AddChild(root_0, bitwiseAndExpression247.Tree);
+            			    	if ( backtracking==0 ) adaptor.AddChild(root_0, bitwiseAndExpression248.Tree);
             			    
             			    }
             			    break;
@@ -16288,7 +16288,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start bitwiseAndExpression
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1326:1: bitwiseAndExpression : equalityExpression ( BAND equalityExpression )* ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1328:1: bitwiseAndExpression : equalityExpression ( BAND equalityExpression )* ;
     public bitwiseAndExpression_return bitwiseAndExpression() // throws RecognitionException [1]
     {   
         bitwiseAndExpression_return retval = new bitwiseAndExpression_return();
@@ -16296,13 +16296,13 @@ public class ASParser : Parser
         int bitwiseAndExpression_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken BAND249 = null;
-        equalityExpression_return equalityExpression248 = null;
+        CommonToken BAND250 = null;
+        equalityExpression_return equalityExpression249 = null;
 
-        equalityExpression_return equalityExpression250 = null;
+        equalityExpression_return equalityExpression251 = null;
         
         
-        CommonTree BAND249_tree=null;
+        CommonTree BAND250_tree=null;
     
         try 
     	{
@@ -16310,17 +16310,17 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1327:4: ( equalityExpression ( BAND equalityExpression )* )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1327:4: equalityExpression ( BAND equalityExpression )*
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1329:4: ( equalityExpression ( BAND equalityExpression )* )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1329:4: equalityExpression ( BAND equalityExpression )*
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_equalityExpression_in_bitwiseAndExpression4547);
-            	equalityExpression248 = equalityExpression();
+            	PushFollow(FOLLOW_equalityExpression_in_bitwiseAndExpression4549);
+            	equalityExpression249 = equalityExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, equalityExpression248.Tree);
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1328:3: ( BAND equalityExpression )*
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, equalityExpression249.Tree);
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1330:3: ( BAND equalityExpression )*
             	do 
             	{
             	    int alt73 = 2;
@@ -16335,19 +16335,19 @@ public class ASParser : Parser
             	    switch (alt73) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1328:4: BAND equalityExpression
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1330:4: BAND equalityExpression
             			    {
-            			    	BAND249 = (CommonToken)input.LT(1);
-            			    	Match(input,BAND,FOLLOW_BAND_in_bitwiseAndExpression4552); if (failed) return retval;
+            			    	BAND250 = (CommonToken)input.LT(1);
+            			    	Match(input,BAND,FOLLOW_BAND_in_bitwiseAndExpression4554); if (failed) return retval;
             			    	if ( backtracking==0 ) {
-            			    	BAND249_tree = (CommonTree)adaptor.Create(BAND249);
-            			    	root_0 = (CommonTree)adaptor.BecomeRoot(BAND249_tree, root_0);
+            			    	BAND250_tree = (CommonTree)adaptor.Create(BAND250);
+            			    	root_0 = (CommonTree)adaptor.BecomeRoot(BAND250_tree, root_0);
             			    	}
-            			    	PushFollow(FOLLOW_equalityExpression_in_bitwiseAndExpression4555);
-            			    	equalityExpression250 = equalityExpression();
+            			    	PushFollow(FOLLOW_equalityExpression_in_bitwiseAndExpression4557);
+            			    	equalityExpression251 = equalityExpression();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
-            			    	if ( backtracking==0 ) adaptor.AddChild(root_0, equalityExpression250.Tree);
+            			    	if ( backtracking==0 ) adaptor.AddChild(root_0, equalityExpression251.Tree);
             			    
             			    }
             			    break;
@@ -16407,7 +16407,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start equalityExpression
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1332:1: equalityExpression : relationalExpression (op= equalityOperator relationalExpression )* ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1334:1: equalityExpression : relationalExpression (op= equalityOperator relationalExpression )* ;
     public equalityExpression_return equalityExpression() // throws RecognitionException [1]
     {   
         equalityExpression_return retval = new equalityExpression_return();
@@ -16417,9 +16417,9 @@ public class ASParser : Parser
     
         equalityOperator_return op = null;
 
-        relationalExpression_return relationalExpression251 = null;
-
         relationalExpression_return relationalExpression252 = null;
+
+        relationalExpression_return relationalExpression253 = null;
         
         
     
@@ -16429,17 +16429,17 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1333:4: ( relationalExpression (op= equalityOperator relationalExpression )* )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1333:4: relationalExpression (op= equalityOperator relationalExpression )*
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1335:4: ( relationalExpression (op= equalityOperator relationalExpression )* )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1335:4: relationalExpression (op= equalityOperator relationalExpression )*
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_relationalExpression_in_equalityExpression4569);
-            	relationalExpression251 = relationalExpression();
+            	PushFollow(FOLLOW_relationalExpression_in_equalityExpression4571);
+            	relationalExpression252 = relationalExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, relationalExpression251.Tree);
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1334:2: (op= equalityOperator relationalExpression )*
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, relationalExpression252.Tree);
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1336:2: (op= equalityOperator relationalExpression )*
             	do 
             	{
             	    int alt74 = 2;
@@ -16454,9 +16454,9 @@ public class ASParser : Parser
             	    switch (alt74) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1335:3: op= equalityOperator relationalExpression
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1337:3: op= equalityOperator relationalExpression
             			    {
-            			    	PushFollow(FOLLOW_equalityOperator_in_equalityExpression4579);
+            			    	PushFollow(FOLLOW_equalityOperator_in_equalityExpression4581);
             			    	op = equalityOperator();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -16469,11 +16469,11 @@ public class ASParser : Parser
             			    	  														if(options.SpaceBetweenOperators) buffer.Append(" "); 
             			    	  													
             			    	}
-            			    	PushFollow(FOLLOW_relationalExpression_in_equalityExpression4591);
-            			    	relationalExpression252 = relationalExpression();
+            			    	PushFollow(FOLLOW_relationalExpression_in_equalityExpression4593);
+            			    	relationalExpression253 = relationalExpression();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
-            			    	if ( backtracking==0 ) adaptor.AddChild(root_0, relationalExpression252.Tree);
+            			    	if ( backtracking==0 ) adaptor.AddChild(root_0, relationalExpression253.Tree);
             			    
             			    }
             			    break;
@@ -16533,7 +16533,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start equalityOperator
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1344:1: equalityOperator : ( STRICT_EQUAL | STRICT_NOT_EQUAL | NOT_EQUAL | EQUAL );
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1346:1: equalityOperator : ( STRICT_EQUAL | STRICT_NOT_EQUAL | NOT_EQUAL | EQUAL );
     public equalityOperator_return equalityOperator() // throws RecognitionException [1]
     {   
         equalityOperator_return retval = new equalityOperator_return();
@@ -16541,9 +16541,9 @@ public class ASParser : Parser
         int equalityOperator_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken set253 = null;
+        CommonToken set254 = null;
         
-        CommonTree set253_tree=null;
+        CommonTree set254_tree=null;
     
         try 
     	{
@@ -16551,16 +16551,16 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1345:4: ( STRICT_EQUAL | STRICT_NOT_EQUAL | NOT_EQUAL | EQUAL )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1347:4: ( STRICT_EQUAL | STRICT_NOT_EQUAL | NOT_EQUAL | EQUAL )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	set253 = (CommonToken)input.LT(1);
+            	set254 = (CommonToken)input.LT(1);
             	if ( (input.LA(1) >= STRICT_EQUAL && input.LA(1) <= EQUAL) ) 
             	{
             	    input.Consume();
-            	    if ( backtracking==0 ) adaptor.AddChild(root_0, adaptor.Create(set253));
+            	    if ( backtracking==0 ) adaptor.AddChild(root_0, adaptor.Create(set254));
             	    errorRecovery = false;failed = false;
             	}
             	else 
@@ -16618,7 +16618,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start relationalExpression
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1349:1: relationalExpression : shiftExpression ( ( relationalOperator )=>op= relationalOperator shiftExpression )* ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1351:1: relationalExpression : shiftExpression ( ( relationalOperator )=>op= relationalOperator shiftExpression )* ;
     public relationalExpression_return relationalExpression() // throws RecognitionException [1]
     {   
         relationalExpression_return retval = new relationalExpression_return();
@@ -16628,9 +16628,9 @@ public class ASParser : Parser
     
         relationalOperator_return op = null;
 
-        shiftExpression_return shiftExpression254 = null;
-
         shiftExpression_return shiftExpression255 = null;
+
+        shiftExpression_return shiftExpression256 = null;
         
         
     
@@ -16640,17 +16640,17 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1350:4: ( shiftExpression ( ( relationalOperator )=>op= relationalOperator shiftExpression )* )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1350:4: shiftExpression ( ( relationalOperator )=>op= relationalOperator shiftExpression )*
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1352:4: ( shiftExpression ( ( relationalOperator )=>op= relationalOperator shiftExpression )* )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1352:4: shiftExpression ( ( relationalOperator )=>op= relationalOperator shiftExpression )*
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_shiftExpression_in_relationalExpression4631);
-            	shiftExpression254 = shiftExpression();
+            	PushFollow(FOLLOW_shiftExpression_in_relationalExpression4633);
+            	shiftExpression255 = shiftExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, shiftExpression254.Tree);
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1351:3: ( ( relationalOperator )=>op= relationalOperator shiftExpression )*
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, shiftExpression255.Tree);
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1353:3: ( ( relationalOperator )=>op= relationalOperator shiftExpression )*
             	do 
             	{
             	    int alt75 = 2;
@@ -17722,9 +17722,9 @@ public class ASParser : Parser
             	    switch (alt75) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1352:4: ( relationalOperator )=>op= relationalOperator shiftExpression
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1354:4: ( relationalOperator )=>op= relationalOperator shiftExpression
             			    {
-            			    	PushFollow(FOLLOW_relationalOperator_in_relationalExpression4647);
+            			    	PushFollow(FOLLOW_relationalOperator_in_relationalExpression4649);
             			    	op = relationalOperator();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -17737,11 +17737,11 @@ public class ASParser : Parser
             			    	  																buffer.Append(" "); 
             			    	  															
             			    	}
-            			    	PushFollow(FOLLOW_shiftExpression_in_relationalExpression4655);
-            			    	shiftExpression255 = shiftExpression();
+            			    	PushFollow(FOLLOW_shiftExpression_in_relationalExpression4657);
+            			    	shiftExpression256 = shiftExpression();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
-            			    	if ( backtracking==0 ) adaptor.AddChild(root_0, shiftExpression255.Tree);
+            			    	if ( backtracking==0 ) adaptor.AddChild(root_0, shiftExpression256.Tree);
             			    
             			    }
             			    break;
@@ -17801,7 +17801,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start relationalOperator
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1361:1: relationalOperator : ({...}? IN | LT | GT | LE | GE | IS | AS | INSTANCEOF );
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1363:1: relationalOperator : ({...}? IN | LT | GT | LE | GE | IS | AS | INSTANCEOF );
     public relationalOperator_return relationalOperator() // throws RecognitionException [1]
     {   
         relationalOperator_return retval = new relationalOperator_return();
@@ -17809,23 +17809,23 @@ public class ASParser : Parser
         int relationalOperator_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken IN256 = null;
-        CommonToken LT257 = null;
-        CommonToken GT258 = null;
-        CommonToken LE259 = null;
-        CommonToken GE260 = null;
-        CommonToken IS261 = null;
-        CommonToken AS262 = null;
-        CommonToken INSTANCEOF263 = null;
+        CommonToken IN257 = null;
+        CommonToken LT258 = null;
+        CommonToken GT259 = null;
+        CommonToken LE260 = null;
+        CommonToken GE261 = null;
+        CommonToken IS262 = null;
+        CommonToken AS263 = null;
+        CommonToken INSTANCEOF264 = null;
         
-        CommonTree IN256_tree=null;
-        CommonTree LT257_tree=null;
-        CommonTree GT258_tree=null;
-        CommonTree LE259_tree=null;
-        CommonTree GE260_tree=null;
-        CommonTree IS261_tree=null;
-        CommonTree AS262_tree=null;
-        CommonTree INSTANCEOF263_tree=null;
+        CommonTree IN257_tree=null;
+        CommonTree LT258_tree=null;
+        CommonTree GT259_tree=null;
+        CommonTree LE260_tree=null;
+        CommonTree GE261_tree=null;
+        CommonTree IS262_tree=null;
+        CommonTree AS263_tree=null;
+        CommonTree INSTANCEOF264_tree=null;
     
         try 
     	{
@@ -17833,7 +17833,7 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1362:4: ({...}? IN | LT | GT | LE | GE | IS | AS | INSTANCEOF )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1364:4: ({...}? IN | LT | GT | LE | GE | IS | AS | INSTANCEOF )
             int alt76 = 8;
             switch ( input.LA(1) ) 
             {
@@ -17880,7 +17880,7 @@ public class ASParser : Parser
             	default:
             	    if ( backtracking > 0 ) {failed = true; return retval;}
             	    NoViableAltException nvae_d76s0 =
-            	        new NoViableAltException("1361:1: relationalOperator : ({...}? IN | LT | GT | LE | GE | IS | AS | INSTANCEOF );", 76, 0, input);
+            	        new NoViableAltException("1363:1: relationalOperator : ({...}? IN | LT | GT | LE | GE | IS | AS | INSTANCEOF );", 76, 0, input);
             
             	    throw nvae_d76s0;
             }
@@ -17888,7 +17888,7 @@ public class ASParser : Parser
             switch (alt76) 
             {
                 case 1 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1362:4: {...}? IN
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1364:4: {...}? IN
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
@@ -17897,109 +17897,109 @@ public class ASParser : Parser
                     	    if ( backtracking > 0 ) {failed = true; return retval;}
                     	    throw new FailedPredicateException(input, "relationalOperator", "$InOperator::allowed");
                     	}
-                    	IN256 = (CommonToken)input.LT(1);
-                    	Match(input,IN,FOLLOW_IN_in_relationalOperator4673); if (failed) return retval;
+                    	IN257 = (CommonToken)input.LT(1);
+                    	Match(input,IN,FOLLOW_IN_in_relationalOperator4675); if (failed) return retval;
                     	if ( backtracking==0 ) {
-                    	IN256_tree = (CommonTree)adaptor.Create(IN256);
-                    	adaptor.AddChild(root_0, IN256_tree);
+                    	IN257_tree = (CommonTree)adaptor.Create(IN257);
+                    	adaptor.AddChild(root_0, IN257_tree);
                     	}
                     
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1363:4: LT
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1365:4: LT
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	LT257 = (CommonToken)input.LT(1);
-                    	Match(input,LT,FOLLOW_LT_in_relationalOperator4678); if (failed) return retval;
+                    	LT258 = (CommonToken)input.LT(1);
+                    	Match(input,LT,FOLLOW_LT_in_relationalOperator4680); if (failed) return retval;
                     	if ( backtracking==0 ) {
-                    	LT257_tree = (CommonTree)adaptor.Create(LT257);
-                    	adaptor.AddChild(root_0, LT257_tree);
+                    	LT258_tree = (CommonTree)adaptor.Create(LT258);
+                    	adaptor.AddChild(root_0, LT258_tree);
                     	}
                     
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1363:9: GT
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1365:9: GT
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	GT258 = (CommonToken)input.LT(1);
-                    	Match(input,GT,FOLLOW_GT_in_relationalOperator4682); if (failed) return retval;
+                    	GT259 = (CommonToken)input.LT(1);
+                    	Match(input,GT,FOLLOW_GT_in_relationalOperator4684); if (failed) return retval;
                     	if ( backtracking==0 ) {
-                    	GT258_tree = (CommonTree)adaptor.Create(GT258);
-                    	adaptor.AddChild(root_0, GT258_tree);
+                    	GT259_tree = (CommonTree)adaptor.Create(GT259);
+                    	adaptor.AddChild(root_0, GT259_tree);
                     	}
                     
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1363:14: LE
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1365:14: LE
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	LE259 = (CommonToken)input.LT(1);
-                    	Match(input,LE,FOLLOW_LE_in_relationalOperator4686); if (failed) return retval;
+                    	LE260 = (CommonToken)input.LT(1);
+                    	Match(input,LE,FOLLOW_LE_in_relationalOperator4688); if (failed) return retval;
                     	if ( backtracking==0 ) {
-                    	LE259_tree = (CommonTree)adaptor.Create(LE259);
-                    	adaptor.AddChild(root_0, LE259_tree);
+                    	LE260_tree = (CommonTree)adaptor.Create(LE260);
+                    	adaptor.AddChild(root_0, LE260_tree);
                     	}
                     
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1363:19: GE
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1365:19: GE
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	GE260 = (CommonToken)input.LT(1);
-                    	Match(input,GE,FOLLOW_GE_in_relationalOperator4690); if (failed) return retval;
+                    	GE261 = (CommonToken)input.LT(1);
+                    	Match(input,GE,FOLLOW_GE_in_relationalOperator4692); if (failed) return retval;
                     	if ( backtracking==0 ) {
-                    	GE260_tree = (CommonTree)adaptor.Create(GE260);
-                    	adaptor.AddChild(root_0, GE260_tree);
+                    	GE261_tree = (CommonTree)adaptor.Create(GE261);
+                    	adaptor.AddChild(root_0, GE261_tree);
                     	}
                     
                     }
                     break;
                 case 6 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1363:24: IS
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1365:24: IS
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	IS261 = (CommonToken)input.LT(1);
-                    	Match(input,IS,FOLLOW_IS_in_relationalOperator4694); if (failed) return retval;
+                    	IS262 = (CommonToken)input.LT(1);
+                    	Match(input,IS,FOLLOW_IS_in_relationalOperator4696); if (failed) return retval;
                     	if ( backtracking==0 ) {
-                    	IS261_tree = (CommonTree)adaptor.Create(IS261);
-                    	adaptor.AddChild(root_0, IS261_tree);
+                    	IS262_tree = (CommonTree)adaptor.Create(IS262);
+                    	adaptor.AddChild(root_0, IS262_tree);
                     	}
                     
                     }
                     break;
                 case 7 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1363:29: AS
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1365:29: AS
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	AS262 = (CommonToken)input.LT(1);
-                    	Match(input,AS,FOLLOW_AS_in_relationalOperator4698); if (failed) return retval;
+                    	AS263 = (CommonToken)input.LT(1);
+                    	Match(input,AS,FOLLOW_AS_in_relationalOperator4700); if (failed) return retval;
                     	if ( backtracking==0 ) {
-                    	AS262_tree = (CommonTree)adaptor.Create(AS262);
-                    	adaptor.AddChild(root_0, AS262_tree);
+                    	AS263_tree = (CommonTree)adaptor.Create(AS263);
+                    	adaptor.AddChild(root_0, AS263_tree);
                     	}
                     
                     }
                     break;
                 case 8 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1363:34: INSTANCEOF
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1365:34: INSTANCEOF
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	INSTANCEOF263 = (CommonToken)input.LT(1);
-                    	Match(input,INSTANCEOF,FOLLOW_INSTANCEOF_in_relationalOperator4702); if (failed) return retval;
+                    	INSTANCEOF264 = (CommonToken)input.LT(1);
+                    	Match(input,INSTANCEOF,FOLLOW_INSTANCEOF_in_relationalOperator4704); if (failed) return retval;
                     	if ( backtracking==0 ) {
-                    	INSTANCEOF263_tree = (CommonTree)adaptor.Create(INSTANCEOF263);
-                    	adaptor.AddChild(root_0, INSTANCEOF263_tree);
+                    	INSTANCEOF264_tree = (CommonTree)adaptor.Create(INSTANCEOF264);
+                    	adaptor.AddChild(root_0, INSTANCEOF264_tree);
                     	}
                     
                     }
@@ -18050,7 +18050,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start shiftExpression
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1367:1: shiftExpression : additiveExpression (op= shiftOperator additiveExpression )* ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1369:1: shiftExpression : additiveExpression (op= shiftOperator additiveExpression )* ;
     public shiftExpression_return shiftExpression() // throws RecognitionException [1]
     {   
         shiftExpression_return retval = new shiftExpression_return();
@@ -18060,9 +18060,9 @@ public class ASParser : Parser
     
         shiftOperator_return op = null;
 
-        additiveExpression_return additiveExpression264 = null;
-
         additiveExpression_return additiveExpression265 = null;
+
+        additiveExpression_return additiveExpression266 = null;
         
         
     
@@ -18072,17 +18072,17 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1368:4: ( additiveExpression (op= shiftOperator additiveExpression )* )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1368:4: additiveExpression (op= shiftOperator additiveExpression )*
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1370:4: ( additiveExpression (op= shiftOperator additiveExpression )* )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1370:4: additiveExpression (op= shiftOperator additiveExpression )*
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_additiveExpression_in_shiftExpression4714);
-            	additiveExpression264 = additiveExpression();
+            	PushFollow(FOLLOW_additiveExpression_in_shiftExpression4716);
+            	additiveExpression265 = additiveExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, additiveExpression264.Tree);
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1369:3: (op= shiftOperator additiveExpression )*
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, additiveExpression265.Tree);
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1371:3: (op= shiftOperator additiveExpression )*
             	do 
             	{
             	    int alt77 = 2;
@@ -18097,9 +18097,9 @@ public class ASParser : Parser
             	    switch (alt77) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1370:4: op= shiftOperator additiveExpression
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1372:4: op= shiftOperator additiveExpression
             			    {
-            			    	PushFollow(FOLLOW_shiftOperator_in_shiftExpression4725);
+            			    	PushFollow(FOLLOW_shiftOperator_in_shiftExpression4727);
             			    	op = shiftOperator();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -18112,11 +18112,11 @@ public class ASParser : Parser
             			    	  											if(options.SpaceBetweenOperators) buffer.Append(" "); 
             			    	  										
             			    	}
-            			    	PushFollow(FOLLOW_additiveExpression_in_shiftExpression4735);
-            			    	additiveExpression265 = additiveExpression();
+            			    	PushFollow(FOLLOW_additiveExpression_in_shiftExpression4737);
+            			    	additiveExpression266 = additiveExpression();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
-            			    	if ( backtracking==0 ) adaptor.AddChild(root_0, additiveExpression265.Tree);
+            			    	if ( backtracking==0 ) adaptor.AddChild(root_0, additiveExpression266.Tree);
             			    
             			    }
             			    break;
@@ -18176,7 +18176,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start shiftOperator
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1379:1: shiftOperator : ( SL | SR | BSR );
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1381:1: shiftOperator : ( SL | SR | BSR );
     public shiftOperator_return shiftOperator() // throws RecognitionException [1]
     {   
         shiftOperator_return retval = new shiftOperator_return();
@@ -18184,9 +18184,9 @@ public class ASParser : Parser
         int shiftOperator_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken set266 = null;
+        CommonToken set267 = null;
         
-        CommonTree set266_tree=null;
+        CommonTree set267_tree=null;
     
         try 
     	{
@@ -18194,16 +18194,16 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1380:4: ( SL | SR | BSR )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1382:4: ( SL | SR | BSR )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	set266 = (CommonToken)input.LT(1);
+            	set267 = (CommonToken)input.LT(1);
             	if ( (input.LA(1) >= SL && input.LA(1) <= BSR) ) 
             	{
             	    input.Consume();
-            	    if ( backtracking==0 ) adaptor.AddChild(root_0, adaptor.Create(set266));
+            	    if ( backtracking==0 ) adaptor.AddChild(root_0, adaptor.Create(set267));
             	    errorRecovery = false;failed = false;
             	}
             	else 
@@ -18261,7 +18261,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start additiveExpression
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1384:1: additiveExpression : multiplicativeExpression (op= additiveOperator multiplicativeExpression )* ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1386:1: additiveExpression : multiplicativeExpression (op= additiveOperator multiplicativeExpression )* ;
     public additiveExpression_return additiveExpression() // throws RecognitionException [1]
     {   
         additiveExpression_return retval = new additiveExpression_return();
@@ -18271,9 +18271,9 @@ public class ASParser : Parser
     
         additiveOperator_return op = null;
 
-        multiplicativeExpression_return multiplicativeExpression267 = null;
-
         multiplicativeExpression_return multiplicativeExpression268 = null;
+
+        multiplicativeExpression_return multiplicativeExpression269 = null;
         
         
     
@@ -18283,17 +18283,17 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1385:4: ( multiplicativeExpression (op= additiveOperator multiplicativeExpression )* )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1385:4: multiplicativeExpression (op= additiveOperator multiplicativeExpression )*
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1387:4: ( multiplicativeExpression (op= additiveOperator multiplicativeExpression )* )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1387:4: multiplicativeExpression (op= additiveOperator multiplicativeExpression )*
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_multiplicativeExpression_in_additiveExpression4771);
-            	multiplicativeExpression267 = multiplicativeExpression();
+            	PushFollow(FOLLOW_multiplicativeExpression_in_additiveExpression4773);
+            	multiplicativeExpression268 = multiplicativeExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, multiplicativeExpression267.Tree);
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1386:3: (op= additiveOperator multiplicativeExpression )*
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, multiplicativeExpression268.Tree);
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1388:3: (op= additiveOperator multiplicativeExpression )*
             	do 
             	{
             	    int alt78 = 2;
@@ -18998,9 +18998,9 @@ public class ASParser : Parser
             	    switch (alt78) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1387:4: op= additiveOperator multiplicativeExpression
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1389:4: op= additiveOperator multiplicativeExpression
             			    {
-            			    	PushFollow(FOLLOW_additiveOperator_in_additiveExpression4782);
+            			    	PushFollow(FOLLOW_additiveOperator_in_additiveExpression4784);
             			    	op = additiveOperator();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -19013,11 +19013,11 @@ public class ASParser : Parser
             			    	  											if(options.SpaceBetweenOperators) buffer.Append(" "); 
             			    	  										
             			    	}
-            			    	PushFollow(FOLLOW_multiplicativeExpression_in_additiveExpression4792);
-            			    	multiplicativeExpression268 = multiplicativeExpression();
+            			    	PushFollow(FOLLOW_multiplicativeExpression_in_additiveExpression4794);
+            			    	multiplicativeExpression269 = multiplicativeExpression();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
-            			    	if ( backtracking==0 ) adaptor.AddChild(root_0, multiplicativeExpression268.Tree);
+            			    	if ( backtracking==0 ) adaptor.AddChild(root_0, multiplicativeExpression269.Tree);
             			    
             			    }
             			    break;
@@ -19077,7 +19077,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start additiveOperator
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1396:1: additiveOperator : ( PLUS | MINUS );
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1398:1: additiveOperator : ( PLUS | MINUS );
     public additiveOperator_return additiveOperator() // throws RecognitionException [1]
     {   
         additiveOperator_return retval = new additiveOperator_return();
@@ -19085,9 +19085,9 @@ public class ASParser : Parser
         int additiveOperator_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken set269 = null;
+        CommonToken set270 = null;
         
-        CommonTree set269_tree=null;
+        CommonTree set270_tree=null;
     
         try 
     	{
@@ -19095,16 +19095,16 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1397:4: ( PLUS | MINUS )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1399:4: ( PLUS | MINUS )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	set269 = (CommonToken)input.LT(1);
+            	set270 = (CommonToken)input.LT(1);
             	if ( (input.LA(1) >= PLUS && input.LA(1) <= MINUS) ) 
             	{
             	    input.Consume();
-            	    if ( backtracking==0 ) adaptor.AddChild(root_0, adaptor.Create(set269));
+            	    if ( backtracking==0 ) adaptor.AddChild(root_0, adaptor.Create(set270));
             	    errorRecovery = false;failed = false;
             	}
             	else 
@@ -19162,7 +19162,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start multiplicativeExpression
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1401:1: multiplicativeExpression : unaryExpression (op= multiplicativeOperator unaryExpression )* ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1403:1: multiplicativeExpression : unaryExpression (op= multiplicativeOperator unaryExpression )* ;
     public multiplicativeExpression_return multiplicativeExpression() // throws RecognitionException [1]
     {   
         multiplicativeExpression_return retval = new multiplicativeExpression_return();
@@ -19172,9 +19172,9 @@ public class ASParser : Parser
     
         multiplicativeOperator_return op = null;
 
-        unaryExpression_return unaryExpression270 = null;
-
         unaryExpression_return unaryExpression271 = null;
+
+        unaryExpression_return unaryExpression272 = null;
         
         
     
@@ -19184,17 +19184,17 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1402:4: ( unaryExpression (op= multiplicativeOperator unaryExpression )* )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1402:4: unaryExpression (op= multiplicativeOperator unaryExpression )*
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1404:4: ( unaryExpression (op= multiplicativeOperator unaryExpression )* )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1404:4: unaryExpression (op= multiplicativeOperator unaryExpression )*
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	PushFollow(FOLLOW_unaryExpression_in_multiplicativeExpression4824);
-            	unaryExpression270 = unaryExpression();
+            	PushFollow(FOLLOW_unaryExpression_in_multiplicativeExpression4826);
+            	unaryExpression271 = unaryExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, unaryExpression270.Tree);
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1403:3: (op= multiplicativeOperator unaryExpression )*
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, unaryExpression271.Tree);
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1405:3: (op= multiplicativeOperator unaryExpression )*
             	do 
             	{
             	    int alt79 = 2;
@@ -19209,9 +19209,9 @@ public class ASParser : Parser
             	    switch (alt79) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1404:4: op= multiplicativeOperator unaryExpression
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1406:4: op= multiplicativeOperator unaryExpression
             			    {
-            			    	PushFollow(FOLLOW_multiplicativeOperator_in_multiplicativeExpression4836);
+            			    	PushFollow(FOLLOW_multiplicativeOperator_in_multiplicativeExpression4838);
             			    	op = multiplicativeOperator();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -19224,11 +19224,11 @@ public class ASParser : Parser
             			    	  											if(options.SpaceBetweenOperators) buffer.Append(" "); 
             			    	  										
             			    	}
-            			    	PushFollow(FOLLOW_unaryExpression_in_multiplicativeExpression4844);
-            			    	unaryExpression271 = unaryExpression();
+            			    	PushFollow(FOLLOW_unaryExpression_in_multiplicativeExpression4846);
+            			    	unaryExpression272 = unaryExpression();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
-            			    	if ( backtracking==0 ) adaptor.AddChild(root_0, unaryExpression271.Tree);
+            			    	if ( backtracking==0 ) adaptor.AddChild(root_0, unaryExpression272.Tree);
             			    
             			    }
             			    break;
@@ -19288,7 +19288,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start multiplicativeOperator
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1413:1: multiplicativeOperator : ( STAR | DIV | MOD );
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1415:1: multiplicativeOperator : ( STAR | DIV | MOD );
     public multiplicativeOperator_return multiplicativeOperator() // throws RecognitionException [1]
     {   
         multiplicativeOperator_return retval = new multiplicativeOperator_return();
@@ -19296,9 +19296,9 @@ public class ASParser : Parser
         int multiplicativeOperator_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken set272 = null;
+        CommonToken set273 = null;
         
-        CommonTree set272_tree=null;
+        CommonTree set273_tree=null;
     
         try 
     	{
@@ -19306,16 +19306,16 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1414:4: ( STAR | DIV | MOD )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1416:4: ( STAR | DIV | MOD )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	set272 = (CommonToken)input.LT(1);
+            	set273 = (CommonToken)input.LT(1);
             	if ( input.LA(1) == STAR || (input.LA(1) >= DIV && input.LA(1) <= MOD) ) 
             	{
             	    input.Consume();
-            	    if ( backtracking==0 ) adaptor.AddChild(root_0, adaptor.Create(set272));
+            	    if ( backtracking==0 ) adaptor.AddChild(root_0, adaptor.Create(set273));
             	    errorRecovery = false;failed = false;
             	}
             	else 
@@ -19373,7 +19373,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start unaryExpression
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1418:1: unaryExpression : (iin= INC unaryExpression -> ^( PRE_INC[$iin] unaryExpression ) | dde= DEC unaryExpression -> ^( PRE_DEC[$dde] unaryExpression ) | tmin= MINUS unaryExpression -> ^( UNARY_MINUS unaryExpression ) | tplus= PLUS unaryExpression -> ^( UNARY_PLUS unaryExpression ) | unaryExpressionNotPlusMinus );
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1420:1: unaryExpression : (iin= INC unaryExpression -> ^( PRE_INC[$iin] unaryExpression ) | dde= DEC unaryExpression -> ^( PRE_DEC[$dde] unaryExpression ) | tmin= MINUS unaryExpression -> ^( UNARY_MINUS unaryExpression ) | tplus= PLUS unaryExpression -> ^( UNARY_PLUS unaryExpression ) | unaryExpressionNotPlusMinus );
     public unaryExpression_return unaryExpression() // throws RecognitionException [1]
     {   
         unaryExpression_return retval = new unaryExpression_return();
@@ -19385,15 +19385,15 @@ public class ASParser : Parser
         CommonToken dde = null;
         CommonToken tmin = null;
         CommonToken tplus = null;
-        unaryExpression_return unaryExpression273 = null;
-
         unaryExpression_return unaryExpression274 = null;
 
         unaryExpression_return unaryExpression275 = null;
 
         unaryExpression_return unaryExpression276 = null;
 
-        unaryExpressionNotPlusMinus_return unaryExpressionNotPlusMinus277 = null;
+        unaryExpression_return unaryExpression277 = null;
+
+        unaryExpressionNotPlusMinus_return unaryExpressionNotPlusMinus278 = null;
         
         
         CommonTree iin_tree=null;
@@ -19411,7 +19411,7 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1419:4: (iin= INC unaryExpression -> ^( PRE_INC[$iin] unaryExpression ) | dde= DEC unaryExpression -> ^( PRE_DEC[$dde] unaryExpression ) | tmin= MINUS unaryExpression -> ^( UNARY_MINUS unaryExpression ) | tplus= PLUS unaryExpression -> ^( UNARY_PLUS unaryExpression ) | unaryExpressionNotPlusMinus )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1421:4: (iin= INC unaryExpression -> ^( PRE_INC[$iin] unaryExpression ) | dde= DEC unaryExpression -> ^( PRE_DEC[$dde] unaryExpression ) | tmin= MINUS unaryExpression -> ^( UNARY_MINUS unaryExpression ) | tplus= PLUS unaryExpression -> ^( UNARY_PLUS unaryExpression ) | unaryExpressionNotPlusMinus )
             int alt80 = 5;
             switch ( input.LA(1) ) 
             {
@@ -19469,7 +19469,7 @@ public class ASParser : Parser
             	default:
             	    if ( backtracking > 0 ) {failed = true; return retval;}
             	    NoViableAltException nvae_d80s0 =
-            	        new NoViableAltException("1418:1: unaryExpression : (iin= INC unaryExpression -> ^( PRE_INC[$iin] unaryExpression ) | dde= DEC unaryExpression -> ^( PRE_DEC[$dde] unaryExpression ) | tmin= MINUS unaryExpression -> ^( UNARY_MINUS unaryExpression ) | tplus= PLUS unaryExpression -> ^( UNARY_PLUS unaryExpression ) | unaryExpressionNotPlusMinus );", 80, 0, input);
+            	        new NoViableAltException("1420:1: unaryExpression : (iin= INC unaryExpression -> ^( PRE_INC[$iin] unaryExpression ) | dde= DEC unaryExpression -> ^( PRE_DEC[$dde] unaryExpression ) | tmin= MINUS unaryExpression -> ^( UNARY_MINUS unaryExpression ) | tplus= PLUS unaryExpression -> ^( UNARY_PLUS unaryExpression ) | unaryExpressionNotPlusMinus );", 80, 0, input);
             
             	    throw nvae_d80s0;
             }
@@ -19477,63 +19477,17 @@ public class ASParser : Parser
             switch (alt80) 
             {
                 case 1 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1419:4: iin= INC unaryExpression
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1421:4: iin= INC unaryExpression
                     {
                     	iin = (CommonToken)input.LT(1);
-                    	Match(input,INC,FOLLOW_INC_in_unaryExpression4882); if (failed) return retval;
+                    	Match(input,INC,FOLLOW_INC_in_unaryExpression4884); if (failed) return retval;
                     	if ( backtracking==0 ) stream_INC.Add(iin);
 
                     	if ( backtracking == 0 ) 
                     	{
                     	   buffer.Append(iin.Text); 
                     	}
-                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpression4887);
-                    	unaryExpression273 = unaryExpression();
-                    	followingStackPointer_--;
-                    	if (failed) return retval;
-                    	if ( backtracking==0 ) stream_unaryExpression.Add(unaryExpression273.Tree);
-                    	
-                    	// AST REWRITE
-                    	// elements:          unaryExpression
-                    	// token labels:      
-                    	// rule labels:       retval
-                    	// token list labels: 
-                    	// rule list labels:  
-                    	if ( backtracking==0 ) {
-                    	retval.tree = root_0;
-                    	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
-                    	
-                    	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 1419:59: -> ^( PRE_INC[$iin] unaryExpression )
-                    	{
-                    	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1419:62: ^( PRE_INC[$iin] unaryExpression )
-                    	    {
-                    	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
-                    	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(PRE_INC, iin), root_1);
-                    	    
-                    	    adaptor.AddChild(root_1, stream_unaryExpression.Next());
-                    	    
-                    	    adaptor.AddChild(root_0, root_1);
-                    	    }
-                    	
-                    	}
-                    	
-                    	}
-                    
-                    }
-                    break;
-                case 2 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1420:4: dde= DEC unaryExpression
-                    {
-                    	dde = (CommonToken)input.LT(1);
-                    	Match(input,DEC,FOLLOW_DEC_in_unaryExpression4904); if (failed) return retval;
-                    	if ( backtracking==0 ) stream_DEC.Add(dde);
-
-                    	if ( backtracking == 0 ) 
-                    	{
-                    	   buffer.Append(dde.Text); 
-                    	}
-                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpression4909);
+                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpression4889);
                     	unaryExpression274 = unaryExpression();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -19550,12 +19504,12 @@ public class ASParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
                     	
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 1420:59: -> ^( PRE_DEC[$dde] unaryExpression )
+                    	// 1421:59: -> ^( PRE_INC[$iin] unaryExpression )
                     	{
-                    	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1420:62: ^( PRE_DEC[$dde] unaryExpression )
+                    	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1421:62: ^( PRE_INC[$iin] unaryExpression )
                     	    {
                     	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
-                    	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(PRE_DEC, dde), root_1);
+                    	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(PRE_INC, iin), root_1);
                     	    
                     	    adaptor.AddChild(root_1, stream_unaryExpression.Next());
                     	    
@@ -19568,18 +19522,18 @@ public class ASParser : Parser
                     
                     }
                     break;
-                case 3 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1421:4: tmin= MINUS unaryExpression
+                case 2 :
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1422:4: dde= DEC unaryExpression
                     {
-                    	tmin = (CommonToken)input.LT(1);
-                    	Match(input,MINUS,FOLLOW_MINUS_in_unaryExpression4926); if (failed) return retval;
-                    	if ( backtracking==0 ) stream_MINUS.Add(tmin);
+                    	dde = (CommonToken)input.LT(1);
+                    	Match(input,DEC,FOLLOW_DEC_in_unaryExpression4906); if (failed) return retval;
+                    	if ( backtracking==0 ) stream_DEC.Add(dde);
 
                     	if ( backtracking == 0 ) 
                     	{
-                    	   buffer.Append(tmin.Text);  
+                    	   buffer.Append(dde.Text); 
                     	}
-                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpression4930);
+                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpression4911);
                     	unaryExpression275 = unaryExpression();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -19596,12 +19550,12 @@ public class ASParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
                     	
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 1421:63: -> ^( UNARY_MINUS unaryExpression )
+                    	// 1422:59: -> ^( PRE_DEC[$dde] unaryExpression )
                     	{
-                    	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1421:66: ^( UNARY_MINUS unaryExpression )
+                    	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1422:62: ^( PRE_DEC[$dde] unaryExpression )
                     	    {
                     	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
-                    	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(UNARY_MINUS, "UNARY_MINUS"), root_1);
+                    	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(PRE_DEC, dde), root_1);
                     	    
                     	    adaptor.AddChild(root_1, stream_unaryExpression.Next());
                     	    
@@ -19614,18 +19568,18 @@ public class ASParser : Parser
                     
                     }
                     break;
-                case 4 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1422:4: tplus= PLUS unaryExpression
+                case 3 :
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1423:4: tmin= MINUS unaryExpression
                     {
-                    	tplus = (CommonToken)input.LT(1);
-                    	Match(input,PLUS,FOLLOW_PLUS_in_unaryExpression4946); if (failed) return retval;
-                    	if ( backtracking==0 ) stream_PLUS.Add(tplus);
+                    	tmin = (CommonToken)input.LT(1);
+                    	Match(input,MINUS,FOLLOW_MINUS_in_unaryExpression4928); if (failed) return retval;
+                    	if ( backtracking==0 ) stream_MINUS.Add(tmin);
 
                     	if ( backtracking == 0 ) 
                     	{
-                    	   buffer.Append(tplus.Text); 
+                    	   buffer.Append(tmin.Text);  
                     	}
-                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpression4950);
+                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpression4932);
                     	unaryExpression276 = unaryExpression();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -19642,9 +19596,55 @@ public class ASParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
                     	
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 1422:63: -> ^( UNARY_PLUS unaryExpression )
+                    	// 1423:63: -> ^( UNARY_MINUS unaryExpression )
                     	{
-                    	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1422:66: ^( UNARY_PLUS unaryExpression )
+                    	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1423:66: ^( UNARY_MINUS unaryExpression )
+                    	    {
+                    	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
+                    	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(UNARY_MINUS, "UNARY_MINUS"), root_1);
+                    	    
+                    	    adaptor.AddChild(root_1, stream_unaryExpression.Next());
+                    	    
+                    	    adaptor.AddChild(root_0, root_1);
+                    	    }
+                    	
+                    	}
+                    	
+                    	}
+                    
+                    }
+                    break;
+                case 4 :
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1424:4: tplus= PLUS unaryExpression
+                    {
+                    	tplus = (CommonToken)input.LT(1);
+                    	Match(input,PLUS,FOLLOW_PLUS_in_unaryExpression4948); if (failed) return retval;
+                    	if ( backtracking==0 ) stream_PLUS.Add(tplus);
+
+                    	if ( backtracking == 0 ) 
+                    	{
+                    	   buffer.Append(tplus.Text); 
+                    	}
+                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpression4952);
+                    	unaryExpression277 = unaryExpression();
+                    	followingStackPointer_--;
+                    	if (failed) return retval;
+                    	if ( backtracking==0 ) stream_unaryExpression.Add(unaryExpression277.Tree);
+                    	
+                    	// AST REWRITE
+                    	// elements:          unaryExpression
+                    	// token labels:      
+                    	// rule labels:       retval
+                    	// token list labels: 
+                    	// rule list labels:  
+                    	if ( backtracking==0 ) {
+                    	retval.tree = root_0;
+                    	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
+                    	
+                    	root_0 = (CommonTree)adaptor.GetNilNode();
+                    	// 1424:63: -> ^( UNARY_PLUS unaryExpression )
+                    	{
+                    	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1424:66: ^( UNARY_PLUS unaryExpression )
                     	    {
                     	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
                     	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(UNARY_PLUS, "UNARY_PLUS"), root_1);
@@ -19661,15 +19661,15 @@ public class ASParser : Parser
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1423:4: unaryExpressionNotPlusMinus
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1425:4: unaryExpressionNotPlusMinus
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_unaryExpressionNotPlusMinus_in_unaryExpression4964);
-                    	unaryExpressionNotPlusMinus277 = unaryExpressionNotPlusMinus();
+                    	PushFollow(FOLLOW_unaryExpressionNotPlusMinus_in_unaryExpression4966);
+                    	unaryExpressionNotPlusMinus278 = unaryExpressionNotPlusMinus();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) adaptor.AddChild(root_0, unaryExpressionNotPlusMinus277.Tree);
+                    	if ( backtracking==0 ) adaptor.AddChild(root_0, unaryExpressionNotPlusMinus278.Tree);
                     
                     }
                     break;
@@ -19719,7 +19719,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start unaryExpressionNotPlusMinus
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1426:1: unaryExpressionNotPlusMinus : (tk1= DELETE postfixExpression -> ^( DELETE postfixExpression ) | tk2= VOID unaryExpression -> ^( VOID unaryExpression ) | tk3= TYPEOF unaryExpression -> ^( TYPEOF unaryExpression ) | tk4= LNOT unaryExpression -> ^( LNOT unaryExpression ) | tk5= BNOT unaryExpression -> ^( BNOT unaryExpression ) | postfixExpression );
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1428:1: unaryExpressionNotPlusMinus : (tk1= DELETE postfixExpression -> ^( DELETE postfixExpression ) | tk2= VOID unaryExpression -> ^( VOID unaryExpression ) | tk3= TYPEOF unaryExpression -> ^( TYPEOF unaryExpression ) | tk4= LNOT unaryExpression -> ^( LNOT unaryExpression ) | tk5= BNOT unaryExpression -> ^( BNOT unaryExpression ) | postfixExpression );
     public unaryExpressionNotPlusMinus_return unaryExpressionNotPlusMinus() // throws RecognitionException [1]
     {   
         unaryExpressionNotPlusMinus_return retval = new unaryExpressionNotPlusMinus_return();
@@ -19732,9 +19732,7 @@ public class ASParser : Parser
         CommonToken tk3 = null;
         CommonToken tk4 = null;
         CommonToken tk5 = null;
-        postfixExpression_return postfixExpression278 = null;
-
-        unaryExpression_return unaryExpression279 = null;
+        postfixExpression_return postfixExpression279 = null;
 
         unaryExpression_return unaryExpression280 = null;
 
@@ -19742,7 +19740,9 @@ public class ASParser : Parser
 
         unaryExpression_return unaryExpression282 = null;
 
-        postfixExpression_return postfixExpression283 = null;
+        unaryExpression_return unaryExpression283 = null;
+
+        postfixExpression_return postfixExpression284 = null;
         
         
         CommonTree tk1_tree=null;
@@ -19763,7 +19763,7 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1427:4: (tk1= DELETE postfixExpression -> ^( DELETE postfixExpression ) | tk2= VOID unaryExpression -> ^( VOID unaryExpression ) | tk3= TYPEOF unaryExpression -> ^( TYPEOF unaryExpression ) | tk4= LNOT unaryExpression -> ^( LNOT unaryExpression ) | tk5= BNOT unaryExpression -> ^( BNOT unaryExpression ) | postfixExpression )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1429:4: (tk1= DELETE postfixExpression -> ^( DELETE postfixExpression ) | tk2= VOID unaryExpression -> ^( VOID unaryExpression ) | tk3= TYPEOF unaryExpression -> ^( TYPEOF unaryExpression ) | tk4= LNOT unaryExpression -> ^( LNOT unaryExpression ) | tk5= BNOT unaryExpression -> ^( BNOT unaryExpression ) | postfixExpression )
             int alt81 = 6;
             switch ( input.LA(1) ) 
             {
@@ -19821,7 +19821,7 @@ public class ASParser : Parser
             	default:
             	    if ( backtracking > 0 ) {failed = true; return retval;}
             	    NoViableAltException nvae_d81s0 =
-            	        new NoViableAltException("1426:1: unaryExpressionNotPlusMinus : (tk1= DELETE postfixExpression -> ^( DELETE postfixExpression ) | tk2= VOID unaryExpression -> ^( VOID unaryExpression ) | tk3= TYPEOF unaryExpression -> ^( TYPEOF unaryExpression ) | tk4= LNOT unaryExpression -> ^( LNOT unaryExpression ) | tk5= BNOT unaryExpression -> ^( BNOT unaryExpression ) | postfixExpression );", 81, 0, input);
+            	        new NoViableAltException("1428:1: unaryExpressionNotPlusMinus : (tk1= DELETE postfixExpression -> ^( DELETE postfixExpression ) | tk2= VOID unaryExpression -> ^( VOID unaryExpression ) | tk3= TYPEOF unaryExpression -> ^( TYPEOF unaryExpression ) | tk4= LNOT unaryExpression -> ^( LNOT unaryExpression ) | tk5= BNOT unaryExpression -> ^( BNOT unaryExpression ) | postfixExpression );", 81, 0, input);
             
             	    throw nvae_d81s0;
             }
@@ -19829,21 +19829,21 @@ public class ASParser : Parser
             switch (alt81) 
             {
                 case 1 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1427:4: tk1= DELETE postfixExpression
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1429:4: tk1= DELETE postfixExpression
                     {
                     	tk1 = (CommonToken)input.LT(1);
-                    	Match(input,DELETE,FOLLOW_DELETE_in_unaryExpressionNotPlusMinus4977); if (failed) return retval;
+                    	Match(input,DELETE,FOLLOW_DELETE_in_unaryExpressionNotPlusMinus4979); if (failed) return retval;
                     	if ( backtracking==0 ) stream_DELETE.Add(tk1);
 
                     	if ( backtracking == 0 ) 
                     	{
                     	   buffer.Append(tk1.Text + " ");  
                     	}
-                    	PushFollow(FOLLOW_postfixExpression_in_unaryExpressionNotPlusMinus4982);
-                    	postfixExpression278 = postfixExpression();
+                    	PushFollow(FOLLOW_postfixExpression_in_unaryExpressionNotPlusMinus4984);
+                    	postfixExpression279 = postfixExpression();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) stream_postfixExpression.Add(postfixExpression278.Tree);
+                    	if ( backtracking==0 ) stream_postfixExpression.Add(postfixExpression279.Tree);
                     	
                     	// AST REWRITE
                     	// elements:          DELETE, postfixExpression
@@ -19856,9 +19856,9 @@ public class ASParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
                     	
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 1427:70: -> ^( DELETE postfixExpression )
+                    	// 1429:70: -> ^( DELETE postfixExpression )
                     	{
-                    	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1427:73: ^( DELETE postfixExpression )
+                    	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1429:73: ^( DELETE postfixExpression )
                     	    {
                     	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
                     	    root_1 = (CommonTree)adaptor.BecomeRoot(stream_DELETE.Next(), root_1);
@@ -19875,21 +19875,21 @@ public class ASParser : Parser
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1428:4: tk2= VOID unaryExpression
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1430:4: tk2= VOID unaryExpression
                     {
                     	tk2 = (CommonToken)input.LT(1);
-                    	Match(input,VOID,FOLLOW_VOID_in_unaryExpressionNotPlusMinus4997); if (failed) return retval;
+                    	Match(input,VOID,FOLLOW_VOID_in_unaryExpressionNotPlusMinus4999); if (failed) return retval;
                     	if ( backtracking==0 ) stream_VOID.Add(tk2);
 
                     	if ( backtracking == 0 ) 
                     	{
                     	   buffer.Append(tk2.Text + " ");  
                     	}
-                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus5001);
-                    	unaryExpression279 = unaryExpression();
+                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus5003);
+                    	unaryExpression280 = unaryExpression();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) stream_unaryExpression.Add(unaryExpression279.Tree);
+                    	if ( backtracking==0 ) stream_unaryExpression.Add(unaryExpression280.Tree);
                     	
                     	// AST REWRITE
                     	// elements:          VOID, unaryExpression
@@ -19902,9 +19902,9 @@ public class ASParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
                     	
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 1428:65: -> ^( VOID unaryExpression )
+                    	// 1430:65: -> ^( VOID unaryExpression )
                     	{
-                    	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1428:68: ^( VOID unaryExpression )
+                    	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1430:68: ^( VOID unaryExpression )
                     	    {
                     	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
                     	    root_1 = (CommonTree)adaptor.BecomeRoot(stream_VOID.Next(), root_1);
@@ -19921,21 +19921,21 @@ public class ASParser : Parser
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1429:4: tk3= TYPEOF unaryExpression
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1431:4: tk3= TYPEOF unaryExpression
                     {
                     	tk3 = (CommonToken)input.LT(1);
-                    	Match(input,TYPEOF,FOLLOW_TYPEOF_in_unaryExpressionNotPlusMinus5016); if (failed) return retval;
+                    	Match(input,TYPEOF,FOLLOW_TYPEOF_in_unaryExpressionNotPlusMinus5018); if (failed) return retval;
                     	if ( backtracking==0 ) stream_TYPEOF.Add(tk3);
 
                     	if ( backtracking == 0 ) 
                     	{
                     	   buffer.Append(tk3.Text + " ");  
                     	}
-                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus5020);
-                    	unaryExpression280 = unaryExpression();
+                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus5022);
+                    	unaryExpression281 = unaryExpression();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) stream_unaryExpression.Add(unaryExpression280.Tree);
+                    	if ( backtracking==0 ) stream_unaryExpression.Add(unaryExpression281.Tree);
                     	
                     	// AST REWRITE
                     	// elements:          TYPEOF, unaryExpression
@@ -19948,9 +19948,9 @@ public class ASParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
                     	
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 1429:67: -> ^( TYPEOF unaryExpression )
+                    	// 1431:67: -> ^( TYPEOF unaryExpression )
                     	{
-                    	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1429:70: ^( TYPEOF unaryExpression )
+                    	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1431:70: ^( TYPEOF unaryExpression )
                     	    {
                     	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
                     	    root_1 = (CommonTree)adaptor.BecomeRoot(stream_TYPEOF.Next(), root_1);
@@ -19967,21 +19967,21 @@ public class ASParser : Parser
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1430:4: tk4= LNOT unaryExpression
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1432:4: tk4= LNOT unaryExpression
                     {
                     	tk4 = (CommonToken)input.LT(1);
-                    	Match(input,LNOT,FOLLOW_LNOT_in_unaryExpressionNotPlusMinus5035); if (failed) return retval;
+                    	Match(input,LNOT,FOLLOW_LNOT_in_unaryExpressionNotPlusMinus5037); if (failed) return retval;
                     	if ( backtracking==0 ) stream_LNOT.Add(tk4);
 
                     	if ( backtracking == 0 ) 
                     	{
                     	   buffer.Append(tk4.Text + " ");  
                     	}
-                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus5039);
-                    	unaryExpression281 = unaryExpression();
+                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus5041);
+                    	unaryExpression282 = unaryExpression();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) stream_unaryExpression.Add(unaryExpression281.Tree);
+                    	if ( backtracking==0 ) stream_unaryExpression.Add(unaryExpression282.Tree);
                     	
                     	// AST REWRITE
                     	// elements:          unaryExpression, LNOT
@@ -19994,9 +19994,9 @@ public class ASParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
                     	
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 1430:65: -> ^( LNOT unaryExpression )
+                    	// 1432:65: -> ^( LNOT unaryExpression )
                     	{
-                    	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1430:68: ^( LNOT unaryExpression )
+                    	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1432:68: ^( LNOT unaryExpression )
                     	    {
                     	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
                     	    root_1 = (CommonTree)adaptor.BecomeRoot(stream_LNOT.Next(), root_1);
@@ -20013,21 +20013,21 @@ public class ASParser : Parser
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1431:4: tk5= BNOT unaryExpression
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1433:4: tk5= BNOT unaryExpression
                     {
                     	tk5 = (CommonToken)input.LT(1);
-                    	Match(input,BNOT,FOLLOW_BNOT_in_unaryExpressionNotPlusMinus5054); if (failed) return retval;
+                    	Match(input,BNOT,FOLLOW_BNOT_in_unaryExpressionNotPlusMinus5056); if (failed) return retval;
                     	if ( backtracking==0 ) stream_BNOT.Add(tk5);
 
                     	if ( backtracking == 0 ) 
                     	{
                     	   buffer.Append(tk5.Text + " ");  
                     	}
-                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus5058);
-                    	unaryExpression282 = unaryExpression();
+                    	PushFollow(FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus5060);
+                    	unaryExpression283 = unaryExpression();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) stream_unaryExpression.Add(unaryExpression282.Tree);
+                    	if ( backtracking==0 ) stream_unaryExpression.Add(unaryExpression283.Tree);
                     	
                     	// AST REWRITE
                     	// elements:          BNOT, unaryExpression
@@ -20040,9 +20040,9 @@ public class ASParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
                     	
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 1431:65: -> ^( BNOT unaryExpression )
+                    	// 1433:65: -> ^( BNOT unaryExpression )
                     	{
-                    	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1431:68: ^( BNOT unaryExpression )
+                    	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1433:68: ^( BNOT unaryExpression )
                     	    {
                     	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
                     	    root_1 = (CommonTree)adaptor.BecomeRoot(stream_BNOT.Next(), root_1);
@@ -20059,15 +20059,15 @@ public class ASParser : Parser
                     }
                     break;
                 case 6 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1432:4: postfixExpression
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1434:4: postfixExpression
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_postfixExpression_in_unaryExpressionNotPlusMinus5071);
-                    	postfixExpression283 = postfixExpression();
+                    	PushFollow(FOLLOW_postfixExpression_in_unaryExpressionNotPlusMinus5073);
+                    	postfixExpression284 = postfixExpression();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) adaptor.AddChild(root_0, postfixExpression283.Tree);
+                    	if ( backtracking==0 ) adaptor.AddChild(root_0, postfixExpression284.Tree);
                     
                     }
                     break;
@@ -20117,7 +20117,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start postfixExpression
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1436:1: postfixExpression : ( primaryExpression -> primaryExpression ) (poi= propOrIdent[root_0, retval.start] -> $poi | LBRACK expression RBRACK -> ^( ARRAY_ACC $postfixExpression expression ) | arguments -> ^( METHOD_CALL $postfixExpression arguments ) )* (iin= INC -> ^( POST_INC[$iin] $postfixExpression) | dde= DEC -> ^( POST_DEC[$dde] $postfixExpression) )? ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1438:1: postfixExpression : ( primaryExpression -> primaryExpression ) (poi= propOrIdent[root_0, retval.start] -> $poi | LBRACK expression RBRACK -> ^( ARRAY_ACC $postfixExpression expression ) | arguments -> ^( METHOD_CALL $postfixExpression arguments ) )* (iin= INC -> ^( POST_INC[$iin] $postfixExpression) | dde= DEC -> ^( POST_DEC[$dde] $postfixExpression) )? ;
     public postfixExpression_return postfixExpression() // throws RecognitionException [1]
     {   
         postfixExpression_return retval = new postfixExpression_return();
@@ -20127,21 +20127,21 @@ public class ASParser : Parser
     
         CommonToken iin = null;
         CommonToken dde = null;
-        CommonToken LBRACK285 = null;
-        CommonToken RBRACK287 = null;
+        CommonToken LBRACK286 = null;
+        CommonToken RBRACK288 = null;
         propOrIdent_return poi = null;
 
-        primaryExpression_return primaryExpression284 = null;
+        primaryExpression_return primaryExpression285 = null;
 
-        expression_return expression286 = null;
+        expression_return expression287 = null;
 
-        arguments_return arguments288 = null;
+        arguments_return arguments289 = null;
         
         
         CommonTree iin_tree=null;
         CommonTree dde_tree=null;
-        CommonTree LBRACK285_tree=null;
-        CommonTree RBRACK287_tree=null;
+        CommonTree LBRACK286_tree=null;
+        CommonTree RBRACK288_tree=null;
         RewriteRuleTokenStream stream_LBRACK = new RewriteRuleTokenStream(adaptor,"token LBRACK");
         RewriteRuleTokenStream stream_INC = new RewriteRuleTokenStream(adaptor,"token INC");
         RewriteRuleTokenStream stream_RBRACK = new RewriteRuleTokenStream(adaptor,"token RBRACK");
@@ -20156,17 +20156,17 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1437:4: ( ( primaryExpression -> primaryExpression ) (poi= propOrIdent[root_0, retval.start] -> $poi | LBRACK expression RBRACK -> ^( ARRAY_ACC $postfixExpression expression ) | arguments -> ^( METHOD_CALL $postfixExpression arguments ) )* (iin= INC -> ^( POST_INC[$iin] $postfixExpression) | dde= DEC -> ^( POST_DEC[$dde] $postfixExpression) )? )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1437:4: ( primaryExpression -> primaryExpression ) (poi= propOrIdent[root_0, retval.start] -> $poi | LBRACK expression RBRACK -> ^( ARRAY_ACC $postfixExpression expression ) | arguments -> ^( METHOD_CALL $postfixExpression arguments ) )* (iin= INC -> ^( POST_INC[$iin] $postfixExpression) | dde= DEC -> ^( POST_DEC[$dde] $postfixExpression) )?
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1439:4: ( ( primaryExpression -> primaryExpression ) (poi= propOrIdent[root_0, retval.start] -> $poi | LBRACK expression RBRACK -> ^( ARRAY_ACC $postfixExpression expression ) | arguments -> ^( METHOD_CALL $postfixExpression arguments ) )* (iin= INC -> ^( POST_INC[$iin] $postfixExpression) | dde= DEC -> ^( POST_DEC[$dde] $postfixExpression) )? )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1439:4: ( primaryExpression -> primaryExpression ) (poi= propOrIdent[root_0, retval.start] -> $poi | LBRACK expression RBRACK -> ^( ARRAY_ACC $postfixExpression expression ) | arguments -> ^( METHOD_CALL $postfixExpression arguments ) )* (iin= INC -> ^( POST_INC[$iin] $postfixExpression) | dde= DEC -> ^( POST_DEC[$dde] $postfixExpression) )?
             {
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1437:4: ( primaryExpression -> primaryExpression )
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1437:5: primaryExpression
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1439:4: ( primaryExpression -> primaryExpression )
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1439:5: primaryExpression
             	{
-            		PushFollow(FOLLOW_primaryExpression_in_postfixExpression5084);
-            		primaryExpression284 = primaryExpression();
+            		PushFollow(FOLLOW_primaryExpression_in_postfixExpression5086);
+            		primaryExpression285 = primaryExpression();
             		followingStackPointer_--;
             		if (failed) return retval;
-            		if ( backtracking==0 ) stream_primaryExpression.Add(primaryExpression284.Tree);
+            		if ( backtracking==0 ) stream_primaryExpression.Add(primaryExpression285.Tree);
             		
             		// AST REWRITE
             		// elements:          primaryExpression
@@ -20179,7 +20179,7 @@ public class ASParser : Parser
             		RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             		
             		root_0 = (CommonTree)adaptor.GetNilNode();
-            		// 1437:23: -> primaryExpression
+            		// 1439:23: -> primaryExpression
             		{
             		    adaptor.AddChild(root_0, stream_primaryExpression.Next());
             		
@@ -20189,7 +20189,7 @@ public class ASParser : Parser
             	
             	}
 
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1438:3: (poi= propOrIdent[root_0, retval.start] -> $poi | LBRACK expression RBRACK -> ^( ARRAY_ACC $postfixExpression expression ) | arguments -> ^( METHOD_CALL $postfixExpression arguments ) )*
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1440:3: (poi= propOrIdent[root_0, retval.start] -> $poi | LBRACK expression RBRACK -> ^( ARRAY_ACC $postfixExpression expression ) | arguments -> ^( METHOD_CALL $postfixExpression arguments ) )*
             	do 
             	{
             	    int alt82 = 4;
@@ -20907,9 +20907,9 @@ public class ASParser : Parser
             	    switch (alt82) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1438:5: poi= propOrIdent[root_0, retval.start]
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1440:5: poi= propOrIdent[root_0, retval.start]
             			    {
-            			    	PushFollow(FOLLOW_propOrIdent_in_postfixExpression5097);
+            			    	PushFollow(FOLLOW_propOrIdent_in_postfixExpression5099);
             			    	poi = propOrIdent(root_0,  retval.start);
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
@@ -20931,7 +20931,7 @@ public class ASParser : Parser
             			    	RewriteRuleSubtreeStream stream_poi = new RewriteRuleSubtreeStream(adaptor, "token poi", (poi!=null ? poi.Tree : null));
             			    	
             			    	root_0 = (CommonTree)adaptor.GetNilNode();
-            			    	// 1438:47: -> $poi
+            			    	// 1440:47: -> $poi
             			    	{
             			    	    adaptor.AddChild(root_0, stream_poi.Next());
             			    	
@@ -20942,24 +20942,24 @@ public class ASParser : Parser
             			    }
             			    break;
             			case 2 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1439:5: LBRACK expression RBRACK
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1441:5: LBRACK expression RBRACK
             			    {
-            			    	LBRACK285 = (CommonToken)input.LT(1);
-            			    	Match(input,LBRACK,FOLLOW_LBRACK_in_postfixExpression5111); if (failed) return retval;
-            			    	if ( backtracking==0 ) stream_LBRACK.Add(LBRACK285);
+            			    	LBRACK286 = (CommonToken)input.LT(1);
+            			    	Match(input,LBRACK,FOLLOW_LBRACK_in_postfixExpression5113); if (failed) return retval;
+            			    	if ( backtracking==0 ) stream_LBRACK.Add(LBRACK286);
 
             			    	if ( backtracking == 0 ) 
             			    	{
             			    	   buffer.Append("["); 
             			    	}
-            			    	PushFollow(FOLLOW_expression_in_postfixExpression5115);
-            			    	expression286 = expression();
+            			    	PushFollow(FOLLOW_expression_in_postfixExpression5117);
+            			    	expression287 = expression();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
-            			    	if ( backtracking==0 ) stream_expression.Add(expression286.Tree);
-            			    	RBRACK287 = (CommonToken)input.LT(1);
-            			    	Match(input,RBRACK,FOLLOW_RBRACK_in_postfixExpression5117); if (failed) return retval;
-            			    	if ( backtracking==0 ) stream_RBRACK.Add(RBRACK287);
+            			    	if ( backtracking==0 ) stream_expression.Add(expression287.Tree);
+            			    	RBRACK288 = (CommonToken)input.LT(1);
+            			    	Match(input,RBRACK,FOLLOW_RBRACK_in_postfixExpression5119); if (failed) return retval;
+            			    	if ( backtracking==0 ) stream_RBRACK.Add(RBRACK288);
 
             			    	if ( backtracking == 0 ) 
             			    	{
@@ -20977,9 +20977,9 @@ public class ASParser : Parser
             			    	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             			    	
             			    	root_0 = (CommonTree)adaptor.GetNilNode();
-            			    	// 1439:78: -> ^( ARRAY_ACC $postfixExpression expression )
+            			    	// 1441:78: -> ^( ARRAY_ACC $postfixExpression expression )
             			    	{
-            			    	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1439:81: ^( ARRAY_ACC $postfixExpression expression )
+            			    	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1441:81: ^( ARRAY_ACC $postfixExpression expression )
             			    	    {
             			    	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             			    	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(ARRAY_ACC, "ARRAY_ACC"), root_1);
@@ -20997,13 +20997,13 @@ public class ASParser : Parser
             			    }
             			    break;
             			case 3 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1440:5: arguments
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1442:5: arguments
             			    {
-            			    	PushFollow(FOLLOW_arguments_in_postfixExpression5136);
-            			    	arguments288 = arguments();
+            			    	PushFollow(FOLLOW_arguments_in_postfixExpression5138);
+            			    	arguments289 = arguments();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
-            			    	if ( backtracking==0 ) stream_arguments.Add(arguments288.Tree);
+            			    	if ( backtracking==0 ) stream_arguments.Add(arguments289.Tree);
             			    	
             			    	// AST REWRITE
             			    	// elements:          arguments, postfixExpression
@@ -21016,9 +21016,9 @@ public class ASParser : Parser
             			    	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             			    	
             			    	root_0 = (CommonTree)adaptor.GetNilNode();
-            			    	// 1440:15: -> ^( METHOD_CALL $postfixExpression arguments )
+            			    	// 1442:15: -> ^( METHOD_CALL $postfixExpression arguments )
             			    	{
-            			    	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1440:18: ^( METHOD_CALL $postfixExpression arguments )
+            			    	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1442:18: ^( METHOD_CALL $postfixExpression arguments )
             			    	    {
             			    	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             			    	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(METHOD_CALL, "METHOD_CALL"), root_1);
@@ -21044,7 +21044,7 @@ public class ASParser : Parser
             	loop82:
             		;	// Stops C# compiler whinging that label 'loop82' has no statements
 
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1443:3: (iin= INC -> ^( POST_INC[$iin] $postfixExpression) | dde= DEC -> ^( POST_DEC[$dde] $postfixExpression) )?
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1445:3: (iin= INC -> ^( POST_INC[$iin] $postfixExpression) | dde= DEC -> ^( POST_DEC[$dde] $postfixExpression) )?
             	int alt83 = 3;
             	int LA83_0 = input.LA(1);
             	
@@ -21791,10 +21791,10 @@ public class ASParser : Parser
             	switch (alt83) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1443:6: iin= INC
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1445:6: iin= INC
             	        {
             	        	iin = (CommonToken)input.LT(1);
-            	        	Match(input,INC,FOLLOW_INC_in_postfixExpression5162); if (failed) return retval;
+            	        	Match(input,INC,FOLLOW_INC_in_postfixExpression5164); if (failed) return retval;
             	        	if ( backtracking==0 ) stream_INC.Add(iin);
 
             	        	if ( backtracking == 0 ) 
@@ -21813,9 +21813,9 @@ public class ASParser : Parser
             	        	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	        	
             	        	root_0 = (CommonTree)adaptor.GetNilNode();
-            	        	// 1443:43: -> ^( POST_INC[$iin] $postfixExpression)
+            	        	// 1445:43: -> ^( POST_INC[$iin] $postfixExpression)
             	        	{
-            	        	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1443:46: ^( POST_INC[$iin] $postfixExpression)
+            	        	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1445:46: ^( POST_INC[$iin] $postfixExpression)
             	        	    {
             	        	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	        	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(POST_INC, iin), root_1);
@@ -21832,10 +21832,10 @@ public class ASParser : Parser
             	        }
             	        break;
             	    case 2 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1444:6: dde= DEC
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1446:6: dde= DEC
             	        {
             	        	dde = (CommonToken)input.LT(1);
-            	        	Match(input,DEC,FOLLOW_DEC_in_postfixExpression5183); if (failed) return retval;
+            	        	Match(input,DEC,FOLLOW_DEC_in_postfixExpression5185); if (failed) return retval;
             	        	if ( backtracking==0 ) stream_DEC.Add(dde);
 
             	        	if ( backtracking == 0 ) 
@@ -21854,9 +21854,9 @@ public class ASParser : Parser
             	        	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	        	
             	        	root_0 = (CommonTree)adaptor.GetNilNode();
-            	        	// 1444:43: -> ^( POST_DEC[$dde] $postfixExpression)
+            	        	// 1446:43: -> ^( POST_DEC[$dde] $postfixExpression)
             	        	{
-            	        	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1444:46: ^( POST_DEC[$dde] $postfixExpression)
+            	        	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1446:46: ^( POST_DEC[$dde] $postfixExpression)
             	        	    {
             	        	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	        	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(POST_DEC, dde), root_1);
@@ -21922,7 +21922,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start primaryExpression
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1448:1: primaryExpression : (und= UNDEFINED | c= constant | arrayLiteral | objectLiteral | functionDefinition | newFullExpression | encapsulatedExpression | qualifiedIdent );
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1450:1: primaryExpression : (und= UNDEFINED | c= constant | arrayLiteral | objectLiteral | functionDefinition | newFullExpression | encapsulatedExpression | qualifiedIdent );
     public primaryExpression_return primaryExpression() // throws RecognitionException [1]
     {   
         primaryExpression_return retval = new primaryExpression_return();
@@ -21933,17 +21933,17 @@ public class ASParser : Parser
         CommonToken und = null;
         constant_return c = null;
 
-        arrayLiteral_return arrayLiteral289 = null;
+        arrayLiteral_return arrayLiteral290 = null;
 
-        objectLiteral_return objectLiteral290 = null;
+        objectLiteral_return objectLiteral291 = null;
 
-        functionDefinition_return functionDefinition291 = null;
+        functionDefinition_return functionDefinition292 = null;
 
-        newFullExpression_return newFullExpression292 = null;
+        newFullExpression_return newFullExpression293 = null;
 
-        encapsulatedExpression_return encapsulatedExpression293 = null;
+        encapsulatedExpression_return encapsulatedExpression294 = null;
 
-        qualifiedIdent_return qualifiedIdent294 = null;
+        qualifiedIdent_return qualifiedIdent295 = null;
         
         
         CommonTree und_tree=null;
@@ -21954,7 +21954,7 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1449:4: (und= UNDEFINED | c= constant | arrayLiteral | objectLiteral | functionDefinition | newFullExpression | encapsulatedExpression | qualifiedIdent )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1451:4: (und= UNDEFINED | c= constant | arrayLiteral | objectLiteral | functionDefinition | newFullExpression | encapsulatedExpression | qualifiedIdent )
             int alt84 = 8;
             switch ( input.LA(1) ) 
             {
@@ -22015,7 +22015,7 @@ public class ASParser : Parser
             	default:
             	    if ( backtracking > 0 ) {failed = true; return retval;}
             	    NoViableAltException nvae_d84s0 =
-            	        new NoViableAltException("1448:1: primaryExpression : (und= UNDEFINED | c= constant | arrayLiteral | objectLiteral | functionDefinition | newFullExpression | encapsulatedExpression | qualifiedIdent );", 84, 0, input);
+            	        new NoViableAltException("1450:1: primaryExpression : (und= UNDEFINED | c= constant | arrayLiteral | objectLiteral | functionDefinition | newFullExpression | encapsulatedExpression | qualifiedIdent );", 84, 0, input);
             
             	    throw nvae_d84s0;
             }
@@ -22023,12 +22023,12 @@ public class ASParser : Parser
             switch (alt84) 
             {
                 case 1 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1449:4: und= UNDEFINED
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1451:4: und= UNDEFINED
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
                     	und = (CommonToken)input.LT(1);
-                    	Match(input,UNDEFINED,FOLLOW_UNDEFINED_in_primaryExpression5214); if (failed) return retval;
+                    	Match(input,UNDEFINED,FOLLOW_UNDEFINED_in_primaryExpression5216); if (failed) return retval;
                     	if ( backtracking==0 ) {
                     	und_tree = (CommonTree)adaptor.Create(und);
                     	adaptor.AddChild(root_0, und_tree);
@@ -22041,11 +22041,11 @@ public class ASParser : Parser
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1450:4: c= constant
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1452:4: c= constant
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_constant_in_primaryExpression5226);
+                    	PushFollow(FOLLOW_constant_in_primaryExpression5228);
                     	c = constant();
                     	followingStackPointer_--;
                     	if (failed) return retval;
@@ -22058,80 +22058,80 @@ public class ASParser : Parser
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1451:4: arrayLiteral
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1453:4: arrayLiteral
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_arrayLiteral_in_primaryExpression5237);
-                    	arrayLiteral289 = arrayLiteral();
+                    	PushFollow(FOLLOW_arrayLiteral_in_primaryExpression5239);
+                    	arrayLiteral290 = arrayLiteral();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) adaptor.AddChild(root_0, arrayLiteral289.Tree);
+                    	if ( backtracking==0 ) adaptor.AddChild(root_0, arrayLiteral290.Tree);
                     
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1452:4: objectLiteral
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1454:4: objectLiteral
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_objectLiteral_in_primaryExpression5242);
-                    	objectLiteral290 = objectLiteral();
+                    	PushFollow(FOLLOW_objectLiteral_in_primaryExpression5244);
+                    	objectLiteral291 = objectLiteral();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) adaptor.AddChild(root_0, objectLiteral290.Tree);
+                    	if ( backtracking==0 ) adaptor.AddChild(root_0, objectLiteral291.Tree);
                     
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1453:4: functionDefinition
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1455:4: functionDefinition
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_functionDefinition_in_primaryExpression5247);
-                    	functionDefinition291 = functionDefinition();
+                    	PushFollow(FOLLOW_functionDefinition_in_primaryExpression5249);
+                    	functionDefinition292 = functionDefinition();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) adaptor.AddChild(root_0, functionDefinition291.Tree);
+                    	if ( backtracking==0 ) adaptor.AddChild(root_0, functionDefinition292.Tree);
                     
                     }
                     break;
                 case 6 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1454:4: newFullExpression
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1456:4: newFullExpression
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_newFullExpression_in_primaryExpression5252);
-                    	newFullExpression292 = newFullExpression();
+                    	PushFollow(FOLLOW_newFullExpression_in_primaryExpression5254);
+                    	newFullExpression293 = newFullExpression();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) adaptor.AddChild(root_0, newFullExpression292.Tree);
+                    	if ( backtracking==0 ) adaptor.AddChild(root_0, newFullExpression293.Tree);
                     
                     }
                     break;
                 case 7 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1455:4: encapsulatedExpression
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1457:4: encapsulatedExpression
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_encapsulatedExpression_in_primaryExpression5257);
-                    	encapsulatedExpression293 = encapsulatedExpression();
+                    	PushFollow(FOLLOW_encapsulatedExpression_in_primaryExpression5259);
+                    	encapsulatedExpression294 = encapsulatedExpression();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) adaptor.AddChild(root_0, encapsulatedExpression293.Tree);
+                    	if ( backtracking==0 ) adaptor.AddChild(root_0, encapsulatedExpression294.Tree);
                     
                     }
                     break;
                 case 8 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1456:4: qualifiedIdent
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1458:4: qualifiedIdent
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_qualifiedIdent_in_primaryExpression5262);
-                    	qualifiedIdent294 = qualifiedIdent();
+                    	PushFollow(FOLLOW_qualifiedIdent_in_primaryExpression5264);
+                    	qualifiedIdent295 = qualifiedIdent();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) adaptor.AddChild(root_0, qualifiedIdent294.Tree);
+                    	if ( backtracking==0 ) adaptor.AddChild(root_0, qualifiedIdent295.Tree);
                     
                     }
                     break;
@@ -22181,7 +22181,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start propOrIdent
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1460:1: propOrIdent[CommonTree identPrimary, IToken startToken] : DOT propId= qualifiedIdent -> ^( PROPERTY_OR_IDENTIFIER $propId) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1462:1: propOrIdent[CommonTree identPrimary, IToken startToken] : DOT propId= qualifiedIdent -> ^( PROPERTY_OR_IDENTIFIER $propId) ;
     public propOrIdent_return propOrIdent(CommonTree identPrimary, IToken startToken) // throws RecognitionException [1]
     {   
         propOrIdent_return retval = new propOrIdent_return();
@@ -22189,11 +22189,11 @@ public class ASParser : Parser
         int propOrIdent_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken DOT295 = null;
+        CommonToken DOT296 = null;
         qualifiedIdent_return propId = null;
         
         
-        CommonTree DOT295_tree=null;
+        CommonTree DOT296_tree=null;
         RewriteRuleTokenStream stream_DOT = new RewriteRuleTokenStream(adaptor,"token DOT");
         RewriteRuleSubtreeStream stream_qualifiedIdent = new RewriteRuleSubtreeStream(adaptor,"rule qualifiedIdent");
         try 
@@ -22202,22 +22202,22 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1462:9: ( DOT propId= qualifiedIdent -> ^( PROPERTY_OR_IDENTIFIER $propId) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1462:9: DOT propId= qualifiedIdent
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1464:9: ( DOT propId= qualifiedIdent -> ^( PROPERTY_OR_IDENTIFIER $propId) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1464:9: DOT propId= qualifiedIdent
             {
             	if ( backtracking == 0 ) 
             	{
             	   retval.start = startToken; 
             	}
-            	DOT295 = (CommonToken)input.LT(1);
-            	Match(input,DOT,FOLLOW_DOT_in_propOrIdent5288); if (failed) return retval;
-            	if ( backtracking==0 ) stream_DOT.Add(DOT295);
+            	DOT296 = (CommonToken)input.LT(1);
+            	Match(input,DOT,FOLLOW_DOT_in_propOrIdent5290); if (failed) return retval;
+            	if ( backtracking==0 ) stream_DOT.Add(DOT296);
 
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append("."); 
             	}
-            	PushFollow(FOLLOW_qualifiedIdent_in_propOrIdent5301);
+            	PushFollow(FOLLOW_qualifiedIdent_in_propOrIdent5303);
             	propId = qualifiedIdent();
             	followingStackPointer_--;
             	if (failed) return retval;
@@ -22235,9 +22235,9 @@ public class ASParser : Parser
             	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	
             	root_0 = (CommonTree)adaptor.GetNilNode();
-            	// 1465:3: -> ^( PROPERTY_OR_IDENTIFIER $propId)
+            	// 1467:3: -> ^( PROPERTY_OR_IDENTIFIER $propId)
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1465:6: ^( PROPERTY_OR_IDENTIFIER $propId)
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1467:6: ^( PROPERTY_OR_IDENTIFIER $propId)
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(PROPERTY_OR_IDENTIFIER, "PROPERTY_OR_IDENTIFIER"), root_1);
@@ -22298,7 +22298,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start constant
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1468:1: constant : ( number | STRING_LITERAL | TRUE | FALSE | NULL );
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1470:1: constant : ( number | STRING_LITERAL | TRUE | FALSE | NULL );
     public constant_return constant() // throws RecognitionException [1]
     {   
         constant_return retval = new constant_return();
@@ -22306,17 +22306,17 @@ public class ASParser : Parser
         int constant_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken STRING_LITERAL297 = null;
-        CommonToken TRUE298 = null;
-        CommonToken FALSE299 = null;
-        CommonToken NULL300 = null;
-        number_return number296 = null;
+        CommonToken STRING_LITERAL298 = null;
+        CommonToken TRUE299 = null;
+        CommonToken FALSE300 = null;
+        CommonToken NULL301 = null;
+        number_return number297 = null;
         
         
-        CommonTree STRING_LITERAL297_tree=null;
-        CommonTree TRUE298_tree=null;
-        CommonTree FALSE299_tree=null;
-        CommonTree NULL300_tree=null;
+        CommonTree STRING_LITERAL298_tree=null;
+        CommonTree TRUE299_tree=null;
+        CommonTree FALSE300_tree=null;
+        CommonTree NULL301_tree=null;
     
         try 
     	{
@@ -22324,7 +22324,7 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1469:4: ( number | STRING_LITERAL | TRUE | FALSE | NULL )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1471:4: ( number | STRING_LITERAL | TRUE | FALSE | NULL )
             int alt85 = 5;
             switch ( input.LA(1) ) 
             {
@@ -22359,7 +22359,7 @@ public class ASParser : Parser
             	default:
             	    if ( backtracking > 0 ) {failed = true; return retval;}
             	    NoViableAltException nvae_d85s0 =
-            	        new NoViableAltException("1468:1: constant : ( number | STRING_LITERAL | TRUE | FALSE | NULL );", 85, 0, input);
+            	        new NoViableAltException("1470:1: constant : ( number | STRING_LITERAL | TRUE | FALSE | NULL );", 85, 0, input);
             
             	    throw nvae_d85s0;
             }
@@ -22367,70 +22367,70 @@ public class ASParser : Parser
             switch (alt85) 
             {
                 case 1 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1469:4: number
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1471:4: number
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	PushFollow(FOLLOW_number_in_constant5325);
-                    	number296 = number();
+                    	PushFollow(FOLLOW_number_in_constant5327);
+                    	number297 = number();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) adaptor.AddChild(root_0, number296.Tree);
+                    	if ( backtracking==0 ) adaptor.AddChild(root_0, number297.Tree);
                     
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1470:4: STRING_LITERAL
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1472:4: STRING_LITERAL
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	STRING_LITERAL297 = (CommonToken)input.LT(1);
-                    	Match(input,STRING_LITERAL,FOLLOW_STRING_LITERAL_in_constant5330); if (failed) return retval;
+                    	STRING_LITERAL298 = (CommonToken)input.LT(1);
+                    	Match(input,STRING_LITERAL,FOLLOW_STRING_LITERAL_in_constant5332); if (failed) return retval;
                     	if ( backtracking==0 ) {
-                    	STRING_LITERAL297_tree = (CommonTree)adaptor.Create(STRING_LITERAL297);
-                    	adaptor.AddChild(root_0, STRING_LITERAL297_tree);
+                    	STRING_LITERAL298_tree = (CommonTree)adaptor.Create(STRING_LITERAL298);
+                    	adaptor.AddChild(root_0, STRING_LITERAL298_tree);
                     	}
                     
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1471:4: TRUE
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1473:4: TRUE
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	TRUE298 = (CommonToken)input.LT(1);
-                    	Match(input,TRUE,FOLLOW_TRUE_in_constant5335); if (failed) return retval;
+                    	TRUE299 = (CommonToken)input.LT(1);
+                    	Match(input,TRUE,FOLLOW_TRUE_in_constant5337); if (failed) return retval;
                     	if ( backtracking==0 ) {
-                    	TRUE298_tree = (CommonTree)adaptor.Create(TRUE298);
-                    	adaptor.AddChild(root_0, TRUE298_tree);
+                    	TRUE299_tree = (CommonTree)adaptor.Create(TRUE299);
+                    	adaptor.AddChild(root_0, TRUE299_tree);
                     	}
                     
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1472:4: FALSE
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1474:4: FALSE
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	FALSE299 = (CommonToken)input.LT(1);
-                    	Match(input,FALSE,FOLLOW_FALSE_in_constant5340); if (failed) return retval;
+                    	FALSE300 = (CommonToken)input.LT(1);
+                    	Match(input,FALSE,FOLLOW_FALSE_in_constant5342); if (failed) return retval;
                     	if ( backtracking==0 ) {
-                    	FALSE299_tree = (CommonTree)adaptor.Create(FALSE299);
-                    	adaptor.AddChild(root_0, FALSE299_tree);
+                    	FALSE300_tree = (CommonTree)adaptor.Create(FALSE300);
+                    	adaptor.AddChild(root_0, FALSE300_tree);
                     	}
                     
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1473:4: NULL
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1475:4: NULL
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	NULL300 = (CommonToken)input.LT(1);
-                    	Match(input,NULL,FOLLOW_NULL_in_constant5345); if (failed) return retval;
+                    	NULL301 = (CommonToken)input.LT(1);
+                    	Match(input,NULL,FOLLOW_NULL_in_constant5347); if (failed) return retval;
                     	if ( backtracking==0 ) {
-                    	NULL300_tree = (CommonTree)adaptor.Create(NULL300);
-                    	adaptor.AddChild(root_0, NULL300_tree);
+                    	NULL301_tree = (CommonTree)adaptor.Create(NULL301);
+                    	adaptor.AddChild(root_0, NULL301_tree);
                     	}
                     
                     }
@@ -22481,7 +22481,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start number
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1476:1: number : ( HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | FLOAT_LITERAL );
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1478:1: number : ( HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | FLOAT_LITERAL );
     public number_return number() // throws RecognitionException [1]
     {   
         number_return retval = new number_return();
@@ -22489,9 +22489,9 @@ public class ASParser : Parser
         int number_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken set301 = null;
+        CommonToken set302 = null;
         
-        CommonTree set301_tree=null;
+        CommonTree set302_tree=null;
     
         try 
     	{
@@ -22499,16 +22499,16 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1477:4: ( HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | FLOAT_LITERAL )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1479:4: ( HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | FLOAT_LITERAL )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	set301 = (CommonToken)input.LT(1);
+            	set302 = (CommonToken)input.LT(1);
             	if ( (input.LA(1) >= HEX_LITERAL && input.LA(1) <= FLOAT_LITERAL) ) 
             	{
             	    input.Consume();
-            	    if ( backtracking==0 ) adaptor.AddChild(root_0, adaptor.Create(set301));
+            	    if ( backtracking==0 ) adaptor.AddChild(root_0, adaptor.Create(set302));
             	    errorRecovery = false;failed = false;
             	}
             	else 
@@ -22566,7 +22566,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start newFullExpression
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1484:1: newFullExpression : n= NEW fullNewSubexpression arguments ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1486:1: newFullExpression : n= NEW fullNewSubexpression arguments ;
     public newFullExpression_return newFullExpression() // throws RecognitionException [1]
     {   
         newFullExpression_return retval = new newFullExpression_return();
@@ -22575,9 +22575,9 @@ public class ASParser : Parser
         CommonTree root_0 = null;
     
         CommonToken n = null;
-        fullNewSubexpression_return fullNewSubexpression302 = null;
+        fullNewSubexpression_return fullNewSubexpression303 = null;
 
-        arguments_return arguments303 = null;
+        arguments_return arguments304 = null;
         
         
         CommonTree n_tree=null;
@@ -22588,13 +22588,13 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1485:4: (n= NEW fullNewSubexpression arguments )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1485:4: n= NEW fullNewSubexpression arguments
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1487:4: (n= NEW fullNewSubexpression arguments )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1487:4: n= NEW fullNewSubexpression arguments
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
             	n = (CommonToken)input.LT(1);
-            	Match(input,NEW,FOLLOW_NEW_in_newFullExpression5387); if (failed) return retval;
+            	Match(input,NEW,FOLLOW_NEW_in_newFullExpression5389); if (failed) return retval;
             	if ( backtracking==0 ) {
             	n_tree = (CommonTree)adaptor.Create(n);
             	root_0 = (CommonTree)adaptor.BecomeRoot(n_tree, root_0);
@@ -22603,20 +22603,20 @@ public class ASParser : Parser
             	{
             	   buffer.Append(n.Text + " "); 
             	}
-            	PushFollow(FOLLOW_fullNewSubexpression_in_newFullExpression5398);
-            	fullNewSubexpression302 = fullNewSubexpression();
+            	PushFollow(FOLLOW_fullNewSubexpression_in_newFullExpression5400);
+            	fullNewSubexpression303 = fullNewSubexpression();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, fullNewSubexpression302.Tree);
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, fullNewSubexpression303.Tree);
             	if ( backtracking == 0 ) 
             	{
             	   
             	}
-            	PushFollow(FOLLOW_arguments_in_newFullExpression5404);
-            	arguments303 = arguments();
+            	PushFollow(FOLLOW_arguments_in_newFullExpression5406);
+            	arguments304 = arguments();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, arguments303.Tree);
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, arguments304.Tree);
             	if ( backtracking == 0 ) 
             	{
             	   
@@ -22668,7 +22668,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start fullNewSubexpression
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1490:1: fullNewSubexpression : ( primaryExpression -> primaryExpression ) ( DOT qualifiedIdent -> ^( DOT $fullNewSubexpression qualifiedIdent ) | brackets -> ^( ARRAY_ACC $fullNewSubexpression brackets ) )* ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1492:1: fullNewSubexpression : ( primaryExpression -> primaryExpression ) ( DOT qualifiedIdent -> ^( DOT $fullNewSubexpression qualifiedIdent ) | brackets -> ^( ARRAY_ACC $fullNewSubexpression brackets ) )* ;
     public fullNewSubexpression_return fullNewSubexpression() // throws RecognitionException [1]
     {   
         fullNewSubexpression_return retval = new fullNewSubexpression_return();
@@ -22676,15 +22676,15 @@ public class ASParser : Parser
         int fullNewSubexpression_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken DOT305 = null;
-        primaryExpression_return primaryExpression304 = null;
+        CommonToken DOT306 = null;
+        primaryExpression_return primaryExpression305 = null;
 
-        qualifiedIdent_return qualifiedIdent306 = null;
+        qualifiedIdent_return qualifiedIdent307 = null;
 
-        brackets_return brackets307 = null;
+        brackets_return brackets308 = null;
         
         
-        CommonTree DOT305_tree=null;
+        CommonTree DOT306_tree=null;
         RewriteRuleTokenStream stream_DOT = new RewriteRuleTokenStream(adaptor,"token DOT");
         RewriteRuleSubtreeStream stream_primaryExpression = new RewriteRuleSubtreeStream(adaptor,"rule primaryExpression");
         RewriteRuleSubtreeStream stream_brackets = new RewriteRuleSubtreeStream(adaptor,"rule brackets");
@@ -22695,17 +22695,17 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1491:4: ( ( primaryExpression -> primaryExpression ) ( DOT qualifiedIdent -> ^( DOT $fullNewSubexpression qualifiedIdent ) | brackets -> ^( ARRAY_ACC $fullNewSubexpression brackets ) )* )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1491:4: ( primaryExpression -> primaryExpression ) ( DOT qualifiedIdent -> ^( DOT $fullNewSubexpression qualifiedIdent ) | brackets -> ^( ARRAY_ACC $fullNewSubexpression brackets ) )*
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1493:4: ( ( primaryExpression -> primaryExpression ) ( DOT qualifiedIdent -> ^( DOT $fullNewSubexpression qualifiedIdent ) | brackets -> ^( ARRAY_ACC $fullNewSubexpression brackets ) )* )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1493:4: ( primaryExpression -> primaryExpression ) ( DOT qualifiedIdent -> ^( DOT $fullNewSubexpression qualifiedIdent ) | brackets -> ^( ARRAY_ACC $fullNewSubexpression brackets ) )*
             {
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1491:4: ( primaryExpression -> primaryExpression )
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1491:6: primaryExpression
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1493:4: ( primaryExpression -> primaryExpression )
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1493:6: primaryExpression
             	{
-            		PushFollow(FOLLOW_primaryExpression_in_fullNewSubexpression5422);
-            		primaryExpression304 = primaryExpression();
+            		PushFollow(FOLLOW_primaryExpression_in_fullNewSubexpression5424);
+            		primaryExpression305 = primaryExpression();
             		followingStackPointer_--;
             		if (failed) return retval;
-            		if ( backtracking==0 ) stream_primaryExpression.Add(primaryExpression304.Tree);
+            		if ( backtracking==0 ) stream_primaryExpression.Add(primaryExpression305.Tree);
             		
             		// AST REWRITE
             		// elements:          primaryExpression
@@ -22718,7 +22718,7 @@ public class ASParser : Parser
             		RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             		
             		root_0 = (CommonTree)adaptor.GetNilNode();
-            		// 1491:24: -> primaryExpression
+            		// 1493:24: -> primaryExpression
             		{
             		    adaptor.AddChild(root_0, stream_primaryExpression.Next());
             		
@@ -22728,7 +22728,7 @@ public class ASParser : Parser
             	
             	}
 
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1493:3: ( DOT qualifiedIdent -> ^( DOT $fullNewSubexpression qualifiedIdent ) | brackets -> ^( ARRAY_ACC $fullNewSubexpression brackets ) )*
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1495:3: ( DOT qualifiedIdent -> ^( DOT $fullNewSubexpression qualifiedIdent ) | brackets -> ^( ARRAY_ACC $fullNewSubexpression brackets ) )*
             	do 
             	{
             	    int alt86 = 3;
@@ -22747,21 +22747,21 @@ public class ASParser : Parser
             	    switch (alt86) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1493:5: DOT qualifiedIdent
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1495:5: DOT qualifiedIdent
             			    {
-            			    	DOT305 = (CommonToken)input.LT(1);
-            			    	Match(input,DOT,FOLLOW_DOT_in_fullNewSubexpression5436); if (failed) return retval;
-            			    	if ( backtracking==0 ) stream_DOT.Add(DOT305);
+            			    	DOT306 = (CommonToken)input.LT(1);
+            			    	Match(input,DOT,FOLLOW_DOT_in_fullNewSubexpression5438); if (failed) return retval;
+            			    	if ( backtracking==0 ) stream_DOT.Add(DOT306);
 
             			    	if ( backtracking == 0 ) 
             			    	{
             			    	   buffer.Append("."); 
             			    	}
-            			    	PushFollow(FOLLOW_qualifiedIdent_in_fullNewSubexpression5441);
-            			    	qualifiedIdent306 = qualifiedIdent();
+            			    	PushFollow(FOLLOW_qualifiedIdent_in_fullNewSubexpression5443);
+            			    	qualifiedIdent307 = qualifiedIdent();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
-            			    	if ( backtracking==0 ) stream_qualifiedIdent.Add(qualifiedIdent306.Tree);
+            			    	if ( backtracking==0 ) stream_qualifiedIdent.Add(qualifiedIdent307.Tree);
             			    	
             			    	// AST REWRITE
             			    	// elements:          fullNewSubexpression, DOT, qualifiedIdent
@@ -22774,9 +22774,9 @@ public class ASParser : Parser
             			    	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             			    	
             			    	root_0 = (CommonTree)adaptor.GetNilNode();
-            			    	// 1493:49: -> ^( DOT $fullNewSubexpression qualifiedIdent )
+            			    	// 1495:49: -> ^( DOT $fullNewSubexpression qualifiedIdent )
             			    	{
-            			    	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1493:52: ^( DOT $fullNewSubexpression qualifiedIdent )
+            			    	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1495:52: ^( DOT $fullNewSubexpression qualifiedIdent )
             			    	    {
             			    	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             			    	    root_1 = (CommonTree)adaptor.BecomeRoot(stream_DOT.Next(), root_1);
@@ -22794,13 +22794,13 @@ public class ASParser : Parser
             			    }
             			    break;
             			case 2 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1494:5: brackets
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1496:5: brackets
             			    {
-            			    	PushFollow(FOLLOW_brackets_in_fullNewSubexpression5458);
-            			    	brackets307 = brackets();
+            			    	PushFollow(FOLLOW_brackets_in_fullNewSubexpression5460);
+            			    	brackets308 = brackets();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
-            			    	if ( backtracking==0 ) stream_brackets.Add(brackets307.Tree);
+            			    	if ( backtracking==0 ) stream_brackets.Add(brackets308.Tree);
             			    	if ( backtracking == 0 ) 
             			    	{
             			    	   
@@ -22817,9 +22817,9 @@ public class ASParser : Parser
             			    	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             			    	
             			    	root_0 = (CommonTree)adaptor.GetNilNode();
-            			    	// 1494:21: -> ^( ARRAY_ACC $fullNewSubexpression brackets )
+            			    	// 1496:21: -> ^( ARRAY_ACC $fullNewSubexpression brackets )
             			    	{
-            			    	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1494:24: ^( ARRAY_ACC $fullNewSubexpression brackets )
+            			    	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1496:24: ^( ARRAY_ACC $fullNewSubexpression brackets )
             			    	    {
             			    	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             			    	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(ARRAY_ACC, "ARRAY_ACC"), root_1);
@@ -22892,7 +22892,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start comments
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1499:1: comments : ( comment )+ -> ^( COMMENT_LIST ( comment )+ ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1501:1: comments : ( comment )+ -> ^( COMMENT_LIST ( comment )+ ) ;
     public comments_return comments() // throws RecognitionException [1]
     {   
         comments_return retval = new comments_return();
@@ -22900,7 +22900,7 @@ public class ASParser : Parser
         int comments_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        comment_return comment308 = null;
+        comment_return comment309 = null;
         
         
         RewriteRuleSubtreeStream stream_comment = new RewriteRuleSubtreeStream(adaptor,"rule comment");
@@ -22910,10 +22910,10 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1507:4: ( ( comment )+ -> ^( COMMENT_LIST ( comment )+ ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1507:4: ( comment )+
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1509:4: ( ( comment )+ -> ^( COMMENT_LIST ( comment )+ ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1509:4: ( comment )+
             {
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1507:4: ( comment )+
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1509:4: ( comment )+
             	int cnt87 = 0;
             	do 
             	{
@@ -22947,13 +22947,13 @@ public class ASParser : Parser
             	    switch (alt87) 
             		{
             			case 1 :
-            			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: comment
+            			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:0:0: comment
             			    {
-            			    	PushFollow(FOLLOW_comment_in_comments5500);
-            			    	comment308 = comment();
+            			    	PushFollow(FOLLOW_comment_in_comments5502);
+            			    	comment309 = comment();
             			    	followingStackPointer_--;
             			    	if (failed) return retval;
-            			    	if ( backtracking==0 ) stream_comment.Add(comment308.Tree);
+            			    	if ( backtracking==0 ) stream_comment.Add(comment309.Tree);
             			    
             			    }
             			    break;
@@ -22983,9 +22983,9 @@ public class ASParser : Parser
             	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	
             	root_0 = (CommonTree)adaptor.GetNilNode();
-            	// 1507:13: -> ^( COMMENT_LIST ( comment )+ )
+            	// 1509:13: -> ^( COMMENT_LIST ( comment )+ )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1507:16: ^( COMMENT_LIST ( comment )+ )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1509:16: ^( COMMENT_LIST ( comment )+ )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(COMMENT_LIST, "COMMENT_LIST"), root_1);
@@ -23053,7 +23053,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start comment
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1510:1: comment : ( singleCommentStatement ( comment )* -> ^( COMMENT_ENTRY singleCommentStatement ) ( comment )* | multiCommentStatement ( comment )* -> ^( COMMENT_ENTRY multiCommentStatement ) ( comment )* );
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1512:1: comment : ( singleCommentStatement ( comment )* -> ^( COMMENT_ENTRY singleCommentStatement ) ( comment )* | multiCommentStatement ( comment )* -> ^( COMMENT_ENTRY multiCommentStatement ) ( comment )* );
     public comment_return comment() // throws RecognitionException [1]
     {   
         comment_return retval = new comment_return();
@@ -23061,13 +23061,13 @@ public class ASParser : Parser
         int comment_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        singleCommentStatement_return singleCommentStatement309 = null;
+        singleCommentStatement_return singleCommentStatement310 = null;
 
-        comment_return comment310 = null;
+        comment_return comment311 = null;
 
-        multiCommentStatement_return multiCommentStatement311 = null;
+        multiCommentStatement_return multiCommentStatement312 = null;
 
-        comment_return comment312 = null;
+        comment_return comment313 = null;
         
         
         RewriteRuleSubtreeStream stream_multiCommentStatement = new RewriteRuleSubtreeStream(adaptor,"rule multiCommentStatement");
@@ -23079,7 +23079,7 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1511:4: ( singleCommentStatement ( comment )* -> ^( COMMENT_ENTRY singleCommentStatement ) ( comment )* | multiCommentStatement ( comment )* -> ^( COMMENT_ENTRY multiCommentStatement ) ( comment )* )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1513:4: ( singleCommentStatement ( comment )* -> ^( COMMENT_ENTRY singleCommentStatement ) ( comment )* | multiCommentStatement ( comment )* -> ^( COMMENT_ENTRY multiCommentStatement ) ( comment )* )
             int alt90 = 2;
             int LA90_0 = input.LA(1);
             
@@ -23095,21 +23095,21 @@ public class ASParser : Parser
             {
                 if ( backtracking > 0 ) {failed = true; return retval;}
                 NoViableAltException nvae_d90s0 =
-                    new NoViableAltException("1510:1: comment : ( singleCommentStatement ( comment )* -> ^( COMMENT_ENTRY singleCommentStatement ) ( comment )* | multiCommentStatement ( comment )* -> ^( COMMENT_ENTRY multiCommentStatement ) ( comment )* );", 90, 0, input);
+                    new NoViableAltException("1512:1: comment : ( singleCommentStatement ( comment )* -> ^( COMMENT_ENTRY singleCommentStatement ) ( comment )* | multiCommentStatement ( comment )* -> ^( COMMENT_ENTRY multiCommentStatement ) ( comment )* );", 90, 0, input);
             
                 throw nvae_d90s0;
             }
             switch (alt90) 
             {
                 case 1 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1511:4: singleCommentStatement ( comment )*
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1513:4: singleCommentStatement ( comment )*
                     {
-                    	PushFollow(FOLLOW_singleCommentStatement_in_comment5521);
-                    	singleCommentStatement309 = singleCommentStatement();
+                    	PushFollow(FOLLOW_singleCommentStatement_in_comment5523);
+                    	singleCommentStatement310 = singleCommentStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) stream_singleCommentStatement.Add(singleCommentStatement309.Tree);
-                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1511:27: ( comment )*
+                    	if ( backtracking==0 ) stream_singleCommentStatement.Add(singleCommentStatement310.Tree);
+                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1513:27: ( comment )*
                     	do 
                     	{
                     	    int alt88 = 2;
@@ -23142,13 +23142,13 @@ public class ASParser : Parser
                     	    switch (alt88) 
                     		{
                     			case 1 :
-                    			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: comment
+                    			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:0:0: comment
                     			    {
-                    			    	PushFollow(FOLLOW_comment_in_comment5523);
-                    			    	comment310 = comment();
+                    			    	PushFollow(FOLLOW_comment_in_comment5525);
+                    			    	comment311 = comment();
                     			    	followingStackPointer_--;
                     			    	if (failed) return retval;
-                    			    	if ( backtracking==0 ) stream_comment.Add(comment310.Tree);
+                    			    	if ( backtracking==0 ) stream_comment.Add(comment311.Tree);
                     			    
                     			    }
                     			    break;
@@ -23173,9 +23173,9 @@ public class ASParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
                     	
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 1511:36: -> ^( COMMENT_ENTRY singleCommentStatement ) ( comment )*
+                    	// 1513:36: -> ^( COMMENT_ENTRY singleCommentStatement ) ( comment )*
                     	{
-                    	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1511:39: ^( COMMENT_ENTRY singleCommentStatement )
+                    	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1513:39: ^( COMMENT_ENTRY singleCommentStatement )
                     	    {
                     	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
                     	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(COMMENT_ENTRY, "COMMENT_ENTRY"), root_1);
@@ -23184,7 +23184,7 @@ public class ASParser : Parser
                     	    
                     	    adaptor.AddChild(root_0, root_1);
                     	    }
-                    	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1511:79: ( comment )*
+                    	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1513:79: ( comment )*
                     	    while ( stream_comment.HasNext() )
                     	    {
                     	        adaptor.AddChild(root_0, stream_comment.Next());
@@ -23199,14 +23199,14 @@ public class ASParser : Parser
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1512:4: multiCommentStatement ( comment )*
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1514:4: multiCommentStatement ( comment )*
                     {
-                    	PushFollow(FOLLOW_multiCommentStatement_in_comment5540);
-                    	multiCommentStatement311 = multiCommentStatement();
+                    	PushFollow(FOLLOW_multiCommentStatement_in_comment5542);
+                    	multiCommentStatement312 = multiCommentStatement();
                     	followingStackPointer_--;
                     	if (failed) return retval;
-                    	if ( backtracking==0 ) stream_multiCommentStatement.Add(multiCommentStatement311.Tree);
-                    	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1512:27: ( comment )*
+                    	if ( backtracking==0 ) stream_multiCommentStatement.Add(multiCommentStatement312.Tree);
+                    	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1514:27: ( comment )*
                     	do 
                     	{
                     	    int alt89 = 2;
@@ -23239,13 +23239,13 @@ public class ASParser : Parser
                     	    switch (alt89) 
                     		{
                     			case 1 :
-                    			    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: comment
+                    			    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:0:0: comment
                     			    {
-                    			    	PushFollow(FOLLOW_comment_in_comment5543);
-                    			    	comment312 = comment();
+                    			    	PushFollow(FOLLOW_comment_in_comment5545);
+                    			    	comment313 = comment();
                     			    	followingStackPointer_--;
                     			    	if (failed) return retval;
-                    			    	if ( backtracking==0 ) stream_comment.Add(comment312.Tree);
+                    			    	if ( backtracking==0 ) stream_comment.Add(comment313.Tree);
                     			    
                     			    }
                     			    break;
@@ -23270,9 +23270,9 @@ public class ASParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
                     	
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 1512:36: -> ^( COMMENT_ENTRY multiCommentStatement ) ( comment )*
+                    	// 1514:36: -> ^( COMMENT_ENTRY multiCommentStatement ) ( comment )*
                     	{
-                    	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1512:39: ^( COMMENT_ENTRY multiCommentStatement )
+                    	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1514:39: ^( COMMENT_ENTRY multiCommentStatement )
                     	    {
                     	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
                     	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(COMMENT_ENTRY, "COMMENT_ENTRY"), root_1);
@@ -23281,7 +23281,7 @@ public class ASParser : Parser
                     	    
                     	    adaptor.AddChild(root_0, root_1);
                     	    }
-                    	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1512:78: ( comment )*
+                    	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1514:78: ( comment )*
                     	    while ( stream_comment.HasNext() )
                     	    {
                     	        adaptor.AddChild(root_0, stream_comment.Next());
@@ -23341,7 +23341,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start singleCommentStatement
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1515:1: singleCommentStatement : SL_COMMENT -> ^( SINGLELINE_COMMENT SL_COMMENT ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1517:1: singleCommentStatement : SL_COMMENT -> ^( SINGLELINE_COMMENT SL_COMMENT ) ;
     public singleCommentStatement_return singleCommentStatement() // throws RecognitionException [1]
     {   
         singleCommentStatement_return retval = new singleCommentStatement_return();
@@ -23349,9 +23349,9 @@ public class ASParser : Parser
         int singleCommentStatement_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken SL_COMMENT313 = null;
+        CommonToken SL_COMMENT314 = null;
         
-        CommonTree SL_COMMENT313_tree=null;
+        CommonTree SL_COMMENT314_tree=null;
         RewriteRuleTokenStream stream_SL_COMMENT = new RewriteRuleTokenStream(adaptor,"token SL_COMMENT");
     
         try 
@@ -23360,12 +23360,12 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1516:4: ( SL_COMMENT -> ^( SINGLELINE_COMMENT SL_COMMENT ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1516:4: SL_COMMENT
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1518:4: ( SL_COMMENT -> ^( SINGLELINE_COMMENT SL_COMMENT ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1518:4: SL_COMMENT
             {
-            	SL_COMMENT313 = (CommonToken)input.LT(1);
-            	Match(input,SL_COMMENT,FOLLOW_SL_COMMENT_in_singleCommentStatement5566); if (failed) return retval;
-            	if ( backtracking==0 ) stream_SL_COMMENT.Add(SL_COMMENT313);
+            	SL_COMMENT314 = (CommonToken)input.LT(1);
+            	Match(input,SL_COMMENT,FOLLOW_SL_COMMENT_in_singleCommentStatement5568); if (failed) return retval;
+            	if ( backtracking==0 ) stream_SL_COMMENT.Add(SL_COMMENT314);
 
             	
             	// AST REWRITE
@@ -23379,9 +23379,9 @@ public class ASParser : Parser
             	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	
             	root_0 = (CommonTree)adaptor.GetNilNode();
-            	// 1516:15: -> ^( SINGLELINE_COMMENT SL_COMMENT )
+            	// 1518:15: -> ^( SINGLELINE_COMMENT SL_COMMENT )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1516:18: ^( SINGLELINE_COMMENT SL_COMMENT )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1518:18: ^( SINGLELINE_COMMENT SL_COMMENT )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(SINGLELINE_COMMENT, "SINGLELINE_COMMENT"), root_1);
@@ -23441,7 +23441,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start multiCommentStatement
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1519:1: multiCommentStatement : ML_COMMENT -> ^( MULTILINE_COMMENT ML_COMMENT ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1521:1: multiCommentStatement : ML_COMMENT -> ^( MULTILINE_COMMENT ML_COMMENT ) ;
     public multiCommentStatement_return multiCommentStatement() // throws RecognitionException [1]
     {   
         multiCommentStatement_return retval = new multiCommentStatement_return();
@@ -23449,9 +23449,9 @@ public class ASParser : Parser
         int multiCommentStatement_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken ML_COMMENT314 = null;
+        CommonToken ML_COMMENT315 = null;
         
-        CommonTree ML_COMMENT314_tree=null;
+        CommonTree ML_COMMENT315_tree=null;
         RewriteRuleTokenStream stream_ML_COMMENT = new RewriteRuleTokenStream(adaptor,"token ML_COMMENT");
     
         try 
@@ -23460,12 +23460,12 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1520:4: ( ML_COMMENT -> ^( MULTILINE_COMMENT ML_COMMENT ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1520:4: ML_COMMENT
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1522:4: ( ML_COMMENT -> ^( MULTILINE_COMMENT ML_COMMENT ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1522:4: ML_COMMENT
             {
-            	ML_COMMENT314 = (CommonToken)input.LT(1);
-            	Match(input,ML_COMMENT,FOLLOW_ML_COMMENT_in_multiCommentStatement5586); if (failed) return retval;
-            	if ( backtracking==0 ) stream_ML_COMMENT.Add(ML_COMMENT314);
+            	ML_COMMENT315 = (CommonToken)input.LT(1);
+            	Match(input,ML_COMMENT,FOLLOW_ML_COMMENT_in_multiCommentStatement5588); if (failed) return retval;
+            	if ( backtracking==0 ) stream_ML_COMMENT.Add(ML_COMMENT315);
 
             	
             	// AST REWRITE
@@ -23479,9 +23479,9 @@ public class ASParser : Parser
             	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	
             	root_0 = (CommonTree)adaptor.GetNilNode();
-            	// 1520:15: -> ^( MULTILINE_COMMENT ML_COMMENT )
+            	// 1522:15: -> ^( MULTILINE_COMMENT ML_COMMENT )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1520:18: ^( MULTILINE_COMMENT ML_COMMENT )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1522:18: ^( MULTILINE_COMMENT ML_COMMENT )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(MULTILINE_COMMENT, "MULTILINE_COMMENT"), root_1);
@@ -23541,7 +23541,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start brackets
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1523:1: brackets : LBRACK expressionList RBRACK ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1525:1: brackets : LBRACK expressionList RBRACK ;
     public brackets_return brackets() // throws RecognitionException [1]
     {   
         brackets_return retval = new brackets_return();
@@ -23549,13 +23549,13 @@ public class ASParser : Parser
         int brackets_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken LBRACK315 = null;
-        CommonToken RBRACK317 = null;
-        expressionList_return expressionList316 = null;
+        CommonToken LBRACK316 = null;
+        CommonToken RBRACK318 = null;
+        expressionList_return expressionList317 = null;
         
         
-        CommonTree LBRACK315_tree=null;
-        CommonTree RBRACK317_tree=null;
+        CommonTree LBRACK316_tree=null;
+        CommonTree RBRACK318_tree=null;
     
         
         	((InOperator_scope)InOperator_stack.Peek()).allowed =  true;
@@ -23566,31 +23566,31 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1530:4: ( LBRACK expressionList RBRACK )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1530:4: LBRACK expressionList RBRACK
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1532:4: ( LBRACK expressionList RBRACK )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1532:4: LBRACK expressionList RBRACK
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
             
-            	LBRACK315 = (CommonToken)input.LT(1);
-            	Match(input,LBRACK,FOLLOW_LBRACK_in_brackets5614); if (failed) return retval;
+            	LBRACK316 = (CommonToken)input.LT(1);
+            	Match(input,LBRACK,FOLLOW_LBRACK_in_brackets5616); if (failed) return retval;
             	if ( backtracking==0 ) {
-            	LBRACK315_tree = (CommonTree)adaptor.Create(LBRACK315);
-            	adaptor.AddChild(root_0, LBRACK315_tree);
+            	LBRACK316_tree = (CommonTree)adaptor.Create(LBRACK316);
+            	adaptor.AddChild(root_0, LBRACK316_tree);
             	}
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append("["); 
             	}
-            	PushFollow(FOLLOW_expressionList_in_brackets5622);
-            	expressionList316 = expressionList();
+            	PushFollow(FOLLOW_expressionList_in_brackets5624);
+            	expressionList317 = expressionList();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) adaptor.AddChild(root_0, expressionList316.Tree);
-            	RBRACK317 = (CommonToken)input.LT(1);
-            	Match(input,RBRACK,FOLLOW_RBRACK_in_brackets5627); if (failed) return retval;
+            	if ( backtracking==0 ) adaptor.AddChild(root_0, expressionList317.Tree);
+            	RBRACK318 = (CommonToken)input.LT(1);
+            	Match(input,RBRACK,FOLLOW_RBRACK_in_brackets5629); if (failed) return retval;
             	if ( backtracking==0 ) {
-            	RBRACK317_tree = (CommonTree)adaptor.Create(RBRACK317);
-            	adaptor.AddChild(root_0, RBRACK317_tree);
+            	RBRACK318_tree = (CommonTree)adaptor.Create(RBRACK318);
+            	adaptor.AddChild(root_0, RBRACK318_tree);
             	}
             	if ( backtracking == 0 ) 
             	{
@@ -23643,7 +23643,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start encapsulatedExpression
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1535:1: encapsulatedExpression : LPAREN assignmentExpression RPAREN -> ^( ENCPS_EXPR assignmentExpression ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1537:1: encapsulatedExpression : LPAREN assignmentExpression RPAREN -> ^( ENCPS_EXPR assignmentExpression ) ;
     public encapsulatedExpression_return encapsulatedExpression() // throws RecognitionException [1]
     {   
         InOperator_stack.Push(new InOperator_scope());
@@ -23653,13 +23653,13 @@ public class ASParser : Parser
         int encapsulatedExpression_StartIndex = input.Index();
         CommonTree root_0 = null;
     
-        CommonToken LPAREN318 = null;
-        CommonToken RPAREN320 = null;
-        assignmentExpression_return assignmentExpression319 = null;
+        CommonToken LPAREN319 = null;
+        CommonToken RPAREN321 = null;
+        assignmentExpression_return assignmentExpression320 = null;
         
         
-        CommonTree LPAREN318_tree=null;
-        CommonTree RPAREN320_tree=null;
+        CommonTree LPAREN319_tree=null;
+        CommonTree RPAREN321_tree=null;
         RewriteRuleTokenStream stream_RPAREN = new RewriteRuleTokenStream(adaptor,"token RPAREN");
         RewriteRuleTokenStream stream_LPAREN = new RewriteRuleTokenStream(adaptor,"token LPAREN");
         RewriteRuleSubtreeStream stream_assignmentExpression = new RewriteRuleSubtreeStream(adaptor,"rule assignmentExpression");
@@ -23672,25 +23672,25 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1540:4: ( LPAREN assignmentExpression RPAREN -> ^( ENCPS_EXPR assignmentExpression ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1540:4: LPAREN assignmentExpression RPAREN
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1542:4: ( LPAREN assignmentExpression RPAREN -> ^( ENCPS_EXPR assignmentExpression ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1542:4: LPAREN assignmentExpression RPAREN
             {
-            	LPAREN318 = (CommonToken)input.LT(1);
-            	Match(input,LPAREN,FOLLOW_LPAREN_in_encapsulatedExpression5652); if (failed) return retval;
-            	if ( backtracking==0 ) stream_LPAREN.Add(LPAREN318);
+            	LPAREN319 = (CommonToken)input.LT(1);
+            	Match(input,LPAREN,FOLLOW_LPAREN_in_encapsulatedExpression5654); if (failed) return retval;
+            	if ( backtracking==0 ) stream_LPAREN.Add(LPAREN319);
 
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append("("); 
             	}
-            	PushFollow(FOLLOW_assignmentExpression_in_encapsulatedExpression5662);
-            	assignmentExpression319 = assignmentExpression();
+            	PushFollow(FOLLOW_assignmentExpression_in_encapsulatedExpression5664);
+            	assignmentExpression320 = assignmentExpression();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) stream_assignmentExpression.Add(assignmentExpression319.Tree);
-            	RPAREN320 = (CommonToken)input.LT(1);
-            	Match(input,RPAREN,FOLLOW_RPAREN_in_encapsulatedExpression5667); if (failed) return retval;
-            	if ( backtracking==0 ) stream_RPAREN.Add(RPAREN320);
+            	if ( backtracking==0 ) stream_assignmentExpression.Add(assignmentExpression320.Tree);
+            	RPAREN321 = (CommonToken)input.LT(1);
+            	Match(input,RPAREN,FOLLOW_RPAREN_in_encapsulatedExpression5669); if (failed) return retval;
+            	if ( backtracking==0 ) stream_RPAREN.Add(RPAREN321);
 
             	if ( backtracking == 0 ) 
             	{
@@ -23708,9 +23708,9 @@ public class ASParser : Parser
             	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	
             	root_0 = (CommonTree)adaptor.GetNilNode();
-            	// 1543:3: -> ^( ENCPS_EXPR assignmentExpression )
+            	// 1545:3: -> ^( ENCPS_EXPR assignmentExpression )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1543:6: ^( ENCPS_EXPR assignmentExpression )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1545:6: ^( ENCPS_EXPR assignmentExpression )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(ENCPS_EXPR, "ENCPS_EXPR"), root_1);
@@ -23772,7 +23772,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start functionDefinition
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1547:1: functionDefinition : f= FUNCTION parameterDeclarationList (type_exp= typeExpression )? block -> ^( FUNC_DEF parameterDeclarationList ( typeExpression )? block ) ;
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1549:1: functionDefinition : f= FUNCTION parameterDeclarationList (type_exp= typeExpression )? block -> ^( FUNC_DEF parameterDeclarationList ( typeExpression )? block ) ;
     public functionDefinition_return functionDefinition() // throws RecognitionException [1]
     {   
         functionDefinition_return retval = new functionDefinition_return();
@@ -23783,9 +23783,9 @@ public class ASParser : Parser
         CommonToken f = null;
         typeExpression_return type_exp = null;
 
-        parameterDeclarationList_return parameterDeclarationList321 = null;
+        parameterDeclarationList_return parameterDeclarationList322 = null;
 
-        block_return block322 = null;
+        block_return block323 = null;
         
         
         CommonTree f_tree=null;
@@ -23799,23 +23799,23 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1548:4: (f= FUNCTION parameterDeclarationList (type_exp= typeExpression )? block -> ^( FUNC_DEF parameterDeclarationList ( typeExpression )? block ) )
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1548:4: f= FUNCTION parameterDeclarationList (type_exp= typeExpression )? block
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1550:4: (f= FUNCTION parameterDeclarationList (type_exp= typeExpression )? block -> ^( FUNC_DEF parameterDeclarationList ( typeExpression )? block ) )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1550:4: f= FUNCTION parameterDeclarationList (type_exp= typeExpression )? block
             {
             	f = (CommonToken)input.LT(1);
-            	Match(input,FUNCTION,FOLLOW_FUNCTION_in_functionDefinition5697); if (failed) return retval;
+            	Match(input,FUNCTION,FOLLOW_FUNCTION_in_functionDefinition5699); if (failed) return retval;
             	if ( backtracking==0 ) stream_FUNCTION.Add(f);
 
             	if ( backtracking == 0 ) 
             	{
             	   buffer.Append(f.Text + (options.SpaceBeforeMethodDef ? " " : "")); 
             	}
-            	PushFollow(FOLLOW_parameterDeclarationList_in_functionDefinition5704);
-            	parameterDeclarationList321 = parameterDeclarationList();
+            	PushFollow(FOLLOW_parameterDeclarationList_in_functionDefinition5706);
+            	parameterDeclarationList322 = parameterDeclarationList();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) stream_parameterDeclarationList.Add(parameterDeclarationList321.Tree);
-            	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1550:11: (type_exp= typeExpression )?
+            	if ( backtracking==0 ) stream_parameterDeclarationList.Add(parameterDeclarationList322.Tree);
+            	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1552:11: (type_exp= typeExpression )?
             	int alt91 = 2;
             	int LA91_0 = input.LA(1);
             	
@@ -23826,9 +23826,9 @@ public class ASParser : Parser
             	switch (alt91) 
             	{
             	    case 1 :
-            	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: type_exp= typeExpression
+            	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:0:0: type_exp= typeExpression
             	        {
-            	        	PushFollow(FOLLOW_typeExpression_in_functionDefinition5711);
+            	        	PushFollow(FOLLOW_typeExpression_in_functionDefinition5713);
             	        	type_exp = typeExpression();
             	        	followingStackPointer_--;
             	        	if (failed) return retval;
@@ -23847,11 +23847,11 @@ public class ASParser : Parser
             	  										CurrentTab++;
             	  									
             	}
-            	PushFollow(FOLLOW_block_in_functionDefinition5727);
-            	block322 = block();
+            	PushFollow(FOLLOW_block_in_functionDefinition5729);
+            	block323 = block();
             	followingStackPointer_--;
             	if (failed) return retval;
-            	if ( backtracking==0 ) stream_block.Add(block322.Tree);
+            	if ( backtracking==0 ) stream_block.Add(block323.Tree);
             	if ( backtracking == 0 ) 
             	{
             	  
@@ -23873,15 +23873,15 @@ public class ASParser : Parser
             	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
             	
             	root_0 = (CommonTree)adaptor.GetNilNode();
-            	// 1563:3: -> ^( FUNC_DEF parameterDeclarationList ( typeExpression )? block )
+            	// 1565:3: -> ^( FUNC_DEF parameterDeclarationList ( typeExpression )? block )
             	{
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1563:6: ^( FUNC_DEF parameterDeclarationList ( typeExpression )? block )
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1565:6: ^( FUNC_DEF parameterDeclarationList ( typeExpression )? block )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(adaptor.Create(FUNC_DEF, "FUNC_DEF"), root_1);
             	    
             	    adaptor.AddChild(root_1, stream_parameterDeclarationList.Next());
-            	    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1563:42: ( typeExpression )?
+            	    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1565:42: ( typeExpression )?
             	    if ( stream_typeExpression.HasNext() )
             	    {
             	        adaptor.AddChild(root_1, stream_typeExpression.Next());
@@ -23943,7 +23943,7 @@ public class ASParser : Parser
     };
     
     // $ANTLR start ident
-    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1567:1: ident : ( IDENT | i= USE -> IDENT[$i] | i= XML -> IDENT[$i] | i= DYNAMIC -> IDENT[$i] | i= IS -> IDENT[$i] | i= AS -> IDENT[$i] | i= GET -> IDENT[$i] | i= SET -> IDENT[$i] );
+    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1569:1: ident : ( IDENT | i= USE -> IDENT[$i] | i= XML -> IDENT[$i] | i= DYNAMIC -> IDENT[$i] | i= IS -> IDENT[$i] | i= AS -> IDENT[$i] | i= GET -> IDENT[$i] | i= SET -> IDENT[$i] );
     public ident_return ident() // throws RecognitionException [1]
     {   
         ident_return retval = new ident_return();
@@ -23952,10 +23952,10 @@ public class ASParser : Parser
         CommonTree root_0 = null;
     
         CommonToken i = null;
-        CommonToken IDENT323 = null;
+        CommonToken IDENT324 = null;
         
         CommonTree i_tree=null;
-        CommonTree IDENT323_tree=null;
+        CommonTree IDENT324_tree=null;
         RewriteRuleTokenStream stream_GET = new RewriteRuleTokenStream(adaptor,"token GET");
         RewriteRuleTokenStream stream_XML = new RewriteRuleTokenStream(adaptor,"token XML");
         RewriteRuleTokenStream stream_AS = new RewriteRuleTokenStream(adaptor,"token AS");
@@ -23970,7 +23970,7 @@ public class ASParser : Parser
     	    {
     	    	return retval; 
     	    }
-            // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1568:4: ( IDENT | i= USE -> IDENT[$i] | i= XML -> IDENT[$i] | i= DYNAMIC -> IDENT[$i] | i= IS -> IDENT[$i] | i= AS -> IDENT[$i] | i= GET -> IDENT[$i] | i= SET -> IDENT[$i] )
+            // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1570:4: ( IDENT | i= USE -> IDENT[$i] | i= XML -> IDENT[$i] | i= DYNAMIC -> IDENT[$i] | i= IS -> IDENT[$i] | i= AS -> IDENT[$i] | i= GET -> IDENT[$i] | i= SET -> IDENT[$i] )
             int alt92 = 8;
             switch ( input.LA(1) ) 
             {
@@ -24017,7 +24017,7 @@ public class ASParser : Parser
             	default:
             	    if ( backtracking > 0 ) {failed = true; return retval;}
             	    NoViableAltException nvae_d92s0 =
-            	        new NoViableAltException("1567:1: ident : ( IDENT | i= USE -> IDENT[$i] | i= XML -> IDENT[$i] | i= DYNAMIC -> IDENT[$i] | i= IS -> IDENT[$i] | i= AS -> IDENT[$i] | i= GET -> IDENT[$i] | i= SET -> IDENT[$i] );", 92, 0, input);
+            	        new NoViableAltException("1569:1: ident : ( IDENT | i= USE -> IDENT[$i] | i= XML -> IDENT[$i] | i= DYNAMIC -> IDENT[$i] | i= IS -> IDENT[$i] | i= AS -> IDENT[$i] | i= GET -> IDENT[$i] | i= SET -> IDENT[$i] );", 92, 0, input);
             
             	    throw nvae_d92s0;
             }
@@ -24025,24 +24025,24 @@ public class ASParser : Parser
             switch (alt92) 
             {
                 case 1 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1568:4: IDENT
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1570:4: IDENT
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
                     
-                    	IDENT323 = (CommonToken)input.LT(1);
-                    	Match(input,IDENT,FOLLOW_IDENT_in_ident5765); if (failed) return retval;
+                    	IDENT324 = (CommonToken)input.LT(1);
+                    	Match(input,IDENT,FOLLOW_IDENT_in_ident5767); if (failed) return retval;
                     	if ( backtracking==0 ) {
-                    	IDENT323_tree = (CommonTree)adaptor.Create(IDENT323);
-                    	adaptor.AddChild(root_0, IDENT323_tree);
+                    	IDENT324_tree = (CommonTree)adaptor.Create(IDENT324);
+                    	adaptor.AddChild(root_0, IDENT324_tree);
                     	}
                     
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1569:4: i= USE
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1571:4: i= USE
                     {
                     	i = (CommonToken)input.LT(1);
-                    	Match(input,USE,FOLLOW_USE_in_ident5772); if (failed) return retval;
+                    	Match(input,USE,FOLLOW_USE_in_ident5774); if (failed) return retval;
                     	if ( backtracking==0 ) stream_USE.Add(i);
 
                     	
@@ -24057,7 +24057,7 @@ public class ASParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
                     	
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 1569:10: -> IDENT[$i]
+                    	// 1571:10: -> IDENT[$i]
                     	{
                     	    adaptor.AddChild(root_0, adaptor.Create(IDENT, i));
                     	
@@ -24068,10 +24068,10 @@ public class ASParser : Parser
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1570:4: i= XML
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1572:4: i= XML
                     {
                     	i = (CommonToken)input.LT(1);
-                    	Match(input,XML,FOLLOW_XML_in_ident5784); if (failed) return retval;
+                    	Match(input,XML,FOLLOW_XML_in_ident5786); if (failed) return retval;
                     	if ( backtracking==0 ) stream_XML.Add(i);
 
                     	
@@ -24086,7 +24086,7 @@ public class ASParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
                     	
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 1570:10: -> IDENT[$i]
+                    	// 1572:10: -> IDENT[$i]
                     	{
                     	    adaptor.AddChild(root_0, adaptor.Create(IDENT, i));
                     	
@@ -24097,10 +24097,10 @@ public class ASParser : Parser
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1571:4: i= DYNAMIC
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1573:4: i= DYNAMIC
                     {
                     	i = (CommonToken)input.LT(1);
-                    	Match(input,DYNAMIC,FOLLOW_DYNAMIC_in_ident5796); if (failed) return retval;
+                    	Match(input,DYNAMIC,FOLLOW_DYNAMIC_in_ident5798); if (failed) return retval;
                     	if ( backtracking==0 ) stream_DYNAMIC.Add(i);
 
                     	
@@ -24115,7 +24115,7 @@ public class ASParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
                     	
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 1571:14: -> IDENT[$i]
+                    	// 1573:14: -> IDENT[$i]
                     	{
                     	    adaptor.AddChild(root_0, adaptor.Create(IDENT, i));
                     	
@@ -24126,10 +24126,10 @@ public class ASParser : Parser
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1572:4: i= IS
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1574:4: i= IS
                     {
                     	i = (CommonToken)input.LT(1);
-                    	Match(input,IS,FOLLOW_IS_in_ident5808); if (failed) return retval;
+                    	Match(input,IS,FOLLOW_IS_in_ident5810); if (failed) return retval;
                     	if ( backtracking==0 ) stream_IS.Add(i);
 
                     	
@@ -24144,7 +24144,7 @@ public class ASParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
                     	
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 1572:9: -> IDENT[$i]
+                    	// 1574:9: -> IDENT[$i]
                     	{
                     	    adaptor.AddChild(root_0, adaptor.Create(IDENT, i));
                     	
@@ -24155,10 +24155,10 @@ public class ASParser : Parser
                     }
                     break;
                 case 6 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1573:4: i= AS
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1575:4: i= AS
                     {
                     	i = (CommonToken)input.LT(1);
-                    	Match(input,AS,FOLLOW_AS_in_ident5820); if (failed) return retval;
+                    	Match(input,AS,FOLLOW_AS_in_ident5822); if (failed) return retval;
                     	if ( backtracking==0 ) stream_AS.Add(i);
 
                     	
@@ -24173,7 +24173,7 @@ public class ASParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
                     	
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 1573:9: -> IDENT[$i]
+                    	// 1575:9: -> IDENT[$i]
                     	{
                     	    adaptor.AddChild(root_0, adaptor.Create(IDENT, i));
                     	
@@ -24184,10 +24184,10 @@ public class ASParser : Parser
                     }
                     break;
                 case 7 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1574:4: i= GET
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1576:4: i= GET
                     {
                     	i = (CommonToken)input.LT(1);
-                    	Match(input,GET,FOLLOW_GET_in_ident5832); if (failed) return retval;
+                    	Match(input,GET,FOLLOW_GET_in_ident5834); if (failed) return retval;
                     	if ( backtracking==0 ) stream_GET.Add(i);
 
                     	
@@ -24202,7 +24202,7 @@ public class ASParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
                     	
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 1574:10: -> IDENT[$i]
+                    	// 1576:10: -> IDENT[$i]
                     	{
                     	    adaptor.AddChild(root_0, adaptor.Create(IDENT, i));
                     	
@@ -24213,10 +24213,10 @@ public class ASParser : Parser
                     }
                     break;
                 case 8 :
-                    // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1575:4: i= SET
+                    // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1577:4: i= SET
                     {
                     	i = (CommonToken)input.LT(1);
-                    	Match(input,SET,FOLLOW_SET_in_ident5844); if (failed) return retval;
+                    	Match(input,SET,FOLLOW_SET_in_ident5846); if (failed) return retval;
                     	if ( backtracking==0 ) stream_SET.Add(i);
 
                     	
@@ -24231,7 +24231,7 @@ public class ASParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "token retval", (retval!=null ? retval.Tree : null));
                     	
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 1575:10: -> IDENT[$i]
+                    	// 1577:10: -> IDENT[$i]
                     	{
                     	    adaptor.AddChild(root_0, adaptor.Create(IDENT, i));
                     	
@@ -24280,8 +24280,8 @@ public class ASParser : Parser
     // $ANTLR start synpred5
     public void synpred5_fragment() //throws RecognitionException
     {   
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:371:4: ( SEMI )
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:371:4: SEMI
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:371:4: ( SEMI )
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:371:4: SEMI
         {
         	Match(input,SEMI,FOLLOW_SEMI_in_synpred5575); if (failed) return ;
         
@@ -24292,10 +24292,10 @@ public class ASParser : Parser
     // $ANTLR start synpred37
     public void synpred37_fragment() //throws RecognitionException
     {   
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:671:4: ( LCURLY )
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:671:5: LCURLY
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:673:4: ( LCURLY )
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:673:5: LCURLY
         {
-        	Match(input,LCURLY,FOLLOW_LCURLY_in_synpred371976); if (failed) return ;
+        	Match(input,LCURLY,FOLLOW_LCURLY_in_synpred371978); if (failed) return ;
         
         }
     }
@@ -24304,10 +24304,10 @@ public class ASParser : Parser
     // $ANTLR start synpred39
     public void synpred39_fragment() //throws RecognitionException
     {   
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:673:4: ( expressionStatement )
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:673:4: expressionStatement
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:675:4: ( expressionStatement )
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:675:4: expressionStatement
         {
-        	PushFollow(FOLLOW_expressionStatement_in_synpred391995);
+        	PushFollow(FOLLOW_expressionStatement_in_synpred391996);
         	expressionStatement();
         	followingStackPointer_--;
         	if (failed) return ;
@@ -24319,10 +24319,10 @@ public class ASParser : Parser
     // $ANTLR start synpred52
     public void synpred52_fragment() //throws RecognitionException
     {   
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:716:6: ( comments )
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:716:6: comments
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:718:6: ( comments )
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:718:6: comments
         {
-        	PushFollow(FOLLOW_comments_in_synpred522196);
+        	PushFollow(FOLLOW_comments_in_synpred522198);
         	comments();
         	followingStackPointer_--;
         	if (failed) return ;
@@ -24334,10 +24334,10 @@ public class ASParser : Parser
     // $ANTLR start synpred54
     public void synpred54_fragment() //throws RecognitionException
     {   
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:725:4: ( ELSE )
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:725:5: ELSE
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:727:4: ( ELSE )
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:727:5: ELSE
         {
-        	Match(input,ELSE,FOLLOW_ELSE_in_synpred542237); if (failed) return ;
+        	Match(input,ELSE,FOLLOW_ELSE_in_synpred542239); if (failed) return ;
         
         }
     }
@@ -24346,10 +24346,10 @@ public class ASParser : Parser
     // $ANTLR start synpred55
     public void synpred55_fragment() //throws RecognitionException
     {   
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:724:4: ( ( comments )? ( ELSE )=> elseClause )
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:724:4: ( comments )? ( ELSE )=> elseClause
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:726:4: ( ( comments )? ( ELSE )=> elseClause )
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:726:4: ( comments )? ( ELSE )=> elseClause
         {
-        	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:724:6: ( comments )?
+        	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:726:6: ( comments )?
         	int alt97 = 2;
         	int LA97_0 = input.LA(1);
         	
@@ -24360,9 +24360,9 @@ public class ASParser : Parser
         	switch (alt97) 
         	{
         	    case 1 :
-        	        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:0:0: comments
+        	        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:0:0: comments
         	        {
-        	        	PushFollow(FOLLOW_comments_in_synpred552227);
+        	        	PushFollow(FOLLOW_comments_in_synpred552229);
         	        	comments();
         	        	followingStackPointer_--;
         	        	if (failed) return ;
@@ -24372,7 +24372,7 @@ public class ASParser : Parser
         	
         	}
 
-        	PushFollow(FOLLOW_elseClause_in_synpred552240);
+        	PushFollow(FOLLOW_elseClause_in_synpred552242);
         	elseClause();
         	followingStackPointer_--;
         	if (failed) return ;
@@ -24384,15 +24384,15 @@ public class ASParser : Parser
     // $ANTLR start synpred59
     public void synpred59_fragment() //throws RecognitionException
     {   
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:810:4: ( RETURN expression semi )
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:810:4: RETURN expression semi
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:812:4: ( RETURN expression semi )
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:812:4: RETURN expression semi
         {
-        	Match(input,RETURN,FOLLOW_RETURN_in_synpred592422); if (failed) return ;
-        	PushFollow(FOLLOW_expression_in_synpred592427);
+        	Match(input,RETURN,FOLLOW_RETURN_in_synpred592424); if (failed) return ;
+        	PushFollow(FOLLOW_expression_in_synpred592429);
         	expression();
         	followingStackPointer_--;
         	if (failed) return ;
-        	PushFollow(FOLLOW_semi_in_synpred592429);
+        	PushFollow(FOLLOW_semi_in_synpred592431);
         	semi();
         	followingStackPointer_--;
         	if (failed) return ;
@@ -24404,14 +24404,14 @@ public class ASParser : Parser
     // $ANTLR start synpred63
     public void synpred63_fragment() //throws RecognitionException
     {   
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:878:4: ( forInClauseDecl IN )
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:878:5: forInClauseDecl IN
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:880:4: ( forInClauseDecl IN )
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:880:5: forInClauseDecl IN
         {
-        	PushFollow(FOLLOW_forInClauseDecl_in_synpred632716);
+        	PushFollow(FOLLOW_forInClauseDecl_in_synpred632718);
         	forInClauseDecl();
         	followingStackPointer_--;
         	if (failed) return ;
-        	Match(input,IN,FOLLOW_IN_in_synpred632718); if (failed) return ;
+        	Match(input,IN,FOLLOW_IN_in_synpred632720); if (failed) return ;
         
         }
     }
@@ -24420,17 +24420,17 @@ public class ASParser : Parser
     // $ANTLR start synpred78
     public void synpred78_fragment() //throws RecognitionException
     {   
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1059:5: ( ( annotation ) )
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1059:5: ( annotation )
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1061:5: ( ( annotation ) )
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1061:5: ( annotation )
         {
-        	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1059:5: ( annotation )
-        	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1059:7: annotation
+        	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1061:5: ( annotation )
+        	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1061:7: annotation
         	{
         		if ( backtracking == 0 ) 
         		{
         		   buffer.Append(NewLine + tab); 
         		}
-        		PushFollow(FOLLOW_annotation_in_synpred783422);
+        		PushFollow(FOLLOW_annotation_in_synpred783424);
         		annotation();
         		followingStackPointer_--;
         		if (failed) return ;
@@ -24445,17 +24445,17 @@ public class ASParser : Parser
     // $ANTLR start synpred79
     public void synpred79_fragment() //throws RecognitionException
     {   
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1060:6: ( ( includeDirective ) )
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1060:6: ( includeDirective )
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1062:6: ( ( includeDirective ) )
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1062:6: ( includeDirective )
         {
-        	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1060:6: ( includeDirective )
-        	// C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1060:8: includeDirective
+        	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1062:6: ( includeDirective )
+        	// C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1062:8: includeDirective
         	{
         		if ( backtracking == 0 ) 
         		{
         		   buffer.Append(NewLine + tab); 
         		}
-        		PushFollow(FOLLOW_includeDirective_in_synpred793435);
+        		PushFollow(FOLLOW_includeDirective_in_synpred793437);
         		includeDirective();
         		followingStackPointer_--;
         		if (failed) return ;
@@ -24470,15 +24470,15 @@ public class ASParser : Parser
     // $ANTLR start synpred83
     public void synpred83_fragment() //throws RecognitionException
     {   
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1088:3: ( ident ASSIGN constant )
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1088:3: ident ASSIGN constant
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1090:3: ( ident ASSIGN constant )
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1090:3: ident ASSIGN constant
         {
-        	PushFollow(FOLLOW_ident_in_synpred833605);
+        	PushFollow(FOLLOW_ident_in_synpred833607);
         	ident();
         	followingStackPointer_--;
         	if (failed) return ;
-        	Match(input,ASSIGN,FOLLOW_ASSIGN_in_synpred833607); if (failed) return ;
-        	PushFollow(FOLLOW_constant_in_synpred833611);
+        	Match(input,ASSIGN,FOLLOW_ASSIGN_in_synpred833609); if (failed) return ;
+        	PushFollow(FOLLOW_constant_in_synpred833613);
         	constant();
         	followingStackPointer_--;
         	if (failed) return ;
@@ -24490,15 +24490,15 @@ public class ASParser : Parser
     // $ANTLR start synpred84
     public void synpred84_fragment() //throws RecognitionException
     {   
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1089:4: ( ident ASSIGN ident )
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1089:4: ident ASSIGN ident
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1091:4: ( ident ASSIGN ident )
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1091:4: ident ASSIGN ident
         {
-        	PushFollow(FOLLOW_ident_in_synpred843630);
+        	PushFollow(FOLLOW_ident_in_synpred843632);
         	ident();
         	followingStackPointer_--;
         	if (failed) return ;
-        	Match(input,ASSIGN,FOLLOW_ASSIGN_in_synpred843632); if (failed) return ;
-        	PushFollow(FOLLOW_ident_in_synpred843636);
+        	Match(input,ASSIGN,FOLLOW_ASSIGN_in_synpred843634); if (failed) return ;
+        	PushFollow(FOLLOW_ident_in_synpred843638);
         	ident();
         	followingStackPointer_--;
         	if (failed) return ;
@@ -24510,11 +24510,11 @@ public class ASParser : Parser
     // $ANTLR start synpred98
     public void synpred98_fragment() //throws RecognitionException
     {   
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1151:4: ( COMMA assignmentExpression )
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1151:4: COMMA assignmentExpression
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1153:4: ( COMMA assignmentExpression )
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1153:4: COMMA assignmentExpression
         {
-        	Match(input,COMMA,FOLLOW_COMMA_in_synpred983922); if (failed) return ;
-        	PushFollow(FOLLOW_assignmentExpression_in_synpred983934);
+        	Match(input,COMMA,FOLLOW_COMMA_in_synpred983924); if (failed) return ;
+        	PushFollow(FOLLOW_assignmentExpression_in_synpred983936);
         	assignmentExpression();
         	followingStackPointer_--;
         	if (failed) return ;
@@ -24526,10 +24526,10 @@ public class ASParser : Parser
     // $ANTLR start synpred104
     public void synpred104_fragment() //throws RecognitionException
     {   
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1231:4: ( assignmentOperator )
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1231:5: assignmentOperator
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1233:4: ( assignmentOperator )
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1233:5: assignmentOperator
         {
-        	PushFollow(FOLLOW_assignmentOperator_in_synpred1044195);
+        	PushFollow(FOLLOW_assignmentOperator_in_synpred1044197);
         	assignmentOperator();
         	followingStackPointer_--;
         	if (failed) return ;
@@ -24541,10 +24541,10 @@ public class ASParser : Parser
     // $ANTLR start synpred130
     public void synpred130_fragment() //throws RecognitionException
     {   
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1352:4: ( relationalOperator )
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1352:5: relationalOperator
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1354:4: ( relationalOperator )
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1354:5: relationalOperator
         {
-        	PushFollow(FOLLOW_relationalOperator_in_synpred1304641);
+        	PushFollow(FOLLOW_relationalOperator_in_synpred1304643);
         	relationalOperator();
         	followingStackPointer_--;
         	if (failed) return ;
@@ -24556,14 +24556,14 @@ public class ASParser : Parser
     // $ANTLR start synpred141
     public void synpred141_fragment() //throws RecognitionException
     {   
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1387:4: ( additiveOperator multiplicativeExpression )
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1387:4: additiveOperator multiplicativeExpression
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1389:4: ( additiveOperator multiplicativeExpression )
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1389:4: additiveOperator multiplicativeExpression
         {
-        	PushFollow(FOLLOW_additiveOperator_in_synpred1414782);
+        	PushFollow(FOLLOW_additiveOperator_in_synpred1414784);
         	additiveOperator();
         	followingStackPointer_--;
         	if (failed) return ;
-        	PushFollow(FOLLOW_multiplicativeExpression_in_synpred1414792);
+        	PushFollow(FOLLOW_multiplicativeExpression_in_synpred1414794);
         	multiplicativeExpression();
         	followingStackPointer_--;
         	if (failed) return ;
@@ -24575,15 +24575,15 @@ public class ASParser : Parser
     // $ANTLR start synpred156
     public void synpred156_fragment() //throws RecognitionException
     {   
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1439:5: ( LBRACK expression RBRACK )
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1439:5: LBRACK expression RBRACK
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1441:5: ( LBRACK expression RBRACK )
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1441:5: LBRACK expression RBRACK
         {
-        	Match(input,LBRACK,FOLLOW_LBRACK_in_synpred1565111); if (failed) return ;
-        	PushFollow(FOLLOW_expression_in_synpred1565115);
+        	Match(input,LBRACK,FOLLOW_LBRACK_in_synpred1565113); if (failed) return ;
+        	PushFollow(FOLLOW_expression_in_synpred1565117);
         	expression();
         	followingStackPointer_--;
         	if (failed) return ;
-        	Match(input,RBRACK,FOLLOW_RBRACK_in_synpred1565117); if (failed) return ;
+        	Match(input,RBRACK,FOLLOW_RBRACK_in_synpred1565119); if (failed) return ;
         
         }
     }
@@ -24592,10 +24592,10 @@ public class ASParser : Parser
     // $ANTLR start synpred157
     public void synpred157_fragment() //throws RecognitionException
     {   
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1440:5: ( arguments )
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1440:5: arguments
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1442:5: ( arguments )
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1442:5: arguments
         {
-        	PushFollow(FOLLOW_arguments_in_synpred1575136);
+        	PushFollow(FOLLOW_arguments_in_synpred1575138);
         	arguments();
         	followingStackPointer_--;
         	if (failed) return ;
@@ -24607,10 +24607,10 @@ public class ASParser : Parser
     // $ANTLR start synpred158
     public void synpred158_fragment() //throws RecognitionException
     {   
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1443:6: ( INC )
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1443:6: INC
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1445:6: ( INC )
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1445:6: INC
         {
-        	Match(input,INC,FOLLOW_INC_in_synpred1585162); if (failed) return ;
+        	Match(input,INC,FOLLOW_INC_in_synpred1585164); if (failed) return ;
         
         }
     }
@@ -24619,10 +24619,10 @@ public class ASParser : Parser
     // $ANTLR start synpred159
     public void synpred159_fragment() //throws RecognitionException
     {   
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1444:6: ( DEC )
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1444:6: DEC
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1446:6: ( DEC )
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1446:6: DEC
         {
-        	Match(input,DEC,FOLLOW_DEC_in_synpred1595183); if (failed) return ;
+        	Match(input,DEC,FOLLOW_DEC_in_synpred1595185); if (failed) return ;
         
         }
     }
@@ -24631,10 +24631,10 @@ public class ASParser : Parser
     // $ANTLR start synpred176
     public void synpred176_fragment() //throws RecognitionException
     {   
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1507:4: ( comment )
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1507:4: comment
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1509:4: ( comment )
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1509:4: comment
         {
-        	PushFollow(FOLLOW_comment_in_synpred1765500);
+        	PushFollow(FOLLOW_comment_in_synpred1765502);
         	comment();
         	followingStackPointer_--;
         	if (failed) return ;
@@ -24646,10 +24646,10 @@ public class ASParser : Parser
     // $ANTLR start synpred177
     public void synpred177_fragment() //throws RecognitionException
     {   
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1511:27: ( comment )
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1511:27: comment
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1513:27: ( comment )
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1513:27: comment
         {
-        	PushFollow(FOLLOW_comment_in_synpred1775523);
+        	PushFollow(FOLLOW_comment_in_synpred1775525);
         	comment();
         	followingStackPointer_--;
         	if (failed) return ;
@@ -24661,10 +24661,10 @@ public class ASParser : Parser
     // $ANTLR start synpred179
     public void synpred179_fragment() //throws RecognitionException
     {   
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1512:27: ( comment )
-        // C:\\Users\\sephiroth\\Documents\\Flash\\fdplugins\\trunk\\Plugins\\CodeReformatter\\AS.g:1512:27: comment
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1514:27: ( comment )
+        // C:\\Users\\sephiroth\\Documents\\Visual Studio 2005\\Projects\\CodeReformatter\\CodeReformatter\\AS.g:1514:27: comment
         {
-        	PushFollow(FOLLOW_comment_in_synpred1795543);
+        	PushFollow(FOLLOW_comment_in_synpred1795545);
         	comment();
         	followingStackPointer_--;
         	if (failed) return ;
@@ -25206,346 +25206,346 @@ public class ASParser : Parser
     public static readonly BitSet FOLLOW_LPAREN_in_condition1937 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
     public static readonly BitSet FOLLOW_expression_in_condition1945 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000001000UL});
     public static readonly BitSet FOLLOW_RPAREN_in_condition1950 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_block_in_statement1980 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_declarationStatement_in_statement1985 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_expressionStatement_in_statement1995 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ifStatement_in_statement2004 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_forStatement_in_statement2009 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_whileStatement_in_statement2014 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_doWhileStatement_in_statement2019 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_withStatement_in_statement2024 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_switchStatement_in_statement2029 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_breakStatement_in_statement2034 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_continueStatement_in_statement2044 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_returnStatement_in_statement2053 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_throwStatement_in_statement2063 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_tryStatement_in_statement2073 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_SEMI_in_statement2078 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_comments_in_statement2086 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_declaration_in_declarationStatement2113 = new BitSet(new ulong[]{0x0800000000000002UL});
-    public static readonly BitSet FOLLOW_semi_in_declarationStatement2118 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_expressionList_in_expressionStatement2139 = new BitSet(new ulong[]{0x0800000000000002UL});
-    public static readonly BitSet FOLLOW_semi_in_expressionStatement2141 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_IF_in_ifStatement2163 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
-    public static readonly BitSet FOLLOW_condition_in_ifStatement2175 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
-    public static readonly BitSet FOLLOW_comments_in_ifStatement2196 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
-    public static readonly BitSet FOLLOW_statement_in_ifStatement2206 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000004000UL,0x0000000018000000UL});
-    public static readonly BitSet FOLLOW_comments_in_ifStatement2227 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000004000UL});
-    public static readonly BitSet FOLLOW_elseClause_in_ifStatement2240 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ELSE_in_elseClause2262 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
-    public static readonly BitSet FOLLOW_statement_in_elseClause2273 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_176_in_throwStatement2289 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_expression_in_throwStatement2294 = new BitSet(new ulong[]{0x0800000000000002UL});
-    public static readonly BitSet FOLLOW_semi_in_throwStatement2296 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_177_in_tryStatement2307 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_block_in_tryStatement2315 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x000C000000000000UL});
-    public static readonly BitSet FOLLOW_catchBlock_in_tryStatement2328 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x000C000000000000UL});
-    public static readonly BitSet FOLLOW_finallyBlock_in_tryStatement2338 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_178_in_catchBlock2351 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
-    public static readonly BitSet FOLLOW_LPAREN_in_catchBlock2358 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_ident_in_catchBlock2368 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000101000UL});
-    public static readonly BitSet FOLLOW_typeExpression_in_catchBlock2374 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000001000UL});
-    public static readonly BitSet FOLLOW_RPAREN_in_catchBlock2380 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_block_in_catchBlock2388 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_179_in_finallyBlock2402 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_block_in_finallyBlock2408 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_RETURN_in_returnStatement2422 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_expression_in_returnStatement2427 = new BitSet(new ulong[]{0x0800000000000002UL});
-    public static readonly BitSet FOLLOW_semi_in_returnStatement2429 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_RETURN_in_returnStatement2434 = new BitSet(new ulong[]{0x0800000000000002UL});
-    public static readonly BitSet FOLLOW_semi_in_returnStatement2437 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_CONTINUE_in_continueStatement2452 = new BitSet(new ulong[]{0x0800000000000002UL});
-    public static readonly BitSet FOLLOW_semi_in_continueStatement2455 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_BREAK_in_breakStatement2468 = new BitSet(new ulong[]{0x0800000000000002UL});
-    public static readonly BitSet FOLLOW_semi_in_breakStatement2471 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_SWITCH_in_switchStatement2485 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
-    public static readonly BitSet FOLLOW_condition_in_switchStatement2494 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_switchBlock_in_switchStatement2499 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LCURLY_in_switchBlock2510 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000280004UL});
-    public static readonly BitSet FOLLOW_caseStatement_in_switchBlock2527 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000280004UL});
-    public static readonly BitSet FOLLOW_defaultStatement_in_switchBlock2537 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000004UL});
-    public static readonly BitSet FOLLOW_RCURLY_in_switchBlock2543 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_CASE_in_caseStatement2577 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_expression_in_caseStatement2586 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000100000UL});
-    public static readonly BitSet FOLLOW_COLON_in_caseStatement2591 = new BitSet(new ulong[]{0x0800000000000002UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
-    public static readonly BitSet FOLLOW_switchStatementList_in_caseStatement2601 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_DEFAULT_in_defaultStatement2620 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000100000UL});
-    public static readonly BitSet FOLLOW_COLON_in_defaultStatement2627 = new BitSet(new ulong[]{0x0800000000000002UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
-    public static readonly BitSet FOLLOW_switchStatementList_in_defaultStatement2637 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_statement_in_switchStatementList2659 = new BitSet(new ulong[]{0x0800000000000002UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
-    public static readonly BitSet FOLLOW_FOR_in_forStatement2693 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
-    public static readonly BitSet FOLLOW_LPAREN_in_forStatement2701 = new BitSet(new ulong[]{0x0800000000000000UL,0x0000004848000BF2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_forInClause_in_forStatement2721 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000001000UL});
-    public static readonly BitSet FOLLOW_RPAREN_in_forStatement2727 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
-    public static readonly BitSet FOLLOW_statement_in_forStatement2740 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_traditionalForClause_in_forStatement2769 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000001000UL});
-    public static readonly BitSet FOLLOW_RPAREN_in_forStatement2771 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
-    public static readonly BitSet FOLLOW_statement_in_forStatement2780 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_forInit_in_traditionalForClause2817 = new BitSet(new ulong[]{0x0800000000000000UL});
-    public static readonly BitSet FOLLOW_SEMI_in_traditionalForClause2819 = new BitSet(new ulong[]{0x0800000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_forCond_in_traditionalForClause2829 = new BitSet(new ulong[]{0x0800000000000000UL});
-    public static readonly BitSet FOLLOW_SEMI_in_traditionalForClause2831 = new BitSet(new ulong[]{0x0000000000000002UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_forIter_in_traditionalForClause2841 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_forInClauseDecl_in_forInClause2853 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000800000UL});
-    public static readonly BitSet FOLLOW_IN_in_forInClause2855 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_forInClauseTail_in_forInClause2860 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_declaration_in_forInClauseDecl2881 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ident_in_forInClauseDecl2889 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_expressionList_in_forInClauseTail2915 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_declaration_in_forInit2939 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_expressionList_in_forInit2943 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_expressionList_in_forCond2981 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_expressionList_in_forIter3014 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_WHILE_in_whileStatement3037 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
-    public static readonly BitSet FOLLOW_condition_in_whileStatement3046 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
-    public static readonly BitSet FOLLOW_statement_in_whileStatement3054 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_DO_in_doWhileStatement3069 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
-    public static readonly BitSet FOLLOW_statement_in_doWhileStatement3079 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000001000000UL});
-    public static readonly BitSet FOLLOW_WHILE_in_doWhileStatement3086 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
-    public static readonly BitSet FOLLOW_condition_in_doWhileStatement3096 = new BitSet(new ulong[]{0x0800000000000002UL});
-    public static readonly BitSet FOLLOW_semi_in_doWhileStatement3102 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_WITH_in_withStatement3113 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
-    public static readonly BitSet FOLLOW_condition_in_withStatement3122 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
-    public static readonly BitSet FOLLOW_statement_in_withStatement3130 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_COLON_in_typeExpression3150 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040580000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_identifier_in_typeExpression3163 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_VOID_in_typeExpression3171 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_STAR_in_typeExpression3181 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_qualifiedIdent_in_identifier3219 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000020000000UL});
-    public static readonly BitSet FOLLOW_DOT_in_identifier3243 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_qualifiedIdent_in_identifier3247 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000020000000UL});
-    public static readonly BitSet FOLLOW_ident_in_qualifiedIdent3276 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_IDENT_in_namespaceName3290 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_reservedNamespace_in_namespaceName3294 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_block_in_statement1982 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_declarationStatement_in_statement1987 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_expressionStatement_in_statement1996 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ifStatement_in_statement2006 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_forStatement_in_statement2011 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_whileStatement_in_statement2016 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_doWhileStatement_in_statement2021 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_withStatement_in_statement2026 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_switchStatement_in_statement2031 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_breakStatement_in_statement2036 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_continueStatement_in_statement2046 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_returnStatement_in_statement2055 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_throwStatement_in_statement2065 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_tryStatement_in_statement2075 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_SEMI_in_statement2080 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_comments_in_statement2088 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_declaration_in_declarationStatement2115 = new BitSet(new ulong[]{0x0800000000000002UL});
+    public static readonly BitSet FOLLOW_semi_in_declarationStatement2120 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_expressionList_in_expressionStatement2141 = new BitSet(new ulong[]{0x0800000000000002UL});
+    public static readonly BitSet FOLLOW_semi_in_expressionStatement2143 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_IF_in_ifStatement2165 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
+    public static readonly BitSet FOLLOW_condition_in_ifStatement2177 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
+    public static readonly BitSet FOLLOW_comments_in_ifStatement2198 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
+    public static readonly BitSet FOLLOW_statement_in_ifStatement2208 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000004000UL,0x0000000018000000UL});
+    public static readonly BitSet FOLLOW_comments_in_ifStatement2229 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000004000UL});
+    public static readonly BitSet FOLLOW_elseClause_in_ifStatement2242 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ELSE_in_elseClause2264 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
+    public static readonly BitSet FOLLOW_statement_in_elseClause2275 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_176_in_throwStatement2291 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_expression_in_throwStatement2296 = new BitSet(new ulong[]{0x0800000000000002UL});
+    public static readonly BitSet FOLLOW_semi_in_throwStatement2298 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_177_in_tryStatement2309 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_block_in_tryStatement2317 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x000C000000000000UL});
+    public static readonly BitSet FOLLOW_catchBlock_in_tryStatement2330 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x000C000000000000UL});
+    public static readonly BitSet FOLLOW_finallyBlock_in_tryStatement2340 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_178_in_catchBlock2353 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
+    public static readonly BitSet FOLLOW_LPAREN_in_catchBlock2360 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_ident_in_catchBlock2370 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000101000UL});
+    public static readonly BitSet FOLLOW_typeExpression_in_catchBlock2376 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000001000UL});
+    public static readonly BitSet FOLLOW_RPAREN_in_catchBlock2382 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_block_in_catchBlock2390 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_179_in_finallyBlock2404 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_block_in_finallyBlock2410 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_RETURN_in_returnStatement2424 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_expression_in_returnStatement2429 = new BitSet(new ulong[]{0x0800000000000002UL});
+    public static readonly BitSet FOLLOW_semi_in_returnStatement2431 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_RETURN_in_returnStatement2436 = new BitSet(new ulong[]{0x0800000000000002UL});
+    public static readonly BitSet FOLLOW_semi_in_returnStatement2439 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_CONTINUE_in_continueStatement2454 = new BitSet(new ulong[]{0x0800000000000002UL});
+    public static readonly BitSet FOLLOW_semi_in_continueStatement2457 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_BREAK_in_breakStatement2470 = new BitSet(new ulong[]{0x0800000000000002UL});
+    public static readonly BitSet FOLLOW_semi_in_breakStatement2473 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_SWITCH_in_switchStatement2487 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
+    public static readonly BitSet FOLLOW_condition_in_switchStatement2496 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_switchBlock_in_switchStatement2501 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LCURLY_in_switchBlock2512 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000280004UL});
+    public static readonly BitSet FOLLOW_caseStatement_in_switchBlock2529 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000280004UL});
+    public static readonly BitSet FOLLOW_defaultStatement_in_switchBlock2539 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000004UL});
+    public static readonly BitSet FOLLOW_RCURLY_in_switchBlock2545 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_CASE_in_caseStatement2579 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_expression_in_caseStatement2588 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000100000UL});
+    public static readonly BitSet FOLLOW_COLON_in_caseStatement2593 = new BitSet(new ulong[]{0x0800000000000002UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
+    public static readonly BitSet FOLLOW_switchStatementList_in_caseStatement2603 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_DEFAULT_in_defaultStatement2622 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000100000UL});
+    public static readonly BitSet FOLLOW_COLON_in_defaultStatement2629 = new BitSet(new ulong[]{0x0800000000000002UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
+    public static readonly BitSet FOLLOW_switchStatementList_in_defaultStatement2639 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_statement_in_switchStatementList2661 = new BitSet(new ulong[]{0x0800000000000002UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
+    public static readonly BitSet FOLLOW_FOR_in_forStatement2695 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
+    public static readonly BitSet FOLLOW_LPAREN_in_forStatement2703 = new BitSet(new ulong[]{0x0800000000000000UL,0x0000004848000BF2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_forInClause_in_forStatement2723 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000001000UL});
+    public static readonly BitSet FOLLOW_RPAREN_in_forStatement2729 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
+    public static readonly BitSet FOLLOW_statement_in_forStatement2742 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_traditionalForClause_in_forStatement2771 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000001000UL});
+    public static readonly BitSet FOLLOW_RPAREN_in_forStatement2773 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
+    public static readonly BitSet FOLLOW_statement_in_forStatement2782 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_forInit_in_traditionalForClause2819 = new BitSet(new ulong[]{0x0800000000000000UL});
+    public static readonly BitSet FOLLOW_SEMI_in_traditionalForClause2821 = new BitSet(new ulong[]{0x0800000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_forCond_in_traditionalForClause2831 = new BitSet(new ulong[]{0x0800000000000000UL});
+    public static readonly BitSet FOLLOW_SEMI_in_traditionalForClause2833 = new BitSet(new ulong[]{0x0000000000000002UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_forIter_in_traditionalForClause2843 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_forInClauseDecl_in_forInClause2855 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000800000UL});
+    public static readonly BitSet FOLLOW_IN_in_forInClause2857 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_forInClauseTail_in_forInClause2862 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_declaration_in_forInClauseDecl2883 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ident_in_forInClauseDecl2891 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_expressionList_in_forInClauseTail2917 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_declaration_in_forInit2941 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_expressionList_in_forInit2945 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_expressionList_in_forCond2983 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_expressionList_in_forIter3016 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_WHILE_in_whileStatement3039 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
+    public static readonly BitSet FOLLOW_condition_in_whileStatement3048 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
+    public static readonly BitSet FOLLOW_statement_in_whileStatement3056 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_DO_in_doWhileStatement3071 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
+    public static readonly BitSet FOLLOW_statement_in_doWhileStatement3081 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000001000000UL});
+    public static readonly BitSet FOLLOW_WHILE_in_doWhileStatement3088 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
+    public static readonly BitSet FOLLOW_condition_in_doWhileStatement3098 = new BitSet(new ulong[]{0x0800000000000002UL});
+    public static readonly BitSet FOLLOW_semi_in_doWhileStatement3104 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_WITH_in_withStatement3115 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
+    public static readonly BitSet FOLLOW_condition_in_withStatement3124 = new BitSet(new ulong[]{0x0800000000000000UL,0x000000484F47ABF2UL,0x000300007FFFF30CUL});
+    public static readonly BitSet FOLLOW_statement_in_withStatement3132 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_COLON_in_typeExpression3152 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040580000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_identifier_in_typeExpression3165 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_VOID_in_typeExpression3173 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_STAR_in_typeExpression3183 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_qualifiedIdent_in_identifier3221 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000020000000UL});
+    public static readonly BitSet FOLLOW_DOT_in_identifier3245 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_qualifiedIdent_in_identifier3249 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000020000000UL});
+    public static readonly BitSet FOLLOW_ident_in_qualifiedIdent3278 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_IDENT_in_namespaceName3292 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_reservedNamespace_in_namespaceName3296 = new BitSet(new ulong[]{0x0000000000000002UL});
     public static readonly BitSet FOLLOW_set_in_reservedNamespace0 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ident_in_identifierStar3333 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000020000000UL});
-    public static readonly BitSet FOLLOW_DOT_in_identifierStar3355 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_ident_in_identifierStar3359 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000020000000UL});
-    public static readonly BitSet FOLLOW_DOT_in_identifierStar3374 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000010000000UL});
-    public static readonly BitSet FOLLOW_STAR_in_identifierStar3376 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_annotation_in_annotations3422 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000800000000UL,0x0000800000000000UL});
-    public static readonly BitSet FOLLOW_includeDirective_in_annotations3435 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000800000000UL,0x0000800000000000UL});
-    public static readonly BitSet FOLLOW_LBRACK_in_annotation3464 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_ident_in_annotation3476 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000001000000800UL});
-    public static readonly BitSet FOLLOW_annotationParamList_in_annotation3485 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000001000000000UL});
-    public static readonly BitSet FOLLOW_RBRACK_in_annotation3490 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LPAREN_in_annotationParamList3522 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400010D0UL,0x0000000063F8000CUL});
-    public static readonly BitSet FOLLOW_annotationParam_in_annotationParamList3535 = new BitSet(new ulong[]{0x8000000000000000UL,0x0000000000001000UL});
-    public static readonly BitSet FOLLOW_COMMA_in_annotationParamList3546 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000D0UL,0x0000000063F8000CUL});
-    public static readonly BitSet FOLLOW_annotationParam_in_annotationParamList3557 = new BitSet(new ulong[]{0x8000000000000000UL,0x0000000000001000UL});
-    public static readonly BitSet FOLLOW_RPAREN_in_annotationParamList3572 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ident_in_annotationParam3605 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000400UL});
-    public static readonly BitSet FOLLOW_ASSIGN_in_annotationParam3607 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000010UL,0x0000000003F80000UL});
-    public static readonly BitSet FOLLOW_constant_in_annotationParam3611 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ident_in_annotationParam3630 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000400UL});
-    public static readonly BitSet FOLLOW_ASSIGN_in_annotationParam3632 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_ident_in_annotationParam3636 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_constant_in_annotationParam3655 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ident_in_annotationParam3668 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_modifier_in_modifiers3688 = new BitSet(new ulong[]{0x0000000000000002UL,0x00000067C0000000UL,0x01F0000000000000UL});
-    public static readonly BitSet FOLLOW_namespaceName_in_modifier3711 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_STATIC_in_modifier3716 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_180_in_modifier3721 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_181_in_modifier3726 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_182_in_modifier3731 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_183_in_modifier3736 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_DYNAMIC_in_modifier3741 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_184_in_modifier3746 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LPAREN_in_arguments3767 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_expressionList_in_arguments3771 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000001000UL});
-    public static readonly BitSet FOLLOW_RPAREN_in_arguments3773 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LPAREN_in_arguments3780 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000001000UL});
-    public static readonly BitSet FOLLOW_RPAREN_in_arguments3782 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_assignmentExpression_in_element3808 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LBRACK_in_arrayLiteral3830 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000058480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_elementList_in_arrayLiteral3834 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000001000000000UL});
-    public static readonly BitSet FOLLOW_RBRACK_in_arrayLiteral3837 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_nonemptyElementList_in_elementList3861 = new BitSet(new ulong[]{0x8000000000000002UL});
-    public static readonly BitSet FOLLOW_COMMA_in_elementList3871 = new BitSet(new ulong[]{0x0000000000000002UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_nonemptyElementList_in_elementList3884 = new BitSet(new ulong[]{0x8000000000000002UL});
-    public static readonly BitSet FOLLOW_assignmentExpression_in_nonemptyElementList3912 = new BitSet(new ulong[]{0x8000000000000002UL});
-    public static readonly BitSet FOLLOW_COMMA_in_nonemptyElementList3922 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_assignmentExpression_in_nonemptyElementList3934 = new BitSet(new ulong[]{0x8000000000000002UL});
-    public static readonly BitSet FOLLOW_LCURLY_in_objectLiteral3956 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C4UL,0x0000000063C0000CUL});
-    public static readonly BitSet FOLLOW_fieldList_in_objectLiteral3965 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000004UL});
-    public static readonly BitSet FOLLOW_RCURLY_in_objectLiteral3971 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_literalField_in_fieldList3998 = new BitSet(new ulong[]{0x8000000000000002UL});
-    public static readonly BitSet FOLLOW_COMMA_in_fieldList4008 = new BitSet(new ulong[]{0x0000000000000002UL,0x00000040400000C0UL,0x0000000063C0000CUL});
-    public static readonly BitSet FOLLOW_literalField_in_fieldList4022 = new BitSet(new ulong[]{0x8000000000000002UL});
-    public static readonly BitSet FOLLOW_fieldName_in_literalField4044 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000100000UL});
-    public static readonly BitSet FOLLOW_COLON_in_literalField4049 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_element_in_literalField4057 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ident_in_fieldName4083 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_number_in_fieldName4093 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_assignmentExpression_in_expression4118 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_assignmentExpression_in_expressionList4130 = new BitSet(new ulong[]{0x8000000000000002UL});
-    public static readonly BitSet FOLLOW_COMMA_in_expressionList4140 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_assignmentExpression_in_expressionList4152 = new BitSet(new ulong[]{0x8000000000000002UL});
-    public static readonly BitSet FOLLOW_conditionalExpression_in_assignmentExpression4186 = new BitSet(new ulong[]{0x0000000000000002UL,0x000FFF8000000400UL});
-    public static readonly BitSet FOLLOW_assignmentOperator_in_assignmentExpression4201 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_assignmentExpression_in_assignmentExpression4221 = new BitSet(new ulong[]{0x0000000000000002UL,0x000FFF8000000400UL});
+    public static readonly BitSet FOLLOW_ident_in_identifierStar3335 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000020000000UL});
+    public static readonly BitSet FOLLOW_DOT_in_identifierStar3357 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_ident_in_identifierStar3361 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000020000000UL});
+    public static readonly BitSet FOLLOW_DOT_in_identifierStar3376 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000010000000UL});
+    public static readonly BitSet FOLLOW_STAR_in_identifierStar3378 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_annotation_in_annotations3424 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000800000000UL,0x0000800000000000UL});
+    public static readonly BitSet FOLLOW_includeDirective_in_annotations3437 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000800000000UL,0x0000800000000000UL});
+    public static readonly BitSet FOLLOW_LBRACK_in_annotation3466 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_ident_in_annotation3478 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000001000000800UL});
+    public static readonly BitSet FOLLOW_annotationParamList_in_annotation3487 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000001000000000UL});
+    public static readonly BitSet FOLLOW_RBRACK_in_annotation3492 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LPAREN_in_annotationParamList3524 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400010D0UL,0x0000000063F8000CUL});
+    public static readonly BitSet FOLLOW_annotationParam_in_annotationParamList3537 = new BitSet(new ulong[]{0x8000000000000000UL,0x0000000000001000UL});
+    public static readonly BitSet FOLLOW_COMMA_in_annotationParamList3548 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000D0UL,0x0000000063F8000CUL});
+    public static readonly BitSet FOLLOW_annotationParam_in_annotationParamList3559 = new BitSet(new ulong[]{0x8000000000000000UL,0x0000000000001000UL});
+    public static readonly BitSet FOLLOW_RPAREN_in_annotationParamList3574 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ident_in_annotationParam3607 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000400UL});
+    public static readonly BitSet FOLLOW_ASSIGN_in_annotationParam3609 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000010UL,0x0000000003F80000UL});
+    public static readonly BitSet FOLLOW_constant_in_annotationParam3613 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ident_in_annotationParam3632 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000400UL});
+    public static readonly BitSet FOLLOW_ASSIGN_in_annotationParam3634 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_ident_in_annotationParam3638 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_constant_in_annotationParam3657 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ident_in_annotationParam3670 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_modifier_in_modifiers3690 = new BitSet(new ulong[]{0x0000000000000002UL,0x00000067C0000000UL,0x01F0000000000000UL});
+    public static readonly BitSet FOLLOW_namespaceName_in_modifier3713 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_STATIC_in_modifier3718 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_180_in_modifier3723 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_181_in_modifier3728 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_182_in_modifier3733 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_183_in_modifier3738 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_DYNAMIC_in_modifier3743 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_184_in_modifier3748 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LPAREN_in_arguments3769 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_expressionList_in_arguments3773 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000001000UL});
+    public static readonly BitSet FOLLOW_RPAREN_in_arguments3775 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LPAREN_in_arguments3782 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000001000UL});
+    public static readonly BitSet FOLLOW_RPAREN_in_arguments3784 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_assignmentExpression_in_element3810 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LBRACK_in_arrayLiteral3832 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000058480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_elementList_in_arrayLiteral3836 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000001000000000UL});
+    public static readonly BitSet FOLLOW_RBRACK_in_arrayLiteral3839 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_nonemptyElementList_in_elementList3863 = new BitSet(new ulong[]{0x8000000000000002UL});
+    public static readonly BitSet FOLLOW_COMMA_in_elementList3873 = new BitSet(new ulong[]{0x0000000000000002UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_nonemptyElementList_in_elementList3886 = new BitSet(new ulong[]{0x8000000000000002UL});
+    public static readonly BitSet FOLLOW_assignmentExpression_in_nonemptyElementList3914 = new BitSet(new ulong[]{0x8000000000000002UL});
+    public static readonly BitSet FOLLOW_COMMA_in_nonemptyElementList3924 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_assignmentExpression_in_nonemptyElementList3936 = new BitSet(new ulong[]{0x8000000000000002UL});
+    public static readonly BitSet FOLLOW_LCURLY_in_objectLiteral3958 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C4UL,0x0000000063C0000CUL});
+    public static readonly BitSet FOLLOW_fieldList_in_objectLiteral3967 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000004UL});
+    public static readonly BitSet FOLLOW_RCURLY_in_objectLiteral3973 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_literalField_in_fieldList4000 = new BitSet(new ulong[]{0x8000000000000002UL});
+    public static readonly BitSet FOLLOW_COMMA_in_fieldList4010 = new BitSet(new ulong[]{0x0000000000000002UL,0x00000040400000C0UL,0x0000000063C0000CUL});
+    public static readonly BitSet FOLLOW_literalField_in_fieldList4024 = new BitSet(new ulong[]{0x8000000000000002UL});
+    public static readonly BitSet FOLLOW_fieldName_in_literalField4046 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000100000UL});
+    public static readonly BitSet FOLLOW_COLON_in_literalField4051 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_element_in_literalField4059 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ident_in_fieldName4085 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_number_in_fieldName4095 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_assignmentExpression_in_expression4120 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_assignmentExpression_in_expressionList4132 = new BitSet(new ulong[]{0x8000000000000002UL});
+    public static readonly BitSet FOLLOW_COMMA_in_expressionList4142 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_assignmentExpression_in_expressionList4154 = new BitSet(new ulong[]{0x8000000000000002UL});
+    public static readonly BitSet FOLLOW_conditionalExpression_in_assignmentExpression4188 = new BitSet(new ulong[]{0x0000000000000002UL,0x000FFF8000000400UL});
+    public static readonly BitSet FOLLOW_assignmentOperator_in_assignmentExpression4203 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_assignmentExpression_in_assignmentExpression4223 = new BitSet(new ulong[]{0x0000000000000002UL,0x000FFF8000000400UL});
     public static readonly BitSet FOLLOW_set_in_assignmentOperator0 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_logicalOrExpression_in_conditionalExpression4315 = new BitSet(new ulong[]{0x0000000000000002UL,0x0010000000000000UL});
-    public static readonly BitSet FOLLOW_QUESTION_in_conditionalExpression4329 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_conditionalSubExpression_in_conditionalExpression4336 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_assignmentExpression_in_conditionalSubExpression4365 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000100000UL});
-    public static readonly BitSet FOLLOW_COLON_in_conditionalSubExpression4370 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_assignmentExpression_in_conditionalSubExpression4379 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_logicalAndExpression_in_logicalOrExpression4393 = new BitSet(new ulong[]{0x0000000000000002UL,0x0020000000000000UL,0x0200000000000000UL});
-    public static readonly BitSet FOLLOW_logicalOrOperator_in_logicalOrExpression4404 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_logicalAndExpression_in_logicalOrExpression4416 = new BitSet(new ulong[]{0x0000000000000002UL,0x0020000000000000UL,0x0200000000000000UL});
+    public static readonly BitSet FOLLOW_logicalOrExpression_in_conditionalExpression4317 = new BitSet(new ulong[]{0x0000000000000002UL,0x0010000000000000UL});
+    public static readonly BitSet FOLLOW_QUESTION_in_conditionalExpression4331 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_conditionalSubExpression_in_conditionalExpression4338 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_assignmentExpression_in_conditionalSubExpression4367 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000100000UL});
+    public static readonly BitSet FOLLOW_COLON_in_conditionalSubExpression4372 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_assignmentExpression_in_conditionalSubExpression4381 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_logicalAndExpression_in_logicalOrExpression4395 = new BitSet(new ulong[]{0x0000000000000002UL,0x0020000000000000UL,0x0200000000000000UL});
+    public static readonly BitSet FOLLOW_logicalOrOperator_in_logicalOrExpression4406 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_logicalAndExpression_in_logicalOrExpression4418 = new BitSet(new ulong[]{0x0000000000000002UL,0x0020000000000000UL,0x0200000000000000UL});
     public static readonly BitSet FOLLOW_set_in_logicalOrOperator0 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_bitwiseOrExpression_in_logicalAndExpression4448 = new BitSet(new ulong[]{0x0000000000000002UL,0x0040000000000000UL,0x0400000000000000UL});
-    public static readonly BitSet FOLLOW_logicalAndOperator_in_logicalAndExpression4459 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_bitwiseOrExpression_in_logicalAndExpression4471 = new BitSet(new ulong[]{0x0000000000000002UL,0x0040000000000000UL,0x0400000000000000UL});
+    public static readonly BitSet FOLLOW_bitwiseOrExpression_in_logicalAndExpression4450 = new BitSet(new ulong[]{0x0000000000000002UL,0x0040000000000000UL,0x0400000000000000UL});
+    public static readonly BitSet FOLLOW_logicalAndOperator_in_logicalAndExpression4461 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_bitwiseOrExpression_in_logicalAndExpression4473 = new BitSet(new ulong[]{0x0000000000000002UL,0x0040000000000000UL,0x0400000000000000UL});
     public static readonly BitSet FOLLOW_set_in_logicalAndOperator0 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_bitwiseXorExpression_in_bitwiseOrExpression4503 = new BitSet(new ulong[]{0x0000000000000002UL,0x0080000000000000UL});
-    public static readonly BitSet FOLLOW_BOR_in_bitwiseOrExpression4508 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_bitwiseXorExpression_in_bitwiseOrExpression4511 = new BitSet(new ulong[]{0x0000000000000002UL,0x0080000000000000UL});
-    public static readonly BitSet FOLLOW_bitwiseAndExpression_in_bitwiseXorExpression4525 = new BitSet(new ulong[]{0x0000000000000002UL,0x0100000000000000UL});
-    public static readonly BitSet FOLLOW_BXOR_in_bitwiseXorExpression4530 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_bitwiseAndExpression_in_bitwiseXorExpression4533 = new BitSet(new ulong[]{0x0000000000000002UL,0x0100000000000000UL});
-    public static readonly BitSet FOLLOW_equalityExpression_in_bitwiseAndExpression4547 = new BitSet(new ulong[]{0x0000000000000002UL,0x0200000000000000UL});
-    public static readonly BitSet FOLLOW_BAND_in_bitwiseAndExpression4552 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_equalityExpression_in_bitwiseAndExpression4555 = new BitSet(new ulong[]{0x0000000000000002UL,0x0200000000000000UL});
-    public static readonly BitSet FOLLOW_relationalExpression_in_equalityExpression4569 = new BitSet(new ulong[]{0x0000000000000002UL,0x3C00000000000000UL});
-    public static readonly BitSet FOLLOW_equalityOperator_in_equalityExpression4579 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_relationalExpression_in_equalityExpression4591 = new BitSet(new ulong[]{0x0000000000000002UL,0x3C00000000000000UL});
+    public static readonly BitSet FOLLOW_bitwiseXorExpression_in_bitwiseOrExpression4505 = new BitSet(new ulong[]{0x0000000000000002UL,0x0080000000000000UL});
+    public static readonly BitSet FOLLOW_BOR_in_bitwiseOrExpression4510 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_bitwiseXorExpression_in_bitwiseOrExpression4513 = new BitSet(new ulong[]{0x0000000000000002UL,0x0080000000000000UL});
+    public static readonly BitSet FOLLOW_bitwiseAndExpression_in_bitwiseXorExpression4527 = new BitSet(new ulong[]{0x0000000000000002UL,0x0100000000000000UL});
+    public static readonly BitSet FOLLOW_BXOR_in_bitwiseXorExpression4532 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_bitwiseAndExpression_in_bitwiseXorExpression4535 = new BitSet(new ulong[]{0x0000000000000002UL,0x0100000000000000UL});
+    public static readonly BitSet FOLLOW_equalityExpression_in_bitwiseAndExpression4549 = new BitSet(new ulong[]{0x0000000000000002UL,0x0200000000000000UL});
+    public static readonly BitSet FOLLOW_BAND_in_bitwiseAndExpression4554 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_equalityExpression_in_bitwiseAndExpression4557 = new BitSet(new ulong[]{0x0000000000000002UL,0x0200000000000000UL});
+    public static readonly BitSet FOLLOW_relationalExpression_in_equalityExpression4571 = new BitSet(new ulong[]{0x0000000000000002UL,0x3C00000000000000UL});
+    public static readonly BitSet FOLLOW_equalityOperator_in_equalityExpression4581 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_relationalExpression_in_equalityExpression4593 = new BitSet(new ulong[]{0x0000000000000002UL,0x3C00000000000000UL});
     public static readonly BitSet FOLLOW_set_in_equalityOperator0 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_shiftExpression_in_relationalExpression4631 = new BitSet(new ulong[]{0x0000000000000002UL,0xC000000000800000UL,0x000000000000001FUL});
-    public static readonly BitSet FOLLOW_relationalOperator_in_relationalExpression4647 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_shiftExpression_in_relationalExpression4655 = new BitSet(new ulong[]{0x0000000000000002UL,0xC000000000800000UL,0x000000000000001FUL});
-    public static readonly BitSet FOLLOW_IN_in_relationalOperator4673 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LT_in_relationalOperator4678 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_GT_in_relationalOperator4682 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LE_in_relationalOperator4686 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_GE_in_relationalOperator4690 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_IS_in_relationalOperator4694 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_AS_in_relationalOperator4698 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_INSTANCEOF_in_relationalOperator4702 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_additiveExpression_in_shiftExpression4714 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x00000000000000E0UL});
-    public static readonly BitSet FOLLOW_shiftOperator_in_shiftExpression4725 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_additiveExpression_in_shiftExpression4735 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x00000000000000E0UL});
+    public static readonly BitSet FOLLOW_shiftExpression_in_relationalExpression4633 = new BitSet(new ulong[]{0x0000000000000002UL,0xC000000000800000UL,0x000000000000001FUL});
+    public static readonly BitSet FOLLOW_relationalOperator_in_relationalExpression4649 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_shiftExpression_in_relationalExpression4657 = new BitSet(new ulong[]{0x0000000000000002UL,0xC000000000800000UL,0x000000000000001FUL});
+    public static readonly BitSet FOLLOW_IN_in_relationalOperator4675 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LT_in_relationalOperator4680 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_GT_in_relationalOperator4684 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LE_in_relationalOperator4688 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_GE_in_relationalOperator4692 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_IS_in_relationalOperator4696 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_AS_in_relationalOperator4700 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_INSTANCEOF_in_relationalOperator4704 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_additiveExpression_in_shiftExpression4716 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x00000000000000E0UL});
+    public static readonly BitSet FOLLOW_shiftOperator_in_shiftExpression4727 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_additiveExpression_in_shiftExpression4737 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x00000000000000E0UL});
     public static readonly BitSet FOLLOW_set_in_shiftOperator0 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_multiplicativeExpression_in_additiveExpression4771 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x0000000000000300UL});
-    public static readonly BitSet FOLLOW_additiveOperator_in_additiveExpression4782 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_multiplicativeExpression_in_additiveExpression4792 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x0000000000000300UL});
+    public static readonly BitSet FOLLOW_multiplicativeExpression_in_additiveExpression4773 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x0000000000000300UL});
+    public static readonly BitSet FOLLOW_additiveOperator_in_additiveExpression4784 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_multiplicativeExpression_in_additiveExpression4794 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x0000000000000300UL});
     public static readonly BitSet FOLLOW_set_in_additiveOperator0 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_unaryExpression_in_multiplicativeExpression4824 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000010000000UL,0x0000000000000C00UL});
-    public static readonly BitSet FOLLOW_multiplicativeOperator_in_multiplicativeExpression4836 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_unaryExpression_in_multiplicativeExpression4844 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000010000000UL,0x0000000000000C00UL});
+    public static readonly BitSet FOLLOW_unaryExpression_in_multiplicativeExpression4826 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000010000000UL,0x0000000000000C00UL});
+    public static readonly BitSet FOLLOW_multiplicativeOperator_in_multiplicativeExpression4838 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_unaryExpression_in_multiplicativeExpression4846 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000010000000UL,0x0000000000000C00UL});
     public static readonly BitSet FOLLOW_set_in_multiplicativeOperator0 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_INC_in_unaryExpression4882 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpression4887 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_DEC_in_unaryExpression4904 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpression4909 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_MINUS_in_unaryExpression4926 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpression4930 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_PLUS_in_unaryExpression4946 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpression4950 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_unaryExpressionNotPlusMinus_in_unaryExpression4964 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_DELETE_in_unaryExpressionNotPlusMinus4977 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048400008F2UL,0x0000000067FC000CUL});
-    public static readonly BitSet FOLLOW_postfixExpression_in_unaryExpressionNotPlusMinus4982 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_VOID_in_unaryExpressionNotPlusMinus4997 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus5001 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_TYPEOF_in_unaryExpressionNotPlusMinus5016 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus5020 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LNOT_in_unaryExpressionNotPlusMinus5035 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus5039 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_BNOT_in_unaryExpressionNotPlusMinus5054 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus5058 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_postfixExpression_in_unaryExpressionNotPlusMinus5071 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_primaryExpression_in_postfixExpression5084 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000820000800UL,0x0000000000003000UL});
-    public static readonly BitSet FOLLOW_propOrIdent_in_postfixExpression5097 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000820000800UL,0x0000000000003000UL});
-    public static readonly BitSet FOLLOW_LBRACK_in_postfixExpression5111 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_expression_in_postfixExpression5115 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000001000000000UL});
-    public static readonly BitSet FOLLOW_RBRACK_in_postfixExpression5117 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000820000800UL,0x0000000000003000UL});
-    public static readonly BitSet FOLLOW_arguments_in_postfixExpression5136 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000820000800UL,0x0000000000003000UL});
-    public static readonly BitSet FOLLOW_INC_in_postfixExpression5162 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_DEC_in_postfixExpression5183 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_UNDEFINED_in_primaryExpression5214 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_constant_in_primaryExpression5226 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_arrayLiteral_in_primaryExpression5237 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_objectLiteral_in_primaryExpression5242 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_functionDefinition_in_primaryExpression5247 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_newFullExpression_in_primaryExpression5252 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_encapsulatedExpression_in_primaryExpression5257 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_qualifiedIdent_in_primaryExpression5262 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_DOT_in_propOrIdent5288 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_qualifiedIdent_in_propOrIdent5301 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_number_in_constant5325 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_STRING_LITERAL_in_constant5330 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_TRUE_in_constant5335 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_FALSE_in_constant5340 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_NULL_in_constant5345 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_INC_in_unaryExpression4884 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpression4889 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_DEC_in_unaryExpression4906 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpression4911 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_MINUS_in_unaryExpression4928 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpression4932 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_PLUS_in_unaryExpression4948 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpression4952 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_unaryExpressionNotPlusMinus_in_unaryExpression4966 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_DELETE_in_unaryExpressionNotPlusMinus4979 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048400008F2UL,0x0000000067FC000CUL});
+    public static readonly BitSet FOLLOW_postfixExpression_in_unaryExpressionNotPlusMinus4984 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_VOID_in_unaryExpressionNotPlusMinus4999 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus5003 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_TYPEOF_in_unaryExpressionNotPlusMinus5018 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus5022 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LNOT_in_unaryExpressionNotPlusMinus5037 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus5041 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_BNOT_in_unaryExpressionNotPlusMinus5056 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus5060 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_postfixExpression_in_unaryExpressionNotPlusMinus5073 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_primaryExpression_in_postfixExpression5086 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000820000800UL,0x0000000000003000UL});
+    public static readonly BitSet FOLLOW_propOrIdent_in_postfixExpression5099 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000820000800UL,0x0000000000003000UL});
+    public static readonly BitSet FOLLOW_LBRACK_in_postfixExpression5113 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_expression_in_postfixExpression5117 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000001000000000UL});
+    public static readonly BitSet FOLLOW_RBRACK_in_postfixExpression5119 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000820000800UL,0x0000000000003000UL});
+    public static readonly BitSet FOLLOW_arguments_in_postfixExpression5138 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000820000800UL,0x0000000000003000UL});
+    public static readonly BitSet FOLLOW_INC_in_postfixExpression5164 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_DEC_in_postfixExpression5185 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_UNDEFINED_in_primaryExpression5216 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_constant_in_primaryExpression5228 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_arrayLiteral_in_primaryExpression5239 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_objectLiteral_in_primaryExpression5244 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_functionDefinition_in_primaryExpression5249 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_newFullExpression_in_primaryExpression5254 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_encapsulatedExpression_in_primaryExpression5259 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_qualifiedIdent_in_primaryExpression5264 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_DOT_in_propOrIdent5290 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_qualifiedIdent_in_propOrIdent5303 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_number_in_constant5327 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_STRING_LITERAL_in_constant5332 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_TRUE_in_constant5337 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_FALSE_in_constant5342 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_NULL_in_constant5347 = new BitSet(new ulong[]{0x0000000000000002UL});
     public static readonly BitSet FOLLOW_set_in_number0 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_NEW_in_newFullExpression5387 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048400008F2UL,0x0000000067FC000CUL});
-    public static readonly BitSet FOLLOW_fullNewSubexpression_in_newFullExpression5398 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
-    public static readonly BitSet FOLLOW_arguments_in_newFullExpression5404 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_primaryExpression_in_fullNewSubexpression5422 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000820000000UL});
-    public static readonly BitSet FOLLOW_DOT_in_fullNewSubexpression5436 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_qualifiedIdent_in_fullNewSubexpression5441 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000820000000UL});
-    public static readonly BitSet FOLLOW_brackets_in_fullNewSubexpression5458 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000820000000UL});
-    public static readonly BitSet FOLLOW_comment_in_comments5500 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x0000000018000000UL});
-    public static readonly BitSet FOLLOW_singleCommentStatement_in_comment5521 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x0000000018000000UL});
-    public static readonly BitSet FOLLOW_comment_in_comment5523 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x0000000018000000UL});
-    public static readonly BitSet FOLLOW_multiCommentStatement_in_comment5540 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x0000000018000000UL});
-    public static readonly BitSet FOLLOW_comment_in_comment5543 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x0000000018000000UL});
-    public static readonly BitSet FOLLOW_SL_COMMENT_in_singleCommentStatement5566 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ML_COMMENT_in_multiCommentStatement5586 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LBRACK_in_brackets5614 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_expressionList_in_brackets5622 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000001000000000UL});
-    public static readonly BitSet FOLLOW_RBRACK_in_brackets5627 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LPAREN_in_encapsulatedExpression5652 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_assignmentExpression_in_encapsulatedExpression5662 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000001000UL});
-    public static readonly BitSet FOLLOW_RPAREN_in_encapsulatedExpression5667 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_FUNCTION_in_functionDefinition5697 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
-    public static readonly BitSet FOLLOW_parameterDeclarationList_in_functionDefinition5704 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000100002UL});
-    public static readonly BitSet FOLLOW_typeExpression_in_functionDefinition5711 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_block_in_functionDefinition5727 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_IDENT_in_ident5765 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_USE_in_ident5772 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_XML_in_ident5784 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_DYNAMIC_in_ident5796 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_IS_in_ident5808 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_AS_in_ident5820 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_GET_in_ident5832 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_SET_in_ident5844 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_NEW_in_newFullExpression5389 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048400008F2UL,0x0000000067FC000CUL});
+    public static readonly BitSet FOLLOW_fullNewSubexpression_in_newFullExpression5400 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
+    public static readonly BitSet FOLLOW_arguments_in_newFullExpression5406 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_primaryExpression_in_fullNewSubexpression5424 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000820000000UL});
+    public static readonly BitSet FOLLOW_DOT_in_fullNewSubexpression5438 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_qualifiedIdent_in_fullNewSubexpression5443 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000820000000UL});
+    public static readonly BitSet FOLLOW_brackets_in_fullNewSubexpression5460 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000820000000UL});
+    public static readonly BitSet FOLLOW_comment_in_comments5502 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x0000000018000000UL});
+    public static readonly BitSet FOLLOW_singleCommentStatement_in_comment5523 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x0000000018000000UL});
+    public static readonly BitSet FOLLOW_comment_in_comment5525 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x0000000018000000UL});
+    public static readonly BitSet FOLLOW_multiCommentStatement_in_comment5542 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x0000000018000000UL});
+    public static readonly BitSet FOLLOW_comment_in_comment5545 = new BitSet(new ulong[]{0x0000000000000002UL,0x0000000000000000UL,0x0000000018000000UL});
+    public static readonly BitSet FOLLOW_SL_COMMENT_in_singleCommentStatement5568 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ML_COMMENT_in_multiCommentStatement5588 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LBRACK_in_brackets5616 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_expressionList_in_brackets5624 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000001000000000UL});
+    public static readonly BitSet FOLLOW_RBRACK_in_brackets5629 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LPAREN_in_encapsulatedExpression5654 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_assignmentExpression_in_encapsulatedExpression5664 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000001000UL});
+    public static readonly BitSet FOLLOW_RPAREN_in_encapsulatedExpression5669 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_FUNCTION_in_functionDefinition5699 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000800UL});
+    public static readonly BitSet FOLLOW_parameterDeclarationList_in_functionDefinition5706 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000100002UL});
+    public static readonly BitSet FOLLOW_typeExpression_in_functionDefinition5713 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_block_in_functionDefinition5729 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_IDENT_in_ident5767 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_USE_in_ident5774 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_XML_in_ident5786 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_DYNAMIC_in_ident5798 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_IS_in_ident5810 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_AS_in_ident5822 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_GET_in_ident5834 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_SET_in_ident5846 = new BitSet(new ulong[]{0x0000000000000002UL});
     public static readonly BitSet FOLLOW_SEMI_in_synpred5575 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LCURLY_in_synpred371976 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_expressionStatement_in_synpred391995 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_comments_in_synpred522196 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ELSE_in_synpred542237 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_comments_in_synpred552227 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000004000UL});
-    public static readonly BitSet FOLLOW_elseClause_in_synpred552240 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_RETURN_in_synpred592422 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_expression_in_synpred592427 = new BitSet(new ulong[]{0x0800000000000002UL});
-    public static readonly BitSet FOLLOW_semi_in_synpred592429 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_forInClauseDecl_in_synpred632716 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000800000UL});
-    public static readonly BitSet FOLLOW_IN_in_synpred632718 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_annotation_in_synpred783422 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_includeDirective_in_synpred793435 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ident_in_synpred833605 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000400UL});
-    public static readonly BitSet FOLLOW_ASSIGN_in_synpred833607 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000010UL,0x0000000003F80000UL});
-    public static readonly BitSet FOLLOW_constant_in_synpred833611 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ident_in_synpred843630 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000400UL});
-    public static readonly BitSet FOLLOW_ASSIGN_in_synpred843632 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
-    public static readonly BitSet FOLLOW_ident_in_synpred843636 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_COMMA_in_synpred983922 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_assignmentExpression_in_synpred983934 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_assignmentOperator_in_synpred1044195 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_relationalOperator_in_synpred1304641 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_additiveOperator_in_synpred1414782 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_multiplicativeExpression_in_synpred1414792 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_LBRACK_in_synpred1565111 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
-    public static readonly BitSet FOLLOW_expression_in_synpred1565115 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000001000000000UL});
-    public static readonly BitSet FOLLOW_RBRACK_in_synpred1565117 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_arguments_in_synpred1575136 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_INC_in_synpred1585162 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_DEC_in_synpred1595183 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_comment_in_synpred1765500 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_comment_in_synpred1775523 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_comment_in_synpred1795543 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LCURLY_in_synpred371978 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_expressionStatement_in_synpred391996 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_comments_in_synpred522198 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ELSE_in_synpred542239 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_comments_in_synpred552229 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000004000UL});
+    public static readonly BitSet FOLLOW_elseClause_in_synpred552242 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_RETURN_in_synpred592424 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_expression_in_synpred592429 = new BitSet(new ulong[]{0x0800000000000002UL});
+    public static readonly BitSet FOLLOW_semi_in_synpred592431 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_forInClauseDecl_in_synpred632718 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000800000UL});
+    public static readonly BitSet FOLLOW_IN_in_synpred632720 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_annotation_in_synpred783424 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_includeDirective_in_synpred793437 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ident_in_synpred833607 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000400UL});
+    public static readonly BitSet FOLLOW_ASSIGN_in_synpred833609 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000010UL,0x0000000003F80000UL});
+    public static readonly BitSet FOLLOW_constant_in_synpred833613 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ident_in_synpred843632 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000000000000400UL});
+    public static readonly BitSet FOLLOW_ASSIGN_in_synpred843634 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000040400000C0UL,0x000000006000000CUL});
+    public static readonly BitSet FOLLOW_ident_in_synpred843638 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_COMMA_in_synpred983924 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_assignmentExpression_in_synpred983936 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_assignmentOperator_in_synpred1044197 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_relationalOperator_in_synpred1304643 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_additiveOperator_in_synpred1414784 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_multiplicativeExpression_in_synpred1414794 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_LBRACK_in_synpred1565113 = new BitSet(new ulong[]{0x0000000000000000UL,0x00000048480008F2UL,0x0000000067FFF30CUL});
+    public static readonly BitSet FOLLOW_expression_in_synpred1565117 = new BitSet(new ulong[]{0x0000000000000000UL,0x0000001000000000UL});
+    public static readonly BitSet FOLLOW_RBRACK_in_synpred1565119 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_arguments_in_synpred1575138 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_INC_in_synpred1585164 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_DEC_in_synpred1595185 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_comment_in_synpred1765502 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_comment_in_synpred1775525 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_comment_in_synpred1795545 = new BitSet(new ulong[]{0x0000000000000002UL});
 
 }
 }

@@ -667,10 +667,12 @@ condition
 		-> ^(CONDITION expression)
 	;
 
+// cannot start with a function Definition
+
 statement
 	:	(LCURLY)=> block
-	|	declarationStatement		{ buffer.Append(";"); }
-	|	exp=expressionStatement			{ buffer.Append(";"); }
+	|	declarationStatement			{ buffer.Append(";"); }
+	|	expressionStatement				{ buffer.Append(";"); }
 	|	ifStatement
 	|	forStatement
 	|	whileStatement
