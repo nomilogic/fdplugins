@@ -272,7 +272,7 @@ namespace Stickies
         {
             noteForms.Add(noteForm);
             noteForm.HandleDestroyed += new EventHandler(NoteFormHandleDestroyed);
-            noteForm.Show();
+            noteForm.Show(PluginBase.MainForm);
             UpdateMenus();
         }
 
