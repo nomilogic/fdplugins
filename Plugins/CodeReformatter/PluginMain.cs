@@ -190,15 +190,21 @@ namespace CodeReformatter
 
         void editMenu_DropDownOpening(object sender, EventArgs e)
         {
-            IASContext context   = ASContext.Context.CurrentModel.Context;
-
-            if (context != null && (context.GetType().ToString().Equals("AS2Context.Context")))
+            try
             {
-                ReformatMenuItem.Enabled = true;
+                IASContext context = ASContext.Context.CurrentModel.Context;
+                if (context != null && (context.GetType().ToString().Equals("AS2Context.Context")))
+                {
+                    ReformatMenuItem.Enabled = true;
+                }
+                else
+                {
+                    ReformatMenuItem.Enabled = false;
+                }
             }
-            else
+            catch (Exception error)
             {
-                ReformatMenuItem.Enabled = false;
+                Debug.WriteLine("ERROR: " + error.Message);
             }
         }
 
