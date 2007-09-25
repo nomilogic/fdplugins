@@ -1,4 +1,4 @@
-#summary Regular Expression Toolkit
+#summary Parse and display SharedObject files
 
 = Introduction =
 
