@@ -232,51 +232,29 @@ namespace SharedObjectReader.Controls
         /// <param name="e"></param>
         void Form1_Reference(object sender, EventArgs e)
         {
-            /*
-            int reference = ((panelAMF3Reference)sender).ObjectReference;
-            Debug.WriteLine("reference #" + reference);
-            object element = null;
-
-            if (current_sol.AMFEncoding == ObjectEncoding.AMF0)
+            AMF0Reference element = (AMF0Reference)((panelAMF3Reference)sender).Element;
+            IAMFBase result = null;
+            try
             {
-                try
-                {
-                    element = AMF0Deserializer.FindObjectReference(reference);
-                }
-                catch (ArgumentOutOfRangeException error)
-                {
-                    MessageBox.Show(error.Message, "Invalid reference #" + reference, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-            }
-            else if (current_sol.AMFEncoding == ObjectEncoding.AMF3)
+                result = element.Parser.FindObjectReference(element.Reference);
+            } catch(ArgumentOutOfRangeException error)
             {
-                try
-                {
-                    element = AMF3Deserializer.FindObjectReference(reference);
-                }
-                catch (ArgumentOutOfRangeException error)
-                {
-                    MessageBox.Show(error.Message, "Invalid reference #" + reference, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
+                MessageBox.Show(error.Message, "Invalid reference #" + element.Reference, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
 
-            if (element != null)
+            if (result != null)
             {
-                Debug.WriteLine("element found: " + ((IAMFBase)element).Source);
-                TreeNode result = FindForm(this.treeView1.Nodes, element);
-                Debug.WriteLine("result: " + result);
-                if (result != null)
+                TreeNode treenode_result = FindForm(this.treeView1.Nodes, result);
+                if (treenode_result != null)
                 {
-                    this.treeView1.SelectedNode = result;
+                    this.treeView1.SelectedNode = treenode_result;
                 }
             }
             else
             {
-                Debug.WriteLine("cannot find " + reference);
+                Debug.WriteLine("cannot find " + element.Reference);
             }
-            */
         }
 
         private TreeNode FindForm(TreeNodeCollection treeNodeCollection, object element)
