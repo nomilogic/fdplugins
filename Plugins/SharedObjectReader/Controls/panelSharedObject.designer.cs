@@ -34,6 +34,7 @@ namespace SharedObjectReader.Controls
             this.so_encoding = new System.Windows.Forms.Label();
             this.so_size = new System.Windows.Forms.Label();
             this.so_name = new System.Windows.Forms.Label();
+            this.rawView = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -48,7 +49,7 @@ namespace SharedObjectReader.Controls
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 54);
+            this.label2.Location = new System.Drawing.Point(22, 44);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 1;
@@ -57,7 +58,7 @@ namespace SharedObjectReader.Controls
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 84);
+            this.label3.Location = new System.Drawing.Point(22, 64);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 13);
             this.label3.TabIndex = 2;
@@ -67,7 +68,7 @@ namespace SharedObjectReader.Controls
             // 
             this.so_encoding.AutoSize = true;
             this.so_encoding.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.so_encoding.Location = new System.Drawing.Point(164, 84);
+            this.so_encoding.Location = new System.Drawing.Point(164, 64);
             this.so_encoding.Name = "so_encoding";
             this.so_encoding.Size = new System.Drawing.Size(93, 13);
             this.so_encoding.TabIndex = 5;
@@ -77,7 +78,7 @@ namespace SharedObjectReader.Controls
             // 
             this.so_size.AutoSize = true;
             this.so_size.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.so_size.Location = new System.Drawing.Point(164, 54);
+            this.so_size.Location = new System.Drawing.Point(164, 44);
             this.so_size.Name = "so_size";
             this.so_size.Size = new System.Drawing.Size(59, 13);
             this.so_size.TabIndex = 4;
@@ -93,10 +94,24 @@ namespace SharedObjectReader.Controls
             this.so_name.TabIndex = 3;
             this.so_name.Text = "SharedObject Name:";
             // 
+            // rawView
+            // 
+            this.rawView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.rawView.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rawView.Location = new System.Drawing.Point(28, 128);
+            this.rawView.Multiline = true;
+            this.rawView.Name = "rawView";
+            this.rawView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.rawView.Size = new System.Drawing.Size(1170, 585);
+            this.rawView.TabIndex = 6;
+            // 
             // panelSharedObject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.rawView);
             this.Controls.Add(this.so_encoding);
             this.Controls.Add(this.so_size);
             this.Controls.Add(this.so_name);
@@ -118,5 +133,6 @@ namespace SharedObjectReader.Controls
         private System.Windows.Forms.Label so_encoding;
         private System.Windows.Forms.Label so_size;
         private System.Windows.Forms.Label so_name;
+        private System.Windows.Forms.TextBox rawView;
     }
 }

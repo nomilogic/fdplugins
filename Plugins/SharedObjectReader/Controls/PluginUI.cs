@@ -232,6 +232,7 @@ namespace SharedObjectReader.Controls
         /// <param name="e"></param>
         void Form1_Reference(object sender, EventArgs e)
         {
+            /*
             int reference = ((panelAMF3Reference)sender).ObjectReference;
             Debug.WriteLine("reference #" + reference);
             object element = null;
@@ -275,7 +276,7 @@ namespace SharedObjectReader.Controls
             {
                 Debug.WriteLine("cannot find " + reference);
             }
-
+            */
         }
 
         private TreeNode FindForm(TreeNodeCollection treeNodeCollection, object element)
