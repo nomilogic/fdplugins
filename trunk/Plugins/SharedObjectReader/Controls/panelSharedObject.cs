@@ -28,6 +28,7 @@ namespace SharedObjectReader.Controls
             this.so_name.Text = so.Name;
             this.so_size.Text = so.FileSize.ToString();
             this.so_encoding.Text = so.AMFEncoding.ToString();
+            this.rawView.Text = so.ToString();
         }
 
         #endregion
