@@ -178,6 +178,12 @@ namespace Stickies
         private List<Note> LoadNotes()
         {
             List<Note> notes = new List<Note>();
+
+            if( !Directory.Exists( Stickies.Notes.Settings.SettingsDirectory() ) )
+            {
+                Directory.CreateDirectory( Stickies.Notes.Settings.SettingsDirectory() );
+            }
+
             try
             {
                 foreach (string path in Directory.GetFiles(Stickies.Notes.Settings.SettingsDirectory(), "*" + Note.PathSuffix))
