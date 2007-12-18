@@ -181,11 +181,13 @@ namespace CodeReformatter
         /// </summary>
         private void CreateMenuItem()
         {
-            ReformatMenuItem = new ToolStripMenuItem(LocaleHelper.GetString("Menu.Label"), null, new EventHandler(this.Reformat));
+            ReformatMenuItem = new ToolStripMenuItem(LocaleHelper.GetString("Menu.Label"), null, new EventHandler(this.Reformat), this.settingObject.Shortcut);
             ToolStripMenuItem editMenu = (ToolStripMenuItem)PluginBase.MainForm.FindMenuItem("EditMenu");
             editMenu.DropDownItems.Add(new ToolStripSeparator());
             editMenu.DropDownItems.Add(ReformatMenuItem);
             editMenu.DropDownOpening += new EventHandler(editMenu_DropDownOpening);
+
+            PluginBase.MainForm.IgnoredKeys.Add(this.settingObject.Shortcut);
         }
 
         void editMenu_DropDownOpening(object sender, EventArgs e)

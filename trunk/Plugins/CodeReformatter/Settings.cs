@@ -19,6 +19,20 @@ namespace CodeReformatter
         private Boolean space_between_operators = true;
         private Boolean space_between_arguments = true;
 
+        private Keys shortcut = Keys.Control | Keys.R;
+
+        /// <summary> 
+        /// Get and sets the Shortcut
+        /// </summary>
+        [Category("Menu ShortCut")]
+        [Description("Shortcut"), DefaultValue(Keys.Control | Keys.R)]
+        public Keys Shortcut
+        {
+            get { return this.shortcut; }
+            set { this.shortcut = value; }
+        }
+
+        [Category("Reformat Options")]
         [Description("Insert a newline after method definition"), DefaultValue(true)]
         public Boolean NewlineAfterMethod
         {
@@ -26,6 +40,7 @@ namespace CodeReformatter
             set { this.newline_after_method = value; }
         }
 
+        [Category("Reformat Options")]
         [Description("Insert a newline after a loop (for, if, while..)"), DefaultValue(true)]
         public Boolean NewlineAfterCondition
         {
@@ -33,6 +48,7 @@ namespace CodeReformatter
             set { this.newline_after_condition = value; }
         }
 
+        [Category("Reformat Options")]
         [Description("Insert a newline before 'else'"), DefaultValue(true)]
         public Boolean NewlineBeforeElse
         {
@@ -40,6 +56,7 @@ namespace CodeReformatter
             set { this.newline_before_else = value; }
         }
 
+        [Category("Reformat Options")]
         [Description("Insert between ':' type block"), DefaultValue(true)]
         public Boolean SpaceBetweenType
         {
@@ -47,6 +64,7 @@ namespace CodeReformatter
             set { this.space_between_type = value; }
         }
 
+        [Category("Reformat Options")]
         [Description("Insert a space between '='"), DefaultValue(true)]
         public Boolean SpaceBetweenAssign
         {
@@ -54,6 +72,7 @@ namespace CodeReformatter
             set { this.space_between_assign = value; }
         }
 
+        [Category("Reformat Options")]
         [Description("Insert a space before and after method call parameter list '()'"), DefaultValue(true)]
         public Boolean SpaceBeforeMethodCall
         {
@@ -61,6 +80,7 @@ namespace CodeReformatter
             set { this.space_before_method_call = value; }
         }
 
+        [Category("Reformat Options")]
         [Description("Insert a space between operators"), DefaultValue(true)]
         public Boolean SpaceBetweenOperators
         {
@@ -68,6 +88,7 @@ namespace CodeReformatter
             set { this.space_between_operators = value; }
         }
 
+        [Category("Reformat Options")]
         [Description("Insert a space after each argument, parameter"), DefaultValue(true)]
         public Boolean SpaceBetweenArguments
         {
@@ -75,6 +96,7 @@ namespace CodeReformatter
             set { this.space_between_arguments = value; }
         }
 
+        [Category("Reformat Options")]
         [Description("Insert a newline after each object field, if any"), DefaultValue(true)]
         public Boolean NewlineBetweenFields
         {
