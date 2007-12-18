@@ -429,7 +429,7 @@ namespace FlashAPI
 
         private void toolStripButton1_Click( object sender, EventArgs e )
         {
-            SettingDialog.Show(pluginMain.Settings, pluginMain.Name);
+            SettingDialog.Show(pluginMain.Name);
         }
 				
  	}
