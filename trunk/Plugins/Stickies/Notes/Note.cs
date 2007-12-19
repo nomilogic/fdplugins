@@ -116,7 +116,7 @@ namespace Stickies.Notes {
     /// </summary>
     /// <returns></returns>
     public override string GetPath() {
-      return SettingsPath(this.Guid + PathSuffix);
+      return GetSettingsPath(this.Guid + PathSuffix);
     }
 
     /// <summary>

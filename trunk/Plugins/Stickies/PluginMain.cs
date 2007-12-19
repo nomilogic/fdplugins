@@ -143,19 +143,31 @@ namespace Stickies
 		#endregion
 
         #region Custom Methods
-       
+
+        /// <summary>
+        /// Stickies storage directory
+        /// </summary>
+        public String StickiesDirectory
+        {
+            get { return Path.Combine(PathHelper.DataDir, this.pluginName); }
+        }
+
+
         /// <summary>
         /// Initializes important variables
         /// </summary>
         public void InitBasics()
         {
-            String dataPath = Path.Combine(PathHelper.DataDir, "Stickies");
+            String dataPath = Path.Combine( PathHelper.DataDir, this.pluginName );
             if (!Directory.Exists(dataPath)) Directory.CreateDirectory(dataPath);
             this.settingFilename = Path.Combine(dataPath, "Settings.fdb");
             this.pluginImage = PluginBase.MainForm.FindImage("273");
 
+            Stickies.Notes.Settings.defaultDirectory = this.StickiesDirectory;
+
             this.noteForms = new List<NoteForm>();
             this.preferences = new Preferences();
+
         }
 
 
@@ -179,14 +191,14 @@ namespace Stickies
         {
             List<Note> notes = new List<Note>();
 
-            if( !Directory.Exists( Stickies.Notes.Settings.SettingsDirectory() ) )
-            {
-                Directory.CreateDirectory( Stickies.Notes.Settings.SettingsDirectory() );
-            }
+            //if( !Directory.Exists( Stickies.Notes.Settings.SettingsDirectory() ) )
+            //{
+            //    Directory.CreateDirectory( Stickies.Notes.Settings.SettingsDirectory() );
+            //}
 
             try
             {
-                foreach (string path in Directory.GetFiles(Stickies.Notes.Settings.SettingsDirectory(), "*" + Note.PathSuffix))
+                foreach (string path in Directory.GetFiles( this.StickiesDirectory , "*" + Note.PathSuffix))
                 {
                     try
                     {

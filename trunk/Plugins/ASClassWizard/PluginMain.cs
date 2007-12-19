@@ -1,3 +1,5 @@
+#region imports
+
 using System;
 using System.IO;
 using System.Drawing;
@@ -24,6 +26,8 @@ using ASClassWizard.Wizards;
 
 using FlashDevelop;
 
+#endregion
+
 namespace ASClassWizard
 {
 	public class PluginMain : IPlugin
@@ -33,11 +37,11 @@ namespace ASClassWizard
         private String pluginHelp = "www.sephiroth.it";
         private String pluginDesc = "Actionscript class wizard for the new FlashDevelop 3.";
         private String pluginAuth = "Alessandro Crugnola";
+        
         private String settingFilename;
         private Settings settingObject;
-
-        string lastFileFromTemplate;
-        AS3ClassOptions lastFileOptions;
+        private AS3ClassOptions lastFileOptions;
+        private String lastFileFromTemplate;
 
         public static IMainForm MainForm { get { return PluginBase.MainForm; } }
 
@@ -96,28 +100,21 @@ namespace ASClassWizard
 		
 		#region Required Methods
 		
-		/// <summary>
-		/// Initializes the plugin
-		/// </summary>
 		public void Initialize()
 		{
+            // Load and initialize settings
             this.InitBasics();
             this.LoadSettings();
+
             this.AddEventHandlers();
             this.InitLocalization();
         }
 		
-		/// <summary>
-		/// Disposes the plugin
-		/// </summary>
 		public void Dispose()
 		{
             this.SaveSettings();
 		}
 		
-		/// <summary>
-		/// Handles the incoming events
-		/// </summary>
 		public void HandleEvent(Object sender, NotifyEvent e, HandlingPriority prority)
 		{
             Project project;
@@ -135,7 +132,7 @@ namespace ASClassWizard
                             if ((project.Language == "as3" || project.Language == "as2") && Path.GetFileName(table["templatePath"] as String).Equals("Class.as.fdt"))
                             {
                                 evt.Handled = true;
-                                NewASClassWizard(table["inDirectory"] as String);
+                                DisplayClassWizard(table["inDirectory"] as String);
                             }
                         }
                     }
@@ -146,7 +143,7 @@ namespace ASClassWizard
                     project = PluginBase.CurrentProject as Project;
                     if (project != null && (project.Language == "as3" || project.Language == "as2"))
                     {
-                        te.Handled = true;
+                        //te.Handled = true;
                         BuildEventVars vars = new BuildEventVars(project);
                         foreach (BuildEventInfo info in vars.GetVars())
                             te.Value = te.Value.Replace("$(" + info.Name + ")", info.Value);
@@ -154,18 +151,15 @@ namespace ASClassWizard
                         te.Value = ProcessArgs(project, te.Value);
 
                     }
-
+                    
                     break;
             }
 		}
 		
 		#endregion
 
-        #region Custom Methods
-       
-        /// <summary>
-        /// Initializes important variables
-        /// </summary>
+        #region Settings
+
         public void InitBasics()
         {
             String dataPath = Path.Combine(PathHelper.DataDir, "ASClassWizard");
@@ -173,32 +167,6 @@ namespace ASClassWizard
             this.settingFilename = Path.Combine(dataPath, "Settings.fdb");
         }
 
-        /// <summary>
-        /// Adds the required event handlers
-        /// </summary> 
-        public void AddEventHandlers()
-        {
-            EventManager.AddEventHandler(this, EventType.Command | EventType.ProcessArgs);
-        }
-
-        /// <summary>
-        /// Initializes the localization of the plugin
-        /// </summary>
-        public void InitLocalization()
-        {
-            LocaleVersion locale = PluginBase.MainForm.Settings.LocaleVersion;
-            switch (locale)
-            {
-                default : 
-                    LocaleHelper.Initialize(LocaleVersion.en_US);
-                    break;
-            }
-        }
-
-
-        /// <summary>
-        /// Loads the plugin settings
-        /// </summary>
         public void LoadSettings()
         {
             this.settingObject = new Settings();
@@ -210,19 +178,32 @@ namespace ASClassWizard
             }
         }
 
-        /// <summary>
-        /// Saves the plugin settings
-        /// </summary>
         public void SaveSettings()
         {
             ObjectSerializer.Serialize(this.settingFilename, this.settingObject);
         }
 
-        /// <summary>
-        /// Display the ActionScript class wizard dialog
-        /// </summary>
-        /// <param name="inDirectory"></param>
-        private void NewASClassWizard(String inDirectory)
+        #endregion
+
+        #region Custom Methods
+
+        public void AddEventHandlers()
+        {
+            EventManager.AddEventHandler(this, EventType.Command | EventType.ProcessArgs);
+        }
+
+        public void InitLocalization()
+        {
+            LocaleVersion locale = PluginBase.MainForm.Settings.LocaleVersion;
+            switch (locale)
+            {
+                default : 
+                    LocaleHelper.Initialize(LocaleVersion.en_US);
+                    break;
+            }
+        }
+
+        private void DisplayClassWizard(String inDirectory)
         {
             Project project = PluginBase.CurrentProject as Project;
 
@@ -270,8 +251,6 @@ namespace ASClassWizard
             }
         }
 
-
-
         public string ProcessArgs(Project project, string args)
         {
             if (lastFileFromTemplate != null)
@@ -309,9 +288,6 @@ namespace ASClassWizard
                         args = args.Replace("$(FileNameWithPackage)", package + "." + fileName);
                     else
                         args = args.Replace("$(FileNameWithPackage)", fileName);
-
-
-                    // lastClassFileOptions
 
                     if (lastFileOptions != null)
                     {
@@ -413,6 +389,8 @@ namespace ASClassWizard
                         args = args.Replace("$(Super)", superConstructor);
 
                         args = FlashDevelop.Utilities.ArgsProcessor.ProcessCodeStyleLineBreaks(args);
+                        lastFileFromTemplate = null;
+                        lastFileOptions = null;
 
                     }
 

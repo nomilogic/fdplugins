@@ -30,27 +30,17 @@ namespace Stickies.Notes {
 
     public const string Path = "preferences.xml";
 
-    /// <summary>
-    /// Creates a new set of preferences with the default settings.
-    /// </summary>
     public Preferences()
-      : base() {
-      this.Note = new Note();
+        : base( )
+    {
+        this.Note = new Note();
     }
 
     /// <summary>
     /// Returns the path to the Stickies preferences file.
     /// </summary>
     public override string GetPath() {
-      return SettingsPath(Path);
-    }
-
-    /// <summary>
-    /// Loads a Preferences instance from the Stickies preferences file.
-    /// </summary>
-    /// <returns></returns>
-    public static Preferences Load() {
-      return (Preferences) Settings.Load(SettingsPath(Path), typeof(Preferences));
+      return GetSettingsPath(Path);
     }
   }
 }

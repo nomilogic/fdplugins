@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+#region Imports
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +24,7 @@ using AS3Context;
 using AS2Context;
 using System.Reflection;
 using System.Diagnostics;
+#endregion
 
 
 namespace ASClassWizard.Wizards

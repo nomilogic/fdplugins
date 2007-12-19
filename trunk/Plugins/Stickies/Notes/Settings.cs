@@ -46,6 +46,8 @@ namespace Stickies.Notes {
     [XmlAttribute("modified")]
     public DateTime Modified;
 
+    public static String defaultDirectory;
+
     /// <summary>
     /// Initializes this Settings instance by copying over the default values
     /// of all fields.
@@ -110,7 +112,7 @@ namespace Stickies.Notes {
     /// </summary>
     public void Save(bool updateLastModified) {
       System.Diagnostics.Debug.WriteLine("Saving " + GetPath());
-      RecursiveCreateDirectory(new DirectoryInfo(SettingsDirectory()));
+      RecursiveCreateDirectory(new DirectoryInfo( Settings.SettingsDirectory ));
       using (Stream stream = File.Open(GetPath(), FileMode.Create, FileAccess.Write)) {
         DateTime oldLastSaved = this.Modified;
         if (updateLastModified) {
@@ -153,16 +155,17 @@ namespace Stickies.Notes {
     /// files should be stored within this directory or children of this
     /// directory.
     /// </summary>
-    public static string SettingsDirectory() {
-      string directory = System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData);
-      return Path.Combine(Path.Combine(directory, Application.CompanyName), Application.ProductName);
+    public static string SettingsDirectory
+    {
+        get { return Settings.defaultDirectory; }
     }
 
     /// <summary>
     /// Returns the full path for the settings file with the given name.
     /// </summary>
-    public static string SettingsPath(string fileName) {
-      return Path.Combine(SettingsDirectory(), fileName);
+    public string GetSettingsPath(string fileName) 
+    {
+      return Path.Combine(Settings.SettingsDirectory, fileName);
     }
 
     /// <summary>
